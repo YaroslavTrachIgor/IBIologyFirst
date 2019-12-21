@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Go to app"; ObjectID = "KaD-mC-gh7"; */
+"KaD-mC-gh7.normalTitle" = "À l'application";
+
+/* Class = "UITextView"; text = "1) There is a lot of information about Biology and many of its branches. And also about the main organisms\n\n2) A special browser is built into the application to quickly find information.\n\n3) Create lists of what you want to read today\n\n4) Pass interesting tests to test your knowledge"; ObjectID = "O0k-5e-Yt3"; */
+"O0k-5e-Yt3.text" = "1) There is a lot of information about Biology and many of its branches. And also about the main organisms\n\n2) A special browser is built into the application to quickly find information.\n\n3) Create lists of what you want to read today\n\n4) Pass interesting tests to test your knowledge";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "PGm-Vu-Bbm"; */
+"PGm-Vu-Bbm.title" = "Item";
+
+/* Class = "UILabel"; text = "Good Biology"; ObjectID = "Y6D-52-gfL"; */
+"Y6D-52-gfL.text" = "Good Biology";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "aPi-2d-lUG"; */
+"aPi-2d-lUG.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "aUd-b6-FPU"; */
+"aUd-b6-FPU.title" = "Item";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "l3K-04-aj4"; */
+"l3K-04-aj4.title" = "Item";
+
+/* Class = "UILabel"; text = "Welcome To"; ObjectID = "zTC-Fi-fJW"; */
+"zTC-Fi-fJW.text" = "Quoi de neuf";

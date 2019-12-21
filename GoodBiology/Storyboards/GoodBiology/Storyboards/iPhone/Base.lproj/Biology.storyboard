@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UBs-y5-DlD">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Basics-->
+        <scene sceneID="vEC-ii-yQw">
+            <objects>
+                <viewController storyboardIdentifier="BasicViewController" id="Qlb-NA-M7O" customClass="BasicsViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BBp-ie-koM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-Yj-5Dr">
+                                <rect key="frame" x="16" y="11" width="343" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="g36-YQ-cn2"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All Information"/>
+                                    <segment title="Basics"/>
+                                </segments>
+                                <color key="tintColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.77836044520000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="infoSwitch:" destination="Qlb-NA-M7O" eventType="valueChanged" id="OhS-x2-e3P"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-RC-BNS">
+                                <rect key="frame" x="16" y="53" width="343" height="443"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFZ-hr-RZu">
+                                        <rect key="frame" x="0.0" y="12" width="343" height="431"/>
+                                        <string key="text">Biology is the natural science that studies life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development and evolution. Despite the complexity of the science, there are certain unifying concepts that consolidate it into a single, coherent field. Biology recognizes the cell as the basic unit of life, genes as the basic unit of heredity, and evolution as the engine that propels the creation and extinction of species. Living organisms are open systems that survive by transforming energy and decreasing their local entropy to maintain a stable and vital condition defined as homeostasis. Sub-disciplines of biology are defined by the research methods employed and the kind of system studied: theoretical biology uses mathematical methods to formulate quantitative models while experimental biology performs empirical experiments to test the validity of proposed theories and understand the mechanisms underlying life and how it appeared and evolved from non-living matter about 4 billion years ago through a gradual increase in the complexity of the system. See branches of biology.</string>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jxe-8L-rLq">
+                                        <rect key="frame" x="161.5" y="222.5" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="mR0-8f-v23"/>
+                                            <constraint firstAttribute="width" constant="20" id="sVH-gV-faD"/>
+                                        </constraints>
+                                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wFZ-hr-RZu" secondAttribute="bottom" id="ARZ-zT-nEv"/>
+                                    <constraint firstItem="wFZ-hr-RZu" firstAttribute="top" secondItem="wa5-RC-BNS" secondAttribute="top" constant="12" id="DyL-94-lnN"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFZ-hr-RZu" secondAttribute="trailing" id="XhM-3z-pdW"/>
+                                    <constraint firstItem="wFZ-hr-RZu" firstAttribute="leading" secondItem="wa5-RC-BNS" secondAttribute="leading" id="jQu-j3-6aL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pea-5N-Il5">
+                                <rect key="frame" x="16" y="517" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.77836044520000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="KUg-Uv-dqe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <color key="tintColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.77836044520000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Put a notification on this article">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="bottomButtonActionWithSender:" destination="Qlb-NA-M7O" eventType="touchUpInside" id="VV4-jC-Ess"/>
+                                </connections>
+                            </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWo-Qg-u67">
+                                <rect key="frame" x="239" y="11" width="120" height="60"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="wcT-Xc-NEi">
+                                        <rect key="frame" x="13" y="14" width="94" height="32"/>
+                                        <color key="tintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stepper:" destination="Qlb-NA-M7O" eventType="valueChanged" id="vzk-ft-2Qs"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="wcT-Xc-NEi" firstAttribute="leading" secondItem="zWo-Qg-u67" secondAttribute="leading" constant="13" id="70h-dU-LyK"/>
+                                    <constraint firstItem="wcT-Xc-NEi" firstAttribute="top" secondItem="zWo-Qg-u67" secondAttribute="top" constant="14" id="Ikx-sU-0ip"/>
+                                    <constraint firstAttribute="bottom" secondItem="wcT-Xc-NEi" secondAttribute="bottom" constant="14" id="WXy-y8-aQt"/>
+                                    <constraint firstAttribute="trailing" secondItem="wcT-Xc-NEi" secondAttribute="trailing" constant="13" id="g2c-nZ-cGL"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSH-E8-PA6">
+                                <rect key="frame" x="185" y="11" width="174" height="50"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hide  diffrent functions" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8fb-FJ-8Td">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="50"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hMa-F8-wk4">
+                                        <rect key="frame" x="115" y="10" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="switch:" destination="Qlb-NA-M7O" eventType="valueChanged" id="IDa-dR-mrO"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="hMa-F8-wk4" firstAttribute="leading" secondItem="8fb-FJ-8Td" secondAttribute="trailing" constant="16" id="IK8-sf-g7D"/>
+                                    <constraint firstAttribute="height" constant="50" id="Jjo-5J-EPR"/>
+                                    <constraint firstItem="hMa-F8-wk4" firstAttribute="top" secondItem="xSH-E8-PA6" secondAttribute="top" constant="10" id="Tpr-Dp-Eec"/>
+                                    <constraint firstAttribute="bottom" secondItem="8fb-FJ-8Td" secondAttribute="bottom" id="V1E-zP-IbC"/>
+                                    <constraint firstAttribute="trailing" secondItem="hMa-F8-wk4" secondAttribute="trailing" constant="10" id="puf-tE-cOF"/>
+                                    <constraint firstItem="8fb-FJ-8Td" firstAttribute="leading" secondItem="xSH-E8-PA6" secondAttribute="leading" id="qWm-Nc-OtI"/>
+                                    <constraint firstItem="8fb-FJ-8Td" firstAttribute="top" secondItem="xSH-E8-PA6" secondAttribute="top" id="qrN-if-JeH"/>
+                                    <constraint firstAttribute="bottom" secondItem="hMa-F8-wk4" secondAttribute="bottom" constant="9" id="rrx-bq-bWR"/>
+                                    <constraint firstAttribute="width" constant="174" id="wCw-fn-Rya"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="Pea-5N-Il5" secondAttribute="trailing" constant="16" id="2Fg-Tk-iVw"/>
+                            <constraint firstItem="Pea-5N-Il5" firstAttribute="top" secondItem="wa5-RC-BNS" secondAttribute="bottom" constant="21" id="3UH-b6-DuR"/>
+                            <constraint firstItem="jxe-8L-rLq" firstAttribute="centerY" secondItem="HIP-gu-edS" secondAttribute="centerY" id="7Oq-Yh-SJN"/>
+                            <constraint firstItem="zWo-Qg-u67" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="11" id="BMh-RJ-o9g"/>
+                            <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="wa5-RC-BNS" secondAttribute="trailing" constant="16" id="MOP-Yf-auJ"/>
+                            <constraint firstItem="wa5-RC-BNS" firstAttribute="top" secondItem="g0n-Yj-5Dr" secondAttribute="bottom" constant="15" id="Nir-76-upg"/>
+                            <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="g0n-Yj-5Dr" secondAttribute="trailing" constant="16" id="SFN-lk-KOw"/>
+                            <constraint firstItem="HIP-gu-edS" firstAttribute="bottom" secondItem="Pea-5N-Il5" secondAttribute="bottom" constant="21" id="ZuQ-uR-joR"/>
+                            <constraint firstItem="Pea-5N-Il5" firstAttribute="leading" secondItem="HIP-gu-edS" secondAttribute="leading" constant="16" id="h23-ol-SuC"/>
+                            <constraint firstItem="xSH-E8-PA6" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="11" id="mLz-IE-bEZ"/>
+                            <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="zWo-Qg-u67" secondAttribute="trailing" constant="16" id="sgp-0C-TBD"/>
+                            <constraint firstItem="wa5-RC-BNS" firstAttribute="leading" secondItem="HIP-gu-edS" secondAttribute="leading" constant="16" id="tOH-un-ZZG"/>
+                            <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="xSH-E8-PA6" secondAttribute="trailing" constant="16" id="uCO-cV-XOY"/>
+                            <constraint firstItem="jxe-8L-rLq" firstAttribute="centerX" secondItem="HIP-gu-edS" secondAttribute="centerX" id="uvV-9B-Fke"/>
+                            <constraint firstItem="g0n-Yj-5Dr" firstAttribute="leading" secondItem="HIP-gu-edS" secondAttribute="leading" constant="16" id="wfD-zJ-oWe"/>
+                            <constraint firstItem="g0n-Yj-5Dr" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="11" id="x3Y-Ux-utd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HIP-gu-edS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Basics" id="V0u-WD-zdt">
+                        <rightBarButtonItems>
+                            <barButtonItem image="chevron.right" catalog="system" id="efv-vz-ZOf">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="nextAction" destination="Qlb-NA-M7O" id="m1Q-0h-NSf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="textformat.size" catalog="system" id="tPD-ym-t0W">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="stepperViewShower:" destination="Qlb-NA-M7O" id="9bC-E3-50i"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="eye.slash" catalog="system" id="gMR-xI-yGi">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="switchViewShowing:" destination="Qlb-NA-M7O" id="0dL-hq-h92"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="OkW-UY-0Qo">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="sharing:" destination="Qlb-NA-M7O" id="AMX-6F-Cig"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="activityIndicator" destination="jxe-8L-rLq" id="LbW-Go-JQh"/>
+                        <outlet property="backgroundView" destination="wa5-RC-BNS" id="yZ6-Lv-Hav"/>
+                        <outlet property="contentTextView" destination="wFZ-hr-RZu" id="bKn-S4-wZY"/>
+                        <outlet property="navItem" destination="V0u-WD-zdt" id="l3c-Xv-mNu"/>
+                        <outlet property="notificationButton" destination="Pea-5N-Il5" id="UND-d1-Lgq"/>
+                        <outlet property="segmentedControl" destination="g0n-Yj-5Dr" id="jYj-9K-65X"/>
+                        <outlet property="settingsButton" destination="tPD-ym-t0W" id="1Lj-LG-a36"/>
+                        <outlet property="shareButton" destination="OkW-UY-0Qo" id="Fkc-2o-Wg8"/>
+                        <outlet property="stepper" destination="wcT-Xc-NEi" id="6Et-es-OUo"/>
+                        <outlet property="stepperView" destination="zWo-Qg-u67" id="ExJ-uS-NrY"/>
+                        <outlet property="switchOutlet" destination="hMa-F8-wk4" id="xHK-P2-Mar"/>
+                        <outlet property="switchTextView" destination="8fb-FJ-8Td" id="AUU-o9-4Ht"/>
+                        <outlet property="switchView" destination="xSH-E8-PA6" id="2gL-gP-8oO"/>
+                        <outlet property="switchViewShowingButton" destination="gMR-xI-yGi" id="eQX-y1-EGZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n76-Qe-hz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-848.79999999999995" y="552.77361319340332"/>
+        </scene>
+        <!--Biology-->
+        <scene sceneID="aLA-OS-zwN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UBs-y5-DlD" customClass="BasicsNavigationController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Biology" image="layers" id="Bvf-zF-H25"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="FPi-dd-eTC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Qlb-NA-M7O" kind="relationship" relationship="rootViewController" id="oZA-M9-vp8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ovB-pb-Z5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1673" y="556"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
+        <image name="eye.slash" catalog="system" width="64" height="42"/>
+        <image name="layers" width="30" height="30"/>
+        <image name="textformat.size" catalog="system" width="64" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,18 @@
+
+/* Class = "UITabBarItem"; title = "For Today"; ObjectID = "G94-fe-k4B"; */
+"G94-fe-k4B.title" = "For Today";
+
+/* Class = "UINavigationItem"; title = "For Today"; ObjectID = "RS2-mR-4pk"; */
+"RS2-mR-4pk.title" = "For Today";
+
+/* Class = "UIButton"; normalTitle = "Put a reminder"; ObjectID = "Vj4-Kd-MYF"; */
+"Vj4-Kd-MYF.normalTitle" = "Put a reminder";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "p33-mH-pIR"; */
+"p33-mH-pIR.title" = "Item";
+
+/* Class = "UITextView"; text = "Here is the main information about what you want to read."; ObjectID = "qeU-fP-Z8u"; */
+"qeU-fP-Z8u.text" = "Here is the main information about what you want to read.";
+
+/* Class = "UITextField"; text = "The headline of what you want to read."; ObjectID = "ty9-1J-IL7"; */
+"ty9-1J-IL7.text" = "The headline of what you want to read.";

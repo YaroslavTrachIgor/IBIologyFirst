@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C4C-r2-5m8">
+    <device id="appleTV" orientation="landscape">
+        <adaptation id="light"/>
+    </device>
+    <dependencies>
+        <deployment identifier="tvOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Articles-->
+        <scene sceneID="8DG-0O-dqi">
+            <objects>
+                <tableViewController id="ZU4-bP-d49" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="hen-UO-Y4X">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <sections>
+                            <tableViewSection id="6R0-D9-JaC">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="268" id="hAJ-aT-soq">
+                                        <rect key="frame" x="110" y="0.0" width="1700" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hAJ-aT-soq" id="Be7-Nk-MYB">
+                                            <rect key="frame" x="0.0" y="0.0" width="1640" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plants" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="twr-1a-d9f">
+                                                    <rect key="frame" x="8" y="23" width="1624" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="EM8-CW-v70"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYQ-lD-fCR">
+                                                    <rect key="frame" x="0.0" y="91" width="1640" height="154"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Plants are mainly multicellular, predominantly photosynthetic eukaryotes of the kingdom Plantae. They form the clade Viridiplantae that includes the flowering plants, conifers and other gymnosperms, ferns and their allies, hornworts, liverworts, mosses and the green algae, and excludes the red and...</string>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mYQ-lD-fCR" firstAttribute="leading" secondItem="Be7-Nk-MYB" secondAttribute="leading" id="4uQ-VW-erv"/>
+                                                <constraint firstItem="mYQ-lD-fCR" firstAttribute="top" secondItem="twr-1a-d9f" secondAttribute="bottom" constant="8" id="NzJ-On-orZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="mYQ-lD-fCR" secondAttribute="trailing" id="UI8-Ee-fBG"/>
+                                                <constraint firstItem="twr-1a-d9f" firstAttribute="top" secondItem="Be7-Nk-MYB" secondAttribute="topMargin" id="UIh-6j-9vL"/>
+                                                <constraint firstItem="twr-1a-d9f" firstAttribute="leading" secondItem="Be7-Nk-MYB" secondAttribute="leadingMargin" id="mLO-cQ-9Md"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="twr-1a-d9f" secondAttribute="trailing" id="s6I-m4-Bgq"/>
+                                                <constraint firstAttribute="bottom" secondItem="mYQ-lD-fCR" secondAttribute="bottom" constant="23" id="xcf-EH-Uph"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hI0-gn-bbi" kind="show" id="pzK-BP-4VM"/>
+                                            <segue destination="hI0-gn-bbi" kind="show" trigger="accessoryAction" id="dqq-3b-XFL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="268" id="7CA-us-C6b">
+                                        <rect key="frame" x="110" y="282" width="1700" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7CA-us-C6b" id="VOT-oi-JGJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="1640" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PT4-13-Ij2">
+                                                    <rect key="frame" x="8" y="23" width="1624" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="YdW-Qe-IzD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLw-Cr-yFo">
+                                                    <rect key="frame" x="0.0" y="91" width="1640" height="154"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Animals are multicellular eukaryotic organisms that form the biological kingdom Animalia. With few exceptions, animals consume organic material, breathe oxygen, are able to move, can reproduce sexually, and grow from a hollow sphere of cells, the blastula, during embryonic...</string>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aLw-Cr-yFo" firstAttribute="top" secondItem="PT4-13-Ij2" secondAttribute="bottom" constant="8" id="62a-FN-BY7"/>
+                                                <constraint firstItem="aLw-Cr-yFo" firstAttribute="leading" secondItem="VOT-oi-JGJ" secondAttribute="leading" id="Cjo-yr-VbG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PT4-13-Ij2" secondAttribute="trailing" id="GqE-d3-kQf"/>
+                                                <constraint firstItem="PT4-13-Ij2" firstAttribute="top" secondItem="VOT-oi-JGJ" secondAttribute="topMargin" id="MAw-Zu-Q3f"/>
+                                                <constraint firstItem="PT4-13-Ij2" firstAttribute="leading" secondItem="VOT-oi-JGJ" secondAttribute="leadingMargin" id="RsG-Ci-5O1"/>
+                                                <constraint firstAttribute="bottom" secondItem="aLw-Cr-yFo" secondAttribute="bottom" constant="23" id="gBc-4d-0Ya"/>
+                                                <constraint firstAttribute="trailing" secondItem="aLw-Cr-yFo" secondAttribute="trailing" id="jfw-5u-5tt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="268" id="Rfm-Aw-R2y">
+                                        <rect key="frame" x="110" y="564" width="1700" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Rfm-Aw-R2y" id="gVK-3c-QeQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="1640" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microbes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kll-0n-XU1">
+                                                    <rect key="frame" x="8" y="23" width="1624" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="DdN-Ne-EPM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uLd-mp-ggX">
+                                                    <rect key="frame" x="0.0" y="91" width="1640" height="154"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Microorganisms include all unicellular organisms and so are extremely diverse. Of the three domains of life identified by Carl Woese, all of the Archaea and Bacteria are microorganisms. These were previously grouped together in the two domain system as Prokaryotes, the other being the eukaryotes...</string>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kll-0n-XU1" firstAttribute="leading" secondItem="gVK-3c-QeQ" secondAttribute="leadingMargin" id="3wU-qv-xhp"/>
+                                                <constraint firstItem="uLd-mp-ggX" firstAttribute="leading" secondItem="gVK-3c-QeQ" secondAttribute="leading" id="7Qf-gq-MgP"/>
+                                                <constraint firstItem="kll-0n-XU1" firstAttribute="top" secondItem="gVK-3c-QeQ" secondAttribute="topMargin" id="AjZ-vR-vIL"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kll-0n-XU1" secondAttribute="trailing" id="MJ3-t8-HDt"/>
+                                                <constraint firstAttribute="bottom" secondItem="uLd-mp-ggX" secondAttribute="bottom" constant="23" id="YKw-BM-2f0"/>
+                                                <constraint firstAttribute="trailing" secondItem="uLd-mp-ggX" secondAttribute="trailing" id="cgQ-Kh-8hc"/>
+                                                <constraint firstItem="uLd-mp-ggX" firstAttribute="top" secondItem="kll-0n-XU1" secondAttribute="bottom" constant="8" id="eP5-ht-IYg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="268" id="nE7-4w-24B">
+                                        <rect key="frame" x="110" y="846" width="1700" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nE7-4w-24B" id="gNX-NH-QJJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="1640" height="268"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Man" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ic6-k0-oWN">
+                                                    <rect key="frame" x="8" y="23" width="1624" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="pio-0J-mfh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFq-oE-H2U">
+                                                    <rect key="frame" x="0.0" y="91" width="1640" height="154"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Man is a social being, possessing mind and consciousness, as well as a subject of social history activity and culture. It originated on Earth as a result of an evolutionary process - anthropogenesis, the details of which are still being studied. The specific features of man, distinguishing him from other animals...</string>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PFq-oE-H2U" firstAttribute="leading" secondItem="gNX-NH-QJJ" secondAttribute="leading" id="Bb9-Fb-rPo"/>
+                                                <constraint firstAttribute="trailing" secondItem="PFq-oE-H2U" secondAttribute="trailing" id="Bcs-I4-EH2"/>
+                                                <constraint firstItem="ic6-k0-oWN" firstAttribute="leading" secondItem="gNX-NH-QJJ" secondAttribute="leadingMargin" id="ICu-Aw-veq"/>
+                                                <constraint firstItem="PFq-oE-H2U" firstAttribute="top" secondItem="ic6-k0-oWN" secondAttribute="bottom" constant="8" id="WdP-NZ-g8n"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ic6-k0-oWN" secondAttribute="trailing" id="iit-sB-hcF"/>
+                                                <constraint firstItem="ic6-k0-oWN" firstAttribute="top" secondItem="gNX-NH-QJJ" secondAttribute="topMargin" id="oir-68-zq7"/>
+                                                <constraint firstAttribute="bottom" secondItem="PFq-oE-H2U" secondAttribute="bottom" constant="23" id="r6d-la-W5x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="268" id="02R-R2-LwK">
+                                        <rect key="frame" x="0.0" y="1128" width="1700" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="02R-R2-LwK" id="j3g-K6-n4q">
+                                            <rect key="frame" x="0.0" y="0.0" width="1652" height="267"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viruses" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk3-iy-yYz">
+                                                    <rect key="frame" x="8" y="8" width="1636" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="1aU-vb-n4S"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJY-4V-Mwk">
+                                                    <rect key="frame" x="0.0" y="76" width="1652" height="168"/>
+                                                    <string key="text">A virus is a small infectious agent that replicates only inside the living cells of other organisms. Viruses can infect all types of life forms, from animals and plants to microorganisms, including bacteria and archaea. Since Dmitri Ivanovsky's 1892 article describing a non-bacterial pathogen...</string>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="kk3-iy-yYz" firstAttribute="top" secondItem="j3g-K6-n4q" secondAttribute="topMargin" id="0TX-je-fNc"/>
+                                                <constraint firstAttribute="bottom" secondItem="xJY-4V-Mwk" secondAttribute="bottom" constant="23" id="6Do-hd-Uud"/>
+                                                <constraint firstItem="xJY-4V-Mwk" firstAttribute="leading" secondItem="j3g-K6-n4q" secondAttribute="leading" id="Wg0-1f-uzN"/>
+                                                <constraint firstItem="kk3-iy-yYz" firstAttribute="leading" secondItem="j3g-K6-n4q" secondAttribute="leadingMargin" id="YWn-Fk-wC7"/>
+                                                <constraint firstAttribute="trailing" secondItem="xJY-4V-Mwk" secondAttribute="trailing" id="Zvn-5t-DRx"/>
+                                                <constraint firstItem="xJY-4V-Mwk" firstAttribute="top" secondItem="kk3-iy-yYz" secondAttribute="bottom" constant="8" id="lhb-H1-cRm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kk3-iy-yYz" secondAttribute="trailing" id="mZM-B0-uuc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="268" id="f3G-ZX-tGp">
+                                        <rect key="frame" x="0.0" y="1410" width="1700" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f3G-ZX-tGp" id="uaG-63-31x">
+                                            <rect key="frame" x="0.0" y="0.0" width="1652" height="267"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archaea" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLs-zl-YWi">
+                                                    <rect key="frame" x="8" y="8" width="1636" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="btv-hu-d2C"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qci-Cv-Wpl">
+                                                    <rect key="frame" x="0.0" y="76" width="1652" height="168"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Archaea constitute a domain of single-celled microorganisms. These microbes (archaea; singular archaeon) are prokaryotes, meaning they have no cell nucleus. Archaea were initially classified as bacteria, receiving the name archaebacteria (in the Archaebacteria kingdom), but this classification...</string>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gLs-zl-YWi" firstAttribute="top" secondItem="uaG-63-31x" secondAttribute="topMargin" id="7m7-0p-dvT"/>
+                                                <constraint firstItem="Qci-Cv-Wpl" firstAttribute="leading" secondItem="uaG-63-31x" secondAttribute="leading" id="Gom-qf-oxF"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qci-Cv-Wpl" secondAttribute="trailing" id="lMg-xu-GFm"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gLs-zl-YWi" secondAttribute="trailing" id="m67-gi-ZrP"/>
+                                                <constraint firstItem="Qci-Cv-Wpl" firstAttribute="top" secondItem="gLs-zl-YWi" secondAttribute="bottom" constant="8" id="mmZ-lx-saw"/>
+                                                <constraint firstAttribute="bottom" secondItem="Qci-Cv-Wpl" secondAttribute="bottom" constant="23" id="nOu-mw-a06"/>
+                                                <constraint firstItem="gLs-zl-YWi" firstAttribute="leading" secondItem="uaG-63-31x" secondAttribute="leadingMargin" id="rOn-uW-hCa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="268" id="O4V-1q-dKr">
+                                        <rect key="frame" x="0.0" y="1692" width="1700" height="268"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O4V-1q-dKr" id="eeP-uF-BTn">
+                                            <rect key="frame" x="0.0" y="0.0" width="1652" height="267"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fungus" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXG-sg-Sw2">
+                                                    <rect key="frame" x="8" y="8" width="1636" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="SbY-fP-rTO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcm-rt-HEO">
+                                                    <rect key="frame" x="0.0" y="76" width="1652" height="168"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">A fungus is any member of the group of eukaryotic organisms that includes microorganisms such as yeasts and molds, as well as the more familiar mushrooms. These organisms are classified as a kingdom, fungi, which is separate from the other eukaryotic life kingdoms of plants and animals...</string>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="34"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hcm-rt-HEO" firstAttribute="leading" secondItem="eeP-uF-BTn" secondAttribute="leading" id="AcU-iD-Qvg"/>
+                                                <constraint firstAttribute="bottom" secondItem="Hcm-rt-HEO" secondAttribute="bottom" constant="23" id="KMe-zx-a94"/>
+                                                <constraint firstItem="xXG-sg-Sw2" firstAttribute="top" secondItem="eeP-uF-BTn" secondAttribute="topMargin" id="UMi-b6-j4Q"/>
+                                                <constraint firstItem="Hcm-rt-HEO" firstAttribute="top" secondItem="xXG-sg-Sw2" secondAttribute="bottom" constant="8" id="WEl-TQ-Of9"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hcm-rt-HEO" secondAttribute="trailing" id="nKM-44-m3z"/>
+                                                <constraint firstItem="xXG-sg-Sw2" firstAttribute="leading" secondItem="eeP-uF-BTn" secondAttribute="leadingMargin" id="t5g-q3-fQN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="xXG-sg-Sw2" secondAttribute="trailing" id="umg-6B-g66"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ZU4-bP-d49" id="pW1-iq-1Hn"/>
+                            <outlet property="delegate" destination="ZU4-bP-d49" id="p6H-Sj-qKi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Articles" id="2iN-Kz-OXS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VZg-8Q-nc6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1518" y="-161"/>
+        </scene>
+        <!--Article View Controller-->
+        <scene sceneID="Wzb-vE-GhG">
+            <objects>
+                <viewController id="hI0-gn-bbi" customClass="ArticleViewController" customModule="Good_Biology__TV_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gzg-cS-ORf"/>
+                        <viewControllerLayoutGuide type="bottom" id="l1m-wQ-jJA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tUS-en-p05">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plants" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-kJ-uZK">
+                                <rect key="frame" x="110" y="145" width="1700" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="VeG-C0-Kex"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfp-gG-60n">
+                                <rect key="frame" x="110" y="324" width="1700" height="696"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Plants are mainly multicellular, predominantly photosynthetic eukaryotes of the kingdom Plantae. They form the clade Viridiplantae that includes the flowering plants, conifers and other gymnosperms, ferns and their allies, hornworts, liverworts, mosses and the green algae, and excludes the red and brown algae. Historically, plants were treated as one of two kingdoms including all living things that were not animals, and all algae and fungi were treated as plants. However, all current definitions of Plantae exclude the fungi and some algae, as well as the prokaryotes.
+
+Green plants obtain most of their energy from sunlight via photosynthesis by primary chloroplasts that are derived from endosymbiosis with cyanobacteria. Their chloroplasts contain chlorophylls a and b, which gives them their green color. Some plants are parasitic or mycotrophic and may lose the ability to produce normal amounts of chlorophyll or to photosynthesize. </string>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3dN-pg-MMY">
+                                <rect key="frame" x="110" y="229" width="1700" height="69"/>
+                                <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="VHa-UQ-FRp"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All Information"/>
+                                    <segment title="Basics"/>
+                                </segments>
+                                <color key="tintColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="choosingText:" destination="hI0-gn-bbi" eventType="valueChanged" id="rLz-2j-ElU"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="y9s-kJ-uZK" firstAttribute="top" secondItem="gzg-cS-ORf" secondAttribute="bottom" id="AGE-YM-ikj"/>
+                            <constraint firstItem="VMs-Zg-k09" firstAttribute="trailing" secondItem="Nfp-gG-60n" secondAttribute="trailing" constant="20" id="PgH-Ye-AHd"/>
+                            <constraint firstItem="l1m-wQ-jJA" firstAttribute="top" secondItem="Nfp-gG-60n" secondAttribute="bottom" id="RXX-NF-zrd"/>
+                            <constraint firstItem="Nfp-gG-60n" firstAttribute="top" secondItem="3dN-pg-MMY" secondAttribute="bottom" constant="27" id="UGJ-c5-OTO"/>
+                            <constraint firstItem="3dN-pg-MMY" firstAttribute="top" secondItem="y9s-kJ-uZK" secondAttribute="bottom" constant="24" id="Ytm-3W-0jD"/>
+                            <constraint firstItem="y9s-kJ-uZK" firstAttribute="leading" secondItem="tUS-en-p05" secondAttribute="leading" constant="110" id="aNc-cR-6lB"/>
+                            <constraint firstItem="VMs-Zg-k09" firstAttribute="trailing" secondItem="3dN-pg-MMY" secondAttribute="trailing" constant="20" id="dUf-oy-Gyw"/>
+                            <constraint firstAttribute="trailing" secondItem="y9s-kJ-uZK" secondAttribute="trailing" constant="110" id="evM-48-Rue"/>
+                            <constraint firstItem="3dN-pg-MMY" firstAttribute="leading" secondItem="VMs-Zg-k09" secondAttribute="leading" constant="20" id="o8o-af-Yom"/>
+                            <constraint firstItem="Nfp-gG-60n" firstAttribute="leading" secondItem="VMs-Zg-k09" secondAttribute="leading" constant="20" id="rOs-kj-eJx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VMs-Zg-k09"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="Nfp-gG-60n" id="S0b-6J-hT3"/>
+                        <outlet property="label" destination="y9s-kJ-uZK" id="kUM-dh-5jT"/>
+                        <outlet property="segmentedControl" destination="3dN-pg-MMY" id="RT2-GY-FxH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y5p-sX-UEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3722" y="-161"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DG8-GS-oml">
+            <objects>
+                <navigationController id="C4C-r2-5m8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W9e-7U-yIV">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.61309396400000005" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ZU4-bP-d49" kind="relationship" relationship="rootViewController" id="zDl-jk-sWp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1jg-cI-2Fv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-622" y="-161"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="pzK-BP-4VM"/>
+    </inferredMetricsTieBreakers>
+</document>

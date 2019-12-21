@@ -7,17 +7,127 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840887B421F763810026A210 /* BiologyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840887B321F763810026A210 /* BiologyNotifications.swift */; };
+		841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841198FD233F5215004B0DAF /* NetworkingProtocol.swift */; };
+		84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119900233F57AC004B0DAF /* ReviewControllerProtocol.swift */; };
+		841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841199032344AC40004B0DAF /* MenuProtocol.swift */; };
+		841AF1D1235A481D0003A440 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AF1D0235A481D0003A440 /* URLs.swift */; };
+		84323ECA21CE690700D50B2B /* Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84323EC921CE690700D50B2B /* Shadows.swift */; };
+		84408E49222C4C5000F11996 /* FungusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E48222C4C5000F11996 /* FungusesData.swift */; };
+		84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4A222C529D00F11996 /* ArchaeaData.swift */; };
+		84408E4D222C5F7100F11996 /* ManData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4C222C5F7100F11996 /* ManData.swift */; };
+		8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */; };
+		844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D04223243C800933ABC /* AppIconViewController.swift */; };
+		844E0D0722351BD400933ABC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D0622351BD400933ABC /* MapViewController.swift */; };
+		844E0D0E2235625200933ABC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844E0D0D2235625200933ABC /* NotificationCenter.framework */; };
+		844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D1D2235765200933ABC /* MakingArticleViewController.swift */; };
+		844E0D212239A0C800933ABC /* iBiology.mov in Resources */ = {isa = PBXBuildFile; fileRef = 844E0D202239A0C700933ABC /* iBiology.mov */; };
+		844E0D242239A16900933ABC /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D232239A16900933ABC /* VideoPlayerViewController.swift */; };
+		8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DD9522101F030033A3A2 /* AboutAppViewController.swift */; };
+		8454DD99221323640033A3A2 /* Browser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454DD97221323640033A3A2 /* Browser.storyboard */; };
+		8454DD9B221323CD0033A3A2 /* AboutAppStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454DD9A221323CD0033A3A2 /* AboutAppStoryBoard.storyboard */; };
+		8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DD9D221326E50033A3A2 /* ThemesController.swift */; };
+		8454DDA52214CA300033A3A2 /* PlantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA42214CA300033A3A2 /* PlantsData.swift */; };
+		8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA62216F8AF0033A3A2 /* AppInformation.swift */; };
+		8454DDA9221750610033A3A2 /* AnimalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA8221750610033A3A2 /* AnimalsData.swift */; };
+		845FE7442322F45400B36E76 /* ArticleOnlineImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */; };
+		8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461367C22C65F8D0019C7FB /* HumanData.swift */; };
+		8461F8C621EB651800586139 /* TestsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461F8C521EB651800586139 /* TestsReviewViewController.swift */; };
+		8468332623A4E5A6004CBFC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468332523A4E5A6004CBFC8 /* User.swift */; };
+		84685FCA2219827000F79BF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685FC92219827000F79BF5 /* LoginViewController.swift */; };
+		8471F87F21B30202001AA935 /* NetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471F87E21B30202001AA935 /* NetworkingViewController.swift */; };
+		84732DA6224003AC005957F2 /* ReadingOnTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84732DA5224003AC005957F2 /* ReadingOnTimeViewController.swift */; };
+		84732DA922400B96005957F2 /* ReadingOnTimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84732DA822400B96005957F2 /* ReadingOnTimeData.swift */; };
+		8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476128B21E128B10010AEAE /* GradientExtensions.swift */; };
+		84778271237EEC52007C1FD8 /* Basic Varibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84778270237EEC52007C1FD8 /* Basic Varibles.swift */; };
+		847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A507E2392E52400223AC7 /* BlankSheetViewController.swift */; };
+		848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A92F121DD63E600D1C3C1 /* SafariViewController.swift */; };
+		848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC42B2368FB1F0060709C /* ThemesMenuTableViewController.swift */; };
+		8497E34623566495003CD4A9 /* SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E34523566495003CD4A9 /* SystemColors.swift */; };
+		8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */; };
+		8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */; };
+		849C38A82353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38A72353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift */; };
+		849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38AD2353B8AB002E007D /* MapDelegate.swift */; };
+		849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38B12353BB27002E007D /* Notes Protocol.swift */; };
+		849F5381236977CD0027289F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F5380236977CD0027289F /* GradientView.swift */; };
+		84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A15A96236209220069AADE /* SettingsTableViewController.swift */; };
+		84ADAC3621D2C65100FDDFC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ADAC3521D2C65100FDDFC4 /* MapKit.framework */; };
+		84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */; };
+		84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD83222A5E9800BA41C9 /* LoginButtonAnimatiol.swift */; };
+		84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD85222AE87C00BA41C9 /* MicrobesData.swift */; };
+		84B2BD88222BDCEA00BA41C9 /* VirusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD87222BDCEA00BA41C9 /* VirusesData.swift */; };
+		84B9050223201E810002F0E2 /* BasicTestWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9050123201E810002F0E2 /* BasicTestWords.swift */; };
+		84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */; };
+		84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFDD0236DCAC80088B09E /* VideosMenuTableViewController.swift */; };
+		84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFDD3236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift */; };
+		84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FC5F2205986300BCE06D /* BasicsContent.swift */; };
+		84C6FCAE220620A200BCE06D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCAD220620A200BCE06D /* AppDelegate.swift */; };
+		84C6FCB5220620A200BCE06D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6FCB3220620A200BCE06D /* Main.storyboard */; };
+		84C6FCB7220620A400BCE06D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C6FCB6220620A400BCE06D /* Assets.xcassets */; };
+		84C6FCBE2209F8AA00BCE06D /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCBC2209F8A500BCE06D /* ArticleViewController.swift */; };
+		84C6FCC22209FDEF00BCE06D /* BasicsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCC02209FAF200BCE06D /* BasicsContent.swift */; };
+		84C7AAEA223C4CDF00A7CF68 /* BiologyShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7AAE9223C4CDF00A7CF68 /* BiologyShareData.swift */; };
+		84C7AAED223C4E9700A7CF68 /* BiologyAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7AAEC223C4E9700A7CF68 /* BiologyAll.swift */; };
+		84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7AAEE223C4EF500A7CF68 /* BiologyBasicsData.swift */; };
+		84CDB5CD2221371D002432F7 /* ForToday.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CDB5CB2221371D002432F7 /* ForToday.storyboard */; };
+		84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */; };
+		AA2C423421C842F500D1E680 /* BasicsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C423321C842F500D1E680 /* BasicsCoordinator.swift */; };
+		AAEC22D221C679E900FF69FE /* BasicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC22D121C679E900FF69FE /* BasicsViewController.swift */; };
+		AAEC22D621C67A1300FF69FE /* BasicsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC22D521C67A1300FF69FE /* BasicsDataManager.swift */; };
+		AAEC22D821C67A3200FF69FE /* BasicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC22D721C67A3200FF69FE /* BasicsModel.swift */; };
+		C40D3D6521B81878009A0211 /* ArchaeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3D6421B81878009A0211 /* ArchaeaViewController.swift */; };
+		C43B125E21A8ABEE00D58C44 /* ButtonsAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B125D21A8ABEE00D58C44 /* ButtonsAnimations.swift */; };
+		C43B126021A8AF8300D58C44 /* TestButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B125F21A8AF8300D58C44 /* TestButtonAnimation.swift */; };
+		C43B126A21AB22DC00D58C44 /* ForTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B126921AB22DC00D58C44 /* ForTodayViewController.swift */; };
+		C458BD5E23AE4B6A00D1F108 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C458BD5D23AE4B6A00D1F108 /* Podfile */; };
+		C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6023AE55C800D1F108 /* ChromistaTableViewController.swift */; };
+		C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6223AE55DA00D1F108 /* ChromistaThemesViewController.swift */; };
+		C463227723AD19D10099083F /* ChomistaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463227623AD19D10099083F /* ChomistaViewController.swift */; };
+		C47CAD6721D0E42F00E27E88 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CAD6621D0E42F00E27E88 /* TestViewController.swift */; };
+		C496AE6B21C93DA400413CB4 /* NotificationsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496AE6A21C93DA400413CB4 /* NotificationsFunctions.swift */; };
+		C498F9A3219F6B5900DCAC9F /* Tests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C498F9A2219F6B5900DCAC9F /* Tests.storyboard */; };
+		C4C7230F21B968F500F64612 /* AnimalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7230E21B968F500F64612 /* AnimalsViewController.swift */; };
+		C4C7231121B98A1E00F64612 /* VirusesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7231021B98A1E00F64612 /* VirusesViewController.swift */; };
+		C4C7231321B9901100F64612 /* HumanViewVontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7231221B9901100F64612 /* HumanViewVontroller.swift */; };
+		C4C7231521B9ACA900F64612 /* MicrobesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7231421B9ACA900F64612 /* MicrobesViewController.swift */; };
+		C4C7231721B9B08900F64612 /* MushroomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7231621B9B08900F64612 /* MushroomsViewController.swift */; };
+		C4C7231921B9BC0F00F64612 /* RateManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7231821B9BC0F00F64612 /* RateManeger.swift */; };
+		C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4C7251021BED93D00F64612 /* Model.xcdatamodeld */; };
+		C4C7252121C058DD00F64612 /* Biology.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4C7251F21C058DD00F64612 /* Biology.storyboard */; };
+		C4C7252521C2B75800F64612 /* ArticelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7252421C2B75800F64612 /* ArticelsViewController.swift */; };
+		C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7253721C42EA800F64612 /* TestsMenuViewController.swift */; };
+		C4CEC54C225200FE005BA8C6 /* BasicNotificationThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CEC54B225200FD005BA8C6 /* BasicNotificationThings.swift */; };
 		C4E5E23521975BE4009C3062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E23421975BE4009C3062 /* AppDelegate.swift */; };
-		C4E5E23721975BE4009C3062 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E23621975BE4009C3062 /* FirstViewController.swift */; };
-		C4E5E23921975BE4009C3062 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E23821975BE4009C3062 /* SecondViewController.swift */; };
 		C4E5E23C21975BE4009C3062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E5E23A21975BE4009C3062 /* Main.storyboard */; };
 		C4E5E23E21975BE5009C3062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E5E23D21975BE5009C3062 /* Assets.xcassets */; };
 		C4E5E24121975BE5009C3062 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E5E23F21975BE5009C3062 /* LaunchScreen.storyboard */; };
 		C4E5E24C21975BE5009C3062 /* GoodBiologyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E24B21975BE5009C3062 /* GoodBiologyTests.swift */; };
 		C4E5E25721975BE5009C3062 /* GoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E25621975BE5009C3062 /* GoodBiologyUITests.swift */; };
+		C4FB6D3921B7D7EE00E4FD63 /* PlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		844E0D162235625200933ABC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844E0D0B2235625200933ABC;
+			remoteInfo = ForTodayWidget;
+		};
+		84C6FC9022061C5300BCE06D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C6FC8D22061C5300BCE06D;
+			remoteInfo = "Good Biology(Apple Watch) Extension";
+		};
+		84C6FC9D22061C5300BCE06D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C6FC8122061C5100BCE06D;
+			remoteInfo = "Good Biology(Apple Watch)";
+		};
 		C4E5E24821975BE5009C3062 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
@@ -32,13 +142,171 @@
 			remoteGlobalIDString = C4E5E23021975BE4009C3062;
 			remoteInfo = GoodBiology;
 		};
+		C4E5E27C21975DE4009C3062 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4E5E26721975DE3009C3062;
+			remoteInfo = "Good Biology";
+		};
+		C4E5E28721975DE4009C3062 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4E5E26721975DE3009C3062;
+			remoteInfo = "Good Biology";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		844E0D1C2235625200933ABC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C6FCA322061C5300BCE06D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E5E2BD21975F2D009C3062 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		840887B321F763810026A210 /* BiologyNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyNotifications.swift; sourceTree = "<group>"; };
+		841198FD233F5215004B0DAF /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		84119900233F57AC004B0DAF /* ReviewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewControllerProtocol.swift; sourceTree = "<group>"; };
+		841199032344AC40004B0DAF /* MenuProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProtocol.swift; sourceTree = "<group>"; };
+		841AF1D0235A481D0003A440 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		84323EC921CE690700D50B2B /* Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadows.swift; sourceTree = "<group>"; };
+		84408E48222C4C5000F11996 /* FungusesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungusesData.swift; sourceTree = "<group>"; };
+		84408E4A222C529D00F11996 /* ArchaeaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaData.swift; sourceTree = "<group>"; };
+		84408E4C222C5F7100F11996 /* ManData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManData.swift; sourceTree = "<group>"; };
+		8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProtocol.swift; sourceTree = "<group>"; };
+		844E0D04223243C800933ABC /* AppIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppIconViewController.swift; path = ../Storyboards/AppIconViewController.swift; sourceTree = "<group>"; };
+		844E0D0622351BD400933ABC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		844E0D0C2235625200933ABC /* ForTodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForTodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		844E0D0D2235625200933ABC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		844E0D1D2235765200933ABC /* MakingArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakingArticleViewController.swift; path = ../Storyboards/MakingArticleViewController.swift; sourceTree = "<group>"; };
+		844E0D202239A0C700933ABC /* iBiology.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = iBiology.mov; path = ../iBiology.mov; sourceTree = "<group>"; };
+		844E0D232239A16900933ABC /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		8454DD9522101F030033A3A2 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
+		8454DD98221323640033A3A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GoodBiology/Storyboards/Base.lproj/Browser.storyboard; sourceTree = "<group>"; };
+		8454DD9A221323CD0033A3A2 /* AboutAppStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutAppStoryBoard.storyboard; sourceTree = "<group>"; };
+		8454DD9D221326E50033A3A2 /* ThemesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesController.swift; sourceTree = "<group>"; };
+		8454DDA42214CA300033A3A2 /* PlantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsData.swift; sourceTree = "<group>"; };
+		8454DDA62216F8AF0033A3A2 /* AppInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInformation.swift; sourceTree = "<group>"; };
+		8454DDA8221750610033A3A2 /* AnimalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsData.swift; sourceTree = "<group>"; };
+		845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOnlineImagesViewController.swift; sourceTree = "<group>"; };
+		8461367C22C65F8D0019C7FB /* HumanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanData.swift; sourceTree = "<group>"; };
+		8461F8C521EB651800586139 /* TestsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsReviewViewController.swift; sourceTree = "<group>"; };
+		8468332423A44727004CBFC8 /* GoodBiology.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodBiology.entitlements; sourceTree = "<group>"; };
+		8468332523A4E5A6004CBFC8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84685FC92219827000F79BF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8471F87E21B30202001AA935 /* NetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewController.swift; sourceTree = "<group>"; };
+		84732DA5224003AC005957F2 /* ReadingOnTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeViewController.swift; sourceTree = "<group>"; };
+		84732DA822400B96005957F2 /* ReadingOnTimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeData.swift; sourceTree = "<group>"; };
+		8476128B21E128B10010AEAE /* GradientExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtensions.swift; sourceTree = "<group>"; };
+		84778270237EEC52007C1FD8 /* Basic Varibles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Basic Varibles.swift"; sourceTree = "<group>"; };
+		847A507E2392E52400223AC7 /* BlankSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankSheetViewController.swift; sourceTree = "<group>"; };
+		848A92F121DD63E600D1C3C1 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		848CC42B2368FB1F0060709C /* ThemesMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesMenuTableViewController.swift; sourceTree = "<group>"; };
+		8497E34523566495003CD4A9 /* SystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColors.swift; sourceTree = "<group>"; };
+		8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Elements Basic Functions, Classes, Structs and as on.swift"; sourceTree = "<group>"; };
+		8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiConnectionRecognizing.swift; sourceTree = "<group>"; };
+		849C38A72353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeButtonOnDelegate.swift; sourceTree = "<group>"; };
+		849C38AD2353B8AB002E007D /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
+		849C38B12353BB27002E007D /* Notes Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes Protocol.swift"; sourceTree = "<group>"; };
+		849F5380236977CD0027289F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		84A15A96236209220069AADE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		84ADAC3321D2C60F00FDDFC4 /* GoodBiology.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodBiology.entitlements; sourceTree = "<group>"; };
+		84ADAC3521D2C65100FDDFC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewController.swift; sourceTree = "<group>"; };
+		84B2BD83222A5E9800BA41C9 /* LoginButtonAnimatiol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonAnimatiol.swift; sourceTree = "<group>"; };
+		84B2BD85222AE87C00BA41C9 /* MicrobesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobesData.swift; sourceTree = "<group>"; };
+		84B2BD87222BDCEA00BA41C9 /* VirusesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusesData.swift; sourceTree = "<group>"; };
+		84B9050123201E810002F0E2 /* BasicTestWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTestWords.swift; sourceTree = "<group>"; };
+		84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewControllerBasicWords.swift; sourceTree = "<group>"; };
+		84BDFDD0236DCAC80088B09E /* VideosMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosMenuTableViewController.swift; sourceTree = "<group>"; };
+		84BDFDD3236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesOnlineVideosViewController.swift; sourceTree = "<group>"; };
+		84C6FC5F2205986300BCE06D /* BasicsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsContent.swift; sourceTree = "<group>"; };
+		84C6FC8222061C5100BCE06D /* Good Biology(Apple Watch).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good Biology(Apple Watch).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C6FC8E22061C5300BCE06D /* Good Biology(Apple Watch) Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Good Biology(Apple Watch) Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C6FCAB220620A200BCE06D /* Good Biology (TV).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good Biology (TV).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C6FCAD220620A200BCE06D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84C6FCB4220620A200BCE06D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84C6FCB6220620A400BCE06D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84C6FCB8220620A400BCE06D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C6FCBC2209F8A500BCE06D /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
+		84C6FCC02209FAF200BCE06D /* BasicsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsContent.swift; sourceTree = "<group>"; };
+		84C7AAE9223C4CDF00A7CF68 /* BiologyShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyShareData.swift; sourceTree = "<group>"; };
+		84C7AAEC223C4E9700A7CF68 /* BiologyAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BiologyAll.swift; path = ../../../../BiologyAll.swift; sourceTree = "<group>"; };
+		84C7AAEE223C4EF500A7CF68 /* BiologyBasicsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyBasicsData.swift; sourceTree = "<group>"; };
+		84CDB5CC2221371D002432F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GoodBiology/Storyboards/Base.lproj/ForToday.storyboard; sourceTree = "<group>"; };
+		84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesReviewViewController.swift; sourceTree = "<group>"; };
+		AA2C423321C842F500D1E680 /* BasicsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsCoordinator.swift; sourceTree = "<group>"; };
+		AAEC22D121C679E900FF69FE /* BasicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewController.swift; sourceTree = "<group>"; };
+		AAEC22D521C67A1300FF69FE /* BasicsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsDataManager.swift; sourceTree = "<group>"; };
+		AAEC22D721C67A3200FF69FE /* BasicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsModel.swift; sourceTree = "<group>"; };
+		C40D3D6421B81878009A0211 /* ArchaeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaViewController.swift; sourceTree = "<group>"; };
+		C43B125D21A8ABEE00D58C44 /* ButtonsAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsAnimations.swift; sourceTree = "<group>"; };
+		C43B125F21A8AF8300D58C44 /* TestButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonAnimation.swift; sourceTree = "<group>"; };
+		C43B126921AB22DC00D58C44 /* ForTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewController.swift; sourceTree = "<group>"; };
+		C458BD5D23AE4B6A00D1F108 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C458BD6023AE55C800D1F108 /* ChromistaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaTableViewController.swift; sourceTree = "<group>"; };
+		C458BD6223AE55DA00D1F108 /* ChromistaThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaThemesViewController.swift; sourceTree = "<group>"; };
+		C463227623AD19D10099083F /* ChomistaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChomistaViewController.swift; sourceTree = "<group>"; };
+		C47CAD6621D0E42F00E27E88 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C496AE6A21C93DA400413CB4 /* NotificationsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsFunctions.swift; sourceTree = "<group>"; };
+		C498F9A2219F6B5900DCAC9F /* Tests.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tests.storyboard; sourceTree = "<group>"; };
+		C4A845BF21CABA3200AC3365 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		C4A845C021CABA3200AC3365 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = GoodBiology/Storyboards/iPhone/ru.lproj/Biology.strings; sourceTree = "<group>"; };
+		C4A845C321CABD6B00AC3365 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		C4A845C421CABD6B00AC3365 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = GoodBiology/Storyboards/iPhone/ja.lproj/Biology.strings; sourceTree = "<group>"; };
+		C4A845C721CABDE200AC3365 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		C4A845C821CABDE200AC3365 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = GoodBiology/Storyboards/iPhone/de.lproj/Biology.strings; sourceTree = "<group>"; };
+		C4A845CB21CABEA000AC3365 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		C4A845CC21CABEA000AC3365 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = GoodBiology/Storyboards/iPhone/fr.lproj/Biology.strings; sourceTree = "<group>"; };
+		C4A845D321CC2CA900AC3365 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		C4A845D421CC2CAA00AC3365 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "GoodBiology/Storyboards/iPhone/zh-Hans.lproj/Biology.strings"; sourceTree = "<group>"; };
+		C4A845D721CC2CFE00AC3365 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		C4A845D821CC2CFE00AC3365 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = GoodBiology/Storyboards/iPhone/es.lproj/Biology.strings; sourceTree = "<group>"; };
+		C4A845DB21CC2DA700AC3365 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		C4A845DC21CC2DA700AC3365 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = GoodBiology/Storyboards/iPhone/it.lproj/Biology.strings; sourceTree = "<group>"; };
+		C4A845DF21CC2E0600AC3365 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Main.strings; sourceTree = "<group>"; };
+		C4A845E021CC2E0600AC3365 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = GoodBiology/Storyboards/iPhone/uk.lproj/Biology.strings; sourceTree = "<group>"; };
+		C4C7230E21B968F500F64612 /* AnimalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsViewController.swift; sourceTree = "<group>"; };
+		C4C7231021B98A1E00F64612 /* VirusesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusesViewController.swift; sourceTree = "<group>"; };
+		C4C7231221B9901100F64612 /* HumanViewVontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanViewVontroller.swift; sourceTree = "<group>"; };
+		C4C7231421B9ACA900F64612 /* MicrobesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobesViewController.swift; sourceTree = "<group>"; };
+		C4C7231621B9B08900F64612 /* MushroomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomsViewController.swift; sourceTree = "<group>"; };
+		C4C7231821B9BC0F00F64612 /* RateManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateManeger.swift; sourceTree = "<group>"; };
+		C4C7251121BED93D00F64612 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C4C7252021C058DD00F64612 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GoodBiology/Storyboards/iPhone/Base.lproj/Biology.storyboard; sourceTree = "<group>"; };
+		C4C7252421C2B75800F64612 /* ArticelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticelsViewController.swift; sourceTree = "<group>"; };
+		C4C7253721C42EA800F64612 /* TestsMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsMenuViewController.swift; sourceTree = "<group>"; };
+		C4CEC54B225200FD005BA8C6 /* BasicNotificationThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasicNotificationThings.swift; path = "../Notes View Controllers/BasicNotificationThings.swift"; sourceTree = "<group>"; };
 		C4E5E23121975BE4009C3062 /* GoodBiology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodBiology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E5E23421975BE4009C3062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4E5E23621975BE4009C3062 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		C4E5E23821975BE4009C3062 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C4E5E23B21975BE4009C3062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4E5E23D21975BE5009C3062 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4E5E24021975BE5009C3062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,13 +317,40 @@
 		C4E5E25221975BE5009C3062 /* GoodBiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodBiologyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E5E25621975BE5009C3062 /* GoodBiologyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodBiologyUITests.swift; sourceTree = "<group>"; };
 		C4E5E25821975BE5009C3062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4E5E26821975DE3009C3062 /* Good Biology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good Biology.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4E5E27B21975DE4009C3062 /* Good BiologyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Good BiologyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4E5E28621975DE4009C3062 /* Good BiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Good BiologyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		844E0D092235625200933ABC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				844E0D0E2235625200933ABC /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C6FC8B22061C5300BCE06D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C6FCA8220620A200BCE06D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E5E22E21975BE4009C3062 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84ADAC3621D2C65100FDDFC4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,16 +368,625 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C4E5E26521975DE3009C3062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E5E27821975DE4009C3062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E5E28321975DE4009C3062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841198FC233F51BC004B0DAF /* Networking Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				841198FD233F5215004B0DAF /* NetworkingProtocol.swift */,
+			);
+			path = "Networking Protocol";
+			sourceTree = "<group>";
+		};
+		841198FF233F577F004B0DAF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				84119900233F57AC004B0DAF /* ReviewControllerProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		841199022344AC24004B0DAF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */,
+				841199032344AC40004B0DAF /* MenuProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84323ECB21CE691200D50B2B /* Shadows */ = {
+			isa = PBXGroup;
+			children = (
+				84323EC921CE690700D50B2B /* Shadows.swift */,
+			);
+			path = Shadows;
+			sourceTree = "<group>";
+		};
+		8445F0A923678FA8007413B7 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				C4C7253721C42EA800F64612 /* TestsMenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		8445F0AA23678FB0007413B7 /* Test Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C47CAD6621D0E42F00E27E88 /* TestViewController.swift */,
+			);
+			path = "Test Controller";
+			sourceTree = "<group>";
+		};
+		844E0D1F2235766000933ABC /* Making Article */ = {
+			isa = PBXGroup;
+			children = (
+				844E0D1D2235765200933ABC /* MakingArticleViewController.swift */,
+			);
+			name = "Making Article";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		844E0D222239A15000933ABC /* About App */ = {
+			isa = PBXGroup;
+			children = (
+				844E0D232239A16900933ABC /* VideoPlayerViewController.swift */,
+			);
+			name = "About App";
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		844E0D25223AAE2900933ABC /* Videoes */ = {
+			isa = PBXGroup;
+			children = (
+				844E0D202239A0C700933ABC /* iBiology.mov */,
+			);
+			name = Videoes;
+			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		8454DD9C221326820033A3A2 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				848CC42A2368FAE90060709C /* Menu */,
+				848CC4292368FAC20060709C /* Themes Control */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		8454DDA32214CA1A0033A3A2 /* Data Files */ = {
+			isa = PBXGroup;
+			children = (
+				8454DDA42214CA300033A3A2 /* PlantsData.swift */,
+				8454DDA8221750610033A3A2 /* AnimalsData.swift */,
+				84B2BD85222AE87C00BA41C9 /* MicrobesData.swift */,
+				84B2BD87222BDCEA00BA41C9 /* VirusesData.swift */,
+				84408E48222C4C5000F11996 /* FungusesData.swift */,
+				84408E4A222C529D00F11996 /* ArchaeaData.swift */,
+				84408E4C222C5F7100F11996 /* ManData.swift */,
+				8461367C22C65F8D0019C7FB /* HumanData.swift */,
+			);
+			path = "Data Files";
+			sourceTree = "<group>";
+		};
+		845FE7422322F42500B36E76 /* Article Online Videos and Images */ = {
+			isa = PBXGroup;
+			children = (
+				849F5386236A40BC0027289F /* With Wifi */,
+				849F5387236A40D40027289F /* String URLs */,
+			);
+			path = "Article Online Videos and Images";
+			sourceTree = "<group>";
+		};
+		8471F87D21B301E8001AA935 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8497E3472358E3A2003CD4A9 /* View Controllers */,
+				841198FC233F51BC004B0DAF /* Networking Protocol */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		84732DA7224003BC005957F2 /* ReadingOnTime */ = {
+			isa = PBXGroup;
+			children = (
+				849C38A62353B005002E007D /* Protocol */,
+				849C38A52353AFF4002E007D /* Controller */,
+				849C38A42353AFDC002E007D /* ReadingOnTimeData */,
+			);
+			path = ReadingOnTime;
+			sourceTree = "<group>";
+		};
+		8476128D21E12FB50010AEAE /* Gradient Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84BDFDD2236DCB2B0088B09E /* Extension */,
+				849F5382236977E70027289F /* GradientView */,
+			);
+			path = "Gradient Extension";
+			sourceTree = "<group>";
+		};
+		847A50782390720400223AC7 /* Settings Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84A15A96236209220069AADE /* SettingsTableViewController.swift */,
+			);
+			name = "Settings Controller";
+			sourceTree = "<group>";
+		};
+		847A507D2392E4FF00223AC7 /* Blank Sheet */ = {
+			isa = PBXGroup;
+			children = (
+				847A507E2392E52400223AC7 /* BlankSheetViewController.swift */,
+			);
+			path = "Blank Sheet";
+			sourceTree = "<group>";
+		};
+		848A92F321DD63F400D1C3C1 /* All About App For User */ = {
+			isa = PBXGroup;
+			children = (
+				848A92F121DD63E600D1C3C1 /* SafariViewController.swift */,
+				8454DD9522101F030033A3A2 /* AboutAppViewController.swift */,
+				844E0D04223243C800933ABC /* AppIconViewController.swift */,
+			);
+			path = "All About App For User";
+			sourceTree = "<group>";
+		};
+		848CC4292368FAC20060709C /* Themes Control */ = {
+			isa = PBXGroup;
+			children = (
+				8454DD9D221326E50033A3A2 /* ThemesController.swift */,
+			);
+			path = "Themes Control";
+			sourceTree = "<group>";
+		};
+		848CC42A2368FAE90060709C /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				848CC42B2368FB1F0060709C /* ThemesMenuTableViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		8497E34423566471003CD4A9 /* System Colors */ = {
+			isa = PBXGroup;
+			children = (
+				8497E34523566495003CD4A9 /* SystemColors.swift */,
+			);
+			path = "System Colors";
+			sourceTree = "<group>";
+		};
+		8497E3472358E3A2003CD4A9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8471F87E21B30202001AA935 /* NetworkingViewController.swift */,
+				844E0D0622351BD400933ABC /* MapViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8497E3482358E3C5003CD4A9 /* Basic Functions */ = {
+			isa = PBXGroup;
+			children = (
+				84778270237EEC52007C1FD8 /* Basic Varibles.swift */,
+				8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */,
+				8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */,
+			);
+			path = "Basic Functions";
+			sourceTree = "<group>";
+		};
+		8497E34B2358E494003CD4A9 /* About App Information */ = {
+			isa = PBXGroup;
+			children = (
+				84C6FC5F2205986300BCE06D /* BasicsContent.swift */,
+				8454DDA62216F8AF0033A3A2 /* AppInformation.swift */,
+			);
+			path = "About App Information";
+			sourceTree = "<group>";
+		};
+		8497E34C2358E4C4003CD4A9 /* Share Data */ = {
+			isa = PBXGroup;
+			children = (
+				84C7AAE9223C4CDF00A7CF68 /* BiologyShareData.swift */,
+			);
+			path = "Share Data";
+			sourceTree = "<group>";
+		};
+		8497E34D2358E4D7003CD4A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8461F8C521EB651800586139 /* TestsReviewViewController.swift */,
+				84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8497E34E2358E4F7003CD4A9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C458BD5C23AE4A8800D1F108 /* Json Data */,
+				8497E3512358E536003CD4A9 /* Articles VC */,
+				8497E34F2358E507003CD4A9 /* Menu Articles VC */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8497E34F2358E507003CD4A9 /* Menu Articles VC */ = {
+			isa = PBXGroup;
+			children = (
+				C4C7252421C2B75800F64612 /* ArticelsViewController.swift */,
+			);
+			path = "Menu Articles VC";
+			sourceTree = "<group>";
+		};
+		8497E3512358E536003CD4A9 /* Articles VC */ = {
+			isa = PBXGroup;
+			children = (
+				C458BD5F23AE55A700D1F108 /* Chromista */,
+				C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */,
+				C40D3D6421B81878009A0211 /* ArchaeaViewController.swift */,
+				C4C7230E21B968F500F64612 /* AnimalsViewController.swift */,
+				C4C7231021B98A1E00F64612 /* VirusesViewController.swift */,
+				C4C7231221B9901100F64612 /* HumanViewVontroller.swift */,
+				C4C7231421B9ACA900F64612 /* MicrobesViewController.swift */,
+				C4C7231621B9B08900F64612 /* MushroomsViewController.swift */,
+			);
+			path = "Articles VC";
+			sourceTree = "<group>";
+		};
+		8497E3522358E59A003CD4A9 /* Test Words */ = {
+			isa = PBXGroup;
+			children = (
+				84B9050123201E810002F0E2 /* BasicTestWords.swift */,
+			);
+			path = "Test Words";
+			sourceTree = "<group>";
+		};
+		8497E3532358E5A6003CD4A9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8445F0AA23678FB0007413B7 /* Test Controller */,
+				8445F0A923678FA8007413B7 /* Menu */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		849C38A42353AFDC002E007D /* ReadingOnTimeData */ = {
+			isa = PBXGroup;
+			children = (
+				84732DA822400B96005957F2 /* ReadingOnTimeData.swift */,
+			);
+			path = ReadingOnTimeData;
+			sourceTree = "<group>";
+		};
+		849C38A52353AFF4002E007D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84732DA5224003AC005957F2 /* ReadingOnTimeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		849C38A62353B005002E007D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				849C38A72353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		849C38A92353B58B002E007D /* ForToday */ = {
+			isa = PBXGroup;
+			children = (
+				84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */,
+				C43B126921AB22DC00D58C44 /* ForTodayViewController.swift */,
+				847A507D2392E4FF00223AC7 /* Blank Sheet */,
+			);
+			path = ForToday;
+			sourceTree = "<group>";
+		};
+		849C38AA2353B5A2002E007D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				84685FC92219827000F79BF5 /* LoginViewController.swift */,
+				8468332523A4E5A6004CBFC8 /* User.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		849C38AB2353B5AB002E007D /* Basic Notes */ = {
+			isa = PBXGroup;
+			children = (
+				84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */,
+			);
+			path = "Basic Notes";
+			sourceTree = "<group>";
+		};
+		849C38AC2353B893002E007D /* MapProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				849C38AD2353B8AB002E007D /* MapDelegate.swift */,
+			);
+			path = MapProtocol;
+			sourceTree = "<group>";
+		};
+		849C38AF2353BB09002E007D /* Notes Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				849C38B12353BB27002E007D /* Notes Protocol.swift */,
+			);
+			path = "Notes Delegate";
+			sourceTree = "<group>";
+		};
+		849F5382236977E70027289F /* GradientView */ = {
+			isa = PBXGroup;
+			children = (
+				849F5380236977CD0027289F /* GradientView.swift */,
+			);
+			path = GradientView;
+			sourceTree = "<group>";
+		};
+		849F5386236A40BC0027289F /* With Wifi */ = {
+			isa = PBXGroup;
+			children = (
+				84BDFDCF236DC9970088B09E /* Videos Menu */,
+				845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */,
+				84BDFDD3236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift */,
+			);
+			path = "With Wifi";
+			sourceTree = "<group>";
+		};
+		849F5387236A40D40027289F /* String URLs */ = {
+			isa = PBXGroup;
+			children = (
+				841AF1D0235A481D0003A440 /* URLs.swift */,
+			);
+			path = "String URLs";
+			sourceTree = "<group>";
+		};
+		84A15A95236209010069AADE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				847A50782390720400223AC7 /* Settings Controller */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		84ADAC3421D2C65100FDDFC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84ADAC3521D2C65100FDDFC4 /* MapKit.framework */,
+				844E0D0D2235625200933ABC /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84BDFDCF236DC9970088B09E /* Videos Menu */ = {
+			isa = PBXGroup;
+			children = (
+				84BDFDD0236DCAC80088B09E /* VideosMenuTableViewController.swift */,
+			);
+			path = "Videos Menu";
+			sourceTree = "<group>";
+		};
+		84BDFDD2236DCB2B0088B09E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8476128B21E128B10010AEAE /* GradientExtensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		84C6FC612205986D00BCE06D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84C7AAE6223C4CA200A7CF68 /* BiologyData */,
+				8454DDA32214CA1A0033A3A2 /* Data Files */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		84C6FCAC220620A200BCE06D /* Good Biology (TV) */ = {
+			isa = PBXGroup;
+			children = (
+				84C6FCAD220620A200BCE06D /* AppDelegate.swift */,
+				84C6FCC12209FCF800BCE06D /* ArticlesViewController */,
+				84C6FCB3220620A200BCE06D /* Main.storyboard */,
+				84C6FCB6220620A400BCE06D /* Assets.xcassets */,
+				84C6FCB8220620A400BCE06D /* Info.plist */,
+			);
+			path = "Good Biology (TV)";
+			sourceTree = "<group>";
+		};
+		84C6FCBF2209FAF200BCE06D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84C6FCC02209FAF200BCE06D /* BasicsContent.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		84C6FCC12209FCF800BCE06D /* ArticlesViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84C6FCBF2209FAF200BCE06D /* Data */,
+				84C6FCBC2209F8A500BCE06D /* ArticleViewController.swift */,
+			);
+			path = ArticlesViewController;
+			sourceTree = "<group>";
+		};
+		84C7AAE6223C4CA200A7CF68 /* BiologyData */ = {
+			isa = PBXGroup;
+			children = (
+				8497E34C2358E4C4003CD4A9 /* Share Data */,
+				8497E34B2358E494003CD4A9 /* About App Information */,
+				84C7AAEB223C4E4B00A7CF68 /* Biology Data For Code */,
+			);
+			path = BiologyData;
+			sourceTree = "<group>";
+		};
+		84C7AAEB223C4E4B00A7CF68 /* Biology Data For Code */ = {
+			isa = PBXGroup;
+			children = (
+				84C7AAEC223C4E9700A7CF68 /* BiologyAll.swift */,
+				84C7AAEE223C4EF500A7CF68 /* BiologyBasicsData.swift */,
+			);
+			path = "Biology Data For Code";
+			sourceTree = "<group>";
+		};
+		84CDB5CA2220B0AA002432F7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C4E5E23421975BE4009C3062 /* AppDelegate.swift */,
+				84ADAC3321D2C60F00FDDFC4 /* GoodBiology.entitlements */,
+				C4C7251021BED93D00F64612 /* Model.xcdatamodeld */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		84D968D621D919FA0079596C /* Review Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8497E34D2358E4D7003CD4A9 /* Controllers */,
+				841198FF233F577F004B0DAF /* Protocol */,
+			);
+			path = "Review Controllers";
+			sourceTree = "<group>";
+		};
+		AA2C423221C842AF00D1E680 /* BasicsNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				AA2C423321C842F500D1E680 /* BasicsCoordinator.swift */,
+			);
+			path = BasicsNavigationController;
+			sourceTree = "<group>";
+		};
+		AAEC22D321C679F100FF69FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC22D521C67A1300FF69FE /* BasicsDataManager.swift */,
+				AAEC22D721C67A3200FF69FE /* BasicsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AAEC22D421C679F900FF69FE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC22D121C679E900FF69FE /* BasicsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C458BD5C23AE4A8800D1F108 /* Json Data */ = {
+			isa = PBXGroup;
+			children = (
+				C458BD5D23AE4B6A00D1F108 /* Podfile */,
+			);
+			path = "Json Data";
+			sourceTree = "<group>";
+		};
+		C458BD5F23AE55A700D1F108 /* Chromista */ = {
+			isa = PBXGroup;
+			children = (
+				C463227623AD19D10099083F /* ChomistaViewController.swift */,
+				C458BD6023AE55C800D1F108 /* ChromistaTableViewController.swift */,
+				C458BD6223AE55DA00D1F108 /* ChromistaThemesViewController.swift */,
+			);
+			path = Chromista;
+			sourceTree = "<group>";
+		};
+		C496AE2021C59B0B00413CB4 /* BiologyControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AAEC22D321C679F100FF69FE /* Model */,
+				AA2C423221C842AF00D1E680 /* BasicsNavigationController */,
+				AAEC22D421C679F900FF69FE /* ViewControllers */,
+			);
+			path = BiologyControllers;
+			sourceTree = "<group>";
+		};
+		C496AE6521C938CA00413CB4 /* ArticelsControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8497E34E2358E4F7003CD4A9 /* View Controllers */,
+				841199022344AC24004B0DAF /* Protocols */,
+			);
+			path = ArticelsControllers;
+			sourceTree = "<group>";
+		};
+		C496AE6721C9390100413CB4 /* Buttons Animations */ = {
+			isa = PBXGroup;
+			children = (
+				C43B125D21A8ABEE00D58C44 /* ButtonsAnimations.swift */,
+				C43B125F21A8AF8300D58C44 /* TestButtonAnimation.swift */,
+				84B2BD83222A5E9800BA41C9 /* LoginButtonAnimatiol.swift */,
+			);
+			path = "Buttons Animations";
+			sourceTree = "<group>";
+		};
+		C496AE6821C9391D00413CB4 /* Rate Maneger */ = {
+			isa = PBXGroup;
+			children = (
+				C4C7231821B9BC0F00F64612 /* RateManeger.swift */,
+			);
+			path = "Rate Maneger";
+			sourceTree = "<group>";
+		};
+		C496AE6921C9392E00413CB4 /* Notes View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				849C38AF2353BB09002E007D /* Notes Delegate */,
+				849C38AC2353B893002E007D /* MapProtocol */,
+				849C38A92353B58B002E007D /* ForToday */,
+				849C38AB2353B5AB002E007D /* Basic Notes */,
+				849C38AA2353B5A2002E007D /* Login */,
+			);
+			path = "Notes View Controllers";
+			sourceTree = "<group>";
+		};
+		C496AE6C21C93DAD00413CB4 /* Notification Functions */ = {
+			isa = PBXGroup;
+			children = (
+				C496AE6A21C93DA400413CB4 /* NotificationsFunctions.swift */,
+				840887B321F763810026A210 /* BiologyNotifications.swift */,
+				C4CEC54B225200FD005BA8C6 /* BasicNotificationThings.swift */,
+			);
+			path = "Notification Functions";
+			sourceTree = "<group>";
+		};
 		C4E5E22821975BE4009C3062 = {
 			isa = PBXGroup;
 			children = (
 				C4E5E23321975BE4009C3062 /* GoodBiology */,
 				C4E5E24A21975BE5009C3062 /* GoodBiologyTests */,
 				C4E5E25521975BE5009C3062 /* GoodBiologyUITests */,
+				84C6FCAC220620A200BCE06D /* Good Biology (TV) */,
 				C4E5E23221975BE4009C3062 /* Products */,
+				84ADAC3421D2C65100FDDFC4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +996,13 @@
 				C4E5E23121975BE4009C3062 /* GoodBiology.app */,
 				C4E5E24721975BE5009C3062 /* GoodBiologyTests.xctest */,
 				C4E5E25221975BE5009C3062 /* GoodBiologyUITests.xctest */,
+				C4E5E26821975DE3009C3062 /* Good Biology.app */,
+				C4E5E27B21975DE4009C3062 /* Good BiologyTests.xctest */,
+				C4E5E28621975DE4009C3062 /* Good BiologyUITests.xctest */,
+				84C6FC8222061C5100BCE06D /* Good Biology(Apple Watch).app */,
+				84C6FC8E22061C5300BCE06D /* Good Biology(Apple Watch) Extension.appex */,
+				84C6FCAB220620A200BCE06D /* Good Biology (TV).app */,
+				844E0D0C2235625200933ABC /* ForTodayWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,12 +1010,31 @@
 		C4E5E23321975BE4009C3062 /* GoodBiology */ = {
 			isa = PBXGroup;
 			children = (
-				C4E5E23421975BE4009C3062 /* AppDelegate.swift */,
-				C4E5E23621975BE4009C3062 /* FirstViewController.swift */,
-				C4E5E23821975BE4009C3062 /* SecondViewController.swift */,
-				C4E5E23A21975BE4009C3062 /* Main.storyboard */,
+				8468332423A44727004CBFC8 /* GoodBiology.entitlements */,
+				84CDB5CA2220B0AA002432F7 /* AppDelegate */,
+				84A15A95236209010069AADE /* Settings */,
+				C4FA2D1F21FCD7F40023B655 /* Basic Functions */,
+				8476128D21E12FB50010AEAE /* Gradient Extension */,
+				8471F87D21B301E8001AA935 /* Networking */,
+				845FE7422322F42500B36E76 /* Article Online Videos and Images */,
+				C496AE6921C9392E00413CB4 /* Notes View Controllers */,
+				C4FE303421A4AEA900E352E1 /* Biology Models */,
+				84732DA7224003BC005957F2 /* ReadingOnTime */,
+				844E0D25223AAE2900933ABC /* Videoes */,
+				844E0D222239A15000933ABC /* About App */,
+				844E0D1F2235766000933ABC /* Making Article */,
+				8454DD9C221326820033A3A2 /* Themes */,
+				84C6FC612205986D00BCE06D /* Data */,
+				848A92F321DD63F400D1C3C1 /* All About App For User */,
+				84D968D621D919FA0079596C /* Review Controllers */,
+				C4FE302921A4AE3500E352E1 /* Storyboards */,
+				84323ECB21CE691200D50B2B /* Shadows */,
+				C496AE6C21C93DAD00413CB4 /* Notification Functions */,
+				C496AE6521C938CA00413CB4 /* ArticelsControllers */,
+				C496AE6721C9390100413CB4 /* Buttons Animations */,
+				C496AE6821C9391D00413CB4 /* Rate Maneger */,
+				C4FE302721A4ADF800E352E1 /* TestViewControllers */,
 				C4E5E23D21975BE5009C3062 /* Assets.xcassets */,
-				C4E5E23F21975BE5009C3062 /* LaunchScreen.storyboard */,
 				C4E5E24221975BE5009C3062 /* Info.plist */,
 			);
 			path = GoodBiology;
@@ -128,9 +1058,117 @@
 			path = GoodBiologyUITests;
 			sourceTree = "<group>";
 		};
+		C4FA2D1F21FCD7F40023B655 /* Basic Functions */ = {
+			isa = PBXGroup;
+			children = (
+				8497E3482358E3C5003CD4A9 /* Basic Functions */,
+				8497E34423566471003CD4A9 /* System Colors */,
+			);
+			path = "Basic Functions";
+			sourceTree = "<group>";
+		};
+		C4FE302721A4ADF800E352E1 /* TestViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8497E3532358E5A6003CD4A9 /* Controllers */,
+				8497E3522358E59A003CD4A9 /* Test Words */,
+			);
+			path = TestViewControllers;
+			sourceTree = "<group>";
+		};
+		C4FE302921A4AE3500E352E1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C4E5E23A21975BE4009C3062 /* Main.storyboard */,
+				C4C7251F21C058DD00F64612 /* Biology.storyboard */,
+				C498F9A2219F6B5900DCAC9F /* Tests.storyboard */,
+				8454DD97221323640033A3A2 /* Browser.storyboard */,
+				8454DD9A221323CD0033A3A2 /* AboutAppStoryBoard.storyboard */,
+				84CDB5CB2221371D002432F7 /* ForToday.storyboard */,
+				C4E5E23F21975BE5009C3062 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		C4FE303421A4AEA900E352E1 /* Biology Models */ = {
+			isa = PBXGroup;
+			children = (
+				C496AE2021C59B0B00413CB4 /* BiologyControllers */,
+			);
+			path = "Biology Models";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		844E0D0B2235625200933ABC /* ForTodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 844E0D192235625200933ABC /* Build configuration list for PBXNativeTarget "ForTodayWidget" */;
+			buildPhases = (
+				844E0D082235625200933ABC /* Sources */,
+				844E0D092235625200933ABC /* Frameworks */,
+				844E0D0A2235625200933ABC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ForTodayWidget;
+			productName = ForTodayWidget;
+			productReference = 844E0D0C2235625200933ABC /* ForTodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		84C6FC8122061C5100BCE06D /* Good Biology(Apple Watch) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C6FCA422061C5300BCE06D /* Build configuration list for PBXNativeTarget "Good Biology(Apple Watch)" */;
+			buildPhases = (
+				84C6FC8022061C5100BCE06D /* Resources */,
+				84C6FCA322061C5300BCE06D /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84C6FC9122061C5300BCE06D /* PBXTargetDependency */,
+			);
+			name = "Good Biology(Apple Watch)";
+			productName = "Good Biology(Apple Watch)";
+			productReference = 84C6FC8222061C5100BCE06D /* Good Biology(Apple Watch).app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		84C6FC8D22061C5300BCE06D /* Good Biology(Apple Watch) Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C6FCA022061C5300BCE06D /* Build configuration list for PBXNativeTarget "Good Biology(Apple Watch) Extension" */;
+			buildPhases = (
+				84C6FC8A22061C5300BCE06D /* Sources */,
+				84C6FC8B22061C5300BCE06D /* Frameworks */,
+				84C6FC8C22061C5300BCE06D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Good Biology(Apple Watch) Extension";
+			productName = "Good Biology(Apple Watch) Extension";
+			productReference = 84C6FC8E22061C5300BCE06D /* Good Biology(Apple Watch) Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		84C6FCAA220620A200BCE06D /* Good Biology (TV) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C6FCB9220620A400BCE06D /* Build configuration list for PBXNativeTarget "Good Biology (TV)" */;
+			buildPhases = (
+				84C6FCA7220620A200BCE06D /* Sources */,
+				84C6FCA8220620A200BCE06D /* Frameworks */,
+				84C6FCA9220620A200BCE06D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Good Biology (TV)";
+			productName = "Good Biology (TV)";
+			productReference = 84C6FCAB220620A200BCE06D /* Good Biology (TV).app */;
+			productType = "com.apple.product-type.application";
+		};
 		C4E5E23021975BE4009C3062 /* GoodBiology */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E5E25B21975BE5009C3062 /* Build configuration list for PBXNativeTarget "GoodBiology" */;
@@ -138,10 +1176,14 @@
 				C4E5E22D21975BE4009C3062 /* Sources */,
 				C4E5E22E21975BE4009C3062 /* Frameworks */,
 				C4E5E22F21975BE4009C3062 /* Resources */,
+				C4E5E2BD21975F2D009C3062 /* Embed Watch Content */,
+				844E0D1C2235625200933ABC /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84C6FC9E22061C5300BCE06D /* PBXTargetDependency */,
+				844E0D172235625200933ABC /* PBXTargetDependency */,
 			);
 			name = GoodBiology;
 			productName = GoodBiology;
@@ -184,26 +1226,137 @@
 			productReference = C4E5E25221975BE5009C3062 /* GoodBiologyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C4E5E26721975DE3009C3062 /* Good Biology */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4E5E28D21975DE4009C3062 /* Build configuration list for PBXNativeTarget "Good Biology" */;
+			buildPhases = (
+				C4E5E26421975DE3009C3062 /* Sources */,
+				C4E5E26521975DE3009C3062 /* Frameworks */,
+				C4E5E26621975DE3009C3062 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Good Biology";
+			productName = "Good Biology";
+			productReference = C4E5E26821975DE3009C3062 /* Good Biology.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4E5E27A21975DE4009C3062 /* Good BiologyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4E5E29021975DE4009C3062 /* Build configuration list for PBXNativeTarget "Good BiologyTests" */;
+			buildPhases = (
+				C4E5E27721975DE4009C3062 /* Sources */,
+				C4E5E27821975DE4009C3062 /* Frameworks */,
+				C4E5E27921975DE4009C3062 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4E5E27D21975DE4009C3062 /* PBXTargetDependency */,
+			);
+			name = "Good BiologyTests";
+			productName = "Good BiologyTests";
+			productReference = C4E5E27B21975DE4009C3062 /* Good BiologyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4E5E28521975DE4009C3062 /* Good BiologyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4E5E29321975DE4009C3062 /* Build configuration list for PBXNativeTarget "Good BiologyUITests" */;
+			buildPhases = (
+				C4E5E28221975DE4009C3062 /* Sources */,
+				C4E5E28321975DE4009C3062 /* Frameworks */,
+				C4E5E28421975DE4009C3062 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4E5E28821975DE4009C3062 /* PBXTargetDependency */,
+			);
+			name = "Good BiologyUITests";
+			productName = "Good BiologyUITests";
+			productReference = C4E5E28621975DE4009C3062 /* Good BiologyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		C4E5E22921975BE4009C3062 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Yaroslav;
 				TargetAttributes = {
+					844E0D0B2235625200933ABC = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					84C6FC8122061C5100BCE06D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					84C6FC8D22061C5300BCE06D = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					84C6FCAA220620A200BCE06D = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					C4E5E23021975BE4009C3062 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 0;
+							};
+							com.apple.ApplePay = {
+								enabled = 0;
+							};
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Multipath = {
+								enabled = 0;
+							};
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.SafariKeychain = {
+								enabled = 0;
+							};
+							com.apple.Siri = {
+								enabled = 0;
+							};
+						};
 					};
 					C4E5E24621975BE5009C3062 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = C4E5E23021975BE4009C3062;
 					};
 					C4E5E25121975BE5009C3062 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = C4E5E23021975BE4009C3062;
+					};
+					C4E5E26721975DE3009C3062 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C4E5E27A21975DE4009C3062 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C4E5E26721975DE3009C3062;
+					};
+					C4E5E28521975DE4009C3062 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C4E5E26721975DE3009C3062;
 					};
 				};
 			};
@@ -214,6 +1367,14 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				ja,
+				de,
+				fr,
+				"zh-Hans",
+				es,
+				it,
+				uk,
 			);
 			mainGroup = C4E5E22821975BE4009C3062;
 			productRefGroup = C4E5E23221975BE4009C3062 /* Products */;
@@ -223,17 +1384,61 @@
 				C4E5E23021975BE4009C3062 /* GoodBiology */,
 				C4E5E24621975BE5009C3062 /* GoodBiologyTests */,
 				C4E5E25121975BE5009C3062 /* GoodBiologyUITests */,
+				C4E5E26721975DE3009C3062 /* Good Biology */,
+				C4E5E27A21975DE4009C3062 /* Good BiologyTests */,
+				C4E5E28521975DE4009C3062 /* Good BiologyUITests */,
+				84C6FC8122061C5100BCE06D /* Good Biology(Apple Watch) */,
+				84C6FC8D22061C5300BCE06D /* Good Biology(Apple Watch) Extension */,
+				84C6FCAA220620A200BCE06D /* Good Biology (TV) */,
+				844E0D0B2235625200933ABC /* ForTodayWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		844E0D0A2235625200933ABC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C6FC8022061C5100BCE06D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C6FC8C22061C5300BCE06D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C6FCA9220620A200BCE06D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C6FCB7220620A400BCE06D /* Assets.xcassets in Resources */,
+				84C6FCB5220620A200BCE06D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E5E22F21975BE4009C3062 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C458BD5E23AE4B6A00D1F108 /* Podfile in Resources */,
 				C4E5E24121975BE5009C3062 /* LaunchScreen.storyboard in Resources */,
+				8454DD9B221323CD0033A3A2 /* AboutAppStoryBoard.storyboard in Resources */,
+				84CDB5CD2221371D002432F7 /* ForToday.storyboard in Resources */,
+				8454DD99221323640033A3A2 /* Browser.storyboard in Resources */,
+				844E0D212239A0C800933ABC /* iBiology.mov in Resources */,
 				C4E5E23E21975BE5009C3062 /* Assets.xcassets in Resources */,
+				C4C7252121C058DD00F64612 /* Biology.storyboard in Resources */,
+				C498F9A3219F6B5900DCAC9F /* Tests.storyboard in Resources */,
 				C4E5E23C21975BE4009C3062 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,16 +1457,136 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C4E5E26621975DE3009C3062 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E5E27921975DE4009C3062 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E5E28421975DE4009C3062 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		844E0D082235625200933ABC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C6FC8A22061C5300BCE06D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C6FCA7220620A200BCE06D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C6FCAE220620A200BCE06D /* AppDelegate.swift in Sources */,
+				84C6FCC22209FDEF00BCE06D /* BasicsContent.swift in Sources */,
+				84C6FCBE2209F8AA00BCE06D /* ArticleViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4E5E22D21975BE4009C3062 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4E5E23921975BE4009C3062 /* SecondViewController.swift in Sources */,
+				84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */,
+				848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */,
+				84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */,
+				84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */,
+				8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */,
+				C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */,
+				84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */,
+				8454DDA9221750610033A3A2 /* AnimalsData.swift in Sources */,
+				84323ECA21CE690700D50B2B /* Shadows.swift in Sources */,
+				8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */,
+				84732DA6224003AC005957F2 /* ReadingOnTimeViewController.swift in Sources */,
+				C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */,
+				84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */,
+				848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */,
+				849C38A82353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift in Sources */,
+				849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */,
+				C4C7231321B9901100F64612 /* HumanViewVontroller.swift in Sources */,
+				84408E49222C4C5000F11996 /* FungusesData.swift in Sources */,
+				844E0D0722351BD400933ABC /* MapViewController.swift in Sources */,
+				84778271237EEC52007C1FD8 /* Basic Varibles.swift in Sources */,
+				841AF1D1235A481D0003A440 /* URLs.swift in Sources */,
+				8471F87F21B30202001AA935 /* NetworkingViewController.swift in Sources */,
+				84408E4D222C5F7100F11996 /* ManData.swift in Sources */,
+				C463227723AD19D10099083F /* ChomistaViewController.swift in Sources */,
+				8461F8C621EB651800586139 /* TestsReviewViewController.swift in Sources */,
+				C4FB6D3921B7D7EE00E4FD63 /* PlantsViewController.swift in Sources */,
+				C40D3D6521B81878009A0211 /* ArchaeaViewController.swift in Sources */,
+				C496AE6B21C93DA400413CB4 /* NotificationsFunctions.swift in Sources */,
+				AAEC22D221C679E900FF69FE /* BasicsViewController.swift in Sources */,
+				C4C7231521B9ACA900F64612 /* MicrobesViewController.swift in Sources */,
+				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
+				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
+				C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */,
+				8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */,
+				84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */,
+				84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */,
+				C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */,
+				AAEC22D621C67A1300FF69FE /* BasicsDataManager.swift in Sources */,
+				84B2BD88222BDCEA00BA41C9 /* VirusesData.swift in Sources */,
+				C43B125E21A8ABEE00D58C44 /* ButtonsAnimations.swift in Sources */,
+				847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */,
+				8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */,
+				8454DDA52214CA300033A3A2 /* PlantsData.swift in Sources */,
+				844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */,
+				AAEC22D821C67A3200FF69FE /* BasicsModel.swift in Sources */,
+				845FE7442322F45400B36E76 /* ArticleOnlineImagesViewController.swift in Sources */,
+				C4C7230F21B968F500F64612 /* AnimalsViewController.swift in Sources */,
+				841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */,
+				8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */,
+				84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */,
+				849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */,
+				8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */,
+				C4C7231921B9BC0F00F64612 /* RateManeger.swift in Sources */,
+				84685FCA2219827000F79BF5 /* LoginViewController.swift in Sources */,
+				8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */,
+				84732DA922400B96005957F2 /* ReadingOnTimeData.swift in Sources */,
+				AA2C423421C842F500D1E680 /* BasicsCoordinator.swift in Sources */,
+				84C7AAEA223C4CDF00A7CF68 /* BiologyShareData.swift in Sources */,
+				C4CEC54C225200FE005BA8C6 /* BasicNotificationThings.swift in Sources */,
+				84B9050223201E810002F0E2 /* BasicTestWords.swift in Sources */,
+				8497E34623566495003CD4A9 /* SystemColors.swift in Sources */,
+				84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */,
+				C4C7231721B9B08900F64612 /* MushroomsViewController.swift in Sources */,
+				C43B126A21AB22DC00D58C44 /* ForTodayViewController.swift in Sources */,
+				C47CAD6721D0E42F00E27E88 /* TestViewController.swift in Sources */,
+				840887B421F763810026A210 /* BiologyNotifications.swift in Sources */,
+				8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */,
 				C4E5E23521975BE4009C3062 /* AppDelegate.swift in Sources */,
-				C4E5E23721975BE4009C3062 /* FirstViewController.swift in Sources */,
+				849F5381236977CD0027289F /* GradientView.swift in Sources */,
+				84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */,
+				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
+				C4C7231121B98A1E00F64612 /* VirusesViewController.swift in Sources */,
+				844E0D242239A16900933ABC /* VideoPlayerViewController.swift in Sources */,
+				C4C7252521C2B75800F64612 /* ArticelsViewController.swift in Sources */,
+				C43B126021A8AF8300D58C44 /* TestButtonAnimation.swift in Sources */,
+				84C7AAED223C4E9700A7CF68 /* BiologyAll.swift in Sources */,
+				84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */,
+				8468332623A4E5A6004CBFC8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +1606,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C4E5E26421975DE3009C3062 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E5E27721975DE4009C3062 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E5E28221975DE4009C3062 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		844E0D172235625200933ABC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844E0D0B2235625200933ABC /* ForTodayWidget */;
+			targetProxy = 844E0D162235625200933ABC /* PBXContainerItemProxy */;
+		};
+		84C6FC9122061C5300BCE06D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C6FC8D22061C5300BCE06D /* Good Biology(Apple Watch) Extension */;
+			targetProxy = 84C6FC9022061C5300BCE06D /* PBXContainerItemProxy */;
+		};
+		84C6FC9E22061C5300BCE06D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C6FC8122061C5100BCE06D /* Good Biology(Apple Watch) */;
+			targetProxy = 84C6FC9D22061C5300BCE06D /* PBXContainerItemProxy */;
+		};
 		C4E5E24921975BE5009C3062 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C4E5E23021975BE4009C3062 /* GoodBiology */;
@@ -294,13 +1655,71 @@
 			target = C4E5E23021975BE4009C3062 /* GoodBiology */;
 			targetProxy = C4E5E25321975BE5009C3062 /* PBXContainerItemProxy */;
 		};
+		C4E5E27D21975DE4009C3062 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4E5E26721975DE3009C3062 /* Good Biology */;
+			targetProxy = C4E5E27C21975DE4009C3062 /* PBXContainerItemProxy */;
+		};
+		C4E5E28821975DE4009C3062 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4E5E26721975DE3009C3062 /* Good Biology */;
+			targetProxy = C4E5E28721975DE4009C3062 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8454DD97221323640033A3A2 /* Browser.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8454DD98221323640033A3A2 /* Base */,
+			);
+			name = Browser.storyboard;
+			sourceTree = "<group>";
+		};
+		84C6FCB3220620A200BCE06D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84C6FCB4220620A200BCE06D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84CDB5CB2221371D002432F7 /* ForToday.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CDB5CC2221371D002432F7 /* Base */,
+			);
+			name = ForToday.storyboard;
+			sourceTree = "<group>";
+		};
+		C4C7251F21C058DD00F64612 /* Biology.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4C7252021C058DD00F64612 /* Base */,
+				C4A845C021CABA3200AC3365 /* ru */,
+				C4A845C421CABD6B00AC3365 /* ja */,
+				C4A845C821CABDE200AC3365 /* de */,
+				C4A845CC21CABEA000AC3365 /* fr */,
+				C4A845D421CC2CAA00AC3365 /* zh-Hans */,
+				C4A845D821CC2CFE00AC3365 /* es */,
+				C4A845DC21CC2DA700AC3365 /* it */,
+				C4A845E021CC2E0600AC3365 /* uk */,
+			);
+			name = Biology.storyboard;
+			sourceTree = "<group>";
+		};
 		C4E5E23A21975BE4009C3062 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C4E5E23B21975BE4009C3062 /* Base */,
+				C4A845BF21CABA3200AC3365 /* ru */,
+				C4A845C321CABD6B00AC3365 /* ja */,
+				C4A845C721CABDE200AC3365 /* de */,
+				C4A845CB21CABEA000AC3365 /* fr */,
+				C4A845D321CC2CA900AC3365 /* zh-Hans */,
+				C4A845D721CC2CFE00AC3365 /* es */,
+				C4A845DB21CC2DA700AC3365 /* it */,
+				C4A845DF21CC2E0600AC3365 /* uk */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -316,10 +1735,177 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		844E0D1A2235625200933ABC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = ForTodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.ForTodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		844E0D1B2235625200933ABC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = ForTodayWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.ForTodayWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84C6FCA122061C5300BCE06D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good Biology(Apple Watch) Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		84C6FCA222061C5300BCE06D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good Biology(Apple Watch) Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		84C6FCA522061C5300BCE06D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				IBSC_MODULE = Good_Biology_Apple_Watch__Extension;
+				INFOPLIST_FILE = "Good Biology(Apple Watch)/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Debug;
+		};
+		84C6FCA622061C5300BCE06D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				IBSC_MODULE = Good_Biology_Apple_Watch__Extension;
+				INFOPLIST_FILE = "Good Biology(Apple Watch)/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 5.1;
+			};
+			name = Release;
+		};
+		84C6FCBA220620A400BCE06D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good Biology (TV)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wowApps.Good-Biology--TV-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		84C6FCBB220620A400BCE06D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good Biology (TV)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "wowApps.Good-Biology--TV-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Release;
+		};
 		C4E5E25921975BE5009C3062 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -367,7 +1953,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -381,6 +1967,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -422,7 +2009,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -436,15 +2023,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GoodBiology/GoodBiology.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59C6H8HQ42;
 				INFOPLIST_FILE = GoodBiology/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoodBiology-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -454,15 +2048,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = GoodBiology/GoodBiology.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59C6H8HQ42;
 				INFOPLIST_FILE = GoodBiology/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoodBiology-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -550,9 +2150,173 @@
 			};
 			name = Release;
 		};
+		C4E5E28E21975DE4009C3062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good Biology/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yareyapp.Good-Biology";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		C4E5E28F21975DE4009C3062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good Biology/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yareyapp.Good-Biology";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Release;
+		};
+		C4E5E29121975DE4009C3062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good BiologyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yareyapp.Good-BiologyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Good Biology.app/Good Biology";
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		C4E5E29221975DE4009C3062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good BiologyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yareyapp.Good-BiologyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Good Biology.app/Good Biology";
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Release;
+		};
+		C4E5E29421975DE4009C3062 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good BiologyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yareyapp.Good-BiologyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = "Good Biology";
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		C4E5E29521975DE4009C3062 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = "Good BiologyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "yareyapp.Good-BiologyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = "Good Biology";
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		844E0D192235625200933ABC /* Build configuration list for PBXNativeTarget "ForTodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				844E0D1A2235625200933ABC /* Debug */,
+				844E0D1B2235625200933ABC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84C6FCA022061C5300BCE06D /* Build configuration list for PBXNativeTarget "Good Biology(Apple Watch) Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C6FCA122061C5300BCE06D /* Debug */,
+				84C6FCA222061C5300BCE06D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84C6FCA422061C5300BCE06D /* Build configuration list for PBXNativeTarget "Good Biology(Apple Watch)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C6FCA522061C5300BCE06D /* Debug */,
+				84C6FCA622061C5300BCE06D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84C6FCB9220620A400BCE06D /* Build configuration list for PBXNativeTarget "Good Biology (TV)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C6FCBA220620A400BCE06D /* Debug */,
+				84C6FCBB220620A400BCE06D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4E5E22C21975BE4009C3062 /* Build configuration list for PBXProject "GoodBiology" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -589,7 +2353,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		C4E5E28D21975DE4009C3062 /* Build configuration list for PBXNativeTarget "Good Biology" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4E5E28E21975DE4009C3062 /* Debug */,
+				C4E5E28F21975DE4009C3062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4E5E29021975DE4009C3062 /* Build configuration list for PBXNativeTarget "Good BiologyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4E5E29121975DE4009C3062 /* Debug */,
+				C4E5E29221975DE4009C3062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4E5E29321975DE4009C3062 /* Build configuration list for PBXNativeTarget "Good BiologyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4E5E29421975DE4009C3062 /* Debug */,
+				C4E5E29521975DE4009C3062 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C4C7251021BED93D00F64612 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C4C7251121BED93D00F64612 /* Model.xcdatamodel */,
+			);
+			currentVersion = C4C7251121BED93D00F64612 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C4E5E22921975BE4009C3062 /* Project object */;
 }
