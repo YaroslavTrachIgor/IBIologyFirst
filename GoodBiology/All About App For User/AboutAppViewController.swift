@@ -11,12 +11,14 @@ import AudioToolbox
 
 class AboutAppViewController: UIViewController {
 
-    @IBOutlet private var contentBackground:    UIView!
-    @IBOutlet private var contentTextView:      UITextView!
-    @IBOutlet private var shareButton:          UIBarButtonItem!
-    @IBOutlet private var stepper:              UIStepper!
-    @IBOutlet private var stepperView:          UIView!
-    @IBOutlet private var backButton:           UIBarButtonItem!
+    @IBOutlet weak var contentBackground:    ContentBack!
+    @IBOutlet weak var contentTextView:      UITextView!
+    
+    @IBOutlet weak var stepper:              UIStepper!
+    @IBOutlet weak var stepperView:          UIView!
+    
+    @IBOutlet weak var shareButton:          TestUIBarButtonItem!
+    @IBOutlet weak var backButton:           TestUIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,33 +40,22 @@ class AboutAppViewController: UIViewController {
                 let delay: Double = Double((index)) * 0.2
                 
                 UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                    UIApplication.shared.beginIgnoringInteractionEvents()
                     view?.alpha = 1
-                }) { (_) in
-                    UIApplication.shared.endIgnoringInteractionEvents()
-                }
+                })
             }
         }
     }
     
     private func systemBackSetup() {
         stepperView.viewSystemBack()
-        contentBackground.viewSystemBack()
-        
         contentTextView.systemTextColor()
-        
         view.viewSystemBack()
     }
     
     private func viewsPrefering() {
-        contentBackSetup()
         stepperViewSetup()
         preferingCorners()
         contentTextViewPrefering()
-    }
-    
-    private func contentBackSetup() {
-        contentBackground.viewShadows()
     }
     
     private func stepperViewSetup() {
@@ -85,8 +76,10 @@ class AboutAppViewController: UIViewController {
     }
     
     private func contentPrefering() {
-        contentBackground.alpha = 0
-        contentTextView.alpha   = 0
+        let alpha: CGFloat = 0
+        
+        contentBackground.alpha = alpha
+        contentTextView.alpha   = alpha
     }
     
     private func otherUIthings() {

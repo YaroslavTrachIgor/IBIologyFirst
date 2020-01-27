@@ -10,24 +10,24 @@ import UIKit
 
 class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
 
-    @IBOutlet weak var sizeButton:   UIButton!
-    @IBOutlet weak var hideButton:   UIButton!
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var sizeButton:   ChromistaButton!
+    @IBOutlet weak var hideButton:   ChromistaButton!
+    @IBOutlet weak var searchButton: ChromistaButton!
     
-    @IBOutlet weak var sizeButtonBack:      UIView!
-    @IBOutlet weak var hideButtonBack:      UIView!
-    @IBOutlet weak var searchButtonBack:    UIView!
+    @IBOutlet weak var sizeButtonBack:      ChromistaActionButtonsBack!
+    @IBOutlet weak var hideButtonBack:      ChromistaActionButtonsBack!
+    @IBOutlet weak var searchButtonBack:    ChromistaActionButtonsBack!
     
     @IBOutlet weak var textView:            UITextView!
     @IBOutlet weak var structureTextView:   UITextView!
     @IBOutlet weak var historyTextView:     UITextView!
     
-    @IBOutlet weak var textViewBack:             UIView!
-    @IBOutlet weak var structureTextViewBack:    UIView!
-    @IBOutlet weak var historyTextViewBack:      UIView!
+    @IBOutlet weak var textViewBack:             ContentBack!
+    @IBOutlet weak var structureTextViewBack:    ContentBack!
+    @IBOutlet weak var historyTextViewBack:      ContentBack!
     
-    @IBOutlet weak var structureLabel:  UILabel!
-    @IBOutlet weak var basicsLabel:     UILabel!
+    @IBOutlet weak var structureLabel:  ChromistaLabel!
+    @IBOutlet weak var basicsLabel:     ChromistaLabel!
     
     @IBOutlet weak var stepperView: UIView!
     @IBOutlet weak var stepper:     UIStepper!
@@ -77,12 +77,19 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
     
     func finalView() {
         shadowsSetup()
-        barButtonTintSetup()
         cornersSetup()
         contentSetup()
         alphaSetup()
         switchViewPrefering()
         stepperViewPrefering()
+        backViewSetup()
+    }
+    
+    func backViewSetup() {
+        if #available(iOS 13.0, *) {
+            view.backgroundColor = .secondarySystemBackground
+            navigationController?.navigationBar.backgroundColor = .secondarySystemBackground
+        }
     }
     
     private func stepperViewPrefering() {
@@ -103,14 +110,9 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
     }
     
     private func alphaSetup() {
-        sizeButtonBack.alpha        = 0
-        hideButtonBack.alpha        = 0
-        searchButtonBack.alpha      = 0
         historyTextViewBack.alpha   = 0
         textViewBack.alpha          = 0
         structureTextViewBack.alpha = 0
-        basicsLabel.alpha           = 0
-        structureLabel.alpha        = 0
     }
     
     private func contentSetup() {
@@ -131,43 +133,14 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
     }
     
     private func cornersSetup() {
-        textViewBack.layer.cornerRadius             = 22
-        structureTextViewBack.layer.cornerRadius    = 22
-        historyTextViewBack.layer.cornerRadius      = 22
-        
         textView.layer.cornerRadius          = 22
         structureTextView.layer.cornerRadius = 22
-        historyTextView.layer.cornerRadius = 22
-        
-        sizeButton.layer.cornerRadius   = 16
-        hideButton.layer.cornerRadius   = 16
-        searchButton.layer.cornerRadius = 16
-        
-        sizeButtonBack.layer.cornerRadius   = 16
-        hideButtonBack.layer.cornerRadius   = 16
-        searchButtonBack.layer.cornerRadius = 16
-    }
-    
-    private func barButtonTintSetup() {
-        sizeButton.tintColor    = lazyColor
-        hideButton.tintColor    = lazyColor
-        searchButton.tintColor  = lazyColor
+        historyTextView.layer.cornerRadius   = 22
     }
     
     private func shadowsSetup() {
-        textViewBack.viewShadows()
-        structureTextViewBack.viewShadows()
-        historyTextViewBack.viewShadows()
-        
         textView.textViewShadow()
         structureTextView.textViewShadow()
-        
-        sizeButtonBack.viewShadows()
-        hideButtonBack.viewShadows()
-        searchButtonBack.viewShadows()
-        
-        structureLabel.labelShadow()
-        basicsLabel.labelShadow()
     }
     //MARK: Action
     @IBAction func editButton(_ sender: Any) {
@@ -215,5 +188,71 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
         textView.font           = UIFont(name: font!, size: fontSize)
         historyTextView.font    = UIFont(name: font1!, size: fontSize)
         structureTextView.font  = UIFont(name: font2!, size: fontSize)
+    }
+}
+
+// buttons Back shadow views
+class ChromistaActionButtonsBack: UIView {
+    override init(frame: CGRect) {
+      super.init(frame: frame)
+      setupView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+      setupView()
+    }
+
+    private func setupView() {
+        backgroundColor     = .systemBackground
+        layer.cornerRadius  = 16
+        alpha = 0
+        
+        viewShadows()
+    }
+}
+
+// Buttons (size, hide functions)
+class ChromistaButton: UIButton {
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+            setup()
+    }
+}
+
+extension ChromistaButton: ChromistaButtonDelegate {
+    func setup() {
+        tintColor           = lazyColor
+        layer.cornerRadius  = 16
+    }
+}
+
+protocol ChromistaButtonDelegate {
+    func setup()
+}
+
+// Labels - Headers of(Little Descriptions) Articles
+protocol ChromistaLabelDelegate {
+    func setupChromistaLabel()
+}
+
+class ChromistaLabel: UILabel {
+    override init(frame: CGRect) {
+      super.init(frame: frame)
+        setupChromistaLabel()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+        setupChromistaLabel()
+    }
+}
+
+extension ChromistaLabel: ChromistaLabelDelegate {
+    internal func setupChromistaLabel() {
+        textColor = .secondaryLabel
+        alpha     = 0
+        
+        labelShadow()
     }
 }

@@ -27,14 +27,18 @@ class ArticleOnlineImagesViewController: UIViewController, WebControllerDelegate
     
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.6) {
-            self.webViewBackground.alpha = 1
-            self.webView.alpha           = 1
+            let alpha = 1
+            
+            self.webViewBackground.alpha = CGFloat(alpha)
+            self.webView.alpha           = CGFloat(alpha)
             
             UIView.animate(withDuration: 5) {
-                self.shareURl.isEnabled     = true
-                self.leftButton.isEnabled   = true
-                self.rightButton.isEnabled  = true
-                self.reloadButton.isEnabled = true
+                let enabled = true
+                
+                self.shareURl.isEnabled     = enabled
+                self.leftButton.isEnabled   = enabled
+                self.rightButton.isEnabled  = enabled
+                self.reloadButton.isEnabled = enabled
             }
         }
     }
@@ -49,30 +53,37 @@ class ArticleOnlineImagesViewController: UIViewController, WebControllerDelegate
     }
     
     private func basicAlpha() {
-        webViewBackground.alpha = 0
-        webView.alpha           = 0
+        let alpha = 0
+        let enabled: Bool = false
         
-        shareURl.isEnabled     = false
-        leftButton.isEnabled   = false
-        rightButton.isEnabled  = false
-        reloadButton.isEnabled = false
+        webViewBackground.alpha = CGFloat(alpha)
+        webView.alpha           = CGFloat(alpha)
+        
+        shareURl.isEnabled     = enabled
+        leftButton.isEnabled   = enabled
+        rightButton.isEnabled  = enabled
+        reloadButton.isEnabled = enabled
         
     }
     
     private func webViewBackgroundPrefering() {
+        cornerRadius = 20
+        
         if #available(iOS 13.0, *) {
             webViewBackground.backgroundColor = .systemBackground
         } else {
             // Fallback on earlier versions
         }
-        webViewBackground.layer.cornerRadius = 20
+        webViewBackground.layer.cornerRadius = CGFloat(cornerRadius)
         webViewBackground.viewShadows()
         
         webViewPrefering()
     }
     
     private func webViewPrefering() {
-       webView.layer.cornerRadius = 20
+       cornerRadius = 20
+        
+       webView.layer.cornerRadius = CGFloat(cornerRadius)
     }
     
     private func viewPrefering() {

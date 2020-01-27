@@ -18,33 +18,53 @@ enum UserActivityType: String {
 class PlantsViewController: UIViewController {
     
     //MARK: IBOutlets
-    @IBOutlet weak var headLine:                 UINavigationItem!
-    @IBOutlet weak var notificationButtonOutlet: UIButton!
-    @IBOutlet weak var capitalView:              UIView!
-    @IBOutlet weak var stepperView:              UIView!
-    @IBOutlet weak var switchView:               UIView!
-    @IBOutlet weak var settingsButton:           UIBarButtonItem!
-    @IBOutlet weak var switchTextView:           UITextView!
-    @IBOutlet weak var `switch`:                 UISwitch!
-    @IBOutlet weak var activityIndicator:        UIActivityIndicatorView!
-    @IBOutlet weak var stepper:                  UIStepper!
-    @IBOutlet weak var switchOutlet:             UISwitch!
-    @IBOutlet weak var shareButton:              UIBarButtonItem!
-    @IBOutlet weak var progressView:             UIProgressView!
-    @IBOutlet weak var switchButton:             UIBarButtonItem!
-    @IBOutlet weak var contentTextView:          UITextView!
+    @IBOutlet weak var headLine: UINavigationItem!
     
-    @IBOutlet weak var goToImagesButton:        UIButton!
-    @IBOutlet weak var goToVideosButton:        UIButton!
+    @IBOutlet weak var notificationButtonOutlet: NotificationButton!
     
-    @IBOutlet weak var basicsTextView:           UITextView!
-    @IBOutlet weak var segmentedControlOutlet:   UISegmentedControl!
+    @IBOutlet weak var capitalView:    UIView!
+    @IBOutlet weak var stepperView:    UIView!
+    @IBOutlet weak var switchView:     UIView!
+    @IBOutlet weak var settingsButton: UIBarButtonItem!
+    @IBOutlet weak var switchTextView: UITextView!
+    @IBOutlet weak var `switch`:       UISwitch!
+    
+    @IBOutlet weak var activityIndicator: ArticleActivityIndicatorView!
+    
+    @IBOutlet weak var someMoreView: SomeMoreView!
+    
+    @IBOutlet weak var stepper:         UIStepper!
+    @IBOutlet weak var switchOutlet:    UISwitch!
+    @IBOutlet weak var shareButton:     UIBarButtonItem!
+    @IBOutlet weak var progressView:    UIProgressView!
+    @IBOutlet weak var switchButton:    UIBarButtonItem!
+    @IBOutlet weak var contentTextView: UITextView!
+    
+    @IBOutlet weak var goToImagesButton: ImageButton!
+    @IBOutlet weak var goToVideosButton: VideoButton!
+    
+    @IBOutlet weak var basicsTextView: UITextView!
+    
+    @IBOutlet weak var segmentedControlOutlet:UISegmentedControl!
     
     //MARK: LifeCycle
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.4) {
-            self.notificationButtonOutlet.alpha = 1
-            self.segmentedControlOutlet.alpha   = 1
+        let objects = [notificationButtonOutlet, segmentedControlOutlet]
+        
+        for (index, objects) in objects.enumerated() {
+            let delay: Double = Double((index)) * 0.2
+            
+            UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+                let alpha: CGFloat = 1
+                
+                objects?.alpha = alpha
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
+                    UIView.animate(withDuration: 0.4) {
+                        self.someMoreView.alpha = 0.96
+                    }
+                }
+            })
         }
     }
     
@@ -56,6 +76,10 @@ class PlantsViewController: UIViewController {
     
     func openPlantsArticle() {
         createUserActivityType()
+    }
+    
+    @IBAction func hideSomeMoreView(_ sender: Any) {
+        someMoreView.isHidden = true
     }
     
     private func createUserActivityType() {
@@ -80,18 +104,8 @@ class PlantsViewController: UIViewController {
             switchView.viewSystemBack()
             stepperView.viewSystemBack()
             contentTextView.viewSystemBack()
-            
             view.viewSystemBack()
-            view.backgroundColor = .systemBackground
         }
-    }
-    
-    private func imageButtonPrefering() {
-        goToImagesButton.imageButton()
-    }
-    
-    private func videoButtonPrefering() {
-        goToVideosButton.videoButton()
     }
     
     //MARK: Action
@@ -237,13 +251,13 @@ class PlantsViewController: UIViewController {
     }
     
     //MARK: Actions
-    @IBAction func notificationButton(_ sender: UIButton) {
+    @IBAction func notificationButton(_ sender: NotificationButton) {
         plantsScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         
-        notificationButtonOutlet.notificationButtonAudio()
-        notificationButtonOutlet.settingTittleForNotificationButton()
+        sender.notificationButtonAudio()
+        sender.settingTittleForNotificationButton()
         
         for _ in 0..<2 {
           sender.pulsate()
@@ -253,9 +267,11 @@ class PlantsViewController: UIViewController {
     private func switchViewPrefering() {
         switchView.editorsViews()
         switchView.isHidden = true
+        switchOutlet.viewSystemBack()
         
         switchOutlet.switchBasics()
-        switchOutlet.backgroundColor = .none
+        switchOutlet.viewSystemBack()
+        switchOutlet.layer.cornerRadius = 20
         
         switchTextView.mainTextViewTextColor(alpha: 1)
         switchTextView.textViewShadow()
@@ -268,27 +284,21 @@ class PlantsViewController: UIViewController {
     }
     
     func viewBasics() {
-        videoButtonPrefering()
-        imageButtonPrefering()
         stepperViewPrefering()
         switchViewPrefering()
         basicsTextViewSetup()
         segmentedControlOutletSetup()
-        notificationButtonOutletSetup()
-        activityIndicatorSetup()
+        systemBackground()
+        contentTextViewLayerSetup()
+    }
+    
+    private func contentTextViewLayerSetup() {
+        contentTextView.layer.cornerRadius = 20
     }
     
     private func basicsTextViewSetup() {
         basicsTextView.isEditable = false
         basicsTextView.mainTextViewTextColor(alpha: 0)
-    }
-    
-    private func activityIndicatorSetup() {
-        activityIndicator.activityIndicatorStarts(colorOfActivity: .darkGray)
-    }
-    
-    private func notificationButtonOutletSetup() {
-        notificationButtonOutlet.notificationButtonBasics()
     }
     
     private func segmentedControlOutletSetup() {

@@ -10,26 +10,49 @@ import UIKit
 import WebKit
 import AudioToolbox
 
+class NetworkingButton: UIBarButtonItem {
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        
+        barButtonItemSetup()
+    }
+    
+    
+    func barButtonItemSetup() {
+        let enabled: Bool = true
+        
+        isEnabled = enabled
+        tintColor = lazyColor
+    }
+}
+
 class NetworkingViewController: UIViewController, UISearchBarDelegate, UIWebViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, WebControllerDelegate {
     
     //MARK: IBOutlets
     @IBOutlet weak var searchBar:             UISearchBar!
-    @IBOutlet weak var webViewBaxckground:    UIView!
-    @IBOutlet weak var webView:               UIWebView!
-    @IBOutlet weak var goForwardButton:       UIBarButtonItem!
+    
+    @IBOutlet weak var webViewBaxckground:    ContentBack!
+    @IBOutlet weak var webView:               WKWebView!
+    
     @IBOutlet weak var activityIndicator:     UIActivityIndicatorView!
-    @IBOutlet weak var backButton:            UIBarButtonItem!
-    @IBOutlet weak var nextButton:            UIBarButtonItem!
+    
+    @IBOutlet weak var goForwardButton:       NetworkingButton!
+    @IBOutlet weak var backButton:            NetworkingButton!
+    @IBOutlet weak var nextButton:            NetworkingButton!
+    @IBOutlet weak var tabBarVCshowingButton: NetworkingButton!
+    @IBOutlet weak var wikiButton:            NetworkingButton!
+    @IBOutlet weak var sitesButton:           NetworkingButton!
+    @IBOutlet weak var mapGoButton:           NetworkingButton!
+    
     @IBOutlet weak var textSwitchView:        UITextView!
     @IBOutlet weak var switchView:            UIView!
     @IBOutlet weak var switchOutlet:          UISwitch!
-    @IBOutlet weak var tabBarVCshowingButton: UIBarButtonItem!
-    @IBOutlet weak var wikiButton:            UIBarButtonItem!
+    
     @IBOutlet weak var loadingLabel:          UILabel!
-    @IBOutlet weak var sitesButton:           UIBarButtonItem!
+    
     @IBOutlet weak var pickerView:            UIPickerView!
     @IBOutlet weak var pickerViewBack:        UIView!
-    @IBOutlet weak var mapGoButton:           UIBarButtonItem!
     
     let array = ["Wikipedia", "Google", "YouTube", "YouTube About Plants", "YouTube About Animals", "YouTube About Microbes"]
     
@@ -72,7 +95,6 @@ class NetworkingViewController: UIViewController, UISearchBarDelegate, UIWebView
     
     func viewBasicProccesesPrefering() {
         mainViewGradientPrefering()
-        backBarButtonItemPrefering()
         switchViewPrefering()
         pickerViewBackPrefering()
         systemBackColor()
@@ -105,7 +127,7 @@ class NetworkingViewController: UIViewController, UISearchBarDelegate, UIWebView
                 UIView.animate(withDuration: 0.6, delay: 0.6, options: .curveLinear, animations: {
                     
                     // Start Animate ActivityIndicator
-                    self.webView.loadRequest(URLRequest(url: URL(string: url)!))
+                    self.webView.load(URLRequest(url: URL(string: url)!))
                     self.webView.alpha = 1
                     
                     self.activityIndicator.activityWake()
@@ -213,12 +235,6 @@ class NetworkingViewController: UIViewController, UISearchBarDelegate, UIWebView
         }
     }
     
-    /*
-    override func viewWillAppear(_ animated: Bool) {
-        //navigationController?.hidesBarsOnSwipe = true
-    }
-    */
-    
     @IBAction func wikiOpen(_ sender: Any) {
         coolURLLoad(url: "https://www.wikipedia.org")
     }
@@ -229,7 +245,7 @@ class NetworkingViewController: UIViewController, UISearchBarDelegate, UIWebView
         DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1.23, execute: {
             UIView.animate(withDuration: 0, delay: 1, options: .curveLinear, animations: {
                 
-                self.webView.loadRequest(URLRequest(url: URL(string: url)!))
+                self.webView.load(URLRequest(url: URL(string: url)!))
                 self.webView.alpha = 1
                 
                 self.activityIndicator.activityWake()
@@ -294,7 +310,7 @@ class NetworkingViewController: UIViewController, UISearchBarDelegate, UIWebView
     }
     
     private func webViewSetup() {
-        webView.loadRequest(URLRequest(url: URL(string: "https://www.google.com")!))
+        webView.load(URLRequest(url: URL(string: "https://www.google.com")!))
         webView.transform          = CGAffineTransform(scaleX: 0, y: 0)
         webView.alpha              = 0
     }
@@ -315,15 +331,6 @@ class NetworkingViewController: UIViewController, UISearchBarDelegate, UIWebView
         switchOutlet.switchBasics()
         
         textSwitchView.switchTextViewPrefering()
-    }
-    
-    private func backBarButtonItemPrefering() {
-        let backItemColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
-        
-        self.tabBarVCshowingButton.setTitleTextAttributes([
-            NSAttributedString.Key.font : UIFont(name: mediumFont, size: 18.74)!,
-            NSAttributedString.Key.foregroundColor : backItemColor,
-            ], for: .normal)
     }
     
     private func webViewLoad() {

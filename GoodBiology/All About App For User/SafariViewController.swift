@@ -9,16 +9,60 @@
 import UIKit
 import SafariServices
 
+@available(iOS 13.0, *)
 class SafariViewController: UIViewController {
     
     //MARK: IBOutlets
+    @IBOutlet weak var contentTextView1Back: UIView!
+    @IBOutlet weak var contentTextView2Back: UIView!
+    
     @IBOutlet weak var contentTextView1:         UITextView!
     @IBOutlet weak var contentTextView2:         UITextView!
+    
     @IBOutlet weak var safariButtonOutlet:       UIButton!
     @IBOutlet weak var goToContentAppButton:     UIButton!
     @IBOutlet weak var mySiteButton:             UIButton!
     
     var appleButton = AppleButtonSettings()
+    
+    //MARK: LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        buttonsPrefering()
+        viewBasicSizingPrefering()
+        navItem()
+        contentTextViewsPrefering()
+        textViewBacksSetup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.4) {
+            self.sizingPrefering()
+            self.alphaPrefering()
+        }
+    }
+    
+    private func textViewBacksSetup() {
+        cornerRadius = 20
+        
+        contentTextView1Back.viewShadows()
+        contentTextView2Back.viewShadows()
+        
+        contentTextView1.layer.cornerRadius = cornerRadius
+        contentTextView2.layer.cornerRadius = cornerRadius
+        
+        contentTextView1Back.layer.cornerRadius = cornerRadius
+        contentTextView2Back.layer.cornerRadius = cornerRadius
+        
+        contentTextView1.text =
+        """
+        Privacy Policy and site of
+        iBiology
+        """
+    }
     
     private func pulsating(_ sender: UIButton) {
         sender.pulsate()
@@ -42,30 +86,18 @@ class SafariViewController: UIViewController {
     }
     
     private func sizingPrefering() {
-        safariButtonOutlet.transform   = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        goToContentAppButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        mySiteButton.transform         = CGAffineTransform(scaleX: 1.0, y: 1.0)
-    }
-    
-    //MARK: LifeCycle
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        let scaleXY: CGFloat = 1.0
         
-        UIView.animate(withDuration: 0.4) {
-            self.sizingPrefering()
-            self.alphaPrefering()
-        }
+        safariButtonOutlet.transform   = CGAffineTransform(scaleX: scaleXY, y: scaleXY)
+        goToContentAppButton.transform = CGAffineTransform(scaleX: scaleXY, y: scaleXY)
+        mySiteButton.transform         = CGAffineTransform(scaleX: scaleXY, y: scaleXY)
     }
     
     //MARK: Public
     private func showSafariVC(for url: String) {
-        guard let url = URL(string: url) else {
-            //Show an invalid URL error alert
-            return
-        }
-        let safariVC = SFSafariViewController(url: url)
-            safariVC.preferredBarTintColor      = #colorLiteral(red: 0, green: 0.2316439748, blue: 0, alpha: 1)
-            safariVC.preferredControlTintColor  = .white
+        guard let url = URL(string: url) else { return }
+        let safariVC = BasicSafariVC(url: url)
+        safariVC.setupSafariVC()
         
         present(safariVC, animated: true)
     }
@@ -84,12 +116,15 @@ class SafariViewController: UIViewController {
     }
     
     private func viewBasicSizingPrefering() {
-        contentTextView1.alpha = 0
-        contentTextView2.alpha = 0
+        let alpha: CGFloat = 0
+        let scale: CGFloat = 0.0
         
-        mySiteButton.transform         = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        safariButtonOutlet.transform   = CGAffineTransform(scaleX: 0.0, y: 0.0)
-        goToContentAppButton.transform = CGAffineTransform(scaleX: 0.0, y: 0.0)
+        contentTextView1.alpha = alpha
+        contentTextView2.alpha = alpha
+        
+        mySiteButton.transform         = CGAffineTransform(scaleX: scale, y: scale)
+        safariButtonOutlet.transform   = CGAffineTransform(scaleX: scale, y: scale)
+        goToContentAppButton.transform = CGAffineTransform(scaleX: scale, y: scale)
     }
     
     private func navItem() {
@@ -97,35 +132,28 @@ class SafariViewController: UIViewController {
     }
     
     private func buttonsPrefering() {
+        cornerRadius = appleButton.appleButtonCornerRadius
+        appleButton.appleButtonCornerRadius = 12
+        
         goToContentAppButton.basicButtonForSafariViewController(title: "General Info")
         
         mySiteButton.setTitleColor(appleButton.titleColor, for: .normal)
         mySiteButton.backgroundColor = appleButton.backgroundColor
-        mySiteButton.layer.cornerRadius = appleButton.appleButtonCornerRadius
+        mySiteButton.layer.cornerRadius = cornerRadius
         mySiteButton.titleLabel?.font = appleButton.font
         mySiteButton.setTitle("iBiology Site", for: .normal)
         
         safariButtonOutlet.setTitleColor(appleButton.titleColor, for: .normal)
         safariButtonOutlet.backgroundColor = appleButton.backgroundColor
-        safariButtonOutlet.layer.cornerRadius = appleButton.appleButtonCornerRadius
+        safariButtonOutlet.layer.cornerRadius = cornerRadius
         safariButtonOutlet.titleLabel?.font = appleButton.font
         safariButtonOutlet.setTitle("Privacy Policy", for: .normal)
-    }
-    
-    //MARK: LifeCycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        buttonsPrefering()
-        viewBasicSizingPrefering()
-        navItem()
-        contentTextViewsPrefering()
     }
 }
 
 extension UIButton {
     func basicButtonForSafariViewController(title: String) {
-        self.fastButtonCostomizing(background: #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1), titleColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), title: title, corner: 18.8, borderWidth: 4)
+        self.fastButtonCostomizing(background: lazyColor, titleColor: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1), title: title, corner: 18.8, borderWidth: 4)
     }
 }
 

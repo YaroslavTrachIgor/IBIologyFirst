@@ -16,20 +16,32 @@ class MicrobesViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var segmentedControlOutlet:   UISegmentedControl!
     @IBOutlet weak var textView:                 UITextView!
-    @IBOutlet weak var notificationButtonOutlet: UIButton!
+    
+    @IBOutlet weak var notificationButtonOutlet: NotificationButton!
+    
     @IBOutlet weak var stepperBackgroundView:    UIView!
     @IBOutlet weak var settingsButton:           UIBarButtonItem!
     @IBOutlet weak var switchTextView:           UITextView!
     @IBOutlet weak var switchView:               UIView!
-    @IBOutlet weak var activityIndicator:        UIActivityIndicatorView!
+    
+    @IBOutlet weak var activityIndicator:        ArticleActivityIndicatorView!
+    
     @IBOutlet weak var stepper:                  UIStepper!
     @IBOutlet weak var switchOutlet:             UISwitch!
     @IBOutlet weak var shareButton:              UIBarButtonItem!
     @IBOutlet weak var progressView:             UIProgressView!
     @IBOutlet weak var switchButton:             UIBarButtonItem!
     
-    @IBOutlet weak var goToImagesButton: UIButton!
-    @IBOutlet weak var goToVideosButton: UIButton!
+    @IBOutlet weak var goToImagesButton: ImageButton!
+    @IBOutlet weak var goToVideosButton: VideoButton!
+    
+    //MARK: LifeCycle
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 0.4) {
+            self.notificationButtonOutlet.alpha  = 1
+            self.segmentedControlOutlet.alpha    = 1
+        }
+    }
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
@@ -43,14 +55,6 @@ class MicrobesViewController: UIViewController {
             fastActivityVC(item: microbesMostContent)
         }
         shareButton.shareAudio()
-    }
-    
-    private func imageButtonPrefering() {
-        goToImagesButton.imageButton()
-    }
-    
-    private func videosButtonPrefering() {
-        goToVideosButton.videoButton()
     }
     
     private func fastActivityVC(item: String) {
@@ -118,7 +122,7 @@ class MicrobesViewController: UIViewController {
         let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
         
         alert.addAction(action)
-        alert.view.tintColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
+        alert.view.tintColor = lazyColor
         
         present(alert, animated: true, completion: nil)
     }
@@ -198,13 +202,13 @@ class MicrobesViewController: UIViewController {
         }
     }
     
-    @IBAction func notificationButton(_ sender: UIButton) {
+    @IBAction func notificationButton(_ sender: NotificationButton) {
         microbesScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         
-        notificationButtonOutlet.notificationButtonAudio()
-        notificationButtonOutlet.settingTittleForNotificationButton()
+        sender.notificationButtonAudio()
+        sender.settingTittleForNotificationButton()
         
         for _ in 0..<2 {
             sender.pulsate()
@@ -217,14 +221,6 @@ class MicrobesViewController: UIViewController {
     private func removeNotifications(withIdentifiers identifiers: [String])   {
         let center = UNUserNotificationCenter.current()
             center.removePendingNotificationRequests(withIdentifiers: identifiers)
-    }
-    
-    //MARK: LifeCycle    
-    override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.4) {
-            self.notificationButtonOutlet.alpha  = 1
-            self.segmentedControlOutlet.alpha    = 1
-        }
     }
     
     private func stepperViewPrefering() {
@@ -243,27 +239,14 @@ class MicrobesViewController: UIViewController {
     
     private func viewBasiscs() {
         textViewSetup()
-        activityIndicatorSetup()
-        notificationButtonOutletSetup()
         segmentedControlSetup()
         stepperViewPrefering()
         switchViewPrefering()
-        imageButtonPrefering()
-        videosButtonPrefering()
     }
     
     private func segmentedControlSetup() {
         segmentedControlOutlet.segmentedControlBasics()
         segmentedControlOutlet.segmentedControlShadow()
-    }
-    
-    private func notificationButtonOutletSetup() {
-        notificationButtonOutlet.buttonsShadows()
-        notificationButtonOutlet.notificationButtonBasics()
-    }
-    
-    private func activityIndicatorSetup() {
-        activityIndicator.activityIndicatorStarts(colorOfActivity: .darkGray)
     }
     
     private func textViewSetup() {

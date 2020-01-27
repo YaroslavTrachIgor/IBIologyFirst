@@ -18,7 +18,8 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     @IBOutlet weak var addressLabel:         UILabel!
     @IBOutlet weak var typeView:             UISegmentedControl!
     @IBOutlet weak var typeViewBackground:   UIView!
-    @IBOutlet weak var problemButton:        UIButton!
+    
+    @IBOutlet weak var problemButton:        HelpButton!
     
     private let locationManager        = CLLocationManager()
     private let regionInMeters: Double = 10000
@@ -28,11 +29,10 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Map Delegate
+        /// Map Delegate
         mapViewBasics()
-        
         switchingViewPrefering()
-        problemButtonPrefering()
+
         checkWiFi()
     }
     
@@ -91,28 +91,13 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
             composer.setToRecipients(["zhbr282@gmail.com"])
             composer.setSubject("Map Problem")
             composer.setMessageBody("Here is my problem with map", isHTML: false)
-            composer.view.tintColor = #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1)
+            composer.view.tintColor = lazyColor
         
         present(composer, animated: true)
     }
-    
-    private func problemButtonPrefering() {
-        problemButton.layer.cornerRadius = 15
-        
-        problemButton.layer.borderColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
-        problemButton.layer.borderWidth = 4.8
-        
-        problemButton.backgroundColor = #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1)
-        
-        problemButton.setTitle("Have you got a problem with a map ?", for: .normal)
-        problemButton.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-        problemButton.titleLabel?.font = UIFont(name: "AvenirNext-Bold", size: 14)
-        
-        problemButton.isHidden = true
-    }
         
     private func mapViewPrefring() {
-        // prefering Basiscs of UIMapView
+        // Setup Basiscs of UIMapView
         
         mapView.mapType = .standard
         mapView.alpha   = 0
@@ -121,8 +106,7 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     @IBAction func share(_ sender: Any) {
         let activityVC = UIActivityViewController(activityItems: [addressLabel.text!], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
-            activityVC.view.tintColor = #colorLiteral(red: 0, green: 0.5469487309, blue: 0.186694026, alpha: 1)
-            UIApplication.shared.keyWindow?.tintColor = #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1)
+            UIApplication.shared.keyWindow?.tintColor = lazyColor
         
         AudioServicesPlayAlertSound(SystemSoundID(1001))
         
@@ -186,8 +170,6 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
-        } else {
-            // Show alert letting the user know they have to turn this on.
         }
     }
     
@@ -221,8 +203,8 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     
     
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
-        let latitude = mapView.centerCoordinate.latitude
-        let longitude = mapView.centerCoordinate.longitude
+        let latitude    = mapView.centerCoordinate.latitude
+        let longitude   = mapView.centerCoordinate.longitude
         
         return CLLocation(latitude: latitude, longitude: longitude)
     }
@@ -276,7 +258,7 @@ extension UILabel {
         
         self.backgroundColor   = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        self.textColor         = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
+        self.textColor         = lazyColor
         self.text              = ""
         
         self.labelShadow()

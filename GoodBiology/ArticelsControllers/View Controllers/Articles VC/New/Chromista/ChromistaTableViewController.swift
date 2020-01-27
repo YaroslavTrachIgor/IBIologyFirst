@@ -9,12 +9,7 @@
 import UIKit
 
 class ChromistaTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        
-    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return chromistaTitle.count
@@ -22,7 +17,6 @@ class ChromistaTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChromistaCell", for: indexPath)
-
         cell.textLabel?.text = chromistaTitle[indexPath.row]
 
         return cell

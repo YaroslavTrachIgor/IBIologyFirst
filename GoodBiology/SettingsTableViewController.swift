@@ -10,88 +10,197 @@ import UIKit
 import SafariServices
 import MessageUI
 
-class SettingsTableViewController: UITableViewController {
+protocol UsersViewWithInfoDelegate {
+    func setupUsersViewWithInfo_hideButtonAndView()
+}
+
+protocol SettingsTableViewControllerDelegate {
+    func setupView()
+}
+
+class SettingsTableViewController: UITableViewController, UsersViewWithInfoDelegate, SettingsTableViewControllerDelegate {
+    
+    //Users view with Info
+    @IBOutlet private weak var usersInfoView: UIView!
+    
+    private var hidden: Bool = false
+    
+    // UI Hide for hidding Users view with Info
+    @IBOutlet private weak var hideButton:         UIButton!
+    @IBOutlet private weak var hideButtonBackView: ContentBack!
+    
+    @IBOutlet private weak var editButton: UIBarButtonItem!
+    
+    //Done Labels
+    @IBOutlet private weak var firstNameLabel:  DoneLabel!
+    @IBOutlet private weak var secondNameLabel: DoneLabel!
+    @IBOutlet private weak var emailLabel:      DoneLabel!
+    ///Special Email Label with blue color
+    @IBOutlet private weak var inputEmailLabel: UILabel!
     
     // Personal Information TextFields
-    @IBOutlet weak var nameTextField:       UITextField!
-    @IBOutlet weak var secondNameTextField: UITextField!
-    @IBOutlet weak var emailTextField:      UITextField!
+    @IBOutlet private weak var nameTextField:       SettingsTextField!
+    @IBOutlet private weak var secondNameTextField: SettingsTextField!
+    @IBOutlet private weak var emailTextField:      SettingsTextField!
     
     // Optional Personal Information TextFields
-    @IBOutlet weak var ageTextField:            UITextField!
-    @IBOutlet weak var secondEmailTextField:    UITextField!
-    @IBOutlet weak var countryTextField:        UITextField!
-    @IBOutlet weak var birthdayTextField:       UITextField!
-    @IBOutlet weak var phoneNumberTextField:    UITextField!
+    @IBOutlet private weak var ageTextField:            SettingsTextField!
+    @IBOutlet private weak var secondEmailTextField:    SettingsTextField!
+    @IBOutlet private weak var countryTextField:        SettingsTextField!
+    @IBOutlet private weak var birthdayTextField:       SettingsTextField!
+    @IBOutlet private weak var phoneNumberTextField:    SettingsTextField!
     
     //TableView
     @IBOutlet var table: UITableView!
     
-    // Personal Information Keys
-    private let nameKey        = "nameKey"
-    private let secondNameKey  = "secondNameKey"
-    private let emailKey       = "emailKey"
+    struct SettingsKeys {
+        // Personal Information Keys
+        static let nameKey        = "nameKey"
+        static let secondNameKey  = "secondNameKey"
+        static let emailKey       = "emailKey"
+        
+        // Personal Personal Information Keys
+        static let ageKey           = "ageKey"
+        static let secondEmailKey   = "secondEmailKey"
+        static let countryKey       = "countryKey"
+        static let birthdayKey      = "birthdayKey"
+        static let phoneKey         = "phoneKey"
+    }
     
-    // System Keys
-    private let switchKey   = "switchKey"
-    private let sliderKey   = "sliderKey"
-    
-    // Optional Personal Information Keys
-    private let ageKey           = "ageKey"
-    private let secondEmailKey   = "secondEmailKey"
-    private let countryKey       = "countryKey"
-    private let birthdayKey      = "birthdayKey"
-    private let phoneKey         = "phoneKey"
-    
-    private let searchController = UISearchController(searchResultsController: nil)
+    private let searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return    text.isEmpty
     }
     
-    private let settingsRefreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-            refreshControl.addTarget(self, action: #selector(UIRefreshControl.endRefreshing), for: .valueChanged)
+    private let settingsRefreshControl: BasicRefreshControl = {
+        let refreshControl = BasicRefreshControl()
         
         return refreshControl
     }()
     
-    lazy var toolBar: UIToolbar = {
-        let toolBar     = UIToolbar()
+    lazy var toolBar: BasicToolbar = {
+        let toolBar     = BasicToolbar()
         let spacer      = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton  = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonAction))
         
-        toolBar.sizeToFit()
-        toolBar.tintColor = UIColor.gray
         toolBar.items = [spacer, doneButton]
         
         return toolBar
     }()
     
+    @objc dynamic private var inputFirstNameText:  String?
+    @objc dynamic private var inputSecondNameText: String?
+    @objc dynamic private var inputEmailText:      String?
+    
+    fileprivate var firstName:  NSKeyValueObservation?
+    fileprivate var secondName: NSKeyValueObservation?
+    fileprivate var email:      NSKeyValueObservation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /// Setup Main View Things
+        setupView()
+        
+        /// Oher
         loadSettings()
-        textFieldsPrefering()
+        prepareObservation()
+        
+        /// Hide User Info
+        setupUsersViewWithInfo_hideButtonAndView()
+    }
+    
+    func setupView() {
+        prepareToolBar()
         preferingSearchController()
         refreshControlPrefering()
         searchBarButtonPrefering()
-        prepareToolBar()
+        setupSearchBarFont()
+    }
+    
+    func setupUsersViewWithInfo_hideButtonAndView() {
+        hideButtonSetup()
+        hideButtonBackViewHiddenSettup()
+    }
+    
+    @IBAction func edit(_ sender: Any) {
+        if usersInfoView.isHidden != hidden {
+            usersInfoView.isHidden      = hidden
+            hideButtonBackView.isHidden = !hidden
+            
+        } else if hideButtonBackView.isHidden == hidden {
+            hideButtonBackView.isHidden = !hidden
+            
+        } else {
+            hideButtonBackView.isHidden = hidden
+        }
+    }
+    
+    @IBAction func hideView(_ sender: Any) {
+        usersInfoView.isHidden = !hidden
+    }
+    
+    func prepareInputText() {
+        nameTextField.text       = inputFirstNameText
+        secondNameTextField.text = inputSecondNameText
+        emailTextField.text      = inputSecondNameText
+    }
+    
+    func prepareObservation() {
+        firstName = observe(\.inputFirstNameText, options: .new, changeHandler: { (viewController, change) in
+            guard let updateFirstName = change.newValue as? String else { return }
+            if self.nameTextField.text != "" || self.nameTextField.text != " " {
+                viewController.firstNameLabel.text = "First Name: " + updateFirstName
+            }
+        })
+        
+        secondName = observe(\.inputSecondNameText, options: .new, changeHandler: { (viewController, change) in
+            guard let updateFirstName = change.newValue as? String else { return }
+            if self.secondNameTextField.text != "" || self.secondNameTextField.text != " " {
+                viewController.secondNameLabel.text = "Second Name: " + updateFirstName
+            }
+        })
+        
+        email = observe(\.inputEmailText, options: .new, changeHandler: { (viewController, change) in
+            guard let updateFirstName = change.newValue as? String else { return }
+            if self.emailTextField.text != "" || self.emailTextField.text != " " {
+                viewController.inputEmailLabel.text =  updateFirstName
+            }
+        })
+    }
+    
+    private func hideButtonSetup() {
+        let appleButton = AppleButtonSettings()
+        let titleColor  = lazyColor
+        
+        hideButton.backgroundColor = appleButton.backgroundColor
+        hideButton.setTitleColor(titleColor, for: .normal)
+        hideButton.layer.cornerRadius = 12
+        hideButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 14)
+    }
+    
+    private func hideButtonBackViewHiddenSettup() {
+        hideButtonBackView.isHidden = !hidden
     }
     
     @objc func doneButtonAction() {
         self.view.endEditing(true)
     }
     
+    private func prepareinputAccessoryViewForTextView(_ sender: UITextField) {
+        sender.inputAccessoryView = toolBar
+    }
+    
     private func prepareToolBar() {
-        ageTextField.inputAccessoryView         = toolBar
-        nameTextField.inputAccessoryView        = toolBar
-        countryTextField.inputAccessoryView     = toolBar
-        secondNameTextField.inputAccessoryView  = toolBar
-        emailTextField.inputAccessoryView       = toolBar
-        secondEmailTextField.inputAccessoryView = toolBar
-        phoneNumberTextField.inputAccessoryView = toolBar
-        birthdayTextField.inputAccessoryView    = toolBar
+        prepareinputAccessoryViewForTextView(ageTextField)
+        prepareinputAccessoryViewForTextView(nameTextField)
+        prepareinputAccessoryViewForTextView(countryTextField)
+        prepareinputAccessoryViewForTextView(secondNameTextField)
+        prepareinputAccessoryViewForTextView(emailTextField)
+        prepareinputAccessoryViewForTextView(secondEmailTextField)
+        prepareinputAccessoryViewForTextView(phoneNumberTextField)
+        prepareinputAccessoryViewForTextView(birthdayTextField)
     }
     
     private func searchBarButtonPrefering() {
@@ -105,17 +214,8 @@ class SettingsTableViewController: UITableViewController {
     }
     
     private func preferingSearchController() {
-        searchController.searchResultsUpdater           = self
-        searchController.searchBar.barStyle             = .default
-        searchController.searchBar.searchBarStyle       = .minimal
-        searchController.view.tintColor                 = lazyColor
-        searchController.searchBar.clipsToBounds        = true
-        
-        let searchTextAppearance      = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-            searchTextAppearance.font = UIFont(name: "AvenirNext-Medium", size: 14)
-        
+        searchController.searchResultsUpdater = self
         navigationItem.searchController = searchController
-        searchController.searchControllerBasics()
     }
     
     @IBAction func share(_ sender: UIBarButtonItem) {
@@ -149,11 +249,10 @@ class SettingsTableViewController: UITableViewController {
         let questionAction = UIAlertAction(title: "Question", style: .cancel) { (_) in
             self.showMailComposer()
         }
-        
         alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
         alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
         
-        alertController.view.tintColor = #colorLiteral(red: 0.01995553821, green: 0.3423653841, blue: 0.1189347133, alpha: 1)
+        alertController.view.tintColor = lazyColor
         
         alertController.addAction(faqAction)
         alertController.addAction(questionAction)
@@ -184,100 +283,84 @@ class SettingsTableViewController: UITableViewController {
     }
     
     private func showSafariVC(for url: String) {
-        guard let url = URL(string: url) else {
-            //Show an invalid URL error alert
-            return
-        }
-        let safariVC = SFSafariViewController(url: url)
-            safariVC.preferredBarTintColor      = #colorLiteral(red: 0, green: 0.2316439748, blue: 0, alpha: 1)
-            safariVC.preferredControlTintColor  = .white
+        guard let url = URL(string: url) else { return }
+        
+        let safariVC = BasicSafariVC(url: url)
+        safariVC.setupSafariVC()
         
         present(safariVC, animated: true)
     }
     
-    private func textFieldsPrefering() {
-        nameTextField.settingsTextFieldPrefering()
-        secondNameTextField.settingsTextFieldPrefering()
-        emailTextField.settingsTextFieldPrefering()
-        secondEmailTextField.settingsTextFieldPrefering()
-        ageTextField.settingsTextFieldPrefering()
-        countryTextField.settingsTextFieldPrefering()
-        birthdayTextField.settingsTextFieldPrefering()
-        phoneNumberTextField.settingsTextFieldPrefering()
-    }
-    
     private func loadSettings() {
-        if let name = UserDefaults.standard.string(forKey: nameKey) {
+        if let name = UserDefaults.standard.string(forKey: SettingsKeys.nameKey) {
             nameTextField.text = name
         }
         
-        if let secondName = UserDefaults.standard.string(forKey: secondNameKey) {
+        if let secondName = UserDefaults.standard.string(forKey: SettingsKeys.secondNameKey) {
             secondNameTextField.text = secondName
         }
         
-        if let email = UserDefaults.standard.string(forKey: emailKey) {
+        if let email = UserDefaults.standard.string(forKey: SettingsKeys.emailKey) {
             emailTextField.text = email
         }
         
-        if let age = UserDefaults.standard.string(forKey: ageKey) {
+        if let age = UserDefaults.standard.string(forKey: SettingsKeys.ageKey) {
             ageTextField.text = age
         }
         
-        if let secondEmail = UserDefaults.standard.string(forKey: secondEmailKey) {
+        if let secondEmail = UserDefaults.standard.string(forKey: SettingsKeys.secondEmailKey) {
             secondEmailTextField.text = secondEmail
         }
         
-        if let country = UserDefaults.standard.string(forKey: countryKey) {
+        if let country = UserDefaults.standard.string(forKey: SettingsKeys.countryKey) {
             countryTextField.text = country
         }
         
-        if let birthday = UserDefaults.standard.string(forKey: birthdayKey) {
+        if let birthday = UserDefaults.standard.string(forKey: SettingsKeys.birthdayKey) {
             birthdayTextField.text = birthday
         }
         
-        if let phone = UserDefaults.standard.string(forKey: phoneKey) {
+        if let phone = UserDefaults.standard.string(forKey: SettingsKeys.phoneKey) {
             phoneNumberTextField.text = phone
         }
     }
     
     @IBAction func changeName(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: nameKey)
+        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.nameKey)
+        
+        inputFirstNameText = nameTextField.text
     }
     
     @IBAction func changeSecondName(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: secondNameKey)
+        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.secondNameKey)
+        
+        inputSecondNameText = secondNameTextField.text
     }
     
     @IBAction func changeEmail(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: emailKey)
+        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.emailKey)
+        
+        inputEmailText = emailTextField.text
     }
     
     @IBAction func changeAge(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: ageKey)
+        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.ageKey)
     }
     
     @IBAction func changeSecondEmail(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: secondEmailKey)
+        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.secondEmailKey)
     }
     
     @IBAction func changeCountry(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: countryKey)
+        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.countryKey)
     }
     
     @IBAction func changeBirthday(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: birthdayKey)
+        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.birthdayKey)
     }
     
     @IBAction func changePhoneNumber(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: phoneKey)
-    }
-    
-    @IBAction func soundsEnabeld(_ sender: UISwitch) {
-        UserDefaults.standard.set(sender.isOn, forKey: switchKey)
-    }
-    
-    @IBAction func volume(_ sender: UISlider) {
-        UserDefaults.standard.set(sender.value, forKey: sliderKey)
+        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.phoneKey)
     }
 }
 
@@ -304,15 +387,7 @@ extension SettingsTableViewController: MFMailComposeViewControllerDelegate {
     }
 }
 
-extension UITextField {
-    func settingsTextFieldPrefering() {
-        let size: CGFloat    = 17
-        let fontName: String = "AvenirNext-Medium"
-        
-        self.font = UIFont(name: fontName, size: size)
-    }
-}
-
 extension SettingsTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) { }
 }
+

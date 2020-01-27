@@ -39,17 +39,12 @@ class VideosMenuTableViewController: UITableViewController {
     }
     
     private func preferingSearchController() {
-        searchController.searchResultsUpdater           = self
-        searchController.searchBar.barStyle             = .default
-        searchController.searchBar.searchBarStyle       = .minimal
-        searchController.view.tintColor                 = lazyColor
-        searchController.searchBar.clipsToBounds        = true
+        searchController.searchResultsUpdater = self
         
         let searchTextAppearance      = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
             searchTextAppearance.font = UIFont(name: "AvenirNext-Medium", size: 14)
         
         navigationItem.searchController = searchController
-        searchController.searchControllerBasics()
     }
         
     private func refreshControlPrefering() {

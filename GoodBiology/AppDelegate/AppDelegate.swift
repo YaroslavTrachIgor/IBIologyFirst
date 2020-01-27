@@ -50,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func UIViewTintColorPrefering() {
+        window?.tintColor = lazyColor
+        
         UINavigationBar.appearance().viewSystemBack()
         UITabBar.appearance().viewSystemBack()
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: mediumFont, size: 10)!], for: .normal)

@@ -14,20 +14,29 @@ class BasicsViewController: UIViewController {
     typealias NextAction = () -> ()
     
     //MARK: IBOutlets
-    @IBOutlet weak var segmentedControl:         UISegmentedControl!
-    @IBOutlet weak var contentTextView:          UITextView!
-    @IBOutlet weak var backgroundView:           UIView!
-    @IBOutlet weak var stepper:                  UIStepper!
-    @IBOutlet weak var notificationButton:       UIButton!
-    @IBOutlet weak var stepperView:              UIView!
-    @IBOutlet weak var switchTextView:           UITextView!
-    @IBOutlet weak var switchView:               UIView!
-    @IBOutlet weak var settingsButton:           UIBarButtonItem!
-    @IBOutlet weak var switchOutlet:             UISwitch!
-    @IBOutlet weak var shareButton:              UIBarButtonItem!
-    @IBOutlet weak var activityIndicator:        UIActivityIndicatorView!
-    @IBOutlet weak var switchViewShowingButton:  UIBarButtonItem!
-    @IBOutlet weak var navItem:                  UINavigationItem!
+    @IBOutlet private weak var segmentedControl:         UISegmentedControl!
+    @IBOutlet private weak var contentTextView:          UITextView!
+    
+    @IBOutlet private weak var backgroundView:           BiologyBackView!
+    @IBOutlet private weak var notificationButton:       BiologyNotificationButton!
+    
+    // Stepper View
+    @IBOutlet private weak var stepperView:              UIView!
+    @IBOutlet private weak var stepper:                  UIStepper!
+    
+    // Switch View
+    @IBOutlet private weak var switchTextView:           UITextView!
+    @IBOutlet private weak var switchView:               UIView!
+    @IBOutlet private weak var switchOutlet:             UISwitch!
+
+    @IBOutlet private weak var activityIndicator:        UIActivityIndicatorView!
+    
+    // UIBarButtonItems
+    @IBOutlet private weak var shareButton:              UIBarButtonItem!
+    @IBOutlet private weak var settingsButton:           UIBarButtonItem!
+    @IBOutlet private weak var switchViewShowingButton:  UIBarButtonItem!
+    
+    @IBOutlet private weak var navItem:                  UINavigationItem!
     
     //MARK: Public properties
     public var contentModel: BasicsModel?
@@ -36,7 +45,7 @@ class BasicsViewController: UIViewController {
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         finalView()
         systemBackPrefering()
     }
@@ -48,17 +57,14 @@ class BasicsViewController: UIViewController {
             let delay: Double = Double((index)) * 0.3
             
             UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                UIApplication.shared.beginIgnoringInteractionEvents()
                 objects?.alpha = 1
             }) { (_) in
-                UIApplication.shared.endIgnoringInteractionEvents()
             }
         }
     }
     
     private func systemBackPrefering() {
         switchView.viewSystemBack()
-        backgroundView.viewSystemBack()
         stepperView.viewSystemBack()
         
         view.viewSystemBack()
@@ -154,13 +160,7 @@ class BasicsViewController: UIViewController {
     
     private func cornersPrefering() {
         stepperView.layer.cornerRadius     = CGFloat(cornerRadius)
-        backgroundView.layer.cornerRadius  = 30
         contentTextView.layer.cornerRadius = 30
-    }
-    
-    private func notificationButtonCostomizing() {
-        notificationButton.alpha     = 0
-        notificationButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
     }
     
     private func segmentedControlCostomizing() {
@@ -170,18 +170,11 @@ class BasicsViewController: UIViewController {
     
     private func viewBasics() {
         editorsViewTextPrefering()
-        notificationButtonSetup()
         segmentedControlSetup()
-        backViewSetup()
         activityIndicatorSetup()
         loadingViewPrefering()
         cornersPrefering()
         contentTextViewSetup()
-    }
-    
-    private func notificationButtonSetup() {
-        notificationButton.notificationButtonBasics()
-        notificationButtonCostomizing()
     }
     
     private func switchSetup() {
@@ -197,11 +190,6 @@ class BasicsViewController: UIViewController {
         segmentedControlCostomizing()
     }
     
-    private func backViewSetup() {
-        backgroundView.alpha = 0
-        backgroundView.layer.shadowColor  = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-    }
-    
     private func activityIndicatorSetup() {
         activityIndicator.activityIndicatorStarts(colorOfActivity: .darkGray)
     }
@@ -212,19 +200,16 @@ class BasicsViewController: UIViewController {
     
     private func contentTextViewSetup() {
         contentTextView.font = UIFont(name: mediumFont, size: 17)
-        contentTextView.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        contentTextView.layer.shadowColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         contentTextView.textViewShadow()
     }
     
     private func loadingViewPrefering() {
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        
         UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
             self.contentTextView.mainTextViewTextColor(alpha: 1)
         }) {(finished) in
             self.activityIndicator.activityIndicatorStop()
-            UIApplication.shared.endIgnoringInteractionEvents()
         }
     }
     
@@ -313,7 +298,7 @@ class BasicsViewController: UIViewController {
         let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
             
-            UIApplication.shared.keyWindow?.tintColor = #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1)
+            UIApplication.shared.keyWindow?.tintColor = lazyColor
         
         AudioServicesPlayAlertSound(SystemSoundID(1001))
         
@@ -436,7 +421,6 @@ class BasicsViewController: UIViewController {
     
     //MARK: Private
     private func prepareBackgroundView() {
-        backgroundView.viewShadows()
         switchView.viewShadows()
         stepper.stepperShadow()
         stepperView.viewShadows()

@@ -9,22 +9,21 @@
 import MessageUI
 import UIKit
 import AudioToolbox
+import SafariServices
 
 class TestsReviewViewController: UIViewController {
     
-    //MARK: Actions
+    //MARK: IBOutlets
     @IBOutlet weak var shareButton:          UIBarButtonItem!
     @IBOutlet weak var switchTextView:       UITextView!
     @IBOutlet weak var switchView:           UIView!
     @IBOutlet weak var switchOutlet:         UISwitch!
     @IBOutlet weak var testBackgroundView:   UIView!
+    
     @IBOutlet weak var headLineTextView:     UITextView!
     @IBOutlet weak var contentTextView:      UITextView!
-    @IBOutlet weak var sendButton:        UIButton! {
-        didSet {
-            sendButton.layer.cornerRadius = 20
-        }
-    }
+    
+    @IBOutlet weak var sendButton:           ContactButton! 
     
     //MARK: LifeCycle
     override func viewDidLoad() {
@@ -38,15 +37,16 @@ class TestsReviewViewController: UIViewController {
         super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 0.3) {
-            self.sendButton.alpha           = 1
-            self.testBackgroundView.alpha   = 1
-            self.headLineTextView.alpha     = 1
-            self.contentTextView.alpha      = 1
+            let alpha = 1
+            
+            self.sendButton.alpha           = CGFloat(alpha)
+            self.testBackgroundView.alpha   = CGFloat(alpha)
+            self.headLineTextView.alpha     = CGFloat(alpha)
+            self.contentTextView.alpha      = CGFloat(alpha)
         }
     }
     
     private func viewBasicsPrefering() {
-        sendButtonSetup()
         switchViewSetup()
         testBackgroundViewSetup()
         contentTextViewSetup()
@@ -64,19 +64,26 @@ class TestsReviewViewController: UIViewController {
     }
     
     @IBAction func functionsHidden(_ sender: UISwitch) {
+        let hidden: Bool
+        
         if sender.isOn == true {
+            hidden = false
+            
             switchTextView.text = "Hide diffrent text"
             
-            headLineTextView.isHidden   = false
-            contentTextView.isHidden    = false
-            testBackgroundView.isHidden = false
-            shareButton.isEnabled       = true
+            headLineTextView.isHidden   = hidden
+            contentTextView.isHidden    = hidden
+            testBackgroundView.isHidden = hidden
+            shareButton.isEnabled       = hidden
         } else {
+            hidden = true
+            
             switchTextView.text = "Show diffrent text"
             
-            headLineTextView.isHidden   = true
-            contentTextView.isHidden    = true
-            testBackgroundView.isHidden = true
+            headLineTextView.isHidden   = hidden
+            contentTextView.isHidden    = hidden
+            testBackgroundView.isHidden = hidden
+            
             shareButton.isEnabled       = false
         }
     }
@@ -89,8 +96,26 @@ class TestsReviewViewController: UIViewController {
         }
     }
     
+    private func showSafariVC(for url: String) {
+        guard let url = URL(string: url) else { return }
+        
+        let safariVC = BasicSafariVC(url: url)
+        safariVC.setupSafariVC()
+        
+        present(safariVC, animated: true)
+    }
+    
+    @IBAction func faqSite(_ sender: Any) {
+         showSafariVC(for: "https://zhbr282.wixsite.com/goodbiology-policy")
+    }
+    
     @IBAction func shareButton(_ sender: UIBarButtonItem) {
-        let activityVC = UIActivityViewController(activityItems: ["My Test Problem"], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: [
+            """
+            \(headLineTextView.text!)
+            
+            \(contentTextView.text!)
+            """], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
         
             UIApplication.shared.keyWindow?.tintColor = lazyColor
@@ -131,7 +156,8 @@ class TestsReviewViewController: UIViewController {
         switchView.layer.cornerRadius           = CGFloat(cornerRadius)
         switchTextView.layer.cornerRadius       = CGFloat(cornerRadius)
         
-        testBackgroundView.layer.cornerRadius   = 19.4
+        cornerRadius = CGFloat(19.4)
+        testBackgroundView.layer.cornerRadius   = cornerRadius
     }
     
     private func testBackgroundViewSetup() {
@@ -143,7 +169,7 @@ class TestsReviewViewController: UIViewController {
     }
     
     private func navigationControllerTintSetup() {
-        navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
+        navigationController?.navigationBar.tintColor = lazyColor
     }
     
     private func switchViewSetup() {
@@ -161,10 +187,6 @@ class TestsReviewViewController: UIViewController {
     private func switchTextViewSetup() {
         switchTextView.switchTextViewPrefering()
         switchTextView.font = UIFont(name: mediumFont, size: 14)
-    }
-    
-    private func sendButtonSetup() {
-        self.sendButton.fastButtonCostomizing(background: #colorLiteral(red: 0.01995553821, green: 0.3423653841, blue: 0.1189347133, alpha: 1), titleColor: .white, title: "Contact with Email", corner: 19.4, borderWidth: 4)
     }
 }
 

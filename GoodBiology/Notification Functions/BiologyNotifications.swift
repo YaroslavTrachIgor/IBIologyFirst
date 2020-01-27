@@ -9,7 +9,7 @@
 import Foundation
 import UserNotifications
 
-public let endOfTextBiolgyNotification = " of Biology."
+public let endOfTextBiolgyNotification: String = " of Biology."
 
 func basicsScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
 {
@@ -36,8 +36,6 @@ func basicsScheduleNotification(inSecond seconds: TimeInterval, completion: (Boo
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Basics")
 }
 
 func historyScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -65,8 +63,6 @@ func historyScheduleNotification(inSecond seconds: TimeInterval, completion: (Bo
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "History")
 }
 
 func historyPTwoScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -94,8 +90,6 @@ func historyPTwoScheduleNotification(inSecond seconds: TimeInterval, completion:
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "History p. 2")
 }
 
 func cellTheotyScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -123,8 +117,6 @@ func cellTheotyScheduleNotification(inSecond seconds: TimeInterval, completion: 
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Cell Theory")
 }
 
 func evolutionScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -152,8 +144,6 @@ func evolutionScheduleNotification(inSecond seconds: TimeInterval, completion: (
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Evolution")
 }
 
 func geneticsScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -181,8 +171,6 @@ func geneticsScheduleNotification(inSecond seconds: TimeInterval, completion: (B
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Genetics")
 }
 
 func structularScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -210,6 +198,4 @@ func structularScheduleNotification(inSecond seconds: TimeInterval, completion: 
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Structular")
 }

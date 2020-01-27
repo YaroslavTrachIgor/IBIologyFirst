@@ -11,15 +11,21 @@ import AudioToolbox
 
 class ThemesMenuTableViewController: UITableViewController {
 
+    //MARK: IBOutlets
     @IBOutlet weak var table:       UITableView!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     let settingsRefreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-            refreshControl.addTarget(self, action: #selector(UIRefreshControl.endRefreshing), for: .valueChanged)
+        let refreshControl = BasicRefreshControl()
         
         return refreshControl
     }()
+    
+    private let searchController = BasicSearchController()
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return    text.isEmpty
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +39,9 @@ class ThemesMenuTableViewController: UITableViewController {
     
     @IBAction func share(_ sender: UIBarButtonItem) {
         let shareInformation = navigationItem.title!
-        
         let activityVC = UIActivityViewController(activityItems: [shareInformation], applicationActivities: nil)
         
-        UIApplication.shared.keyWindow?.tintColor = #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1)
+        UIApplication.shared.keyWindow?.tintColor = lazyColor
         AudioServicesPlayAlertSound(SystemSoundID(1001))
         
         present(activityVC, animated: true)

@@ -10,6 +10,7 @@ import UIKit
 import MessageUI
 import UserNotifications
 import AudioToolbox
+import SafariServices
 
 class ArticlesReviewViewController: UIViewController {
 
@@ -17,13 +18,13 @@ class ArticlesReviewViewController: UIViewController {
     @IBOutlet weak var contentTextView:  UITextView!
     @IBOutlet weak var emailButton:      UIButton!
     @IBOutlet weak var shareButton:      UIBarButtonItem!
-    @IBOutlet weak var textView:         UITextView! {
+    @IBOutlet weak var switchTextView:         UITextView! {
         didSet {
-            textView.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-            textView.font      = UIFont(name: "AvenirNext-DemiBold", size: 14)
-            textView.layer.shadowRadius = 7
+            switchTextView.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            switchTextView.font      = UIFont(name: "AvenirNext-DemiBold", size: 14)
+            switchTextView.layer.shadowRadius = 7
             
-            textView.textViewShadow()
+            switchTextView.textViewShadow()
         }
     }
     @IBOutlet weak var switchOutlet:     UISwitch! {
@@ -33,20 +34,25 @@ class ArticlesReviewViewController: UIViewController {
     @IBOutlet weak var switchView: UIView! {
         didSet {
             switchView.editorsViews()
+            cornerRadius = 10
         }
     }
-    @IBOutlet weak var contentBackgroundView: UIView!
+    @IBOutlet weak var contentBackgroundView: ContentBack!
     @IBOutlet weak var imageView:             UIImageView! {
         didSet {
-            imageView.layer.cornerRadius    = 50
+            cornerRadius = 50
+            
+            imageView.layer.cornerRadius    = cornerRadius
+            
             imageView.layer.masksToBounds   = true
+            
             imageView.layer.borderColor     = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
             imageView.layer.borderWidth     = 11
             
             imageView.imageViewShadow()
         }
     }
-    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var sendButton: ContactButton!
     
     //MARK: LifeCycle
     override func viewDidLoad() {
@@ -57,16 +63,13 @@ class ArticlesReviewViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let views = [imageView, sendButton, contentBackgroundView, textView, contentTextView]
+        let views = [imageView, sendButton, contentBackgroundView, switchTextView, contentTextView]
         for (index, view) in views.enumerated() {
             let delay: Double = Double((index)) * 0.2
             
             UIView.animate(withDuration: 0.4, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                UIApplication.shared.beginIgnoringInteractionEvents()
                 view?.alpha = 1
-            }) { (_) in
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
+            })
         }
     }
     
@@ -74,10 +77,9 @@ class ArticlesReviewViewController: UIViewController {
         view.viewSystemBack()
         
         contentTextView.systemTextColor()
-        textView.systemTextColor()
+        switchTextView.systemTextColor()
         
         switchView.viewSystemBack()
-        contentBackgroundView.viewSystemBack()
     }
     
     //MARK: Actions
@@ -86,12 +88,14 @@ class ArticlesReviewViewController: UIViewController {
             contentBackgroundView.isHidden  = false
             shareButton.isEnabled           = true
             imageView.isHidden              = false
-            textView.text                   = "Hide diffrent functions"
+            
+            switchTextView.text = "Hide diffrent functions"
         } else {
             contentBackgroundView.isHidden  = true
             shareButton.isEnabled           = false
             imageView.isHidden              = true
-            textView.text                   = "Show diffrent functions"
+            
+            switchTextView.text = "Show diffrent functions"
         }
     }
     
@@ -104,7 +108,7 @@ class ArticlesReviewViewController: UIViewController {
     }
     
     @IBAction func shareButton(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: ["My Article Problem"], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: ["\(contentTextView.text!)"], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
         
             UIApplication.shared.keyWindow?.tintColor = lazyColor
@@ -133,29 +137,32 @@ class ArticlesReviewViewController: UIViewController {
         present(composer, animated: true)
     }
     
+    private func showSafariVC(for url: String) {
+        guard let url = URL(string: url) else { return }
+        
+        let safariVC = BasicSafariVC(url: url)
+        safariVC.setupSafariVC()
+        
+        present(safariVC, animated: true)
+    }
+    
+    @IBAction func faqSite(_ sender: Any) {
+         showSafariVC(for: "https://zhbr282.wixsite.com/goodbiology-policy")
+    }
+    
     private func alphaPrefering() {
         let alpha = 0
         
         contentTextView.alpha  = CGFloat(alpha)
-        textView.alpha         = CGFloat(alpha)
-        sendButton.alpha       = CGFloat(alpha)
+        switchTextView.alpha   = CGFloat(alpha)
         imageView.alpha        = CGFloat(alpha)
     }
     
     private func viewBasics() {
-        sendButtonSetup()
         alphaPrefering()
     }
     
-    private func sendButtonSetup() {
-        sendButton.buttonsShadows()
-        sendButton.fastButtonCostomizing(background: #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1), titleColor: .white, title: "Contact with Email", corner: 16, borderWidth: 4.8)
-    }
-    
     private func contentBackgroundViewPrefering() {
-        contentBackgroundView.viewShadows()
-        
-        contentBackgroundView.layer.cornerRadius   = 16
         contentBackgroundView.alpha = 0
         
         contentTextViewSetup()

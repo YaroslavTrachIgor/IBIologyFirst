@@ -31,6 +31,14 @@ class ThemesController: UIViewController {
         systemColorPrefering()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.6) {
+            self.contentBackground.alpha = 1
+        }
+    }
+    
     private func basicView() {
         contentTextViewSetup()
         stepperViewSetup()
@@ -104,14 +112,6 @@ class ThemesController: UIViewController {
         let fontSize = CGFloat(sender.value)
         
         contentTextView.font = UIFont(name: font!, size: fontSize)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        UIView.animate(withDuration: 0.6) {
-            self.contentBackground.alpha = 1
-        }
     }
     
     private func rate() {

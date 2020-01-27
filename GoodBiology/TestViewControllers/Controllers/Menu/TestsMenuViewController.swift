@@ -11,60 +11,69 @@ import AudioToolbox
 
 class TestsMenuViewController: UIViewController {
     
-    //MARK: IBOutlets
+    // MARK: IBOutlets
+    // Background Views
+    @IBOutlet weak var plantsView:      TestIconBackView!
+    @IBOutlet weak var animalsView:     TestIconBackView!
+    @IBOutlet weak var humanView:       TestIconBackView!
+    @IBOutlet weak var microbesView:    TestIconBackView!
+    @IBOutlet weak var virusesView:     TestIconBackView!
+    @IBOutlet weak var fungusesView:    TestIconBackView!
+    @IBOutlet weak var archaeaView:     TestIconBackView!
     
-    //Background Views
-    @IBOutlet private var plantsView:      UIView!
-    @IBOutlet private var animalsView:     UIView!
-    @IBOutlet private var humanView:       UIView!
-    @IBOutlet private var microbesView:    UIView!
-    @IBOutlet private var virusesView:     UIView!
-    @IBOutlet private var fungusesView:    UIView!
-    @IBOutlet private var archaeaView:     UIView!
+    // Text View
+    @IBOutlet weak var plantsTextView:       UITextView!
+    @IBOutlet weak var animalsTextView:      UITextView!
+    @IBOutlet weak var manTextView:          UITextView!
+    @IBOutlet weak var microbesTextView:     UITextView!
+    @IBOutlet weak var virusesTextView:      UITextView!
+    @IBOutlet weak var mushroomsTextView:    UITextView!
+    @IBOutlet weak var archaeaTextView:      UITextView!
     
-    //Text View
-    @IBOutlet private var plantsTextView:       UITextView!
-    @IBOutlet private var animalsTextView:      UITextView!
-    @IBOutlet private var manTextView:          UITextView!
-    @IBOutlet private var microbesTextView:     UITextView!
-    @IBOutlet private var virusesTextView:      UITextView!
-    @IBOutlet private var mushroomsTextView:    UITextView!
-    @IBOutlet private var archaeaTextView:      UITextView!
+    // UILabel
+    @IBOutlet weak var plantsTitle:     TestIconLabel!
+    @IBOutlet weak var animalsLabel:    TestIconLabel!
+    @IBOutlet weak var humanLabel:      TestIconLabel!
+    @IBOutlet weak var microbesLabel:   TestIconLabel!
+    @IBOutlet weak var virusLabel:      TestIconLabel!
+    @IBOutlet weak var fungusesLabel:   TestIconLabel!
+    @IBOutlet weak var archaeaLabel:    TestIconLabel!
     
-    //UILabel
-    @IBOutlet weak var plantsTitle:     UILabel!
-    @IBOutlet weak var animalsLabel:    UILabel!
-    @IBOutlet weak var humanLabel:      UILabel!
-    @IBOutlet weak var microbesLabel:   UILabel!
-    @IBOutlet weak var virusLabel:      UILabel!
-    @IBOutlet weak var fungusesLabel:   UILabel!
-    @IBOutlet weak var archaeaLabel:    UILabel!
-    
-    //UIView
+    // UIScrollView
     @IBOutlet weak var scrollView: UIScrollView!
     
-    //UIBarButtonItem
+    // UIBarButtonItem
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     private let settingsRefreshControl: UIRefreshControl = {
-        let refreshControl = UIRefreshControl()
-            refreshControl.addTarget(self, action: #selector(UIRefreshControl.endRefreshing), for: .valueChanged)
+        let refreshControl = BasicRefreshControl()
         
         return refreshControl
     }()
     
-    private let searchController = UISearchController(searchResultsController: nil)
+    private let searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
     }
     
+    let plantsName      = Notification.Name(rawValue: TestViewKeys.plantsViewKey)
+    let archaeaName     = Notification.Name(rawValue: TestViewKeys.archaeaViewKey)
+    let animalsName     = Notification.Name(rawValue: TestViewKeys.animalsViewKey)
+    let humenName       = Notification.Name(rawValue: TestViewKeys.humanViewKey)
+    let virusesName     = Notification.Name(rawValue: TestViewKeys.virusesViewKey)
+    let microbesName    = Notification.Name(rawValue: TestViewKeys.microbesViewKey)
+    let fungusesName    = Notification.Name(rawValue: TestViewKeys.fungusesViewKey)
+    
+    let viewAlphaAfterObserver: CGFloat = 0.8
+    
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //MenuViewControllerDelegate
+        /// MenuViewControllerDelegate
         basicViewProccesPrefering()
+        createObservers()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -78,12 +87,63 @@ class TestsMenuViewController: UIViewController {
             let delay: Double = Double((index)) * 0.2
             
             UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                UIApplication.shared.beginIgnoringInteractionEvents()
                 view?.alpha = 1
-            }) { (_) in
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
+            })
         }
+    }
+    
+    // Update Views Alpha
+
+    
+    private func createObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.plantsViewAlphaUpdate(notification:)), name: plantsName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.archaeaViewAlphaUpdate(notification:)), name: archaeaName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.animalsViewAlphaUpdate(notification:)), name: animalsName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.humenViewAlphaUpdate(notification:)), name: humenName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.virusesViewAlphaUpdate(notification:)), name: virusesName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.fungusesViewAlphaUpdate(notification:)), name: fungusesName, object: nil)
+    }
+    
+    @objc func plantsViewAlphaUpdate(notification: NSNotification) {
+        plantsView.alpha        = viewAlphaAfterObserver
+        plantsTitle.alpha       = viewAlphaAfterObserver
+        plantsTextView.alpha    = viewAlphaAfterObserver
+    }
+    
+    @objc func archaeaViewAlphaUpdate(notification: NSNotification) {
+        archaeaView.alpha        = viewAlphaAfterObserver
+        archaeaLabel.alpha       = viewAlphaAfterObserver
+        archaeaTextView.alpha    = viewAlphaAfterObserver
+    }
+    
+    @objc func animalsViewAlphaUpdate(notification: NSNotification) {
+        animalsView.alpha        = viewAlphaAfterObserver
+        animalsLabel.alpha       = viewAlphaAfterObserver
+        animalsTextView.alpha    = viewAlphaAfterObserver
+    }
+    
+    @objc func humenViewAlphaUpdate(notification: NSNotification) {
+        humanView.alpha         = viewAlphaAfterObserver
+        humanLabel.alpha        = viewAlphaAfterObserver
+        manTextView.alpha       = viewAlphaAfterObserver
+    }
+    
+    @objc func virusesViewAlphaUpdate(notification: NSNotification) {
+        virusesView.alpha           = viewAlphaAfterObserver
+        virusLabel.alpha            = viewAlphaAfterObserver
+        virusesTextView.alpha       = viewAlphaAfterObserver
+    }
+    
+    @objc func microbesViewAlphaUpdate(notification: NSNotification) {
+        microbesView.alpha           = viewAlphaAfterObserver
+        microbesTextView.alpha       = viewAlphaAfterObserver
+        microbesLabel.alpha          = viewAlphaAfterObserver
+    }
+    
+    @objc func fungusesViewAlphaUpdate(notification: NSNotification) {
+        fungusesLabel.alpha           = viewAlphaAfterObserver
+        fungusesView.alpha            = viewAlphaAfterObserver
+        mushroomsTextView.alpha       = viewAlphaAfterObserver
     }
     
     //MARK: DarkMode methods Prefering
@@ -161,41 +221,16 @@ class TestsMenuViewController: UIViewController {
     
     private func preferingSearchContrller() {
         searchController.searchResultsUpdater = self
-        searchController.searchBar.barStyle         = .black
-        searchController.searchBar.searchBarStyle   = .minimal
-        searchController.view.tintColor             = lazyColor
-        
-        searchController.searchControllerBasics()
-        
-        let searchTextAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-        searchTextAppearance.font = UIFont(name: "AvenirNext-Medium", size: 14)
-        
         navigationItem.searchController = searchController
     }
     
     private func viewsShadowsPrefering() {
-        plantsView.preferingViews()
-        animalsView.preferingViews()
-        humanView.preferingViews()
-        microbesView.preferingViews()
-        virusesView.preferingViews()
-        archaeaView.preferingViews()
-        fungusesView.preferingViews()
-        
         animalsTextView.textViewShadow()
         virusesTextView.textViewShadow()
         microbesTextView.textViewShadow()
         manTextView.textViewShadow()
         mushroomsTextView.textViewShadow()
         archaeaTextView.textViewShadow()
-        
-        plantsTitle.labelShadow()
-        animalsLabel.labelShadow()
-        virusLabel.labelShadow()
-        microbesLabel.labelShadow()
-        humanLabel.labelShadow()
-        fungusesLabel.labelShadow()
-        archaeaLabel.labelShadow()
     }
     
     private func textPrefering() {
@@ -214,6 +249,12 @@ class TestsMenuViewController: UIViewController {
     private func refreshControlPrefering() {
         scrollView.refreshControl = settingsRefreshControl
     }
+    
+    private func searchBarButtonPrefering() {
+        if let buttonItem = searchController.searchBar.subviews.first?.subviews.last as? UIButton {
+               buttonItem.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 14)
+        }
+    }
 }
 
 extension TestsMenuViewController: UISearchResultsUpdating {
@@ -222,11 +263,12 @@ extension TestsMenuViewController: UISearchResultsUpdating {
 
 extension UIView {
     func preferingViews() {
+        cornerRadius = 12.87
         
         self.viewShadows()
         
         self.alpha = 0
-        self.layer.cornerRadius = 12.87
+        self.layer.cornerRadius = cornerRadius
     }
 }
 
@@ -239,5 +281,56 @@ extension TestsMenuViewController: MenuViewControllerDelegate {
         viewsShadowsPrefering()
         systemColorsPrefeing()
         refreshControlPrefering()
+        searchBarButtonPrefering()
+        setupSearchBarFont()
     }
 }
+
+// Test Icon Back View Setup and Delegate
+protocol TestIconBackViewDelegate {
+    func setupBackView()
+}
+
+class TestIconBackView: UIView {
+    override init(frame: CGRect) {
+      super.init(frame: frame)
+        setupBackView()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+        setupBackView()
+    }
+}
+
+extension TestIconBackView: TestIconBackViewDelegate {
+    internal func setupBackView() {
+        preferingViews()
+    }
+}
+
+// Test Icon Labels
+protocol TestIconLabelDelegate {
+    func setupAnswerLabel()
+}
+
+class TestIconLabel: UILabel {
+    override init(frame: CGRect) {
+      super.init(frame: frame)
+        setupAnswerLabel()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+      super.init(coder: aDecoder)
+        setupAnswerLabel()
+    }
+}
+
+extension TestIconLabel: TestIconLabelDelegate {
+    internal func setupAnswerLabel() {
+        labelShadow()
+        
+        textColor = lazyColor
+    }
+}
+

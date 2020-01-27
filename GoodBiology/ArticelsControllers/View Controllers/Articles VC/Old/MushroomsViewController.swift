@@ -16,26 +16,39 @@ class MushroomsViewController: UIViewController {
     //MARK: IBOutlets
     @IBOutlet weak var textView:                 UITextView!
     @IBOutlet weak var segmentedControlOutlet:   UISegmentedControl!
-    @IBOutlet weak var notificationButtonOutlet: UIButton!
+    
+    @IBOutlet weak var notificationButtonOutlet: NotificationButton!
+    
     @IBOutlet weak var headlineItem:             UINavigationItem!
     @IBOutlet weak var stepperBackgroundView:    UIView!
     @IBOutlet weak var switchTextView:           UITextView!
     @IBOutlet weak var settingsButton:           UIBarButtonItem!
     @IBOutlet weak var switchView:               UIView!
-    @IBOutlet weak var activityIndicator:        UIActivityIndicatorView!
+    
+    @IBOutlet weak var activityIndicator:        ArticleActivityIndicatorView!
+    
     @IBOutlet weak var stepper:                  UIStepper!
     @IBOutlet weak var switchOutlet:             UISwitch!
     @IBOutlet weak var shareButton:              UIBarButtonItem!
     @IBOutlet weak var progressView:             UIProgressView!
     @IBOutlet weak var switchButton:             UIBarButtonItem!
     
-    @IBOutlet weak var goToImagesButton: UIButton!
-    @IBOutlet weak var goToVideosButton: UIButton!
+    @IBOutlet weak var goToImagesButton: ImageButton!
+    @IBOutlet weak var goToVideosButton: VideoButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         finalView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        UIView.animate(withDuration: 0.6) {
+            self.notificationButtonOutlet.alpha  = 1
+            self.segmentedControlOutlet.alpha    = 1
+        }
     }
     
     //MARK: Actions
@@ -50,14 +63,6 @@ class MushroomsViewController: UIViewController {
             fastActivityVC(item: mushroomsMostContent)
         }
         shareButton.shareAudio()
-    }
-    
-    private func imageButtonPrefering() {
-        goToImagesButton.imageButton()
-    }
-    
-    private func videosButtonPrefering() {
-        goToVideosButton.videoButton()
     }
     
     private func fastActivityVC(item: String) {
@@ -202,12 +207,12 @@ class MushroomsViewController: UIViewController {
         }
     }
     
-    @IBAction func notificationButton(_ sender: UIButton) {
+    @IBAction func notificationButton(_ sender: NotificationButton) {
         mushroomsScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
-        notificationButtonOutlet.notificationButtonAudio()
-        notificationButtonOutlet.settingTittleForNotificationButton()
+        sender.notificationButtonAudio()
+        sender.settingTittleForNotificationButton()
         
         for _ in 0..<2 {
             sender.pulsate()
@@ -220,15 +225,6 @@ class MushroomsViewController: UIViewController {
     private func removeNotifications(withIdentifiers identifiers: [String])   {
         let center = UNUserNotificationCenter.current()
             center.removePendingNotificationRequests(withIdentifiers: identifiers)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        UIView.animate(withDuration: 0.6) {
-            self.notificationButtonOutlet.alpha  = 1
-            self.segmentedControlOutlet.alpha    = 1
-        }
     }
     
     private func stepperViewPrefering() {
@@ -247,27 +243,14 @@ class MushroomsViewController: UIViewController {
     
     private func viewBasiscs() {
         textViewSetup()
-        activityIndicatorSetup()
-        notificationButtonOutletSetup()
         segmentedControlSetup()
         stepperViewPrefering()
         switchViewPrefering()
-        imageButtonPrefering()
-        videosButtonPrefering()
     }
     
     private func segmentedControlSetup() {
         segmentedControlOutlet.segmentedControlBasics()
         segmentedControlOutlet.segmentedControlShadow()
-    }
-    
-    private func notificationButtonOutletSetup() {
-        notificationButtonOutlet.buttonsShadows()
-        notificationButtonOutlet.notificationButtonBasics()
-    }
-    
-    private func activityIndicatorSetup() {
-        activityIndicator.activityIndicatorStarts(colorOfActivity: .darkGray)
     }
     
     private func textViewSetup() {

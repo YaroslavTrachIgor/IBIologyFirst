@@ -36,8 +36,6 @@ func plantsScheduleNotification(inSecond seconds: TimeInterval, completion: (Boo
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Plants")
 }
 
 func archaeaScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -65,8 +63,6 @@ func archaeaScheduleNotification(inSecond seconds: TimeInterval, completion: (Bo
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Archaea")
 }
 
 func animalsScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -94,8 +90,6 @@ func animalsScheduleNotification(inSecond seconds: TimeInterval, completion: (Bo
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Animals")
 }
 
 func virusesScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -123,8 +117,6 @@ func virusesScheduleNotification(inSecond seconds: TimeInterval, completion: (Bo
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Viruses")
 }
 
 func manScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -152,8 +144,6 @@ func manScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) 
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Man")
 }
 
 func microbesScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -181,8 +171,6 @@ func microbesScheduleNotification(inSecond seconds: TimeInterval, completion: (B
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Microbes")
 }
 
 func mushroomsScheduleNotification(inSecond seconds: TimeInterval, completion: (Bool) -> ())
@@ -210,8 +198,6 @@ func mushroomsScheduleNotification(inSecond seconds: TimeInterval, completion: (
     
     center.setNotificationCategories([category])
     center.add(request, withCompletionHandler: nil)
-    
-    notificationPrinting(doing: "Mushrooms")
 }
 
 func removeNotifications(withIdentifiers identifiers: [String])   {

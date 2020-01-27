@@ -11,8 +11,9 @@ import AudioToolbox
 
 class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, NotesDelegate {
 
-    @IBOutlet weak var textFieldView:                UIView!
-    @IBOutlet weak var textViewBackgroundView:       UIView!
+    @IBOutlet weak var textFieldView:                TextViewBackView!
+    @IBOutlet weak var textViewBackgroundView:       TextViewBackView!
+    
     @IBOutlet weak var inputTextField:               UITextField!
     @IBOutlet weak var textView:                     UITextView!
     @IBOutlet weak var trashItem:                    UIBarButtonItem!
@@ -27,15 +28,13 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     private let array = ["Plants", "Animals", "Microbes", "Fungus", "Man", "Viruses", "Archaeas", "Biology", "Internet", "Nothing"]
     
-    public var textViewText: String = ""
+    static public var textViewText: String = ""
     
-    lazy var toolBar: UIToolbar = {
-        let toolBar     = UIToolbar()
+    lazy var toolBar: BasicToolbar = {
+        let toolBar     = BasicToolbar()
         let spacer      = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton  = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonAction))
         
-        toolBar.sizeToFit()
-        toolBar.tintColor = UIColor.gray
         toolBar.items = [spacer, doneButton]
         
         return toolBar
@@ -55,11 +54,8 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
             let delay: Double = Double((index)) * 0.2
             
             UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                UIApplication.shared.beginIgnoringInteractionEvents()
                 objects?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            }) { (_) in
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
+            })
         }
     }
     
@@ -77,18 +73,24 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         animationsPrefering()
         systemColorsPrefering()
         textContainersTintSetup()
+        alphaSetup()
     }
     
     private func systemColorsPrefering() {
         datePickerView.viewSystemBack()
         pickerView.viewSystemBack()
-        textViewBackgroundView.viewSystemBack()
-        textFieldView.viewSystemBack()
         pickerViewBackground.viewSystemBack()
     }
     
+    private func alphaSetup() {
+        let alpha = 1
+        
+        textViewBackgroundView.alpha = CGFloat(alpha)
+        textFieldView.alpha          = CGFloat(alpha)
+    }
+    
     private func textContainersTintSetup() {
-        let tintColor = #colorLiteral(red: 0, green: 0.2469184101, blue: 0.009277993813, alpha: 1)
+        let tintColor = lazyColor
         
         textView.tintColor       = tintColor
         inputTextField.tintColor = tintColor
@@ -204,7 +206,7 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 
                 self.present(alertController, animated: true)
             } else {
-                let alertController = UIAlertController(title: "Are You Sure ?", message: "Are you sure you want to delete content and headline, that you had written", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Are You Sure ?", message: "Are you sure you want to delete note content and title, that you had written", preferredStyle: .alert)
                 
                 let delete = UIAlertAction(title: deleteWord, style: .destructive) {
                     (action) in
@@ -317,10 +319,10 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     @IBAction func dateChoosing(_ sender: Any) {
-        if self.datePickerView.isHidden == true {
-            self.datePickerView.isHidden = false
+        if datePickerView.isHidden == true {
+            datePickerView.isHidden = false
         } else {
-            self.datePickerView.isHidden = true
+            datePickerView.isHidden = true
         }
         timeButtonText()
         dateViewShowingAudio()
@@ -363,17 +365,17 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         datePicker.pickerViewShadow()
         pickerViewBackground.viewShadows()
         pickerView.pickerViewShadow()
-        textViewBackgroundView.viewShadows()
-        textFieldView.viewShadows()
     }
     
     private func dateButtonPrefering() {
-        dateChooseButton.fastButtonCostomizing(background: #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1), titleColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), title: "Choose Time", corner: 12, borderWidth: 2.8)
+        dateChooseButton.fastButtonCostomizing(background: lazyColor, titleColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), title: "Choose Time", corner: 12, borderWidth: 2.8)
     }
     
     private func alphaPrefering() {
-        inputTextField.alpha = 0
-        textView.alpha       = 0
+        let alpha = 0
+        
+        inputTextField.alpha = CGFloat(alpha)
+        textView.alpha       = CGFloat(alpha)
     }
     
     private func sizingPrefering() {
@@ -387,13 +389,11 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
     
     private func cornersPrefering() {
-        textFieldView.layer.cornerRadius            = CGFloat(cornerRadius)
-        textViewBackgroundView.layer.cornerRadius   = CGFloat(cornerRadius)
         pickerViewBackground.layer.cornerRadius     = 21.68
     }
     
     private func activitiesPrefering() {
-        let acTint = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        let acTint = UIColor.darkGray
         
         textViewActivityIndicator.activityIndicatorStarts(colorOfActivity:  acTint)
         textFieldActivityIndicator.activityIndicatorStarts(colorOfActivity: acTint)

@@ -1,5 +1,5 @@
 //
-//  ManViewController.swift
+//  VirusesViewController.swift
 //  GoodBiology
 //
 //  Created by Yaroslav on 12/6/18.
@@ -11,72 +11,67 @@ import UserNotifications
 import AudioToolbox
 import Social
 
-class HumanViewVontroller: UIViewController {
-    
+class VirusesViewController: UIViewController {
+
     //MARK: IBOutlets
-    @IBOutlet weak var notificationuttonOutlet:  UIButton!
-    @IBOutlet weak var headlineItem:             UINavigationItem!
-    @IBOutlet weak var settings:                 UIBarButtonItem!
-    @IBOutlet weak var stepperBackgroundView:    UIView!
-    @IBOutlet weak var `switch`:                 UISwitch!
-    @IBOutlet weak var switchTextView:           UITextView!
-    @IBOutlet weak var switchView:               UIView!
-    @IBOutlet weak var settingsOutlet:           UIBarButtonItem!
-    @IBOutlet weak var activityIndicator:        UIActivityIndicatorView!
-    @IBOutlet weak var stepper:                  UIStepper!
-    @IBOutlet weak var switchOutlet:             UISwitch!
-    @IBOutlet weak var shareButton:              UIBarButtonItem!
-    @IBOutlet weak var progressView:             UIProgressView!
-    @IBOutlet weak var switchButton:             UIBarButtonItem!
-    @IBOutlet weak var textView:                 UITextView!
-    @IBOutlet weak var segmentedControl:         UISegmentedControl!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var textView:         UITextView!
     
-    @IBOutlet weak var goToImagesButton: UIButton!
-    @IBOutlet weak var goToVideosButton: UIButton!
+    @IBOutlet weak var notificationOutletButton: NotificationButton!
+    
+    @IBOutlet weak var stepperBackgroundView: UIView!
+    @IBOutlet weak var settingsButton:        UIBarButtonItem!
+    @IBOutlet weak var switchTextView:        UITextView!
+    @IBOutlet weak var switchView:            UIView!
+    
+    @IBOutlet weak var activityIndicator: ArticleActivityIndicatorView!
+    
+    @IBOutlet weak var fixedSwitchView: UIView!
+    @IBOutlet weak var stepper:         UIStepper!
+    @IBOutlet weak var switchOutlet:    UISwitch!
+    @IBOutlet weak var shareButton:     UIBarButtonItem!
+    @IBOutlet weak var progressView:    UIProgressView!
+    @IBOutlet weak var switchButoon:    UIBarButtonItem!
+    
+    @IBOutlet weak var goToImagesButton: ImageButton!
+    @IBOutlet weak var goToVideosButton: VideoButton!
+    
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == manBasicsContent {
-            fastActivityVC(item: manBasicsContent)
+        if textView.text == virusesBasicsContent {
+            fastActivityVC(item: virusesBasicsContent)
             
-        }  else if textView.text == manStructureContent {
-            fastActivityVC(item: manStructureContent)
+        } else if textView.text == virusesStructureContent {
+            fastActivityVC(item: virusesStructureContent)
             
         } else {
-            fastActivityVC(item: manMostContent)
+            fastActivityVC(item: virusesMostContent)
         }
         shareButton.shareAudio()
-    }
-    
-    private func imageButtonPrefering() {
-        goToImagesButton.imageButton()
-    }
-    
-    private func videosButtonPrefering() {
-        goToVideosButton.videoButton()
     }
     
     private func fastActivityVC(item: String) {
         
         //Alert
         let alert = UIAlertController(title: "Share", message: nil, preferredStyle: .actionSheet)
-            alert.view.tintColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
+            alert.view.tintColor = lazyColor
         let basicShare = UIAlertAction(title: "Basic Share", style: .default) { (action) in
             let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
                 activityVC.popoverPresentationController?.sourceView = self.view
+            
                 UIApplication.shared.keyWindow?.tintColor = lazyColor
             
             self.present(activityVC, animated: true, completion: nil)
         }
         
         let actionFacebook = UIAlertAction(title: "Share on Facebook", style: .default) { (action) in
-            self.shareButton.shareAudio()
             
             //Checking if user is connected to Facebook
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 
-                post.setInitialText(manMostContent)
+                post.setInitialText(virusesMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -88,13 +83,12 @@ class HumanViewVontroller: UIViewController {
         
         //Second action
         let actionTwitter = UIAlertAction(title: "Share on Twitter", style: .default) { (action) in
-            self.shareButton.shareAudio()
             
             //Checking if user is connected to Facebook
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
                 
-                post.setInitialText(manMostContent)
+                post.setInitialText(virusesMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -123,67 +117,90 @@ class HumanViewVontroller: UIViewController {
         
                 alert.addAction(action)
                 alert.view.tintColor = lazyColor
-        
         present(alert, animated: true, completion: nil)
-        
-        self.shareButton.shareAudio()
     }
     
-    @IBAction func editButton(_ sender: Any) {
-        if switchView.isHidden == true {
-            switchView.isHidden = false
-        } else {
-            switchView.isHidden = true
-        }
-    }
-    
-    @IBAction func switchAction(_ sender: UISwitch) {
+    @IBAction func `switch`(_ sender: UISwitch) {
         if sender.isOn == true {
             textView.isEditable                 = true
             segmentedControl.isHidden           = false
-            notificationuttonOutlet.isHidden    = false
-            settingsOutlet.isEnabled            = true
+            notificationOutletButton.isHidden   = false
+            settingsButton.isEnabled            = true
             shareButton.isEnabled               = true
             switchTextView.text                 = "Hide  diffrent functions"
         } else {
             textView.isEditable                 = false
             segmentedControl.isHidden           = true
-            notificationuttonOutlet.isHidden    = true
-            settingsOutlet.isEnabled            = false
+            notificationOutletButton.isHidden   = true
+            settingsButton.isEnabled            = false
             shareButton.isEnabled               = false
             switchTextView.text                 = "Show diffrent functions"
             stepperBackgroundView.isHidden      = true
         }
     }
     
-    @IBAction func settingsButton(_ sender: Any) {
-        if (stepperBackgroundView.isHidden == true) {
-            stepperBackgroundView.isHidden  = false
-            
-            shareButton.isEnabled           = false
-            switchButton.isEnabled          = false
+    @IBAction func editButton(_ sender: Any) {
+        if fixedSwitchView.isHidden == true {
+            fixedSwitchView.isHidden = false
         } else {
-            stepperBackgroundView.isHidden  = true
-            
-            shareButton.isEnabled           = true
-            switchButton.isEnabled          = true
+            fixedSwitchView.isHidden = true
         }
     }
     
     @IBAction func stepper(_ sender: UIStepper) {
-        let font =  textView.font?.fontName
-        let fontSize = CGFloat(sender.value)
+        let font        = textView.font?.fontName
+        let fontSize    = CGFloat(sender.value)
         
-        textView.font = UIFont(name: font!, size: fontSize)
+        textView.font   = UIFont(name: font!, size: fontSize)
     }
     
-    @IBAction func notificationButton(_ sender: UIButton) {
-        manScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
+    @IBAction func settings(_ sender: Any) {
+        if (stepperBackgroundView.isHidden == true) {
+            stepperBackgroundView.isHidden  = false
+            
+            shareButton.isEnabled           = false
+            switchButoon.isEnabled          = false
+        } else {
+            stepperBackgroundView.isHidden  = true
+            
+            shareButton.isEnabled           = true
+            switchButoon.isEnabled          = true
+        }
+    }
+    
+    @IBAction func segmentControlAction(_ sender: Any) {
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            textView.text = virusesMostContent
+            
+            goToImagesButton.isHidden = true
+            goToVideosButton.isHidden = true
+        case 1:
+            textView.text = virusesBasicsContent
+            
+            goToImagesButton.isHidden = true
+            goToVideosButton.isHidden = true
+        case 2:
+            textView.text = virusesStructureContent
+            
+            goToImagesButton.isHidden = true
+            goToVideosButton.isHidden = true
+        case 3:
+            textView.text = ""
+            goToImagesButton.isHidden = false
+            goToVideosButton.isHidden = false
+        default:
+            print ("Error")
+        }
+    }
+    
+    @IBAction func notificationButton(_ sender: NotificationButton) {
+        virusesScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         
-        notificationuttonOutlet.notificationButtonAudio()
-        notificationuttonOutlet.settingTittleForNotificationButton()
+        sender.notificationButtonAudio()
+        sender.settingTittleForNotificationButton()
         
         for _ in 0..<2 {
             sender.pulsate()
@@ -198,65 +215,38 @@ class HumanViewVontroller: UIViewController {
             center.removePendingNotificationRequests(withIdentifiers: identifiers)
     }
     
-    //MARK: Actions
-    @IBAction func segmentedControAction(_ sender: UISegmentedControl) {
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            textView.text = manMostContent
-            
-            goToImagesButton.isHidden = true
-            goToVideosButton.isHidden = true
-        case 1:
-            textView.text = manBasicsContent
-            
-            goToImagesButton.isHidden = true
-            goToVideosButton.isHidden = true
-        case 2:
-            textView.text = manStructureContent
-            
-            goToImagesButton.isHidden = true
-            goToVideosButton.isHidden = true
-        case 3:
-            textView.text = ""
-            
-            goToImagesButton.isHidden = false
-            goToVideosButton.isHidden = false
-        default:
-            print("Error")
-        }
-    }
-    
     //MARK: LifeCycle
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.4) {
-            self.notificationuttonOutlet.alpha   = 1
-            self.segmentedControl.alpha          = 1
+            self.notificationOutletButton.alpha   = 1
+            self.segmentedControl.alpha           = 1
         }
+    }
+    
+    private func rate() {
+        RateManager.showRatesController()
     }
     
     private func stepperViewPrefering() {
         stepper.stepperBaics()
-        stepperBackgroundView.editorsViews()
         stepper.stepperShadow()
+        stepperBackgroundView.editorsViews()
     }
     
     private func switchViewPrefering() {
-        switchOutlet.switchBasics()
-        switchTextView.textViewShadow()
         switchTextView.switchTextViewPrefering()
+        switchOutlet.switchBasics()
         switchView.editorsViews()
-        switchTextView.mainTextViewTextColor(alpha: 1)
+        switchTextView.textViewShadow()
+        switchTextView.textColor = .darkGray
     }
     
     private func viewBasics() {
         segmentedControlSetup()
-        notificationButtonOutletSetup()
-        activityIndicatorSetup()
+        fixedSwitchView.viewShadows()
         textViewSetup()
         stepperViewPrefering()
         switchViewPrefering()
-        imageButtonPrefering()
-        videosButtonPrefering()
     }
     
     private func segmentedControlSetup() {
@@ -264,20 +254,13 @@ class HumanViewVontroller: UIViewController {
         segmentedControl.segmentedControlShadow()
     }
     
-    private func notificationButtonOutletSetup() {
-        notificationuttonOutlet.buttonsShadows()
-        notificationuttonOutlet.notificationButtonBasics()
-    }
-    
-    private func activityIndicatorSetup() {
-        activityIndicator.activityIndicatorStarts(colorOfActivity: .darkGray)
-    }
-    
     private func textViewSetup() {
         textView.mainTextViewTextColor(alpha: 0)
     }
     
     private func procesingInformationShowing() {
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
         UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
             self.textView.mainTextViewTextColor(alpha: 1)
         }) {(finished) in
@@ -285,18 +268,16 @@ class HumanViewVontroller: UIViewController {
         }
         
         progressView.setProgress(0, animated: true)
-        
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
             if self.progressView.progress != 1 {
                 self.progressView.startProgress()
             } else {
-                self.activityIndicator.activityIndicatorStop()
+                self.activityIndicator.stopAnimating()
                 self.textView.mainTextViewTextColor(alpha: 1)
                 self.progressView.stopProgress()
-                UIApplication.shared.endIgnoringInteractionEvents()
             }
         }
-        viewDidLoadPrinting(doing: "Man")
+        viewDidLoadPrinting(doing: "Viruses")
     }
     
     override func viewDidLoad() {
@@ -306,10 +287,11 @@ class HumanViewVontroller: UIViewController {
     }
 }
 
-extension HumanViewVontroller: ArticlesViewControllerDelegate {
+extension VirusesViewController: ArticlesViewControllerDelegate {
     func finalView() {
         view.viewGradient()
         
+        rate()
         viewBasics()
         procesingInformationShowing()
     }

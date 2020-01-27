@@ -14,18 +14,48 @@ import AuthenticationServices
 @available(iOS 13.2, *)
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var goButton:             UIButton!
-    @IBOutlet weak var loginButton:          UIButton!
-    @IBOutlet weak var textViewBackground:   UIView!
+    // Edit Button
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    
+    // Edit Back View
+    @IBOutlet weak var editBackView: ContentBack!
+    
+    // UIButtons
+    @IBOutlet weak var useLoginWithTouch:   UIButton!
+    @IBOutlet weak var signInWithApple:     UIButton!
+    
+    private var defaults = UserDefaults.standard
+    
+    fileprivate var useSignInWithApple:   Bool = false
+    fileprivate var useSignInWithTouchID: Bool = false
+    
+    struct Keys {
+        fileprivate static let appleViewHiddenKey              = "AppleViewHidden"
+        fileprivate static let loginButtonHiddenKey            = "LoginButtonHidden"
+        fileprivate static let goButtonHiddenKey               = "AppleViewHidden"
+        fileprivate static let hideAppleViewButtonHiddenKey    = "LoginButtonHidden"
+    }
+    
+    // Login Buttons
+    @IBOutlet weak var goButton:    UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    // Content
+    @IBOutlet weak var textViewBackground:   ContentBack!
     @IBOutlet weak var textView:             UITextView!
-    @IBOutlet weak var backButton:           UIBarButtonItem!
-    @IBOutlet weak var shareButton:          UIBarButtonItem!
+    
+    // UIBarButtonItems
+    @IBOutlet weak var backButton:  UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    
+    // Sign In With Apple
     @IBOutlet weak var shadowTextView:       UITextView!
     @IBOutlet weak var hideSignInWithAppleButton: UIButton!
     @IBOutlet weak var appleView:          UIView!
     
-    private var message = ""
-    private let twoButtonsBack = #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1)
+    // String Message
+    private var message: String = ""
+    private let twoButtonsBack = lazyColor
     
     var appleButton = AppleButtonSettings()
     
@@ -37,17 +67,34 @@ class LoginViewController: UIViewController {
         textViewBackgroundPrefering()
         shadowTextViewPrefering()
         setupAppleButton()
-
+        checkForSaved()
+    }
+    
+    func viewSetForCheckForSaved(view: UIView, key: String) {
+        if let key = defaults.object(forKey: key) {
+            view.isHidden = key as! Bool
+        }
+    }
+    
+    func checkForSaved() {
+        viewSetForCheckForSaved(view: appleView,
+                                key: Keys.appleViewHiddenKey)
+        viewSetForCheckForSaved(view: loginButton,
+                                key: Keys.loginButtonHiddenKey)
+        viewSetForCheckForSaved(view: hideSignInWithAppleButton,
+                                key: Keys.hideAppleViewButtonHiddenKey)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 0.6) {
-            self.loginButton.alpha        = 1
+            let alpha: CGFloat = 1
+            
+            self.loginButton.alpha        = alpha
             self.goButton.alpha           = 0.6
-            self.textView.alpha           = 1
-            self.textViewBackground.alpha = 1
+            self.textView.alpha           = alpha
+            self.textViewBackground.alpha = alpha
         }
     }
     
@@ -61,7 +108,6 @@ class LoginViewController: UIViewController {
         
         appleButton.viewShadows()
         appleButton.layer.shadowColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        
         appleButton.cornerRadius = 9
 
         appleView.addSubview(appleButton)
@@ -73,20 +119,18 @@ class LoginViewController: UIViewController {
         ])
         
         appleView.viewShadows()
-        appleView.layer.cornerRadius = 12
+        appleView.layer.cornerRadius = cornerRadius
     }
     
     @objc func didTapAppleButton() {
         let provider = ASAuthorizationAppleIDProvider()
         let request  = provider.createRequest()
-            request.requestedScopes = [.fullName, .email]
+        request.requestedScopes = [.fullName, .email]
         
-        let controller = ASAuthorizationController(authorizationRequests: [request])
+        let controller = BasicASAuthorizationController(authorizationRequests: [request])
         
         controller.delegate = self
         controller.presentationContextProvider = self
-        
-        controller.performRequests()
     }
     
     @IBAction func hideAppleView(_ sender: Any) {
@@ -94,18 +138,52 @@ class LoginViewController: UIViewController {
     }
     
     private func systemBackground() {
-        textViewBackground.viewSystemBack()
-        textView.viewSystemBack()
         view.viewSystemBack()
         
+        textView.viewSystemBack()
         textView.systemTextColor()
+    }
+    
+    @IBAction func useLoginWithApple(_ sender: Any) {
+        let hidden = true
+        
+        appleView.isHidden                  = !hidden
+        hideSignInWithAppleButton.isHidden  = hidden
+        
+        loginButton.isHidden = hidden
+        goButton.isHidden    = hidden
+        
+        defaultsSet()
+    }
+    
+    @IBAction func editButton(_ sender: Any) {
+        if editBackView.isHidden == true {
+            editBackView.isHidden = false
+        } else {
+            editBackView.isHidden = true
+        }
+    }
+    
+    @IBAction func useLoginWithTouch(_ sender: Any) {
+        let hidden = true
+        
+        appleView.isHidden = hidden
+        
+        loginButton.isHidden = !hidden
+        goButton.isHidden    = !hidden
+        
+        defaultsSet()
+    }
+    
+    private func defaultsSet() {
+        defaults.set(appleView.isHidden, forKey: Keys.appleViewHiddenKey)
+        defaults.set(hideSignInWithAppleButton.isHidden, forKey: Keys.hideAppleViewButtonHiddenKey)
+        defaults.set(loginButton.isHidden, forKey: Keys.loginButtonHiddenKey)
     }
     
     @IBAction func sharing(_ sender: Any) {
         let activityVC = UIActivityViewController(activityItems: ["iBiology Login Screan"], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
-            activityVC.view.tintColor = lazyColor
-        
             UIApplication.shared.keyWindow?.tintColor = lazyColor
         
         self.present(activityVC, animated: true, completion: nil)
@@ -154,8 +232,6 @@ class LoginViewController: UIViewController {
     private func textViewBackgroundSetup() {
         textViewBackground.alpha                = 0
         textViewBackground.layer.cornerRadius   = CGFloat(cornerRadius)
-        
-        textViewBackground.viewShadows()
     }
     
     private func authenticationWithTouchID() {

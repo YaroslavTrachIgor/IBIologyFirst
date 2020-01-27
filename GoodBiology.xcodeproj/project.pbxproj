@@ -8,15 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		840887B421F763810026A210 /* BiologyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840887B321F763810026A210 /* BiologyNotifications.swift */; };
+		840FB81223BA20C70081DE59 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81123BA20C70081DE59 /* TextView.swift */; };
+		840FB81423BA3F970081DE59 /* TestButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81323BA3F960081DE59 /* TestButtons.swift */; };
+		840FB81723BA46050081DE59 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81623BA46050081DE59 /* TestView.swift */; };
+		840FB81923BA4E0E0081DE59 /* AnswerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81823BA4E0E0081DE59 /* AnswerLabel.swift */; };
+		840FB81B23BA6D1E0081DE59 /* BarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81A23BA6D1E0081DE59 /* BarButtonItem.swift */; };
 		841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841198FD233F5215004B0DAF /* NetworkingProtocol.swift */; };
 		84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119900233F57AC004B0DAF /* ReviewControllerProtocol.swift */; };
 		841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841199032344AC40004B0DAF /* MenuProtocol.swift */; };
 		841AF1D1235A481D0003A440 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AF1D0235A481D0003A440 /* URLs.swift */; };
+		842D690623C299F9009CF7E7 /* TextViewBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D690523C299F9009CF7E7 /* TextViewBackView.swift */; };
+		842D690923C29A99009CF7E7 /* DoneLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D690823C29A99009CF7E7 /* DoneLabel.swift */; };
+		842D690B23C29AD1009CF7E7 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D690A23C29AD1009CF7E7 /* SettingsTextField.swift */; };
+		842D690D23C29D24009CF7E7 /* HelpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D690C23C29D24009CF7E7 /* HelpButton.swift */; };
+		842D691323C4299C009CF7E7 /* ContactButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691223C4299C009CF7E7 /* ContactButton.swift */; };
+		842D691623C42A15009CF7E7 /* ArticlesMenuLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691523C42A15009CF7E7 /* ArticlesMenuLabel.swift */; };
+		842D691823C42B9E009CF7E7 /* NewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691723C42B9E009CF7E7 /* NewLabel.swift */; };
+		842D691B23C545FA009CF7E7 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691A23C545FA009CF7E7 /* ArticleView.swift */; };
+		842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691C23C6993D009CF7E7 /* ToolBar.swift */; };
+		842D691F23C69D01009CF7E7 /* BasicSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691E23C69D01009CF7E7 /* BasicSearchController.swift */; };
+		842D692223C6CD9C009CF7E7 /* BiologyBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D692123C6CD9C009CF7E7 /* BiologyBackView.swift */; };
+		842D692423C6CDD5009CF7E7 /* BiologyNotificationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D692323C6CDD5009CF7E7 /* BiologyNotificationButton.swift */; };
+		842D692623C77AA4009CF7E7 /* SFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */; };
+		842D692B23C80202009CF7E7 /* RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D692A23C80202009CF7E7 /* RefreshControl.swift */; };
 		84323ECA21CE690700D50B2B /* Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84323EC921CE690700D50B2B /* Shadows.swift */; };
 		84408E49222C4C5000F11996 /* FungusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E48222C4C5000F11996 /* FungusesData.swift */; };
 		84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4A222C529D00F11996 /* ArchaeaData.swift */; };
 		84408E4D222C5F7100F11996 /* ManData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4C222C5F7100F11996 /* ManData.swift */; };
 		8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */; };
+		8446582023BC0A5200DC316E /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* Buttons.swift */; };
+		8446582823BD59E200DC316E /* iOSGoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */; };
+		8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583323BFF44A00DC316E /* PlantsTestsData.swift */; };
+		8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583623BFF5E900DC316E /* FalseAnswers.swift */; };
+		8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583923BFF5FF00DC316E /* TrueAnswers.swift */; };
+		8446583C23BFF61800DC316E /* AnimalsTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583B23BFF61800DC316E /* AnimalsTestsData.swift */; };
+		8446583E23BFF6EF00DC316E /* HumenTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583D23BFF6EF00DC316E /* HumenTestsData.swift */; };
+		8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583F23BFF7FB00DC316E /* FungusesTestsData.swift */; };
+		8446584223BFF95A00DC316E /* MicrobesTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446584123BFF95A00DC316E /* MicrobesTestsData.swift */; };
+		8446584423BFFE9900DC316E /* VirusesTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446584323BFFE9900DC316E /* VirusesTestsData.swift */; };
+		8446584623C00F2B00DC316E /* ArchaeaTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446584523C00F2B00DC316E /* ArchaeaTestsData.swift */; };
 		844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D04223243C800933ABC /* AppIconViewController.swift */; };
 		844E0D0722351BD400933ABC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D0622351BD400933ABC /* MapViewController.swift */; };
 		844E0D0E2235625200933ABC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844E0D0D2235625200933ABC /* NotificationCenter.framework */; };
@@ -79,9 +109,22 @@
 		C43B125E21A8ABEE00D58C44 /* ButtonsAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B125D21A8ABEE00D58C44 /* ButtonsAnimations.swift */; };
 		C43B126021A8AF8300D58C44 /* TestButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B125F21A8AF8300D58C44 /* TestButtonAnimation.swift */; };
 		C43B126A21AB22DC00D58C44 /* ForTodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B126921AB22DC00D58C44 /* ForTodayViewController.swift */; };
+		C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C447BD3023D8C94C0026F176 /* FastAlert.swift */; };
+		C447BD3423D8C9770026F176 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C447BD3323D8C9770026F176 /* Errors.swift */; };
 		C458BD5E23AE4B6A00D1F108 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C458BD5D23AE4B6A00D1F108 /* Podfile */; };
 		C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6023AE55C800D1F108 /* ChromistaTableViewController.swift */; };
 		C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6223AE55DA00D1F108 /* ChromistaThemesViewController.swift */; };
+		C458BD6523AEBE4400D1F108 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6423AEBE4400D1F108 /* UIButton.swift */; };
+		C458BD6A23AEBF0000D1F108 /* UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6923AEBF0000D1F108 /* UIAlert.swift */; };
+		C458BD6C23AEBF2000D1F108 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6B23AEBF2000D1F108 /* UIView.swift */; };
+		C458BD6E23AEBF4200D1F108 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */; };
+		C458BD7123AEBFD200D1F108 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7023AEBFD200D1F108 /* UITextView.swift */; };
+		C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7223AEBFF300D1F108 /* UIProgressView.swift */; };
+		C458BD7523AEC02E00D1F108 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7423AEC02E00D1F108 /* UISearchBar.swift */; };
+		C458BD7723AEC05E00D1F108 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7623AEC05E00D1F108 /* UISegmentedControl.swift */; };
+		C458BD7923AEC08200D1F108 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7823AEC08200D1F108 /* UIBarButtonItem.swift */; };
+		C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7A23AEC09D00D1F108 /* UIStepper.swift */; };
+		C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7C23AEC0C100D1F108 /* UISwitch.swift */; };
 		C463227723AD19D10099083F /* ChomistaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463227623AD19D10099083F /* ChomistaViewController.swift */; };
 		C47CAD6721D0E42F00E27E88 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CAD6621D0E42F00E27E88 /* TestViewController.swift */; };
 		C496AE6B21C93DA400413CB4 /* NotificationsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496AE6A21C93DA400413CB4 /* NotificationsFunctions.swift */; };
@@ -97,6 +140,8 @@
 		C4C7252521C2B75800F64612 /* ArticelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7252421C2B75800F64612 /* ArticelsViewController.swift */; };
 		C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C7253721C42EA800F64612 /* TestsMenuViewController.swift */; };
 		C4CEC54C225200FE005BA8C6 /* BasicNotificationThings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CEC54B225200FD005BA8C6 /* BasicNotificationThings.swift */; };
+		C4D9616023CE545500C0ED57 /* SomeMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9615F23CE545500C0ED57 /* SomeMoreView.swift */; };
+		C4D9616523D2B56800C0ED57 /* ASAuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D9616423D2B56800C0ED57 /* ASAuthorizationController.swift */; };
 		C4E5E23521975BE4009C3062 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E23421975BE4009C3062 /* AppDelegate.swift */; };
 		C4E5E23C21975BE4009C3062 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E5E23A21975BE4009C3062 /* Main.storyboard */; };
 		C4E5E23E21975BE5009C3062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4E5E23D21975BE5009C3062 /* Assets.xcassets */; };
@@ -107,6 +152,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8446582A23BD59E200DC316E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4E5E23021975BE4009C3062;
+			remoteInfo = GoodBiology;
+		};
 		844E0D162235625200933ABC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
@@ -193,15 +245,47 @@
 
 /* Begin PBXFileReference section */
 		840887B321F763810026A210 /* BiologyNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyNotifications.swift; sourceTree = "<group>"; };
+		840FB81123BA20C70081DE59 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		840FB81323BA3F960081DE59 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
+		840FB81623BA46050081DE59 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		840FB81823BA4E0E0081DE59 /* AnswerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerLabel.swift; sourceTree = "<group>"; };
+		840FB81A23BA6D1E0081DE59 /* BarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItem.swift; sourceTree = "<group>"; };
 		841198FD233F5215004B0DAF /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
 		84119900233F57AC004B0DAF /* ReviewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewControllerProtocol.swift; sourceTree = "<group>"; };
 		841199032344AC40004B0DAF /* MenuProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProtocol.swift; sourceTree = "<group>"; };
 		841AF1D0235A481D0003A440 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		842D690523C299F9009CF7E7 /* TextViewBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewBackView.swift; sourceTree = "<group>"; };
+		842D690823C29A99009CF7E7 /* DoneLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneLabel.swift; sourceTree = "<group>"; };
+		842D690A23C29AD1009CF7E7 /* SettingsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
+		842D690C23C29D24009CF7E7 /* HelpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpButton.swift; sourceTree = "<group>"; };
+		842D691223C4299C009CF7E7 /* ContactButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactButton.swift; sourceTree = "<group>"; };
+		842D691523C42A15009CF7E7 /* ArticlesMenuLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesMenuLabel.swift; sourceTree = "<group>"; };
+		842D691723C42B9E009CF7E7 /* NewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabel.swift; sourceTree = "<group>"; };
+		842D691A23C545FA009CF7E7 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		842D691C23C6993D009CF7E7 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
+		842D691E23C69D01009CF7E7 /* BasicSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchController.swift; sourceTree = "<group>"; };
+		842D692123C6CD9C009CF7E7 /* BiologyBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyBackView.swift; sourceTree = "<group>"; };
+		842D692323C6CDD5009CF7E7 /* BiologyNotificationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyNotificationButton.swift; sourceTree = "<group>"; };
+		842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewController.swift; sourceTree = "<group>"; };
+		842D692A23C80202009CF7E7 /* RefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControl.swift; sourceTree = "<group>"; };
 		84323EC921CE690700D50B2B /* Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadows.swift; sourceTree = "<group>"; };
 		84408E48222C4C5000F11996 /* FungusesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungusesData.swift; sourceTree = "<group>"; };
 		84408E4A222C529D00F11996 /* ArchaeaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaData.swift; sourceTree = "<group>"; };
 		84408E4C222C5F7100F11996 /* ManData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManData.swift; sourceTree = "<group>"; };
 		8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProtocol.swift; sourceTree = "<group>"; };
+		8446581F23BC0A5200DC316E /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSGoodBiologyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSGoodBiologyUITests.swift; sourceTree = "<group>"; };
+		8446582923BD59E200DC316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8446583323BFF44A00DC316E /* PlantsTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsTestsData.swift; sourceTree = "<group>"; };
+		8446583623BFF5E900DC316E /* FalseAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalseAnswers.swift; sourceTree = "<group>"; };
+		8446583923BFF5FF00DC316E /* TrueAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueAnswers.swift; sourceTree = "<group>"; };
+		8446583B23BFF61800DC316E /* AnimalsTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsTestsData.swift; sourceTree = "<group>"; };
+		8446583D23BFF6EF00DC316E /* HumenTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumenTestsData.swift; sourceTree = "<group>"; };
+		8446583F23BFF7FB00DC316E /* FungusesTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungusesTestsData.swift; sourceTree = "<group>"; };
+		8446584123BFF95A00DC316E /* MicrobesTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobesTestsData.swift; sourceTree = "<group>"; };
+		8446584323BFFE9900DC316E /* VirusesTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusesTestsData.swift; sourceTree = "<group>"; };
+		8446584523C00F2B00DC316E /* ArchaeaTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaTestsData.swift; sourceTree = "<group>"; };
 		844E0D04223243C800933ABC /* AppIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppIconViewController.swift; path = ../Storyboards/AppIconViewController.swift; sourceTree = "<group>"; };
 		844E0D0622351BD400933ABC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		844E0D0C2235625200933ABC /* ForTodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForTodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,9 +355,22 @@
 		C43B125D21A8ABEE00D58C44 /* ButtonsAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsAnimations.swift; sourceTree = "<group>"; };
 		C43B125F21A8AF8300D58C44 /* TestButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtonAnimation.swift; sourceTree = "<group>"; };
 		C43B126921AB22DC00D58C44 /* ForTodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewController.swift; sourceTree = "<group>"; };
+		C447BD3023D8C94C0026F176 /* FastAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAlert.swift; sourceTree = "<group>"; };
+		C447BD3323D8C9770026F176 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		C458BD5D23AE4B6A00D1F108 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		C458BD6023AE55C800D1F108 /* ChromistaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaTableViewController.swift; sourceTree = "<group>"; };
 		C458BD6223AE55DA00D1F108 /* ChromistaThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaThemesViewController.swift; sourceTree = "<group>"; };
+		C458BD6423AEBE4400D1F108 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		C458BD6923AEBF0000D1F108 /* UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlert.swift; sourceTree = "<group>"; };
+		C458BD6B23AEBF2000D1F108 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		C458BD7023AEBFD200D1F108 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		C458BD7223AEBFF300D1F108 /* UIProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressView.swift; sourceTree = "<group>"; };
+		C458BD7423AEC02E00D1F108 /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		C458BD7623AEC05E00D1F108 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
+		C458BD7823AEC08200D1F108 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		C458BD7A23AEC09D00D1F108 /* UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
+		C458BD7C23AEC0C100D1F108 /* UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
 		C463227623AD19D10099083F /* ChomistaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChomistaViewController.swift; sourceTree = "<group>"; };
 		C47CAD6621D0E42F00E27E88 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C496AE6A21C93DA400413CB4 /* NotificationsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsFunctions.swift; sourceTree = "<group>"; };
@@ -305,6 +402,8 @@
 		C4C7252421C2B75800F64612 /* ArticelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticelsViewController.swift; sourceTree = "<group>"; };
 		C4C7253721C42EA800F64612 /* TestsMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsMenuViewController.swift; sourceTree = "<group>"; };
 		C4CEC54B225200FD005BA8C6 /* BasicNotificationThings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BasicNotificationThings.swift; path = "../Notes View Controllers/BasicNotificationThings.swift"; sourceTree = "<group>"; };
+		C4D9615F23CE545500C0ED57 /* SomeMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeMoreView.swift; sourceTree = "<group>"; };
+		C4D9616423D2B56800C0ED57 /* ASAuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationController.swift; sourceTree = "<group>"; };
 		C4E5E23121975BE4009C3062 /* GoodBiology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodBiology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E5E23421975BE4009C3062 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4E5E23B21975BE4009C3062 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -324,6 +423,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8446582223BD59E200DC316E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		844E0D092235625200933ABC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -392,6 +498,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		840FB81023BA20B60081DE59 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				840FB81123BA20C70081DE59 /* TextView.swift */,
+				840FB81323BA3F960081DE59 /* TestButtons.swift */,
+				840FB81623BA46050081DE59 /* TestView.swift */,
+				840FB81823BA4E0E0081DE59 /* AnswerLabel.swift */,
+				840FB81A23BA6D1E0081DE59 /* BarButtonItem.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		841198FC233F51BC004B0DAF /* Networking Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +535,58 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		842D690423C29551009CF7E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				842D690523C299F9009CF7E7 /* TextViewBackView.swift */,
+				842D690C23C29D24009CF7E7 /* HelpButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		842D690723C29A83009CF7E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				842D690823C29A99009CF7E7 /* DoneLabel.swift */,
+				842D690A23C29AD1009CF7E7 /* SettingsTextField.swift */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		842D690E23C2CE32009CF7E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		842D691123C4298C009CF7E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				842D691223C4299C009CF7E7 /* ContactButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		842D691423C429F5009CF7E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				842D691523C42A15009CF7E7 /* ArticlesMenuLabel.swift */,
+				842D691723C42B9E009CF7E7 /* NewLabel.swift */,
+				842D691A23C545FA009CF7E7 /* ArticleView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		842D692023C6CD88009CF7E7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				842D692123C6CD9C009CF7E7 /* BiologyBackView.swift */,
+				842D692323C6CDD5009CF7E7 /* BiologyNotificationButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		84323ECB21CE691200D50B2B /* Shadows */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,9 +606,53 @@
 		8445F0AA23678FB0007413B7 /* Test Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8446583223BFF42900DC316E /* Data */,
+				840FB81023BA20B60081DE59 /* UI */,
 				C47CAD6621D0E42F00E27E88 /* TestViewController.swift */,
 			);
 			path = "Test Controller";
+			sourceTree = "<group>";
+		};
+		8446581E23BC0A4100DC316E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8446581F23BC0A5200DC316E /* Buttons.swift */,
+				C4D9615F23CE545500C0ED57 /* SomeMoreView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8446582623BD59E200DC316E /* iOSGoodBiologyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */,
+				8446582923BD59E200DC316E /* Info.plist */,
+			);
+			path = iOSGoodBiologyUITests;
+			sourceTree = "<group>";
+		};
+		8446583223BFF42900DC316E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8446583523BFF5D700DC316E /* Answers */,
+				8446583323BFF44A00DC316E /* PlantsTestsData.swift */,
+				8446583B23BFF61800DC316E /* AnimalsTestsData.swift */,
+				8446583D23BFF6EF00DC316E /* HumenTestsData.swift */,
+				8446583F23BFF7FB00DC316E /* FungusesTestsData.swift */,
+				8446584123BFF95A00DC316E /* MicrobesTestsData.swift */,
+				8446584323BFFE9900DC316E /* VirusesTestsData.swift */,
+				8446584523C00F2B00DC316E /* ArchaeaTestsData.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8446583523BFF5D700DC316E /* Answers */ = {
+			isa = PBXGroup;
+			children = (
+				8446583623BFF5E900DC316E /* FalseAnswers.swift */,
+				8446583923BFF5FF00DC316E /* TrueAnswers.swift */,
+			);
+			path = Answers;
 			sourceTree = "<group>";
 		};
 		844E0D1F2235766000933ABC /* Making Article */ = {
@@ -504,6 +718,7 @@
 		8471F87D21B301E8001AA935 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				842D690E23C2CE32009CF7E7 /* UI */,
 				8497E3472358E3A2003CD4A9 /* View Controllers */,
 				841198FC233F51BC004B0DAF /* Networking Protocol */,
 			);
@@ -532,6 +747,7 @@
 		847A50782390720400223AC7 /* Settings Controller */ = {
 			isa = PBXGroup;
 			children = (
+				842D690723C29A83009CF7E7 /* UI */,
 				84A15A96236209220069AADE /* SettingsTableViewController.swift */,
 			);
 			name = "Settings Controller";
@@ -591,9 +807,8 @@
 		8497E3482358E3C5003CD4A9 /* Basic Functions */ = {
 			isa = PBXGroup;
 			children = (
-				84778270237EEC52007C1FD8 /* Basic Varibles.swift */,
-				8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */,
-				8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */,
+				C458BD6F23AEBF8700D1F108 /* Other */,
+				C458BD6623AEBEC000D1F108 /* UI Extensions */,
 			);
 			path = "Basic Functions";
 			sourceTree = "<group>";
@@ -637,6 +852,7 @@
 		8497E34F2358E507003CD4A9 /* Menu Articles VC */ = {
 			isa = PBXGroup;
 			children = (
+				842D691423C429F5009CF7E7 /* UI */,
 				C4C7252421C2B75800F64612 /* ArticelsViewController.swift */,
 			);
 			path = "Menu Articles VC";
@@ -645,14 +861,9 @@
 		8497E3512358E536003CD4A9 /* Articles VC */ = {
 			isa = PBXGroup;
 			children = (
-				C458BD5F23AE55A700D1F108 /* Chromista */,
-				C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */,
-				C40D3D6421B81878009A0211 /* ArchaeaViewController.swift */,
-				C4C7230E21B968F500F64612 /* AnimalsViewController.swift */,
-				C4C7231021B98A1E00F64612 /* VirusesViewController.swift */,
-				C4C7231221B9901100F64612 /* HumanViewVontroller.swift */,
-				C4C7231421B9ACA900F64612 /* MicrobesViewController.swift */,
-				C4C7231621B9B08900F64612 /* MushroomsViewController.swift */,
+				8446581E23BC0A4100DC316E /* UI */,
+				C458BD7F23AEC1C300D1F108 /* Old */,
+				C458BD7E23AEC1B800D1F108 /* New */,
 			);
 			path = "Articles VC";
 			sourceTree = "<group>";
@@ -701,6 +912,8 @@
 		849C38A92353B58B002E007D /* ForToday */ = {
 			isa = PBXGroup;
 			children = (
+				C447BD3223D8C96A0026F176 /* Errors */,
+				C447BD2F23D8C93F0026F176 /* UI */,
 				84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */,
 				C43B126921AB22DC00D58C44 /* ForTodayViewController.swift */,
 				847A507D2392E4FF00223AC7 /* Blank Sheet */,
@@ -711,6 +924,7 @@
 		849C38AA2353B5A2002E007D /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C4D9616123D2497800C0ED57 /* UI */,
 				84685FC92219827000F79BF5 /* LoginViewController.swift */,
 				8468332523A4E5A6004CBFC8 /* User.swift */,
 			);
@@ -870,6 +1084,7 @@
 		84D968D621D919FA0079596C /* Review Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				842D691123C4298C009CF7E7 /* UI */,
 				8497E34D2358E4D7003CD4A9 /* Controllers */,
 				841198FF233F577F004B0DAF /* Protocol */,
 			);
@@ -896,9 +1111,26 @@
 		AAEC22D421C679F900FF69FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				842D692023C6CD88009CF7E7 /* UI */,
 				AAEC22D121C679E900FF69FE /* BasicsViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C447BD2F23D8C93F0026F176 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C447BD3023D8C94C0026F176 /* FastAlert.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		C447BD3223D8C96A0026F176 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				C447BD3323D8C9770026F176 /* Errors.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		C458BD5C23AE4A8800D1F108 /* Json Data */ = {
@@ -917,6 +1149,61 @@
 				C458BD6223AE55DA00D1F108 /* ChromistaThemesViewController.swift */,
 			);
 			path = Chromista;
+			sourceTree = "<group>";
+		};
+		C458BD6623AEBEC000D1F108 /* UI Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C458BD6423AEBE4400D1F108 /* UIButton.swift */,
+				C458BD6923AEBF0000D1F108 /* UIAlert.swift */,
+				C458BD6B23AEBF2000D1F108 /* UIView.swift */,
+				C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */,
+				C458BD7023AEBFD200D1F108 /* UITextView.swift */,
+				C458BD7223AEBFF300D1F108 /* UIProgressView.swift */,
+				C458BD7423AEC02E00D1F108 /* UISearchBar.swift */,
+				C458BD7623AEC05E00D1F108 /* UISegmentedControl.swift */,
+				C458BD7823AEC08200D1F108 /* UIBarButtonItem.swift */,
+				C458BD7A23AEC09D00D1F108 /* UIStepper.swift */,
+				C458BD7C23AEC0C100D1F108 /* UISwitch.swift */,
+				842D691C23C6993D009CF7E7 /* ToolBar.swift */,
+				842D691E23C69D01009CF7E7 /* BasicSearchController.swift */,
+				842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */,
+				842D692A23C80202009CF7E7 /* RefreshControl.swift */,
+			);
+			path = "UI Extensions";
+			sourceTree = "<group>";
+		};
+		C458BD6F23AEBF8700D1F108 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8497E34423566471003CD4A9 /* System Colors */,
+				84778270237EEC52007C1FD8 /* Basic Varibles.swift */,
+				8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */,
+				8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		C458BD7E23AEC1B800D1F108 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				C458BD5F23AE55A700D1F108 /* Chromista */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		C458BD7F23AEC1C300D1F108 /* Old */ = {
+			isa = PBXGroup;
+			children = (
+				C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */,
+				C40D3D6421B81878009A0211 /* ArchaeaViewController.swift */,
+				C4C7230E21B968F500F64612 /* AnimalsViewController.swift */,
+				C4C7231021B98A1E00F64612 /* VirusesViewController.swift */,
+				C4C7231221B9901100F64612 /* HumanViewVontroller.swift */,
+				C4C7231421B9ACA900F64612 /* MicrobesViewController.swift */,
+				C4C7231621B9B08900F64612 /* MushroomsViewController.swift */,
+			);
+			path = Old;
 			sourceTree = "<group>";
 		};
 		C496AE2021C59B0B00413CB4 /* BiologyControllers */ = {
@@ -959,6 +1246,7 @@
 		C496AE6921C9392E00413CB4 /* Notes View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				842D690423C29551009CF7E7 /* UI */,
 				849C38AF2353BB09002E007D /* Notes Delegate */,
 				849C38AC2353B893002E007D /* MapProtocol */,
 				849C38A92353B58B002E007D /* ForToday */,
@@ -978,6 +1266,14 @@
 			path = "Notification Functions";
 			sourceTree = "<group>";
 		};
+		C4D9616123D2497800C0ED57 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C4D9616423D2B56800C0ED57 /* ASAuthorizationController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		C4E5E22821975BE4009C3062 = {
 			isa = PBXGroup;
 			children = (
@@ -985,6 +1281,7 @@
 				C4E5E24A21975BE5009C3062 /* GoodBiologyTests */,
 				C4E5E25521975BE5009C3062 /* GoodBiologyUITests */,
 				84C6FCAC220620A200BCE06D /* Good Biology (TV) */,
+				8446582623BD59E200DC316E /* iOSGoodBiologyUITests */,
 				C4E5E23221975BE4009C3062 /* Products */,
 				84ADAC3421D2C65100FDDFC4 /* Frameworks */,
 			);
@@ -1003,6 +1300,7 @@
 				84C6FC8E22061C5300BCE06D /* Good Biology(Apple Watch) Extension.appex */,
 				84C6FCAB220620A200BCE06D /* Good Biology (TV).app */,
 				844E0D0C2235625200933ABC /* ForTodayWidget.appex */,
+				8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1062,7 +1360,6 @@
 			isa = PBXGroup;
 			children = (
 				8497E3482358E3C5003CD4A9 /* Basic Functions */,
-				8497E34423566471003CD4A9 /* System Colors */,
 			);
 			path = "Basic Functions";
 			sourceTree = "<group>";
@@ -1101,6 +1398,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8446582423BD59E200DC316E /* iOSGoodBiologyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8446582C23BD59E200DC316E /* Build configuration list for PBXNativeTarget "iOSGoodBiologyUITests" */;
+			buildPhases = (
+				8446582123BD59E200DC316E /* Sources */,
+				8446582223BD59E200DC316E /* Frameworks */,
+				8446582323BD59E200DC316E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8446582B23BD59E200DC316E /* PBXTargetDependency */,
+			);
+			name = iOSGoodBiologyUITests;
+			productName = iOSGoodBiologyUITests;
+			productReference = 8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		844E0D0B2235625200933ABC /* ForTodayWidget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844E0D192235625200933ABC /* Build configuration list for PBXNativeTarget "ForTodayWidget" */;
@@ -1285,10 +1600,14 @@
 		C4E5E22921975BE4009C3062 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Yaroslav;
 				TargetAttributes = {
+					8446582423BD59E200DC316E = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = C4E5E23021975BE4009C3062;
+					};
 					844E0D0B2235625200933ABC = {
 						CreatedOnToolsVersion = 10.2;
 					};
@@ -1391,11 +1710,19 @@
 				84C6FC8D22061C5300BCE06D /* Good Biology(Apple Watch) Extension */,
 				84C6FCAA220620A200BCE06D /* Good Biology (TV) */,
 				844E0D0B2235625200933ABC /* ForTodayWidget */,
+				8446582423BD59E200DC316E /* iOSGoodBiologyUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8446582323BD59E200DC316E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		844E0D0A2235625200933ABC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1481,6 +1808,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8446582123BD59E200DC316E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8446582823BD59E200DC316E /* iOSGoodBiologyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		844E0D082235625200933ABC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1509,27 +1844,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842D691623C42A15009CF7E7 /* ArticlesMenuLabel.swift in Sources */,
+				842D690623C299F9009CF7E7 /* TextViewBackView.swift in Sources */,
+				8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */,
 				84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */,
+				8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */,
+				842D690D23C29D24009CF7E7 /* HelpButton.swift in Sources */,
 				848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */,
+				8446583E23BFF6EF00DC316E /* HumenTestsData.swift in Sources */,
 				84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */,
+				8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */,
+				840FB81223BA20C70081DE59 /* TextView.swift in Sources */,
 				84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */,
 				8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */,
 				C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */,
+				842D692623C77AA4009CF7E7 /* SFSafariViewController.swift in Sources */,
 				84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */,
 				8454DDA9221750610033A3A2 /* AnimalsData.swift in Sources */,
 				84323ECA21CE690700D50B2B /* Shadows.swift in Sources */,
 				8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */,
+				C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */,
+				842D691823C42B9E009CF7E7 /* NewLabel.swift in Sources */,
 				84732DA6224003AC005957F2 /* ReadingOnTimeViewController.swift in Sources */,
 				C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */,
+				C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */,
+				C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */,
 				84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */,
 				848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */,
+				842D692223C6CD9C009CF7E7 /* BiologyBackView.swift in Sources */,
+				842D691323C4299C009CF7E7 /* ContactButton.swift in Sources */,
 				849C38A82353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift in Sources */,
 				849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */,
 				C4C7231321B9901100F64612 /* HumanViewVontroller.swift in Sources */,
+				842D690B23C29AD1009CF7E7 /* SettingsTextField.swift in Sources */,
 				84408E49222C4C5000F11996 /* FungusesData.swift in Sources */,
 				844E0D0722351BD400933ABC /* MapViewController.swift in Sources */,
 				84778271237EEC52007C1FD8 /* Basic Varibles.swift in Sources */,
 				841AF1D1235A481D0003A440 /* URLs.swift in Sources */,
+				8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */,
 				8471F87F21B30202001AA935 /* NetworkingViewController.swift in Sources */,
 				84408E4D222C5F7100F11996 /* ManData.swift in Sources */,
 				C463227723AD19D10099083F /* ChomistaViewController.swift in Sources */,
@@ -1538,31 +1890,46 @@
 				C40D3D6521B81878009A0211 /* ArchaeaViewController.swift in Sources */,
 				C496AE6B21C93DA400413CB4 /* NotificationsFunctions.swift in Sources */,
 				AAEC22D221C679E900FF69FE /* BasicsViewController.swift in Sources */,
+				8446584423BFFE9900DC316E /* VirusesTestsData.swift in Sources */,
+				840FB81B23BA6D1E0081DE59 /* BarButtonItem.swift in Sources */,
 				C4C7231521B9ACA900F64612 /* MicrobesViewController.swift in Sources */,
 				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
+				8446582023BC0A5200DC316E /* Buttons.swift in Sources */,
 				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
+				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
 				C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */,
 				8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */,
 				84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */,
 				84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */,
 				C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */,
 				AAEC22D621C67A1300FF69FE /* BasicsDataManager.swift in Sources */,
+				C458BD6A23AEBF0000D1F108 /* UIAlert.swift in Sources */,
+				8446584223BFF95A00DC316E /* MicrobesTestsData.swift in Sources */,
 				84B2BD88222BDCEA00BA41C9 /* VirusesData.swift in Sources */,
 				C43B125E21A8ABEE00D58C44 /* ButtonsAnimations.swift in Sources */,
 				847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */,
 				8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */,
+				840FB81423BA3F970081DE59 /* TestButtons.swift in Sources */,
 				8454DDA52214CA300033A3A2 /* PlantsData.swift in Sources */,
 				844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */,
 				AAEC22D821C67A3200FF69FE /* BasicsModel.swift in Sources */,
 				845FE7442322F45400B36E76 /* ArticleOnlineImagesViewController.swift in Sources */,
 				C4C7230F21B968F500F64612 /* AnimalsViewController.swift in Sources */,
+				C458BD7123AEBFD200D1F108 /* UITextView.swift in Sources */,
 				841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */,
 				8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */,
+				C458BD7523AEC02E00D1F108 /* UISearchBar.swift in Sources */,
 				84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */,
+				C458BD6C23AEBF2000D1F108 /* UIView.swift in Sources */,
+				C458BD7723AEC05E00D1F108 /* UISegmentedControl.swift in Sources */,
+				C458BD6E23AEBF4200D1F108 /* UIActivityIndicatorView.swift in Sources */,
 				849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */,
+				8446583C23BFF61800DC316E /* AnimalsTestsData.swift in Sources */,
 				8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */,
+				C4D9616023CE545500C0ED57 /* SomeMoreView.swift in Sources */,
 				C4C7231921B9BC0F00F64612 /* RateManeger.swift in Sources */,
 				84685FCA2219827000F79BF5 /* LoginViewController.swift in Sources */,
+				C458BD7923AEC08200D1F108 /* UIBarButtonItem.swift in Sources */,
 				8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */,
 				84732DA922400B96005957F2 /* ReadingOnTimeData.swift in Sources */,
 				AA2C423421C842F500D1E680 /* BasicsCoordinator.swift in Sources */,
@@ -1570,22 +1937,34 @@
 				C4CEC54C225200FE005BA8C6 /* BasicNotificationThings.swift in Sources */,
 				84B9050223201E810002F0E2 /* BasicTestWords.swift in Sources */,
 				8497E34623566495003CD4A9 /* SystemColors.swift in Sources */,
+				842D692B23C80202009CF7E7 /* RefreshControl.swift in Sources */,
 				84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */,
 				C4C7231721B9B08900F64612 /* MushroomsViewController.swift in Sources */,
 				C43B126A21AB22DC00D58C44 /* ForTodayViewController.swift in Sources */,
+				842D691F23C69D01009CF7E7 /* BasicSearchController.swift in Sources */,
+				8446584623C00F2B00DC316E /* ArchaeaTestsData.swift in Sources */,
 				C47CAD6721D0E42F00E27E88 /* TestViewController.swift in Sources */,
 				840887B421F763810026A210 /* BiologyNotifications.swift in Sources */,
 				8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */,
+				840FB81723BA46050081DE59 /* TestView.swift in Sources */,
+				C4D9616523D2B56800C0ED57 /* ASAuthorizationController.swift in Sources */,
+				842D691B23C545FA009CF7E7 /* ArticleView.swift in Sources */,
 				C4E5E23521975BE4009C3062 /* AppDelegate.swift in Sources */,
+				C447BD3423D8C9770026F176 /* Errors.swift in Sources */,
 				849F5381236977CD0027289F /* GradientView.swift in Sources */,
 				84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */,
 				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
+				C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */,
 				C4C7231121B98A1E00F64612 /* VirusesViewController.swift in Sources */,
 				844E0D242239A16900933ABC /* VideoPlayerViewController.swift in Sources */,
+				840FB81923BA4E0E0081DE59 /* AnswerLabel.swift in Sources */,
+				C458BD6523AEBE4400D1F108 /* UIButton.swift in Sources */,
+				842D690923C29A99009CF7E7 /* DoneLabel.swift in Sources */,
 				C4C7252521C2B75800F64612 /* ArticelsViewController.swift in Sources */,
 				C43B126021A8AF8300D58C44 /* TestButtonAnimation.swift in Sources */,
 				84C7AAED223C4E9700A7CF68 /* BiologyAll.swift in Sources */,
 				84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */,
+				842D692423C6CDD5009CF7E7 /* BiologyNotificationButton.swift in Sources */,
 				8468332623A4E5A6004CBFC8 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1630,6 +2009,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8446582B23BD59E200DC316E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4E5E23021975BE4009C3062 /* GoodBiology */;
+			targetProxy = 8446582A23BD59E200DC316E /* PBXContainerItemProxy */;
+		};
 		844E0D172235625200933ABC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 844E0D0B2235625200933ABC /* ForTodayWidget */;
@@ -1735,6 +2119,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8446582D23BD59E200DC316E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = iOSGoodBiologyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wowApps.iOSGoodBiologyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoodBiology;
+			};
+			name = Debug;
+		};
+		8446582E23BD59E200DC316E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = iOSGoodBiologyUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wowApps.iOSGoodBiologyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GoodBiology;
+			};
+			name = Release;
+		};
 		844E0D1A2235625200933ABC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2029,7 +2453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59C6H8HQ42;
 				INFOPLIST_FILE = GoodBiology/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2054,7 +2478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59C6H8HQ42;
 				INFOPLIST_FILE = GoodBiology/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2281,6 +2705,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8446582C23BD59E200DC316E /* Build configuration list for PBXNativeTarget "iOSGoodBiologyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8446582D23BD59E200DC316E /* Debug */,
+				8446582E23BD59E200DC316E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		844E0D192235625200933ABC /* Build configuration list for PBXNativeTarget "ForTodayWidget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

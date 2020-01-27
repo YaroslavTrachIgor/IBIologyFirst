@@ -19,10 +19,12 @@ class ReadingOnTimeViewController: UIViewController {
     @IBOutlet weak var newArticleButton:     UIButton!
     @IBOutlet weak var shareButton:          UIBarButtonItem!
     
+    private let alpha = CGFloat(1)
+    
     private var timer = Timer()
     private var time  = 0
     
-    private var articles = [plantsROT, animalsROT, archaeROT, microbesROT, virusesROT, fungusRot, manROT, biologyROT, biology2ROT, biology3ROT, biology4ROT, biology5ROT, biology6ROT, biology7ROT, biology8ROT, biology9ROT, biology10ROT, biology11ROT, biology12ROT, biology13ROT, biology14ROT, biology15ROT, biology16ROT,]
+    static private var articles = [plantsROT, animalsROT, archaeROT, microbesROT, virusesROT, fungusRot, manROT, biologyROT, biology2ROT, biology3ROT, biology4ROT, biology5ROT, biology6ROT, biology7ROT, biology8ROT, biology9ROT, biology10ROT, biology11ROT, biology12ROT, biology13ROT, biology14ROT, biology15ROT, biology16ROT,]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +89,7 @@ class ReadingOnTimeViewController: UIViewController {
     }
     
     private func textViewPrefering() {
-        contentTextView.text = articles.randomElement()
+        contentTextView.text = ReadingOnTimeViewController.articles.randomElement()
         
         contentTextView.bigContentTextViewsPrefering(size: 16)
     }
@@ -117,7 +119,7 @@ class ReadingOnTimeViewController: UIViewController {
         timer.invalidate()
         
         startButton.isEnabled = true
-        startButton.alpha     = 1
+        startButton.alpha     = alpha
     }
     
     @IBAction func reset(_ sender: UIButton) {
@@ -126,7 +128,7 @@ class ReadingOnTimeViewController: UIViewController {
         resultLabel.text    = "0"
         
         startButton.isEnabled = true
-        startButton.alpha     = 1
+        startButton.alpha     = alpha
     }
     
     @IBAction func newArticle(_ sender: UIButton) {
@@ -135,9 +137,9 @@ class ReadingOnTimeViewController: UIViewController {
         resultLabel.text    = "Let's Start"
         
         startButton.isEnabled = true
-        startButton.alpha     = 1
+        startButton.alpha     = alpha
         
-        contentTextView.text = articles.randomElement()
+        contentTextView.text = ReadingOnTimeViewController.articles.randomElement()
     }
 }
 

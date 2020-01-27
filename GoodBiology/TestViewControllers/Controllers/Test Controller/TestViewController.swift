@@ -9,34 +9,61 @@
 import UIKit
 import AudioToolbox
 
+class TestErrors {
+    enum CancellingErrors: Error {
+        case answerIsDefault
+        case cancel
+    }
+    
+    enum DoneErrors: Error {
+        case doneTest
+        case answerIsDefault
+    }
+}
+
+struct TestViewKeys {
+    static let plantsViewKey    = "PlantsViewKey"
+    static let animalsViewKey   = "AnimalsViewKey"
+    static let archaeaViewKey   = "ArchaeaViewKey"
+    static let microbesViewKey  = "MicrobesViewKey"
+    static let virusesViewKey   = "VirusesViewKey"
+    static let humanViewKey     = "HumanViewKey"
+    static let fungusesViewKey  = "FungusesViewKey"
+}
+
 class TestViewController: UIViewController {
     
-    // Basic Color for border, tint, 
-    var lazyColor: UIColor = #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-    
     //MARK: IBOutlets
-    @IBOutlet weak var testView:             UIView!
-    @IBOutlet weak var secondTestView:       UIView!
-    @IBOutlet weak var answerLabel:          UILabel!
-    @IBOutlet weak var trueButtonOutlet:     UIButton!
-    @IBOutlet weak var falseButtonOutlet:    UIButton!
-    @IBOutlet weak var testTextView:         UITextView!
-    @IBOutlet weak var stepperViewShower:    UIBarButtonItem!
-    @IBOutlet weak var stepperView:          UIView!
+    @IBOutlet weak var testView:             TestBackView!
+    @IBOutlet weak var secondTestView:       TestBackView!
+    
+    @IBOutlet weak var answerLabel:          AnswerLabel!
+    
+    @IBOutlet weak var trueButtonOutlet:     TestButton!
+    @IBOutlet weak var falseButtonOutlet:    TestButton!
+    private var falseTint = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.798640839)
+    
+    @IBOutlet weak var stepperView:          TestStepperView!
     @IBOutlet weak var stepperOutlet:        UIStepper!
-    @IBOutlet weak var secondTextView:       UITextView!
-    @IBOutlet weak var shareButton:          UIBarButtonItem!
-    @IBOutlet weak var cancelButton:         UIBarButtonItem!
-    @IBOutlet weak var daneButton:           UIBarButtonItem!
+    
+    @IBOutlet weak var secondTextView:       TestTextView!
+    @IBOutlet weak var testTextView:         TestTextView!
+    
+    @IBOutlet weak var stepperViewShower:       TestUIBarButtonItem!
+    @IBOutlet weak var shareButton:             TestUIBarButtonItem!
+    @IBOutlet weak var cancelButton:            TestUIBarButtonItem!
+    @IBOutlet weak var doneButton:              TestUIBarButtonItem!
+    @IBOutlet weak var goToNextTestPageButton:  TestUIBarButtonItem!
+    
+    private var score = ""
     
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        basicViewThingsPrefering()
-        UISizingPrefering()
         otherUIthings()
         systemBackPrefering()
+        postKeys()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,35 +73,43 @@ class TestViewController: UIViewController {
             let delay: Double = Double((index)) * 0.2
             
             UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                UIApplication.shared.beginIgnoringInteractionEvents()
                 objects?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
-                    self.testTextView.alpha   = 1
-                    self.secondTextView.alpha = 1
+                    let alpha: CGFloat = 1
+                    
+                    self.testTextView.alpha   = alpha
+                    self.secondTextView.alpha = alpha
                 })
-            }) { (_) in
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
+            })
         }
     }
     
-    private func buttonsFontPrefering() {
-        trueButtonOutlet.titleLabel?.font = UIFont(name: "AvenirNext-demiBold", size: 15)
-        falseButtonOutlet.titleLabel?.font = UIFont(name: "AvenirNext-demiBold", size: 15)
+    private func setScore() {
+        if answerLabel.text != answerWord || answerLabel.textColor != .secondaryLabel {
+            if answerLabel.text == falseWord {
+                let number2  = Int.random(in: 1 ..< 12)
+                let number1 = 0
+                let number  = Int.random(in: 20 ..< 35)
+                
+                let numberArray = [String(number1), String(number), String(number2)]
+                
+                score = String(numberArray.randomElement() ?? description)
+            } else {
+                let number1 = Int.random(in: 95 ..< 100)
+                let number  = Int.random(in: 64 ..< 80)
+                
+                let numberArray = [String(number1), String(number)]
+                
+                score = String(numberArray.randomElement() ?? description)
+            }
+        }
     }
     
     private func systemBackPrefering() {
         view.viewSystemBack()
         
         stepperView.viewSystemBack()
-        testView.viewSystemBack()
-        secondTestView.viewSystemBack()
-        
-        if #available(iOS 13.0, *) {
-            trueButtonOutlet.backgroundColor  = .systemBackground
-            falseButtonOutlet.backgroundColor = .systemBackground
-        }
     }
     
     //MARK: Actions
@@ -104,25 +139,31 @@ class TestViewController: UIViewController {
     }
     
     private func falseAndTrueButtonsForAnswersPrefering() {
-        trueButtonOutlet.isEnabled  = false
-        falseButtonOutlet.isEnabled = false
+        let alpha = CGFloat(0.5)
+        let enabled = false
         
-        shareButton.isEnabled       = true
-        stepperViewShower.isEnabled = false
+        trueButtonOutlet.isEnabled  = enabled
+        falseButtonOutlet.isEnabled = enabled
         
-        trueButtonOutlet.alpha      = 0.5
-        falseButtonOutlet.alpha     = 0.5
+        shareButton.isEnabled       = !enabled
+        stepperViewShower.isEnabled = enabled
+        
+        trueButtonOutlet.alpha      = alpha
+        falseButtonOutlet.alpha     = alpha
         
         trueButtonOutlet.setTitle(trueWord, for: .normal)
-        trueButtonOutlet.setTitleColor(#colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1), for: .normal)
+        trueButtonOutlet.setTitleColor(lazyColor, for: .normal)
         
         falseButtonOutlet.setTitle(falseWord, for: .normal)
-        falseButtonOutlet.setTitleColor(#colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.798640839), for: .normal)
+        falseButtonOutlet.setTitleColor(falseTint, for: .normal)
         falseButtonOutlet.layer.borderColor = #colorLiteral(red: 0.6207774878, green: 0.1583663821, blue: 0.07822974771, alpha: 0.8047945205)
         falseButtonOutlet.testFalseButtonsShadows()
     }
     
     //MARK: Actions
+    
+    //MARK: True
+    // True Functions Start
     @IBAction func trueButton(_ sender: UIButton) {
         trueShow()
         trueAudio()
@@ -132,23 +173,18 @@ class TestViewController: UIViewController {
     
     private func trueShow() {
         answerLabel.text        = trueWord
-        answerLabel.textColor   = #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-        
-        let alertController = UIAlertController(title: trueWord, message: nil, preferredStyle: .alert)
-        let action          = UIAlertAction(title: okWord, style: .cancel) { (action) in }
-                     alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1))
-                     alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                     alertController.view.tintColor = lazyColor
-                     alertController.addAction(action)
-        self.present(alertController, animated: true, completion: nil)
-        
+        answerLabel.textColor   = lazyColor
+    
         falseAndTrueButtonsForAnswersPrefering()
     }
     
     private func trueAudio() {
         AudioServicesPlayAlertSound(SystemSoundID(1008))
     }
+    // True Functions End
     
+    //MARK: False
+    // False Functions Start
     @IBAction func falseButton(_ sender: UIButton) {
         falseShow()
         falseAudio()
@@ -158,16 +194,7 @@ class TestViewController: UIViewController {
     
     private func falseShow() {
         answerLabel.text        = falseWord
-        answerLabel.textColor   = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.802145762)
-        
-        let alertController = UIAlertController(title: falseWord, message: nil, preferredStyle: .alert)
-        let action = UIAlertAction(title: okWord, style: .cancel) {
-            (action) in }
-                     alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.802145762))
-                     alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                     alertController.view.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.802145762)
-                     alertController.addAction(action)
-        self.present(alertController, animated: true, completion: nil)
+        answerLabel.textColor   = falseTint
         
         falseAndTrueButtonsForAnswersPrefering()
     }
@@ -175,23 +202,16 @@ class TestViewController: UIViewController {
     private func falseAudio() {
         AudioServicesPlayAlertSound(SystemSoundID(1009))
     }
+    // False Functions End
     
-    @IBAction func cancel(_ sender: Any) {
-        canceling()
-    }
-    
-    private func canceling() {
-        if answerLabel.text == answerWord {
-            let alertController = UIAlertController(title: sorryWord, message: "but you haven't answerd yet", preferredStyle: .alert)
-            let action = UIAlertAction(title: okWord, style: .cancel)
+    //MARK: Cancel
+    private func cancelErrorsShow() {
+        do {
+            try cancelErrorsSetup()
+        } catch TestErrors.CancellingErrors.answerIsDefault {
+            FastAlert.showBasic(title: errorWord, message: "You haven't answerd yet", vc: self)
             
-                        alertController.view.tintColor = #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-                        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                        alertController.addAction(action)
-           self.present(alertController, animated: true, completion: nil)
-            
-        } else if answerLabel.text == trueWord || answerLabel.text == falseWord {
+        } catch TestErrors.CancellingErrors.cancel {
             trueButtonOutlet.setTitle(itsTrueWord, for: .normal)
             falseButtonOutlet.setTitle(itsTrueWord, for: .normal)
             
@@ -209,63 +229,110 @@ class TestViewController: UIViewController {
             falseButtonOutlet.alpha = 1
             
             answerLabel.text = answerWord
+            
             if #available(iOS 13.0, *) {
                 answerLabel.textColor = .secondaryLabel
             }
+        } catch {
+            FastAlert.showBasic(title: "Unavailable", message: "", vc: self)
+        }
+    }
+    
+    private func cancelErrorsSetup() throws {
+        if answerLabel.text == answerWord {
+            throw TestErrors.CancellingErrors.answerIsDefault
+        } else {
+            throw TestErrors.CancellingErrors.cancel
+        }
+    }
+    
+    @IBAction func cancel(_ sender: Any) {
+        cancelErrorsShow()
+    }
+    
+    //MARK: Done Test
+    @IBAction func doneTest(_ sender: Any) {
+        setScore()
+        setDonningAlerts()
+    }
+    
+    private func doneTestErrorsSetup() throws {
+        if answerLabel.text == answerWord || answerLabel.textColor == .secondaryLabel {
+            throw TestErrors.DoneErrors.answerIsDefault
+        } else {
+            throw TestErrors.DoneErrors.doneTest
+        }
+    }
+    
+    private func doneTestErrorsShow() {
+        do {
+            try doneTestErrorsSetup()
+        } catch TestErrors.DoneErrors.answerIsDefault {
+            FastAlert.showBasic(title: errorWord, message: "You haven't answerd yet", vc: self)
+        } catch TestErrors.DoneErrors.doneTest {
+            setDonningAlerts()
+            postKeys()
+        } catch {
+            FastAlert.showBasic(title: "Unavailable", message: "", vc: self)
+        }
+    }
+    
+    private func setDonningAlerts() {
+        let alertController = UIAlertController(title: goodWord, message: "Score \(score) %", preferredStyle: .alert)
+        let action = UIAlertAction(title: okWord, style: .cancel) { (action) in
+            self.navigationController?.popToRootViewController(animated: true)
         }
         
-        cancelAudio()
+        alertController.addAction(action)
+        alertController.view.tintColor = lazyColor
+        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
+        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        showRatesController()
     }
     
-    private func cancelAudio() {
-        AudioServicesPlayAlertSound(SystemSoundID(1050))
-    }
-    
-    @IBAction func doneTest(_ sender: Any) {
-        donning()
-    }
-    
-    private func donning() {
-        if answerLabel.text == answerWord {
-            let alertController = UIAlertController(title: sorryWord, message: "but answer is empty", preferredStyle: .alert)
-            let action = UIAlertAction(title: okWord, style: .cancel) { (action) in }
+    private func postKeys() {
+        var name = Notification.Name("")
+        
+        if navigationItem.title == "Plants Test Final" {
+            name = Notification.Name(rawValue: TestViewKeys.plantsViewKey)
+            NotificationCenter.default.post(name: name, object: nil)
             
+        } else if navigationItem.title == "Animals Test Final" {
+            name = Notification.Name(rawValue: TestViewKeys.animalsViewKey)
+            NotificationCenter.default.post(name: name, object: nil)
             
-            alertController.addAction(action)
-            alertController.view.tintColor = #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-            alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-            alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
+        } else if navigationItem.title == "Humen Test Final" {
+            name = Notification.Name(rawValue: TestViewKeys.humanViewKey)
+            NotificationCenter.default.post(name: name, object: nil)
             
-            self.present(alertController, animated: true, completion: nil)
+        } else if navigationItem.title == "Microbes Test Final" {
+            name = Notification.Name(rawValue: TestViewKeys.microbesViewKey)
+            NotificationCenter.default.post(name: name, object: nil)
             
-        } else if answerLabel.text == trueWord {
-            let alertController = UIAlertController(title: goodWord, message: "Thanks for passing the test", preferredStyle: .alert)
-            let action = UIAlertAction(title: okWord, style: .cancel) { (action) in }
+        } else if navigationItem.title == "Viruses Test Final" {
+            name = Notification.Name(rawValue: TestViewKeys.virusesViewKey)
+            NotificationCenter.default.post(name: name, object: nil)
             
-            alertController.addAction(action)
-            alertController.view.tintColor = lazyColor
-            alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-            alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
+        } else if navigationItem.title == "Archaea Test Final" {
+            name = Notification.Name(rawValue: TestViewKeys.archaeaViewKey)
+            NotificationCenter.default.post(name: name, object: nil)
             
-            self.present(alertController, animated: true, completion: nil)
-            
-            if navigationItem.title == "Viruses Test" {
-                RateManager.showRatesController()
-            }
-            
-        } else if answerLabel.text == falseWord {
-            let alertController = UIAlertController(title: sorryWord, message: "but you answered incorrectly", preferredStyle: .alert)
-            let action = UIAlertAction(title: okWord, style: .destructive) { (action) in }
-            
-            alertController.addAction(action)
-            alertController.view.tintColor = #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-            alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-            alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-            
-            self.present(alertController, animated: true, completion: nil)
+        } else if navigationItem.title == "Funguses Test Final" {
+            name = Notification.Name(rawValue: TestViewKeys.fungusesViewKey)
+            NotificationCenter.default.post(name: name, object: nil)
         }
     }
     
+    private func showRatesController() {
+        if navigationItem.title == "Viruses Test" {
+            RateManager.showRatesController()
+        }
+    }
+    
+    //MARK: Sharing
     @IBAction func sharing(_ sender: Any) {
         share()
         shareAudio()
@@ -278,142 +345,23 @@ class TestViewController: UIViewController {
     private func share() {
         let string = navigationItem.title
         
-        fastActivityVC(item: string ?? .init())
+        fastActivityVCforTest(item: string ?? .init())
     }
     
-    private func fastActivityVC(item: String) {
+    private func fastActivityVCforTest(item: String) {
         let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
-        
-            UIApplication.shared.keyWindow?.tintColor = #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-        
-        self.present(activityVC, animated: true, completion: nil)
-    }
-    
-    private func preferAnswerButtons() {
-        falseButtonOutlet.testButtonsPrefering()
-        trueButtonOutlet.testButtonsPrefering()
-        
-        buttonsFontPrefering()
+                activityVC.popoverPresentationController?.sourceView = self.view
+            
+        UIApplication.shared.keyWindow?.tintColor = lazyColor
+            
+        present(activityVC, animated: true)
     }
 
-    private func answerLabelPrefering() {
-        answerLabel.font = UIFont(name: "AvenirNext-Bold", size: 20.5)
-        answerLabel.labelSystemColor()
-    }
-    
-    private func barButtonTintPrefering() {
-        shareButton.testBarButtonItemsTint()
-        cancelButton.testBarButtonItemsTint()
-        stepperViewShower.testBarButtonItemsTint()
-    }
-    
-    private func shadowsPrefering() {
-        secondTestView.viewShadows()
-        testView.viewShadows()
-        
-        trueButtonOutlet.testButtonsShadows()
-        falseButtonOutlet.testButtonsShadows()
-        
-        textViews_And_AnswerLabel_ShadowsPrefering()
-    }
-    
-    private func textViews_And_AnswerLabel_ShadowsPrefering() {
-        let testViewShadowRadius = 3
-        
-        testTextView.textViewShadow()
-        testTextView.layer.shadowRadius = CGFloat(testViewShadowRadius)
-        
-        secondTextView.textViewShadow()
-        secondTextView.layer.shadowRadius = CGFloat(testViewShadowRadius)
-        
-        testTextView.layer.shadowRadius     = 0.8
-        secondTextView.layer.shadowRadius   = 0.8
-        
-        answerLabel.labelShadow()
-        testTextView.layer.shadowRadius     = 0.5
-    }
-    
-    private func textColorPrefering() {
-        testTextView.basicTextView()
-        secondTextView.basicTextView()
-    }
-    
-    private func textEditButtonSetup() {
-        stepperViewShower?.setBackgroundImage(UIImage(named: "textFormat.size"), for: .normal, barMetrics: .default)
-    }
-    
-    private func UISizingPrefering() {
-        secondTestView.transform = CGAffineTransform(scaleX: 0, y: 0)
-        testView.transform       = CGAffineTransform(scaleX: 0, y: 0)
-        answerLabel.transform    = CGAffineTransform(scaleX: 0, y: 0)
-    }
-    
     private func otherUIthings() {
-        shadowsPrefering()
-        stepperView.editorsViews()
         stepperOutlet.stepperBaics()
         shareButton.isEnabled = false
-    }
-    
-    private func cornerRadiusPrefering() {
-        let corRad = 16
-        
-        testView.layer.cornerRadius         = CGFloat(corRad)
-        secondTestView.layer.cornerRadius   = CGFloat(corRad)
-    }
-    
-    private func textViewAlphaPrefering() {
-        testTextView.alpha   = 0
-        secondTextView.alpha = 0
-    }
-    
-    private func buttonsCornerRadiusPrfering() {
-        let corRad = 14
-        
-        trueButtonOutlet.layer.cornerRadius  = CGFloat(corRad)
-        falseButtonOutlet.layer.cornerRadius = CGFloat(corRad)
-    }
-    
-    private func shadowTextButtonsPrefering() {
-        let shadowOpacity = 0.7
-        
-        trueButtonOutlet.titleLabel?.labelShadow()
-        trueButtonOutlet.titleLabel?.layer.shadowOpacity = Float(shadowOpacity)
-        
-        falseButtonOutlet.titleLabel?.labelShadow()
-        falseButtonOutlet.titleLabel?.layer.shadowOpacity = Float(shadowOpacity)
-    }
-    
-    private func basicViewThingsPrefering() {
-        textViewAlphaPrefering()
-        textColorPrefering()
-        preferAnswerButtons()
-        barButtonTintPrefering()
-        cornerRadiusPrefering()
-        answerLabelPrefering()
-        buttonsCornerRadiusPrfering()
-        shadowTextButtonsPrefering()
-        textEditButtonSetup()
-        
-        
+        answerLabel.text = answerWord
     }
 }
 
-extension UITextView {
-    func basicTextView() {
-        self.textColor  = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-        self.font       = UIFont(name: "AvenirNext-Medium", size: 16)
-    }
-}
 
-extension UIButton {
-    func testButtonsPrefering() {
-        self.setTitleColor(lazyColor, for: .normal)
-        self.titleLabel?.font       = .boldSystemFont(ofSize: 16)
-        self.backgroundColor        =  #colorLiteral(red: 0.943613708, green: 0.9437716603, blue: 0.9435929656, alpha: 1)
-        self.titleLabel?.textColor  =  #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-        self.layer.borderColor      =  #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-        self.layer.borderWidth      =  2.55
-    }
-}

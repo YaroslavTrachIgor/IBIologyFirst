@@ -21,10 +21,11 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     //MARK: IBOutlets
     @IBOutlet weak var mapView:                  MKMapView!
-    
     @IBOutlet weak var mapTypeView:              UIView!
-    @IBOutlet weak var textViewBackground:       UIView!
-    @IBOutlet weak var textFieldBackground:      UIView!
+    
+    @IBOutlet weak var textViewBackground:       TextViewBackView!
+    @IBOutlet weak var textFieldBackground:      TextViewBackView!
+    
     @IBOutlet weak var dataPickerView:           UIView!
     
     @IBOutlet weak var navItem:                  UINavigationItem!
@@ -46,7 +47,7 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var voiceButton:              UIButton!
     @IBOutlet weak var reminderOutletButton:     UIButton!
-    @IBOutlet weak var helpButtonOutlet:         UIButton!
+    @IBOutlet weak var helpButtonOutlet:         HelpButton!
     @IBOutlet weak var choseTimeButton:          UIButton!
     
     @IBOutlet weak var mainView:                 UIView!
@@ -55,7 +56,7 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var inputTextField:  UITextField!
     
     //MARK: Public
-    public var textViewText: String = ""
+    static public var textViewText: String = ""
     
     private let defaults = UserDefaults.standard
     private let forTodayReminderBody: String = "Are you ready to read something what you have planned ? 😏🧐"
@@ -66,35 +67,34 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private var previousLocation:   CLLocation?
     
     //MARK: IBOutlets
-    @IBOutlet weak var pickerBackgroundView:    UIView!
+    @IBOutlet weak var pickerBackgroundView:    ContentBack!
     @IBOutlet weak var pickerView:              UIPickerView!
     
     private let array = ["Plants", "Animals", "Microbes", "Fungus", "Man", "Viruses", "Archaeas", "Biology", "Internet", "Nothing"]
     
     var user: User?
     
-    lazy var toolBar: UIToolbar = {
-         let toolBar = UIToolbar()
-             toolBar.sizeToFit()
-             toolBar.tintColor = UIColor.gray
-        
+    private var geocoder: CLGeocoder!
+    
+    lazy var toolBar: BasicToolbar = {
+        let toolBar = BasicToolbar()
         let spacer      = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton  = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonAction))
         
-                toolBar.items = [spacer, doneButton]
-        return  toolBar
+        toolBar.items = [spacer, doneButton]
+        return toolBar
     }()
     
-    fileprivate var acSubView: UIView?
+    private var acSubView: UIView?
     
     //MARK: LyfeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Notes Delegate
+        /// Notes Delegate
         notesBasicViewThings()
         
-        //Map Delegate
+        /// Map Delegate
         mapViewBasics()
     }
     
@@ -102,10 +102,12 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let objectsArray = [textFieldBackground, textViewBackground]
         
         UIView.animate(withDuration: 5) {
-            self.trashBarButton.isEnabled           = true
-            self.pickerViewShowingButton.isEnabled  = true
-            self.mapViewShowingButton.isEnabled     = true
-            self.saveButton.isEnabled               = true
+            let isEnabled = true
+            
+            self.trashBarButton.isEnabled           = isEnabled
+            self.pickerViewShowingButton.isEnabled  = isEnabled
+            self.mapViewShowingButton.isEnabled     = isEnabled
+            self.saveButton.isEnabled               = isEnabled
         }
         
         for (index, objects) in objectsArray.enumerated() {
@@ -117,8 +119,10 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                         UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                            self.choseTimeButton.alpha       = 1
-                            self.reminderOutletButton.alpha  = 1
+                            let alpha: CGFloat = 1
+                            
+                            self.choseTimeButton.alpha       = alpha
+                            self.reminderOutletButton.alpha  = alpha
                         }, completion: nil)
                     })
                 }, completion: nil)
@@ -128,7 +132,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func mapViewBasics() {
         mapNotes()
-        helpButtonPrefering()
         mapPrefering()
         adressLabelPrefering()
         chekLocationServices()
@@ -140,7 +143,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         textColorPrefering()
         saveButtonFontPrefering()
         shadowsPrefering()
-        helpButtonPrefering()
         cornersPrefering()
         basicThingsPrefering()
         notificationAlertPrefering()
@@ -149,27 +151,22 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         chooseDateButtonPulsanting()
         systemBackgroundPrefering()
         UIBarButtonItemAlphaPrefering()
-        textViewsAlphaPrefering()
         textContainersTintSetup()
     }
     
-    private func textViewsAlphaPrefering() {
-        textFieldBackground.alpha = 0
-        textViewBackground.alpha  = 0
-    }
-    
     private func UIBarButtonItemAlphaPrefering() {
-        mapTypeButton.isEnabled            = false
-        trashBarButton.isEnabled           = false
-        pickerViewShowingButton.isEnabled  = false
-        mapViewShowingButton.isEnabled     = false
-        saveButton.isEnabled               = false
+        let isEnabled: Bool = false
+        
+        mapTypeButton.isEnabled            = isEnabled
+        trashBarButton.isEnabled           = isEnabled
+        pickerViewShowingButton.isEnabled  = isEnabled
+        mapViewShowingButton.isEnabled     = isEnabled
+        saveButton.isEnabled               = isEnabled
     }
     
     private func systemBackgroundPrefering() {
         if #available(iOS 13.0, *) {
             pickerPrfering()
-            textPrefering()
             UIViewsPrefering()
         }
     }
@@ -184,33 +181,58 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         }
     }
     
-    private func textPrefering() {
-        if #available(iOS 13.0, *) {
-            textViewBackground.viewSystemBack()
-            textFieldBackground.viewSystemBack()
-        }
-    }
-    
     private func pickerPrfering() {
         if #available(iOS 13.0, *) {
             pickerView.tintColor = .secondaryLabel
-            pickerBackgroundView.viewSystemBack()
+        }
+    }
+    
+    private func textErrorsShow() {
+        do {
+            try textErrorSetup()
+          
+        } catch ForTodayErrors.Errors.textViewIsntReadyForSave {
+            FastAlert.showBasic(title: errorWord, message: "Your note content is empty.", vc: self)
+            
+        } catch ForTodayErrors.Errors.textFieldIsntReadyForSave {
+            FastAlert.showBasic(title: errorWord, message: "Your note title is empty.", vc: self)
+            
+        } catch ForTodayErrors.Errors.textViewContentBackHidden {
+            FastAlert.showBasic(title: errorWord, message: "Your note content is empty.", vc: self)
+            
+        } catch ForTodayErrors.Errors.textFieldContentBackHidden {
+            FastAlert.showBasic(title: errorWord, message: "Your note title is empty.", vc: self)
+            
+        } catch {
+            FastAlert.showBasic(title: sorryWord, message: "The application has an unknown problem.", vc: self)
+        }
+    }
+    
+    private func textErrorSetup() throws {
+        let hidden = true
+        let alpha: CGFloat = 0
+        
+        let textViewText    = inputTextView.text!
+        let textFieldText   = inputTextField.text!
+        
+        if textViewText.isEmpty {
+            throw ForTodayErrors.Errors.textViewIsntReadyForSave
+            
+        } else if textFieldText.isEmpty {
+            throw ForTodayErrors.Errors.textFieldIsntReadyForSave
+            
+        } else if textViewBackground.isHidden == hidden || textViewBackground.alpha == alpha {
+            throw ForTodayErrors.Errors.textFieldContentBackHidden
+            
+        } else if textFieldBackground.isHidden == hidden || textFieldBackground.alpha == alpha {
+            throw ForTodayErrors.Errors.textFieldContentBackHidden
         }
     }
     
     //MARK: Actions
     @IBAction func savingInformation(_ sender: Any) {
-        if (inputTextView.text == "" && inputTextField.text == "") {
-            let alertController = UIAlertController(title: sorryWord, message: "But you have nothing written", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: okWord, style: .cancel) {
-                (action) in
-            }
-                         alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                         alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                         alertController.addAction(okAction)
-                         alertController.view.tintColor = lazyColor
-            self.present(alertController, animated: true, completion: nil)
-        } else {
+        textErrorsShow()
+
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let saveAction      = UIAlertAction(title: saveWord, style: .default) {
             (action) in
@@ -224,27 +246,27 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                     let alertAction = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
                     alert.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
                     alert.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                    alert.title             = "Information saved 👍🏼"
-                    alert.view.tintColor    = lazyColor
+                    alert.title          = "Information saved 👍🏼"
+                    alert.view.tintColor = lazyColor
                     alert.addAction(alertAction)
                 })
             }
         }
-        
         let deleteAction = UIAlertAction(title: deleteWord, style: .destructive) {
             (action) in
             self.trash()
         }
         let cancel = UIAlertAction(title: cancelWord, style: .cancel) {
                 (action) in }
-                     alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                     alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                     alertController.addAction(saveAction)
-                     alertController.addAction(deleteAction)
-                     alertController.addAction(cancel)
-                     alertController.view.tintColor = lazyColor
+        
+        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
+        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
+        alertController.addAction(saveAction)
+        alertController.addAction(deleteAction)
+        alertController.addAction(cancel)
+        alertController.view.tintColor = lazyColor
+        
         self.present(alertController, animated: true, completion: nil)
-        }
     }
     
     //MARK: Struct
@@ -364,7 +386,7 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 self.mapViewShowingButton.isEnabled    = true
                 self.navItem.title                     = "Locations For Reading"
                 
-                self.helpButtonOutlet.backgroundColor = #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1)
+                self.helpButtonOutlet.backgroundColor = lazyColor
             }
         }
     }
@@ -444,10 +466,8 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        
         let activityIndicator = UIActivityIndicatorView()
-            activityIndicator.style             = UIActivityIndicatorView.Style.gray
+            activityIndicator.style             = UIActivityIndicatorView.Style.medium
             activityIndicator.center            = self.view.center
             activityIndicator.hidesWhenStopped  = true
             activityIndicator.startAnimating()
@@ -464,7 +484,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         activeSearch.start { (response, error) in
             activityIndicator.stopAnimating()
-            UIApplication.shared.endIgnoringInteractionEvents()
             
             if response == nil { print("Error") }
             else {
@@ -621,14 +640,7 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
             self.present(alertController, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "\(sorryWord),", message: "But one or more of the components are empty", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: okWord, style: .cancel, handler: nil)
-                    alert.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                    alert.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-            
-                    alert.view.tintColor = lazyColor
-                    alert.addAction(cancel)
-            present(alert, animated: true, completion: nil)
+            textErrorsShow()
         }
     }
     
@@ -702,8 +714,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         center.setNotificationCategories([category])
         center.add(request, withCompletionHandler: nil)
-        
-        notificationPrinting(doing: "Nothing")
     }
     
     public func forTodayReminderSchedule(inSecond seconds: TimeInterval, completion: (Bool) -> ()) {
@@ -766,7 +776,7 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     private func saveButtonFontPrefering() {
-        let saveButtonColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
+        let saveButtonColor = lazyColor
         
         self.saveButton.setTitleTextAttributes([
             NSAttributedString.Key.font : UIFont(name: "AvenirNext-Medium", size: 18.68)!,
@@ -777,22 +787,9 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private func shadowsPrefering() {
         helpButtonOutlet.buttonsShadows()
         pickerView.pickerViewShadow()
-        pickerBackgroundView.viewShadows()
-        textViewBackground.viewShadows()
-        textFieldBackground.viewShadows()
         choseTimeButton.buttonsShadows()
         dataPickerView.viewShadows()
         mapTypeView.viewShadows()
-    }
-    
-    private func helpButtonPrefering() {
-        helpButtonOutlet.isHidden = true
-        
-        helpButtonOutlet.layer.borderColor  = #colorLiteral(red: 0.03711384535, green: 0.3201311529, blue: 0.1156642511, alpha: 1)
-        helpButtonOutlet.layer.borderWidth  = 2.7
-        helpButtonOutlet.layer.cornerRadius = CGFloat(cornerRadius)
-        
-        helpButtonOutlet.backgroundColor    = #colorLiteral(red: 0.004247154575, green: 0.453612864, blue: 0.1538792849, alpha: 1)
     }
     
     private func mapPrefering() {
@@ -801,7 +798,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     private func cornersPrefering() {
-        helpButtonOutlet.layer.cornerRadius    = CGFloat(cornerRadius)
         textViewBackground.layer.cornerRadius  = 20
     }
     
@@ -828,29 +824,21 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     private func loadingPrefering() {
         self.textViewActivity.activityIndicatorStarts(colorOfActivity: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        
         UIView.animate(withDuration: 0.6, delay: 0.5, options: .curveLinear, animations: {
             self.inputTextView.alpha = 1
         }) {(finished) in
             self.textViewActivity.activityIndicatorStop()
             self.textViewActivity.isHidden = true
-            
-            UIApplication.shared.endIgnoringInteractionEvents()
         }
         
         inputTextField.alpha = 0
         textFieldActivitu.activityIndicatorStarts(colorOfActivity: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
-        
-        UIApplication.shared.beginIgnoringInteractionEvents()
         
         UIView.animate(withDuration: 0.6, delay: 0.5, options: .curveLinear, animations: {
             self.inputTextField.alpha = 1
         }) {(finished) in
             self.textFieldActivitu.activityIndicatorStop()
             self.textFieldActivitu.isHidden = true
-            
-            UIApplication.shared.endIgnoringInteractionEvents()
         }
     }
     
@@ -886,9 +874,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             mapView.addAnnotation(annotation)
         }
     }
-    
-    //MARK: Public
-    private var geocoder: CLGeocoder!
     
     private func setupLocationMenegar() {
         locationMeneger.delegate        = self
@@ -983,53 +968,13 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBAction func mapTypeChosing(_ sender: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
         case 0:
-            if mapView.mapType == .standard {
-                let alertController = UIAlertController(title: "Sorry", message: "but this map type has already been selected", preferredStyle: .alert)
-                let action          = UIAlertAction(title: "OK", style: .default) { (action) in }
-                             alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                             alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                
-                             alertController.addAction(action)
-                self.present(alertController, animated: true, completion: nil)
-            } else {
-                self.mapView.mapType = .standard
-            }
+            mapView.mapType = .standard
         case 1:
-            if mapView.mapType == .satellite {
-                let alertController = UIAlertController(title: "Sorry", message: "but this map type has already been selected", preferredStyle: .alert)
-                let action          = UIAlertAction(title: "OK", style: .default) { (action) in }
-                             alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                             alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                
-                             alertController.addAction(action)
-                self.present(alertController, animated: true, completion: nil)
-            } else {
-                self.mapView.mapType = .satellite
-            }
+            mapView.mapType = .satellite
         case 2:
-            if mapView.mapType == .mutedStandard {
-                let alertController = UIAlertController(title: "Sorry", message: "but this map type has already been selected", preferredStyle: .alert)
-                let action          = UIAlertAction(title: "OK", style: .default) { (action) in }
-                             alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                             alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                
-                             alertController.addAction(action)
-                self.present(alertController, animated: true, completion: nil)
-            } else {
-                self.mapView.mapType = .mutedStandard
-            }
+            mapView.mapType = .mutedStandard
         case 3:
-            if mapView.mapType == .hybrid {
-                let alertController = UIAlertController(title: "Sorry", message: "but this map type has already been selected", preferredStyle: .alert)
-                let action          = UIAlertAction(title: "OK", style: .default) { (action) in }
-                             alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                             alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                
-                             alertController.addAction(action)
-                self.present(alertController, animated: true, completion: nil)
-            } else {
-                self.mapView.mapType = .hybrid
-            }
+            mapView.mapType = .hybrid
         default:
             print ("Error")
         }
@@ -1066,7 +1011,7 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     private func textContainersTintSetup() {
-        let tintColor = #colorLiteral(red: 0, green: 0.2469184101, blue: 0.009277993813, alpha: 1)
+        let tintColor = lazyColor
         
         inputTextView.tintColor     = tintColor
         inputTextField.tintColor    = tintColor
@@ -1104,9 +1049,10 @@ extension ForTodayViewController: MKMapViewDelegate {
                 //TODO: Show alert informing the user
                 return
             }
+            let defaultString = ""
             
-            let streetNumber = placemark.subThoroughfare ?? ""
-            let streetName   = placemark.thoroughfare ?? ""
+            let streetNumber = placemark.subThoroughfare ?? defaultString
+            let streetName   = placemark.thoroughfare ?? defaultString
             
             DispatchQueue.main.async {
                 self.adressLabel.text = "\(streetNumber) \(streetName)"

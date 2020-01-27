@@ -23,13 +23,11 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
     private let textViewKey     = "textViewKey"
     private let textFieldKey    = "textFieldKey"
     
-    lazy var toolBar: UIToolbar = {
-        let toolBar     = UIToolbar()
+    lazy var toolBar: BasicToolbar = {
+        let toolBar     = BasicToolbar()
         let spacer      = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let doneButton  = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonAction))
         
-        toolBar.sizeToFit()
-        toolBar.tintColor = UIColor.gray
         toolBar.items = [spacer, doneButton]
         
         return toolBar
@@ -50,11 +48,14 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
     }
     
     private func funcTextField_and_TextViewSetup() {
-        textField.text  = ""
-        textView.text   = ""
+        let tint = lazyColor
+        let text = ""
         
-        textField.tintColor = #colorLiteral(red: 0, green: 0.2469184101, blue: 0.009277993813, alpha: 1)
-        textField.tintColor = #colorLiteral(red: 0, green: 0.2469184101, blue: 0.009277993813, alpha: 1)
+        textField.text  = text
+        textView.text   = text
+        
+        textField.tintColor = tint
+        textField.tintColor = tint
     }
     
     private func prepareToolBar() {
@@ -62,16 +63,42 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
         textView.inputAccessoryView  = toolBar
     }
     
+    private func showError() {
+        do {
+            try setupErrors()
+        } catch ForTodayErrors.Errors.textViewIsntReadyForSave {
+            FastAlert.showBasic(title: errorWord, message: "Your note content is empty.", vc: self)
+            
+        } catch {
+            FastAlert.showBasic(title: sorryWord, message: "The application has an unknown problem.", vc: self)
+        }
+    }
+    
+    private func setupErrors() throws {
+        let textViewText  = textView.text!
+        
+        if textViewText.isEmpty {
+            throw ForTodayErrors.Errors.textViewIsntReadyForSave
+        }
+    }
+    
     @IBAction func stepperViewShower(_ sender: Any) {
-        if stepperView.isHidden == true {
-            stepperView.isHidden = false
+        if textView.text.isEmpty || textField.text == "" {
+            showError()
+            
         } else {
-            stepperView.isHidden = true
+            if stepperView.isHidden == true {
+                stepperView.isHidden = false
+            } else {
+                stepperView.isHidden = true
+            }
         }
     }
     
     private func stepperViewSetup() {
-        stepperView.layer.cornerRadius = 20
+        cornerRadius = 20
+        
+        stepperView.layer.cornerRadius = CGFloat(cornerRadius)
         stepperView.isHidden           = true
         
         stepperView.viewShadows()
@@ -95,7 +122,7 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
             textView.text = textV
         }
         
-        if let textF = UserDefaults.standard.string(forKey: textViewKey) {
+        if let textF = UserDefaults.standard.string(forKey: textFieldKey) {
             textField.text = textF
         }
     }
