@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+var i: Int = 30000000000
+
 extension UIActivityIndicatorView {
     
     // Basics for Activity Indicator
