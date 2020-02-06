@@ -120,7 +120,6 @@
 		C458BD6E23AEBF4200D1F108 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */; };
 		C458BD7123AEBFD200D1F108 /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7023AEBFD200D1F108 /* UITextView.swift */; };
 		C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7223AEBFF300D1F108 /* UIProgressView.swift */; };
-		C458BD7523AEC02E00D1F108 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7423AEC02E00D1F108 /* UISearchBar.swift */; };
 		C458BD7723AEC05E00D1F108 /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7623AEC05E00D1F108 /* UISegmentedControl.swift */; };
 		C458BD7923AEC08200D1F108 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7823AEC08200D1F108 /* UIBarButtonItem.swift */; };
 		C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7A23AEC09D00D1F108 /* UIStepper.swift */; };
@@ -368,7 +367,6 @@
 		C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
 		C458BD7023AEBFD200D1F108 /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		C458BD7223AEBFF300D1F108 /* UIProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressView.swift; sourceTree = "<group>"; };
-		C458BD7423AEC02E00D1F108 /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
 		C458BD7623AEC05E00D1F108 /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
 		C458BD7823AEC08200D1F108 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
 		C458BD7A23AEC09D00D1F108 /* UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
@@ -1165,7 +1163,6 @@
 				C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */,
 				C458BD7023AEBFD200D1F108 /* UITextView.swift */,
 				C458BD7223AEBFF300D1F108 /* UIProgressView.swift */,
-				C458BD7423AEC02E00D1F108 /* UISearchBar.swift */,
 				C458BD7623AEC05E00D1F108 /* UISegmentedControl.swift */,
 				C458BD7823AEC08200D1F108 /* UIBarButtonItem.swift */,
 				C458BD7A23AEC09D00D1F108 /* UIStepper.swift */,
@@ -1933,7 +1930,6 @@
 				C458BD7123AEBFD200D1F108 /* UITextView.swift in Sources */,
 				841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */,
 				8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */,
-				C458BD7523AEC02E00D1F108 /* UISearchBar.swift in Sources */,
 				84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */,
 				C458BD6C23AEBF2000D1F108 /* UIView.swift in Sources */,
 				C458BD7723AEC05E00D1F108 /* UISegmentedControl.swift in Sources */,

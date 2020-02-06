@@ -11,7 +11,6 @@ import UIKit
 
 public extension UIButton {
     func shake(horizantaly: CGFloat = 0 , Verticaly: CGFloat = 0) {
-
         let animation = CABasicAnimation(keyPath: "position")
             animation.duration = 0.05
             animation.repeatCount = 5
