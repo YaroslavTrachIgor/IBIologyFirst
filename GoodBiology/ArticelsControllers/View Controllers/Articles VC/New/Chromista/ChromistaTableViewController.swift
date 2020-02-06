@@ -12,12 +12,12 @@ class ChromistaTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return chromistaTitle.count
+        return ChromistaData.chromistaTitle.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChromistaCell", for: indexPath)
-        cell.textLabel?.text = chromistaTitle[indexPath.row]
+        cell.textLabel?.text = ChromistaData.chromistaTitle[indexPath.row]
 
         return cell
     }
@@ -25,7 +25,7 @@ class ChromistaTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        chromistaIndex = indexPath.row
+        ChromistaData.chromistaIndex = indexPath.row
         performSegue(withIdentifier: "chsegue", sender: self)
     }
 }
