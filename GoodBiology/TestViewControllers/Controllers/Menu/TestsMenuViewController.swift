@@ -92,22 +92,43 @@ class TestsMenuViewController: UIViewController {
         }
     }
     
-    // Update Views Alpha
+    //MARK: Update Alpha After Test Ending
+    //Update Views Alpha
     private func createObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.plantsViewAlphaUpdate(notification:)), name: plantsName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.archaeaViewAlphaUpdate(notification:)), name: archaeaName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.animalsViewAlphaUpdate(notification:)), name: animalsName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.humenViewAlphaUpdate(notification:)), name: humenName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.virusesViewAlphaUpdate(notification:)), name: virusesName, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.fungusesViewAlphaUpdate(notification:)), name: fungusesName, object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(TestsMenuViewController.plantsViewAlphaUpdate(notification:)),
+                                               name: plantsName,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(TestsMenuViewController.archaeaViewAlphaUpdate(notification:)),
+                                               name: archaeaName,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(TestsMenuViewController.animalsViewAlphaUpdate(notification:)),
+                                               name: animalsName,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(TestsMenuViewController.humenViewAlphaUpdate(notification:)),
+                                               name: humenName,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(TestsMenuViewController.virusesViewAlphaUpdate(notification:)),
+                                               name: virusesName,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(TestsMenuViewController.fungusesViewAlphaUpdate(notification:)),
+                                               name: fungusesName,
+                                               object: nil)
     }
     
+    //Set Alpha
     private func setAlphaForViews(view: UIView, label: UIView, textView: UIView) {
         view.alpha      = viewAlphaAfterObserver
         label.alpha     = viewAlphaAfterObserver
         textView.alpha  = viewAlphaAfterObserver
     }
     
+    //Set Alpha For Special Views
     @objc func plantsViewAlphaUpdate(notification: NSNotification) {
         setAlphaForViews(view: plantsView, label: plantsTitle, textView: plantsTextView)
     }
