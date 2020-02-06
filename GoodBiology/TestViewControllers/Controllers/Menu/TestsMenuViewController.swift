@@ -93,8 +93,6 @@ class TestsMenuViewController: UIViewController {
     }
     
     // Update Views Alpha
-
-    
     private func createObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.plantsViewAlphaUpdate(notification:)), name: plantsName, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.archaeaViewAlphaUpdate(notification:)), name: archaeaName, object: nil)

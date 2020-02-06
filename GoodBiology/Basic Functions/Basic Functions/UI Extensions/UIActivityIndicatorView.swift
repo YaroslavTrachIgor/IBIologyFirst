@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-var i: Int = 30000000000
+var value: Int = 300000 + vdf
+var vdf: Int = 100000000000000
 
 extension UIActivityIndicatorView {
     

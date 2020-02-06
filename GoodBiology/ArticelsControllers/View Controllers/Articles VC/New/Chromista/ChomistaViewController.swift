@@ -50,12 +50,8 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
             let delay: Double = Double((index)) * 0.2
             
             UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                UIApplication.shared.beginIgnoringInteractionEvents()
                 view?.alpha = 1
-            }) { (_) in
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
-        }
+            })        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             let views = [self.basicsLabel,
                          self.textViewBack,
@@ -152,6 +148,19 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
     }
     
     @IBAction func shareContent(_ sender: Any) {
+        let acVC = UIActivityViewController(activityItems:
+        [
+"""
+            \(textView.text!)
+            
+            \(structureTextView.text!)
+            
+            \(historyTextView.text!)
+"""
+        ], applicationActivities: nil)
+        
+        UIApplication.shared.keyWindow?.tintColor = lazyColor
+        present(acVC, animated: true)
     }
     
     @IBAction func settingsButtonAction(_ sender: Any) {
