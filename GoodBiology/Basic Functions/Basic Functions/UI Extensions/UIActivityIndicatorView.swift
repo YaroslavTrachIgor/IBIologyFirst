@@ -9,9 +9,6 @@
 import Foundation
 import UIKit
 
-var value: Int = 300000 + vdf
-var vdf: Int = 100000000000000
-
 extension UIActivityIndicatorView {
     
     // Basics for Activity Indicator
@@ -19,14 +16,10 @@ extension UIActivityIndicatorView {
         self.hidesWhenStopped   = true
         self.color              = colorOfActivity
         self.startAnimating()
-        
-        UIApplication.shared.beginIgnoringInteractionEvents()
     }
     
     public func activityIndicatorStop() {
         self.stopAnimating()
         self.isHidden = true
-        
-        UIApplication.shared.endIgnoringInteractionEvents()
     }
 }

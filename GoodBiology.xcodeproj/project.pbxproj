@@ -148,6 +148,8 @@
 		C4E5E24121975BE5009C3062 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E5E23F21975BE5009C3062 /* LaunchScreen.storyboard */; };
 		C4E5E24C21975BE5009C3062 /* GoodBiologyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E24B21975BE5009C3062 /* GoodBiologyTests.swift */; };
 		C4E5E25721975BE5009C3062 /* GoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E25621975BE5009C3062 /* GoodBiologyUITests.swift */; };
+		C4EE987C23EC6D1B00FBF1E1 /* TestIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE987B23EC6D1B00FBF1E1 /* TestIconLabel.swift */; };
+		C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE987D23EC6D5200FBF1E1 /* TestIconBackView.swift */; };
 		C4FB6D3921B7D7EE00E4FD63 /* PlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -419,6 +421,8 @@
 		C4E5E26821975DE3009C3062 /* Good Biology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good Biology.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E5E27B21975DE4009C3062 /* Good BiologyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Good BiologyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E5E28621975DE4009C3062 /* Good BiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Good BiologyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4EE987B23EC6D1B00FBF1E1 /* TestIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIconLabel.swift; sourceTree = "<group>"; };
+		C4EE987D23EC6D5200FBF1E1 /* TestIconBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIconBackView.swift; sourceTree = "<group>"; };
 		C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -598,6 +602,7 @@
 		8445F0A923678FA8007413B7 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				C4EE987A23EC6CF400FBF1E1 /* UI */,
 				C4C7253721C42EA800F64612 /* TestsMenuViewController.swift */,
 			);
 			path = Menu;
@@ -1356,6 +1361,15 @@
 			path = GoodBiologyUITests;
 			sourceTree = "<group>";
 		};
+		C4EE987A23EC6CF400FBF1E1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C4EE987B23EC6D1B00FBF1E1 /* TestIconLabel.swift */,
+				C4EE987D23EC6D5200FBF1E1 /* TestIconBackView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		C4FA2D1F21FCD7F40023B655 /* Basic Functions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1894,6 +1908,7 @@
 				840FB81B23BA6D1E0081DE59 /* BarButtonItem.swift in Sources */,
 				C4C7231521B9ACA900F64612 /* MicrobesViewController.swift in Sources */,
 				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
+				C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */,
 				8446582023BC0A5200DC316E /* Buttons.swift in Sources */,
 				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
@@ -1963,6 +1978,7 @@
 				C4C7252521C2B75800F64612 /* ArticelsViewController.swift in Sources */,
 				C43B126021A8AF8300D58C44 /* TestButtonAnimation.swift in Sources */,
 				84C7AAED223C4E9700A7CF68 /* BiologyAll.swift in Sources */,
+				C4EE987C23EC6D1B00FBF1E1 /* TestIconLabel.swift in Sources */,
 				84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */,
 				842D692423C6CDD5009CF7E7 /* BiologyNotificationButton.swift in Sources */,
 				8468332623A4E5A6004CBFC8 /* User.swift in Sources */,

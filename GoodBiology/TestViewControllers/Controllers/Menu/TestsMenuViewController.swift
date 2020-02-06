@@ -102,46 +102,38 @@ class TestsMenuViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(TestsMenuViewController.fungusesViewAlphaUpdate(notification:)), name: fungusesName, object: nil)
     }
     
+    private func setAlphaForViews(view: UIView, label: UIView, textView: UIView) {
+        view.alpha      = viewAlphaAfterObserver
+        label.alpha     = viewAlphaAfterObserver
+        textView.alpha  = viewAlphaAfterObserver
+    }
+    
     @objc func plantsViewAlphaUpdate(notification: NSNotification) {
-        plantsView.alpha        = viewAlphaAfterObserver
-        plantsTitle.alpha       = viewAlphaAfterObserver
-        plantsTextView.alpha    = viewAlphaAfterObserver
+        setAlphaForViews(view: plantsView, label: plantsTitle, textView: plantsTextView)
     }
     
     @objc func archaeaViewAlphaUpdate(notification: NSNotification) {
-        archaeaView.alpha        = viewAlphaAfterObserver
-        archaeaLabel.alpha       = viewAlphaAfterObserver
-        archaeaTextView.alpha    = viewAlphaAfterObserver
+        setAlphaForViews(view: archaeaView, label: archaeaLabel, textView: archaeaTextView)
     }
     
     @objc func animalsViewAlphaUpdate(notification: NSNotification) {
-        animalsView.alpha        = viewAlphaAfterObserver
-        animalsLabel.alpha       = viewAlphaAfterObserver
-        animalsTextView.alpha    = viewAlphaAfterObserver
+        setAlphaForViews(view: animalsView, label: animalsLabel, textView: animalsTextView)
     }
     
     @objc func humenViewAlphaUpdate(notification: NSNotification) {
-        humanView.alpha         = viewAlphaAfterObserver
-        humanLabel.alpha        = viewAlphaAfterObserver
-        manTextView.alpha       = viewAlphaAfterObserver
+        setAlphaForViews(view: humanView, label: humanLabel, textView: manTextView)
     }
     
     @objc func virusesViewAlphaUpdate(notification: NSNotification) {
-        virusesView.alpha           = viewAlphaAfterObserver
-        virusLabel.alpha            = viewAlphaAfterObserver
-        virusesTextView.alpha       = viewAlphaAfterObserver
+        setAlphaForViews(view: virusesView, label: virusLabel, textView: virusesTextView)
     }
     
     @objc func microbesViewAlphaUpdate(notification: NSNotification) {
-        microbesView.alpha           = viewAlphaAfterObserver
-        microbesTextView.alpha       = viewAlphaAfterObserver
-        microbesLabel.alpha          = viewAlphaAfterObserver
+        setAlphaForViews(view: microbesView, label: microbesLabel, textView: microbesTextView)
     }
     
     @objc func fungusesViewAlphaUpdate(notification: NSNotification) {
-        fungusesLabel.alpha           = viewAlphaAfterObserver
-        fungusesView.alpha            = viewAlphaAfterObserver
-        mushroomsTextView.alpha       = viewAlphaAfterObserver
+        setAlphaForViews(view: fungusesView, label: fungusesLabel, textView: mushroomsTextView)
     }
     
     //MARK: DarkMode methods Prefering
@@ -259,16 +251,6 @@ extension TestsMenuViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {}
 }
 
-extension UIView {
-    func preferingViews() {
-        cornerRadius = 12.87
-        
-        self.viewShadows()
-        
-        self.alpha = 0
-        self.layer.cornerRadius = cornerRadius
-    }
-}
 
 extension TestsMenuViewController: MenuViewControllerDelegate {
     func basicViewProccesPrefering() {
@@ -284,51 +266,13 @@ extension TestsMenuViewController: MenuViewControllerDelegate {
     }
 }
 
-// Test Icon Back View Setup and Delegate
-protocol TestIconBackViewDelegate {
-    func setupBackView()
-}
-
-class TestIconBackView: UIView {
-    override init(frame: CGRect) {
-      super.init(frame: frame)
-        setupBackView()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
-        setupBackView()
-    }
-}
-
-extension TestIconBackView: TestIconBackViewDelegate {
-    internal func setupBackView() {
-        preferingViews()
-    }
-}
-
-// Test Icon Labels
-protocol TestIconLabelDelegate {
-    func setupAnswerLabel()
-}
-
-class TestIconLabel: UILabel {
-    override init(frame: CGRect) {
-      super.init(frame: frame)
-        setupAnswerLabel()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
-        setupAnswerLabel()
-    }
-}
-
-extension TestIconLabel: TestIconLabelDelegate {
-    internal func setupAnswerLabel() {
-        labelShadow()
+extension UIView {
+    func preferingViews() {
+        cornerRadius = 12.87
         
-        textColor = lazyColor
+        self.viewShadows()
+        
+        self.alpha = 0
+        self.layer.cornerRadius = cornerRadius
     }
 }
-
