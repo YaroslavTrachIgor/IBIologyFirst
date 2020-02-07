@@ -76,11 +76,16 @@
 		8497E34623566495003CD4A9 /* SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E34523566495003CD4A9 /* SystemColors.swift */; };
 		8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */; };
 		8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */; };
-		849C38A82353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38A72353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift */; };
+		849C38A82353B121002E007D /* ReadingOnTimeButtonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38A72353B121002E007D /* ReadingOnTimeButtonProtocol.swift */; };
 		849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38AD2353B8AB002E007D /* MapDelegate.swift */; };
 		849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38B12353BB27002E007D /* Notes Protocol.swift */; };
 		849F5381236977CD0027289F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F5380236977CD0027289F /* GradientView.swift */; };
 		84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A15A96236209220069AADE /* SettingsTableViewController.swift */; };
+		84A78C5723ECC542002FEADF /* TestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5623ECC542002FEADF /* TestErrors.swift */; };
+		84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */; };
+		84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */; };
+		84A78C5F23ED6617002FEADF /* UsersViewWithInfoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5E23ED6617002FEADF /* UsersViewWithInfoDelegate.swift */; };
+		84A78C6123ED6636002FEADF /* SettingsTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6023ED6636002FEADF /* SettingsTableViewControllerDelegate.swift */; };
 		84ADAC3621D2C65100FDDFC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ADAC3521D2C65100FDDFC4 /* MapKit.framework */; };
 		84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */; };
 		84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD83222A5E9800BA41C9 /* LoginButtonAnimatiol.swift */; };
@@ -318,11 +323,16 @@
 		8497E34523566495003CD4A9 /* SystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColors.swift; sourceTree = "<group>"; };
 		8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Elements Basic Functions, Classes, Structs and as on.swift"; sourceTree = "<group>"; };
 		8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiConnectionRecognizing.swift; sourceTree = "<group>"; };
-		849C38A72353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeButtonOnDelegate.swift; sourceTree = "<group>"; };
+		849C38A72353B121002E007D /* ReadingOnTimeButtonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeButtonProtocol.swift; sourceTree = "<group>"; };
 		849C38AD2353B8AB002E007D /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
 		849C38B12353BB27002E007D /* Notes Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes Protocol.swift"; sourceTree = "<group>"; };
 		849F5380236977CD0027289F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		84A15A96236209220069AADE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		84A78C5623ECC542002FEADF /* TestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrors.swift; sourceTree = "<group>"; };
+		84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerExtensions.swift; sourceTree = "<group>"; };
+		84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchResultUpdating.swift; sourceTree = "<group>"; };
+		84A78C5E23ED6617002FEADF /* UsersViewWithInfoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewWithInfoDelegate.swift; sourceTree = "<group>"; };
+		84A78C6023ED6636002FEADF /* SettingsTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 		84ADAC3321D2C60F00FDDFC4 /* GoodBiology.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodBiology.entitlements; sourceTree = "<group>"; };
 		84ADAC3521D2C65100FDDFC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewController.swift; sourceTree = "<group>"; };
@@ -609,6 +619,7 @@
 		8445F0AA23678FB0007413B7 /* Test Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84A78C5523ECC525002FEADF /* Test Errors */,
 				8446583223BFF42900DC316E /* Data */,
 				840FB81023BA20B60081DE59 /* UI */,
 				C47CAD6621D0E42F00E27E88 /* TestViewController.swift */,
@@ -750,6 +761,8 @@
 		847A50782390720400223AC7 /* Settings Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84A78C5D23ED6604002FEADF /* Protocols */,
+				84A78C5823ED6530002FEADF /* Extension */,
 				842D690723C29A83009CF7E7 /* UI */,
 				84A15A96236209220069AADE /* SettingsTableViewController.swift */,
 			);
@@ -907,7 +920,7 @@
 		849C38A62353B005002E007D /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				849C38A72353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift */,
+				849C38A72353B121002E007D /* ReadingOnTimeButtonProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -990,6 +1003,32 @@
 				847A50782390720400223AC7 /* Settings Controller */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		84A78C5523ECC525002FEADF /* Test Errors */ = {
+			isa = PBXGroup;
+			children = (
+				84A78C5623ECC542002FEADF /* TestErrors.swift */,
+			);
+			path = "Test Errors";
+			sourceTree = "<group>";
+		};
+		84A78C5823ED6530002FEADF /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */,
+				84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		84A78C5D23ED6604002FEADF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84A78C5E23ED6617002FEADF /* UsersViewWithInfoDelegate.swift */,
+				84A78C6023ED6636002FEADF /* SettingsTableViewControllerDelegate.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		84ADAC3421D2C65100FDDFC4 /* Frameworks */ = {
@@ -1312,8 +1351,8 @@
 			children = (
 				8468332423A44727004CBFC8 /* GoodBiology.entitlements */,
 				84CDB5CA2220B0AA002432F7 /* AppDelegate */,
-				84A15A95236209010069AADE /* Settings */,
 				C4FA2D1F21FCD7F40023B655 /* Basic Functions */,
+				84A15A95236209010069AADE /* Settings */,
 				8476128D21E12FB50010AEAE /* Gradient Extension */,
 				8471F87D21B301E8001AA935 /* Networking */,
 				845FE7422322F42500B36E76 /* Article Online Videos and Images */,
@@ -1857,6 +1896,7 @@
 			files = (
 				842D691623C42A15009CF7E7 /* ArticlesMenuLabel.swift in Sources */,
 				842D690623C299F9009CF7E7 /* TextViewBackView.swift in Sources */,
+				84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */,
 				8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */,
 				84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */,
 				8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */,
@@ -1877,6 +1917,7 @@
 				C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */,
 				842D691823C42B9E009CF7E7 /* NewLabel.swift in Sources */,
 				84732DA6224003AC005957F2 /* ReadingOnTimeViewController.swift in Sources */,
+				84A78C6123ED6636002FEADF /* SettingsTableViewControllerDelegate.swift in Sources */,
 				C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */,
 				C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */,
 				C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */,
@@ -1884,7 +1925,7 @@
 				848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */,
 				842D692223C6CD9C009CF7E7 /* BiologyBackView.swift in Sources */,
 				842D691323C4299C009CF7E7 /* ContactButton.swift in Sources */,
-				849C38A82353B121002E007D /* ReadingOnTimeButtonOnDelegate.swift in Sources */,
+				849C38A82353B121002E007D /* ReadingOnTimeButtonProtocol.swift in Sources */,
 				849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */,
 				C4C7231321B9901100F64612 /* HumanViewVontroller.swift in Sources */,
 				842D690B23C29AD1009CF7E7 /* SettingsTextField.swift in Sources */,
@@ -1914,6 +1955,7 @@
 				84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */,
 				84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */,
 				C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */,
+				84A78C5F23ED6617002FEADF /* UsersViewWithInfoDelegate.swift in Sources */,
 				AAEC22D621C67A1300FF69FE /* BasicsDataManager.swift in Sources */,
 				C458BD6A23AEBF0000D1F108 /* UIAlert.swift in Sources */,
 				8446584223BFF95A00DC316E /* MicrobesTestsData.swift in Sources */,
@@ -1939,6 +1981,7 @@
 				8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */,
 				C4D9616023CE545500C0ED57 /* SomeMoreView.swift in Sources */,
 				C4C7231921B9BC0F00F64612 /* RateManeger.swift in Sources */,
+				84A78C5723ECC542002FEADF /* TestErrors.swift in Sources */,
 				84685FCA2219827000F79BF5 /* LoginViewController.swift in Sources */,
 				C458BD7923AEC08200D1F108 /* UIBarButtonItem.swift in Sources */,
 				8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */,
@@ -1963,6 +2006,7 @@
 				C4E5E23521975BE4009C3062 /* AppDelegate.swift in Sources */,
 				C447BD3423D8C9770026F176 /* Errors.swift in Sources */,
 				849F5381236977CD0027289F /* GradientView.swift in Sources */,
+				84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */,
 				84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */,
 				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
 				C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */,

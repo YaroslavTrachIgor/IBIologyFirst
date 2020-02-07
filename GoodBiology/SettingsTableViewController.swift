@@ -10,14 +10,6 @@ import UIKit
 import SafariServices
 import MessageUI
 
-protocol UsersViewWithInfoDelegate {
-    func setupUsersViewWithInfo_hideButtonAndView()
-}
-
-protocol SettingsTableViewControllerDelegate {
-    func setupView()
-}
-
 class SettingsTableViewController: UITableViewController, UsersViewWithInfoDelegate, SettingsTableViewControllerDelegate {
     
     //Users view with Info
@@ -362,32 +354,5 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
     @IBAction func changePhoneNumber(_ sender: UITextField) {
         UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.phoneKey)
     }
-}
-
-extension SettingsTableViewController: MFMailComposeViewControllerDelegate {
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        
-        if let _ = error {
-            controller.dismiss(animated: true)
-        }
-        
-        switch result {
-        case .cancelled:
-            print("Cancelled")
-        case .saved:
-            print("email was saved")
-        case .sent:
-            print("Email has been sent")
-        case .failed:
-            print("Failed Email sending")
-        @unknown default:
-            print("Fatal Error. SOS !!!")
-        }
-        controller.dismiss(animated: true, completion: nil)
-    }
-}
-
-extension SettingsTableViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) { }
 }
 

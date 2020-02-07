@@ -9,18 +9,6 @@
 import UIKit
 import AudioToolbox
 
-class TestErrors {
-    enum CancellingErrors: Error {
-        case answerIsDefault
-        case cancel
-    }
-    
-    enum DoneErrors: Error {
-        case doneTest
-        case answerIsDefault
-    }
-}
-
 struct TestViewKeys {
     static let plantsViewKey    = "PlantsViewKey"
     static let animalsViewKey   = "AnimalsViewKey"
@@ -32,6 +20,8 @@ struct TestViewKeys {
 }
 
 class TestViewController: UIViewController {
+    
+    var notificationName = Notification.Name("")
     
     //MARK: IBOutlets
     @IBOutlet weak var testView:             TestBackView!
@@ -293,36 +283,43 @@ class TestViewController: UIViewController {
         showRatesController()
     }
     
+    //MARK: Post Keys
+    private func notificationCenterPost() {
+        NotificationCenter.default.post(name: notificationName, object: nil)
+    }
+    
+    private func notificationNameSet(name: String) {
+        notificationName = Notification.Name(name)
+    }
+    
     private func postKeys() {
-        var name = Notification.Name("")
-        
         if navigationItem.title == "Plants Test Final" {
-            name = Notification.Name(rawValue: TestViewKeys.plantsViewKey)
-            NotificationCenter.default.post(name: name, object: nil)
+            notificationNameSet(name: TestViewKeys.plantsViewKey)
+            notificationCenterPost()
             
         } else if navigationItem.title == "Animals Test Final" {
-            name = Notification.Name(rawValue: TestViewKeys.animalsViewKey)
-            NotificationCenter.default.post(name: name, object: nil)
+            notificationNameSet(name: TestViewKeys.animalsViewKey)
+            notificationCenterPost()
             
         } else if navigationItem.title == "Humen Test Final" {
-            name = Notification.Name(rawValue: TestViewKeys.humanViewKey)
-            NotificationCenter.default.post(name: name, object: nil)
+            notificationNameSet(name: TestViewKeys.humanViewKey)
+            notificationCenterPost()
             
         } else if navigationItem.title == "Microbes Test Final" {
-            name = Notification.Name(rawValue: TestViewKeys.microbesViewKey)
-            NotificationCenter.default.post(name: name, object: nil)
+            notificationNameSet(name: TestViewKeys.microbesViewKey)
+            notificationCenterPost()
             
         } else if navigationItem.title == "Viruses Test Final" {
-            name = Notification.Name(rawValue: TestViewKeys.virusesViewKey)
-            NotificationCenter.default.post(name: name, object: nil)
+            notificationNameSet(name: TestViewKeys.virusesViewKey)
+            notificationCenterPost()
             
         } else if navigationItem.title == "Archaea Test Final" {
-            name = Notification.Name(rawValue: TestViewKeys.archaeaViewKey)
-            NotificationCenter.default.post(name: name, object: nil)
+            notificationNameSet(name: TestViewKeys.archaeaViewKey)
+            notificationCenterPost()
             
         } else if navigationItem.title == "Funguses Test Final" {
-            name = Notification.Name(rawValue: TestViewKeys.fungusesViewKey)
-            NotificationCenter.default.post(name: name, object: nil)
+            notificationNameSet(name: TestViewKeys.fungusesViewKey)
+            notificationCenterPost()
         }
     }
     
