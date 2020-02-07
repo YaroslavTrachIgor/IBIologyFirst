@@ -74,6 +74,7 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         systemColorsPrefering()
         textContainersTintSetup()
         alphaSetup()
+        navigationItemSetup()
     }
     
     private func systemColorsPrefering() {
@@ -397,6 +398,11 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         textViewActivityIndicator.activityIndicatorStarts(colorOfActivity:  acTint)
         textFieldActivityIndicator.activityIndicatorStarts(colorOfActivity: acTint)
+    }
+    
+    private func navigationItemSetup() {
+        navigationItem.setTitle("Basic Notes", subtitle: "For Today")
+        navigationItem.title = nil
     }
     
     private func animationsPrefering() {
