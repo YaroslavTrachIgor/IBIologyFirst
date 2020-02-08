@@ -49,7 +49,6 @@
 		8446584623C00F2B00DC316E /* ArchaeaTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446584523C00F2B00DC316E /* ArchaeaTestsData.swift */; };
 		844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D04223243C800933ABC /* AppIconViewController.swift */; };
 		844E0D0722351BD400933ABC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D0622351BD400933ABC /* MapViewController.swift */; };
-		844E0D0E2235625200933ABC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 844E0D0D2235625200933ABC /* NotificationCenter.framework */; };
 		844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D1D2235765200933ABC /* MakingArticleViewController.swift */; };
 		844E0D212239A0C800933ABC /* iBiology.mov in Resources */ = {isa = PBXBuildFile; fileRef = 844E0D202239A0C700933ABC /* iBiology.mov */; };
 		844E0D242239A16900933ABC /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D232239A16900933ABC /* VideoPlayerViewController.swift */; };
@@ -92,6 +91,10 @@
 		84A78C6B23ED68B4002FEADF /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6A23ED68B4002FEADF /* NavigationTitleView.swift */; };
 		84A78C6E23EE085F002FEADF /* UIPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */; };
 		84A78C7023EE0902002FEADF /* UIPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6F23EE0902002FEADF /* UIPickerViewDataSource.swift */; };
+		84A78C7223EEFFA0002FEADF /* UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C7123EEFFA0002FEADF /* UISearchBarDelegate.swift */; };
+		84A78C7423EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C7323EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift */; };
+		84A78C7623EF006C002FEADF /* MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C7523EF006C002FEADF /* MKMapViewDelegate.swift */; };
+		84A78C7823EF00CA002FEADF /* CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C7723EF00CA002FEADF /* CLLocationManagerDelegate.swift */; };
 		84ADAC3621D2C65100FDDFC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ADAC3521D2C65100FDDFC4 /* MapKit.framework */; };
 		84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */; };
 		84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD83222A5E9800BA41C9 /* LoginButtonAnimatiol.swift */; };
@@ -170,13 +173,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = C4E5E23021975BE4009C3062;
 			remoteInfo = GoodBiology;
-		};
-		844E0D162235625200933ABC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 844E0D0B2235625200933ABC;
-			remoteInfo = ForTodayWidget;
 		};
 		84C6FC9022061C5300BCE06D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -300,7 +296,6 @@
 		8446584523C00F2B00DC316E /* ArchaeaTestsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaTestsData.swift; sourceTree = "<group>"; };
 		844E0D04223243C800933ABC /* AppIconViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppIconViewController.swift; path = ../Storyboards/AppIconViewController.swift; sourceTree = "<group>"; };
 		844E0D0622351BD400933ABC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		844E0D0C2235625200933ABC /* ForTodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ForTodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		844E0D0D2235625200933ABC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		844E0D1D2235765200933ABC /* MakingArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakingArticleViewController.swift; path = ../Storyboards/MakingArticleViewController.swift; sourceTree = "<group>"; };
 		844E0D202239A0C700933ABC /* iBiology.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = iBiology.mov; path = ../iBiology.mov; sourceTree = "<group>"; };
@@ -345,6 +340,10 @@
 		84A78C6A23ED68B4002FEADF /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
 		84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewDelegate.swift; sourceTree = "<group>"; };
 		84A78C6F23EE0902002FEADF /* UIPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewDataSource.swift; sourceTree = "<group>"; };
+		84A78C7123EEFFA0002FEADF /* UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBarDelegate.swift; sourceTree = "<group>"; };
+		84A78C7323EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFMailComposeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		84A78C7523EF006C002FEADF /* MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewDelegate.swift; sourceTree = "<group>"; };
+		84A78C7723EF00CA002FEADF /* CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerDelegate.swift; sourceTree = "<group>"; };
 		84ADAC3321D2C60F00FDDFC4 /* GoodBiology.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodBiology.entitlements; sourceTree = "<group>"; };
 		84ADAC3521D2C65100FDDFC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewController.swift; sourceTree = "<group>"; };
@@ -451,14 +450,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		844E0D092235625200933ABC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				844E0D0E2235625200933ABC /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1061,6 +1052,10 @@
 			children = (
 				84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */,
 				84A78C6F23EE0902002FEADF /* UIPickerViewDataSource.swift */,
+				84A78C7123EEFFA0002FEADF /* UISearchBarDelegate.swift */,
+				84A78C7323EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift */,
+				84A78C7523EF006C002FEADF /* MKMapViewDelegate.swift */,
+				84A78C7723EF00CA002FEADF /* CLLocationManagerDelegate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1374,7 +1369,6 @@
 				84C6FC8222061C5100BCE06D /* Good Biology(Apple Watch).app */,
 				84C6FC8E22061C5300BCE06D /* Good Biology(Apple Watch) Extension.appex */,
 				84C6FCAB220620A200BCE06D /* Good Biology (TV).app */,
-				844E0D0C2235625200933ABC /* ForTodayWidget.appex */,
 				8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */,
 			);
 			name = Products;
@@ -1500,23 +1494,6 @@
 			productReference = 8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		844E0D0B2235625200933ABC /* ForTodayWidget */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 844E0D192235625200933ABC /* Build configuration list for PBXNativeTarget "ForTodayWidget" */;
-			buildPhases = (
-				844E0D082235625200933ABC /* Sources */,
-				844E0D092235625200933ABC /* Frameworks */,
-				844E0D0A2235625200933ABC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ForTodayWidget;
-			productName = ForTodayWidget;
-			productReference = 844E0D0C2235625200933ABC /* ForTodayWidget.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		84C6FC8122061C5100BCE06D /* Good Biology(Apple Watch) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84C6FCA422061C5300BCE06D /* Build configuration list for PBXNativeTarget "Good Biology(Apple Watch)" */;
@@ -1582,7 +1559,6 @@
 			);
 			dependencies = (
 				84C6FC9E22061C5300BCE06D /* PBXTargetDependency */,
-				844E0D172235625200933ABC /* PBXTargetDependency */,
 			);
 			name = GoodBiology;
 			productName = GoodBiology;
@@ -1692,9 +1668,6 @@
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = C4E5E23021975BE4009C3062;
 					};
-					844E0D0B2235625200933ABC = {
-						CreatedOnToolsVersion = 10.2;
-					};
 					84C6FC8122061C5100BCE06D = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -1793,7 +1766,6 @@
 				84C6FC8122061C5100BCE06D /* Good Biology(Apple Watch) */,
 				84C6FC8D22061C5300BCE06D /* Good Biology(Apple Watch) Extension */,
 				84C6FCAA220620A200BCE06D /* Good Biology (TV) */,
-				844E0D0B2235625200933ABC /* ForTodayWidget */,
 				8446582423BD59E200DC316E /* iOSGoodBiologyUITests */,
 			);
 		};
@@ -1801,13 +1773,6 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		8446582323BD59E200DC316E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		844E0D0A2235625200933ABC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1900,13 +1865,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		844E0D082235625200933ABC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		84C6FC8A22061C5300BCE06D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1941,6 +1899,7 @@
 				84A78C6423ED682A002FEADF /* StepperView.swift in Sources */,
 				8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */,
 				840FB81223BA20C70081DE59 /* TextView.swift in Sources */,
+				84A78C7623EF006C002FEADF /* MKMapViewDelegate.swift in Sources */,
 				84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */,
 				8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */,
 				C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */,
@@ -1955,6 +1914,7 @@
 				84A78C6123ED6636002FEADF /* SettingsTableViewControllerDelegate.swift in Sources */,
 				C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */,
 				C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */,
+				84A78C7223EEFFA0002FEADF /* UISearchBarDelegate.swift in Sources */,
 				C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */,
 				84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */,
 				848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */,
@@ -2047,6 +2007,7 @@
 				C447BD3423D8C9770026F176 /* Errors.swift in Sources */,
 				849F5381236977CD0027289F /* GradientView.swift in Sources */,
 				84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */,
+				84A78C7823EF00CA002FEADF /* CLLocationManagerDelegate.swift in Sources */,
 				84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */,
 				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
 				C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */,
@@ -2057,6 +2018,7 @@
 				842D690923C29A99009CF7E7 /* DoneLabel.swift in Sources */,
 				C4C7252521C2B75800F64612 /* ArticelsViewController.swift in Sources */,
 				C43B126021A8AF8300D58C44 /* TestButtonAnimation.swift in Sources */,
+				84A78C7423EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift in Sources */,
 				84C7AAED223C4E9700A7CF68 /* BiologyAll.swift in Sources */,
 				C4EE987C23EC6D1B00FBF1E1 /* TestIconLabel.swift in Sources */,
 				84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */,
@@ -2109,11 +2071,6 @@
 			isa = PBXTargetDependency;
 			target = C4E5E23021975BE4009C3062 /* GoodBiology */;
 			targetProxy = 8446582A23BD59E200DC316E /* PBXContainerItemProxy */;
-		};
-		844E0D172235625200933ABC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 844E0D0B2235625200933ABC /* ForTodayWidget */;
-			targetProxy = 844E0D162235625200933ABC /* PBXContainerItemProxy */;
 		};
 		84C6FC9122061C5300BCE06D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2252,48 +2209,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = GoodBiology;
-			};
-			name = Release;
-		};
-		844E0D1A2235625200933ABC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 59C6H8HQ42;
-				INFOPLIST_FILE = ForTodayWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.ForTodayWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		844E0D1B2235625200933ABC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 59C6H8HQ42;
-				INFOPLIST_FILE = ForTodayWidget/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.ForTodayWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -2806,15 +2721,6 @@
 			buildConfigurations = (
 				8446582D23BD59E200DC316E /* Debug */,
 				8446582E23BD59E200DC316E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		844E0D192235625200933ABC /* Build configuration list for PBXNativeTarget "ForTodayWidget" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				844E0D1A2235625200933ABC /* Debug */,
-				844E0D1B2235625200933ABC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

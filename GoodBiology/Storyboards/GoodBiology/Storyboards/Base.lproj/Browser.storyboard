@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="g8r-T8-75r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browser-->
+        <scene sceneID="8W4-6w-g8G">
+            <objects>
+                <navigationController id="g8r-T8-75r" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Browser" image="globe_earth" id="eyH-l6-psa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BDW-AV-X2N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="npO-hz-aCj" kind="relationship" relationship="rootViewController" id="hKd-cs-OPN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvI-s5-xxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1486" y="1056"/>
+        </scene>
+        <!--Networking View Controller-->
+        <scene sceneID="UoI-ji-iyR">
+            <objects>
+                <viewController id="npO-hz-aCj" customClass="NetworkingViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gMb-nY-e2t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRE-A8-OIF" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="12" y="56" width="296" height="451"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yfO-Ga-GQl">
+                                        <rect key="frame" x="137.5" y="215.5" width="21" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="21" id="lSx-jE-UzU"/>
+                                            <constraint firstAttribute="height" constant="20" id="pXM-d2-JaU"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlR-xH-cpz">
+                                        <rect key="frame" x="141" y="243" width="13" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="hM2-TM-nxs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmz-Lt-lGm">
+                                        <rect key="frame" x="8" y="8" width="280" height="435"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="npO-hz-aCj" id="85T-zI-LCg"/>
+                                        </connections>
+                                    </webView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAG-JT-dBK">
+                                        <rect key="frame" x="8" y="8" width="173" height="150"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zuF-Zf-igD">
+                                                <rect key="frame" x="0.0" y="0.0" width="173" height="150"/>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="npO-hz-aCj" id="cDb-fB-PFl"/>
+                                                    <outlet property="delegate" destination="npO-hz-aCj" id="Zgd-CA-AtM"/>
+                                                </connections>
+                                            </pickerView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="zuF-Zf-igD" firstAttribute="top" secondItem="AAG-JT-dBK" secondAttribute="top" id="0VU-xl-xkL"/>
+                                            <constraint firstAttribute="bottom" secondItem="zuF-Zf-igD" secondAttribute="bottom" id="EhE-5d-gm3"/>
+                                            <constraint firstAttribute="trailing" secondItem="zuF-Zf-igD" secondAttribute="trailing" id="NBI-HV-ohW"/>
+                                            <constraint firstAttribute="height" constant="150" id="hHM-hR-OAW"/>
+                                            <constraint firstItem="zuF-Zf-igD" firstAttribute="leading" secondItem="AAG-JT-dBK" secondAttribute="leading" id="jD6-go-QyC"/>
+                                            <constraint firstAttribute="width" constant="173" id="zv7-L6-6ZE"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="UlR-xH-cpz" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="141" id="3z2-CP-iuy"/>
+                                    <constraint firstAttribute="trailing" secondItem="nmz-Lt-lGm" secondAttribute="trailing" constant="8" id="6hU-DF-PV2"/>
+                                    <constraint firstItem="AAG-JT-dBK" firstAttribute="top" secondItem="KRE-A8-OIF" secondAttribute="top" constant="8" id="8ch-PF-foB"/>
+                                    <constraint firstAttribute="bottom" secondItem="nmz-Lt-lGm" secondAttribute="bottom" constant="8" id="GBr-tL-ewk"/>
+                                    <constraint firstItem="nmz-Lt-lGm" firstAttribute="top" secondItem="KRE-A8-OIF" secondAttribute="top" constant="8" id="R1f-xz-2Ew"/>
+                                    <constraint firstItem="UlR-xH-cpz" firstAttribute="top" secondItem="yfO-Ga-GQl" secondAttribute="bottom" constant="7.5" id="dcH-7U-SaM"/>
+                                    <constraint firstItem="nmz-Lt-lGm" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="8" id="iDb-Te-oIy"/>
+                                    <constraint firstItem="AAG-JT-dBK" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="8" id="seb-q2-8Qh"/>
+                                    <constraint firstAttribute="trailing" secondItem="UlR-xH-cpz" secondAttribute="trailing" constant="142" id="yu4-dz-csg"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBp-if-4N7">
+                                <rect key="frame" x="139" y="54" width="165" height="50"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hide diffrent functions" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xPY-7F-u9W">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="50"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jHu-Mx-YtU">
+                                        <rect key="frame" x="105" y="10" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="switch:" destination="npO-hz-aCj" eventType="valueChanged" id="AdF-Y0-fjU"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="xPY-7F-u9W" firstAttribute="leading" secondItem="CBp-if-4N7" secondAttribute="leading" id="JS7-Tu-qTO"/>
+                                    <constraint firstAttribute="bottom" secondItem="jHu-Mx-YtU" secondAttribute="bottom" constant="9" id="MiD-hu-N2q"/>
+                                    <constraint firstAttribute="width" constant="165" id="Reu-Js-y4s"/>
+                                    <constraint firstAttribute="bottom" secondItem="xPY-7F-u9W" secondAttribute="bottom" id="VJM-1v-rrV"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="bLb-De-4VX"/>
+                                    <constraint firstItem="xPY-7F-u9W" firstAttribute="top" secondItem="CBp-if-4N7" secondAttribute="top" id="iXe-Gw-y2w"/>
+                                    <constraint firstAttribute="height" constant="50" id="pW3-Rc-4R2"/>
+                                    <constraint firstAttribute="trailing" secondItem="jHu-Mx-YtU" secondAttribute="trailing" constant="11" id="r4i-x8-Gk6"/>
+                                    <constraint firstItem="jHu-Mx-YtU" firstAttribute="top" secondItem="CBp-if-4N7" secondAttribute="top" constant="10" id="uQf-Lb-czo"/>
+                                    <constraint firstItem="jHu-Mx-YtU" firstAttribute="leading" secondItem="xPY-7F-u9W" secondAttribute="trailing" constant="8" id="zBz-SP-UWu"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONK-jt-Cfi">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
+                                <items>
+                                    <barButtonItem title=" " id="3fP-51-PhM" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target"/>
+                                    <barButtonItem title="Map" id="9Pr-0M-U2i" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                        <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <segue destination="R7e-EK-KVI" kind="show" id="v4W-ma-FDW"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JaP-zM-zbb" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target"/>
+                                    <barButtonItem systemItem="rewind" id="IvC-yW-TJe" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                        <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="goForwardAction:" destination="npO-hz-aCj" id="c3V-It-d58"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="efW-iV-Aq1" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                        <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="goBackButton:" destination="npO-hz-aCj" id="Imm-rb-xu0"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ONK-jt-Cfi" firstAttribute="leading" secondItem="gMb-nY-e2t" secondAttribute="leading" id="4h8-3U-O1j"/>
+                            <constraint firstItem="aCS-NK-uaN" firstAttribute="trailing" secondItem="CBp-if-4N7" secondAttribute="trailing" constant="16" id="4iP-Um-UPe"/>
+                            <constraint firstItem="yfO-Ga-GQl" firstAttribute="centerX" secondItem="aCS-NK-uaN" secondAttribute="centerX" id="C1N-ax-XXP"/>
+                            <constraint firstAttribute="trailing" secondItem="ONK-jt-Cfi" secondAttribute="trailing" id="Ga6-WQ-WjI"/>
+                            <constraint firstItem="KRE-A8-OIF" firstAttribute="leading" secondItem="aCS-NK-uaN" secondAttribute="leading" constant="12" id="GvC-Rb-NPU"/>
+                            <constraint firstAttribute="trailing" secondItem="ONK-jt-Cfi" secondAttribute="trailing" id="Iod-pl-n7G"/>
+                            <constraint firstItem="CBp-if-4N7" firstAttribute="top" secondItem="aCS-NK-uaN" secondAttribute="top" constant="10" id="MbL-aw-m0Q"/>
+                            <constraint firstItem="aCS-NK-uaN" firstAttribute="bottom" secondItem="KRE-A8-OIF" secondAttribute="bottom" constant="12" id="aDJ-On-GA3"/>
+                            <constraint firstItem="yfO-Ga-GQl" firstAttribute="centerY" secondItem="aCS-NK-uaN" secondAttribute="centerY" id="fdy-yW-wwn"/>
+                            <constraint firstItem="aCS-NK-uaN" firstAttribute="trailing" secondItem="KRE-A8-OIF" secondAttribute="trailing" constant="12" id="izY-xv-NK3"/>
+                            <constraint firstItem="ONK-jt-Cfi" firstAttribute="leading" secondItem="gMb-nY-e2t" secondAttribute="leading" id="nrJ-Es-26z"/>
+                            <constraint firstItem="KRE-A8-OIF" firstAttribute="top" secondItem="aCS-NK-uaN" secondAttribute="top" constant="12" id="pDq-wv-hL2"/>
+                            <constraint firstAttribute="bottom" secondItem="ONK-jt-Cfi" secondAttribute="bottom" id="pUc-Xc-Csh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aCS-NK-uaN"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="ZNm-3z-w3m">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="3fC-mj-N7M" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                            <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="h5M-cX-SYz" kind="presentation" id="Ptf-xf-cFN"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="icons8-menu_filled" id="Ubj-3g-LQv" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="pickerViewBackShowing:" destination="npO-hz-aCj" id="lUa-uF-2ze"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="globe_earth" id="7i1-9C-fJ0" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                <connections>
+                                    <action selector="wikiOpen:" destination="npO-hz-aCj" id="B1z-Ok-KfB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="eye.slash.fill" catalog="system" id="4wf-on-9Xn" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="orgonize:" destination="npO-hz-aCj" id="bwz-Ql-78k"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="yfO-Ga-GQl" id="6PW-Nu-GgB"/>
+                        <outlet property="backButton" destination="IvC-yW-TJe" id="xSh-6h-gWt"/>
+                        <outlet property="goForwardButton" destination="efW-iV-Aq1" id="b9H-ug-xIa"/>
+                        <outlet property="loadingLabel" destination="UlR-xH-cpz" id="Ved-eT-PFU"/>
+                        <outlet property="nextButton" destination="efW-iV-Aq1" id="1X6-TK-qWx"/>
+                        <outlet property="pickerView" destination="zuF-Zf-igD" id="b9m-RB-gVV"/>
+                        <outlet property="pickerViewBack" destination="AAG-JT-dBK" id="DUQ-Fp-Mio"/>
+                        <outlet property="sitesButton" destination="Ubj-3g-LQv" id="gpc-eO-cF3"/>
+                        <outlet property="switchOutlet" destination="jHu-Mx-YtU" id="8KZ-De-RJg"/>
+                        <outlet property="switchView" destination="CBp-if-4N7" id="X0o-o7-CKP"/>
+                        <outlet property="tabBarVCshowingButton" destination="3fC-mj-N7M" id="gSj-PT-YPJ"/>
+                        <outlet property="textSwitchView" destination="xPY-7F-u9W" id="Zsi-Eg-tVO"/>
+                        <outlet property="webView" destination="nmz-Lt-lGm" id="zob-1R-f3E"/>
+                        <outlet property="webViewBaxckground" destination="KRE-A8-OIF" id="g6P-xp-les"/>
+                        <outlet property="wikiButton" destination="7i1-9C-fJ0" id="T6R-cP-Xwz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4n4-5g-3tJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-701.25" y="1055.2816901408451"/>
+        </scene>
+        <!--Map-->
+        <scene sceneID="pAo-QF-SJ4">
+            <objects>
+                <viewController id="R7e-EK-KVI" customClass="MapViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vbY-bR-cx6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="WtF-vH-Hq7" customClass="MyMap" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <connections>
+                                    <outlet property="delegate" destination="R7e-EK-KVI" id="st9-KJ-cxc"/>
+                                </connections>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhO-7B-3jJ">
+                                <rect key="frame" x="16" y="471" width="288" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="eNw-Ly-cqV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyK-s0-4rM">
+                                <rect key="frame" x="98" y="56" width="210" height="66"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4CF-S9-GG0">
+                                        <rect key="frame" x="17" y="19" width="176" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <segments>
+                                            <segment title="Standart"/>
+                                            <segment title="Satellite"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="mapViewStyleSwitching:" destination="R7e-EK-KVI" eventType="valueChanged" id="pQ0-LX-3x4"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="210" id="STs-cj-wY7"/>
+                                    <constraint firstAttribute="height" constant="66" id="ie5-1n-KEp"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrW-Ab-Ru3" customClass="HelpButton" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="12" y="471" width="296" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="npl-QB-wch"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="Have you got a problem with map ?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="contact:" destination="R7e-EK-KVI" eventType="touchUpInside" id="CZT-8R-BfR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="UrW-Ab-Ru3" secondAttribute="trailing" constant="12" id="2qO-PM-9ic"/>
+                            <constraint firstItem="gSA-Aa-PVx" firstAttribute="bottom" secondItem="UrW-Ab-Ru3" secondAttribute="bottom" constant="11" id="3ea-sI-Ymw"/>
+                            <constraint firstItem="qhO-7B-3jJ" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" constant="16" id="CUq-kP-igh"/>
+                            <constraint firstItem="WtF-vH-Hq7" firstAttribute="top" secondItem="gSA-Aa-PVx" secondAttribute="top" id="IA6-8H-NdJ"/>
+                            <constraint firstItem="UrW-Ab-Ru3" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" constant="12" id="NQP-XY-EWB"/>
+                            <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="dyK-s0-4rM" secondAttribute="trailing" constant="12" id="gvC-pw-6HE"/>
+                            <constraint firstItem="gSA-Aa-PVx" firstAttribute="bottom" secondItem="qhO-7B-3jJ" secondAttribute="bottom" constant="14" id="qAJ-CV-aCB"/>
+                            <constraint firstItem="WtF-vH-Hq7" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" id="tdD-Dy-MiS"/>
+                            <constraint firstItem="dyK-s0-4rM" firstAttribute="top" secondItem="gSA-Aa-PVx" secondAttribute="top" constant="12" id="vgu-Ib-bgg"/>
+                            <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="qhO-7B-3jJ" secondAttribute="trailing" constant="16" id="wmR-vu-88Z"/>
+                            <constraint firstAttribute="bottom" secondItem="WtF-vH-Hq7" secondAttribute="bottom" id="xFm-8e-6mo"/>
+                            <constraint firstItem="WtF-vH-Hq7" firstAttribute="trailing" secondItem="gSA-Aa-PVx" secondAttribute="trailing" id="yLA-5X-dZ5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gSA-Aa-PVx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" largeTitleDisplayMode="never" id="8bf-R9-HFQ">
+                        <rightBarButtonItems>
+                            <barButtonItem image="icons8-map-2" id="xUr-BV-XcL">
+                                <connections>
+                                    <action selector="typeViewBackShowing:" destination="R7e-EK-KVI" id="H9N-35-9n0"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="Kxr-Jj-Nbs">
+                                <connections>
+                                    <action selector="share:" destination="R7e-EK-KVI" id="c6T-Br-C5H"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="SNQ-LN-j8Z">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="questionButtonShowing:" destination="R7e-EK-KVI" id="waM-9B-Awb"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="qhO-7B-3jJ" id="2vt-68-gTp"/>
+                        <outlet property="mapView" destination="WtF-vH-Hq7" id="yiY-eW-Bnz"/>
+                        <outlet property="problemButton" destination="UrW-Ab-Ru3" id="eu6-SR-jjS"/>
+                        <outlet property="typeView" destination="4CF-S9-GG0" id="DqX-xo-077"/>
+                        <outlet property="typeViewBackground" destination="dyK-s0-4rM" id="fgX-mO-bNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asd-i0-hOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.5" y="1055.2816901408451"/>
+        </scene>
+        <!--ViewCostomTabBar-->
+        <scene sceneID="MnH-BP-u7r">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ViewCostomTabBar" storyboardName="Main" referencedIdentifier="ViewCostomTabBar" id="h5M-cX-SYz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ows-c7-IXL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-701" y="1488"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="eye.slash.fill" catalog="system" width="64" height="40"/>
+        <image name="globe_earth" width="30" height="30"/>
+        <image name="icons8-map-2" width="25" height="25"/>
+        <image name="icons8-menu_filled" width="25" height="25"/>
+    </resources>
+</document>

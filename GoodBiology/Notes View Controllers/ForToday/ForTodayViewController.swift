@@ -8,16 +8,20 @@
 
 import Foundation
 import UIKit
+
+import LocalAuthentication
+
 import UserNotifications
-import AudioToolbox
+import NotificationCenter
+
+import MessageUI
+
 import MapKit
 import CoreLocation
-import MessageUI
-import LocalAuthentication
-import NotificationCenter
-import Speech
 
-class ForTodayViewController: UIViewController, UISearchBarDelegate, NCWidgetProviding, MapBasicViewDelegate, NotesDelegate {
+import AudioToolbox
+
+class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewDelegate, NotesDelegate {
     
     //MARK: IBOutlets
     @IBOutlet weak var mapView:                  MKMapView!
@@ -63,7 +67,9 @@ class ForTodayViewController: UIViewController, UISearchBarDelegate, NCWidgetPro
     //MARK: Private
     private let locationMeneger            = CLLocationManager()
     private let regionInMeters:     Double = 1000
-    private var previousLocation:   CLLocation?
+    
+    //MARK: Public
+    var previousLocation:   CLLocation?
     
     //MARK: IBOutlets
     @IBOutlet weak var pickerBackgroundView:    ContentBack!
@@ -403,50 +409,6 @@ class ForTodayViewController: UIViewController, UISearchBarDelegate, NCWidgetPro
                 searchController.view.tintColor = lazyColor
             
             present(searchController, animated: true, completion: nil)
-        }
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let activityIndicator = UIActivityIndicatorView()
-            activityIndicator.style             = UIActivityIndicatorView.Style.medium
-            activityIndicator.center            = self.view.center
-            activityIndicator.hidesWhenStopped  = true
-            activityIndicator.startAnimating()
-        
-        self.view.addSubview(activityIndicator)
-        
-        searchBar.resignFirstResponder()
-        dismiss(animated: true, completion: nil)
-        
-        let searchRequest = MKLocalSearch.Request()
-            searchRequest.naturalLanguageQuery = searchBar.text
-        
-        let activeSearch = MKLocalSearch(request: searchRequest)
-        
-        activeSearch.start { (response, error) in
-            activityIndicator.stopAnimating()
-            
-            if response == nil { print("Error") }
-            else {
-                //Remove annotations
-                let annotations = self.mapView.annotations
-                self.mapView.removeAnnotations(annotations)
-                
-                let latitude    = response?.boundingRegion.center.latitude
-                let longitude   = response?.boundingRegion.center.longitude
-                
-                let annotation              = MKPointAnnotation()
-                    annotation.title        = searchBar.text
-                    annotation.coordinate   = CLLocationCoordinate2DMake(latitude!, longitude!)
-                
-                self.mapView.addAnnotation(annotation)
-                
-                let coordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(latitude!, longitude!)
-                let span    = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-                let region  = MKCoordinateRegion(center: coordinate, span: span)
-                
-                self.mapView.setRegion(region, animated: true)
-            }
         }
     }
     
@@ -829,14 +791,14 @@ class ForTodayViewController: UIViewController, UISearchBarDelegate, NCWidgetPro
         }
     }
     
-    private func chekLocationServices() {
+    func chekLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationMenegar()
             chekLocationAuthorization()
         }
     }
     
-    private func chekLocationAuthorization() {
+    func chekLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:
             locationMeneger.requestWhenInUseAuthorization()
@@ -937,14 +899,14 @@ class ForTodayViewController: UIViewController, UISearchBarDelegate, NCWidgetPro
         present(composer, animated: true)
     }
     
-    private func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+    func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         let latitude  = mapView.centerCoordinate.latitude
         let longitude = mapView.centerCoordinate.longitude
         
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
-    private func startTackingUserLocation() {
+    func startTackingUserLocation() {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
         locationMeneger.startUpdatingLocation()
@@ -956,71 +918,5 @@ class ForTodayViewController: UIViewController, UISearchBarDelegate, NCWidgetPro
         
         inputTextView.tintColor     = tintColor
         inputTextField.tintColor    = tintColor
-    }
-}
-
-//MARK: Extension
-extension ForTodayViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        chekLocationAuthorization()
-    }
-}
-
-extension ForTodayViewController: MKMapViewDelegate {
-    
-    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        let center = getCenterLocation(for: mapView)
-        let geoCoder = CLGeocoder()
-        
-        guard let previousLocation = self.previousLocation else { return }
-        
-        guard center.distance(from: previousLocation) > 50 else { return }
-        self.previousLocation = center
-        
-        geoCoder.reverseGeocodeLocation(center) { [weak self] (placemarks, error) in
-            guard let self = self else { return }
-            
-            if let _ = error {
-                //TODO: Show alert informing the user
-                return
-            }
-            
-            guard let placemark = placemarks?.first else {
-                //TODO: Show alert informing the user
-                return
-            }
-            let defaultString = ""
-            
-            let streetNumber = placemark.subThoroughfare ?? defaultString
-            let streetName   = placemark.thoroughfare ?? defaultString
-            
-            DispatchQueue.main.async {
-                self.adressLabel.text = "\(streetNumber) \(streetName)"
-            }
-        }
-    }
-}
-
-extension ForTodayViewController: MFMailComposeViewControllerDelegate {
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        
-        if let _ = error {
-            controller.dismiss(animated: true)
-        }
-        
-        switch result {
-        case .cancelled:
-            print("Cancelled")
-        case .saved:
-            print("email was saved")
-        case .sent:
-            print("Email has been sent")
-        case .failed:
-            print("Failed Email sending")
-        @unknown default:
-            print("Fatal Error")
-        }
-        controller.dismiss(animated: true, completion: nil)
     }
 }
