@@ -36,15 +36,24 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /// Notes Delegate
         notesBasicViewThings()
+        setupNavItemTitle()
+        
         loadSettings()
-        prepareToolBar()
     }
     
+    // Notes Delegate
     func notesBasicViewThings() {
         stepperViewSetup()
         textViewBackSetup()
         funcTextField_and_TextViewSetup()
+        prepareToolBar()
+    }
+    
+    func setupNavItemTitle() {
+        navigationItem.setTitle("Blank Sheet", subtitle: "For Today Section")
+        navigationItem.title = ""
     }
     
     private func funcTextField_and_TextViewSetup() {

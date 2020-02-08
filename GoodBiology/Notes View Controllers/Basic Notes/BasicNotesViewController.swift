@@ -9,7 +9,7 @@
 import UIKit
 import AudioToolbox
 
-class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, NotesDelegate {
+class BasicNotesViewController: UIViewController, NotesDelegate {
 
     @IBOutlet weak var textFieldView:                TextViewBackView!
     @IBOutlet weak var textViewBackgroundView:       TextViewBackView!
@@ -45,6 +45,7 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         //Notes Delegate
         notesBasicViewThings()
+        setupNavItemTitle()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,7 +75,11 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         systemColorsPrefering()
         textContainersTintSetup()
         alphaSetup()
-        navigationItemSetup()
+    }
+    
+    func setupNavItemTitle() {
+        navigationItem.setTitle("Basic Notes", subtitle: "For Today")
+        navigationItem.title = ""
     }
     
     private func systemColorsPrefering() {
@@ -121,62 +126,6 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
                     alert.addAction(cancel)
             present(alert, animated: true, completion: nil)
         }
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return array.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return array[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let text = textView.text!
-        
-        if array[row] == "Internet" {
-            inputTextField.text = "About Information From The Internet"
-            if textView.text == "" {
-                textView.text = text + " About Information From The Internet"
-            } else {
-                textView.text = text + "," + " About Information From The Internet"
-            }
-        } else {
-            inputTextField.text = "About \(array[row])"
-            if textView.text == "" {
-                textView.text = text + " About \(array[row])"
-            } else {
-                textView.text = text + "," + " About \(array[row])"
-            }
-        }
-        
-        if array[row] == "Nothing" {
-            inputTextField.text = "Nothing"
-            if textView.text == "" {
-                textView.text = text + "Today I don't want to read anything"
-            } else {
-                textView.text = text + "," + "Today I don't want to read anything"
-            }
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        var label: UILabel
-        
-        if let view = view as? UILabel {
-            label = view
-        } else {
-            label = UILabel()
-        }
-                label.textColor = .darkGray
-                label.font = UIFont(name: "AvenirNext-Medium", size: 21)
-                label.textAlignment = .center
-                label.text = array[row]
-        return  label
     }
     
     @IBAction func search(_ sender: Any) {
@@ -400,11 +349,6 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
         textFieldActivityIndicator.activityIndicatorStarts(colorOfActivity: acTint)
     }
     
-    private func navigationItemSetup() {
-        navigationItem.setTitle("Basic Notes", subtitle: "For Today")
-        navigationItem.title = nil
-    }
-    
     private func animationsPrefering() {
         UIView.animate(withDuration: 0, delay: 0.9, options: .curveLinear, animations: {
             self.inputTextField.alpha = 1
@@ -416,3 +360,62 @@ class BasicNotesViewController: UIViewController, UIPickerViewDelegate, UIPicker
     }
 }
 
+extension BasicNotesViewController: UIPickerViewDelegate {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let text = textView.text!
+        
+        if array[row] == "Internet" {
+            inputTextField.text = "About Information From The Internet"
+            if textView.text == "" {
+                textView.text = text + " About Information From The Internet"
+            } else {
+                textView.text = text + "," + " About Information From The Internet"
+            }
+        } else {
+            inputTextField.text = "About \(array[row])"
+            if textView.text == "" {
+                textView.text = text + " About \(array[row])"
+            } else {
+                textView.text = text + "," + " About \(array[row])"
+            }
+        }
+        
+        if array[row] == "Nothing" {
+            inputTextField.text = "Nothing"
+            if textView.text == "" {
+                textView.text = text + "Today I don't want to read anything"
+            } else {
+                textView.text = text + "," + "Today I don't want to read anything"
+            }
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label: UILabel
+        
+        if let view = view as? UILabel {
+            label = view
+        } else {
+            label = UILabel()
+        }
+                label.textColor = .darkGray
+                label.font = UIFont(name: "AvenirNext-Medium", size: 21)
+                label.textAlignment = .center
+                label.text = array[row]
+        return  label
+    }
+}
+
+extension BasicNotesViewController: UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return array.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return array[row]
+    }
+}

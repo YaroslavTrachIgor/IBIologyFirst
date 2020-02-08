@@ -17,7 +17,7 @@ import LocalAuthentication
 import NotificationCenter
 import Speech
 
-class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UISearchBarDelegate, NCWidgetProviding, MapBasicViewDelegate, NotesDelegate {
+class ForTodayViewController: UIViewController, UISearchBarDelegate, NCWidgetProviding, MapBasicViewDelegate, NotesDelegate {
     
     //MARK: IBOutlets
     @IBOutlet weak var mapView:                  MKMapView!
@@ -39,7 +39,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var searchShowingButton:      UIBarButtonItem!
     @IBOutlet weak var saveButton:               UIBarButtonItem!
     @IBOutlet weak var mapViewShowingButton:     UIBarButtonItem!
-    @IBOutlet weak var trashBarButton:           UIBarButtonItem!
     @IBOutlet weak var pickerViewShowingButton:  UIBarButtonItem!
     @IBOutlet weak var mapTypeButton:            UIBarButtonItem!
     
@@ -70,8 +69,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var pickerBackgroundView:    ContentBack!
     @IBOutlet weak var pickerView:              UIPickerView!
     
-    private let array = ["Plants", "Animals", "Microbes", "Fungus", "Man", "Viruses", "Archaeas", "Biology", "Internet", "Nothing"]
-    
     var user: User?
     
     private var geocoder: CLGeocoder!
@@ -93,6 +90,7 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         /// Notes Delegate
         notesBasicViewThings()
+        setupNavItemTitle()
         
         /// Map Delegate
         mapViewBasics()
@@ -104,7 +102,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         UIView.animate(withDuration: 5) {
             let isEnabled = true
             
-            self.trashBarButton.isEnabled           = isEnabled
             self.pickerViewShowingButton.isEnabled  = isEnabled
             self.mapViewShowingButton.isEnabled     = isEnabled
             self.saveButton.isEnabled               = isEnabled
@@ -154,11 +151,15 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         textContainersTintSetup()
     }
     
+    func setupNavItemTitle() {
+        navigationItem.setTitle("Main Notes", subtitle: "For Today Section")
+        navigationItem.title = ""
+    }
+    
     private func UIBarButtonItemAlphaPrefering() {
         let isEnabled: Bool = false
         
         mapTypeButton.isEnabled            = isEnabled
-        trashBarButton.isEnabled           = isEnabled
         pickerViewShowingButton.isEnabled  = isEnabled
         mapViewShowingButton.isEnabled     = isEnabled
         saveButton.isEnabled               = isEnabled
@@ -328,7 +329,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         navigationItem.title = ""
         
         mapTypeButton.isEnabled           = false
-        trashBarButton.isEnabled          = false
         pickerViewShowingButton.isEnabled = false
         saveButton.isEnabled              = false
         mapViewShowingButton.isEnabled    = false
@@ -351,7 +351,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 self.textFieldBackground.isHidden      = false
                 self.inputTextField.isHidden           = false
             
-                self.trashBarButton.isEnabled          = true
                 self.pickerViewShowingButton.isEnabled = true
                 self.saveButton.isEnabled              = true
                 self.navItem.title                     = "For Today"
@@ -380,7 +379,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 self.textFieldBackground.isHidden      = true
                 self.inputTextField.isHidden           = true
                 
-                self.trashBarButton.isEnabled          = false
                 self.pickerViewShowingButton.isEnabled = false
                 self.saveButton.isEnabled              = false
                 self.mapViewShowingButton.isEnabled    = true
@@ -389,63 +387,6 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
                 self.helpButtonOutlet.backgroundColor = lazyColor
             }
         }
-    }
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return array.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return array[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let text = inputTextView.text!
-        
-        if array[row] == "Internet" {
-            inputTextField.text = "About Information From The Internet"
-            if inputTextView.text == "" {
-                inputTextView.text = text + " About Information From The Internet"
-            } else {
-                inputTextView.text = text + "," + " About Information From The Internet"
-            }
-        } else {
-            inputTextField.text = "About \(array[row])"
-            if inputTextView.text == "" {
-                inputTextView.text = text + " About \(array[row])"
-            } else {
-                inputTextView.text = text + "," + " About \(array[row])"
-            }
-        }
-        if array[row] == "Nothing" {
-            inputTextField.text = "Nothing"
-            if inputTextView.text == "" {
-                inputTextView.text = text + "Today I don't want to read anything"
-            } else {
-                inputTextView.text = text + "," + "Today I don't want to read anything"
-            }
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        var label: UILabel
-        
-        if let view = view as? UILabel {
-            label = view
-        } else {
-            label = UILabel()
-        }
-        
-        label.textColor     = .darkGray
-        label.font          = UIFont(name: "AvenirNext-Medium", size: 21)
-        label.textAlignment = .center
-        label.text          = array[row]
-        
-        return label
     }
     
     //MARK: Actions
@@ -892,7 +833,7 @@ class ForTodayViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         if CLLocationManager.locationServicesEnabled() {
             setupLocationMenegar()
             chekLocationAuthorization()
-        } else {}
+        }
     }
     
     private func chekLocationAuthorization() {

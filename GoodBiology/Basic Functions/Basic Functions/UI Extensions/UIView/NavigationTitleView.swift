@@ -24,8 +24,8 @@ extension UINavigationItem: BasicUINavigationItemProtocol {
     }
     
     func setTitleFont(titleLabel: UILabel, subtitleLabel: UILabel) {
-        titleLabel.font    = UIFont(name: "AvenirNext-DemiBold", size: 16)
-        subtitleLabel.font = UIFont(name: "AvenirNext-Medium", size: 14)
+        titleLabel.font    = UIFont(name: "AvenirNext-DemiBold", size: 15.4)
+        subtitleLabel.font = UIFont(name: "AvenirNext-Medium", size: 12)
     }
     
     func setTitleTextColor(titleLabel: UILabel, subtitleLabel: UILabel) {

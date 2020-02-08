@@ -90,6 +90,8 @@
 		84A78C6723ED686C002FEADF /* TestStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6623ED686C002FEADF /* TestStepperView.swift */; };
 		84A78C6923ED6893002FEADF /* ContentBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6823ED6893002FEADF /* ContentBack.swift */; };
 		84A78C6B23ED68B4002FEADF /* NavigationTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6A23ED68B4002FEADF /* NavigationTitleView.swift */; };
+		84A78C6E23EE085F002FEADF /* UIPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */; };
+		84A78C7023EE0902002FEADF /* UIPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6F23EE0902002FEADF /* UIPickerViewDataSource.swift */; };
 		84ADAC3621D2C65100FDDFC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ADAC3521D2C65100FDDFC4 /* MapKit.framework */; };
 		84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */; };
 		84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD83222A5E9800BA41C9 /* LoginButtonAnimatiol.swift */; };
@@ -341,6 +343,8 @@
 		84A78C6623ED686C002FEADF /* TestStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStepperView.swift; sourceTree = "<group>"; };
 		84A78C6823ED6893002FEADF /* ContentBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBack.swift; sourceTree = "<group>"; };
 		84A78C6A23ED68B4002FEADF /* NavigationTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleView.swift; sourceTree = "<group>"; };
+		84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewDelegate.swift; sourceTree = "<group>"; };
+		84A78C6F23EE0902002FEADF /* UIPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPickerViewDataSource.swift; sourceTree = "<group>"; };
 		84ADAC3321D2C60F00FDDFC4 /* GoodBiology.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodBiology.entitlements; sourceTree = "<group>"; };
 		84ADAC3521D2C65100FDDFC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewController.swift; sourceTree = "<group>"; };
@@ -936,6 +940,7 @@
 		849C38A92353B58B002E007D /* ForToday */ = {
 			isa = PBXGroup;
 			children = (
+				84A78C6C23EE07D4002FEADF /* Extensions */,
 				C447BD3223D8C96A0026F176 /* Errors */,
 				C447BD2F23D8C93F0026F176 /* UI */,
 				84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */,
@@ -1049,6 +1054,15 @@
 				84A78C6A23ED68B4002FEADF /* NavigationTitleView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		84A78C6C23EE07D4002FEADF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */,
+				84A78C6F23EE0902002FEADF /* UIPickerViewDataSource.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		84ADAC3421D2C65100FDDFC4 /* Frameworks */ = {
@@ -1975,6 +1989,7 @@
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
 				C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */,
 				8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */,
+				84A78C6E23EE085F002FEADF /* UIPickerViewDelegate.swift in Sources */,
 				84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */,
 				84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */,
 				C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */,
@@ -2026,6 +2041,7 @@
 				8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */,
 				840FB81723BA46050081DE59 /* TestView.swift in Sources */,
 				C4D9616523D2B56800C0ED57 /* ASAuthorizationController.swift in Sources */,
+				84A78C7023EE0902002FEADF /* UIPickerViewDataSource.swift in Sources */,
 				842D691B23C545FA009CF7E7 /* ArticleView.swift in Sources */,
 				C4E5E23521975BE4009C3062 /* AppDelegate.swift in Sources */,
 				C447BD3423D8C9770026F176 /* Errors.swift in Sources */,

@@ -10,4 +10,5 @@ import Foundation
 
 protocol NotesDelegate {
     func notesBasicViewThings()
+    func setupNavItemTitle()
 }

@@ -346,12 +346,12 @@
             </objects>
             <point key="canvasLocation" x="-2468" y="-2"/>
         </scene>
-        <!--For Today-->
+        <!--For Today View Controller-->
         <scene sceneID="93C-be-v4q">
             <objects>
                 <viewController id="odR-fQ-aOL" customClass="ForTodayViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a8P-NP-bIR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTk-c2-S4e" customClass="TextViewBackView" customModule="GoodBiology" customModuleProvider="target">
@@ -397,10 +397,10 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-TB-RET" customClass="TextViewBackView" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="55" width="343" height="270"/>
+                                <rect key="frame" x="16" y="55" width="343" height="322"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Here is the main information about what you want to read." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qeU-fP-Z8u">
-                                        <rect key="frame" x="8" y="8" width="327" height="216"/>
+                                        <rect key="frame" x="8" y="8" width="327" height="268"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -413,7 +413,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFk-Wd-Sgc">
-                                        <rect key="frame" x="8" y="232" width="327" height="30"/>
+                                        <rect key="frame" x="8" y="284" width="327" height="30"/>
                                         <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="9b8-gW-0v2"/>
@@ -440,7 +440,7 @@
                                         </constraints>
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at5-1v-7k9">
-                                        <rect key="frame" x="311" y="201.5" width="24" height="19"/>
+                                        <rect key="frame" x="311" y="253.5" width="24" height="19"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="22.5" id="XxP-rO-m4Y"/>
                                             <constraint firstAttribute="width" constant="24" id="kMD-ah-Kxx"/>
@@ -449,6 +449,18 @@
                                         <state key="normal" title="Button" backgroundImage="text.justifyright" catalog="system"/>
                                         <connections>
                                             <segue destination="LnN-TE-xbb" kind="show" id="pLq-fQ-eQC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4v5-xc-GXp">
+                                        <rect key="frame" x="8" y="249" width="41" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="41" id="OhW-Jg-A3c"/>
+                                            <constraint firstAttribute="height" constant="27" id="cfR-Yh-DOS"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button" image="trash" catalog="system"/>
+                                        <connections>
+                                            <action selector="trash:" destination="odR-fQ-aOL" eventType="touchUpInside" id="szt-EE-s5y"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -462,7 +474,9 @@
                                     <constraint firstItem="LFk-Wd-Sgc" firstAttribute="top" secondItem="at5-1v-7k9" secondAttribute="bottom" constant="9.5" id="JYk-Cf-4ZG"/>
                                     <constraint firstItem="XfT-cE-oxF" firstAttribute="top" secondItem="rqo-TB-RET" secondAttribute="top" constant="117" id="KXF-EJ-gAK"/>
                                     <constraint firstItem="LFk-Wd-Sgc" firstAttribute="leading" secondItem="rqo-TB-RET" secondAttribute="leading" constant="8" id="Th1-fS-n05"/>
+                                    <constraint firstItem="4v5-xc-GXp" firstAttribute="leading" secondItem="rqo-TB-RET" secondAttribute="leading" constant="8" id="XRC-PX-emV"/>
                                     <constraint firstAttribute="trailing" secondItem="LFk-Wd-Sgc" secondAttribute="trailing" constant="8" id="XzP-ca-Dk2"/>
+                                    <constraint firstItem="LFk-Wd-Sgc" firstAttribute="top" secondItem="4v5-xc-GXp" secondAttribute="bottom" constant="8" id="dCC-Tf-0d1"/>
                                     <constraint firstItem="LFk-Wd-Sgc" firstAttribute="top" secondItem="qeU-fP-Z8u" secondAttribute="bottom" constant="8" id="eP8-aN-zRZ"/>
                                     <constraint firstAttribute="trailing" secondItem="qeU-fP-Z8u" secondAttribute="trailing" constant="8" id="h9t-EF-em1"/>
                                     <constraint firstAttribute="trailing" secondItem="at5-1v-7k9" secondAttribute="trailing" constant="8" id="nZf-JV-oya"/>
@@ -475,7 +489,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTa-yo-bxW">
-                                <rect key="frame" x="16" y="333" width="343" height="137"/>
+                                <rect key="frame" x="16" y="385" width="343" height="137"/>
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Lnu-PR-Dlj">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="137"/>
@@ -574,7 +588,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vj4-Kd-MYF">
-                                <rect key="frame" x="16" y="478" width="343" height="30"/>
+                                <rect key="frame" x="16" y="530" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="YO7-YJ-CI8"/>
@@ -593,7 +607,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZH-4C-dQv" customClass="HelpButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="30" y="448" width="315" height="30"/>
+                                <rect key="frame" x="30" y="500" width="315" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.48229459819999998" blue="0.93512055839999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="QXC-vD-zDq"/>
@@ -607,7 +621,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adress" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tot-r2-oCu">
-                                <rect key="frame" x="30" y="448" width="315" height="30"/>
+                                <rect key="frame" x="30" y="500" width="315" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Mib-M4-cSf"/>
                                 </constraints>
@@ -656,7 +670,7 @@
                         <viewLayoutGuide key="safeArea" id="oeH-3D-DbP"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="For Today" id="RS2-mR-4pk">
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="RS2-mR-4pk">
                         <leftBarButtonItems>
                             <barButtonItem systemItem="search" id="AoE-TA-kSP">
                                 <connections>
@@ -678,11 +692,6 @@
                             <barButtonItem title="Item" image="globe" id="p33-mH-pIR">
                                 <connections>
                                     <action selector="mapViewShowingButton:" destination="odR-fQ-aOL" id="HYO-CK-3Sr"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="trash" id="eSr-qt-j9C">
-                                <connections>
-                                    <action selector="trash:" destination="odR-fQ-aOL" id="gIx-Nz-laN"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -711,19 +720,18 @@
                         <outlet property="textFieldBackground" destination="WTk-c2-S4e" id="7DY-Ir-IPE"/>
                         <outlet property="textViewActivity" destination="XfT-cE-oxF" id="qig-gQ-gty"/>
                         <outlet property="textViewBackground" destination="rqo-TB-RET" id="51I-hN-fvU"/>
-                        <outlet property="trashBarButton" destination="eSr-qt-j9C" id="I77-fn-Fbt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GfN-MR-zsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1708" y="-2.2488755622188905"/>
         </scene>
-        <!--Blank Sheet-->
+        <!--Blank Sheet View Controller-->
         <scene sceneID="sKE-ef-kMH">
             <objects>
                 <viewController id="LnN-TE-xbb" customClass="BlankSheetViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d0q-gz-Imd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Re" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ab-Yj-AJ4">
@@ -739,7 +747,7 @@
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoO-Yv-Ha7">
-                                <rect key="frame" x="16" y="77" width="343" height="425"/>
+                                <rect key="frame" x="16" y="77" width="343" height="477"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N7y-R2-1yh">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="417"/>
@@ -787,7 +795,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d8V-Xo-iis"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Blank Sheet" id="AdY-8y-JeD">
+                    <navigationItem key="navigationItem" id="AdY-8y-JeD">
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="textformat.size" catalog="system" id="WUx-QL-nb3">
                                 <connections>
@@ -850,6 +858,7 @@
         <image name="text.justifyright" catalog="system" width="64" height="50"/>
         <image name="textformat.size" catalog="system" width="64" height="40"/>
         <image name="today_apps" width="30" height="30"/>
+        <image name="trash" catalog="system" width="60" height="64"/>
         <image name="xmark" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
