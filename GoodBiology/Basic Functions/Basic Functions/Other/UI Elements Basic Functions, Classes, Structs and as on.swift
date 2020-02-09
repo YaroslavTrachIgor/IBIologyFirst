@@ -23,5 +23,5 @@ class AppleButtonSettings {
     
     var appleButtonCornerRadius = cornerRadius
     
-    var font = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(appleFontSize))
+    var font = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(14.5))
 }

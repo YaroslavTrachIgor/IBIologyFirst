@@ -12,41 +12,33 @@ import UIKit
 class FalseAnswers {
     let isFalse = "False Answer"
     
-    let plantsTestsData     = PlantsTestsData()
-    let animalsTestsData    = AnimalsTestsData()
-    let humenTestsData      = HumenTestsData()
-    let fungusesTestsData   = FungusesTestsData()
-    let microbesTestsData   = MicrobesTestsData()
-    let virusesTestData     = VirusesTestsData()
-    let archaeaTestsData    = ArchaeaTestsData()
-    
     func setFalseAnswers() {
-        plantsTestsData.firstPage_SecondAnswer = isFalse
-        plantsTestsData.secondPage_FirstAnswer = isFalse
-        plantsTestsData.thirdPage_SecondAnswer = isFalse
+        PlantsTestsData.firstPage_SecondAnswer      = isFalse
+        PlantsTestsData.secondPage_FirstAnswer      = isFalse
+        PlantsTestsData.thirdPage_SecondAnswer      = isFalse
         
-        animalsTestsData.firstPage_FirstAnswer   = isFalse
-        animalsTestsData.secondPage_SecondAnswer = isFalse
-        animalsTestsData.thirdPage_FirstAnswer   = isFalse
+        AnimalsTestsData.firstPage_FirstAnswer      = isFalse
+        AnimalsTestsData.secondPage_SecondAnswer    = isFalse
+        AnimalsTestsData.thirdPage_FirstAnswer      = isFalse
         
-        humenTestsData.firstPage_SecondAnswer  = isFalse
-        humenTestsData.secondPage_SecondAnswer = isFalse
-        humenTestsData.thirdPage_FirstAnswer   = isFalse
+        HumenTestsData.firstPage_SecondAnswer       = isFalse
+        HumenTestsData.secondPage_SecondAnswer      = isFalse
+        HumenTestsData.thirdPage_FirstAnswer        = isFalse
         
-        fungusesTestsData.firstPage_SecondAnswer  = isFalse
-        fungusesTestsData.secondPage_SecondAnswer = isFalse
-        fungusesTestsData.thirdPage_SecondAnswer  = isFalse
+        FungusesTestsData.firstPage_SecondAnswer    = isFalse
+        FungusesTestsData.secondPage_SecondAnswer   = isFalse
+        FungusesTestsData.thirdPage_SecondAnswer    = isFalse
         
-        microbesTestsData.firstPage_FirstAnswer  = isFalse
-        microbesTestsData.secondPage_FirstAnswer = isFalse
-        microbesTestsData.thirdPage_SecondAnswer = isFalse
+        MicrobesTestsData.firstPage_FirstAnswer     = isFalse
+        MicrobesTestsData.secondPage_FirstAnswer    = isFalse
+        MicrobesTestsData.thirdPage_SecondAnswer    = isFalse
         
-        archaeaTestsData.firstPage_SecondAnswer = isFalse
-        archaeaTestsData.secondPage_FirstAnswer = isFalse
-        archaeaTestsData.thirdPage_SecondAnswer = isFalse
+        ArchaeaTestsData.firstPage_SecondAnswer     = isFalse
+        ArchaeaTestsData.secondPage_FirstAnswer     = isFalse
+        ArchaeaTestsData.thirdPage_SecondAnswer     = isFalse
         
-        virusesTestData.firstPage_FirstAnswer  = isFalse
-        virusesTestData.secondPage_FirstAnswer = isFalse
-        virusesTestData.thirdPage_SecondAnswer = isFalse
+        VirusesTestsData.firstPage_FirstAnswer      = isFalse
+        VirusesTestsData.secondPage_FirstAnswer     = isFalse
+        VirusesTestsData.thirdPage_SecondAnswer     = isFalse
     }
 }

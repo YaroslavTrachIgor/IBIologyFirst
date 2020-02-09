@@ -66,8 +66,6 @@ class BasicsViewController: UIViewController {
     private func systemBackPrefering() {
         switchView.viewSystemBack()
         stepperView.viewSystemBack()
-        
-        view.viewSystemBack()
     }
     
     //MARK: Actions
@@ -233,60 +231,8 @@ class BasicsViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if navigationItem.title == "Basics" {
-            fastActivityVC(item: basicsShare)
-            
-        } else if navigationItem.title == "History" {
-            fastActivityVC(item: historyShare)
-            
-        } else if navigationItem.title == "History p. 2" {
-            fastActivityVC(item: history2Share)
-            
-        } else if navigationItem.title == "Cell Theory" {
-            fastActivityVC(item: cellShare)
-            
-        } else if navigationItem.title == "Evolution" {
-            fastActivityVC(item: evolutionShare)
-            
-        } else if navigationItem.title == "Genetics" {
-            fastActivityVC(item: geneticsShare)
-            
-        } else if navigationItem.title == "Structural" {
-            fastActivityVC(item: structularShare)
-            
-        } else if navigationItem.title == "Physiological" {
-            fastActivityVC(item: physiologicalBasics)
-            
-        } else if navigationItem.title == "Evolutionary" {
-            fastActivityVC(item: evolutionaryShare)
-            
-        } else if navigationItem.title == "Systematic" {
-            fastActivityVC(item: systematicShare)
-            
-        } else if navigationItem.title == "Ecological" {
-            fastActivityVC(item: ecologicalShare)
-            
-        } else if navigationItem.title == "Botany" {
-            fastActivityVC(item: botanyShare)
-            
-        } else if navigationItem.title == "Plant biochemistry" {
-            fastActivityVC(item: plantBiochemistryShare)
-            
-        } else if navigationItem.title == "Anatomy" {
-            fastActivityVC(item: anatomyShare)
-            
-        } else if navigationItem.title == "Anatomy Definition" {
-            fastActivityVC(item: anatomyDefinition)
-            
-        } else if navigationItem.title == "Astrobiology" {
-            fastActivityVC(item: astrobiologyShare)
-            
-        } else if navigationItem.title == "Microbiology" {
-            fastActivityVC(item: microbiologyShare)
-            
-        } else {
-            fastActivityVC(item: microbiologyHistoryBasics)
-        }
+        fastActivityVC(item: "\(contentTextView.text!)")
+        
         shareAudio()
     }
     
