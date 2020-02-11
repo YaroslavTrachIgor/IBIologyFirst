@@ -9,43 +9,36 @@
 import Foundation
 
 class TrueAnswers {
-    let plantsTestsData     = PlantsTestsData()
-    let animalsTestsData    = AnimalsTestsData()
-    let humenTestsData      = HumenTestsData()
-    let fungusesTestsData   = FungusesTestsData()
-    let microbesTestsData   = MicrobesTestsData()
-    let virusesTestData     = VirusesTestsData()
-    let archaeaTestsData    = ArchaeaTestsData()
+    let isTrue = "True Answer"
     
     func setFalseAnswers() {
-        let isTrue = "True Answer"
         
-        plantsTestsData.firstPage_FirstAnswer   = isTrue
-        plantsTestsData.secondPage_SecondAnswer = isTrue
-        plantsTestsData.thirdPage_FirstAnswer   = isTrue
+        PlantsTestsData.firstPage_FirstAnswer       = isTrue
+        PlantsTestsData.secondPage_SecondAnswer     = isTrue
+        PlantsTestsData.thirdPage_FirstAnswer       = isTrue
         
-        animalsTestsData.firstPage_SecondAnswer = isTrue
-        animalsTestsData.secondPage_FirstAnswer = isTrue
-        animalsTestsData.thirdPage_SecondAnswer = isTrue
+        AnimalsTestsData.firstPage_SecondAnswer     = isTrue
+        AnimalsTestsData.secondPage_FirstAnswer     = isTrue
+        AnimalsTestsData.thirdPage_SecondAnswer     = isTrue
         
-        humenTestsData.firstPage_FirstAnswer  = isTrue
-        humenTestsData.secondPage_FirstAnswer = isTrue
-        humenTestsData.thirdPage_SecondAnswer = isTrue
+        HumenTestsData.firstPage_FirstAnswer        = isTrue
+        HumenTestsData.secondPage_FirstAnswer       = isTrue
+        HumenTestsData.thirdPage_SecondAnswer       = isTrue
         
-        fungusesTestsData.firstPage_FirstAnswer   = isTrue
-        fungusesTestsData.secondPage_FirstAnswer  = isTrue
-        fungusesTestsData.thirdPage_FirstAnswer   = isTrue
+        FungusesTestsData.firstPage_FirstAnswer     = isTrue
+        FungusesTestsData.secondPage_FirstAnswer    = isTrue
+        FungusesTestsData.thirdPage_FirstAnswer     = isTrue
         
-        microbesTestsData.firstPage_SecondAnswer   = isTrue
-        microbesTestsData.secondPage_SecondAnswer  = isTrue
-        microbesTestsData.thirdPage_FirstAnswer    = isTrue
+        MicrobesTestsData.firstPage_SecondAnswer    = isTrue
+        MicrobesTestsData.secondPage_SecondAnswer   = isTrue
+        MicrobesTestsData.thirdPage_FirstAnswer     = isTrue
         
-        archaeaTestsData.firstPage_FirstAnswer     = isTrue
-        archaeaTestsData.secondPage_SecondAnswer   = isTrue
-        archaeaTestsData.thirdPage_FirstAnswer     = isTrue
+        ArchaeaTestsData.firstPage_FirstAnswer      = isTrue
+        ArchaeaTestsData.secondPage_SecondAnswer    = isTrue
+        ArchaeaTestsData.thirdPage_FirstAnswer      = isTrue
         
-        virusesTestData.firstPage_SecondAnswer  = isTrue
-        virusesTestData.secondPage_SecondAnswer = isTrue
-        virusesTestData.thirdPage_FirstAnswer   = isTrue
+        VirusesTestsData.firstPage_SecondAnswer     = isTrue
+        VirusesTestsData.secondPage_SecondAnswer    = isTrue
+        VirusesTestsData.thirdPage_FirstAnswer      = isTrue
     }
 }

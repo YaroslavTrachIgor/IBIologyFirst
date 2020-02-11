@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var editButton: UIBarButtonItem!
     
     // Edit Back View
-    @IBOutlet weak var editBackView: ContentBack!
+    @IBOutlet weak var editBackView: ContentBack! 
     
     // UIButtons
     @IBOutlet weak var useLoginWithTouch:   UIButton!
@@ -210,9 +210,8 @@ class LoginViewController: UIViewController {
         loginButton.backgroundColor = appleButton.backgroundColor
         loginButton.layer.cornerRadius = appleButton.appleButtonCornerRadius
         loginButton.titleLabel?.font = appleButton.font
-        loginButton.setTitle("Login", for: .normal)
+        loginButton.setTitle("Sign In", for: .normal)
         loginButton.alpha = 0
-        
     }
     
     private func shadowTextViewPrefering() {

@@ -48,6 +48,9 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var videoPlayerVCShowerButtonBackView:   ChromistaActionButtonsBack!
+    @IBOutlet weak var readingOnTimeVCShowerButtonBackView: ChromistaActionButtonsBack!
+    
     private let searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
@@ -84,6 +87,19 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
                 let alpha: CGFloat = 1
                 
                 views?.alpha = alpha
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    let buttons = [self.videoPlayerVCShowerButtonBackView, self.readingOnTimeVCShowerButtonBackView]
+                    
+                    for (index, buttons) in buttons.enumerated() {
+                        let delay: Double = Double((index)) * 0.2
+                        
+                        UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+        
+                            buttons?.alpha = alpha
+                        })
+                    }
+                }
             })
         }
     }
@@ -140,8 +156,6 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     private func refreshControlPrefering() {
         scrollView.refreshControl = settingsRefreshControl
     }
-    
-    
 }
 
 extension ArticelsViewController: UISearchResultsUpdating {

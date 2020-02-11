@@ -189,7 +189,7 @@
             </objects>
             <point key="canvasLocation" x="-3274.4000000000001" y="-2.2488755622188905"/>
         </scene>
-        <!--Login-->
+        <!--Sign In-->
         <scene sceneID="hHq-8k-24d">
             <objects>
                 <viewController id="9US-Hu-q97" customClass="LoginViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
@@ -257,7 +257,7 @@
                                     <constraint firstAttribute="height" constant="38" id="6O3-Jk-KAf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="loginButton:" destination="9US-Hu-q97" eventType="touchUpInside" id="Dfa-T3-Hob"/>
                                 </connections>
@@ -304,7 +304,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DM2-Cx-YdX"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Login" id="PRy-w9-XXL">
+                    <navigationItem key="navigationItem" title="Sign In" id="PRy-w9-XXL">
                         <leftBarButtonItems>
                             <barButtonItem id="xVP-ed-qrW"/>
                             <barButtonItem systemItem="edit" id="CYp-CU-H2u">

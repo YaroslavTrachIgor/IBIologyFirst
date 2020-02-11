@@ -39,6 +39,10 @@ class TestsMenuViewController: UIViewController {
     @IBOutlet weak var fungusesLabel:   TestIconLabel!
     @IBOutlet weak var archaeaLabel:    TestIconLabel!
     
+    // Info Button
+    @IBOutlet weak var infoButton:     UIButton!
+    @IBOutlet weak var infoButtonBack: ChromistaActionButtonsBack!
+    
     // UIScrollView
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -57,13 +61,15 @@ class TestsMenuViewController: UIViewController {
         return text.isEmpty
     }
     
-    let plantsName      = Notification.Name(rawValue: TestViewKeys.plantsViewKey)
-    let archaeaName     = Notification.Name(rawValue: TestViewKeys.archaeaViewKey)
-    let animalsName     = Notification.Name(rawValue: TestViewKeys.animalsViewKey)
-    let humenName       = Notification.Name(rawValue: TestViewKeys.humanViewKey)
-    let virusesName     = Notification.Name(rawValue: TestViewKeys.virusesViewKey)
-    let microbesName    = Notification.Name(rawValue: TestViewKeys.microbesViewKey)
-    let fungusesName    = Notification.Name(rawValue: TestViewKeys.fungusesViewKey)
+    struct Names {
+        static let plantsName      = Notification.Name(rawValue: TestViewKeys.plantsViewKey)
+        static let archaeaName     = Notification.Name(rawValue: TestViewKeys.archaeaViewKey)
+        static let animalsName     = Notification.Name(rawValue: TestViewKeys.animalsViewKey)
+        static let humenName       = Notification.Name(rawValue: TestViewKeys.humanViewKey)
+        static let virusesName     = Notification.Name(rawValue: TestViewKeys.virusesViewKey)
+        static let microbesName    = Notification.Name(rawValue: TestViewKeys.microbesViewKey)
+        static let fungusesName    = Notification.Name(rawValue: TestViewKeys.fungusesViewKey)
+    }
     
     let viewAlphaAfterObserver: CGFloat = 0.8
     
@@ -81,7 +87,7 @@ class TestsMenuViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let views = [plantsView, animalsView, humanView, microbesView, virusesView, archaeaView, fungusesView]
+        let views = [plantsView, animalsView, humanView, microbesView, virusesView, archaeaView, fungusesView, infoButtonBack]
         
         for (index, view) in views.enumerated() {
             let delay: Double = Double((index)) * 0.2
@@ -97,27 +103,27 @@ class TestsMenuViewController: UIViewController {
     private func createObservers() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(TestsMenuViewController.plantsViewAlphaUpdate(notification:)),
-                                               name: plantsName,
+                                               name: Names.plantsName,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(TestsMenuViewController.archaeaViewAlphaUpdate(notification:)),
-                                               name: archaeaName,
+                                               name: Names.archaeaName,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(TestsMenuViewController.animalsViewAlphaUpdate(notification:)),
-                                               name: animalsName,
+                                               name: Names.animalsName,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(TestsMenuViewController.humenViewAlphaUpdate(notification:)),
-                                               name: humenName,
+                                               name: Names.humenName,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(TestsMenuViewController.virusesViewAlphaUpdate(notification:)),
-                                               name: virusesName,
+                                               name: Names.virusesName,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(TestsMenuViewController.fungusesViewAlphaUpdate(notification:)),
-                                               name: fungusesName,
+                                               name: Names.fungusesName,
                                                object: nil)
     }
     

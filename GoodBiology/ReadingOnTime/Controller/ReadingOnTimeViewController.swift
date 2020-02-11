@@ -10,9 +10,17 @@ import UIKit
 
 class ReadingOnTimeViewController: UIViewController {
 
+    // @IBOutlets
     @IBOutlet weak var buttonsBackView: ContentBack! {
         didSet {
             buttonsBackView.alpha = 0
+            
+            buttonsBackView.layer.shadowColor = #colorLiteral(red: 0.02475117366, green: 0.39891678, blue: 0.1420775023, alpha: 1)
+            buttonsBackView.layer.shadowRadius = 30
+            
+            buttonsBackView.backgroundColor = #colorLiteral(red: 0.0197426653, green: 0.3181942229, blue: 0.1133274976, alpha: 1)
+            
+            buttonsBackView.layer.cornerRadius = 12
         }
     }
     
@@ -20,10 +28,14 @@ class ReadingOnTimeViewController: UIViewController {
     @IBOutlet weak var contentTextView:      UITextView!
     @IBOutlet weak var contentBackground:    UIView!
     
-    @IBOutlet weak var startButton:          UIButton!
-    @IBOutlet weak var stopButton:           UIButton!
-    @IBOutlet weak var resetButton:          UIButton!
-    @IBOutlet weak var newArticleButton:     UIButton!
+    @IBOutlet weak var startButton:          ReadingOnTimeViewControllerControllButton!
+    @IBOutlet weak var stopButton:           ReadingOnTimeViewControllerControllButton!
+    @IBOutlet weak var resetButton:          ReadingOnTimeViewControllerControllButton!
+    @IBOutlet weak var newArticleButton: UIButton! {
+        didSet {
+            newArticleButton.fastButtonCostomizing(background: lazyColor, titleColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), title: "New Article", corner: 16, borderWidth: 4)
+        }
+    }
     
     @IBOutlet weak var shareButton:          UIBarButtonItem!
     
@@ -40,18 +52,16 @@ class ReadingOnTimeViewController: UIViewController {
         basicView()
         basicUIobjectsAlphaPrefering(alpha: 0)
         systemBackground()
-        
-        /// ReadingOnTimeButtosnProtocol
-        preferingButtons()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let objectsArray = [resultLabel ,contentBackground, buttonsBackView, contentTextView, startButton, stopButton, resetButton, newArticleButton]
+        let objectsArray = [resultLabel ,contentBackground, buttonsBackView, contentTextView, startButton, resetButton, stopButton, newArticleButton]
         
         for (index, objects) in objectsArray.enumerated() {
             let delay: Double = Double((index)) * 0.3
             
             UIView.animate(withDuration: 0.297, delay: delay, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveLinear, animations: {
+                
                 objects?.alpha = 1
             })
         }
@@ -64,12 +74,6 @@ class ReadingOnTimeViewController: UIViewController {
             UIApplication.shared.keyWindow?.tintColor = lazyColor
         
         self.present(activityVC, animated: true, completion: nil)
-    }
-    
-    private func preferingButtons() {
-        
-        //ReadingOnTimeButtonDelegate
-        buttonStyle()
     }
     
     private func systemBackground() {
@@ -146,35 +150,5 @@ class ReadingOnTimeViewController: UIViewController {
         startButton.alpha     = alpha
         
         contentTextView.text = ReadingOnTimeViewController.articles.randomElement()
-    }
-}
-
-extension ReadingOnTimeViewController: ReadingOnTimeButtosnProtocol {
-    func buttonStyle() {
-        cornerRadius = 14
-        
-        startButton.fastButtonCostomizing(background: ReadingOnTimeStyleVaribles.backColor,
-                                          titleColor: ReadingOnTimeStyleVaribles.titleColor,
-                                          title: "Start",
-                                          corner: Float(cornerRadius),
-                                          borderWidth: Float(ReadingOnTimeStyleVaribles.border))
-        
-        stopButton.fastButtonCostomizing(background: ReadingOnTimeStyleVaribles.backColor,
-                                         titleColor: ReadingOnTimeStyleVaribles.titleColor,
-                                         title: "Stop",
-                                         corner: Float(cornerRadius),
-                                         borderWidth: Float(ReadingOnTimeStyleVaribles.border))
-        
-        resetButton.fastButtonCostomizing(background: ReadingOnTimeStyleVaribles.backColor,
-                                          titleColor: ReadingOnTimeStyleVaribles.titleColor,
-                                          title: "Reset",
-                                          corner: Float(cornerRadius),
-                                          borderWidth: Float(ReadingOnTimeStyleVaribles.border))
-        
-        newArticleButton.fastButtonCostomizing(background: ReadingOnTimeStyleVaribles.backColor,
-                                               titleColor: ReadingOnTimeStyleVaribles.titleColor,
-                                               title: "New Article",
-                                               corner: Float(cornerRadius),
-                                               borderWidth: Float(ReadingOnTimeStyleVaribles.border))
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wAR-lS-idm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wAR-lS-idm">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -484,12 +484,35 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kk0-oD-Ild" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="23" width="40" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQ5-B9-l3k">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" image="info.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <segue destination="JLE-8Y-8UZ" kind="show" id="ceE-El-55S"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="H3f-c4-8Xd"/>
+                                            <constraint firstAttribute="trailing" secondItem="nQ5-B9-l3k" secondAttribute="trailing" id="MXg-mH-oJn"/>
+                                            <constraint firstItem="nQ5-B9-l3k" firstAttribute="leading" secondItem="Kk0-oD-Ild" secondAttribute="leading" id="WHR-bk-Q4K"/>
+                                            <constraint firstItem="nQ5-B9-l3k" firstAttribute="top" secondItem="Kk0-oD-Ild" secondAttribute="top" id="eYH-kb-sxO"/>
+                                            <constraint firstAttribute="bottom" secondItem="nQ5-B9-l3k" secondAttribute="bottom" id="l2d-Ov-wIo"/>
+                                            <constraint firstAttribute="width" constant="40" id="o0Y-QW-28x"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aDN-4G-3cI" firstAttribute="leading" secondItem="Ntu-NO-MKR" secondAttribute="leading" constant="13" id="0Rd-Fz-rGJ"/>
                                     <constraint firstAttribute="trailing" secondItem="aDN-4G-3cI" secondAttribute="trailing" constant="15" id="1Db-4A-v1L"/>
                                     <constraint firstItem="aDN-4G-3cI" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="1GO-zx-drU"/>
                                     <constraint firstItem="JjX-QS-b7I" firstAttribute="leading" secondItem="Ntu-NO-MKR" secondAttribute="leading" constant="15" id="4v2-Um-fFl"/>
+                                    <constraint firstItem="Kk0-oD-Ild" firstAttribute="top" secondItem="Ntu-NO-MKR" secondAttribute="top" constant="23" id="6Jh-dI-a4k"/>
                                     <constraint firstItem="JjX-QS-b7I" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="ALG-Nx-JEB"/>
                                     <constraint firstAttribute="trailing" secondItem="mXh-Vt-6lE" secondAttribute="trailing" constant="15" id="D8C-BE-sod"/>
                                     <constraint firstItem="aDN-4G-3cI" firstAttribute="top" secondItem="9kg-hf-i6h" secondAttribute="bottom" constant="8" id="DKv-oQ-rGh"/>
@@ -498,6 +521,7 @@
                                     <constraint firstItem="lnX-LA-y1C" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="MhK-wC-Dwl"/>
                                     <constraint firstItem="aDN-4G-3cI" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="Q2Q-K5-65g"/>
                                     <constraint firstAttribute="trailing" secondItem="lnX-LA-y1C" secondAttribute="trailing" constant="15" id="S2O-cd-vsz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kk0-oD-Ild" secondAttribute="trailing" constant="23" id="SdH-1M-pSX"/>
                                     <constraint firstItem="kEH-bV-2yo" firstAttribute="top" secondItem="rRb-PF-t40" secondAttribute="bottom" constant="8" id="Tjc-Z9-wS4"/>
                                     <constraint firstItem="kEH-bV-2yo" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="UQg-cE-g2H"/>
                                     <constraint firstItem="rRb-PF-t40" firstAttribute="top" secondItem="JjX-QS-b7I" secondAttribute="bottom" constant="8" id="UmV-D5-ZPV"/>
@@ -535,20 +559,12 @@
                                 <action selector="shareButton:" destination="U6D-Xt-23j" id="jBy-VU-cwL"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem title="Item" image="online_support" id="N8b-v3-huU">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <segue destination="6GB-AH-viY" kind="show" id="fZz-HV-sgN"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="info.circle" catalog="system" id="JMO-iB-HIn">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <segue destination="JLE-8Y-8UZ" kind="show" id="lys-r1-QlC"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="online_support" id="N8b-v3-huU">
+                            <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="6GB-AH-viY" kind="show" id="fZz-HV-sgN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="375" height="800"/>
                     <connections>
@@ -562,6 +578,8 @@
                         <outlet property="fungusesView" destination="kEH-bV-2yo" id="kxx-yN-4mK"/>
                         <outlet property="humanLabel" destination="o5k-Ob-PjP" id="Uh2-RM-pcy"/>
                         <outlet property="humanView" destination="aDN-4G-3cI" id="WuY-0P-rha"/>
+                        <outlet property="infoButton" destination="nQ5-B9-l3k" id="Ok8-lX-xJh"/>
+                        <outlet property="infoButtonBack" destination="Kk0-oD-Ild" id="kfd-bz-9gX"/>
                         <outlet property="manTextView" destination="Rbs-oy-yvt" id="Qx8-7S-YT9"/>
                         <outlet property="microbesLabel" destination="aak-qI-EwU" id="VQe-cP-bJZ"/>
                         <outlet property="microbesTextView" destination="cgl-5Y-qrd" id="u8D-HY-HH8"/>
@@ -5157,6 +5175,7 @@
         <image name="icons8-right_4-2" width="25" height="25"/>
         <image name="icons8-text_height_filled" width="25" height="25"/>
         <image name="info.circle" catalog="system" width="64" height="60"/>
+        <image name="info.circle.fill" catalog="system" width="64" height="60"/>
         <image name="online_support" width="30" height="30"/>
         <image name="textformat.size" catalog="system" width="64" height="40"/>
     </resources>

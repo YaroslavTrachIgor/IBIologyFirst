@@ -10,11 +10,11 @@ import Foundation
 import UIKit
 
 class ReadingOnTimeStyleVaribles {
-    static var backColor  = lazyColor
-    static var titleColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-    static var border     = 3.5
-}
-
-protocol ReadingOnTimeButtosnProtocol {
-    func buttonStyle()
+    let appleButton = AppleButtonSettings()
+    
+    // Colors for Control Buttons
+    static var textColor    = lazyColor
+    static var shadowColor  = UIColor.white
+    
+    static var shadowRadius: CGFloat = 5
 }
