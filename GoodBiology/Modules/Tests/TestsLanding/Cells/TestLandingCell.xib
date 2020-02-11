@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="84" id="XG1-rP-5z3" customClass="TestLandingCell" customModule="GoodBiology" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="423" height="84"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XG1-rP-5z3" id="pCL-gG-1Gm">
+                <rect key="frame" x="0.0" y="0.0" width="423" height="84"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTi-DF-ELh" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="423" height="83"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plants Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev4-aa-pjf" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="8" y="4" width="407" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Interesting and hard test about Plants" translatesAutoresizingMaskIntoConstraints="NO" id="m1j-2O-S3y">
+                                <rect key="frame" x="8" y="44" width="407" height="31"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="83" id="JIV-hM-mNq"/>
+                            <constraint firstAttribute="trailing" secondItem="ev4-aa-pjf" secondAttribute="trailing" constant="8" id="QpH-tv-lTR"/>
+                            <constraint firstItem="m1j-2O-S3y" firstAttribute="leading" secondItem="MTi-DF-ELh" secondAttribute="leading" constant="8" id="VJb-Mi-l2y"/>
+                            <constraint firstItem="ev4-aa-pjf" firstAttribute="top" secondItem="MTi-DF-ELh" secondAttribute="top" constant="4" id="a6y-3T-omP"/>
+                            <constraint firstAttribute="trailing" secondItem="m1j-2O-S3y" secondAttribute="trailing" constant="8" id="j0d-Jg-Tq1"/>
+                            <constraint firstItem="ev4-aa-pjf" firstAttribute="leading" secondItem="MTi-DF-ELh" secondAttribute="leading" constant="8" id="kMj-lV-Aqf"/>
+                            <constraint firstAttribute="bottom" secondItem="m1j-2O-S3y" secondAttribute="bottom" constant="8" id="o8H-lN-UV8"/>
+                            <constraint firstItem="m1j-2O-S3y" firstAttribute="top" secondItem="ev4-aa-pjf" secondAttribute="bottom" constant="7" id="svd-Be-ElF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="MTi-DF-ELh" secondAttribute="bottom" id="7kA-QX-U4a"/>
+                    <constraint firstAttribute="trailing" secondItem="MTi-DF-ELh" secondAttribute="trailing" id="LTr-Vg-Www"/>
+                    <constraint firstItem="MTi-DF-ELh" firstAttribute="leading" secondItem="pCL-gG-1Gm" secondAttribute="leading" id="U2R-YS-LVt"/>
+                    <constraint firstItem="MTi-DF-ELh" firstAttribute="top" secondItem="pCL-gG-1Gm" secondAttribute="top" id="fAO-mS-zqi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descrtiptionTextView" destination="m1j-2O-S3y" id="qHX-Kr-d66"/>
+                <outlet property="titleLabel" destination="ev4-aa-pjf" id="vNp-oH-PSV"/>
+            </connections>
+            <point key="canvasLocation" x="832.60869565217399" y="131.25"/>
+        </tableViewCell>
+    </objects>
+</document>

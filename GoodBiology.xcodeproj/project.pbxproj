@@ -164,6 +164,20 @@
 		C4EE987C23EC6D1B00FBF1E1 /* TestIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE987B23EC6D1B00FBF1E1 /* TestIconLabel.swift */; };
 		C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE987D23EC6D5200FBF1E1 /* TestIconBackView.swift */; };
 		C4FB6D3921B7D7EE00E4FD63 /* PlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */; };
+		CF8F8B6923EF896700A56F7F /* TestsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F8B6823EF896700A56F7F /* TestsRouter.swift */; };
+		CF8F8B6C23EF8B0800A56F7F /* TestsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F8B6B23EF8B0800A56F7F /* TestsDataManager.swift */; };
+		CF8F8B6E23EF8B5900A56F7F /* TestsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8F8B6D23EF8B5900A56F7F /* TestsModels.swift */; };
+		CF937CBB23EFBBFE00759EB4 /* TestLandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF937CBA23EFBBFE00759EB4 /* TestLandingPresenter.swift */; };
+		CF937CBD23EFBC0800759EB4 /* TestLandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF937CBC23EFBC0800759EB4 /* TestLandingController.swift */; };
+		CF937CBF23EFBC1400759EB4 /* TestLandingFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF937CBE23EFBC1400759EB4 /* TestLandingFormatter.swift */; };
+		CF937CC123EFBC8D00759EB4 /* TestLandingModelsForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF937CC023EFBC8D00759EB4 /* TestLandingModelsForUI.swift */; };
+		CF937CCF23F108E500759EB4 /* TestLandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF937CCE23F108E500759EB4 /* TestLandingCell.swift */; };
+		CF937CD123F108F300759EB4 /* TestLandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF937CD023F108F300759EB4 /* TestLandingCell.xib */; };
+		CFB8B57C23F27A46006C8F3E /* TestLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB8B57B23F27A46006C8F3E /* TestLandingController.xib */; };
+		CFB8B58023F27B37006C8F3E /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8B57F23F27B37006C8F3E /* UIExtensions.swift */; };
+		CFB8B58223F27BF9006C8F3E /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8B58123F27BF9006C8F3E /* NSObjectExtension.swift */; };
+		CFB8B58523F27E90006C8F3E /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8B58423F27E90006C8F3E /* BaseController.swift */; };
+		CFB8B58823F27FF7006C8F3E /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8B58723F27FF7006C8F3E /* AppRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -443,6 +457,20 @@
 		C4EE987B23EC6D1B00FBF1E1 /* TestIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIconLabel.swift; sourceTree = "<group>"; };
 		C4EE987D23EC6D5200FBF1E1 /* TestIconBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIconBackView.swift; sourceTree = "<group>"; };
 		C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsViewController.swift; sourceTree = "<group>"; };
+		CF8F8B6823EF896700A56F7F /* TestsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsRouter.swift; sourceTree = "<group>"; };
+		CF8F8B6B23EF8B0800A56F7F /* TestsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsDataManager.swift; sourceTree = "<group>"; };
+		CF8F8B6D23EF8B5900A56F7F /* TestsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsModels.swift; sourceTree = "<group>"; };
+		CF937CBA23EFBBFE00759EB4 /* TestLandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingPresenter.swift; sourceTree = "<group>"; };
+		CF937CBC23EFBC0800759EB4 /* TestLandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingController.swift; sourceTree = "<group>"; };
+		CF937CBE23EFBC1400759EB4 /* TestLandingFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingFormatter.swift; sourceTree = "<group>"; };
+		CF937CC023EFBC8D00759EB4 /* TestLandingModelsForUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingModelsForUI.swift; sourceTree = "<group>"; };
+		CF937CCE23F108E500759EB4 /* TestLandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCell.swift; sourceTree = "<group>"; };
+		CF937CD023F108F300759EB4 /* TestLandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLandingCell.xib; sourceTree = "<group>"; };
+		CFB8B57B23F27A46006C8F3E /* TestLandingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLandingController.xib; sourceTree = "<group>"; };
+		CFB8B57F23F27B37006C8F3E /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		CFB8B58123F27BF9006C8F3E /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		CFB8B58423F27E90006C8F3E /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		CFB8B58723F27FF7006C8F3E /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1377,6 +1405,8 @@
 		C4E5E23321975BE4009C3062 /* GoodBiology */ = {
 			isa = PBXGroup;
 			children = (
+				CFB8B57D23F27B23006C8F3E /* Common */,
+				CF8F8B6223EF890300A56F7F /* Modules */,
 				8468332423A44727004CBFC8 /* GoodBiology.entitlements */,
 				84CDB5CA2220B0AA002432F7 /* AppDelegate */,
 				C4FA2D1F21FCD7F40023B655 /* Basic Functions */,
@@ -1471,6 +1501,114 @@
 				C496AE2021C59B0B00413CB4 /* BiologyControllers */,
 			);
 			path = "Biology Models";
+			sourceTree = "<group>";
+		};
+		CF8F8B6223EF890300A56F7F /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CF8F8B6323EF891A00A56F7F /* Tests */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CF8F8B6323EF891A00A56F7F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CF8F8B6A23EF899200A56F7F /* Model */,
+				CF8F8B6823EF896700A56F7F /* TestsRouter.swift */,
+				CF8F8B6423EF892400A56F7F /* TestsLanding */,
+				CF8F8B6523EF893000A56F7F /* Quiz */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CF8F8B6423EF892400A56F7F /* TestsLanding */ = {
+			isa = PBXGroup;
+			children = (
+				CF937CCD23F108D500759EB4 /* Cells */,
+				CF8F8B6723EF894600A56F7F /* Views */,
+				CF8F8B6623EF893700A56F7F /* Models */,
+				CF937CBA23EFBBFE00759EB4 /* TestLandingPresenter.swift */,
+				CF937CBC23EFBC0800759EB4 /* TestLandingController.swift */,
+				CFB8B57B23F27A46006C8F3E /* TestLandingController.xib */,
+				CF937CBE23EFBC1400759EB4 /* TestLandingFormatter.swift */,
+			);
+			path = TestsLanding;
+			sourceTree = "<group>";
+		};
+		CF8F8B6523EF893000A56F7F /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		CF8F8B6623EF893700A56F7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CF937CC023EFBC8D00759EB4 /* TestLandingModelsForUI.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CF8F8B6723EF894600A56F7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CF8F8B6A23EF899200A56F7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF8F8B6B23EF8B0800A56F7F /* TestsDataManager.swift */,
+				CF8F8B6D23EF8B5900A56F7F /* TestsModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF937CCD23F108D500759EB4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CF937CCE23F108E500759EB4 /* TestLandingCell.swift */,
+				CF937CD023F108F300759EB4 /* TestLandingCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		CFB8B57D23F27B23006C8F3E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8B58623F27FE4006C8F3E /* AppRouter */,
+				CFB8B58323F27E73006C8F3E /* BaseClasses */,
+				CFB8B57E23F27B29006C8F3E /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CFB8B57E23F27B29006C8F3E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8B57F23F27B37006C8F3E /* UIExtensions.swift */,
+				CFB8B58123F27BF9006C8F3E /* NSObjectExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CFB8B58323F27E73006C8F3E /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8B58423F27E90006C8F3E /* BaseController.swift */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		CFB8B58623F27FE4006C8F3E /* AppRouter */ = {
+			isa = PBXGroup;
+			children = (
+				CFB8B58723F27FF7006C8F3E /* AppRouter.swift */,
+			);
+			path = AppRouter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1807,7 +1945,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C458BD5E23AE4B6A00D1F108 /* Podfile in Resources */,
+				CF937CD123F108F300759EB4 /* TestLandingCell.xib in Resources */,
 				C4E5E24121975BE5009C3062 /* LaunchScreen.storyboard in Resources */,
+				CFB8B57C23F27A46006C8F3E /* TestLandingController.xib in Resources */,
 				8454DD9B221323CD0033A3A2 /* AboutAppStoryBoard.storyboard in Resources */,
 				84CDB5CD2221371D002432F7 /* ForToday.storyboard in Resources */,
 				8454DD99221323640033A3A2 /* Browser.storyboard in Resources */,
@@ -1892,11 +2032,13 @@
 				8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */,
 				84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */,
 				8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */,
+				CF937CBF23EFBC1400759EB4 /* TestLandingFormatter.swift in Sources */,
 				842D690D23C29D24009CF7E7 /* HelpButton.swift in Sources */,
 				848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */,
 				8446583E23BFF6EF00DC316E /* HumenTestsData.swift in Sources */,
 				84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */,
 				84A78C6423ED682A002FEADF /* StepperView.swift in Sources */,
+				CFB8B58523F27E90006C8F3E /* BaseController.swift in Sources */,
 				8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */,
 				840FB81223BA20C70081DE59 /* TextView.swift in Sources */,
 				84A78C7623EF006C002FEADF /* MKMapViewDelegate.swift in Sources */,
@@ -1915,8 +2057,10 @@
 				C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */,
 				C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */,
 				84A78C7223EEFFA0002FEADF /* UISearchBarDelegate.swift in Sources */,
+				CF8F8B6C23EF8B0800A56F7F /* TestsDataManager.swift in Sources */,
 				C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */,
 				84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */,
+				CF937CCF23F108E500759EB4 /* TestLandingCell.swift in Sources */,
 				848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */,
 				842D692223C6CD9C009CF7E7 /* BiologyBackView.swift in Sources */,
 				842D691323C4299C009CF7E7 /* ContactButton.swift in Sources */,
@@ -1937,9 +2081,11 @@
 				C4FB6D3921B7D7EE00E4FD63 /* PlantsViewController.swift in Sources */,
 				C40D3D6521B81878009A0211 /* ArchaeaViewController.swift in Sources */,
 				C496AE6B21C93DA400413CB4 /* NotificationsFunctions.swift in Sources */,
+				CF937CBB23EFBBFE00759EB4 /* TestLandingPresenter.swift in Sources */,
 				AAEC22D221C679E900FF69FE /* BasicsViewController.swift in Sources */,
 				8446584423BFFE9900DC316E /* VirusesTestsData.swift in Sources */,
 				840FB81B23BA6D1E0081DE59 /* BarButtonItem.swift in Sources */,
+				CF8F8B6E23EF8B5900A56F7F /* TestsModels.swift in Sources */,
 				C4C7231521B9ACA900F64612 /* MicrobesViewController.swift in Sources */,
 				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
 				84A78C6923ED6893002FEADF /* ContentBack.swift in Sources */,
@@ -1948,6 +2094,7 @@
 				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
 				C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */,
+				CFB8B58823F27FF7006C8F3E /* AppRouter.swift in Sources */,
 				8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */,
 				84A78C6E23EE085F002FEADF /* UIPickerViewDelegate.swift in Sources */,
 				84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */,
@@ -1959,6 +2106,7 @@
 				8446584223BFF95A00DC316E /* MicrobesTestsData.swift in Sources */,
 				84B2BD88222BDCEA00BA41C9 /* VirusesData.swift in Sources */,
 				C43B125E21A8ABEE00D58C44 /* ButtonsAnimations.swift in Sources */,
+				CFB8B58023F27B37006C8F3E /* UIExtensions.swift in Sources */,
 				847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */,
 				8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */,
 				840FB81423BA3F970081DE59 /* TestButtons.swift in Sources */,
@@ -1988,6 +2136,7 @@
 				AA2C423421C842F500D1E680 /* BasicsCoordinator.swift in Sources */,
 				84C7AAEA223C4CDF00A7CF68 /* BiologyShareData.swift in Sources */,
 				C4CEC54C225200FE005BA8C6 /* BasicNotificationThings.swift in Sources */,
+				CF937CC123EFBC8D00759EB4 /* TestLandingModelsForUI.swift in Sources */,
 				84B9050223201E810002F0E2 /* BasicTestWords.swift in Sources */,
 				8497E34623566495003CD4A9 /* SystemColors.swift in Sources */,
 				842D692B23C80202009CF7E7 /* RefreshControl.swift in Sources */,
@@ -1995,12 +2144,15 @@
 				C4C7231721B9B08900F64612 /* MushroomsViewController.swift in Sources */,
 				C43B126A21AB22DC00D58C44 /* ForTodayViewController.swift in Sources */,
 				842D691F23C69D01009CF7E7 /* BasicSearchController.swift in Sources */,
+				CF8F8B6923EF896700A56F7F /* TestsRouter.swift in Sources */,
 				8446584623C00F2B00DC316E /* ArchaeaTestsData.swift in Sources */,
 				C47CAD6721D0E42F00E27E88 /* TestViewController.swift in Sources */,
+				CFB8B58223F27BF9006C8F3E /* NSObjectExtension.swift in Sources */,
 				840887B421F763810026A210 /* BiologyNotifications.swift in Sources */,
 				8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */,
 				840FB81723BA46050081DE59 /* TestView.swift in Sources */,
 				C4D9616523D2B56800C0ED57 /* ASAuthorizationController.swift in Sources */,
+				CF937CBD23EFBC0800759EB4 /* TestLandingController.swift in Sources */,
 				84A78C7023EE0902002FEADF /* UIPickerViewDataSource.swift in Sources */,
 				842D691B23C545FA009CF7E7 /* ArticleView.swift in Sources */,
 				C4E5E23521975BE4009C3062 /* AppDelegate.swift in Sources */,
