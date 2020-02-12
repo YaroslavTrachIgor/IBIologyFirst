@@ -49,7 +49,7 @@ extension ForTodayViewController: UIPickerViewDelegate {
             label = UILabel()
         }
         
-        label.textColor     = .darkGray
+        label.textColor     = UIColor.white
         label.font          = UIFont(name: "AvenirNext-Medium", size: 21)
         label.textAlignment = .center
         label.text          = articlesExamplesArray[row]
