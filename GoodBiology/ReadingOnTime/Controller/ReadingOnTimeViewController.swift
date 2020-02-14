@@ -11,14 +11,14 @@ import UIKit
 class ReadingOnTimeViewController: UIViewController {
 
     // @IBOutlets
-    @IBOutlet weak var buttonsBackView: ContentBack! {
+    @IBOutlet weak var buttonsBackView: UIView! {
         didSet {
             buttonsBackView.alpha = 0
             
             buttonsBackView.layer.shadowColor = #colorLiteral(red: 0.02475117366, green: 0.39891678, blue: 0.1420775023, alpha: 1)
             buttonsBackView.layer.shadowRadius = 30
             
-            buttonsBackView.backgroundColor = #colorLiteral(red: 0.0197426653, green: 0.3181942229, blue: 0.1133274976, alpha: 1)
+            buttonsBackView.backgroundColor = lazyColor
             
             buttonsBackView.layer.cornerRadius = 12
         }
@@ -39,6 +39,7 @@ class ReadingOnTimeViewController: UIViewController {
     
     @IBOutlet weak var shareButton:          UIBarButtonItem!
     
+    // Private
     private let alpha = CGFloat(1)
     
     private var timer = Timer()

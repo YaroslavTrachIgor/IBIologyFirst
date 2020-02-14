@@ -36,7 +36,7 @@
 		84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4A222C529D00F11996 /* ArchaeaData.swift */; };
 		84408E4D222C5F7100F11996 /* ManData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4C222C5F7100F11996 /* ManData.swift */; };
 		8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */; };
-		8446582023BC0A5200DC316E /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* Buttons.swift */; };
+		8446582023BC0A5200DC316E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* UIButton.swift */; };
 		8446582823BD59E200DC316E /* iOSGoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */; };
 		8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583323BFF44A00DC316E /* PlantsTestsData.swift */; };
 		8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583623BFF5E900DC316E /* FalseAnswers.swift */; };
@@ -98,6 +98,20 @@
 		84A3AFA123F37D9700836400 /* ForTodayViewControllerMailComposerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AF9F23F37D9700836400 /* ForTodayViewControllerMailComposerProtocol.swift */; };
 		84A3AFA323F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFA223F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift */; };
 		84A3AFA423F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFA223F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift */; };
+		84A3AFAD23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFAC23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift */; };
+		84A3AFAE23F382A400836400 /* BasicNotesViewControllerPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFAC23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift */; };
+		84A3AFB023F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFAF23F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift */; };
+		84A3AFB123F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFAF23F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift */; };
+		84A3AFB623F6140A00836400 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFB323F6140900836400 /* ShadowView.swift */; };
+		84A3AFB723F6140A00836400 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFB423F6140900836400 /* Stroke.swift */; };
+		84A3AFB823F6140A00836400 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFB523F6140900836400 /* DrawView.swift */; };
+		84A3AFBB23F6190700836400 /* DrawNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFBA23F6190700836400 /* DrawNotesViewController.swift */; };
+		84A3AFBE23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFBD23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift */; };
+		84A3AFC023F6B09200836400 /* BasicsViewControllerInfoSwitchActionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFBF23F6B09200836400 /* BasicsViewControllerInfoSwitchActionProtocol.swift */; };
+		84A3AFC223F6B0BB00836400 /* ArticlesViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFC123F6B0BB00836400 /* ArticlesViewControllerDelegate.swift */; };
+		84A3AFC423F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFC323F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift */; };
+		84A3AFC623F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFC523F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift */; };
+		84A3AFC823F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFC723F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift */; };
 		84A78C5723ECC542002FEADF /* TestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5623ECC542002FEADF /* TestErrors.swift */; };
 		84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */; };
 		84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */; };
@@ -304,7 +318,7 @@
 		84408E4A222C529D00F11996 /* ArchaeaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaData.swift; sourceTree = "<group>"; };
 		84408E4C222C5F7100F11996 /* ManData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManData.swift; sourceTree = "<group>"; };
 		8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProtocol.swift; sourceTree = "<group>"; };
-		8446581F23BC0A5200DC316E /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		8446581F23BC0A5200DC316E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSGoodBiologyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSGoodBiologyUITests.swift; sourceTree = "<group>"; };
 		8446582923BD59E200DC316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -361,6 +375,18 @@
 		84A3AF9C23F37D2200836400 /* TextErrorsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextErrorsProtocol.swift; sourceTree = "<group>"; };
 		84A3AF9F23F37D9700836400 /* ForTodayViewControllerMailComposerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewControllerMailComposerProtocol.swift; sourceTree = "<group>"; };
 		84A3AFA223F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewControllerStringSaveProtocol.swift; sourceTree = "<group>"; };
+		84A3AFAC23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewControllerPickerViewDelegate.swift; sourceTree = "<group>"; };
+		84A3AFAF23F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewControllerViewSeyupProtocol.swift; sourceTree = "<group>"; };
+		84A3AFB323F6140900836400 /* ShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		84A3AFB423F6140900836400 /* Stroke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stroke.swift; sourceTree = "<group>"; };
+		84A3AFB523F6140900836400 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		84A3AFBA23F6190700836400 /* DrawNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawNotesViewController.swift; sourceTree = "<group>"; };
+		84A3AFBD23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerViewSetupProtocol.swift; sourceTree = "<group>"; };
+		84A3AFBF23F6B09200836400 /* BasicsViewControllerInfoSwitchActionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerInfoSwitchActionProtocol.swift; sourceTree = "<group>"; };
+		84A3AFC123F6B0BB00836400 /* ArticlesViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewControllerDelegate.swift; sourceTree = "<group>"; };
+		84A3AFC323F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerRateFunctionProtocol.swift; sourceTree = "<group>"; };
+		84A3AFC523F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerNotificationSetProtocol.swift; sourceTree = "<group>"; };
+		84A3AFC723F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerFunctionsProtocol.swift; sourceTree = "<group>"; };
 		84A78C5623ECC542002FEADF /* TestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrors.swift; sourceTree = "<group>"; };
 		84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerExtensions.swift; sourceTree = "<group>"; };
 		84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchResultUpdating.swift; sourceTree = "<group>"; };
@@ -671,7 +697,7 @@
 		8446581E23BC0A4100DC316E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8446581F23BC0A5200DC316E /* Buttons.swift */,
+				8446581F23BC0A5200DC316E /* UIButton.swift */,
 				C4D9615F23CE545500C0ED57 /* SomeMoreView.swift */,
 			);
 			path = UI;
@@ -861,13 +887,13 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		8497E3482358E3C5003CD4A9 /* Basic Functions */ = {
+		8497E3482358E3C5003CD4A9 /* Basic  Functions */ = {
 			isa = PBXGroup;
 			children = (
 				C458BD6F23AEBF8700D1F108 /* Other */,
 				C458BD6623AEBEC000D1F108 /* UI Extensions */,
 			);
-			path = "Basic Functions";
+			path = "Basic  Functions";
 			sourceTree = "<group>";
 		};
 		8497E34B2358E494003CD4A9 /* About App Information */ = {
@@ -970,10 +996,11 @@
 		849C38A92353B58B002E007D /* ForToday */ = {
 			isa = PBXGroup;
 			children = (
+				84A3AFB923F6149700836400 /* Data */,
+				84A3AFB223F613E400836400 /* DrawView */,
 				84A78C6C23EE07D4002FEADF /* Extensions */,
 				C447BD3223D8C96A0026F176 /* Errors */,
 				C447BD2F23D8C93F0026F176 /* UI */,
-				84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */,
 				C43B126921AB22DC00D58C44 /* ForTodayViewController.swift */,
 				847A507D2392E4FF00223AC7 /* Blank Sheet */,
 			);
@@ -994,6 +1021,8 @@
 			isa = PBXGroup;
 			children = (
 				84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */,
+				84A3AFAF23F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift */,
+				84A3AFAC23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift */,
 			);
 			path = "Basic Notes";
 			sourceTree = "<group>";
@@ -1054,6 +1083,38 @@
 				84A3AF8A23F2155900836400 /* ControlButton.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		84A3AFB223F613E400836400 /* DrawView */ = {
+			isa = PBXGroup;
+			children = (
+				84A3AFB523F6140900836400 /* DrawView.swift */,
+				84A3AFB323F6140900836400 /* ShadowView.swift */,
+				84A3AFB423F6140900836400 /* Stroke.swift */,
+				84A3AFBA23F6190700836400 /* DrawNotesViewController.swift */,
+			);
+			path = DrawView;
+			sourceTree = "<group>";
+		};
+		84A3AFB923F6149700836400 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		84A3AFBC23F6ADBD00836400 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84A3AFBD23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift */,
+				84A3AFBF23F6B09200836400 /* BasicsViewControllerInfoSwitchActionProtocol.swift */,
+				84A3AFC123F6B0BB00836400 /* ArticlesViewControllerDelegate.swift */,
+				84A3AFC323F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift */,
+				84A3AFC523F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift */,
+				84A3AFC723F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		84A78C5523ECC525002FEADF /* Test Errors */ = {
@@ -1247,6 +1308,7 @@
 		AAEC22D421C679F900FF69FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84A3AFBC23F6ADBD00836400 /* Extension */,
 				842D692023C6CD88009CF7E7 /* UI */,
 				AAEC22D121C679E900FF69FE /* BasicsViewController.swift */,
 			);
@@ -1445,7 +1507,7 @@
 			children = (
 				8468332423A44727004CBFC8 /* GoodBiology.entitlements */,
 				84CDB5CA2220B0AA002432F7 /* AppDelegate */,
-				C4FA2D1F21FCD7F40023B655 /* Basic Functions */,
+				C4FA2D1F21FCD7F40023B655 /* Basic */,
 				84A15A95236209010069AADE /* Settings */,
 				8476128D21E12FB50010AEAE /* Gradient Extension */,
 				8471F87D21B301E8001AA935 /* Networking */,
@@ -1500,12 +1562,12 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		C4FA2D1F21FCD7F40023B655 /* Basic Functions */ = {
+		C4FA2D1F21FCD7F40023B655 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				8497E3482358E3C5003CD4A9 /* Basic Functions */,
+				8497E3482358E3C5003CD4A9 /* Basic  Functions */,
 			);
-			path = "Basic Functions";
+			path = Basic;
 			sourceTree = "<group>";
 		};
 		C4FE302721A4ADF800E352E1 /* TestViewControllers */ = {
@@ -1947,11 +2009,13 @@
 				84A3AF9823F37B0E00836400 /* ForTodayViewControllerChooseTimeFunctionProtocol.swift in Sources */,
 				84C6FCAE220620A200BCE06D /* AppDelegate.swift in Sources */,
 				84A3AF9B23F37C2900836400 /* ForTodayViewControllerNotificationProcesesSetupProtocol.swift in Sources */,
+				84A3AFB123F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift in Sources */,
 				84A3AF9E23F37D2200836400 /* TextErrorsProtocol.swift in Sources */,
 				84A3AFA423F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift in Sources */,
 				84C6FCC22209FDEF00BCE06D /* BasicsContent.swift in Sources */,
 				84A3AF9523F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift in Sources */,
 				84C6FCBE2209F8AA00BCE06D /* ArticleViewController.swift in Sources */,
+				84A3AFAE23F382A400836400 /* BasicNotesViewControllerPickerViewDelegate.swift in Sources */,
 				84A3AF9223F2E85D00836400 /* ForTodayViewControllerMapSetupProtocol.swift in Sources */,
 				84A3AF8F23F2E75100836400 /* ForTodayTextFieldAndViewSetupProtocol.swift in Sources */,
 				84A3AFA123F37D9700836400 /* ForTodayViewControllerMailComposerProtocol.swift in Sources */,
@@ -1966,7 +2030,9 @@
 				842D691623C42A15009CF7E7 /* ArticlesMenuLabel.swift in Sources */,
 				842D690623C299F9009CF7E7 /* TextViewBackView.swift in Sources */,
 				84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */,
+				84A3AFC823F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift in Sources */,
 				84F5741123F0BCCB00400ED4 /* ChromistaButton.swift in Sources */,
+				84A3AFBB23F6190700836400 /* DrawNotesViewController.swift in Sources */,
 				8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */,
 				84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */,
 				8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */,
@@ -1978,6 +2044,7 @@
 				8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */,
 				84F5741523F0BE3000400ED4 /* ChromistaActionButtonsBack.swift in Sources */,
 				840FB81223BA20C70081DE59 /* TextView.swift in Sources */,
+				84A3AFC223F6B0BB00836400 /* ArticlesViewControllerDelegate.swift in Sources */,
 				84A78C7623EF006C002FEADF /* MKMapViewDelegate.swift in Sources */,
 				84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */,
 				8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */,
@@ -1997,6 +2064,7 @@
 				84A78C7223EEFFA0002FEADF /* UISearchBarDelegate.swift in Sources */,
 				C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */,
 				84F5741723F0C0BF00400ED4 /* ArticlesVCButtonBack.swift in Sources */,
+				84A3AFB623F6140A00836400 /* ShadowView.swift in Sources */,
 				84A3AFA323F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift in Sources */,
 				84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */,
 				848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */,
@@ -2004,6 +2072,7 @@
 				842D691323C4299C009CF7E7 /* ContactButton.swift in Sources */,
 				849C38A82353B121002E007D /* ReadingOnTimeStyleVaribles.swift in Sources */,
 				849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */,
+				84A3AFB723F6140A00836400 /* Stroke.swift in Sources */,
 				C4C7231321B9901100F64612 /* HumanViewVontroller.swift in Sources */,
 				84A3AF8E23F2E75100836400 /* ForTodayTextFieldAndViewSetupProtocol.swift in Sources */,
 				842D690B23C29AD1009CF7E7 /* SettingsTextField.swift in Sources */,
@@ -2013,6 +2082,7 @@
 				841AF1D1235A481D0003A440 /* URLs.swift in Sources */,
 				8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */,
 				8471F87F21B30202001AA935 /* NetworkingViewController.swift in Sources */,
+				84A3AFC423F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift in Sources */,
 				84A78C6723ED686C002FEADF /* TestStepperView.swift in Sources */,
 				84408E4D222C5F7100F11996 /* ManData.swift in Sources */,
 				C463227723AD19D10099083F /* ChomistaViewController.swift in Sources */,
@@ -2027,7 +2097,8 @@
 				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
 				84A78C6923ED6893002FEADF /* ContentBack.swift in Sources */,
 				C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */,
-				8446582023BC0A5200DC316E /* Buttons.swift in Sources */,
+				84A3AFAD23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift in Sources */,
+				8446582023BC0A5200DC316E /* UIButton.swift in Sources */,
 				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
 				84F5741323F0BDEF00400ED4 /* ChromistaLabel.swift in Sources */,
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
@@ -2036,6 +2107,7 @@
 				84A78C6E23EE085F002FEADF /* UIPickerViewDelegate.swift in Sources */,
 				84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */,
 				84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */,
+				84A3AFC623F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift in Sources */,
 				84A3AF9423F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift in Sources */,
 				C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */,
 				84A78C5F23ED6617002FEADF /* UsersViewWithInfoDelegate.swift in Sources */,
@@ -2046,8 +2118,10 @@
 				C43B125E21A8ABEE00D58C44 /* ButtonsAnimations.swift in Sources */,
 				847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */,
 				8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */,
+				84A3AFB823F6140A00836400 /* DrawView.swift in Sources */,
 				84A3AF9A23F37C2900836400 /* ForTodayViewControllerNotificationProcesesSetupProtocol.swift in Sources */,
 				840FB81423BA3F970081DE59 /* TestButtons.swift in Sources */,
+				84A3AFB023F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift in Sources */,
 				8454DDA52214CA300033A3A2 /* PlantsData.swift in Sources */,
 				844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */,
 				AAEC22D821C67A3200FF69FE /* BasicsModel.swift in Sources */,
@@ -2055,12 +2129,14 @@
 				C4C7230F21B968F500F64612 /* AnimalsViewController.swift in Sources */,
 				C458BD7123AEBFD200D1F108 /* UITextView.swift in Sources */,
 				841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */,
+				84A3AFC023F6B09200836400 /* BasicsViewControllerInfoSwitchActionProtocol.swift in Sources */,
 				8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */,
 				84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */,
 				C458BD6C23AEBF2000D1F108 /* Extensions.swift in Sources */,
 				84A3AF9D23F37D2200836400 /* TextErrorsProtocol.swift in Sources */,
 				C458BD7723AEC05E00D1F108 /* UISegmentedControl.swift in Sources */,
 				C458BD6E23AEBF4200D1F108 /* UIActivityIndicatorView.swift in Sources */,
+				84A3AFBE23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift in Sources */,
 				849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */,
 				8446583C23BFF61800DC316E /* AnimalsTestsData.swift in Sources */,
 				8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */,

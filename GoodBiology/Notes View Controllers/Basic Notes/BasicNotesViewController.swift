@@ -26,7 +26,7 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
     @IBOutlet weak var datePickerView:               UIView!
     @IBOutlet weak var dateChooseButton:             UIButton!
     
-    private let array = ["Plants", "Animals", "Microbes", "Fungus", "Man", "Viruses", "Archaeas", "Biology", "Internet", "Nothing"]
+    let articlesArray = ["Plants", "Animals", "Microbes", "Fungus", "Man", "Viruses", "Archaeas", "Biology", "Internet", "Nothing"]
     
     static public var textViewText: String = ""
     
@@ -80,26 +80,6 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
     func setupNavItemTitle() {
         navigationItem.setTitle("Basic Notes", subtitle: "For Today")
         navigationItem.title = ""
-    }
-    
-    private func systemColorsPrefering() {
-        datePickerView.viewSystemBack()
-        pickerView.viewSystemBack()
-        pickerViewBackground.viewSystemBack()
-    }
-    
-    private func alphaSetup() {
-        let alpha = 1
-        
-        textViewBackgroundView.alpha = CGFloat(alpha)
-        textFieldView.alpha          = CGFloat(alpha)
-    }
-    
-    private func textContainersTintSetup() {
-        let tintColor = lazyColor
-        
-        textView.tintColor       = tintColor
-        inputTextField.tintColor = tintColor
     }
     
     @IBAction func sharing(_ sender: Any) {
@@ -303,52 +283,6 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
         textView.text = textView.text! + dateValue
     }
     
-    private func datePickerPrefering() {
-        datePickerView.viewShadows()
-        datePickerView.isHidden            = true
-        datePickerView.layer.cornerRadius  = 14
-        
-        pickerViewBackground.isHidden = true
-    }
-    
-    private func shadowsPrefering() {
-        datePicker.pickerViewShadow()
-        pickerViewBackground.viewShadows()
-        pickerView.pickerViewShadow()
-    }
-    
-    private func dateButtonPrefering() {
-        dateChooseButton.fastButtonCostomizing(background: lazyColor, titleColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), title: "Choose Time", corner: 12, borderWidth: 2.8)
-    }
-    
-    private func alphaPrefering() {
-        let alpha = 0
-        
-        inputTextField.alpha = CGFloat(alpha)
-        textView.alpha       = CGFloat(alpha)
-    }
-    
-    private func sizingPrefering() {
-        textViewBackgroundView.transform = CGAffineTransform(scaleX: 0, y: 0)
-        textFieldView.transform          = CGAffineTransform(scaleX: 0, y: 0)
-    }
-    
-    private func textViews_Text_Prefering() {
-        textView.text       = ""
-        inputTextField.text = ""
-    }
-    
-    private func cornersPrefering() {
-        pickerViewBackground.layer.cornerRadius     = 21.68
-    }
-    
-    private func activitiesPrefering() {
-        let acTint = UIColor.darkGray
-        
-        textViewActivityIndicator.activityIndicatorStarts(colorOfActivity:  acTint)
-        textFieldActivityIndicator.activityIndicatorStarts(colorOfActivity: acTint)
-    }
-    
     private func animationsPrefering() {
         UIView.animate(withDuration: 0, delay: 0.9, options: .curveLinear, animations: {
             self.inputTextField.alpha = 1
@@ -357,65 +291,5 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
             self.textFieldActivityIndicator.activityIndicatorStop()
             self.textViewActivityIndicator.activityIndicatorStop()
         }
-    }
-}
-
-extension BasicNotesViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        let text = textView.text!
-        
-        if array[row] == "Internet" {
-            inputTextField.text = "About Information From The Internet"
-            if textView.text == "" {
-                textView.text = text + " About Information From The Internet"
-            } else {
-                textView.text = text + "," + " About Information From The Internet"
-            }
-        } else {
-            inputTextField.text = "About \(array[row])"
-            if textView.text == "" {
-                textView.text = text + " About \(array[row])"
-            } else {
-                textView.text = text + "," + " About \(array[row])"
-            }
-        }
-        
-        if array[row] == "Nothing" {
-            inputTextField.text = "Nothing"
-            if textView.text == "" {
-                textView.text = text + "Today I don't want to read anything"
-            } else {
-                textView.text = text + "," + "Today I don't want to read anything"
-            }
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
-        var label: UILabel
-        
-        if let view = view as? UILabel {
-            label = view
-        } else {
-            label = UILabel()
-        }
-                label.textColor = .darkGray
-                label.font = UIFont(name: "AvenirNext-Medium", size: 21)
-                label.textAlignment = .center
-                label.text = array[row]
-        return  label
-    }
-}
-
-extension BasicNotesViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return array.count
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return array[row]
     }
 }

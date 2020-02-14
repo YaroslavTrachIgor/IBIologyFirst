@@ -15,25 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-Yj-5Dr">
-                                <rect key="frame" x="16" y="11" width="343" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="27" id="g36-YQ-cn2"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="All Information"/>
-                                    <segment title="Basics"/>
-                                </segments>
-                                <color key="tintColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.77836044520000003" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="infoSwitch:" destination="Qlb-NA-M7O" eventType="valueChanged" id="OhS-x2-e3P"/>
-                                </connections>
-                            </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wa5-RC-BNS" customClass="BiologyBackView" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="21" y="53" width="332" height="443"/>
+                                <rect key="frame" x="21" y="63" width="332" height="433"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFZ-hr-RZu">
-                                        <rect key="frame" x="0.0" y="12" width="332" height="431"/>
+                                        <rect key="frame" x="0.0" y="12" width="332" height="421"/>
                                         <string key="text">Biology is the natural science that studies life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development and evolution. Despite the complexity of the science, there are certain unifying concepts that consolidate it into a single, coherent field. Biology recognizes the cell as the basic unit of life, genes as the basic unit of heredity, and evolution as the engine that propels the creation and extinction of species. Living organisms are open systems that survive by transforming energy and decreasing their local entropy to maintain a stable and vital condition defined as homeostasis. Sub-disciplines of biology are defined by the research methods employed and the kind of system studied: theoretical biology uses mathematical methods to formulate quantitative models while experimental biology performs empirical experiments to test the validity of proposed theories and understand the mechanisms underlying life and how it appeared and evolved from non-living matter about 4 billion years ago through a gradual increase in the complexity of the system. See branches of biology.</string>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
@@ -45,7 +31,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jxe-8L-rLq">
-                                        <rect key="frame" x="156.5" y="222.5" width="20" height="20"/>
+                                        <rect key="frame" x="156.5" y="212.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="mR0-8f-v23"/>
                                             <constraint firstAttribute="width" constant="20" id="sVH-gV-faD"/>
@@ -139,25 +125,87 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CW-3D-cqe" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="14" width="35" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQa-Wg-VRh">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                        <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="eye.slash" catalog="system"/>
+                                        <connections>
+                                            <action selector="switchViewShowing:" destination="Qlb-NA-M7O" eventType="touchUpInside" id="uwS-Tv-CG1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="7hv-ET-Jgj"/>
+                                    <constraint firstAttribute="bottom" secondItem="aQa-Wg-VRh" secondAttribute="bottom" id="8bx-Dv-qs6"/>
+                                    <constraint firstItem="aQa-Wg-VRh" firstAttribute="leading" secondItem="8CW-3D-cqe" secondAttribute="leading" id="OKb-Ih-4PW"/>
+                                    <constraint firstAttribute="height" constant="35" id="ZH9-b5-lNh"/>
+                                    <constraint firstItem="aQa-Wg-VRh" firstAttribute="top" secondItem="8CW-3D-cqe" secondAttribute="top" id="m5J-I8-vXT"/>
+                                    <constraint firstAttribute="trailing" secondItem="aQa-Wg-VRh" secondAttribute="trailing" id="uOL-e3-90p"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pif-BR-bhS" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="65" y="14" width="35" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1y-fv-6jC">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                        <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="textformat.size" catalog="system"/>
+                                        <connections>
+                                            <action selector="stepperViewShower:" destination="Qlb-NA-M7O" eventType="touchUpInside" id="EF3-0C-CPO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="i1y-fv-6jC" firstAttribute="top" secondItem="pif-BR-bhS" secondAttribute="top" id="CVp-Bi-it1"/>
+                                    <constraint firstAttribute="height" constant="35" id="CeA-5l-xLE"/>
+                                    <constraint firstAttribute="width" constant="35" id="P0O-ri-fNj"/>
+                                    <constraint firstItem="i1y-fv-6jC" firstAttribute="leading" secondItem="pif-BR-bhS" secondAttribute="leading" id="T52-nZ-2c1"/>
+                                    <constraint firstAttribute="trailing" secondItem="i1y-fv-6jC" secondAttribute="trailing" id="cP1-yH-LMf"/>
+                                    <constraint firstAttribute="bottom" secondItem="i1y-fv-6jC" secondAttribute="bottom" id="g9g-r8-qQh"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-Yj-5Dr">
+                                <rect key="frame" x="118" y="18" width="239" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="g36-YQ-cn2"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All Information"/>
+                                    <segment title="Basics"/>
+                                </segments>
+                                <color key="tintColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.77836044520000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="infoSwitch:" destination="Qlb-NA-M7O" eventType="valueChanged" id="OhS-x2-e3P"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Pea-5N-Il5" firstAttribute="leading" secondItem="HIP-gu-edS" secondAttribute="leading" constant="21" id="1DO-WC-Bf3"/>
                             <constraint firstItem="jxe-8L-rLq" firstAttribute="centerY" secondItem="HIP-gu-edS" secondAttribute="centerY" id="7Oq-Yh-SJN"/>
+                            <constraint firstItem="g0n-Yj-5Dr" firstAttribute="leading" secondItem="pif-BR-bhS" secondAttribute="trailing" constant="18" id="7re-2U-EVA"/>
                             <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="Pea-5N-Il5" secondAttribute="trailing" constant="22" id="9H9-nk-5o0"/>
                             <constraint firstItem="zWo-Qg-u67" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="11" id="BMh-RJ-o9g"/>
-                            <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="g0n-Yj-5Dr" secondAttribute="trailing" constant="16" id="SFN-lk-KOw"/>
                             <constraint firstItem="HIP-gu-edS" firstAttribute="bottom" secondItem="Pea-5N-Il5" secondAttribute="bottom" constant="21" id="ZuQ-uR-joR"/>
+                            <constraint firstItem="pif-BR-bhS" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="14" id="bLN-gD-Z9C"/>
+                            <constraint firstItem="8CW-3D-cqe" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="14" id="c8h-OR-abr"/>
                             <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="wa5-RC-BNS" secondAttribute="trailing" constant="22" id="cyN-7s-4gA"/>
+                            <constraint firstItem="g0n-Yj-5Dr" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="18" id="eTb-wY-DGc"/>
                             <constraint firstItem="Pea-5N-Il5" firstAttribute="top" secondItem="wa5-RC-BNS" secondAttribute="bottom" constant="21" id="j1c-EO-orR"/>
+                            <constraint firstItem="wa5-RC-BNS" firstAttribute="top" secondItem="8CW-3D-cqe" secondAttribute="bottom" constant="14" id="jbd-MM-q6I"/>
+                            <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="g0n-Yj-5Dr" secondAttribute="trailing" constant="18" id="lFi-ud-hd3"/>
                             <constraint firstItem="xSH-E8-PA6" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="11" id="mLz-IE-bEZ"/>
+                            <constraint firstItem="pif-BR-bhS" firstAttribute="leading" secondItem="8CW-3D-cqe" secondAttribute="trailing" constant="14" id="mSo-bd-MDQ"/>
                             <constraint firstItem="wa5-RC-BNS" firstAttribute="leading" secondItem="HIP-gu-edS" secondAttribute="leading" constant="21" id="qtk-K9-c7f"/>
                             <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="zWo-Qg-u67" secondAttribute="trailing" constant="16" id="sgp-0C-TBD"/>
                             <constraint firstItem="HIP-gu-edS" firstAttribute="trailing" secondItem="xSH-E8-PA6" secondAttribute="trailing" constant="16" id="uCO-cV-XOY"/>
                             <constraint firstItem="jxe-8L-rLq" firstAttribute="centerX" secondItem="HIP-gu-edS" secondAttribute="centerX" id="uvV-9B-Fke"/>
-                            <constraint firstItem="g0n-Yj-5Dr" firstAttribute="leading" secondItem="HIP-gu-edS" secondAttribute="leading" constant="16" id="wfD-zJ-oWe"/>
-                            <constraint firstItem="g0n-Yj-5Dr" firstAttribute="top" secondItem="HIP-gu-edS" secondAttribute="top" constant="11" id="x3Y-Ux-utd"/>
-                            <constraint firstItem="wa5-RC-BNS" firstAttribute="top" secondItem="g0n-Yj-5Dr" secondAttribute="bottom" constant="15" id="yMr-uc-fw2"/>
+                            <constraint firstItem="8CW-3D-cqe" firstAttribute="leading" secondItem="HIP-gu-edS" secondAttribute="leading" constant="16" id="xsS-yt-hcq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HIP-gu-edS"/>
                     </view>
@@ -167,18 +215,6 @@
                                 <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="nextAction" destination="Qlb-NA-M7O" id="m1Q-0h-NSf"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="textformat.size" catalog="system" id="tPD-ym-t0W">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="stepperViewShower:" destination="Qlb-NA-M7O" id="9bC-E3-50i"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="eye.slash" catalog="system" id="gMR-xI-yGi">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="switchViewShowing:" destination="Qlb-NA-M7O" id="0dL-hq-h92"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="OkW-UY-0Qo">
@@ -196,14 +232,14 @@
                         <outlet property="navItem" destination="V0u-WD-zdt" id="l3c-Xv-mNu"/>
                         <outlet property="notificationButton" destination="Pea-5N-Il5" id="UND-d1-Lgq"/>
                         <outlet property="segmentedControl" destination="g0n-Yj-5Dr" id="jYj-9K-65X"/>
-                        <outlet property="settingsButton" destination="tPD-ym-t0W" id="1Lj-LG-a36"/>
                         <outlet property="shareButton" destination="OkW-UY-0Qo" id="Fkc-2o-Wg8"/>
                         <outlet property="stepper" destination="wcT-Xc-NEi" id="6Et-es-OUo"/>
                         <outlet property="stepperView" destination="zWo-Qg-u67" id="ExJ-uS-NrY"/>
+                        <outlet property="stepperViewShowingButtonBack" destination="pif-BR-bhS" id="yza-t5-20V"/>
                         <outlet property="switchOutlet" destination="hMa-F8-wk4" id="xHK-P2-Mar"/>
                         <outlet property="switchTextView" destination="8fb-FJ-8Td" id="AUU-o9-4Ht"/>
                         <outlet property="switchView" destination="xSH-E8-PA6" id="2gL-gP-8oO"/>
-                        <outlet property="switchViewShowingButton" destination="gMR-xI-yGi" id="eQX-y1-EGZ"/>
+                        <outlet property="switchViewShowingButtonBackView" destination="8CW-3D-cqe" id="tnD-MZ-FWd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n76-Qe-hz9" userLabel="First Responder" sceneMemberID="firstResponder"/>

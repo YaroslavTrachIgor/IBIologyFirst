@@ -55,7 +55,6 @@ class BasicsNavigationController: UINavigationController {
         let nextAction  = isLast == true ? nil : { [unowned self] in
             self.showNextBasicViewСontroller()
         }
-        
              vc.configure(with: basicModel, nextAction: nextAction)
         show(vc, sender: self)
         

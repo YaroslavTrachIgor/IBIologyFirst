@@ -176,13 +176,7 @@ class HumanViewVontroller: UIViewController {
         manScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
-        
-        sender.notificationButtonAudio()
-        sender.settingTittleForNotificationButton()
-        
-        for _ in 0..<2 {
-            sender.pulsate()
-        }
+        sender.notificationButtonBasicFunctions(view)
     }
     
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }

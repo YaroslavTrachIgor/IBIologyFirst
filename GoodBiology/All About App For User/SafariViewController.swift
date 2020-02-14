@@ -19,9 +19,10 @@ class SafariViewController: UIViewController {
     @IBOutlet weak var contentTextView1:         UITextView!
     @IBOutlet weak var contentTextView2:         UITextView!
     
-    @IBOutlet weak var safariButtonOutlet:       UIButton!
-    @IBOutlet weak var goToContentAppButton:     UIButton!
     @IBOutlet weak var mySiteButton:             UIButton!
+    @IBOutlet weak var safariButtonOutlet:       UIButton!
+    
+    @IBOutlet weak var goToContentAppButton:     UIButton!
     
     var appleButton = AppleButtonSettings()
     
@@ -137,14 +138,14 @@ class SafariViewController: UIViewController {
         
         goToContentAppButton.basicButtonForSafariViewController(title: "General Info")
         
-        mySiteButton.setTitleColor(appleButton.titleColor, for: .normal)
         mySiteButton.backgroundColor = appleButton.backgroundColor
+        mySiteButton.setTitleColor(appleButton.titleColor, for: .normal)
         mySiteButton.layer.cornerRadius = cornerRadius
         mySiteButton.titleLabel?.font = appleButton.font
         mySiteButton.setTitle("iBiology Site", for: .normal)
         
-        safariButtonOutlet.setTitleColor(appleButton.titleColor, for: .normal)
         safariButtonOutlet.backgroundColor = appleButton.backgroundColor
+        safariButtonOutlet.setTitleColor(appleButton.titleColor, for: .normal)
         safariButtonOutlet.layer.cornerRadius = cornerRadius
         safariButtonOutlet.titleLabel?.font = appleButton.font
         safariButtonOutlet.setTitle("Privacy Policy", for: .normal)

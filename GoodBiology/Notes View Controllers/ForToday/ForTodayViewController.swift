@@ -18,6 +18,8 @@ import AudioToolbox
 
 class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewDelegate, NotesDelegate {
     
+    
+    
     //MARK: IBOutlets
     @IBOutlet weak var mapView:                  MKMapView!
     @IBOutlet weak var mapTypeView:              UIView!
@@ -29,8 +31,16 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
     
     @IBOutlet weak var navItem:                  UINavigationItem!
     
-    @IBOutlet weak var textViewActivity:         UIActivityIndicatorView! { didSet { textViewACHidden()  } }
-    @IBOutlet weak var textFieldActivitu:        UIActivityIndicatorView! { didSet { textFieldACHidden() } }
+    @IBOutlet weak var textViewActivity:         UIActivityIndicatorView! {
+        didSet {
+            textViewACHidden()
+        }
+    }
+    @IBOutlet weak var textFieldActivitu:        UIActivityIndicatorView! {
+        didSet {
+            textFieldACHidden()
+        }
+    }
     
     @IBOutlet weak var segmentControl:           UISegmentedControl!
     
@@ -56,14 +66,14 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
     //MARK: Public
     static public var textViewText: String = ""
     
+    var user: User?
+    
     let defaults = UserDefaults.standard
     let forTodayReminderBody: String = "Are you ready to read something what you have planned ? 😏🧐"
     
-    //MARK: Private
     let locationMeneger        = CLLocationManager()
     let regionInMeters: Double = 1000
     
-    //MARK: Public
     var previousLocation:   CLLocation?
     
     //MARK: IBOutlets
@@ -79,8 +89,7 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
         }
     }
     
-    var user: User?
-    
+    //MARK: Private
     private var geocoder: CLGeocoder!
     
     lazy var toolBar: BasicToolbar = {

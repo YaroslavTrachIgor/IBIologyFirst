@@ -17,7 +17,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-r0-fId">
                                 <rect key="frame" x="32.5" y="233" width="310" height="39"/>
-                                <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.71198095034246578" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="jpI-D5-Hzi"/>
                                 </constraints>

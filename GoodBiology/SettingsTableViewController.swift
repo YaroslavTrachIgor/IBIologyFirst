@@ -109,6 +109,9 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         refreshControlPrefering()
         searchBarButtonPrefering()
         setupSearchBarFont()
+        
+        navigationController?.navigationBar.backgroundColor = .groupTableViewBackground
+        navigationController?.navigationBar.barTintColor = .groupTableViewBackground
     }
     
     func setupUsersViewWithInfo_hideButtonAndView() {

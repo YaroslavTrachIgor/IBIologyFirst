@@ -12,13 +12,11 @@ import UIKit
 class ArticleActivityIndicatorView: UIActivityIndicatorView {
     override init(style: UIActivityIndicatorView.Style) {
         super.init(style: .medium)
-        
         setup()
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
-        
         setup()
     }
 }
@@ -34,7 +32,6 @@ protocol ArticleActivityIndicatorViewDelegate {
 }
 
 // Notification Button
-
 class VideoButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -53,7 +50,6 @@ protocol VideoButtonDelegate {
 }
 
 // Video Button
-
 class ImageButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -72,7 +68,6 @@ protocol ImageButtonDelegate {
 }
 
 // Image Button
-
 class NotificationButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -89,4 +84,29 @@ extension NotificationButton: NotificationButtomDelegate {
 
 protocol NotificationButtomDelegate {
     func setup()
+}
+
+// Second Pulse Animation
+extension UIButton {
+    func addNotificationButtonPulse(view: UIView) {
+        let pulse = Pulsing(numberOfPulses: 2, radius: 200, position: self.center)
+            pulse.animationDuration = 0.9
+            pulse.backgroundColor = lazyColor.cgColor
+        
+        view.layer.insertSublayer(pulse, below: self.layer)
+    }
+}
+
+// Notification Button Basic Functions
+protocol NotificationButtonBasicFunctionsProtocol {
+    func notificationButtonBasicFunctions(_ view: UIView)
+}
+
+extension UIButton: NotificationButtonBasicFunctionsProtocol {
+    func notificationButtonBasicFunctions(_ view: UIView) {
+        self.notificationButtonAudio()
+        self.settingTittleForNotificationButton()
+        self.addNotificationButtonPulse(view: view)
+        self.pulsate()
+    }
 }
