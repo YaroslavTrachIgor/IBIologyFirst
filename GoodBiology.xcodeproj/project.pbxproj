@@ -36,7 +36,7 @@
 		84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4A222C529D00F11996 /* ArchaeaData.swift */; };
 		84408E4D222C5F7100F11996 /* ManData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4C222C5F7100F11996 /* ManData.swift */; };
 		8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */; };
-		8446582023BC0A5200DC316E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* UIButton.swift */; };
+		8446582023BC0A5200DC316E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* Button.swift */; };
 		8446582823BD59E200DC316E /* iOSGoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */; };
 		8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583323BFF44A00DC316E /* PlantsTestsData.swift */; };
 		8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583623BFF5E900DC316E /* FalseAnswers.swift */; };
@@ -112,6 +112,15 @@
 		84A3AFC423F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFC323F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift */; };
 		84A3AFC623F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFC523F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift */; };
 		84A3AFC823F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFC723F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift */; };
+		84A3AFCA23F7D98600836400 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFC923F7D98600836400 /* UIViewController.swift */; };
+		84A3AFCD23F82F8100836400 /* ArticelsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFCC23F82F8000836400 /* ArticelsViewControllerProtocol.swift */; };
+		84A3AFCF23F82FA300836400 /* MenuViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFCE23F82FA300836400 /* MenuViewControllerDelegate.swift */; };
+		84A3AFD223F82FD400836400 /* UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFD123F82FD400836400 /* UISearchResultsUpdating.swift */; };
+		84A3AFD423F830DF00836400 /* ArticelsViewControllerViewSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFD323F830DF00836400 /* ArticelsViewControllerViewSetupProtocol.swift */; };
+		84A3AFD723F8316200836400 /* MenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFD623F8316200836400 /* MenuContent.swift */; };
+		84A3AFD923F865F800836400 /* ArticlesMenuContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFD823F865F700836400 /* ArticlesMenuContentService.swift */; };
+		84A3AFDB23F88AC600836400 /* MenuCellRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFDA23F88AC600836400 /* MenuCellRightView.swift */; };
+		84A3AFDD23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFDC23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift */; };
 		84A78C5723ECC542002FEADF /* TestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5623ECC542002FEADF /* TestErrors.swift */; };
 		84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */; };
 		84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */; };
@@ -136,7 +145,7 @@
 		84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */; };
 		84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFDD0236DCAC80088B09E /* VideosMenuTableViewController.swift */; };
 		84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFDD3236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift */; };
-		84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FC5F2205986300BCE06D /* BasicsContent.swift */; };
+		84C6FC602205986300BCE06D /* ArticleContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FC5F2205986300BCE06D /* ArticleContentData.swift */; };
 		84C6FCAE220620A200BCE06D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCAD220620A200BCE06D /* AppDelegate.swift */; };
 		84C6FCB5220620A200BCE06D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6FCB3220620A200BCE06D /* Main.storyboard */; };
 		84C6FCB7220620A400BCE06D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C6FCB6220620A400BCE06D /* Assets.xcassets */; };
@@ -318,7 +327,7 @@
 		84408E4A222C529D00F11996 /* ArchaeaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaData.swift; sourceTree = "<group>"; };
 		84408E4C222C5F7100F11996 /* ManData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManData.swift; sourceTree = "<group>"; };
 		8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProtocol.swift; sourceTree = "<group>"; };
-		8446581F23BC0A5200DC316E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		8446581F23BC0A5200DC316E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSGoodBiologyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSGoodBiologyUITests.swift; sourceTree = "<group>"; };
 		8446582923BD59E200DC316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -387,6 +396,15 @@
 		84A3AFC323F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerRateFunctionProtocol.swift; sourceTree = "<group>"; };
 		84A3AFC523F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerNotificationSetProtocol.swift; sourceTree = "<group>"; };
 		84A3AFC723F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerFunctionsProtocol.swift; sourceTree = "<group>"; };
+		84A3AFC923F7D98600836400 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		84A3AFCC23F82F8000836400 /* ArticelsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticelsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		84A3AFCE23F82FA300836400 /* MenuViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewControllerDelegate.swift; sourceTree = "<group>"; };
+		84A3AFD123F82FD400836400 /* UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchResultsUpdating.swift; sourceTree = "<group>"; };
+		84A3AFD323F830DF00836400 /* ArticelsViewControllerViewSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticelsViewControllerViewSetupProtocol.swift; sourceTree = "<group>"; };
+		84A3AFD623F8316200836400 /* MenuContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContent.swift; sourceTree = "<group>"; };
+		84A3AFD823F865F700836400 /* ArticlesMenuContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesMenuContentService.swift; sourceTree = "<group>"; };
+		84A3AFDA23F88AC600836400 /* MenuCellRightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellRightView.swift; sourceTree = "<group>"; };
+		84A3AFDC23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticelsViewControllerContentJsonSetup.swift; sourceTree = "<group>"; };
 		84A78C5623ECC542002FEADF /* TestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrors.swift; sourceTree = "<group>"; };
 		84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerExtensions.swift; sourceTree = "<group>"; };
 		84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchResultUpdating.swift; sourceTree = "<group>"; };
@@ -412,7 +430,7 @@
 		84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewControllerBasicWords.swift; sourceTree = "<group>"; };
 		84BDFDD0236DCAC80088B09E /* VideosMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosMenuTableViewController.swift; sourceTree = "<group>"; };
 		84BDFDD3236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesOnlineVideosViewController.swift; sourceTree = "<group>"; };
-		84C6FC5F2205986300BCE06D /* BasicsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsContent.swift; sourceTree = "<group>"; };
+		84C6FC5F2205986300BCE06D /* ArticleContentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentData.swift; sourceTree = "<group>"; };
 		84C6FC8222061C5100BCE06D /* Good Biology(Apple Watch).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good Biology(Apple Watch).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C6FC8E22061C5300BCE06D /* Good Biology(Apple Watch) Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Good Biology(Apple Watch) Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C6FCAB220620A200BCE06D /* Good Biology (TV).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good Biology (TV).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -653,6 +671,7 @@
 				842D691723C42B9E009CF7E7 /* NewLabel.swift */,
 				842D691A23C545FA009CF7E7 /* ArticleView.swift */,
 				84F5741623F0C0BF00400ED4 /* ArticlesVCButtonBack.swift */,
+				84A3AFDA23F88AC600836400 /* MenuCellRightView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -697,7 +716,7 @@
 		8446581E23BC0A4100DC316E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8446581F23BC0A5200DC316E /* UIButton.swift */,
+				8446581F23BC0A5200DC316E /* Button.swift */,
 				C4D9615F23CE545500C0ED57 /* SomeMoreView.swift */,
 			);
 			path = UI;
@@ -899,7 +918,7 @@
 		8497E34B2358E494003CD4A9 /* About App Information */ = {
 			isa = PBXGroup;
 			children = (
-				84C6FC5F2205986300BCE06D /* BasicsContent.swift */,
+				84C6FC5F2205986300BCE06D /* ArticleContentData.swift */,
 				8454DDA62216F8AF0033A3A2 /* AppInformation.swift */,
 			);
 			path = "About App Information";
@@ -935,6 +954,8 @@
 		8497E34F2358E507003CD4A9 /* Menu Articles VC */ = {
 			isa = PBXGroup;
 			children = (
+				84A3AFD523F8314C00836400 /* ArticlesMenuContentService */,
+				84A3AFCB23F82F6000836400 /* Extensions */,
 				842D691423C429F5009CF7E7 /* UI */,
 				C4C7252421C2B75800F64612 /* ArticelsViewController.swift */,
 			);
@@ -1115,6 +1136,26 @@
 				84A3AFC723F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		84A3AFCB23F82F6000836400 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84A3AFCC23F82F8000836400 /* ArticelsViewControllerProtocol.swift */,
+				84A3AFCE23F82FA300836400 /* MenuViewControllerDelegate.swift */,
+				84A3AFD123F82FD400836400 /* UISearchResultsUpdating.swift */,
+				84A3AFD323F830DF00836400 /* ArticelsViewControllerViewSetupProtocol.swift */,
+				84A3AFDC23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84A3AFD523F8314C00836400 /* ArticlesMenuContentService */ = {
+			isa = PBXGroup;
+			children = (
+				84A3AFD823F865F700836400 /* ArticlesMenuContentService.swift */,
+			);
+			path = ArticlesMenuContentService;
 			sourceTree = "<group>";
 		};
 		84A78C5523ECC525002FEADF /* Test Errors */ = {
@@ -1334,6 +1375,7 @@
 		C458BD5C23AE4A8800D1F108 /* Json Data */ = {
 			isa = PBXGroup;
 			children = (
+				84A3AFD623F8316200836400 /* MenuContent.swift */,
 				C458BD5D23AE4B6A00D1F108 /* Podfile */,
 			);
 			path = "Json Data";
@@ -1367,6 +1409,7 @@
 				842D691E23C69D01009CF7E7 /* BasicSearchController.swift */,
 				842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */,
 				842D692A23C80202009CF7E7 /* RefreshControl.swift */,
+				84A3AFC923F7D98600836400 /* UIViewController.swift */,
 			);
 			path = "UI Extensions";
 			sourceTree = "<group>";
@@ -2031,6 +2074,7 @@
 				842D690623C299F9009CF7E7 /* TextViewBackView.swift in Sources */,
 				84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */,
 				84A3AFC823F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift in Sources */,
+				84A3AFD423F830DF00836400 /* ArticelsViewControllerViewSetupProtocol.swift in Sources */,
 				84F5741123F0BCCB00400ED4 /* ChromistaButton.swift in Sources */,
 				84A3AFBB23F6190700836400 /* DrawNotesViewController.swift in Sources */,
 				8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */,
@@ -2063,6 +2107,7 @@
 				C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */,
 				84A78C7223EEFFA0002FEADF /* UISearchBarDelegate.swift in Sources */,
 				C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */,
+				84A3AFDB23F88AC600836400 /* MenuCellRightView.swift in Sources */,
 				84F5741723F0C0BF00400ED4 /* ArticlesVCButtonBack.swift in Sources */,
 				84A3AFB623F6140A00836400 /* ShadowView.swift in Sources */,
 				84A3AFA323F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift in Sources */,
@@ -2093,19 +2138,21 @@
 				AAEC22D221C679E900FF69FE /* BasicsViewController.swift in Sources */,
 				8446584423BFFE9900DC316E /* VirusesTestsData.swift in Sources */,
 				840FB81B23BA6D1E0081DE59 /* BarButtonItem.swift in Sources */,
+				84A3AFCF23F82FA300836400 /* MenuViewControllerDelegate.swift in Sources */,
 				C4C7231521B9ACA900F64612 /* MicrobesViewController.swift in Sources */,
 				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
 				84A78C6923ED6893002FEADF /* ContentBack.swift in Sources */,
 				C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */,
 				84A3AFAD23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift in Sources */,
-				8446582023BC0A5200DC316E /* UIButton.swift in Sources */,
+				8446582023BC0A5200DC316E /* Button.swift in Sources */,
 				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
 				84F5741323F0BDEF00400ED4 /* ChromistaLabel.swift in Sources */,
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
 				C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */,
+				84A3AFDD23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift in Sources */,
 				8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */,
 				84A78C6E23EE085F002FEADF /* UIPickerViewDelegate.swift in Sources */,
-				84C6FC602205986300BCE06D /* BasicsContent.swift in Sources */,
+				84C6FC602205986300BCE06D /* ArticleContentData.swift in Sources */,
 				84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */,
 				84A3AFC623F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift in Sources */,
 				84A3AF9423F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift in Sources */,
@@ -2115,6 +2162,7 @@
 				C458BD6A23AEBF0000D1F108 /* UIAlert.swift in Sources */,
 				8446584223BFF95A00DC316E /* MicrobesTestsData.swift in Sources */,
 				84B2BD88222BDCEA00BA41C9 /* VirusesData.swift in Sources */,
+				84A3AFD723F8316200836400 /* MenuContent.swift in Sources */,
 				C43B125E21A8ABEE00D58C44 /* ButtonsAnimations.swift in Sources */,
 				847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */,
 				8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */,
@@ -2131,6 +2179,7 @@
 				841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */,
 				84A3AFC023F6B09200836400 /* BasicsViewControllerInfoSwitchActionProtocol.swift in Sources */,
 				8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */,
+				84A3AFCD23F82F8100836400 /* ArticelsViewControllerProtocol.swift in Sources */,
 				84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */,
 				C458BD6C23AEBF2000D1F108 /* Extensions.swift in Sources */,
 				84A3AF9D23F37D2200836400 /* TextErrorsProtocol.swift in Sources */,
@@ -2147,6 +2196,7 @@
 				84A3AF8B23F2155900836400 /* ControlButton.swift in Sources */,
 				C458BD7923AEC08200D1F108 /* UIBarButtonItem.swift in Sources */,
 				84A78C6B23ED68B4002FEADF /* NavigationTitleView.swift in Sources */,
+				84A3AFD923F865F800836400 /* ArticlesMenuContentService.swift in Sources */,
 				8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */,
 				84732DA922400B96005957F2 /* ReadingOnTimeData.swift in Sources */,
 				AA2C423421C842F500D1E680 /* BasicsCoordinator.swift in Sources */,
@@ -2161,11 +2211,13 @@
 				C43B126A21AB22DC00D58C44 /* ForTodayViewController.swift in Sources */,
 				842D691F23C69D01009CF7E7 /* BasicSearchController.swift in Sources */,
 				8446584623C00F2B00DC316E /* ArchaeaTestsData.swift in Sources */,
+				84A3AFCA23F7D98600836400 /* UIViewController.swift in Sources */,
 				84A3AF9723F37B0E00836400 /* ForTodayViewControllerChooseTimeFunctionProtocol.swift in Sources */,
 				C47CAD6721D0E42F00E27E88 /* TestViewController.swift in Sources */,
 				840887B421F763810026A210 /* BiologyNotifications.swift in Sources */,
 				8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */,
 				840FB81723BA46050081DE59 /* TestView.swift in Sources */,
+				84A3AFD223F82FD400836400 /* UISearchResultsUpdating.swift in Sources */,
 				C4D9616523D2B56800C0ED57 /* ASAuthorizationController.swift in Sources */,
 				84A78C7023EE0902002FEADF /* UIPickerViewDataSource.swift in Sources */,
 				842D691B23C545FA009CF7E7 /* ArticleView.swift in Sources */,

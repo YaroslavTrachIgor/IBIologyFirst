@@ -40,14 +40,14 @@ class AnimalsViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == animalsBasicsContent {
-            fastActivityVC(item: animalsBasicsContent)
+        if textView.text == AnimalsArticleData.animalsBasicsContent {
+            fastActivityVC(item: AnimalsArticleData.animalsBasicsContent)
             
-        } else if textView.text == animalsStructureContent {
-            fastActivityVC(item: animalsStructureContent)
+        } else if textView.text == AnimalsArticleData.animalsStructureContent {
+            fastActivityVC(item: AnimalsArticleData.animalsStructureContent)
             
         } else {
-            fastActivityVC(item: animalsMostContent)
+            fastActivityVC(item: AnimalsArticleData.animalsMostContent)
         }
         shareButton.shareAudio()
     }
@@ -72,7 +72,7 @@ class AnimalsViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 
-                post.setInitialText(animalsMostContent)
+                post.setInitialText(AnimalsArticleData.animalsMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -89,7 +89,7 @@ class AnimalsViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
                 
-                post.setInitialText(animalsMostContent)
+                post.setInitialText(AnimalsArticleData.animalsMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -188,15 +188,15 @@ class AnimalsViewController: UIViewController {
     @IBAction func segmentedControl(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            textView.text = animalsMostContent
+            textView.text = AnimalsArticleData.animalsMostContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 1:
-            textView.text = animalsBasicsContent
+            textView.text = AnimalsArticleData.animalsBasicsContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 2:
-            textView.text = animalsStructureContent
+            textView.text = AnimalsArticleData.animalsStructureContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 3:

@@ -15,16 +15,16 @@ class ThemesMenuTableViewController: UITableViewController {
     @IBOutlet weak var table:       UITableView!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
-    let settingsRefreshControl: UIRefreshControl = {
+    lazy var settingsRefreshControl: UIRefreshControl = {
         let refreshControl = BasicRefreshControl()
         
         return refreshControl
     }()
     
-    private let searchController = BasicSearchController()
+    lazy var searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
-        return    text.isEmpty
+        return text.isEmpty
     }
     
     override func viewDidLoad() {

@@ -45,14 +45,14 @@ class MicrobesViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == microbesBasicsContent {
-            fastActivityVC(item: microbesBasicsContent)
+        if textView.text == MicrobesArticleData.microbesBasicsContent {
+            fastActivityVC(item: MicrobesArticleData.microbesBasicsContent)
             
-        } else if textView.text == microbesStructureContent {
-            fastActivityVC(item: microbesStructureContent)
+        } else if textView.text == MicrobesArticleData.microbesStructureContent {
+            fastActivityVC(item: MicrobesArticleData.microbesStructureContent)
             
         } else {
-            fastActivityVC(item: microbesMostContent)
+            fastActivityVC(item: MicrobesArticleData.microbesMostContent)
         }
         shareButton.shareAudio()
     }
@@ -77,7 +77,7 @@ class MicrobesViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 
-                post.setInitialText(microbesMostContent)
+                post.setInitialText(MicrobesArticleData.microbesMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -94,7 +94,7 @@ class MicrobesViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
                 
-                post.setInitialText(microbesMostContent)
+                post.setInitialText(MicrobesArticleData.microbesMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -178,17 +178,17 @@ class MicrobesViewController: UIViewController {
     @IBAction func segmentedControlAction(_ sender: Any) {
         switch segmentedControlOutlet.selectedSegmentIndex {
         case 0:
-            textView.text = microbesMostContent
+            textView.text = MicrobesArticleData.microbesMostContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 1:
-            textView.text = microbesBasicsContent
+            textView.text = MicrobesArticleData.microbesBasicsContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 2:
-            textView.text = microbesStructureContent
+            textView.text = MicrobesArticleData.microbesStructureContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true

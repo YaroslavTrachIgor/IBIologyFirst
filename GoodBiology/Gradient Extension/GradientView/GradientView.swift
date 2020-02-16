@@ -9,9 +9,8 @@
 import UIKit
 
 class GradientView: UIView {
-
-    private let gradientLayer = CAGradientLayer()
     
+    public let gradientLayer = CAGradientLayer()
     @IBInspectable private var startColor: UIColor? {
         didSet {
             setupGradient()
@@ -46,6 +45,7 @@ class GradientView: UIView {
     
     private func setupGradient() {
         self.layer.addSublayer(gradientLayer)
+        self.layer.cornerRadius = 4
         
         setupGradientColors()
     }

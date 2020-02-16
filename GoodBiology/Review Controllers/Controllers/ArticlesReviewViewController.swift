@@ -137,17 +137,8 @@ class ArticlesReviewViewController: UIViewController {
         present(composer, animated: true)
     }
     
-    private func showSafariVC(for url: String) {
-        guard let url = URL(string: url) else { return }
-        
-        let safariVC = BasicSafariVC(url: url)
-        safariVC.setupSafariVC()
-        
-        present(safariVC, animated: true)
-    }
-    
     @IBAction func faqSite(_ sender: Any) {
-         showSafariVC(for: "https://zhbr282.wixsite.com/goodbiology-policy")
+         showSafariVC(for : "https://zhbr282.wixsite.com/goodbiology-policy")
     }
     
     private func alphaPrefering() {

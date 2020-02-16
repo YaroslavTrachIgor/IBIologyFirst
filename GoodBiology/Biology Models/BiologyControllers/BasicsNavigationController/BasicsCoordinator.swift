@@ -33,10 +33,6 @@ class BasicsNavigationController: UINavigationController {
         firstBasicVeiwController.configure(with: dataManager.basicModel(with: 0), nextAction: { [unowned self] in
             self.showNextBasicViewСontroller()
         })
-        
-        if navigationItem.title == "Botany" {
-            RateManager.showRatesController()
-        }
     }
     
     //MARK: Public
@@ -57,9 +53,5 @@ class BasicsNavigationController: UINavigationController {
         }
              vc.configure(with: basicModel, nextAction: nextAction)
         show(vc, sender: self)
-        
-        if navigationItem.title == "Botany" {
-            RateManager.showRatesController()
-        }
     }
 }

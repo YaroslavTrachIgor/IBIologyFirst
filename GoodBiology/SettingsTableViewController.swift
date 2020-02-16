@@ -59,13 +59,13 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         static let phoneKey         = "phoneKey"
     }
     
-    private let searchController = BasicSearchController()
+    lazy var searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return    text.isEmpty
     }
     
-    private let settingsRefreshControl: BasicRefreshControl = {
+    lazy var settingsRefreshControl: BasicRefreshControl = {
         let refreshControl = BasicRefreshControl()
         
         return refreshControl
@@ -111,7 +111,7 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         setupSearchBarFont()
         
         navigationController?.navigationBar.backgroundColor = .groupTableViewBackground
-        navigationController?.navigationBar.barTintColor = .groupTableViewBackground
+        navigationController?.navigationBar.barTintColor    = .groupTableViewBackground
     }
     
     func setupUsersViewWithInfo_hideButtonAndView() {
@@ -143,23 +143,23 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
     }
     
     func prepareObservation() {
-        firstName = observe(\.inputFirstNameText, options: .new, changeHandler: { (viewController, change) in
+        firstName = observe(\.inputFirstNameText, options: .new, changeHandler: { [weak self] (viewController, change) in
             guard let updateFirstName = change.newValue as? String else { return }
-            if self.nameTextField.text != "" || self.nameTextField.text != " " {
+            if self?.nameTextField.text != "" || self?.nameTextField.text != " " {
                 viewController.firstNameLabel.text = "First Name: " + updateFirstName
             }
         })
         
-        secondName = observe(\.inputSecondNameText, options: .new, changeHandler: { (viewController, change) in
+        secondName = observe(\.inputSecondNameText, options: .new, changeHandler: { [weak self] (viewController, change) in
             guard let updateFirstName = change.newValue as? String else { return }
-            if self.secondNameTextField.text != "" || self.secondNameTextField.text != " " {
+            if self?.secondNameTextField.text != "" || self?.secondNameTextField.text != " " {
                 viewController.secondNameLabel.text = "Second Name: " + updateFirstName
             }
         })
         
-        email = observe(\.inputEmailText, options: .new, changeHandler: { (viewController, change) in
+        email = observe(\.inputEmailText, options: .new, changeHandler: { [weak self] (viewController, change) in
             guard let updateFirstName = change.newValue as? String else { return }
-            if self.emailTextField.text != "" || self.emailTextField.text != " " {
+            if self?.emailTextField.text != "" || self?.emailTextField.text != " " {
                 viewController.inputEmailLabel.text =  updateFirstName
             }
         })
@@ -275,15 +275,6 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
     
     @IBAction func site(_ sender: Any) {
         showSafariVC(for: "https://zhbr282.wixsite.com/ibiology-official")
-    }
-    
-    private func showSafariVC(for url: String) {
-        guard let url = URL(string: url) else { return }
-        
-        let safariVC = BasicSafariVC(url: url)
-        safariVC.setupSafariVC()
-        
-        present(safariVC, animated: true)
     }
     
     private func loadSettings() {

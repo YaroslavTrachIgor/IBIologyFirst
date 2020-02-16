@@ -94,15 +94,6 @@ class SafariViewController: UIViewController {
         mySiteButton.transform         = CGAffineTransform(scaleX: scaleXY, y: scaleXY)
     }
     
-    //MARK: Public
-    private func showSafariVC(for url: String) {
-        guard let url = URL(string: url) else { return }
-        let safariVC = BasicSafariVC(url: url)
-        safariVC.setupSafariVC()
-        
-        present(safariVC, animated: true)
-    }
-    
     private func contentTextView1Prfering() {
         contentTextView1.safariVCUITextViewPrefering(font: "DemiBold", size: 20)
     }

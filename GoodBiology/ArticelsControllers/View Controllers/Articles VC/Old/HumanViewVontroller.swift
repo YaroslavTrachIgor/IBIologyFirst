@@ -39,14 +39,14 @@ class HumanViewVontroller: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == manBasicsContent {
-            fastActivityVC(item: manBasicsContent)
+        if textView.text == HumanArticleData.manBasicsContent {
+            fastActivityVC(item: HumanArticleData.manBasicsContent)
             
-        }  else if textView.text == manStructureContent {
-            fastActivityVC(item: manStructureContent)
+        }  else if textView.text == HumanArticleData.manStructureContent {
+            fastActivityVC(item: HumanArticleData.manStructureContent)
             
         } else {
-            fastActivityVC(item: manMostContent)
+            fastActivityVC(item: HumanArticleData.manMostContent)
         }
         shareButton.shareAudio()
     }
@@ -71,7 +71,7 @@ class HumanViewVontroller: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 
-                post.setInitialText(manMostContent)
+                post.setInitialText(HumanArticleData.manMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -89,7 +89,7 @@ class HumanViewVontroller: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
                 
-                post.setInitialText(manMostContent)
+                post.setInitialText(HumanArticleData.manMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -191,17 +191,17 @@ class HumanViewVontroller: UIViewController {
     @IBAction func segmentedControAction(_ sender: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            textView.text = manMostContent
+            textView.text = HumanArticleData.manMostContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 1:
-            textView.text = manBasicsContent
+            textView.text = HumanArticleData.manBasicsContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 2:
-            textView.text = manStructureContent
+            textView.text = HumanArticleData.manStructureContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true

@@ -15,7 +15,7 @@ class ArticleOnlineImagesViewController: UIViewController, WebControllerDelegate
     @IBOutlet weak var leftButton:            UIBarButtonItem!
     @IBOutlet weak var rightButton:           UIBarButtonItem!
     @IBOutlet weak var webViewBackground:     UIView!
-    @IBOutlet weak var webView:               UIWebView!
+    @IBOutlet weak var webView:               WKWebView!
     @IBOutlet weak var reloadButton:          UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -71,8 +71,6 @@ class ArticleOnlineImagesViewController: UIViewController, WebControllerDelegate
         
         if #available(iOS 13.0, *) {
             webViewBackground.backgroundColor = .systemBackground
-        } else {
-            // Fallback on earlier versions
         }
         webViewBackground.layer.cornerRadius = CGFloat(cornerRadius)
         webViewBackground.viewShadows()
@@ -90,53 +88,51 @@ class ArticleOnlineImagesViewController: UIViewController, WebControllerDelegate
         if #available(iOS 13.0, *) {
             view.backgroundColor = .systemBackground
             navigationController?.navigationBar.barTintColor = .systemBackground
-        } else {
-            // Fallback on earlier versions
         }
     }
     
     private func urlGiven() {
         if navigationItem.title == "Plants Videos" {
-            self.webView.loadRequest(URLRequest(url: URL(string: plantsURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.plantsURL)!))
         } else if navigationItem.title == "Animals Videos" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: animalURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.animalURL)!))
         } else if navigationItem.title == "Microbes Videos" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: microbeURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.microbeURL)!))
         } else if navigationItem.title == "Viruses Videos" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: virusURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.virusURL)!))
         } else if navigationItem.title == "Funguses Videos" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: fungusURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.fungusURL)!))
         } else if navigationItem.title == "Archaea Videos" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: archaeaURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.archaeaURL)!))
         } else if navigationItem.title == "Humen Videos" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: humanURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.humanURL)!))
         } else if navigationItem.title == "Plants Images" {
                    
-            self.webView.loadRequest(URLRequest(url: URL(string: plantsImagesURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesImagesURLs.plantsImagesURL)!))
         } else if navigationItem.title == "Animals Images" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: animalImagesURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesImagesURLs.animalImagesURL)!))
         } else if navigationItem.title == "Microbes Images" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: microbeImagesURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesImagesURLs.microbeImagesURL)!))
         } else if navigationItem.title == "Viruses Images" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: virusImagesURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesImagesURLs.virusImagesURL)!))
         } else if navigationItem.title == "Funguses Images" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: fungusImagesURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesImagesURLs.fungusImagesURL)!))
         } else if navigationItem.title == "Archaea Images" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: (archaeaImagesURL))!))
+            self.webView.load(URLRequest(url: URL(string: (ArticlesImagesURLs.archaeaImagesURL))!))
         } else if navigationItem.title == "Humen Images" {
             
-            self.webView.loadRequest(URLRequest(url: URL(string: humanImagesURL)!))
+            self.webView.load(URLRequest(url: URL(string: ArticlesImagesURLs.humanImagesURL)!))
         }
     }
     
@@ -180,26 +176,26 @@ class ArticleOnlineImagesViewController: UIViewController, WebControllerDelegate
             
         } else if navigationItem.title == "Plants Images" {
                           
-                   fastActivityVC(item: plantsImagesURL)
-               } else if navigationItem.title == "Animals Images" {
-                   
-                   fastActivityVC(item: animalImagesURL)
-               } else if navigationItem.title == "Microbes Images" {
-                   
-                    fastActivityVC(item: microbeImagesURL)
-               } else if navigationItem.title == "Viruses Images" {
-                   
-                   fastActivityVC(item: virusImagesURL)
-               } else if navigationItem.title == "Funguses Images" {
-                   
-                   fastActivityVC(item: fungusImagesURL)
-               } else if navigationItem.title == "Archaea Images" {
-                   
-                   fastActivityVC(item: archaeaImagesURL)
-               } else if navigationItem.title == "Humen Images" {
-                   
-                   fastActivityVC(item: humanImagesURL)
-               }
+            fastActivityVC(item: ArticlesImagesURLs.plantsImagesURL)
+        } else if navigationItem.title == "Animals Images" {
+            
+            fastActivityVC(item: ArticlesImagesURLs.animalImagesURL)
+        } else if navigationItem.title == "Microbes Images" {
+            
+             fastActivityVC(item: ArticlesImagesURLs.microbeImagesURL)
+        } else if navigationItem.title == "Viruses Images" {
+            
+            fastActivityVC(item: ArticlesImagesURLs.virusImagesURL)
+        } else if navigationItem.title == "Funguses Images" {
+            
+            fastActivityVC(item: ArticlesImagesURLs.fungusImagesURL)
+        } else if navigationItem.title == "Archaea Images" {
+            
+            fastActivityVC(item: ArticlesImagesURLs.archaeaImagesURL)
+        } else if navigationItem.title == "Humen Images" {
+            
+            fastActivityVC(item: ArticlesImagesURLs.humanImagesURL)
+        }
     }
     
     private func fastActivityVC(item: String) {

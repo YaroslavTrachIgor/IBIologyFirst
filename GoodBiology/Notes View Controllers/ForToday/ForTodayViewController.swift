@@ -18,8 +18,6 @@ import AudioToolbox
 
 class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewDelegate, NotesDelegate {
     
-    
-    
     //MARK: IBOutlets
     @IBOutlet weak var mapView:                  MKMapView!
     @IBOutlet weak var mapTypeView:              UIView!
@@ -62,6 +60,11 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
     
     @IBOutlet weak var inputTextView:   UITextView!
     @IBOutlet weak var inputTextField:  UITextField!
+    
+    struct Keys {
+        static let textViewInformation  = "inputTextView"
+        static let textFieldInformation = "inputTextField"
+    }
     
     //MARK: Public
     static public var textViewText: String = ""
@@ -208,12 +211,6 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
         alertController.view.tintColor = lazyColor
         
         self.present(alertController, animated: true, completion: nil)
-    }
-    
-    //MARK: Struct
-    struct Keys {
-        static let textViewInformation  = "inputTextView"
-        static let textFieldInformation = "inputTextField"
     }
     
     func textErrorSetup() throws {

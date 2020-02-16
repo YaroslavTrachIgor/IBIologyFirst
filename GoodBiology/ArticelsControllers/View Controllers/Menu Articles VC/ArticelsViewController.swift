@@ -16,16 +16,22 @@ protocol ArticelsViewControllerProtocol {
 class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     
     //MARK: IBOutlets
+    // View Previews
+    @IBOutlet var designView: [MenuCellRightView]!
+    
     @IBOutlet weak var plantsView:       ArticleView!
     @IBOutlet weak var mainView:         ArticleView!
     @IBOutlet weak var microbesView:     ArticleView!
     @IBOutlet weak var animalsView:      ArticleView!
     @IBOutlet weak var archaeaView:      ArticleView!
     @IBOutlet weak var manView:          ArticleView!
-    @IBOutlet weak var virusesView:      ArticleView!
+    @IBOutlet weak var virusesView:      ArticleView! {
+        didSet { virusesView.backgroundColor = .systemBackground }
+    }
     @IBOutlet weak var mushroomsView:    ArticleView!
     @IBOutlet weak var chromistaView:    ArticleView!
     
+    // UITextView
     @IBOutlet weak var plantTextView:       UITextView!
     @IBOutlet weak var animalTextView:      UITextView!
     @IBOutlet weak var microbeTextView:     UITextView!
@@ -35,6 +41,7 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     @IBOutlet weak var fungusTextView:      UITextView!
     @IBOutlet weak var chromistaTextView:   UITextView!
     
+    // Labels
     @IBOutlet weak var newLabel: NewLabel!
     
     @IBOutlet weak var plantsLabel:         ArticlesMenuLabel!
@@ -46,18 +53,21 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     @IBOutlet weak var fungusesLabel:       ArticlesMenuLabel!
     @IBOutlet weak var chromistaLabel:      ArticlesMenuLabel!
     
+    // UIScrollView
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var videoPlayerVCShowerButtonBackView:   ChromistaActionButtonsBack!
     @IBOutlet weak var readingOnTimeVCShowerButtonBackView: ChromistaActionButtonsBack!
     
-    private let searchController = BasicSearchController()
+    // UISearchController
+    lazy var searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return    text.isEmpty
     }
     
-    let settingsRefreshControl: UIRefreshControl = {
+    // UIRefreshControl
+    lazy var settingsRefreshControl: UIRefreshControl = {
         let refreshControl = BasicRefreshControl()
         
         return refreshControl
@@ -66,6 +76,9 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /// Articles Preview Content Json Setup
+        contentJsonSetup()
         
         /// MenuViewControllerDelegate
         basicViewProccesPrefering()
@@ -104,89 +117,7 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
         }
     }
     
-    func articelsViewControllerTextViewSetup() {
-        textViewsFontPrefering()
-        textViewShadowPrefering()
-    }
-    
-    private func systemColors() {
-        if #available(iOS 13.0, *) {
-            plantTextView.setSecondaryTextColor()
-            animalTextView.setSecondaryTextColor()
-            microbeTextView.setSecondaryTextColor()
-            humanTextView.setSecondaryTextColor()
-            virusTextView.setSecondaryTextColor()
-            archaeaTextView.setSecondaryTextColor()
-            fungusTextView.setSecondaryTextColor()
-            chromistaTextView.setSecondaryTextColor()
-        }
-    }
-    
-    private func textViewShadowPrefering() {
-        plantTextView.textViewShadow()
-        animalTextView.textViewShadow()
-        microbeTextView.textViewShadow()
-        humanTextView.textViewShadow()
-        virusTextView.textViewShadow()
-        archaeaTextView.textViewShadow()
-        fungusTextView.textViewShadow()
-        chromistaTextView.textViewShadow()
-    }
-    
-    private func textViewsFontPrefering() {
-        plantTextView.setMenuFont()
-        animalTextView.setMenuFont()
-        microbeTextView.setMenuFont()
-        humanTextView.setMenuFont()
-        virusTextView.setMenuFont()
-        archaeaTextView.setMenuFont()
-        fungusTextView.setMenuFont()
-        chromistaTextView.setMenuFont()
-    }
-    
-    private func preferingSearchController() {
-        searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
-    }
-    
-    private func notificationAlert() {
+    func notificationAlert() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
-    }
-    
-    private func refreshControlPrefering() {
-        scrollView.refreshControl = settingsRefreshControl
-    }
-}
-
-extension ArticelsViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {}
-}
-
-extension ArticelsViewController: MenuViewControllerDelegate {
-    func basicViewProccesPrefering() {
-        preferingSearchController()
-        systemColors()
-        refreshControlPrefering()
-        notificationAlert()
-        articelsViewControllerTextViewSetup()
-        setupSearchBarFont()
-    }
-}
-
-extension UITextView: ArticelsViewControllerProtocol {
-    func articelsViewControllerTextViewSetup() {
-        setSecondaryTextColor()
-        setMenuFont()
-    }
-    
-    func setSecondaryTextColor() {
-        textColor = .secondaryLabel
-    }
-    
-    func setMenuFont() {
-        let size: CGFloat       = 16.5
-        let fontName: String    = mediumFont
-        
-        self.font = UIFont(name: fontName, size: size)
     }
 }

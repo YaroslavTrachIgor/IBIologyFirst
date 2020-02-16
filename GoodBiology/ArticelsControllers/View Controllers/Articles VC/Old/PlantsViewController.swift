@@ -118,14 +118,8 @@ class PlantsViewController: UIViewController {
     }
     
     @IBAction func sharing(_ sender: Any) {
-        if basicsTextView.text == plantsBasicsContent {
-            fastActivityVC(item: plantsBasicsContent)
-            
-        } else if basicsTextView.text == plantsStructureContent {
-            fastActivityVC(item: plantsStructureContent)
-            
-        } else {
-            fastActivityVC(item: plantsMostContent)
+        if let content = basicsTextView.text {
+            fastActivityVC(item: content)
         }
         shareButton.shareAudio()
     }
@@ -149,7 +143,7 @@ class PlantsViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 
-                post.setInitialText(plantsMostContent)
+                post.setInitialText(PlantsArticleData.plantsMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -166,7 +160,7 @@ class PlantsViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
                 
-                post.setInitialText(plantsMostContent)
+                post.setInitialText(PlantsArticleData.plantsMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -329,21 +323,21 @@ class PlantsViewController: UIViewController {
     @IBAction func segmetedControl(_ sender: UISegmentedControl) {
         switch  segmentedControlOutlet.selectedSegmentIndex {
         case 0:
-            basicsTextView.text = plantsMostContent
+            basicsTextView.text = PlantsArticleData.plantsMostContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
             
             notificationButtonOutlet.isHidden = false
         case 1:
-            basicsTextView.text = plantsBasicsContent
+            basicsTextView.text = PlantsArticleData.plantsBasicsContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
             
             notificationButtonOutlet.isHidden = false
         case 2:
-            basicsTextView.text = plantsStructureContent
+            basicsTextView.text = PlantsArticleData.plantsStructureContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true

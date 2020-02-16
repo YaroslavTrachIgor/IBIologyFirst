@@ -39,14 +39,14 @@ class VirusesViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == virusesBasicsContent {
-            fastActivityVC(item: virusesBasicsContent)
+        if textView.text == VirusesArticleData.virusesBasicsContent {
+            fastActivityVC(item: VirusesArticleData.virusesBasicsContent)
             
-        } else if textView.text == virusesStructureContent {
-            fastActivityVC(item: virusesStructureContent)
+        } else if textView.text == VirusesArticleData.virusesStructureContent {
+            fastActivityVC(item: VirusesArticleData.virusesStructureContent)
             
         } else {
-            fastActivityVC(item: virusesMostContent)
+            fastActivityVC(item: VirusesArticleData.virusesMostContent)
         }
         shareButton.shareAudio()
     }
@@ -71,7 +71,7 @@ class VirusesViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 
-                post.setInitialText(virusesMostContent)
+                post.setInitialText(VirusesArticleData.virusesMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -88,7 +88,7 @@ class VirusesViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
                 
-                post.setInitialText(virusesMostContent)
+                post.setInitialText(VirusesArticleData.virusesMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -171,17 +171,17 @@ class VirusesViewController: UIViewController {
     @IBAction func segmentControlAction(_ sender: Any) {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            textView.text = virusesMostContent
+            textView.text = VirusesArticleData.virusesMostContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 1:
-            textView.text = virusesBasicsContent
+            textView.text = VirusesArticleData.virusesBasicsContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 2:
-            textView.text = virusesStructureContent
+            textView.text = VirusesArticleData.virusesStructureContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true

@@ -53,15 +53,8 @@ class MushroomsViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == microbesBasicsContent {
-            fastActivityVC(item: microbesBasicsContent)
-            
-        } else if textView.text == microbesStructureContent {
-            fastActivityVC(item: microbesStructureContent)
-            
-        } else {
-            fastActivityVC(item: mushroomsMostContent)
-        }
+        guard let content = textView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     
@@ -84,7 +77,7 @@ class MushroomsViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 
-                post.setInitialText(mushroomsMostContent)
+                post.setInitialText(FungusesArticleData.mushroomsMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -101,7 +94,7 @@ class MushroomsViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
                 
-                post.setInitialText(mushroomsMostContent)
+                post.setInitialText(FungusesArticleData.mushroomsMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -183,17 +176,17 @@ class MushroomsViewController: UIViewController {
     @IBAction func segmentedControlAction(_ sender: Any) {
         switch segmentedControlOutlet.selectedSegmentIndex {
         case 0:
-            textView.text = mushroomsMostContent
+            textView.text = FungusesArticleData.mushroomsMostContent
             
             goToVideosButton.isHidden = true
             goToImagesButton.isHidden = true
         case 1:
-            textView.text = mushroomsBasicsContent
+            textView.text = FungusesArticleData.mushroomsBasicsContent
 
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 2:
-            textView.text = mushroomsStructureContent
+            textView.text = FungusesArticleData.mushroomsStructureContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true

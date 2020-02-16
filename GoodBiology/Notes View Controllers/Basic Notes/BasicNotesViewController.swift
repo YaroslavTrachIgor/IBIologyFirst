@@ -83,11 +83,11 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
     }
     
     @IBAction func sharing(_ sender: Any) {
-        let contentText     = textView.text
-        let textFieldText   = inputTextField.text
+        let contentText     = textView.text!
+        let textFieldText   = inputTextField.text!
         
         if textView.text != "" || inputTextField.text != "" || textView.text != "" && inputTextField.text != "" {
-            let activityVC = UIActivityViewController(activityItems: ["\(textFieldText!) - \(contentText!)"], applicationActivities: nil)
+            let activityVC = UIActivityViewController(activityItems: ["\(textFieldText) - \(contentText)"], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
 
             UIApplication.shared.keyWindow?.tintColor = lazyColor
@@ -139,8 +139,7 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
                 let alertController = UIAlertController(title: "Are You Sure ?", message: "Are you sure you want to delete note content and title, that you had written", preferredStyle: .alert)
                 
                 let delete = UIAlertAction(title: deleteWord, style: .destructive) {
-                    (action) in
-                    
+                    (action) in 
                     self.inputTextField.text    = ""
                     self.textView.text          = ""
                 }

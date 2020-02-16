@@ -49,14 +49,14 @@ class ArchaeaViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == archaeaBasicsContent {
-            fastActivityVC(item: archaeaBasicsContent)
+        if textView.text == ArchaeaArticleData.archaeaBasicsContent {
+            fastActivityVC(item: ArchaeaArticleData.archaeaBasicsContent)
             
-        } else  if textView.text == archaeaStructureContent {
-            fastActivityVC(item: archaeaStructureContent)
+        } else  if textView.text == ArchaeaArticleData.archaeaStructureContent {
+            fastActivityVC(item: ArchaeaArticleData.archaeaStructureContent)
             
         } else {
-            fastActivityVC(item: archaeaMostContent)
+            fastActivityVC(item: ArchaeaArticleData.archaeaMostContent)
         }
         shareButton.shareAudio()
     }
@@ -80,7 +80,7 @@ class ArchaeaViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
                 
-                post.setInitialText(archaeaMostContent)
+                post.setInitialText(ArchaeaArticleData.archaeaMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -97,7 +97,7 @@ class ArchaeaViewController: UIViewController {
             if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
                 let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
                 
-                post.setInitialText(archaeaMostContent)
+                post.setInitialText(ArchaeaArticleData.archaeaMostContent)
                 post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
                 
                 self.present(post, animated: true, completion: nil)
@@ -183,15 +183,15 @@ class ArchaeaViewController: UIViewController {
     @IBAction func segmentedControl(_ sender: Any) {
         switch  segmentControlOutlet.selectedSegmentIndex {
         case 0:
-            basicsTextView.text = archaeaMostContent
+            basicsTextView.text = ArchaeaArticleData.archaeaMostContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 1:
-            basicsTextView.text = archaeaBasicsContent
+            basicsTextView.text = ArchaeaArticleData.archaeaBasicsContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 2:
-            basicsTextView.text = archaeaStructureContent
+            basicsTextView.text = ArchaeaArticleData.archaeaStructureContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
         case 3:
