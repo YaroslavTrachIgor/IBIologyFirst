@@ -89,8 +89,11 @@ class ArticlesOnlineVideosViewController: UIViewController {
     }
         
     private func urlGiven() {
+        guard navigationItem.title != nil else { return }
+        
         if navigationItem.title == "Plants Videos" {
             self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.plantsURL)!))
+            
         } else if navigationItem.title == "Animals Videos" {
             
             self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.animalURL)!))

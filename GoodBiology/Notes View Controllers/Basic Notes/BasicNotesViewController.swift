@@ -83,10 +83,12 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
     }
     
     @IBAction func sharing(_ sender: Any) {
-        let contentText     = textView.text!
-        let textFieldText   = inputTextField.text!
+        let contentText     = textView.text
+        let textFieldText   = inputTextField.text
         
-        if textView.text != "" || inputTextField.text != "" || textView.text != "" && inputTextField.text != "" {
+        guard let content = contentText, let title = textFieldText else { return }
+        
+        if content.isEmpty || title.isEmpty || content.isEmpty && title.isEmpty {
             let activityVC = UIActivityViewController(activityItems: ["\(textFieldText) - \(contentText)"], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
 
@@ -117,7 +119,9 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
     }
     
     @IBAction func trash(_ sender: Any) {
-        if textView.text != "" || inputTextField.text != "" || textView.text != "" && inputTextField.text != "" {
+        guard let content = textView.text, let title = inputTextField.text else { return }
+        
+        if content.isEmpty || title.isEmpty || content.isEmpty && title.isEmpty {
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             let cancel = UIAlertAction(title: cancelWord, style: .cancel) {
                 (action) in }

@@ -45,15 +45,8 @@ class MicrobesViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == MicrobesArticleData.microbesBasicsContent {
-            fastActivityVC(item: MicrobesArticleData.microbesBasicsContent)
-            
-        } else if textView.text == MicrobesArticleData.microbesStructureContent {
-            fastActivityVC(item: MicrobesArticleData.microbesStructureContent)
-            
-        } else {
-            fastActivityVC(item: MicrobesArticleData.microbesMostContent)
-        }
+        guard let content = textView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     

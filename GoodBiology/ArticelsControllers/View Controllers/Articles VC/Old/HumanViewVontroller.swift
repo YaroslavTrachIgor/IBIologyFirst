@@ -39,15 +39,8 @@ class HumanViewVontroller: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == HumanArticleData.manBasicsContent {
-            fastActivityVC(item: HumanArticleData.manBasicsContent)
-            
-        }  else if textView.text == HumanArticleData.manStructureContent {
-            fastActivityVC(item: HumanArticleData.manStructureContent)
-            
-        } else {
-            fastActivityVC(item: HumanArticleData.manMostContent)
-        }
+        guard let content = textView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     

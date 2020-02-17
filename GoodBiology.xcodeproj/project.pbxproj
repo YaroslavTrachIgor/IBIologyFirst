@@ -59,6 +59,15 @@
 		8454DDA52214CA300033A3A2 /* PlantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA42214CA300033A3A2 /* PlantsData.swift */; };
 		8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA62216F8AF0033A3A2 /* AppInformation.swift */; };
 		8454DDA9221750610033A3A2 /* AnimalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA8221750610033A3A2 /* AnimalsData.swift */; };
+		845EE55923FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55823FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift */; };
+		845EE55B23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55A23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift */; };
+		845EE55D23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */; };
+		845EE55F23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55E23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift */; };
+		845EE56123FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56023FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift */; };
+		845EE56423FA044A0036479B /* NetworkingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56323FA044A0036479B /* NetworkingButton.swift */; };
+		845EE56623FABB0F0036479B /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845EE56523FABB0F0036479B /* CardViewController.xib */; };
+		845EE56823FABB6C0036479B /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56723FABB6C0036479B /* CardViewController.swift */; };
+		845EE56A23FB24AA0036479B /* UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */; };
 		845FE7442322F45400B36E76 /* ArticleOnlineImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */; };
 		8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461367C22C65F8D0019C7FB /* HumanData.swift */; };
 		8461F8C621EB651800586139 /* TestsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461F8C521EB651800586139 /* TestsReviewViewController.swift */; };
@@ -353,6 +362,15 @@
 		8454DDA42214CA300033A3A2 /* PlantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsData.swift; sourceTree = "<group>"; };
 		8454DDA62216F8AF0033A3A2 /* AppInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInformation.swift; sourceTree = "<group>"; };
 		8454DDA8221750610033A3A2 /* AnimalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsData.swift; sourceTree = "<group>"; };
+		845EE55823FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLoadAnimationsSetupProtocol.swift; sourceTree = "<group>"; };
+		845EE55A23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerUIPickerViewDataSource.swift; sourceTree = "<group>"; };
+		845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerUIPickerViewDelegate.swift; sourceTree = "<group>"; };
+		845EE55E23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerViewSetupProtocol.swift; sourceTree = "<group>"; };
+		845EE56023FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerUIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		845EE56323FA044A0036479B /* NetworkingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingButton.swift; sourceTree = "<group>"; };
+		845EE56523FABB0F0036479B /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		845EE56723FABB6C0036479B /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerDelegate.swift; sourceTree = "<group>"; };
 		845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOnlineImagesViewController.swift; sourceTree = "<group>"; };
 		8461367C22C65F8D0019C7FB /* HumanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanData.swift; sourceTree = "<group>"; };
 		8461F8C521EB651800586139 /* TestsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsReviewViewController.swift; sourceTree = "<group>"; };
@@ -652,6 +670,7 @@
 		842D690E23C2CE32009CF7E7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				845EE56323FA044A0036479B /* NetworkingButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -806,6 +825,18 @@
 			path = "Data Files";
 			sourceTree = "<group>";
 		};
+		845EE55723FA02BA0036479B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				845EE55823FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift */,
+				845EE55A23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift */,
+				845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */,
+				845EE55E23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift */,
+				845EE56023FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		845FE7422322F42500B36E76 /* Article Online Videos and Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -900,19 +931,20 @@
 		8497E3472358E3A2003CD4A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				845EE55723FA02BA0036479B /* Extensions */,
 				8471F87E21B30202001AA935 /* NetworkingViewController.swift */,
 				844E0D0622351BD400933ABC /* MapViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		8497E3482358E3C5003CD4A9 /* Basic  Functions */ = {
+		8497E3482358E3C5003CD4A9 /* App Basics */ = {
 			isa = PBXGroup;
 			children = (
 				C458BD6F23AEBF8700D1F108 /* Other */,
 				C458BD6623AEBEC000D1F108 /* UI Extensions */,
 			);
-			path = "Basic  Functions";
+			path = "App Basics";
 			sourceTree = "<group>";
 		};
 		8497E34B2358E494003CD4A9 /* About App Information */ = {
@@ -1171,6 +1203,7 @@
 			children = (
 				84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */,
 				84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */,
+				845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1359,6 +1392,8 @@
 		C447BD2F23D8C93F0026F176 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				845EE56523FABB0F0036479B /* CardViewController.xib */,
+				845EE56723FABB6C0036479B /* CardViewController.swift */,
 				C447BD3023D8C94C0026F176 /* FastAlert.swift */,
 			);
 			path = UI;
@@ -1608,7 +1643,7 @@
 		C4FA2D1F21FCD7F40023B655 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				8497E3482358E3C5003CD4A9 /* Basic  Functions */,
+				8497E3482358E3C5003CD4A9 /* App Basics */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -1986,6 +2021,7 @@
 				8454DD99221323640033A3A2 /* Browser.storyboard in Resources */,
 				844E0D212239A0C800933ABC /* iBiology.mov in Resources */,
 				C4E5E23E21975BE5009C3062 /* Assets.xcassets in Resources */,
+				845EE56623FABB0F0036479B /* CardViewController.xib in Resources */,
 				C4C7252121C058DD00F64612 /* Biology.storyboard in Resources */,
 				C498F9A3219F6B5900DCAC9F /* Tests.storyboard in Resources */,
 				C4E5E23C21975BE4009C3062 /* Main.storyboard in Resources */,
@@ -2080,9 +2116,11 @@
 				8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */,
 				84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */,
 				8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */,
+				845EE55D23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift in Sources */,
 				842D690D23C29D24009CF7E7 /* HelpButton.swift in Sources */,
 				848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */,
 				8446583E23BFF6EF00DC316E /* HumenTestsData.swift in Sources */,
+				845EE56A23FB24AA0036479B /* UIImagePickerControllerDelegate.swift in Sources */,
 				84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */,
 				84A78C6423ED682A002FEADF /* StepperView.swift in Sources */,
 				8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */,
@@ -2148,6 +2186,7 @@
 				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
 				84F5741323F0BDEF00400ED4 /* ChromistaLabel.swift in Sources */,
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
+				845EE55923FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift in Sources */,
 				C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */,
 				84A3AFDD23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift in Sources */,
 				8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */,
@@ -2157,6 +2196,7 @@
 				84A3AFC623F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift in Sources */,
 				84A3AF9423F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift in Sources */,
 				C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */,
+				845EE56423FA044A0036479B /* NetworkingButton.swift in Sources */,
 				84A78C5F23ED6617002FEADF /* UsersViewWithInfoDelegate.swift in Sources */,
 				AAEC22D621C67A1300FF69FE /* BasicsDataManager.swift in Sources */,
 				C458BD6A23AEBF0000D1F108 /* UIAlert.swift in Sources */,
@@ -2187,6 +2227,7 @@
 				C458BD6E23AEBF4200D1F108 /* UIActivityIndicatorView.swift in Sources */,
 				84A3AFBE23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift in Sources */,
 				849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */,
+				845EE56823FABB6C0036479B /* CardViewController.swift in Sources */,
 				8446583C23BFF61800DC316E /* AnimalsTestsData.swift in Sources */,
 				8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */,
 				C4D9616023CE545500C0ED57 /* SomeMoreView.swift in Sources */,
@@ -2217,6 +2258,7 @@
 				840887B421F763810026A210 /* BiologyNotifications.swift in Sources */,
 				8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */,
 				840FB81723BA46050081DE59 /* TestView.swift in Sources */,
+				845EE55B23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift in Sources */,
 				84A3AFD223F82FD400836400 /* UISearchResultsUpdating.swift in Sources */,
 				C4D9616523D2B56800C0ED57 /* ASAuthorizationController.swift in Sources */,
 				84A78C7023EE0902002FEADF /* UIPickerViewDataSource.swift in Sources */,
@@ -2227,6 +2269,7 @@
 				84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */,
 				84A78C7823EF00CA002FEADF /* CLLocationManagerDelegate.swift in Sources */,
 				84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */,
+				845EE56123FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift in Sources */,
 				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
 				C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */,
 				C4C7231121B98A1E00F64612 /* VirusesViewController.swift in Sources */,
@@ -2242,6 +2285,7 @@
 				84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */,
 				842D692423C6CDD5009CF7E7 /* BiologyNotificationButton.swift in Sources */,
 				8468332623A4E5A6004CBFC8 /* User.swift in Sources */,
+				845EE55F23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

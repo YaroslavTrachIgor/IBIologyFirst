@@ -10,10 +10,18 @@ import UIKit
 import SafariServices
 import MessageUI
 
-class SettingsTableViewController: UITableViewController, UsersViewWithInfoDelegate, SettingsTableViewControllerDelegate {
+class SettingsTableViewController: UITableViewController, UsersViewWithInfoDelegate, SettingsTableViewControllerDelegate, UINavigationControllerDelegate {
     
     //Users view with Info
     @IBOutlet private weak var usersInfoView: UIView!
+    
+    @IBOutlet weak var usersIconImageViewButton: UIButton!
+    @IBOutlet weak var usersIconImageView:       UIImageView! {
+        didSet {
+            usersIconImageView.layer.cornerRadius = usersIconImageView.frame.height / 2
+            usersIconImageView.imageViewShadow()
+        }
+    }
     
     private var hidden: Bool = false
     
@@ -91,9 +99,6 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        /// Setup Main View Things
-        setupView()
         
         /// Oher
         loadSettings()
@@ -101,6 +106,46 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         
         /// Hide User Info
         setupUsersViewWithInfo_hideButtonAndView()
+        
+        /// Setup Main View Things
+        setupView()
+        gesturesSetup()
+    }
+    
+    @objc func hide() {
+        usersInfoView.isHidden = true
+    }
+    
+    func gesturesSetup() {
+        let gesture = UISwipeGestureRecognizer(target: self, action: #selector(hide))
+        
+        usersInfoView.isUserInteractionEnabled = true
+        usersInfoView.addGestureRecognizer(gesture)
+    }
+    
+    @IBAction func userIconChange(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+        
+        let actionSheet = UIAlertController(title: nil, message: "How do you want to put the icon ?", preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action: UIAlertAction) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            } else {
+                FastAlert.showBasic(title: "Error", message: "Camera is unavailable", vc: self)
+            }
+        }
+        let libraryAction = UIAlertAction(title: "Library", style: .default) { (action: UIAlertAction) in
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(cameraAction)
+        actionSheet.addAction(libraryAction)
+        actionSheet.addAction(cancelAction)
+        self.present(actionSheet, animated: true)
     }
     
     func setupView() {
@@ -349,4 +394,3 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.phoneKey)
     }
 }
-

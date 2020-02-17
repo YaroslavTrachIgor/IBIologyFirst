@@ -92,8 +92,11 @@ class ArticleOnlineImagesViewController: UIViewController, WebControllerDelegate
     }
     
     private func urlGiven() {
+        guard navigationItem.title != nil else { return }
+        
         if navigationItem.title == "Plants Videos" {
             self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.plantsURL)!))
+            
         } else if navigationItem.title == "Animals Videos" {
             
             self.webView.load(URLRequest(url: URL(string: ArticlesVideosURLs.animalURL)!))
@@ -153,6 +156,8 @@ class ArticleOnlineImagesViewController: UIViewController, WebControllerDelegate
     }
     
     @IBAction func share(_ sender: Any) {
+        guard navigationItem.title != nil else { return }
+        
         if navigationItem.title == "Plant Videos" {
             fastActivityVC(item: definitionData)
             

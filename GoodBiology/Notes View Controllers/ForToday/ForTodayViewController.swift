@@ -217,8 +217,7 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
         let hidden = true
         let alpha: CGFloat = 0
         
-        let textViewText    = inputTextView.text!
-        let textFieldText   = inputTextField.text!
+        guard let textFieldText = inputTextField.text, let textViewText = inputTextView.text else { return }
         
         if textViewText.isEmpty {
             throw ForTodayErrors.Errors.textViewIsntReadyForSave
@@ -262,7 +261,9 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
     }
     
     private func audioTrash() {
-        if inputTextField.text == "" && inputTextView.text == "" {
+        guard let textFieldText = inputTextField.text, let textViewText = inputTextView.text else { return }
+        
+        if textFieldText == "" && textViewText == "" {
             AudioServicesPlayAlertSound(1001)
         } else {
             AudioServicesPlayAlertSound(1022)
@@ -270,14 +271,16 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
     }
     
     private func trash() {
-        if inputTextView.text != "" || inputTextField.text != "" || inputTextView.text != "" && inputTextField.text != "" {
+        guard let textFieldText = inputTextField.text, let textViewText = inputTextView.text else { return }
+        
+        if textViewText.isEmpty || textFieldText.isEmpty {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let cancel = UIAlertAction(title: cancelWord, style: .cancel) {
             (action) in }
         let delete = UIAlertAction(title: "\(deleteWord) All", style: .destructive) {
             (action) in
             
-            if self.inputTextField.text == "" && self.inputTextView.text == "" || self.inputTextField.text == " " && self.inputTextView.text == " " {
+            if self.inputTextField.text!.isEmpty && self.inputTextView.text.isEmpty {
                 let alertController = UIAlertController(title: sorryWord, message: "But you have nothing written.", preferredStyle: .alert)
                 
                 let cancel = UIAlertAction(title: cancelWord, style: .cancel)
@@ -311,7 +314,7 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
         let deleteHeadline = UIAlertAction(title: "\(deleteWord) Headline", style: .destructive) {
             (action) in
             
-            if self.inputTextField.text == "" || self.inputTextField.text == " " {
+            if self.inputTextField.text == "" {
                 let alertController = UIAlertController(title: "Sorry", message: "But you have nothing written.", preferredStyle: .alert)
                 
                 let cancel = UIAlertAction(title: cancelWord, style: .cancel)
@@ -343,7 +346,7 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
         let deleteContent = UIAlertAction(title: "\(deleteWord) Content", style: .destructive) {
             (action) in
             
-            if self.inputTextView.text == "" || self.inputTextView.text == " " {
+            if self.inputTextView.text == "" {
                 let alertController = UIAlertController(title: sorryWord, message: "But you have nothing written.", preferredStyle: .alert)
                 
                 let cancel = UIAlertAction(title: cancelWord, style: .cancel)
@@ -417,10 +420,14 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
             let location    = press.location(in: mapView)
             let coordinates = mapView.convert(location, toCoordinateFrom: mapView)
             
+            let annotationTitle    = "Good Place"
+            let annotationSubtitle = "One of my favorite places for reading"
+            
             let annotation            = MKPointAnnotation()
                 annotation.coordinate = coordinates
-                annotation.title      = "My Place"
-                annotation.subtitle   = "One of my favorite places"
+            
+                annotation.title    = annotationTitle
+                annotation.subtitle = annotationSubtitle
             
             mapView.addAnnotation(annotation)
         }
@@ -439,11 +446,13 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
     }
     
     @IBAction func changeTimeWithDatePicker(_ sender: UIDatePicker) {
+        guard let text = inputTextView.text else { return }
+        
         let dateFormatter           = DateFormatter()
             dateFormatter.dateStyle = .full
         let dateValue = dateFormatter.string(from: sender.date)
         
-        inputTextView.text  = "\(inputTextView.text! + dateValue)"
+        inputTextView.text  = text + " (" + dateValue + ")"
     }
     
     @IBAction func mapTypeViewShowing(_ sender: Any) {

@@ -84,7 +84,7 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
     }
     
     private func setupErrors() throws {
-        let textViewText  = textView.text!
+        let textViewText = textView.text!
         
         if textViewText.isEmpty {
             throw ForTodayErrors.Errors.textViewIsntReadyForSave
@@ -92,9 +92,10 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
     }
     
     @IBAction func stepperViewShower(_ sender: Any) {
-        if textView.text.isEmpty || textField.text == "" {
+        guard let textFieldText = textView.text, let textViewText = textField.text else { return }
+        
+        if textFieldText.isEmpty || textViewText.isEmpty {
             showError()
-            
         } else {
             if stepperView.isHidden == true {
                 stepperView.isHidden = false

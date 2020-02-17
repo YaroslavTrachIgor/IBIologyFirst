@@ -19,6 +19,8 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     @IBOutlet weak var typeView:             UISegmentedControl!
     @IBOutlet weak var typeViewBackground:   UIView!
     
+    @IBOutlet weak var mapTypesButtonBackView: ChromistaActionButtonsBack!
+    
     @IBOutlet weak var problemButton:        HelpButton!
     
     private let locationManager        = CLLocationManager()
@@ -40,7 +42,10 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 0.6) {
-            self.mapView.alpha = 1
+            let alpha: CGFloat = 1
+            
+            self.mapView.alpha                = alpha
+            self.mapTypesButtonBackView.alpha = alpha
         }
     }
     
@@ -140,7 +145,7 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         case 1:
             mapView.mapType = .satellite
         default:
-            print(" Error ")
+            print("Error")
         }
     }
     
@@ -165,14 +170,12 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         }
     }
     
-    
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
         }
     }
-    
     
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
@@ -193,14 +196,12 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         }
     }
     
-    
     func startTackingUserLocation() {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
         previousLocation = getCenterLocation(for: mapView)
     }
-    
     
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         let latitude    = mapView.centerCoordinate.latitude

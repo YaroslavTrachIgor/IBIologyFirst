@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class FastAlert {
+    typealias Action = () -> Void
+    
     class func showBasic(title: String, message: String, vc: UIViewController) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: okWord, style: .cancel, handler: nil)
@@ -23,3 +25,4 @@ class FastAlert {
         vc.present(alertVC, animated: true)
     }
 }
+

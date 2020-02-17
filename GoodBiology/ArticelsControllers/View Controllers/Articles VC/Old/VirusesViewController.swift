@@ -39,15 +39,8 @@ class VirusesViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == VirusesArticleData.virusesBasicsContent {
-            fastActivityVC(item: VirusesArticleData.virusesBasicsContent)
-            
-        } else if textView.text == VirusesArticleData.virusesStructureContent {
-            fastActivityVC(item: VirusesArticleData.virusesStructureContent)
-            
-        } else {
-            fastActivityVC(item: VirusesArticleData.virusesMostContent)
-        }
+        guard let content = textView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     

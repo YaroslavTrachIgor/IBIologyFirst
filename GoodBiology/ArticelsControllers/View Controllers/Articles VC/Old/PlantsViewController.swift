@@ -118,9 +118,8 @@ class PlantsViewController: UIViewController {
     }
     
     @IBAction func sharing(_ sender: Any) {
-        if let content = basicsTextView.text {
-            fastActivityVC(item: content)
-        }
+        guard let content = basicsTextView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     
