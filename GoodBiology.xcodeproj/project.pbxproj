@@ -173,6 +173,10 @@
 		CF937CC123EFBC8D00759EB4 /* TestLandingModelsForUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF937CC023EFBC8D00759EB4 /* TestLandingModelsForUI.swift */; };
 		CF937CCF23F108E500759EB4 /* TestLandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF937CCE23F108E500759EB4 /* TestLandingCell.swift */; };
 		CF937CD123F108F300759EB4 /* TestLandingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF937CD023F108F300759EB4 /* TestLandingCell.xib */; };
+		CFAD613C23FBA21400CD2309 /* MainTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD613B23FBA21400CD2309 /* MainTabbarController.swift */; };
+		CFAD614023FBA4BE00CD2309 /* TabBarNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD613F23FBA4BE00CD2309 /* TabBarNavigationController.swift */; };
+		CFAD614223FBB08800CD2309 /* UIStroyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD614123FBB08800CD2309 /* UIStroyboardExtension.swift */; };
+		CFAD614523FE4A4700CD2309 /* StoryBoardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAD614423FE4A4700CD2309 /* StoryBoardConstants.swift */; };
 		CFB8B57C23F27A46006C8F3E /* TestLandingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB8B57B23F27A46006C8F3E /* TestLandingController.xib */; };
 		CFB8B58023F27B37006C8F3E /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8B57F23F27B37006C8F3E /* UIExtensions.swift */; };
 		CFB8B58223F27BF9006C8F3E /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB8B58123F27BF9006C8F3E /* NSObjectExtension.swift */; };
@@ -466,6 +470,10 @@
 		CF937CC023EFBC8D00759EB4 /* TestLandingModelsForUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingModelsForUI.swift; sourceTree = "<group>"; };
 		CF937CCE23F108E500759EB4 /* TestLandingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestLandingCell.swift; sourceTree = "<group>"; };
 		CF937CD023F108F300759EB4 /* TestLandingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLandingCell.xib; sourceTree = "<group>"; };
+		CFAD613B23FBA21400CD2309 /* MainTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarController.swift; sourceTree = "<group>"; };
+		CFAD613F23FBA4BE00CD2309 /* TabBarNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNavigationController.swift; sourceTree = "<group>"; };
+		CFAD614123FBB08800CD2309 /* UIStroyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroyboardExtension.swift; sourceTree = "<group>"; };
+		CFAD614423FE4A4700CD2309 /* StoryBoardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardConstants.swift; sourceTree = "<group>"; };
 		CFB8B57B23F27A46006C8F3E /* TestLandingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestLandingController.xib; sourceTree = "<group>"; };
 		CFB8B57F23F27B37006C8F3E /* UIExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
 		CFB8B58123F27BF9006C8F3E /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
@@ -1506,6 +1514,7 @@
 		CF8F8B6223EF890300A56F7F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CFAD613A23FBA1FF00CD2309 /* TabbarController */,
 				CF8F8B6323EF891A00A56F7F /* Tests */,
 			);
 			path = Modules;
@@ -1576,12 +1585,30 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		CFAD613A23FBA1FF00CD2309 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				CFAD613B23FBA21400CD2309 /* MainTabbarController.swift */,
+			);
+			path = TabbarController;
+			sourceTree = "<group>";
+		};
+		CFAD614323FE4A3500CD2309 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				CFAD614423FE4A4700CD2309 /* StoryBoardConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		CFB8B57D23F27B23006C8F3E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CFAD614323FE4A3500CD2309 /* Constants */,
 				CFB8B58623F27FE4006C8F3E /* AppRouter */,
 				CFB8B58323F27E73006C8F3E /* BaseClasses */,
 				CFB8B57E23F27B29006C8F3E /* Extensions */,
+				CFAD613F23FBA4BE00CD2309 /* TabBarNavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1591,6 +1618,7 @@
 			children = (
 				CFB8B57F23F27B37006C8F3E /* UIExtensions.swift */,
 				CFB8B58123F27BF9006C8F3E /* NSObjectExtension.swift */,
+				CFAD614123FBB08800CD2309 /* UIStroyboardExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -2042,6 +2070,7 @@
 				8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */,
 				840FB81223BA20C70081DE59 /* TextView.swift in Sources */,
 				84A78C7623EF006C002FEADF /* MKMapViewDelegate.swift in Sources */,
+				CFAD613C23FBA21400CD2309 /* MainTabbarController.swift in Sources */,
 				84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */,
 				8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */,
 				C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */,
@@ -2053,6 +2082,7 @@
 				C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */,
 				842D691823C42B9E009CF7E7 /* NewLabel.swift in Sources */,
 				84732DA6224003AC005957F2 /* ReadingOnTimeViewController.swift in Sources */,
+				CFAD614223FBB08800CD2309 /* UIStroyboardExtension.swift in Sources */,
 				84A78C6123ED6636002FEADF /* SettingsTableViewControllerDelegate.swift in Sources */,
 				C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */,
 				C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */,
@@ -2118,6 +2148,7 @@
 				C458BD7123AEBFD200D1F108 /* UITextView.swift in Sources */,
 				841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */,
 				8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */,
+				CFAD614023FBA4BE00CD2309 /* TabBarNavigationController.swift in Sources */,
 				84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */,
 				C458BD6C23AEBF2000D1F108 /* Extensions.swift in Sources */,
 				C458BD7723AEC05E00D1F108 /* UISegmentedControl.swift in Sources */,
@@ -2125,6 +2156,7 @@
 				849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */,
 				8446583C23BFF61800DC316E /* AnimalsTestsData.swift in Sources */,
 				8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */,
+				CFAD614523FE4A4700CD2309 /* StoryBoardConstants.swift in Sources */,
 				C4D9616023CE545500C0ED57 /* SomeMoreView.swift in Sources */,
 				C4C7231921B9BC0F00F64612 /* RateManeger.swift in Sources */,
 				84A78C5723ECC542002FEADF /* TestErrors.swift in Sources */,
