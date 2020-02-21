@@ -11,18 +11,18 @@ import CoreML
 
 class ThemesController: UIViewController {
     
-    @IBOutlet weak var contentBackground:        UIView!
-    @IBOutlet weak var contentTextView:          UITextView!
+    @IBOutlet weak var contentBackground: UIView!
+    @IBOutlet weak var contentTextView:   UITextView!
     
     @IBOutlet weak var stepperViewShowingButton: UIBarButtonItem!
     
-    @IBOutlet weak var stepperView:              UIView!
-    @IBOutlet weak var stepper:                  UIStepper!
+    @IBOutlet weak var stepperView: UIView!
+    @IBOutlet weak var stepper:     UIStepper!
     
-    @IBOutlet weak var darkModeView:             UIView!
-    @IBOutlet weak var darkModeSwitch:           UISwitch!
-    @IBOutlet weak var darkModeLabel:            UITextView!
-    @IBOutlet weak var darkModeNavButton:        UIBarButtonItem!
+    @IBOutlet weak var darkModeView:      UIView!
+    @IBOutlet weak var darkModeSwitch:    UISwitch!
+    @IBOutlet weak var darkModeLabel:     UITextView!
+    @IBOutlet weak var darkModeNavButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()

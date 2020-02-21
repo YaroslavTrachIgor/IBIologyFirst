@@ -16,7 +16,9 @@ extension UITextView: ArticelsViewControllerProtocol {
     }
     
     func setSecondaryTextColor() {
-        textColor = .secondaryLabel
+        if #available(iOS 13.0, *) {
+            textColor = .secondaryLabel
+        }
     }
     
     func setMenuFont() {

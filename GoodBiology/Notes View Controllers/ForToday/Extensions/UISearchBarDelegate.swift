@@ -13,7 +13,9 @@ import CoreLocation
 extension ForTodayViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         let activityIndicator = UIActivityIndicatorView()
+        if #available(iOS 13.0, *) {
             activityIndicator.style             = UIActivityIndicatorView.Style.medium
+        }
             activityIndicator.center            = self.view.center
             activityIndicator.hidesWhenStopped  = true
             activityIndicator.startAnimating()

@@ -17,6 +17,14 @@ extension UIViewController {
         let safariVC = BasicSafariVC(url: url)
             safariVC.setupSafariVC()
         
-        present(safariVC, animated: true)
+        DispatchQueue.global(qos: .utility).async {
+            DispatchQueue.main.async {
+                self.present(safariVC, animated: true)
+            }
+        }
+    }
+    
+    func articleVCProperty_NavBarHiddenSet() {
+        navigationController?.hidesBarsOnTap = true
     }
 }

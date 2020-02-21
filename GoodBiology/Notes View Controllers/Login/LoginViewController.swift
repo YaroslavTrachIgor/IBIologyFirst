@@ -125,12 +125,15 @@ class LoginViewController: UIViewController {
     @objc func didTapAppleButton() {
         let provider = ASAuthorizationAppleIDProvider()
         let request  = provider.createRequest()
-        request.requestedScopes = [.fullName, .email]
         
-        let controller = BasicASAuthorizationController(authorizationRequests: [request])
-        
-        controller.delegate = self
-        controller.presentationContextProvider = self
+        DispatchQueue.global(qos: .userInteractive).async {
+            request.requestedScopes = [.fullName, .email]
+            
+            let controller = BasicASAuthorizationController(authorizationRequests: [request])
+            
+            controller.delegate = self
+            controller.presentationContextProvider = self
+        }
     }
     
     @IBAction func hideAppleView(_ sender: Any) {
@@ -380,12 +383,16 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        switch authorization.credential {
-        case let credentials as ASAuthorizationAppleIDCredential:
-            let user = User(credentials: credentials)
-            performSegue(withIdentifier: "segue", sender: user)
-        default:
-            break
+        DispatchQueue.global(qos: .utility).async {
+            DispatchQueue.main.async {
+                switch authorization.credential {
+                case let credentials as ASAuthorizationAppleIDCredential:
+                    let user = User(credentials: credentials)
+                    self.performSegue(withIdentifier: "segue", sender: user)
+                default:
+                    break
+                }
+            }
         }
     }
 }

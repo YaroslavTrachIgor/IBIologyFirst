@@ -31,7 +31,9 @@ extension UIButton {
         self.setTitleColor(lazyColor, for: .normal)
         self.titleLabel?.font       = UIFont(name: boldFont, size: 15)
         
-        self.backgroundColor        =  .systemBackground
+        if #available(iOS 13.0, *) {
+            self.backgroundColor        =  .systemBackground
+        }
         
         self.titleLabel?.textColor  =  lazyColor
         

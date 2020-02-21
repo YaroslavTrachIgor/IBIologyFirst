@@ -23,18 +23,19 @@ class ReadingOnTimeViewControllerControllButton: UIButton {
     }
     
     private func setupButton() {
-        let appleButton = AppleButtonSettings()
-        
-        backgroundColor = appleButton.backgroundColor
+        if #available(iOS 13.0, *) {
+            let appleButton = AppleButtonSettings()
+            
+            titleLabel?.font = appleButton.font
+            backgroundColor = appleButton.backgroundColor
+        }
         
         buttonsShadows()
         layer.shadowColor  = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        layer.shadowRadius = ReadingOnTimeStyleVaribles.shadowRadius
-        
-        setTitleColor(ReadingOnTimeStyleVaribles.textColor, for: .normal)
-
-        titleLabel?.font = appleButton.font
-        
+        if #available(iOS 13.0, *) {
+            layer.shadowRadius = ReadingOnTimeStyleVaribles.shadowRadius
+            setTitleColor(ReadingOnTimeStyleVaribles.textColor, for: .normal)
+        }
         layer.cornerRadius = 10
     }
 }

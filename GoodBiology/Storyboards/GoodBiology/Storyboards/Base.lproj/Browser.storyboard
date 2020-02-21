@@ -90,6 +90,27 @@
                                             <constraint firstAttribute="width" constant="173" id="zv7-L6-6ZE"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GI0-f0-hh0" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="166" width="173" height="55"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You can use long press to open wiki whenever you want" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iFs-ah-2TF">
+                                                <rect key="frame" x="8" y="8" width="157" height="39"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="iFs-ah-2TF" firstAttribute="top" secondItem="GI0-f0-hh0" secondAttribute="top" constant="8" id="90O-Bx-4Dc"/>
+                                            <constraint firstAttribute="bottom" secondItem="iFs-ah-2TF" secondAttribute="bottom" constant="8" id="NZd-Jw-rZh"/>
+                                            <constraint firstAttribute="width" constant="173" id="bmO-Tq-bvO"/>
+                                            <constraint firstAttribute="trailing" secondItem="iFs-ah-2TF" secondAttribute="trailing" constant="8" id="hUW-ww-8ZX"/>
+                                            <constraint firstAttribute="height" constant="55" id="kak-Uk-P04"/>
+                                            <constraint firstItem="iFs-ah-2TF" firstAttribute="leading" secondItem="GI0-f0-hh0" secondAttribute="leading" constant="8" id="xdK-tK-q5w"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -98,8 +119,10 @@
                                     <constraint firstItem="AAG-JT-dBK" firstAttribute="top" secondItem="KRE-A8-OIF" secondAttribute="top" constant="8" id="8ch-PF-foB"/>
                                     <constraint firstAttribute="bottom" secondItem="nmz-Lt-lGm" secondAttribute="bottom" constant="8" id="GBr-tL-ewk"/>
                                     <constraint firstItem="nmz-Lt-lGm" firstAttribute="top" secondItem="KRE-A8-OIF" secondAttribute="top" constant="8" id="R1f-xz-2Ew"/>
+                                    <constraint firstItem="GI0-f0-hh0" firstAttribute="top" secondItem="AAG-JT-dBK" secondAttribute="bottom" constant="8" id="bv4-ks-QiC"/>
                                     <constraint firstItem="UlR-xH-cpz" firstAttribute="top" secondItem="yfO-Ga-GQl" secondAttribute="bottom" constant="7.5" id="dcH-7U-SaM"/>
                                     <constraint firstItem="nmz-Lt-lGm" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="8" id="iDb-Te-oIy"/>
+                                    <constraint firstItem="GI0-f0-hh0" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="8" id="na7-37-cXb"/>
                                     <constraint firstItem="AAG-JT-dBK" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="8" id="seb-q2-8Qh"/>
                                     <constraint firstAttribute="trailing" secondItem="UlR-xH-cpz" secondAttribute="trailing" constant="142" id="yu4-dz-csg"/>
                                 </constraints>
@@ -162,6 +185,7 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="ONK-jt-Cfi" firstAttribute="leading" secondItem="gMb-nY-e2t" secondAttribute="leading" id="4h8-3U-O1j"/>
                             <constraint firstItem="aCS-NK-uaN" firstAttribute="trailing" secondItem="CBp-if-4N7" secondAttribute="trailing" constant="16" id="4iP-Um-UPe"/>
@@ -178,6 +202,9 @@
                             <constraint firstAttribute="bottom" secondItem="ONK-jt-Cfi" secondAttribute="bottom" id="pUc-Xc-Csh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aCS-NK-uaN"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="oci-8z-af8" appends="YES" id="gSf-JY-HQy"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="ZNm-3z-w3m">
@@ -211,6 +238,8 @@
                     <connections>
                         <outlet property="activityIndicator" destination="yfO-Ga-GQl" id="6PW-Nu-GgB"/>
                         <outlet property="backButton" destination="IvC-yW-TJe" id="xSh-6h-gWt"/>
+                        <outlet property="explanatoryTextView" destination="iFs-ah-2TF" id="bvS-cd-bpF"/>
+                        <outlet property="explanatoryView" destination="GI0-f0-hh0" id="1Kk-s4-h0C"/>
                         <outlet property="goForwardButton" destination="efW-iV-Aq1" id="b9H-ug-xIa"/>
                         <outlet property="loadingLabel" destination="UlR-xH-cpz" id="Ved-eT-PFU"/>
                         <outlet property="nextButton" destination="efW-iV-Aq1" id="1X6-TK-qWx"/>
@@ -227,6 +256,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4n4-5g-3tJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="oci-8z-af8">
+                    <connections>
+                        <action selector="wikiOpenWithGestureRecognizer:" destination="npO-hz-aCj" id="fNj-vq-F3p"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-701.25" y="1055.2816901408451"/>
         </scene>
@@ -287,16 +321,40 @@
                                     <action selector="contact:" destination="R7e-EK-KVI" eventType="touchUpInside" id="CZT-8R-BfR"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U88-BP-L0i" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="60" width="45" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKZ-o3-QFv">
+                                        <rect key="frame" x="11.5" y="11.5" width="22" height="22"/>
+                                        <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="map" catalog="system"/>
+                                        <connections>
+                                            <action selector="typeViewBackShowing:" destination="R7e-EK-KVI" eventType="touchUpInside" id="QZb-uw-9gA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pKZ-o3-QFv" secondAttribute="trailing" constant="11.5" id="LYU-XA-yiC"/>
+                                    <constraint firstAttribute="width" constant="45" id="fLp-oX-MHy"/>
+                                    <constraint firstItem="pKZ-o3-QFv" firstAttribute="leading" secondItem="U88-BP-L0i" secondAttribute="leading" constant="11.5" id="fZs-Gj-ya7"/>
+                                    <constraint firstAttribute="height" constant="45" id="j9e-3q-2g0"/>
+                                    <constraint firstItem="pKZ-o3-QFv" firstAttribute="top" secondItem="U88-BP-L0i" secondAttribute="top" constant="11.5" id="mic-bk-faZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="pKZ-o3-QFv" secondAttribute="bottom" constant="11.5" id="zFz-mb-F7v"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="UrW-Ab-Ru3" secondAttribute="trailing" constant="12" id="2qO-PM-9ic"/>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="bottom" secondItem="UrW-Ab-Ru3" secondAttribute="bottom" constant="11" id="3ea-sI-Ymw"/>
+                            <constraint firstItem="U88-BP-L0i" firstAttribute="top" secondItem="gSA-Aa-PVx" secondAttribute="top" constant="16" id="7EC-wd-eVd"/>
                             <constraint firstItem="qhO-7B-3jJ" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" constant="16" id="CUq-kP-igh"/>
                             <constraint firstItem="WtF-vH-Hq7" firstAttribute="top" secondItem="gSA-Aa-PVx" secondAttribute="top" id="IA6-8H-NdJ"/>
                             <constraint firstItem="UrW-Ab-Ru3" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" constant="12" id="NQP-XY-EWB"/>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="dyK-s0-4rM" secondAttribute="trailing" constant="12" id="gvC-pw-6HE"/>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="bottom" secondItem="qhO-7B-3jJ" secondAttribute="bottom" constant="14" id="qAJ-CV-aCB"/>
+                            <constraint firstItem="U88-BP-L0i" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" constant="16" id="r6V-vb-cCs"/>
                             <constraint firstItem="WtF-vH-Hq7" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" id="tdD-Dy-MiS"/>
                             <constraint firstItem="dyK-s0-4rM" firstAttribute="top" secondItem="gSA-Aa-PVx" secondAttribute="top" constant="12" id="vgu-Ib-bgg"/>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="qhO-7B-3jJ" secondAttribute="trailing" constant="16" id="wmR-vu-88Z"/>
@@ -307,11 +365,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Map" largeTitleDisplayMode="never" id="8bf-R9-HFQ">
                         <rightBarButtonItems>
-                            <barButtonItem image="icons8-map-2" id="xUr-BV-XcL">
-                                <connections>
-                                    <action selector="typeViewBackShowing:" destination="R7e-EK-KVI" id="H9N-35-9n0"/>
-                                </connections>
-                            </barButtonItem>
                             <barButtonItem systemItem="action" id="Kxr-Jj-Nbs">
                                 <connections>
                                     <action selector="share:" destination="R7e-EK-KVI" id="c6T-Br-C5H"/>
@@ -327,6 +380,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="qhO-7B-3jJ" id="2vt-68-gTp"/>
+                        <outlet property="mapTypesButtonBackView" destination="U88-BP-L0i" id="XIw-Pv-i5h"/>
                         <outlet property="mapView" destination="WtF-vH-Hq7" id="yiY-eW-Bnz"/>
                         <outlet property="problemButton" destination="UrW-Ab-Ru3" id="eu6-SR-jjS"/>
                         <outlet property="typeView" destination="4CF-S9-GG0" id="DqX-xo-077"/>
@@ -349,7 +403,7 @@
     <resources>
         <image name="eye.slash.fill" catalog="system" width="64" height="40"/>
         <image name="globe_earth" width="30" height="30"/>
-        <image name="icons8-map-2" width="25" height="25"/>
         <image name="icons8-menu_filled" width="25" height="25"/>
+        <image name="map" catalog="system" width="64" height="56"/>
     </resources>
 </document>

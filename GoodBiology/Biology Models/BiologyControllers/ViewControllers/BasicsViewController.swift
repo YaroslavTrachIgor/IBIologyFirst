@@ -90,8 +90,7 @@ class BasicsViewController: UIViewController {
     }
     
     @IBAction func bottomButtonAction(sender: UIButton) {
-        scheduleNotification()
-        sender.pulsate()
+        sender.notificationButtonBasicFunctions(view)
     }
     
     @IBAction func nextAction() {

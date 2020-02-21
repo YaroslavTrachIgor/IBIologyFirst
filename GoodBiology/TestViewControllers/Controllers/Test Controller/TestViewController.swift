@@ -76,22 +76,24 @@ class TestViewController: UIViewController {
     }
     
     private func setScore() {
-        if answerLabel.text != answerWord || answerLabel.textColor != .secondaryLabel {
-            if answerLabel.text == falseWord {
-                let number2  = Int.random(in: 1 ..< 12)
-                let number1 = 0
-                let number  = Int.random(in: 20 ..< 35)
-                
-                let numberArray = [String(number1), String(number), String(number2)]
-                
-                score = String(numberArray.randomElement() ?? description)
-            } else {
-                let number1 = Int.random(in: 95 ..< 100)
-                let number  = Int.random(in: 64 ..< 80)
-                
-                let numberArray = [String(number1), String(number)]
-                
-                score = String(numberArray.randomElement() ?? description)
+        if #available(iOS 13.0, *) {
+            if answerLabel.text != answerWord || answerLabel.textColor != .secondaryLabel {
+                if answerLabel.text == falseWord {
+                    let number2  = Int.random(in: 1 ..< 12)
+                    let number1 = 0
+                    let number  = Int.random(in: 20 ..< 35)
+                    
+                    let numberArray = [String(number1), String(number), String(number2)]
+                    
+                    score = String(numberArray.randomElement() ?? description)
+                } else {
+                    let number1 = Int.random(in: 95 ..< 100)
+                    let number  = Int.random(in: 64 ..< 80)
+                    
+                    let numberArray = [String(number1), String(number)]
+                    
+                    score = String(numberArray.randomElement() ?? description)
+                }
             }
         }
     }
@@ -247,10 +249,12 @@ class TestViewController: UIViewController {
     }
     
     private func doneTestErrorsSetup() throws {
-        if answerLabel.text == answerWord || answerLabel.textColor == .secondaryLabel {
-            throw TestErrors.DoneErrors.answerIsDefault
-        } else {
-            throw TestErrors.DoneErrors.doneTest
+        if #available(iOS 13.0, *) {
+            if answerLabel.text == answerWord || answerLabel.textColor == .secondaryLabel {
+                throw TestErrors.DoneErrors.answerIsDefault
+            } else {
+                throw TestErrors.DoneErrors.doneTest
+            }
         }
     }
     

@@ -92,8 +92,8 @@ extension ForTodayViewController: ForTodayViewControllerMapSetupProtocol {
         let alertController = UIAlertController(title: "Oops", message: "You are not connected to WiFi", preferredStyle: .alert)
         let action          = UIAlertAction(title: "Continue", style: .cancel) { (action) in }
         
-                     alertController.view.tintColor = lazyColor
-                     alertController.addAction(action)
+        alertController.view.tintColor = lazyColor
+        alertController.addAction(action)
         
         switch networkStatus {
         case .Unknown, .Offline:
@@ -176,8 +176,12 @@ extension ForTodayViewController: ForTodayViewControllerMapSetupProtocol {
     
     func chekLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
-            setupLocationMenegar()
-            chekLocationAuthorization()
+            DispatchQueue.global(qos: .utility).async {
+                DispatchQueue.main.async {
+                    self.setupLocationMenegar()
+                    self.chekLocationAuthorization()
+                }
+            }
         }
     }
     

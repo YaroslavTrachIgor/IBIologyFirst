@@ -22,6 +22,8 @@ class ArticlesOnlineVideosViewController: UIViewController {
         
         networkingProccesesPrefering()
         viewBasicProccesesPrefering()
+        
+        articleVCProperty_NavBarHiddenSet()
     }
         
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +45,12 @@ class ArticlesOnlineVideosViewController: UIViewController {
     }
         
     func networkingProccesesPrefering() {
-        urlGiven()
+        let queue = DispatchQueue.global(qos: .utility)
+        queue.async {
+            DispatchQueue.main.async {
+                self.urlGiven()
+            }
+        }
     }
         
     func viewBasicProccesesPrefering() {
@@ -89,8 +96,11 @@ class ArticlesOnlineVideosViewController: UIViewController {
     }
         
     private func urlGiven() {
+        guard navigationItem.title != nil else { return }
+        
         if navigationItem.title == "Plants Videos" {
             self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.plantsURL)!))
+            
         } else if navigationItem.title == "Animals Videos" {
             
             self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.animalURL)!))

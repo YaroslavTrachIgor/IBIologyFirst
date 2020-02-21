@@ -59,6 +59,15 @@
 		8454DDA52214CA300033A3A2 /* PlantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA42214CA300033A3A2 /* PlantsData.swift */; };
 		8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA62216F8AF0033A3A2 /* AppInformation.swift */; };
 		8454DDA9221750610033A3A2 /* AnimalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA8221750610033A3A2 /* AnimalsData.swift */; };
+		845EE55923FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55823FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift */; };
+		845EE55B23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55A23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift */; };
+		845EE55D23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */; };
+		845EE55F23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55E23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift */; };
+		845EE56123FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56023FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift */; };
+		845EE56423FA044A0036479B /* NetworkingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56323FA044A0036479B /* NetworkingButton.swift */; };
+		845EE56623FABB0F0036479B /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845EE56523FABB0F0036479B /* CardViewController.xib */; };
+		845EE56823FABB6C0036479B /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56723FABB6C0036479B /* CardViewController.swift */; };
+		845EE56A23FB24AA0036479B /* UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */; };
 		845FE7442322F45400B36E76 /* ArticleOnlineImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */; };
 		8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461367C22C65F8D0019C7FB /* HumanData.swift */; };
 		8461F8C621EB651800586139 /* TestsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461F8C521EB651800586139 /* TestsReviewViewController.swift */; };
@@ -72,12 +81,17 @@
 		847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A507E2392E52400223AC7 /* BlankSheetViewController.swift */; };
 		848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A92F121DD63E600D1C3C1 /* SafariViewController.swift */; };
 		848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC42B2368FB1F0060709C /* ThemesMenuTableViewController.swift */; };
+		84914E2023FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E1F23FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift */; };
+		84914E2223FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */; };
+		84914E2423FE9DE80048B154 /* HideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2323FE9DE80048B154 /* HideButton.swift */; };
+		84914E2623FF55C60048B154 /* NewArticleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2523FF55C60048B154 /* NewArticleLabel.swift */; };
 		8497E34623566495003CD4A9 /* SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E34523566495003CD4A9 /* SystemColors.swift */; };
 		8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */; };
 		8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */; };
 		849C38A82353B121002E007D /* ReadingOnTimeStyleVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38A72353B121002E007D /* ReadingOnTimeStyleVaribles.swift */; };
 		849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38AD2353B8AB002E007D /* MapDelegate.swift */; };
 		849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38B12353BB27002E007D /* Notes Protocol.swift */; };
+		849E67FC23FC316900569F32 /* BasicMFMailComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E67FB23FC316900569F32 /* BasicMFMailComposeViewController.swift */; };
 		849F5381236977CD0027289F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F5380236977CD0027289F /* GradientView.swift */; };
 		84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A15A96236209220069AADE /* SettingsTableViewController.swift */; };
 		84A3AF8B23F2155900836400 /* ControlButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AF8A23F2155900836400 /* ControlButton.swift */; };
@@ -124,7 +138,6 @@
 		84A78C5723ECC542002FEADF /* TestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5623ECC542002FEADF /* TestErrors.swift */; };
 		84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */; };
 		84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */; };
-		84A78C5F23ED6617002FEADF /* UsersViewWithInfoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5E23ED6617002FEADF /* UsersViewWithInfoDelegate.swift */; };
 		84A78C6123ED6636002FEADF /* SettingsTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6023ED6636002FEADF /* SettingsTableViewControllerDelegate.swift */; };
 		84A78C6423ED682A002FEADF /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6323ED682A002FEADF /* StepperView.swift */; };
 		84A78C6723ED686C002FEADF /* TestStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C6623ED686C002FEADF /* TestStepperView.swift */; };
@@ -353,6 +366,15 @@
 		8454DDA42214CA300033A3A2 /* PlantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsData.swift; sourceTree = "<group>"; };
 		8454DDA62216F8AF0033A3A2 /* AppInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInformation.swift; sourceTree = "<group>"; };
 		8454DDA8221750610033A3A2 /* AnimalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsData.swift; sourceTree = "<group>"; };
+		845EE55823FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLoadAnimationsSetupProtocol.swift; sourceTree = "<group>"; };
+		845EE55A23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerUIPickerViewDataSource.swift; sourceTree = "<group>"; };
+		845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerUIPickerViewDelegate.swift; sourceTree = "<group>"; };
+		845EE55E23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerViewSetupProtocol.swift; sourceTree = "<group>"; };
+		845EE56023FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerUIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		845EE56323FA044A0036479B /* NetworkingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingButton.swift; sourceTree = "<group>"; };
+		845EE56523FABB0F0036479B /* CardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		845EE56723FABB6C0036479B /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerDelegate.swift; sourceTree = "<group>"; };
 		845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOnlineImagesViewController.swift; sourceTree = "<group>"; };
 		8461367C22C65F8D0019C7FB /* HumanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanData.swift; sourceTree = "<group>"; };
 		8461F8C521EB651800586139 /* TestsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsReviewViewController.swift; sourceTree = "<group>"; };
@@ -367,12 +389,17 @@
 		847A507E2392E52400223AC7 /* BlankSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankSheetViewController.swift; sourceTree = "<group>"; };
 		848A92F121DD63E600D1C3C1 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		848CC42B2368FB1F0060709C /* ThemesMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesMenuTableViewController.swift; sourceTree = "<group>"; };
+		84914E1F23FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewSaveAllActionsFunctionsProtocol.swift; sourceTree = "<group>"; };
+		84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift; sourceTree = "<group>"; };
+		84914E2323FE9DE80048B154 /* HideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideButton.swift; sourceTree = "<group>"; };
+		84914E2523FF55C60048B154 /* NewArticleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArticleLabel.swift; sourceTree = "<group>"; };
 		8497E34523566495003CD4A9 /* SystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColors.swift; sourceTree = "<group>"; };
 		8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Elements Basic Functions, Classes, Structs and as on.swift"; sourceTree = "<group>"; };
 		8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiConnectionRecognizing.swift; sourceTree = "<group>"; };
 		849C38A72353B121002E007D /* ReadingOnTimeStyleVaribles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeStyleVaribles.swift; sourceTree = "<group>"; };
 		849C38AD2353B8AB002E007D /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
 		849C38B12353BB27002E007D /* Notes Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes Protocol.swift"; sourceTree = "<group>"; };
+		849E67FB23FC316900569F32 /* BasicMFMailComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMFMailComposeViewController.swift; sourceTree = "<group>"; };
 		849F5380236977CD0027289F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		84A15A96236209220069AADE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		84A3AF8A23F2155900836400 /* ControlButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButton.swift; sourceTree = "<group>"; };
@@ -408,7 +435,6 @@
 		84A78C5623ECC542002FEADF /* TestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrors.swift; sourceTree = "<group>"; };
 		84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerExtensions.swift; sourceTree = "<group>"; };
 		84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchResultUpdating.swift; sourceTree = "<group>"; };
-		84A78C5E23ED6617002FEADF /* UsersViewWithInfoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewWithInfoDelegate.swift; sourceTree = "<group>"; };
 		84A78C6023ED6636002FEADF /* SettingsTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerDelegate.swift; sourceTree = "<group>"; };
 		84A78C6323ED682A002FEADF /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		84A78C6623ED686C002FEADF /* TestStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStepperView.swift; sourceTree = "<group>"; };
@@ -645,6 +671,7 @@
 			children = (
 				842D690823C29A99009CF7E7 /* DoneLabel.swift */,
 				842D690A23C29AD1009CF7E7 /* SettingsTextField.swift */,
+				84914E2323FE9DE80048B154 /* HideButton.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -652,6 +679,7 @@
 		842D690E23C2CE32009CF7E7 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				845EE56323FA044A0036479B /* NetworkingButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -672,6 +700,7 @@
 				842D691A23C545FA009CF7E7 /* ArticleView.swift */,
 				84F5741623F0C0BF00400ED4 /* ArticlesVCButtonBack.swift */,
 				84A3AFDA23F88AC600836400 /* MenuCellRightView.swift */,
+				84914E2523FF55C60048B154 /* NewArticleLabel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -758,6 +787,7 @@
 		844E0D1F2235766000933ABC /* Making Article */ = {
 			isa = PBXGroup;
 			children = (
+				849E67FA23FC306400569F32 /* UI */,
 				844E0D1D2235765200933ABC /* MakingArticleViewController.swift */,
 			);
 			name = "Making Article";
@@ -804,6 +834,18 @@
 				8461367C22C65F8D0019C7FB /* HumanData.swift */,
 			);
 			path = "Data Files";
+			sourceTree = "<group>";
+		};
+		845EE55723FA02BA0036479B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				845EE55823FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift */,
+				845EE55A23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift */,
+				845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */,
+				845EE55E23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift */,
+				845EE56023FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		845FE7422322F42500B36E76 /* Article Online Videos and Images */ = {
@@ -900,19 +942,20 @@
 		8497E3472358E3A2003CD4A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				845EE55723FA02BA0036479B /* Extensions */,
 				8471F87E21B30202001AA935 /* NetworkingViewController.swift */,
 				844E0D0622351BD400933ABC /* MapViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		8497E3482358E3C5003CD4A9 /* Basic  Functions */ = {
+		8497E3482358E3C5003CD4A9 /* App Basics */ = {
 			isa = PBXGroup;
 			children = (
 				C458BD6F23AEBF8700D1F108 /* Other */,
 				C458BD6623AEBEC000D1F108 /* UI Extensions */,
 			);
-			path = "Basic  Functions";
+			path = "App Basics";
 			sourceTree = "<group>";
 		};
 		8497E34B2358E494003CD4A9 /* About App Information */ = {
@@ -1064,6 +1107,14 @@
 			path = "Notes Delegate";
 			sourceTree = "<group>";
 		};
+		849E67FA23FC306400569F32 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				849E67FB23FC316900569F32 /* BasicMFMailComposeViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		849F5382236977E70027289F /* GradientView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1171,6 +1222,8 @@
 			children = (
 				84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */,
 				84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */,
+				845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */,
+				84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1178,8 +1231,8 @@
 		84A78C5D23ED6604002FEADF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				84A78C5E23ED6617002FEADF /* UsersViewWithInfoDelegate.swift */,
 				84A78C6023ED6636002FEADF /* SettingsTableViewControllerDelegate.swift */,
+				84914E1F23FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -1200,6 +1253,7 @@
 			isa = PBXGroup;
 			children = (
 				84A3AF9323F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift */,
+				84A3AF9023F2E85D00836400 /* ForTodayViewControllerMapSetupProtocol.swift */,
 				84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */,
 				84A78C6F23EE0902002FEADF /* UIPickerViewDataSource.swift */,
 				84A78C7123EEFFA0002FEADF /* UISearchBarDelegate.swift */,
@@ -1207,7 +1261,6 @@
 				84A78C7523EF006C002FEADF /* MKMapViewDelegate.swift */,
 				84A78C7723EF00CA002FEADF /* CLLocationManagerDelegate.swift */,
 				84A3AF8D23F2E75100836400 /* ForTodayTextFieldAndViewSetupProtocol.swift */,
-				84A3AF9023F2E85D00836400 /* ForTodayViewControllerMapSetupProtocol.swift */,
 				84A3AF9623F37B0D00836400 /* ForTodayViewControllerChooseTimeFunctionProtocol.swift */,
 				84A3AF9923F37C2900836400 /* ForTodayViewControllerNotificationProcesesSetupProtocol.swift */,
 				84A3AF9C23F37D2200836400 /* TextErrorsProtocol.swift */,
@@ -1359,6 +1412,8 @@
 		C447BD2F23D8C93F0026F176 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				845EE56523FABB0F0036479B /* CardViewController.xib */,
+				845EE56723FABB6C0036479B /* CardViewController.swift */,
 				C447BD3023D8C94C0026F176 /* FastAlert.swift */,
 			);
 			path = UI;
@@ -1608,7 +1663,7 @@
 		C4FA2D1F21FCD7F40023B655 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				8497E3482358E3C5003CD4A9 /* Basic  Functions */,
+				8497E3482358E3C5003CD4A9 /* App Basics */,
 			);
 			path = Basic;
 			sourceTree = "<group>";
@@ -1986,6 +2041,7 @@
 				8454DD99221323640033A3A2 /* Browser.storyboard in Resources */,
 				844E0D212239A0C800933ABC /* iBiology.mov in Resources */,
 				C4E5E23E21975BE5009C3062 /* Assets.xcassets in Resources */,
+				845EE56623FABB0F0036479B /* CardViewController.xib in Resources */,
 				C4C7252121C058DD00F64612 /* Biology.storyboard in Resources */,
 				C498F9A3219F6B5900DCAC9F /* Tests.storyboard in Resources */,
 				C4E5E23C21975BE4009C3062 /* Main.storyboard in Resources */,
@@ -2080,9 +2136,11 @@
 				8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */,
 				84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */,
 				8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */,
+				845EE55D23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift in Sources */,
 				842D690D23C29D24009CF7E7 /* HelpButton.swift in Sources */,
 				848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */,
 				8446583E23BFF6EF00DC316E /* HumenTestsData.swift in Sources */,
+				845EE56A23FB24AA0036479B /* UIImagePickerControllerDelegate.swift in Sources */,
 				84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */,
 				84A78C6423ED682A002FEADF /* StepperView.swift in Sources */,
 				8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */,
@@ -2093,12 +2151,14 @@
 				84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */,
 				8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */,
 				C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */,
+				84914E2423FE9DE80048B154 /* HideButton.swift in Sources */,
 				842D692623C77AA4009CF7E7 /* SFSafariViewController.swift in Sources */,
 				84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */,
 				8454DDA9221750610033A3A2 /* AnimalsData.swift in Sources */,
 				84323ECA21CE690700D50B2B /* Shadows.swift in Sources */,
 				8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */,
 				C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */,
+				84914E2023FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift in Sources */,
 				84A3AFA023F37D9700836400 /* ForTodayViewControllerMailComposerProtocol.swift in Sources */,
 				842D691823C42B9E009CF7E7 /* NewLabel.swift in Sources */,
 				84732DA6224003AC005957F2 /* ReadingOnTimeViewController.swift in Sources */,
@@ -2108,6 +2168,7 @@
 				84A78C7223EEFFA0002FEADF /* UISearchBarDelegate.swift in Sources */,
 				C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */,
 				84A3AFDB23F88AC600836400 /* MenuCellRightView.swift in Sources */,
+				849E67FC23FC316900569F32 /* BasicMFMailComposeViewController.swift in Sources */,
 				84F5741723F0C0BF00400ED4 /* ArticlesVCButtonBack.swift in Sources */,
 				84A3AFB623F6140A00836400 /* ShadowView.swift in Sources */,
 				84A3AFA323F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift in Sources */,
@@ -2143,11 +2204,13 @@
 				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
 				84A78C6923ED6893002FEADF /* ContentBack.swift in Sources */,
 				C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */,
+				84914E2623FF55C60048B154 /* NewArticleLabel.swift in Sources */,
 				84A3AFAD23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift in Sources */,
 				8446582023BC0A5200DC316E /* Button.swift in Sources */,
 				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
 				84F5741323F0BDEF00400ED4 /* ChromistaLabel.swift in Sources */,
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
+				845EE55923FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift in Sources */,
 				C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */,
 				84A3AFDD23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift in Sources */,
 				8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */,
@@ -2157,7 +2220,7 @@
 				84A3AFC623F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift in Sources */,
 				84A3AF9423F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift in Sources */,
 				C458BD6323AE55DA00D1F108 /* ChromistaThemesViewController.swift in Sources */,
-				84A78C5F23ED6617002FEADF /* UsersViewWithInfoDelegate.swift in Sources */,
+				845EE56423FA044A0036479B /* NetworkingButton.swift in Sources */,
 				AAEC22D621C67A1300FF69FE /* BasicsDataManager.swift in Sources */,
 				C458BD6A23AEBF0000D1F108 /* UIAlert.swift in Sources */,
 				8446584223BFF95A00DC316E /* MicrobesTestsData.swift in Sources */,
@@ -2187,6 +2250,7 @@
 				C458BD6E23AEBF4200D1F108 /* UIActivityIndicatorView.swift in Sources */,
 				84A3AFBE23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift in Sources */,
 				849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */,
+				845EE56823FABB6C0036479B /* CardViewController.swift in Sources */,
 				8446583C23BFF61800DC316E /* AnimalsTestsData.swift in Sources */,
 				8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */,
 				C4D9616023CE545500C0ED57 /* SomeMoreView.swift in Sources */,
@@ -2201,6 +2265,7 @@
 				84732DA922400B96005957F2 /* ReadingOnTimeData.swift in Sources */,
 				AA2C423421C842F500D1E680 /* BasicsCoordinator.swift in Sources */,
 				84C7AAEA223C4CDF00A7CF68 /* BiologyShareData.swift in Sources */,
+				84914E2223FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift in Sources */,
 				84A3AF9123F2E85D00836400 /* ForTodayViewControllerMapSetupProtocol.swift in Sources */,
 				C4CEC54C225200FE005BA8C6 /* BasicNotificationThings.swift in Sources */,
 				84B9050223201E810002F0E2 /* BasicTestWords.swift in Sources */,
@@ -2217,6 +2282,7 @@
 				840887B421F763810026A210 /* BiologyNotifications.swift in Sources */,
 				8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */,
 				840FB81723BA46050081DE59 /* TestView.swift in Sources */,
+				845EE55B23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift in Sources */,
 				84A3AFD223F82FD400836400 /* UISearchResultsUpdating.swift in Sources */,
 				C4D9616523D2B56800C0ED57 /* ASAuthorizationController.swift in Sources */,
 				84A78C7023EE0902002FEADF /* UIPickerViewDataSource.swift in Sources */,
@@ -2227,6 +2293,7 @@
 				84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */,
 				84A78C7823EF00CA002FEADF /* CLLocationManagerDelegate.swift in Sources */,
 				84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */,
+				845EE56123FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift in Sources */,
 				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
 				C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */,
 				C4C7231121B98A1E00F64612 /* VirusesViewController.swift in Sources */,
@@ -2242,6 +2309,7 @@
 				84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */,
 				842D692423C6CDD5009CF7E7 /* BiologyNotificationButton.swift in Sources */,
 				8468332623A4E5A6004CBFC8 /* User.swift in Sources */,
+				845EE55F23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2682,7 +2750,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59C6H8HQ42;
 				INFOPLIST_FILE = GoodBiology/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2707,7 +2775,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59C6H8HQ42;
 				INFOPLIST_FILE = GoodBiology/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

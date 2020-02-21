@@ -10,6 +10,7 @@ import AuthenticationServices
 import UIKit
 import LocalAuthentication
 
+@available(iOS 13.0, *)
 class BasicASAuthorizationController: ASAuthorizationController {
     override init(authorizationRequests: [ASAuthorizationRequest]) {
         super.init(authorizationRequests: authorizationRequests)

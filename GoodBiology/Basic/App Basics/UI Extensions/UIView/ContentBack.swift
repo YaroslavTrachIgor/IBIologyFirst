@@ -23,7 +23,9 @@ class ContentBack: UIView {
     private func setupView() {
         cornerRadius = 20
         
-        backgroundColor     = .systemBackground
+        if #available(iOS 13.0, *) {
+            backgroundColor     = .systemBackground
+        }
         layer.cornerRadius  = cornerRadius
         
         viewShadows()

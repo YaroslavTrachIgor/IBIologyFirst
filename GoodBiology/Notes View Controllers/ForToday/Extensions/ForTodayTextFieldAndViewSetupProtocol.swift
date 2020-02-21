@@ -25,11 +25,13 @@ extension ForTodayViewController: ForTodayTextFieldAndViewSetupProtocol {
     }
     
     func textViewACHidden() {
-        if inputTextView.text == "" { textViewActivity.isHidden = true }
+        guard let inputTextViewText = inputTextView.text else { return }
+        if inputTextViewText.isEmpty { textViewActivity.isHidden = true }
     }
     
     func textFieldACHidden() {
-        if inputTextField.text == "" { textFieldActivitu.isHidden = true }
+        guard let inputTextFieldText = inputTextView.text else { return }
+        if inputTextFieldText.isEmpty { textFieldActivitu.isHidden = true }
     }
     
     func textColorPrefering() {

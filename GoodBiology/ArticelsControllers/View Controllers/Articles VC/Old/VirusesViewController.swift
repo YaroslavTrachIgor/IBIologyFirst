@@ -11,6 +11,7 @@ import UserNotifications
 import AudioToolbox
 import Social
 
+@available(iOS 13.0, *)
 class VirusesViewController: UIViewController {
 
     //MARK: IBOutlets
@@ -39,15 +40,8 @@ class VirusesViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == VirusesArticleData.virusesBasicsContent {
-            fastActivityVC(item: VirusesArticleData.virusesBasicsContent)
-            
-        } else if textView.text == VirusesArticleData.virusesStructureContent {
-            fastActivityVC(item: VirusesArticleData.virusesStructureContent)
-            
-        } else {
-            fastActivityVC(item: VirusesArticleData.virusesMostContent)
-        }
+        guard let content = textView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     
@@ -281,6 +275,7 @@ class VirusesViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension VirusesViewController: ArticlesViewControllerDelegate {
     func finalView() {
         view.viewGradient()

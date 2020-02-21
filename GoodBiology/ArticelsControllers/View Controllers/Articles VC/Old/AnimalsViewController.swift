@@ -11,6 +11,7 @@ import UserNotifications
 import AudioToolbox
 import Social
 
+@available(iOS 13.0, *)
 class AnimalsViewController: UIViewController {
     
     //MARK: IBOutlets
@@ -40,15 +41,8 @@ class AnimalsViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == AnimalsArticleData.animalsBasicsContent {
-            fastActivityVC(item: AnimalsArticleData.animalsBasicsContent)
-            
-        } else if textView.text == AnimalsArticleData.animalsStructureContent {
-            fastActivityVC(item: AnimalsArticleData.animalsStructureContent)
-            
-        } else {
-            fastActivityVC(item: AnimalsArticleData.animalsMostContent)
-        }
+        guard let content = textView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     
@@ -274,6 +268,7 @@ class AnimalsViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension AnimalsViewController: ArticlesViewControllerDelegate {
     func finalView() {
         view.viewGradient()

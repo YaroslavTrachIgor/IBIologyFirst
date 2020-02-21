@@ -67,7 +67,7 @@ class VideoPlayerViewController: UIViewController {
     
         let popOver = popVC.popoverPresentationController
             popOver?.permittedArrowDirections = .any
-            popOver?.delegate = self
+            popOver?.delegate   = self
             popOver?.sourceView = self.view
             popOver?.barButtonItem = sender
         
@@ -75,14 +75,17 @@ class VideoPlayerViewController: UIViewController {
     }
     
     private func systemBackPrefering() {
-        switchView.viewSystemBack()
-        view.viewSystemBack()
-        
-        contentTextView.systemTextColor()
-        switchTextView.systemTextColor()
+        let queue = DispatchQueue.global(qos: .userInteractive)
+        queue.async {
+            DispatchQueue.main.async {
+                self.switchView.viewSystemBack()
+                self.view.viewSystemBack()
+                
+                self.contentTextView.systemTextColor()
+                self.switchTextView.systemTextColor()
+            }
+        }
     }
-    
-    
     
     @IBAction func share(_ sender: Any) {
         let activityVC = UIActivityViewController(activityItems: [VideoPlayerViewController.shareContent], applicationActivities: nil)

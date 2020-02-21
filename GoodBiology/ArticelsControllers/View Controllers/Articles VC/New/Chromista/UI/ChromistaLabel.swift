@@ -28,7 +28,9 @@ class ChromistaLabel: UILabel {
 
 extension ChromistaLabel: ChromistaLabelDelegate {
     internal func setupChromistaLabel() {
-        textColor = .secondaryLabel
+        if #available(iOS 13.0, *) {
+            textColor = .secondaryLabel
+        }
         alpha     = 0
         
         labelShadow()

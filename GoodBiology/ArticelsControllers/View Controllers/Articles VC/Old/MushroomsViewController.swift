@@ -11,6 +11,7 @@ import UserNotifications
 import AudioToolbox
 import Social
 
+@available(iOS 13.0, *)
 class MushroomsViewController: UIViewController {
     
     //MARK: IBOutlets
@@ -272,6 +273,7 @@ class MushroomsViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension MushroomsViewController: ArticlesViewControllerDelegate {
     func finalView() {
         view.viewGradient()

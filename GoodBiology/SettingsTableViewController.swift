@@ -10,18 +10,33 @@ import UIKit
 import SafariServices
 import MessageUI
 
-class SettingsTableViewController: UITableViewController, UsersViewWithInfoDelegate, SettingsTableViewControllerDelegate {
+class SettingsTableViewController: UITableViewController, SettingsTableViewControllerDelegate, UINavigationControllerDelegate {
     
     //Users view with Info
     @IBOutlet private weak var usersInfoView: UIView!
     
+    @IBOutlet weak var usersIconImageViewButton: UIButton!
+    @IBOutlet weak var usersIconImageView:       UIImageView! {
+        didSet {
+            usersIconImageView.layer.borderWidth = 3
+            usersIconImageView.layer.borderColor = #colorLiteral(red: 0.01884926471, green: 0.3037952094, blue: 0.1081991702, alpha: 1)
+            
+            usersIconImageView.layer.cornerRadius = usersIconImageView.frame.height / 2
+            
+            usersIconImageView.imageViewShadow()
+        }
+    }
     private var hidden: Bool = false
     
     // UI Hide for hidding Users view with Info
-    @IBOutlet private weak var hideButton:         UIButton!
-    @IBOutlet private weak var hideButtonBackView: ContentBack!
+    @IBOutlet private weak var hideButton:         HideButton!
+    @IBOutlet private weak var hideButtonBackView: ContentBack! {
+        didSet { hideButtonBackView.isHidden = !hidden }
+    }
     
-    @IBOutlet private weak var editButton: UIBarButtonItem!
+    @IBOutlet weak var editButton:  UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton:  UIBarButtonItem!
     
     //Done Labels
     @IBOutlet private weak var firstNameLabel:  DoneLabel!
@@ -46,17 +61,20 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
     @IBOutlet var table: UITableView!
     
     struct SettingsKeys {
-        // Personal Information Keys
+        /// Personal Information Keys
         static let nameKey        = "nameKey"
         static let secondNameKey  = "secondNameKey"
         static let emailKey       = "emailKey"
         
-        // Personal Personal Information Keys
+        /// Personal Personal Information Keys
         static let ageKey           = "ageKey"
         static let secondEmailKey   = "secondEmailKey"
         static let countryKey       = "countryKey"
         static let birthdayKey      = "birthdayKey"
         static let phoneKey         = "phoneKey"
+        
+        /// User Icon Image Key
+        static let imageKey = "imageKey"
     }
     
     lazy var searchController = BasicSearchController()
@@ -81,6 +99,10 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         return toolBar
     }()
     
+    // ubView for ActivityIndicatorView
+    var acSubView: UIView?
+    let acInViewIndicator = UIActivityIndicatorView()
+    
     @objc dynamic private var inputFirstNameText:  String?
     @objc dynamic private var inputSecondNameText: String?
     @objc dynamic private var inputEmailText:      String?
@@ -91,16 +113,62 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        /// Setup Main View Things
-        setupView()
         
         /// Oher
         loadSettings()
         prepareObservation()
         
-        /// Hide User Info
-        setupUsersViewWithInfo_hideButtonAndView()
+        /// Setup Main View Things
+        setupView()
+        gesturesSetup()
+    }
+    
+    @IBAction func saveAllActions(_ sender: Any) {
+        /// Start
+        acSubViewSetup()
+        acIndicatorViewSetup()
+        saveImageIcon()
+        navItemSetup()
+        buttonsEnabledSetup()
+        
+        /// End
+        loadAnimationSetup()
+    }
+    
+    @objc func hide() {
+        usersInfoView.isHidden = true
+    }
+    
+    func gesturesSetup() {
+        let gesture = UISwipeGestureRecognizer(target: self, action: #selector(hide))
+        
+        usersInfoView.isUserInteractionEnabled = true
+        usersInfoView.addGestureRecognizer(gesture)
+    }
+    
+    @IBAction func userIconChange(_ sender: Any) {
+        let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+        
+        let actionSheet = UIAlertController(title: nil, message: "How do you want to put the icon ?", preferredStyle: .actionSheet)
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action: UIAlertAction) in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            } else {
+                FastAlert.showBasic(title: "Error", message: "Camera is unavailable", vc: self)
+            }
+        }
+        let libraryAction = UIAlertAction(title: "Library", style: .default) { (action: UIAlertAction) in
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(cameraAction)
+        actionSheet.addAction(libraryAction)
+        actionSheet.addAction(cancelAction)
+        self.present(actionSheet, animated: true)
     }
     
     func setupView() {
@@ -112,11 +180,6 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         
         navigationController?.navigationBar.backgroundColor = .groupTableViewBackground
         navigationController?.navigationBar.barTintColor    = .groupTableViewBackground
-    }
-    
-    func setupUsersViewWithInfo_hideButtonAndView() {
-        hideButtonSetup()
-        hideButtonBackViewHiddenSettup()
     }
     
     @IBAction func edit(_ sender: Any) {
@@ -163,20 +226,6 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
                 viewController.inputEmailLabel.text =  updateFirstName
             }
         })
-    }
-    
-    private func hideButtonSetup() {
-        let appleButton = AppleButtonSettings()
-        let titleColor  = lazyColor
-        
-        hideButton.backgroundColor = appleButton.backgroundColor
-        hideButton.setTitleColor(titleColor, for: .normal)
-        hideButton.layer.cornerRadius = 12
-        hideButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Medium", size: 14)
-    }
-    
-    private func hideButtonBackViewHiddenSettup() {
-        hideButtonBackView.isHidden = !hidden
     }
     
     @objc func doneButtonAction() {
@@ -259,9 +308,8 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
     private func showMailComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
         
-        let composer                        = MFMailComposeViewController()
+        let composer                        = BasicMFMailComposeViewController(rootViewController: self)
             composer.mailComposeDelegate    = self
-            composer.setToRecipients(["zhbr282@gmail.com"])
             composer.setSubject("My Question")
             composer.setMessageBody("Here is my Question...", isHTML: false)
             composer.view.tintColor = lazyColor
@@ -309,6 +357,9 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         if let phone = UserDefaults.standard.string(forKey: SettingsKeys.phoneKey) {
             phoneNumberTextField.text = phone
         }
+        
+        let data = UserDefaults.standard.object(forKey: SettingsKeys.imageKey) as! NSData
+        usersIconImageView.image = UIImage(data: (data as NSData) as Data)
     }
     
     @IBAction func changeName(_ sender: UITextField) {
@@ -349,4 +400,3 @@ class SettingsTableViewController: UITableViewController, UsersViewWithInfoDeleg
         UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.phoneKey)
     }
 }
-

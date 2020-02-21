@@ -22,7 +22,9 @@ class ChromistaActionButtonsBack: UIView {
     }
 
     private func setupView() {
-        backgroundColor     = .systemBackground
+        if #available(iOS 13.0, *) {
+            backgroundColor     = .systemBackground
+        }
         layer.cornerRadius  = 16
         alpha = 0
         

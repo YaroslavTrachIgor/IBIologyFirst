@@ -11,6 +11,11 @@ import UIKit
 
 class AppIconViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backButtonBackground: ChromistaActionButtonsBack! {
+        didSet { backButtonBackground.alpha = 1 }
+    }
+    
     @IBOutlet private weak var imageView:       UIImageView!
     @IBOutlet private weak var switchOutlet:    UISwitch!
     @IBOutlet private weak var switchLabel:     UILabel!
@@ -30,10 +35,16 @@ class AppIconViewController: UIViewController {
         super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 0.5) {
-            let alpha = 1
+            let alpha: CGFloat = 1
             
-            self.imageView.alpha = CGFloat(alpha)
+            self.imageView.alpha            = alpha
+            self.backButtonBackground.alpha = alpha
         }
+    }
+    
+    @available(iOS 13.0, *)
+    @IBAction func back(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func share(_ sender: Any) {

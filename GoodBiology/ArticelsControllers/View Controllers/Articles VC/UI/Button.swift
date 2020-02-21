@@ -9,9 +9,12 @@
 import Foundation
 import UIKit
 
+@available(iOS 13.0, *)
 class ArticleActivityIndicatorView: UIActivityIndicatorView {
+    let activityIndicatorViewstyle = UIActivityIndicatorView.Style.medium
+    
     override init(style: UIActivityIndicatorView.Style) {
-        super.init(style: .medium)
+        super.init(style: activityIndicatorViewstyle)
         setup()
     }
     
@@ -21,6 +24,7 @@ class ArticleActivityIndicatorView: UIActivityIndicatorView {
     }
 }
 
+@available(iOS 13.0, *)
 extension ArticleActivityIndicatorView: ArticleActivityIndicatorViewDelegate {
     func setup() {
         activityIndicatorStarts(colorOfActivity: .darkGray)

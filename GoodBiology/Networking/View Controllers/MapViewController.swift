@@ -19,6 +19,8 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     @IBOutlet weak var typeView:             UISegmentedControl!
     @IBOutlet weak var typeViewBackground:   UIView!
     
+    @IBOutlet weak var mapTypesButtonBackView: ChromistaActionButtonsBack!
+    
     @IBOutlet weak var problemButton:        HelpButton!
     
     private let locationManager        = CLLocationManager()
@@ -40,12 +42,20 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 0.6) {
-            self.mapView.alpha = 1
+            let alpha: CGFloat = 1
+            
+            self.mapView.alpha                = alpha
+            self.mapTypesButtonBackView.alpha = alpha
         }
     }
     
     func mapViewBasics() {
-        checkLocationServices()
+        let semaphore = DispatchSemaphore(value: 2)
+        DispatchQueue.global(qos: .utility).async {
+            semaphore.wait()
+            self.checkLocationServices()
+        }
+        semaphore.signal()
         adressLabelPrefering()
         mapViewPrefring()
     }
@@ -55,10 +65,10 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         let alertController = UIAlertController(title: "Oops", message: "You are not connected to WiFi", preferredStyle: .alert)
         let action = UIAlertAction(title: "Continue", style: .cancel) { (action) in }
         
-                     alertController.view.tintColor = lazyColor
-                     alertController.addAction(action)
-                     alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                     alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
+        alertController.view.tintColor = lazyColor
+        alertController.addAction(action)
+        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
+        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
         
         switch networkStatus {
         case .Unknown, .Offline:
@@ -86,9 +96,8 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     private func showMailComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
         
-        let composer                        = MFMailComposeViewController()
+        let composer                        = BasicMFMailComposeViewController(rootViewController: self)
             composer.mailComposeDelegate    = self
-            composer.setToRecipients(["zhbr282@gmail.com"])
             composer.setSubject("Map Problem")
             composer.setMessageBody("Here is my problem with map", isHTML: false)
             composer.view.tintColor = lazyColor
@@ -140,7 +149,7 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         case 1:
             mapView.mapType = .satellite
         default:
-            print(" Error ")
+            print("Error")
         }
     }
     
@@ -157,22 +166,23 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
-            let region = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
+           let region   = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             mapView.setRegion(region, animated: true)
         }
     }
     
-    
     func checkLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            setupLocationManager()
-            checkLocationAuthorization()
+        DispatchQueue.global(qos: .utility).async {
+            DispatchQueue.main.async {
+                if CLLocationManager.locationServicesEnabled() {
+                    self.setupLocationManager()
+                    self.checkLocationAuthorization()
+                }
+            }
         }
     }
-    
     
     func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
@@ -193,14 +203,12 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         }
     }
     
-    
     func startTackingUserLocation() {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
         previousLocation = getCenterLocation(for: mapView)
     }
-    
     
     func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         let latitude    = mapView.centerCoordinate.latitude
@@ -212,7 +220,11 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
 
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        checkLocationAuthorization()
+        DispatchQueue.global(qos: .utility).async {
+            DispatchQueue.main.async {
+                self.checkLocationAuthorization()
+            }
+        }
     }
 }
 
@@ -239,8 +251,8 @@ extension MapViewController: MKMapViewDelegate {
                 return
             }
             
-            let streetNumber = placemark.subThoroughfare ?? ""
-            let streetName = placemark.thoroughfare ?? ""
+            let streetNumber    = placemark.subThoroughfare ?? ""
+            let streetName      = placemark.thoroughfare ?? ""
             
             DispatchQueue.main.async {
                 self.addressLabel.text = "\(streetNumber) \(streetName)"
@@ -267,7 +279,6 @@ extension UILabel {
 
 extension MapViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        
         if let _ = error {
             controller.dismiss(animated: true)
         }

@@ -28,8 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         switch userActivity.activityType {
         case UserActivityType.openPlantsArticle.rawValue:
-            if let VC = window?.rootViewController as? PlantsViewController {
-                VC.openPlantsArticle()
+            if #available(iOS 13.0, *) {
+                if let VC = window?.rootViewController as? PlantsViewController {
+                    VC.openPlantsArticle()
+                }
             }
         default:
             break

@@ -11,6 +11,7 @@ import AudioToolbox
 import UserNotifications
 import Social
 
+@available(iOS 13.0, *)
 class MicrobesViewController: UIViewController {
 
     //MARK: IBOutlets
@@ -45,15 +46,8 @@ class MicrobesViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == MicrobesArticleData.microbesBasicsContent {
-            fastActivityVC(item: MicrobesArticleData.microbesBasicsContent)
-            
-        } else if textView.text == MicrobesArticleData.microbesStructureContent {
-            fastActivityVC(item: MicrobesArticleData.microbesStructureContent)
-            
-        } else {
-            fastActivityVC(item: MicrobesArticleData.microbesMostContent)
-        }
+        guard let content = textView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     
@@ -280,6 +274,7 @@ class MicrobesViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension MicrobesViewController: ArticlesViewControllerDelegate {
     func finalView() {
         view.viewGradient()

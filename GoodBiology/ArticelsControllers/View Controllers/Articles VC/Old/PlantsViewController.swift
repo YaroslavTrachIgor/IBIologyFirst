@@ -15,6 +15,7 @@ enum UserActivityType: String {
     case openPlantsArticle = "yareyapp.GoodBiology.openPlantsArticle"
 }
 
+@available(iOS 13.0, *)
 class PlantsViewController: UIViewController {
     
     //MARK: IBOutlets
@@ -118,9 +119,8 @@ class PlantsViewController: UIViewController {
     }
     
     @IBAction func sharing(_ sender: Any) {
-        if let content = basicsTextView.text {
-            fastActivityVC(item: content)
-        }
+        guard let content = basicsTextView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     
@@ -355,6 +355,7 @@ class PlantsViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension PlantsViewController: ArticlesViewControllerDelegate {
     func finalView() {
         view.viewGradient()

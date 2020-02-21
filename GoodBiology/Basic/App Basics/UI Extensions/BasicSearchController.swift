@@ -44,4 +44,3 @@ func setupSearchBarFont() {
     let searchTextAppearance      = UITextField.self.appearance(whenContainedInInstancesOf: [UISearchBar.self])
         searchTextAppearance.font = UIFont(name: mediumFont, size: 14)
 }
-

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QI2-xW-u4f">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -327,6 +328,28 @@
                                     <constraint firstAttribute="width" constant="241" id="ett-Iu-Q3M"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pL7-PL-SCg" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="587" width="67" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="10F-xL-dp9">
+                                        <rect key="frame" x="10" y="5" width="46" height="30"/>
+                                        <color key="tintColor" red="0.052863754110000001" green="0.2422073287" blue="0.052376305849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="back:" destination="75i-ns-RbR" eventType="touchUpInside" id="Ttb-K6-Igp"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1ZA-hP-ioo"/>
+                                    <constraint firstAttribute="width" constant="67" id="3AQ-cW-EE5"/>
+                                    <constraint firstItem="10F-xL-dp9" firstAttribute="top" secondItem="pL7-PL-SCg" secondAttribute="top" constant="5" id="LDE-Xj-FN4"/>
+                                    <constraint firstItem="10F-xL-dp9" firstAttribute="leading" secondItem="pL7-PL-SCg" secondAttribute="leading" constant="10" id="VlZ-Rc-8I4"/>
+                                    <constraint firstAttribute="bottom" secondItem="10F-xL-dp9" secondAttribute="bottom" constant="5" id="hns-Bd-eyL"/>
+                                    <constraint firstAttribute="trailing" secondItem="10F-xL-dp9" secondAttribute="trailing" constant="11" id="hwn-s5-MB1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -336,6 +359,8 @@
                             <constraint firstItem="jOt-Q2-asb" firstAttribute="leading" secondItem="cbe-UW-9Vi" secondAttribute="leading" constant="67" id="UYz-ga-T5w"/>
                             <constraint firstItem="abM-JH-zqF" firstAttribute="trailing" secondItem="wQv-LT-XCr" secondAttribute="trailingMargin" id="Ums-Gx-jpQ"/>
                             <constraint firstItem="cbe-UW-9Vi" firstAttribute="trailing" secondItem="jOt-Q2-asb" secondAttribute="trailing" constant="67" id="hId-kf-LQ0"/>
+                            <constraint firstItem="pL7-PL-SCg" firstAttribute="leading" secondItem="cbe-UW-9Vi" secondAttribute="leading" constant="16" id="r0M-yR-KMu"/>
+                            <constraint firstItem="cbe-UW-9Vi" firstAttribute="bottom" secondItem="pL7-PL-SCg" secondAttribute="bottom" constant="20" id="wE8-zp-6fu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cbe-UW-9Vi"/>
                     </view>
@@ -354,6 +379,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="10F-xL-dp9" id="w1j-58-xEy"/>
+                        <outlet property="backButtonBackground" destination="pL7-PL-SCg" id="tkk-ln-KlA"/>
                         <outlet property="imageView" destination="jOt-Q2-asb" id="Pdt-Jx-YXY"/>
                         <outlet property="shareButton" destination="rgm-bb-cze" id="dDg-dT-KzE"/>
                         <outlet property="switchLabel" destination="7hh-p3-Kvm" id="zFW-sg-PLK"/>

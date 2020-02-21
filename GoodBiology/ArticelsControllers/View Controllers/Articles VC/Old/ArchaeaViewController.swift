@@ -11,6 +11,7 @@ import UserNotifications
 import AudioToolbox
 import Social
 
+@available(iOS 13.0, *)
 class ArchaeaViewController: UIViewController {
 
     //MARK: IBOutlets
@@ -49,15 +50,8 @@ class ArchaeaViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
-        if textView.text == ArchaeaArticleData.archaeaBasicsContent {
-            fastActivityVC(item: ArchaeaArticleData.archaeaBasicsContent)
-            
-        } else  if textView.text == ArchaeaArticleData.archaeaStructureContent {
-            fastActivityVC(item: ArchaeaArticleData.archaeaStructureContent)
-            
-        } else {
-            fastActivityVC(item: ArchaeaArticleData.archaeaMostContent)
-        }
+        guard let content = textView.text else { return }
+        fastActivityVC(item: content)
         shareButton.shareAudio()
     }
     
@@ -277,6 +271,7 @@ class ArchaeaViewController: UIViewController {
     }
 }
 
+@available(iOS 13.0, *)
 extension ArchaeaViewController: ArticlesViewControllerDelegate {
     func finalView() {
         view.viewGradient()

@@ -19,6 +19,8 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     // View Previews
     @IBOutlet var designView: [MenuCellRightView]!
     
+    @IBOutlet weak var newArticleLabel: NewArticleLabel!
+    
     @IBOutlet weak var plantsView:       ArticleView!
     @IBOutlet weak var mainView:         ArticleView!
     @IBOutlet weak var microbesView:     ArticleView!
@@ -26,7 +28,11 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     @IBOutlet weak var archaeaView:      ArticleView!
     @IBOutlet weak var manView:          ArticleView!
     @IBOutlet weak var virusesView:      ArticleView! {
-        didSet { virusesView.backgroundColor = .systemBackground }
+        didSet {
+            if #available(iOS 13.0, *) {
+                virusesView.backgroundColor = .systemBackground
+            }
+        }
     }
     @IBOutlet weak var mushroomsView:    ArticleView!
     @IBOutlet weak var chromistaView:    ArticleView!

@@ -26,9 +26,42 @@ class GoodBiologyUITests: XCTestCase {
         
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test() {
+        /// Application
+        let app = XCUIApplication()
+        
+        /// Main Menu Buttons ( ArticlesVC )
+        let plantsTestButton = app.scrollViews.otherElements.containing(.staticText, identifier:" Plants Article").children(matching: .button).element
+        let animalsTestButton = app.scrollViews.otherElements.containing(.staticText, identifier:" Animals Article").children(matching: .button).element
+        
+        XCTAssertEqual(plantsTestButton.exists, animalsTestButton.exists)
+        
+        XCTAssertTrue(animalsTestButton.exists, "Buttons that push Controller to articless(Plants, Animals)")
+        XCTAssertTrue(animalsTestButton.exists)
+        
+        /// Main Menu BarButtonItems ( ArticlesVC )
+        let browserBarButtonItem  = app.navigationBars["Articles"].children(matching: .button).matching(identifier: "Item").element(boundBy: 0)
+        let contactBarButtonItem  = app.navigationBars["Articles"].buttons["Email"]
+        let aboutAppBarButtonItem = app.navigationBars["Articles"].children(matching: .button).matching(identifier: "Item").element(boundBy: 1)
+        
+        XCTAssertTrue(browserBarButtonItem.exists)
+        XCTAssertTrue(contactBarButtonItem.exists)
+        XCTAssertTrue(aboutAppBarButtonItem.exists)
+        
+        plantsTestButton.tap()
+        
+        /// Artcicle NotificationButton
+        let notificationButton = app.buttons["Notification was put"]
+        
+        /// Article NavBar
+        let plantsNavigationBar = app.navigationBars["Plants"]
+        
+        /// Article NavBar BarButtonItems
+        let searchBarButtonItem = plantsNavigationBar.buttons["Search"]
+        let hideBarButtonItem   = plantsNavigationBar.buttons["eye.slash"]
+        let sizeBarButtonItem   = plantsNavigationBar.buttons["textformat.size"]
+        
+        XCTAssertEqual(plantsTestButton.exists, animalsTestButton.exists)
+        XCTAssertTrue(animalsTestButton.exists)
     }
-
 }
