@@ -186,20 +186,25 @@ extension ForTodayViewController: ForTodayViewControllerMapSetupProtocol {
     }
     
     func chekLocationAuthorization() {
-        switch CLLocationManager.authorizationStatus() {
-        case .notDetermined:
-            locationMeneger.requestWhenInUseAuthorization()
-        case .restricted:
-            break
-        case .denied:
-            break
-        case .authorizedAlways:
-            break
-        case .authorizedWhenInUse:
-            startTackingUserLocation()
-            break
-        @unknown default:
-            print("Fatal Error with For Today Section")
+        let group = DispatchGroup()
+        DispatchQueue.global(qos: .utility).async {
+            group.enter()
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined:
+                self.locationMeneger.requestWhenInUseAuthorization()
+            case .restricted:
+                break
+            case .denied:
+                break
+            case .authorizedAlways:
+                break
+            case .authorizedWhenInUse:
+                self.startTackingUserLocation()
+                break
+            @unknown default:
+                print("Fatal Error with For Today Section")
+            }
+            group.leave()
         }
     }
 }
