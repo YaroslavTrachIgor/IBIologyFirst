@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R0d-fa-TTY">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="vRr-xm-Ciy">
+            <objects>
+                <navigationController id="R0d-fa-TTY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="woN-Om-wRG"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Mdv-3s-NUb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pmw-Hc-X5F" kind="relationship" relationship="rootViewController" id="hem-GC-Z0W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nan-RN-S5z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3604" y="896"/>
+        </scene>
+        <!--Chromista-->
+        <scene sceneID="qGD-qc-39R">
+            <objects>
+                <viewController id="pmw-Hc-X5F" customClass="ChomistaViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ctQ-6f-f2w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onL-78-gWG" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="116" width="38" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7P-39-inl" customClass="ChromistaButton" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="5" width="24" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="textformat.size" catalog="system"/>
+                                        <connections>
+                                            <action selector="settingsButtonAction:" destination="pmw-Hc-X5F" eventType="touchUpInside" id="Ava-GJ-9NQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="Da6-Ta-n1F"/>
+                                    <constraint firstAttribute="width" constant="38" id="GNc-g7-mZ6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9CT-fe-ESS" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="198" width="343" height="154"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Yvh-tW-FAp">
+                                        <rect key="frame" x="8" y="8" width="327" height="138"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Chromista is a eukaryotic kingdom, probably polyphyletic. It includes all algae whose chloroplasts contain chlorophylls a and c, as well as various colorless forms that are closely related to them. As it is assumed the last common ancestor already possessed chloroplasts of red algal origin, the non-photosynthetic forms evolved from ancestors able to perform photosynthesis. These chloroplasts are surrounded by four membranes, and are believed to have been acquired from some red algae.</string>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Yvh-tW-FAp" firstAttribute="leading" secondItem="9CT-fe-ESS" secondAttribute="leading" constant="8" id="DcH-uK-B63"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yvh-tW-FAp" secondAttribute="trailing" constant="8" id="gkv-UO-rfk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yvh-tW-FAp" secondAttribute="bottom" constant="8" id="ifC-Ju-STo"/>
+                                    <constraint firstAttribute="height" constant="154" id="p1e-uc-8mk"/>
+                                    <constraint firstItem="Yvh-tW-FAp" firstAttribute="top" secondItem="9CT-fe-ESS" secondAttribute="top" constant="8" id="qii-GC-zBq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTy-iE-5Jl" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="417" width="343" height="91"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ay6-On-UxG">
+                                        <rect key="frame" x="8" y="8" width="327" height="75"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Ay6-On-UxG" firstAttribute="top" secondItem="KTy-iE-5Jl" secondAttribute="top" constant="8" id="89e-Ez-qQG"/>
+                                    <constraint firstItem="Ay6-On-UxG" firstAttribute="leading" secondItem="KTy-iE-5Jl" secondAttribute="leading" constant="8" id="iqp-2K-rJH"/>
+                                    <constraint firstAttribute="height" constant="91" id="ixL-sa-PvM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ay6-On-UxG" secondAttribute="trailing" constant="8" id="l7r-YB-m7o"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ay6-On-UxG" secondAttribute="bottom" constant="8" id="z04-zO-XrS"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Groups and History " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-5d-HT7" customClass="ChromistaLabel" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="381" width="202.5" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="202.5" id="Xfk-hq-mhL"/>
+                                    <constraint firstAttribute="height" constant="28" id="pio-Xu-H6L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1E-6p-SgP" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="321" y="116" width="38" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAP-Yd-kSv" customClass="ChromistaButton" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="7" width="27" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="eye.slash" catalog="system"/>
+                                        <connections>
+                                            <action selector="editButton:" destination="pmw-Hc-X5F" eventType="touchUpInside" id="4TV-6P-zxq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="UF5-eI-eac"/>
+                                    <constraint firstAttribute="width" constant="38" id="tTG-RB-Z7j"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzd-Ka-G5F" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="264" y="116" width="38" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCk-q5-BYL" customClass="ChromistaButton" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="6" y="7" width="27" height="24"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="book" catalog="system"/>
+                                        <connections>
+                                            <segue destination="nfT-aW-CJB" kind="show" identifier="" id="j51-Pe-oHK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="ezg-8V-drs"/>
+                                    <constraint firstAttribute="width" constant="38" id="zwm-eY-lJ6"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Basics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSn-1f-7fX" customClass="ChromistaLabel" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="192.5" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192.5" id="EH4-9B-LKl"/>
+                                    <constraint firstAttribute="height" constant="28" id="hy4-bi-DAv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5it-nF-5UR" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="516" width="343" height="135"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-cl-goH">
+                                        <rect key="frame" x="8" y="8" width="327" height="119"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Molecular trees have had some difficulty resolving relationships between the different groups. All three may share a common ancestor with the alveolates (see chromalveolates), but there is evidence that suggests that the haptophytes and cryptomonads do not belong together with the heterokonts or the SAR clade, but may be associated with the Archaeplastida. Cryptista specifically may be sister or part of Archaeplastida.</string>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="dw5-cl-goH" secondAttribute="bottom" constant="8" id="2HD-Nf-hZu"/>
+                                    <constraint firstItem="dw5-cl-goH" firstAttribute="leading" secondItem="5it-nF-5UR" secondAttribute="leading" constant="8" id="Bxa-P5-f96"/>
+                                    <constraint firstItem="dw5-cl-goH" firstAttribute="top" secondItem="5it-nF-5UR" secondAttribute="top" constant="8" id="h3L-2z-ODt"/>
+                                    <constraint firstAttribute="trailing" secondItem="dw5-cl-goH" secondAttribute="trailing" constant="8" id="wUW-gI-SL3"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ufd-HM-HuK">
+                                <rect key="frame" x="16" y="162" width="120" height="54"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="p69-TU-WH5">
+                                        <rect key="frame" x="13" y="11" width="94" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0" green="0.57336556279999995" blue="0.1964060967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stepperAction:" destination="pmw-Hc-X5F" eventType="valueChanged" id="OPc-ia-fKo"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="vCT-38-NbS"/>
+                                    <constraint firstAttribute="height" constant="54" id="wmx-hb-q41"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLK-Vp-5Uv">
+                                <rect key="frame" x="202" y="162" width="157" height="46"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0W6-Ig-Gki">
+                                        <rect key="frame" x="100" y="8" width="51" height="31"/>
+                                        <color key="onTintColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="switchAction:" destination="pmw-Hc-X5F" eventType="valueChanged" id="iDO-c3-tkC"/>
+                                        </connections>
+                                    </switch>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hide diffrent functions" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iyz-ox-4c8">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="92" id="amo-GK-Z4i"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0W6-Ig-Gki" secondAttribute="trailing" constant="8" id="0VM-ll-3OQ"/>
+                                    <constraint firstItem="0W6-Ig-Gki" firstAttribute="top" secondItem="PLK-Vp-5Uv" secondAttribute="top" constant="8" id="3RY-Ha-ugF"/>
+                                    <constraint firstItem="Iyz-ox-4c8" firstAttribute="leading" secondItem="PLK-Vp-5Uv" secondAttribute="leading" id="7Xs-lE-xwo"/>
+                                    <constraint firstItem="0W6-Ig-Gki" firstAttribute="leading" secondItem="Iyz-ox-4c8" secondAttribute="trailing" constant="8" symbolic="YES" id="B0v-rV-LLx"/>
+                                    <constraint firstItem="Iyz-ox-4c8" firstAttribute="top" secondItem="PLK-Vp-5Uv" secondAttribute="top" id="See-Y9-3zT"/>
+                                    <constraint firstItem="Iyz-ox-4c8" firstAttribute="top" secondItem="PLK-Vp-5Uv" secondAttribute="top" id="TwV-7t-sYt"/>
+                                    <constraint firstAttribute="bottom" secondItem="0W6-Ig-Gki" secondAttribute="bottom" constant="7" id="hoy-6R-si5"/>
+                                    <constraint firstAttribute="width" constant="157" id="jnN-hz-Lcq"/>
+                                    <constraint firstItem="Iyz-ox-4c8" firstAttribute="leading" secondItem="PLK-Vp-5Uv" secondAttribute="leading" id="lmz-uy-Hkt"/>
+                                    <constraint firstAttribute="height" constant="46" id="pWd-zi-i5E"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iyz-ox-4c8" secondAttribute="bottom" id="ryU-1e-Ugd"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iyz-ox-4c8" secondAttribute="bottom" id="uFA-7b-mUD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KTy-iE-5Jl" firstAttribute="leading" secondItem="29l-Ez-x8u" secondAttribute="leading" constant="16" id="77x-YU-ST9"/>
+                            <constraint firstItem="9CT-fe-ESS" firstAttribute="leading" secondItem="29l-Ez-x8u" secondAttribute="leading" constant="16" id="AU1-sK-7vr"/>
+                            <constraint firstItem="9CT-fe-ESS" firstAttribute="top" secondItem="JSn-1f-7fX" secondAttribute="bottom" constant="8" id="D5J-C1-fUw"/>
+                            <constraint firstItem="JSn-1f-7fX" firstAttribute="top" secondItem="onL-78-gWG" secondAttribute="bottom" constant="8" id="J8d-87-T0u"/>
+                            <constraint firstItem="29l-Ez-x8u" firstAttribute="trailing" secondItem="PLK-Vp-5Uv" secondAttribute="trailing" constant="16" id="L7E-Gm-BeR"/>
+                            <constraint firstItem="Icl-5d-HT7" firstAttribute="leading" secondItem="29l-Ez-x8u" secondAttribute="leading" constant="16" id="O9U-Al-Wsa"/>
+                            <constraint firstItem="s1E-6p-SgP" firstAttribute="top" secondItem="29l-Ez-x8u" secondAttribute="top" constant="20" id="Qsg-Nk-EaT"/>
+                            <constraint firstItem="29l-Ez-x8u" firstAttribute="trailing" secondItem="5it-nF-5UR" secondAttribute="trailing" constant="16" id="S01-bj-y0z"/>
+                            <constraint firstItem="onL-78-gWG" firstAttribute="top" secondItem="29l-Ez-x8u" secondAttribute="top" constant="20" id="UTb-0P-Ob9"/>
+                            <constraint firstItem="s1E-6p-SgP" firstAttribute="leading" secondItem="mzd-Ka-G5F" secondAttribute="trailing" constant="19" id="ZBh-ku-1QT"/>
+                            <constraint firstItem="Ufd-HM-HuK" firstAttribute="top" secondItem="onL-78-gWG" secondAttribute="bottom" constant="8" id="dNd-tg-qOG"/>
+                            <constraint firstItem="29l-Ez-x8u" firstAttribute="trailing" secondItem="s1E-6p-SgP" secondAttribute="trailing" constant="16" id="dfd-G1-9a7"/>
+                            <constraint firstItem="Ufd-HM-HuK" firstAttribute="leading" secondItem="29l-Ez-x8u" secondAttribute="leading" constant="16" id="dff-To-fvL"/>
+                            <constraint firstItem="JSn-1f-7fX" firstAttribute="leading" secondItem="29l-Ez-x8u" secondAttribute="leading" constant="16" id="eHo-ii-p50"/>
+                            <constraint firstItem="5it-nF-5UR" firstAttribute="leading" secondItem="29l-Ez-x8u" secondAttribute="leading" constant="16" id="ewO-OV-Jl2"/>
+                            <constraint firstItem="29l-Ez-x8u" firstAttribute="bottom" secondItem="5it-nF-5UR" secondAttribute="bottom" constant="16" id="jYr-UZ-kO8"/>
+                            <constraint firstItem="Icl-5d-HT7" firstAttribute="top" secondItem="9CT-fe-ESS" secondAttribute="bottom" constant="29" id="lQt-Eh-kFn"/>
+                            <constraint firstItem="KTy-iE-5Jl" firstAttribute="top" secondItem="Icl-5d-HT7" secondAttribute="bottom" constant="8" id="odZ-Bd-RLl"/>
+                            <constraint firstItem="onL-78-gWG" firstAttribute="leading" secondItem="29l-Ez-x8u" secondAttribute="leading" constant="16" id="pdx-LK-9hx"/>
+                            <constraint firstItem="5it-nF-5UR" firstAttribute="top" secondItem="KTy-iE-5Jl" secondAttribute="bottom" constant="8" id="qab-Pz-7jS"/>
+                            <constraint firstItem="PLK-Vp-5Uv" firstAttribute="top" secondItem="s1E-6p-SgP" secondAttribute="bottom" constant="8" id="r1b-h3-3VQ"/>
+                            <constraint firstItem="29l-Ez-x8u" firstAttribute="trailing" secondItem="9CT-fe-ESS" secondAttribute="trailing" constant="16" id="smz-aN-4Qf"/>
+                            <constraint firstItem="29l-Ez-x8u" firstAttribute="trailing" secondItem="KTy-iE-5Jl" secondAttribute="trailing" constant="16" id="uP1-bY-dVr"/>
+                            <constraint firstItem="mzd-Ka-G5F" firstAttribute="top" secondItem="29l-Ez-x8u" secondAttribute="top" constant="20" id="ycN-ri-yz6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="29l-Ez-x8u"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Chromista" id="UEp-LQ-znt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="7sZ-m1-hid">
+                            <connections>
+                                <action selector="shareContent:" destination="pmw-Hc-X5F" id="8dv-GY-nVc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="basicsLabel" destination="JSn-1f-7fX" id="H3r-m4-mr1"/>
+                        <outlet property="hideButton" destination="VAP-Yd-kSv" id="Qss-0g-EHA"/>
+                        <outlet property="hideButtonBack" destination="onL-78-gWG" id="QFk-rP-afT"/>
+                        <outlet property="historyTextView" destination="dw5-cl-goH" id="PDy-S6-ziL"/>
+                        <outlet property="historyTextViewBack" destination="5it-nF-5UR" id="1Uf-T9-Mi5"/>
+                        <outlet property="searchButton" destination="TCk-q5-BYL" id="xEp-hF-q8t"/>
+                        <outlet property="searchButtonBack" destination="mzd-Ka-G5F" id="dyg-6O-MwD"/>
+                        <outlet property="shareButton" destination="7sZ-m1-hid" id="Veu-nV-R1Q"/>
+                        <outlet property="sizeButton" destination="Q7P-39-inl" id="9Z0-vc-34B"/>
+                        <outlet property="sizeButtonBack" destination="s1E-6p-SgP" id="EgE-ZL-eCS"/>
+                        <outlet property="stepper" destination="p69-TU-WH5" id="nyX-ab-con"/>
+                        <outlet property="stepperView" destination="Ufd-HM-HuK" id="Mjn-Tg-SCN"/>
+                        <outlet property="structureLabel" destination="Icl-5d-HT7" id="oeU-gv-czJ"/>
+                        <outlet property="structureTextView" destination="Ay6-On-UxG" id="5m8-Xu-9lA"/>
+                        <outlet property="structureTextViewBack" destination="KTy-iE-5Jl" id="6bI-al-aOb"/>
+                        <outlet property="switchOutlet" destination="0W6-Ig-Gki" id="1oG-fU-arr"/>
+                        <outlet property="switchTextView" destination="Iyz-ox-4c8" id="LMO-48-moZ"/>
+                        <outlet property="switchView" destination="PLK-Vp-5Uv" id="oCh-bp-uzs"/>
+                        <outlet property="textView" destination="Yvh-tW-FAp" id="OdY-Lw-6HU"/>
+                        <outlet property="textViewBack" destination="9CT-fe-ESS" id="uZD-wU-lKZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brY-ye-nVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2812" y="896"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="b67-pd-ZDe">
+            <objects>
+                <tableViewController id="nfT-aW-CJB" customClass="ChromistaTableViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="1cy-AL-SH1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChromistaCell" textLabel="Ntn-6c-sU1" rowHeight="39" style="IBUITableViewCellStyleDefault" id="6Hw-xm-HTh">
+                                <rect key="frame" x="16" y="55.5" width="343" height="39"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Hw-xm-HTh" id="5ok-wP-di5">
+                                    <rect key="frame" x="0.0" y="0.0" width="317" height="39"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ntn-6c-sU1">
+                                            <rect key="frame" x="15" y="0.0" width="294" height="39"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <segue destination="f6y-0q-f1J" kind="show" identifier="chsegue" id="ui1-sA-CKj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="nfT-aW-CJB" id="9tn-fC-Wk6"/>
+                            <outlet property="delegate" destination="nfT-aW-CJB" id="0gO-yr-TBN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Groups" id="z6E-0r-WCD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guj-oX-4h8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2063.1999999999998" y="895.50224887556226"/>
+        </scene>
+        <!--Groups-->
+        <scene sceneID="KLO-Xf-4kx">
+            <objects>
+                <viewController id="f6y-0q-f1J" customClass="ChromistaThemesViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mcP-Xb-ycx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFz-eu-Qb3" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="160" width="343" height="224"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m49-a8-Eez">
+                                        <rect key="frame" x="4" y="4" width="335" height="216"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="m49-a8-Eez" firstAttribute="leading" secondItem="PFz-eu-Qb3" secondAttribute="leading" constant="4" id="6Pn-Kg-AZQ"/>
+                                    <constraint firstItem="m49-a8-Eez" firstAttribute="top" secondItem="PFz-eu-Qb3" secondAttribute="top" constant="4" id="LFe-ai-poH"/>
+                                    <constraint firstAttribute="height" constant="224" id="QDt-0O-zRl"/>
+                                    <constraint firstAttribute="trailing" secondItem="m49-a8-Eez" secondAttribute="trailing" constant="4" id="QTN-xR-g09"/>
+                                    <constraint firstAttribute="bottom" secondItem="m49-a8-Eez" secondAttribute="bottom" constant="4" id="Rjg-Qs-k9B"/>
+                                    <constraint firstItem="m49-a8-Eez" firstAttribute="leading" secondItem="PFz-eu-Qb3" secondAttribute="leading" constant="4" id="WS6-cd-wxU"/>
+                                    <constraint firstItem="m49-a8-Eez" firstAttribute="top" secondItem="PFz-eu-Qb3" secondAttribute="top" constant="4" id="ZdL-MS-AyU"/>
+                                    <constraint firstAttribute="trailing" secondItem="m49-a8-Eez" secondAttribute="trailing" constant="4" id="eHs-LX-SwQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vzV-bP-ot0" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="321" y="114" width="38" height="38"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aT-ze-1K4" customClass="ChromistaButton" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="5" width="24" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="textformat.size" catalog="system"/>
+                                        <connections>
+                                            <action selector="settingsButtonAction:" destination="f6y-0q-f1J" eventType="touchUpInside" id="bIC-2B-tu2"/>
+                                            <action selector="settingsButtonAction:" destination="pmw-Hc-X5F" eventType="touchUpInside" id="zY8-0l-9tM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="Qcb-Sw-AdE"/>
+                                    <constraint firstAttribute="height" constant="38" id="fPf-ct-WwL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Groups and History " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lH-QQ-JVP" customClass="ChromistaLabel" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="16" y="119" width="172" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="pv6-N5-9I8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8xL-eg-IqI">
+                                <rect key="frame" x="239" y="168" width="120" height="54"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="cmk-yl-Nvj">
+                                        <rect key="frame" x="12.563283922562382" y="11" width="93.985176738870081" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" red="0.0" green="0.57336556279999995" blue="0.1964060967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="stepperAction:" destination="pmw-Hc-X5F" eventType="valueChanged" id="JEc-8v-stI"/>
+                                            <action selector="stepperAction:" destination="f6y-0q-f1J" eventType="valueChanged" id="sfi-4k-l9n"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="Y4a-yA-nyd"/>
+                                    <constraint firstAttribute="width" constant="120" id="rOd-ti-UvQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jKy-xv-J2y" firstAttribute="trailing" secondItem="PFz-eu-Qb3" secondAttribute="trailing" constant="16" id="An5-IT-RIc"/>
+                            <constraint firstItem="PFz-eu-Qb3" firstAttribute="leading" secondItem="jKy-xv-J2y" secondAttribute="leading" constant="16" id="IYt-XI-4dH"/>
+                            <constraint firstItem="8xL-eg-IqI" firstAttribute="top" secondItem="vzV-bP-ot0" secondAttribute="bottom" constant="16" id="SkP-qD-iGl"/>
+                            <constraint firstItem="8xL-eg-IqI" firstAttribute="trailing" secondItem="vzV-bP-ot0" secondAttribute="trailing" id="U7i-5k-b41"/>
+                            <constraint firstItem="5lH-QQ-JVP" firstAttribute="leading" secondItem="jKy-xv-J2y" secondAttribute="leading" constant="16" id="XnS-Gl-X2B"/>
+                            <constraint firstItem="PFz-eu-Qb3" firstAttribute="top" secondItem="5lH-QQ-JVP" secondAttribute="bottom" constant="13" id="ZCM-Rm-Dnm"/>
+                            <constraint firstItem="jKy-xv-J2y" firstAttribute="trailing" secondItem="vzV-bP-ot0" secondAttribute="trailing" constant="16" id="hI8-TH-o0J"/>
+                            <constraint firstItem="5lH-QQ-JVP" firstAttribute="top" secondItem="jKy-xv-J2y" secondAttribute="top" constant="23" id="lZt-Gf-oet"/>
+                            <constraint firstItem="PFz-eu-Qb3" firstAttribute="top" secondItem="vzV-bP-ot0" secondAttribute="bottom" constant="8" id="waR-Xc-puP"/>
+                            <constraint firstItem="vzV-bP-ot0" firstAttribute="top" secondItem="jKy-xv-J2y" secondAttribute="top" constant="18" id="wht-Gz-qMI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jKy-xv-J2y"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Groups" id="QLe-x6-D9p">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Rmt-3d-ceN">
+                            <connections>
+                                <action selector="shareContent:" destination="f6y-0q-f1J" id="JsR-6X-6so"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentBack" destination="PFz-eu-Qb3" id="2HK-wy-a2e"/>
+                        <outlet property="contentTextView" destination="m49-a8-Eez" id="Qpb-pb-3y8"/>
+                        <outlet property="label" destination="5lH-QQ-JVP" id="lcA-nl-8Me"/>
+                        <outlet property="stepper" destination="cmk-yl-Nvj" id="kZf-yt-AH3"/>
+                        <outlet property="stepperButton" destination="7aT-ze-1K4" id="aUM-Cg-CHS"/>
+                        <outlet property="stepperButtonBack" destination="vzV-bP-ot0" id="zJf-Dy-hXq"/>
+                        <outlet property="stepperView" destination="8xL-eg-IqI" id="Fk1-IM-axp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gM6-0Q-Sig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1298" y="896"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="eye.slash" catalog="system" width="64" height="42"/>
+        <image name="textformat.size" catalog="system" width="64" height="40"/>
+    </resources>
+</document>
