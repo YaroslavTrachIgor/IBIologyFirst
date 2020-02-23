@@ -358,8 +358,12 @@ class SettingsTableViewController: UITableViewController, SettingsTableViewContr
             phoneNumberTextField.text = phone
         }
         
-        let data = UserDefaults.standard.object(forKey: SettingsKeys.imageKey) as! NSData
-        usersIconImageView.image = UIImage(data: (data as NSData) as Data)
+        let data = UserDefaults.standard.object(forKey: SettingsKeys.imageKey) as! NSData?
+        if data != nil {
+            usersIconImageView.image = UIImage(data: (data!) as Data)
+        } else {
+            return
+        }
     }
     
     @IBAction func changeName(_ sender: UITextField) {

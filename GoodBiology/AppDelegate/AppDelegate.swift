@@ -8,6 +8,35 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
+
+@available(iOS 11.0, *)
+extension AppDelegate: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+                  withError error: Error!) {
+          if let error = error {
+            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+              print("The user has not signed in before or they have since signed out.")
+            } else {
+              print("\(error.localizedDescription)")
+            }
+            return
+          }
+          // Perform any operations on signed in user here.
+          let userId        = user.userID                  // For client-side use only!
+          let idToken       = user.authentication.idToken // Safe to send to the server
+          let fullName      = user.profile.name
+          let givenName     = user.profile.givenName
+          let familyName    = user.profile.familyName
+          let email         = user.profile.email
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        print("hludfgiy")
+    }
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,8 +50,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
         rateManeger()
         UIViewTintColorPrefering()
+        googleSignInSetup()
         
         return true
+    }
+    
+    @available(iOS 9.0, *)
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+      return GIDSignIn.sharedInstance().handle(url)
+    }
+
+    
+    func googleSignInSetup() {
+        GIDSignIn.sharedInstance()?.clientID = "com.googleusercontent.apps.773165120197-b7jgobadce59go3stoc4m5ql8anmlfdg"
+        GIDSignIn.sharedInstance()?.delegate = self
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+      return GIDSignIn.sharedInstance().handle(url)
     }
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {

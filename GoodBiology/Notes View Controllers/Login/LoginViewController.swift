@@ -10,6 +10,7 @@ import UIKit
 import LocalAuthentication
 import AudioToolbox
 import AuthenticationServices
+import GoogleSignIn
 
 @available(iOS 13.2, *)
 class LoginViewController: UIViewController {
@@ -68,15 +69,16 @@ class LoginViewController: UIViewController {
         shadowTextViewPrefering()
         setupAppleButton()
         checkForSaved()
-    }
-    
-    func viewSetForCheckForSaved(view: UIView, key: String) {
-        if let key = defaults.object(forKey: key) {
-            view.isHidden = key as! Bool
-        }
+        setupGoogleSignInButton()
     }
     
     func checkForSaved() {
+        func viewSetForCheckForSaved(view: UIView, key: String) {
+            if let key = defaults.object(forKey: key) {
+                view.isHidden = key as! Bool
+            }
+        }
+        
         viewSetForCheckForSaved(view: appleView,
                                 key: Keys.appleViewHiddenKey)
         viewSetForCheckForSaved(view: loginButton,
@@ -85,6 +87,15 @@ class LoginViewController: UIViewController {
                                 key: Keys.hideAppleViewButtonHiddenKey)
     }
     
+    func setupGoogleSignInButton() {
+        let signInButton = GIDSignInButton(frame: CGRect(x: 7, y: 130, width: 386, height: 50))
+        
+        appleView.addSubview(signInButton)
+        
+        GIDSignIn.sharedInstance()?.presentingViewController = navigationController
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

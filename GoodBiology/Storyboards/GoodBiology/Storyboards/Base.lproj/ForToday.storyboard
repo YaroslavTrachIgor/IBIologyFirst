@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vKx-Qn-uLX">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -344,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tY-Fi-oqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2468" y="-2"/>
+            <point key="canvasLocation" x="-2468" y="-2.2488755622188905"/>
         </scene>
         <!--For Today View Controller-->
         <scene sceneID="93C-be-v4q">
@@ -562,7 +563,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="satelliteFlyover" translatesAutoresizingMaskIntoConstraints="NO" id="ymH-nC-Egy">
-                                <rect key="frame" x="16" y="349" width="343" height="144"/>
+                                <rect key="frame" x="16" y="349" width="343" height="196"/>
                                 <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -904,6 +905,53 @@
                                     <constraint firstAttribute="bottom" secondItem="s4r-Gx-2Hd" secondAttribute="bottom" constant="8" id="q6I-Sr-LVw"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLx-Og-RHr" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="318" y="20" width="41" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIc-9o-6Jd">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                        <color key="tintColor" red="0.052863754110000001" green="0.2422073287" blue="0.052376305849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" image="paintbrush" catalog="system"/>
+                                        <connections>
+                                            <action selector="brush:" destination="8BD-LK-hCV" eventType="touchUpInside" id="fpl-nZ-I5A"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qIc-9o-6Jd" secondAttribute="trailing" id="1ch-CK-eKA"/>
+                                    <constraint firstAttribute="bottom" secondItem="qIc-9o-6Jd" secondAttribute="bottom" id="3Lf-H0-w6Y"/>
+                                    <constraint firstAttribute="width" constant="41" id="M0g-Xp-WlP"/>
+                                    <constraint firstItem="qIc-9o-6Jd" firstAttribute="top" secondItem="HLx-Og-RHr" secondAttribute="top" id="Rss-WY-TWv"/>
+                                    <constraint firstItem="qIc-9o-6Jd" firstAttribute="leading" secondItem="HLx-Og-RHr" secondAttribute="leading" id="kYW-LV-fml"/>
+                                    <constraint firstAttribute="height" constant="41" id="rnx-pC-Jkc"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpi-AC-cQz" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="229" y="69" width="130" height="150"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DyH-59-wRr">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="150"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="8BD-LK-hCV" id="GSh-D6-ooH"/>
+                                            <outlet property="delegate" destination="8BD-LK-hCV" id="tM3-MT-hz7"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.052863754110000001" green="0.2422073287" blue="0.052376305849999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DyH-59-wRr" secondAttribute="bottom" id="8G8-Z4-eVL"/>
+                                    <constraint firstItem="DyH-59-wRr" firstAttribute="leading" secondItem="qpi-AC-cQz" secondAttribute="leading" id="FBN-Cm-ULy"/>
+                                    <constraint firstAttribute="trailing" secondItem="DyH-59-wRr" secondAttribute="trailing" id="IpC-gh-cbP"/>
+                                    <constraint firstAttribute="bottom" secondItem="DyH-59-wRr" secondAttribute="bottom" id="PTz-6b-6xW"/>
+                                    <constraint firstItem="DyH-59-wRr" firstAttribute="top" secondItem="qpi-AC-cQz" secondAttribute="top" id="azy-41-joC"/>
+                                    <constraint firstAttribute="width" constant="130" id="bdv-6d-G3t"/>
+                                    <constraint firstItem="DyH-59-wRr" firstAttribute="top" secondItem="qpi-AC-cQz" secondAttribute="top" id="dPL-NQ-N4k"/>
+                                    <constraint firstAttribute="trailing" secondItem="DyH-59-wRr" secondAttribute="trailing" id="dr2-3e-wr0"/>
+                                    <constraint firstItem="DyH-59-wRr" firstAttribute="leading" secondItem="qpi-AC-cQz" secondAttribute="leading" id="rAs-NN-LM7"/>
+                                    <constraint firstAttribute="height" constant="150" id="tRh-LH-j1z"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -916,16 +964,27 @@
                             <constraint firstItem="0Py-SG-OVj" firstAttribute="bottom" secondItem="4dx-AT-FQI" secondAttribute="bottom" constant="19" id="PkJ-Uq-zMq"/>
                             <constraint firstItem="72k-7x-6A3" firstAttribute="leading" secondItem="0Py-SG-OVj" secondAttribute="leading" constant="16" id="Q9H-JM-3It"/>
                             <constraint firstItem="0Py-SG-OVj" firstAttribute="trailing" secondItem="4dx-AT-FQI" secondAttribute="trailing" constant="16" id="ZZF-pe-rtn"/>
+                            <constraint firstItem="qpi-AC-cQz" firstAttribute="top" secondItem="HLx-Og-RHr" secondAttribute="bottom" constant="8" id="bSC-Cj-8gn"/>
+                            <constraint firstItem="HLx-Og-RHr" firstAttribute="top" secondItem="0Py-SG-OVj" secondAttribute="top" constant="20" id="dS3-u8-Fh5"/>
                             <constraint firstItem="0Py-SG-OVj" firstAttribute="trailing" secondItem="Lct-uG-PUy" secondAttribute="trailing" constant="16" id="h35-2q-BtE"/>
+                            <constraint firstItem="0Py-SG-OVj" firstAttribute="trailing" secondItem="HLx-Og-RHr" secondAttribute="trailing" constant="16" id="mi0-Sf-8JW"/>
                             <constraint firstItem="0Py-SG-OVj" firstAttribute="trailing" secondItem="72k-7x-6A3" secondAttribute="trailing" constant="16" id="urd-Cu-dGM"/>
+                            <constraint firstItem="0Py-SG-OVj" firstAttribute="trailing" secondItem="qpi-AC-cQz" secondAttribute="trailing" constant="16" id="zaa-Sq-Y41"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Py-SG-OVj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Painted Notes" largeTitleDisplayMode="always" id="Eyu-B8-j0r"/>
                     <connections>
+                        <outlet property="brushButton" destination="qIc-9o-6Jd" id="2Ev-fc-x0q"/>
+                        <outlet property="brushButtonBack" destination="HLx-Og-RHr" id="0ab-kr-hjj"/>
+                        <outlet property="brushColorsContentBack" destination="qpi-AC-cQz" id="0Ax-85-GmT"/>
                         <outlet property="colorButtonsBackView" destination="4dx-AT-FQI" id="3bn-ZG-d8P"/>
+                        <outlet property="eraseButton" destination="s4r-Gx-2Hd" id="tr6-Na-bLx"/>
                         <outlet property="headerNoteDrawView" destination="72k-7x-6A3" id="3Vj-ka-vQt"/>
                         <outlet property="noteContentDrawView" destination="Lct-uG-PUy" id="yoe-K7-3tX"/>
+                        <outlet property="pickerView" destination="DyH-59-wRr" id="FLH-v9-JYB"/>
+                        <outlet property="title1" destination="arM-6D-DzO" id="nVG-cA-DgN"/>
+                        <outlet property="title2" destination="Q3c-W1-HLb" id="CUC-aA-vgc"/>
                         <outletCollection property="setColorButtons" destination="aFW-Id-yKw" collectionClass="NSMutableArray" id="LsV-Bo-wWh"/>
                         <outletCollection property="setColorButtons" destination="NFZ-TS-Cln" collectionClass="NSMutableArray" id="yPK-al-Sqi"/>
                         <outletCollection property="setColorButtons" destination="TEA-Os-9yD" collectionClass="NSMutableArray" id="3Cs-93-4wF"/>
@@ -1064,6 +1123,7 @@
         <image name="doc.text" catalog="system" width="56" height="64"/>
         <image name="globe" width="30" height="30"/>
         <image name="icons8-map-2" width="25" height="25"/>
+        <image name="paintbrush" catalog="system" width="64" height="64"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
         <image name="text.justifyright" catalog="system" width="64" height="50"/>
         <image name="textformat.size" catalog="system" width="64" height="40"/>

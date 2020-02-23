@@ -11,6 +11,8 @@ import UserNotifications
 import AudioToolbox
 import Social
 
+import Lottie
+
 @available(iOS 13.0, *)
 class AnimalsViewController: UIViewController {
     
@@ -38,6 +40,21 @@ class AnimalsViewController: UIViewController {
     
     @IBOutlet weak var goToImagesButton: ImageButton!
     @IBOutlet weak var goToVideosButton: VideoButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        finalView()
+        let anim = Animation.named("733-settings")
+        vi.animation = anim
+        
+        vi.contentMode = .scaleAspectFit
+    }
+    @IBOutlet weak var vi: AnimationView!
+    
+    @IBAction func g(_ sender: Any) {
+        vi.play()
+    }
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
@@ -259,12 +276,6 @@ class AnimalsViewController: UIViewController {
             }
         }
         viewDidLoadPrinting(doing: "Animals")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finalView()
     }
 }
 

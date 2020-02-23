@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 import CoreLocation
+import Lottie
 
 protocol ForTodayViewControllerMapSetupProtocol {
     func mapPrefering()
@@ -35,7 +36,7 @@ extension ForTodayViewController: ForTodayViewControllerMapSetupProtocol {
     
     func showMapView() {
         if mapView.isHidden == false {
-            self.showACInView()
+            showACInView()
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                 self.adressLabel.isHidden              = true
                 self.mapView.isHidden                  = true
@@ -116,7 +117,7 @@ extension ForTodayViewController: ForTodayViewControllerMapSetupProtocol {
             acInViewIndicator.center = acSubView!.center
             acInViewIndicator.startAnimating()
             acInViewIndicator.activityIndicatorViewShadow()
-            
+    
         acSubView?.addSubview(acInViewIndicator)
         view.addSubview(acSubView!)
         

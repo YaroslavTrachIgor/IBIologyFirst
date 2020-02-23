@@ -3063,6 +3063,19 @@ Humans make use of many other animal species for food, including meat, milk, and
                                     <segue destination="Y9R-lj-nX1" kind="show" id="2cC-Df-ypg"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M2e-Me-OeP" customClass="AnimationView">
+                                <rect key="frame" x="67" y="82" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="24Q-bS-6Xy">
+                                <rect key="frame" x="177" y="373" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="g:" destination="Xxx-Ct-gSw" eventType="touchUpInside" id="8Sb-gE-vdZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -3135,6 +3148,7 @@ Humans make use of many other animal species for food, including meat, milk, and
                         <outlet property="switchTextView" destination="h6E-ZS-Uo2" id="xRa-7e-Zw1"/>
                         <outlet property="switchView" destination="eoE-m1-cek" id="36B-RA-YSi"/>
                         <outlet property="textView" destination="k04-L6-kyw" id="gIo-5N-jh5"/>
+                        <outlet property="vi" destination="M2e-Me-OeP" id="cA4-H3-fGk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yF-sr-n3g" userLabel="First Responder" sceneMemberID="firstResponder"/>

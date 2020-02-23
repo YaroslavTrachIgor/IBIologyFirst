@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61F44F3134C037BD82740881 /* libPods-GoodBiology.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 866FF06AFF388D236F192D4A /* libPods-GoodBiology.a */; };
 		840887B421F763810026A210 /* BiologyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840887B321F763810026A210 /* BiologyNotifications.swift */; };
 		840FB81223BA20C70081DE59 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81123BA20C70081DE59 /* TextView.swift */; };
 		840FB81423BA3F970081DE59 /* TestButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81323BA3F960081DE59 /* TestButtons.swift */; };
@@ -85,12 +86,18 @@
 		84914E2223FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */; };
 		84914E2423FE9DE80048B154 /* HideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2323FE9DE80048B154 /* HideButton.swift */; };
 		84914E2623FF55C60048B154 /* NewArticleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2523FF55C60048B154 /* NewArticleLabel.swift */; };
+		84914E28240175900048B154 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 84914E272401758F0048B154 /* Podfile */; };
 		8497E34623566495003CD4A9 /* SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E34523566495003CD4A9 /* SystemColors.swift */; };
 		8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */; };
 		8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */; };
 		849C38A82353B121002E007D /* ReadingOnTimeStyleVaribles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38A72353B121002E007D /* ReadingOnTimeStyleVaribles.swift */; };
 		849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38AD2353B8AB002E007D /* MapDelegate.swift */; };
 		849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38B12353BB27002E007D /* Notes Protocol.swift */; };
+		849E2DA6240189A900CE9FC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849E2DA5240189A900CE9FC6 /* GoogleService-Info.plist */; };
+		849E2DA82401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json in Resources */ = {isa = PBXBuildFile; fileRef = 849E2DA72401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json */; };
+		849E2DAA2401E16C00CE9FC6 /* 16408-jumping-squares.json in Resources */ = {isa = PBXBuildFile; fileRef = 849E2DA92401E16B00CE9FC6 /* 16408-jumping-squares.json */; };
+		849E2DAC2401E62B00CE9FC6 /* JHBNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E2DAB2401E62B00CE9FC6 /* JHBNViewController.swift */; };
+		849E2DAE2401F0CA00CE9FC6 /* 733-settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 849E2DAD2401F0CA00CE9FC6 /* 733-settings.json */; };
 		849E67FC23FC316900569F32 /* BasicMFMailComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E67FB23FC316900569F32 /* BasicMFMailComposeViewController.swift */; };
 		849F5381236977CD0027289F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F5380236977CD0027289F /* GradientView.swift */; };
 		84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A15A96236209220069AADE /* SettingsTableViewController.swift */; };
@@ -311,6 +318,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0045B572FD23584A651EC5C1 /* Pods-GoodBiology.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBiology.release.xcconfig"; path = "Target Support Files/Pods-GoodBiology/Pods-GoodBiology.release.xcconfig"; sourceTree = "<group>"; };
+		625B4F54138942D262E7B60F /* Pods-GoodBiology.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBiology.debug.xcconfig"; path = "Target Support Files/Pods-GoodBiology/Pods-GoodBiology.debug.xcconfig"; sourceTree = "<group>"; };
 		840887B321F763810026A210 /* BiologyNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyNotifications.swift; sourceTree = "<group>"; };
 		840FB81123BA20C70081DE59 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		840FB81323BA3F960081DE59 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
@@ -393,12 +402,18 @@
 		84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift; sourceTree = "<group>"; };
 		84914E2323FE9DE80048B154 /* HideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideButton.swift; sourceTree = "<group>"; };
 		84914E2523FF55C60048B154 /* NewArticleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArticleLabel.swift; sourceTree = "<group>"; };
+		84914E272401758F0048B154 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		8497E34523566495003CD4A9 /* SystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColors.swift; sourceTree = "<group>"; };
 		8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Elements Basic Functions, Classes, Structs and as on.swift"; sourceTree = "<group>"; };
 		8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiConnectionRecognizing.swift; sourceTree = "<group>"; };
 		849C38A72353B121002E007D /* ReadingOnTimeStyleVaribles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeStyleVaribles.swift; sourceTree = "<group>"; };
 		849C38AD2353B8AB002E007D /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
 		849C38B12353BB27002E007D /* Notes Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes Protocol.swift"; sourceTree = "<group>"; };
+		849E2DA5240189A900CE9FC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		849E2DA72401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "16393-pin-lotation-color-blue.json"; sourceTree = "<group>"; };
+		849E2DA92401E16B00CE9FC6 /* 16408-jumping-squares.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "16408-jumping-squares.json"; sourceTree = "<group>"; };
+		849E2DAB2401E62B00CE9FC6 /* JHBNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHBNViewController.swift; sourceTree = "<group>"; };
+		849E2DAD2401F0CA00CE9FC6 /* 733-settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "733-settings.json"; sourceTree = "<group>"; };
 		849E67FB23FC316900569F32 /* BasicMFMailComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMFMailComposeViewController.swift; sourceTree = "<group>"; };
 		849F5380236977CD0027289F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		84A15A96236209220069AADE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -476,6 +491,7 @@
 		84F5741423F0BE3000400ED4 /* ChromistaActionButtonsBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaActionButtonsBack.swift; sourceTree = "<group>"; };
 		84F5741623F0C0BF00400ED4 /* ArticlesVCButtonBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesVCButtonBack.swift; sourceTree = "<group>"; };
 		84F5741B23F1E7C500400ED4 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		866FF06AFF388D236F192D4A /* libPods-GoodBiology.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoodBiology.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2C423321C842F500D1E680 /* BasicsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsCoordinator.swift; sourceTree = "<group>"; };
 		AAEC22D121C679E900FF69FE /* BasicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewController.swift; sourceTree = "<group>"; };
 		AAEC22D521C67A1300FF69FE /* BasicsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsDataManager.swift; sourceTree = "<group>"; };
@@ -579,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84ADAC3621D2C65100FDDFC4 /* MapKit.framework in Frameworks */,
+				61F44F3134C037BD82740881 /* libPods-GoodBiology.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +628,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C4E5E28321975DE4009C3062 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C977350719587BE3147EAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1252,6 +1276,9 @@
 		84A78C6C23EE07D4002FEADF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				849E2DAD2401F0CA00CE9FC6 /* 733-settings.json */,
+				849E2DA92401E16B00CE9FC6 /* 16408-jumping-squares.json */,
+				849E2DA72401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json */,
 				84A3AF9323F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift */,
 				84A3AF9023F2E85D00836400 /* ForTodayViewControllerMapSetupProtocol.swift */,
 				84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */,
@@ -1275,6 +1302,7 @@
 			children = (
 				84ADAC3521D2C65100FDDFC4 /* MapKit.framework */,
 				844E0D0D2235625200933ABC /* NotificationCenter.framework */,
+				866FF06AFF388D236F192D4A /* libPods-GoodBiology.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1355,6 +1383,7 @@
 		84CDB5CA2220B0AA002432F7 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				849E2DA5240189A900CE9FC6 /* GoogleService-Info.plist */,
 				C4E5E23421975BE4009C3062 /* AppDelegate.swift */,
 				84ADAC3321D2C60F00FDDFC4 /* GoodBiology.entitlements */,
 				C4C7251021BED93D00F64612 /* Model.xcdatamodeld */,
@@ -1573,6 +1602,7 @@
 		C4E5E22821975BE4009C3062 = {
 			isa = PBXGroup;
 			children = (
+				84914E272401758F0048B154 /* Podfile */,
 				C4E5E23321975BE4009C3062 /* GoodBiology */,
 				C4E5E24A21975BE5009C3062 /* GoodBiologyTests */,
 				C4E5E25521975BE5009C3062 /* GoodBiologyUITests */,
@@ -1580,6 +1610,7 @@
 				8446582623BD59E200DC316E /* iOSGoodBiologyUITests */,
 				C4E5E23221975BE4009C3062 /* Products */,
 				84ADAC3421D2C65100FDDFC4 /* Frameworks */,
+				D6458B87408458F233FE4CFD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1663,6 +1694,7 @@
 		C4FA2D1F21FCD7F40023B655 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				849E2DAB2401E62B00CE9FC6 /* JHBNViewController.swift */,
 				8497E3482358E3C5003CD4A9 /* App Basics */,
 			);
 			path = Basic;
@@ -1700,6 +1732,15 @@
 			path = "Biology Models";
 			sourceTree = "<group>";
 		};
+		D6458B87408458F233FE4CFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				625B4F54138942D262E7B60F /* Pods-GoodBiology.debug.xcconfig */,
+				0045B572FD23584A651EC5C1 /* Pods-GoodBiology.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1727,6 +1768,7 @@
 			buildPhases = (
 				84C6FC8022061C5100BCE06D /* Resources */,
 				84C6FCA322061C5300BCE06D /* Embed App Extensions */,
+				C7C977350719587BE3147EAB /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1776,11 +1818,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4E5E25B21975BE5009C3062 /* Build configuration list for PBXNativeTarget "GoodBiology" */;
 			buildPhases = (
+				3B2CBCC2F894257F7F9F57D5 /* [CP] Check Pods Manifest.lock */,
 				C4E5E22D21975BE4009C3062 /* Sources */,
 				C4E5E22E21975BE4009C3062 /* Frameworks */,
 				C4E5E22F21975BE4009C3062 /* Resources */,
 				C4E5E2BD21975F2D009C3062 /* Embed Watch Content */,
 				844E0D1C2235625200933ABC /* Embed App Extensions */,
+				3876B4D4BFBC21353F6E6297 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2040,11 +2084,16 @@
 				84F5741C23F1E7C500400ED4 /* User.storyboard in Resources */,
 				8454DD99221323640033A3A2 /* Browser.storyboard in Resources */,
 				844E0D212239A0C800933ABC /* iBiology.mov in Resources */,
+				849E2DAE2401F0CA00CE9FC6 /* 733-settings.json in Resources */,
 				C4E5E23E21975BE5009C3062 /* Assets.xcassets in Resources */,
 				845EE56623FABB0F0036479B /* CardViewController.xib in Resources */,
+				84914E28240175900048B154 /* Podfile in Resources */,
 				C4C7252121C058DD00F64612 /* Biology.storyboard in Resources */,
 				C498F9A3219F6B5900DCAC9F /* Tests.storyboard in Resources */,
 				C4E5E23C21975BE4009C3062 /* Main.storyboard in Resources */,
+				849E2DAA2401E16C00CE9FC6 /* 16408-jumping-squares.json in Resources */,
+				849E2DA82401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json in Resources */,
+				849E2DA6240189A900CE9FC6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2084,6 +2133,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3876B4D4BFBC21353F6E6297 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodBiology/Pods-GoodBiology-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoodBiology/Pods-GoodBiology-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoodBiology/Pods-GoodBiology-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B2CBCC2F894257F7F9F57D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoodBiology-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8446582123BD59E200DC316E /* Sources */ = {
@@ -2186,6 +2277,7 @@
 				844E0D0722351BD400933ABC /* MapViewController.swift in Sources */,
 				84778271237EEC52007C1FD8 /* Basic Varibles.swift in Sources */,
 				841AF1D1235A481D0003A440 /* URLs.swift in Sources */,
+				849E2DAC2401E62B00CE9FC6 /* JHBNViewController.swift in Sources */,
 				8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */,
 				8471F87F21B30202001AA935 /* NetworkingViewController.swift in Sources */,
 				84A3AFC423F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift in Sources */,
@@ -2742,6 +2834,7 @@
 		};
 		C4E5E25C21975BE5009C3062 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 625B4F54138942D262E7B60F /* Pods-GoodBiology.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -2767,6 +2860,7 @@
 		};
 		C4E5E25D21975BE5009C3062 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0045B572FD23584A651EC5C1 /* Pods-GoodBiology.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

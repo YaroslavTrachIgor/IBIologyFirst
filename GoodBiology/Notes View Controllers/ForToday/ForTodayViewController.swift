@@ -15,13 +15,13 @@ import MessageUI
 import MapKit
 import CoreLocation
 import AudioToolbox
+import Lottie
 
 class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewDelegate, NotesDelegate {
     
     //MARK: IBOutlets
     @IBOutlet weak var mapView:                  MKMapView!
-    @IBOutlet weak var mapTypeView:              UIView!
-    
+    @IBOutlet weak var mapTypeView:              UIView!    
     @IBOutlet weak var textViewBackground:       TextViewBackView!
     @IBOutlet weak var textFieldBackground:      TextViewBackView!
     
@@ -424,11 +424,14 @@ class ForTodayViewController: UIViewController, NCWidgetProviding, MapBasicViewD
             let annotationSubtitle = "One of my favorite places for reading"
             
             let annotation            = MKPointAnnotation()
-                annotation.coordinate = coordinates
             
-                annotation.title    = annotationTitle
-                annotation.subtitle = annotationSubtitle
-            
+            DispatchQueue.global(qos: .utility).async {
+                DispatchQueue.main.async {
+                    annotation.coordinate = coordinates
+                    annotation.title    = annotationTitle
+                    annotation.subtitle = annotationSubtitle
+                }
+            }
             mapView.addAnnotation(annotation)
         }
     }
