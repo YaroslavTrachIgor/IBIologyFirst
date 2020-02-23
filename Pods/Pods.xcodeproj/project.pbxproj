@@ -1,0 +1,2033 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B0030D626B503D8EB0EA00BB772D6396 /* Build configuration list for PBXAggregateTarget "GoogleSignIn" */;
+			buildPhases = (
+			);
+			dependencies = (
+				2857566728641F74273DD7DA9E370771 /* PBXTargetDependency */,
+				314A9E36FBEA4C73491669F15EA30E5F /* PBXTargetDependency */,
+				74F3D34B7F14020AE0A57D83A7889F98 /* PBXTargetDependency */,
+			);
+			name = GoogleSignIn;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		008177D0F7976046D07BBF0BD6EF9830 /* OIDAuthorizationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 0310876A533659C86EC9D9FFFD4FC52A /* OIDAuthorizationService.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		00C216FFCDCF00EE37F892187017A26F /* OIDServiceConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 413A6A5800DF54A87A0288EE619B2DD6 /* OIDServiceConfiguration.m */; };
+		014C3240E843976067968837E96FFF34 /* PrecompAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77FCAFC44EA321FCA75F151EC01D870 /* PrecompAsset.swift */; };
+		0197D29CA9367975F79F64C9E7FBE2C2 /* GTMReadMonitorInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 146F5D39EFBF5D227B20E983EC92F174 /* GTMReadMonitorInputStream.m */; };
+		01C0CC5FAEEBC79027DD5640F2ABBA33 /* AnimatedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7D18C6D69D84FF828385C34189826E /* AnimatedControl.swift */; };
+		0556C00B979E10C2B037ED00230581B6 /* OIDErrorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 3450969A22BF5AADADC4B359D78C0749 /* OIDErrorUtilities.m */; };
+		06BCE95E5B184277439D01456F0DC9AF /* AnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B32EE47BC75CC3F4476747288931DC5 /* AnimationKeypath.swift */; };
+		077D90F2222B02E5BAB24E4B841BF8B3 /* MaskContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896E1AC2D54AF61A00C7ADD5E559F540 /* MaskContainerLayer.swift */; };
+		097EF7325882799B1B4D97A472A0A605 /* OIDError.h in Headers */ = {isa = PBXBuildFile; fileRef = C56BABB5A6ACB562E6547AEC71A90A8A /* OIDError.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0A13C06F8C285F14A0AFAEDE92462C6A /* OIDFieldMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = C0154E06CF432C7134BBD08818962C68 /* OIDFieldMapping.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0ACEBC3B2B7F288C2B82E41DFB4F938F /* RectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABBA1D16D473923E85E9C76739D2877 /* RectNode.swift */; };
+		0AD16D05DEF9CF39C90DD1BD999B8522 /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B765D745A176C0125A1BBC2FB7BEFF /* AnimationSubview.swift */; };
+		0E116491080B3291E2D6165292859312 /* OIDEndSessionResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 031969EABD8277BD4BB883A51AD44AA3 /* OIDEndSessionResponse.m */; };
+		0E544B7162C2B666BE9C3B8CF63151E0 /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775BB1354D04DC9D63A0B88E2FCA5D2A /* AnimatorNodeDebugging.swift */; };
+		0F450C3FD65B2B0070981FC07C9FA738 /* GTMAppAuthFetcherAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BF63BABB3BAB916425FF99B92826F96 /* GTMAppAuthFetcherAuthorization.m */; };
+		109C1C46C5F21A489DC91A83A52B43DF /* AnimationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17684C6B1A493E0EE26D6ED1A9ABEB44 /* AnimationContainer.swift */; };
+		148E2B7C527BC33F10CDD9FF832EDE79 /* OIDRegistrationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F362E35058D1322D5CA1568772B55A5 /* OIDRegistrationResponse.m */; };
+		15D9EB81F4BA43E3FFCE97B6DC9C5F75 /* LayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10B5EFCB32AC465116EB0C41E529298 /* LayerModel.swift */; };
+		163D24C89D36F0F105EBFA759D1C1282 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5B3F48D10063CFAFADF18108FC1FA4 /* Animation.swift */; };
+		17B2DCEF64E734A13370CA6C8CF81C1F /* Pods-GoodBiology-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D68E49C19388CF4E8FDFCB39D92A223D /* Pods-GoodBiology-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		190D3C89D4972A2C65518140CC3D31DD /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE348E6908019FB56805AAA39545E9 /* TextDocument.swift */; };
+		1ABA3ABA530411283001334E90E61CDF /* GTMReadMonitorInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = CF0B309E9E51950BCB55065349D5B491 /* GTMReadMonitorInputStream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1B308D3D2FB0CFBDD7B9961F28E296D1 /* OIDAuthStateErrorDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E386F6C63AFCE2CA4565F3D9B3AF8D9 /* OIDAuthStateErrorDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1CBAC840CEC1F207490446BBC49F8925 /* GTMMIMEDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 957CA4484577E0EA7594F8217C8FD92B /* GTMMIMEDocument.m */; };
+		1D7A0DB0D78276BB2D55645EB0F4EB3E /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF74FD1E8A2767BEBADE70D68756611 /* AnimationContext.swift */; };
+		1F8B7EA21A18849298858B8196CD7564 /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFB3827C2E45D70DEC681563DB3C23 /* Interpolatable.swift */; };
+		1FD3881A750BC4984DCFEE3E478EEA60 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1714C0B22641A0150BCE3C22C006FB03 /* Shape.swift */; };
+		20281FF6129175E38FA061276CB402A5 /* AnimationImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37F8D8233A0808025EE623D923C9B07 /* AnimationImageProvider.swift */; };
+		2095C74CAE3D8903BF0E12A5CD85EE8E /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C76BDD96E7442DA5B9DD8C7CBB15C8 /* Font.swift */; };
+		22A0409B3A6E58331D61C9070EE13D5D /* OIDAuthState.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BAB9946B26F7DD1A2B23CEF30DAB5C6 /* OIDAuthState.m */; };
+		22B72B26355D28B3A51DFDD0E392210A /* ColorValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A394BA5C26A50C3B37D36CF8434AA79D /* ColorValueProvider.swift */; };
+		23A07F5E37ABFCD29AB21CD072DA4313 /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B43FD562959B2BC754AEEF3C190F6DD /* ShapeCompositionLayer.swift */; };
+		261898D86259BADEA8D8A38827A452BA /* GradientFillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66EF53761C95993A0A6F530ACC1025F /* GradientFillRenderer.swift */; };
+		26263F4CB49D41C60965D725DC3BCC33 /* OIDExternalUserAgentCatalyst.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DF1664794D0DD4EFAF79BE7C915C507 /* OIDExternalUserAgentCatalyst.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		277C64427D086ABACEA3A78BFA7B5FB2 /* GTMSessionFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F28A2F47D5A519C297487D8D2540E /* GTMSessionFetcher.m */; };
+		29FBE5062D99A140FA0113A8910DFB07 /* AnimationViewInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A104618FADCD5193BCD2C9E325E104 /* AnimationViewInitializers.swift */; };
+		2A6C83D161771AFD8F63051B1BD13940 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739B48A45EB1C86B7877FB8C4E45841E /* LottieView.swift */; };
+		2C1A4F31111277D9385BDDD7730A7F2C /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C23BC9C4C3B0BC0975423ADFA22CA /* StringExtensions.swift */; };
+		30846928D515A31D381300E2B47412FC /* GTMSessionUploadFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E69FB485C5AC4951B4C7551F9B1AAAC /* GTMSessionUploadFetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		34AA818DDE81852D49697A4F79B9B34B /* ShapeLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892E5AC66E535B9C0455F334065BDDD5 /* ShapeLayerModel.swift */; };
+		398D99087C07CF00093A5DA483E7C2ED /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6152E1921D4462B4A6BD3D60153E31 /* Stroke.swift */; };
+		39E27513EB6A8E47A7F1DB1293112852 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1019C808662080BB278F1088CE533711 /* CGFloatExtensions.swift */; };
+		3A3B889B5979AC1E22DFEB5F2F4BDCA2 /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10659353924E15C598A28769BC0A112B /* AnimatedSwitch.swift */; };
+		3AB25BBBA0BBC7B575BDA4A453C3CADB /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FF2F014855EB02BC68429F0A8C96D05 /* PathElement.swift */; };
+		3BCC19E51809677B704560479FD7451C /* GTMSessionFetcherLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C7FB0681CA97D84C3B3C505A4A87466 /* GTMSessionFetcherLogging.m */; };
+		3D1FD6C68D9C52218E74FD64E03B604D /* AssetLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0FF52120E1BBBB58D3A98F523B6271 /* AssetLibrary.swift */; };
+		3E47D0D36898CD24EBA54A0DFB935CB2 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A42BE5829F9E98C3FCE8ED7CDC84FE /* Trim.swift */; };
+		3F62F80F85449266224E2DF3FC4B146A /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC0036D610B157037AFE7CF0BD48886 /* Marker.swift */; };
+		3F8B1B6104D60ABE7153458758CC7E48 /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DB172D1E4110D19E57C23E068E9C80 /* GradientFill.swift */; };
+		401B53D53497C1C2286957D671C3E9DA /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014A0205A8F0FC602DFB4106703F92A8 /* Group.swift */; };
+		40782DCC7AA39E0E984416B602A576D0 /* GTMKeychain_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E5E491CCC3D3A8FF905547AC15F9751 /* GTMKeychain_iOS.m */; };
+		4120EF11193D0E404D28691E193A0753 /* OIDEndSessionResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DD80319E329104A86A01862DF189D74 /* OIDEndSessionResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		44BD005E1971FE86DC7A541923CF053B /* OIDExternalUserAgentIOS.m in Sources */ = {isa = PBXBuildFile; fileRef = C1DDC2F24CF3B02C4BBFC2EB4B31E411 /* OIDExternalUserAgentIOS.m */; };
+		44DD1CDA4C76B9260B5EF3A237FF5540 /* GTMGatherInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E8D58DDA13BD39FC6109AFC61547A4 /* GTMGatherInputStream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4877E1DFD13544FDFC2DE9891D8AADA8 /* OIDTokenRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 4837086CE09007391BA218421432CFF5 /* OIDTokenRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		48F4F29E280EE227BD0CF3219BD36C97 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF3AB2D61570CCD609FF485AE1005E3 /* Star.swift */; };
+		4B5A2CF12CF045E9D651B99E9F3BC74A /* OIDErrorUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 40B04F335FC1EFA9B9E48906A0F8D647 /* OIDErrorUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4CE3AB4C56666D236A45E9B8FFA5598A /* OIDDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 74675B8758B43E38F4615F8CE1E2E2FF /* OIDDefines.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4E1DD8838C303E1B7385A4BC5BF1552A /* OIDResponseTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6275A0492651F9B2CF15D581BF4B3901 /* OIDResponseTypes.m */; };
+		4E25A7014259878A3B2C90D487869416 /* GTMAppAuthFetcherAuthorization+Keychain.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC24FD54A1126FA3F68AD97859CF91 /* GTMAppAuthFetcherAuthorization+Keychain.m */; };
+		51C8D9A203050AA148AE88AB4CFEAF0D /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45052306C5E40699E8C600680D9086 /* KeyframeExtensions.swift */; };
+		521AB2D4E68F458FB192A095D8C339E6 /* OIDGrantTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70F8499EA5998D83EA99800784F397 /* OIDGrantTypes.m */; };
+		5233C977B875C5688629D345D440420B /* DashPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE2790E17CEF3ABBCD6EA174796CFFA /* DashPattern.swift */; };
+		52740025104F26BB4F9A68C1A21BEAE7 /* PathOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9554D38B70AB393FC7D0F41181A3DB /* PathOutputNode.swift */; };
+		52B5636B691EB244AFA13E90857CA1B4 /* LRUAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6565C0100F0366CD4DF1E395FBF5BC63 /* LRUAnimationCache.swift */; };
+		559C5939C28CE75A4F0322D8825D709C /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C9C84F1918BA5914BD1DD492311C02 /* SolidLayerModel.swift */; };
+		5627FE40B2C5B176DB7F54D3D4889E4B /* LayerDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6098535BFA93B8DDBA1803602B16F45 /* LayerDebugging.swift */; };
+		56AA538933BFFB46E90E3AF4BE81BD88 /* OIDEndSessionRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 726B5EBB2332EB239CE5D8ED41FDF977 /* OIDEndSessionRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		56DB0B92C838BBC584E723BCE4998E97 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33259855BFA408D4F8E0DA10AF9C791D /* AnimationView.swift */; };
+		56F7A309117EF36ADE10E617AD1732F8 /* OIDScopes.h in Headers */ = {isa = PBXBuildFile; fileRef = 43A65CA1617BDA69C99B2BFD2E56B4DC /* OIDScopes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		574058CF847591CB3851824EEF69ED8B /* ItemsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3835EB20B5B8CA9EA3DD2138981786CC /* ItemsExtension.swift */; };
+		5AB9FAFC283F24CE2EB1F9975578BB84 /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E94FFB02C41E41DDB9A712758B48C5 /* AnimationPublic.swift */; };
+		5B37F23099184FD96C3224E86B343690 /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B21388BB3E29320BCAFDED7D5F9C823 /* TrimPathNode.swift */; };
+		5F8A14AA39CDA5050D31FCC4FDFED8BF /* OIDIDToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 410E6C99029AAA34C971F93DB523E1C4 /* OIDIDToken.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5FF9644B3EF1573A53A136FC7DA10908 /* InterpolatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079900A981BB0B8F7D8562F396394EA2 /* InterpolatableExtensions.swift */; };
+		61D57545FDC6527D709666C53C909E17 /* MathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F10B9AD57A802B8F14C16CBC8BBBC55 /* MathKit.swift */; };
+		636B84B173FDE0F6A9E2FCE89CDAFC44 /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FAF1BAE2F690735A3D3501C91A0F9D /* ImageCompositionLayer.swift */; };
+		63C373548F276406DE607EE04DB6F23D /* OIDURLSessionProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = FDC335F9D7C722450B3B3BF769EC48FF /* OIDURLSessionProvider.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		67508E4BC79BA30FCA9DF8664F4F8461 /* GTMSessionFetcherService.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9906AD56C97395C04E6EA2E0C78060 /* GTMSessionFetcherService.m */; };
+		6814689C9618A41B064AE0587092BE1D /* GTMGatherInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = DB289FB49B9B0523E458A375567CFD61 /* GTMGatherInputStream.m */; };
+		686A4A9D353604B91C0FE8B0B8FC60E2 /* GTMSessionFetcher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C67AA1FB03AC01EC8A29E4BCB44DC08 /* GTMSessionFetcher-dummy.m */; };
+		6955BFA9251D445EA2C227B09ADAD272 /* Pods-GoodBiology-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4962EBDDB23EF9A1A2752A654D2601 /* Pods-GoodBiology-dummy.m */; };
+		695663DF508208C7A2F20230DFE2DEF7 /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FE45F5863222CDE55FAAB7B06C7BBD /* PointValueProvider.swift */; };
+		69F93BF06B0CD6A5EA379695A54EBF79 /* OIDIDToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD256904AC363D1E3DD237AE6DE4D52 /* OIDIDToken.m */; };
+		6AA4C6C92E294E2DFB6C7C03B6B7E3B6 /* AppAuthCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 832B92AF4D86746D1DE09A483B03CE88 /* AppAuthCore.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6B4C060B3EA062BF4CE4FA3E860A896F /* CurveVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5877412A7B8BC7403E6D163280E61A /* CurveVertex.swift */; };
+		6BEB8662C93FCCA59F60F5A3C197DDA4 /* OIDScopeUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 143F21DA3AC6C39CBAA5AC73098176B7 /* OIDScopeUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		6CDD8BD6ADE3122ECEEFD699C922845B /* OIDAuthorizationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A66082212639B2882627E09A37CB9B /* OIDAuthorizationService.m */; };
+		6F1FA76436D35798691666312597B249 /* OIDAuthorizationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 07501EE4C21445080C71CB9B46255AC6 /* OIDAuthorizationRequest.m */; };
+		6FFF1E8A8B66FF01ED0CFCF541E142D0 /* AppAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CA4ACC5C7CFE2E884ECB3F194BC0B79 /* AppAuth-dummy.m */; };
+		710BDE54D9705AB21D699051FF208D6E /* OIDAuthorizationService+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E692AD46BC0A0C943EF07061A1AF601 /* OIDAuthorizationService+IOS.m */; };
+		719C4FAA209B26DE3191F83ED816C0A4 /* ShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E409053831F1CB12D7B93EFE18F897B5 /* ShapeNode.swift */; };
+		728041B6CCAB782342F6114F46788340 /* GTMAppAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 05EE1824B346C51677CAD92161826148 /* GTMAppAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		73449F37B5976DF0D94BEF9F4FB2BA2F /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F5302D9FB416C2C43ECA80B09635C /* PathNode.swift */; };
+		73B44CF0EF098BCDBF40D10E9481A587 /* OIDServiceDiscovery.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC8ABCCEB983C6BC10807C0FA1464C7 /* OIDServiceDiscovery.m */; };
+		7412EEC787A87C45E57556735E9F1E75 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D92FF491BB2C54F71BA57145BD9FEB /* Merge.swift */; };
+		746AC8C3C5FE2D7AFBF645E8027D3E4C /* AppAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = C47C00F93B71433C9CBBA3436FF43245 /* AppAuth.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7645DED1C95120051C066A78D3354980 /* lottie-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E1F24A3E039E9F8FCC3BF098E421DB1 /* lottie-ios-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		76CFA7716B8C4199041F70B1108FC837 /* CompoundBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B00863BAF4D1FF8DE1070CEC7128A1B /* CompoundBezierPath.swift */; };
+		774B22683E6D64B7C113BFA192533CFF /* OIDAuthorizationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 89536E817A47DE90B26AE33EDAD5E061 /* OIDAuthorizationResponse.m */; };
+		7A675C8859C4DB21DABFCD53DFD62417 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22298812030D184F11CE275E6AFF5E3 /* UIColorExtension.swift */; };
+		7B004EFF5E0369DB2D498B21F9A67C52 /* GTMAppAuthFetcherAuthorization+Keychain.h in Headers */ = {isa = PBXBuildFile; fileRef = C8D416781109233FBEAE21A553CA40CD /* GTMAppAuthFetcherAuthorization+Keychain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7B68F0FD0EC9EB4FE69713690BA18BFD /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0598BE1C85611F84BB952F1F5C021CA5 /* Asset.swift */; };
+		7C6C30320ED520E1B763142B84AC69CE /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D2400465F92FF98D3D82A4E38BBC972D /* OIDExternalUserAgentIOSCustomBrowser.m */; };
+		7C89756B58D9AFD312C58A0B29B91DC8 /* OIDError.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BF793FA2512F412B36504C19BE0BFD8 /* OIDError.m */; };
+		7D29DC349C247ECDBDD1A749CA90EDF4 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E29600403AD923ABEBE22394A588508 /* Ellipse.swift */; };
+		7DBA4B6AF26329B61D8D2BA401ED585B /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D314AA61E9ED900183298CE87CF56AA /* VectorsExtensions.swift */; };
+		803D1DD273F47E3F09B4FC7F75A3B195 /* GTMMIMEDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 6505E8A7460ED3149BF7BE297C1B8B00 /* GTMMIMEDocument.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8280FA219C5EB3C6E324B2F23248FB81 /* KeypathSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7203058A31F9DA9ABEC3717C0D038CD /* KeypathSearchable.swift */; };
+		82EEAB2E422965945E3184A8044D7FC4 /* ShapeContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787690C25BEFEA05F8E9C720323DF12 /* ShapeContainerLayer.swift */; };
+		83E7F86437807B0E42C71053A4D1E656 /* FillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D5ABFD88466CDD4D9A7FA47C5D76C8 /* FillRenderer.swift */; };
+		842D66B997820174C4210781E5E0790B /* EllipseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142755421AE78B1F79359A105FBF0057 /* EllipseNode.swift */; };
+		8461FE71CDB0675FD1E9F28C46C50014 /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62F33B0FE63754617AC467A859217C59 /* Keyframe.swift */; };
+		849D6D6CBDF67B89CF899661FF9522A4 /* OIDAuthorizationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E22DC53AC8B6479D8E20116BE8F0F29 /* OIDAuthorizationResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		852FA562928D6F8275C333BB1F764C6E /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA8F7D89ED1B3DD28543A2527B0E0DD /* ShapeTransform.swift */; };
+		8616CCC710BA3A67581C412A7E451EBD /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE609690852DF7C1CC8A94F6F53169C8 /* Repeater.swift */; };
+		8812B3A3806D180E80DC45FF2EB0D23C /* PreCompLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD0D61C718107E62257BA4B6DF3FC2 /* PreCompLayerModel.swift */; };
+		89B99F37B589AC5F00C1B0B1BEFDBD11 /* OIDExternalUserAgentSession.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E11E15B81209860CC9C0D1A41C4A28 /* OIDExternalUserAgentSession.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8B65B67F7EFBC7042A8B1A4F2C133261 /* OIDTokenResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = 7143393466031C2D81F674AA4DC00BB3 /* OIDTokenResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8D45F450C0F368D462851CF74DA99597 /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C168098DFE0A4FEB7F6A65E0E3CCC8A3 /* GroupNode.swift */; };
+		8E4CB6858563A8ADB4EC9EA0D68F0BB3 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A8A6FF007F600C93835BACEDFD1534 /* Glyph.swift */; };
+		8F5DEE4EF977197768DBFF9BA7950CC7 /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DA29D2CD512229799B40D7FD86D124 /* NodePropertyMap.swift */; };
+		8FA2677CC39A1E1D7CA01B7A176CD257 /* OIDAuthState.h in Headers */ = {isa = PBXBuildFile; fileRef = 1692E42BC41F576E59E31E986333426D /* OIDAuthState.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		90DB9801C8A66C90F34138529C3BF20F /* ValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24848B4186A7073F1661462EB9D2C4F6 /* ValueContainer.swift */; };
+		90F746C285B0567933E2B81347A454CD /* GTMAppAuthFetcherAuthorization.h in Headers */ = {isa = PBXBuildFile; fileRef = D3A3A7D3072858BB8450096AF4829770 /* GTMAppAuthFetcherAuthorization.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9126A88FE33EAA7B74DF94DC443A6CB5 /* PolygonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F522B6E3773EE20BDFA6A3D7583A0912 /* PolygonNode.swift */; };
+		92DEE77A6C3DB65AEEAD7F202585E922 /* OIDEndSessionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3627CCBA89BEE1C7853F13190D32FBC1 /* OIDEndSessionRequest.m */; };
+		932DFBE82888E3A89719BE2899D5A3EC /* GTMSessionFetcherService.h in Headers */ = {isa = PBXBuildFile; fileRef = E1751266FC8786159E9B35E42B0AE4F1 /* GTMSessionFetcherService.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		936222310914B86E43701FA9A045159C /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A6D1B7E3457E21C19E227C78CB9540 /* AnyValueContainer.swift */; };
+		95492EA4882B47254A77ED823876D8AF /* CompositionLayersInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F2ECAB17260791F6115B09B129DD82 /* CompositionLayersInitializer.swift */; };
+		96F286D25F19C86FCE048C03A1B503BF /* OIDScopes.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1D9140844ABFB89269CA0A6EF3AB34 /* OIDScopes.m */; };
+		985BA0963E67F8DFEE9AE82C31B18548 /* OIDRegistrationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5837E0A54C77AF04FDC7A8FE2BB694AC /* OIDRegistrationRequest.m */; };
+		9862831FE23814F14472DF4E546D22FE /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67624CCACF3B9C87E354788D959105D /* Transform.swift */; };
+		9A56646CE27136DCA9C7E3A3D5D9F7FD /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B72EA8034C5FFFE993D691FE54C11A4 /* InvertedMatteLayer.swift */; };
+		9B5A54EF28DAA14231178DB8E8D2EAA9 /* StrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116730DA69C09F0DDD74F3B53EEDC0F2 /* StrokeNode.swift */; };
+		9BB6373E6F2D0B2FEE1EDA7C683ADF62 /* OIDTokenResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1318FD61C0374272DA99ECB9AC007076 /* OIDTokenResponse.m */; };
+		9C15773703D0B9029833F1416DC518C6 /* ImageLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D327E3E956903BE0478EAD4562B5B78B /* ImageLayerModel.swift */; };
+		9F1700CD5E28BD24268FDBEC950F9F71 /* OIDAuthorizationService+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A20AA721D83FA816578487FF5359D93 /* OIDAuthorizationService+IOS.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9FD5A536FC652AF68F529BFCE560D4AC /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B06507E65D3272F9C9EC29AB8FD004F /* AnyValueProvider.swift */; };
+		A21F86796F3B89E82EF7EDD192B1630D /* GTMKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = E261260F961982BBD75BAFFE1D25FC6A /* GTMKeychain.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A3510AD9AFE72ACE3F9D9FF4B9F2D692 /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D252DEA4A9E85D41927F74E16A1401 /* AnimatorNode.swift */; };
+		A3CA1E783936D205646A8150A23562C4 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4BD36D237DFD9D41AC94FCAD3CFCA4 /* Mask.swift */; };
+		A410CEAEC2654D37AF6BDDA76F5FFE42 /* FloatValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1497851EF65CA75400166558039EB049 /* FloatValueProvider.swift */; };
+		A63D2003F8CAFC7DAB509DDE112B1F87 /* StrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CC78ECD6D8BA5EC156E5E829FC4CA2 /* StrokeRenderer.swift */; };
+		A67A0FE9F9E21E31EE4126FAFE559CC9 /* GroupOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57667CC60B0B9522D655C576FA1CE185 /* GroupOutputNode.swift */; };
+		A6CCC3B8610E240CB5078092705DECFC /* AnimationKeypathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA78BD591FE7F63C8F5024E48989C3A5 /* AnimationKeypathExtension.swift */; };
+		A7FB5EC15760FFC9270740DE97171D9A /* Vectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5BD7D6A3B1C288A1F16B7170ABB1E9 /* Vectors.swift */; };
+		A843673B42EB0827D7259E10E6465AA0 /* ShapeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544A5BF6F2876A0CC95A6AE80E51512B /* ShapeItem.swift */; };
+		A859DDC416431D4804453CB6506D655C /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2478EAB406A006BC4748358971C7A6 /* ImageAsset.swift */; };
+		A8E2E2EC479B884C4D31FB1ABD5D9899 /* OIDTokenUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0003AF1E5BDDC2B272FE38530FF6D7 /* OIDTokenUtilities.m */; };
+		AA09E7726B6E4649EEF2020860F6E13D /* TextLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8684C53561367081CE30F1DC9880DD44 /* TextLayerModel.swift */; };
+		AA338FDB348A8F16C44F2FD2CEE3703B /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B1D68A964B826F69AAAFBD530D8D2F /* KeyedDecodingContainerExtensions.swift */; };
+		AA8802861856C0D5109044D663BC4906 /* NullCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C393F51BD71E7E7523ECC183948C106 /* NullCompositionLayer.swift */; };
+		ABF90B0960CEB2330125127EAB8E6BFA /* SolidCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32721B07EB4821569E3F184EC40BE9B /* SolidCompositionLayer.swift */; };
+		AE10550131EBCB17B9E681AE6B226DDE /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9916D6D8B9CF30A04070035E1D78236 /* LayerTransformNode.swift */; };
+		AE6CC67F8717CEE97460E0360F9DC475 /* GradientStrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D788D671CE6A726E9846AC2FB15A073E /* GradientStrokeNode.swift */; };
+		AF19917FE015BDB26105140D1A924229 /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2623D81E105B6429B07B470580BF56 /* CompatibleAnimationKeypath.swift */; };
+		AF33FD538D0A7AE82CFA6B31043E5FC0 /* GTMOAuth2KeychainCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 15356996D9D9239A2CF36F25AC02AFB8 /* GTMOAuth2KeychainCompatibility.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AFA657B8BEBADC437C5825C4139B796D /* PassThroughOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB70FAFCF233E04640BAD1B3C607F8D5 /* PassThroughOutputNode.swift */; };
+		B070A1BE866B374396C5D1CB6445AA08 /* LayerTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1B2E3FBFC74B7E435BA68974062138 /* LayerTextProvider.swift */; };
+		B09133BE32DC44B66DE9D3922AB1A864 /* GradientStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE895EE925CF940D72DAA9B10E75F4AD /* GradientStroke.swift */; };
+		B0941F047B6703254279A6D74F0BCA2A /* BezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CB63F856B791F2930D8C9D9B612FBD /* BezierPath.swift */; };
+		B197BC62F073FFFF2F0E8F19B4223CDE /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A1F91F6205652AECCD97199720FE5 /* SizeValueProvider.swift */; };
+		B391BD4328A682CCC53B01DCBFE2922A /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5006871DBD537098D62D54381CE02DFF /* KeyframeInterpolator.swift */; };
+		B5FE99E8787B4E063AC0083FE1CD47E5 /* FillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54289CEECC7FFFFDAB63CB0AFA79A8EF /* FillNode.swift */; };
+		B7AA76270AC6EF44CF960C56A0E493C1 /* OIDExternalUserAgentIOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 856311B4A352E86D00DBE62D8553340C /* OIDExternalUserAgentIOS.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B92765E3F779E405406085C982AE3C24 /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2BA2F40E0197579923CE3A0FFCA8AE /* TextAnimatorNode.swift */; };
+		B9F3C757BB152EC0D36491D7DC534260 /* OIDExternalUserAgentCatalyst.m in Sources */ = {isa = PBXBuildFile; fileRef = D128DB65D1FEAEDDFC9EBC31935E98EC /* OIDExternalUserAgentCatalyst.m */; };
+		BBD6F782F02BD91F2A704EE15CB1864A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF03C77C03C8682DAAACE1FEAF46CDE1 /* ColorExtension.swift */; };
+		BC6846C1FAD633FDC9EF8AF5CF952E61 /* OIDAuthorizationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CE0D664B877F0D035ACEFCF70DDA3F2 /* OIDAuthorizationRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BE65F0B1FD6F542EA5795F9DD65B2983 /* OIDClientMetadataParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 9564BE5863F6836C22D0A8F852CCAB61 /* OIDClientMetadataParameters.m */; };
+		BF5EC9A19DFC40A53DD8BAE69D8C7E9B /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF72D81A3C8A47D5F36671532CAC87F /* CompatibleAnimationView.swift */; };
+		C06518D066D1759A6492BA968402330E /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909FA0E6404BDC8F8CF2436C4AC5BA8C /* Rectangle.swift */; };
+		C1004621928CC54EDEDFE94DA7AEF2EC /* PreCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D868FF1274270F63799118EBC241C68 /* PreCompositionLayer.swift */; };
+		C149C17C4624ED39AABA0F3C7D076F71 /* AnimationCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C7A91F7B2A94FF85915CF6D63471AD /* AnimationCacheProvider.swift */; };
+		C162F3DC713E21CE011A67FE7240902B /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4126AB661292E8D12F8F64E56E944DBF /* StarNode.swift */; };
+		C2D291E381C7788911E282424DB41BE9 /* OIDClientMetadataParameters.h in Headers */ = {isa = PBXBuildFile; fileRef = 133D72AC39B5143A598F4AE7A3C12802 /* OIDClientMetadataParameters.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C7E7496EAD4EE48497E50113469E0750 /* AnimationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0472956D2AA6E88EA534C6A6CFFD6ECC /* AnimationTime.swift */; };
+		C859356B41B1895E24569DEA62F30A28 /* OIDExternalUserAgentIOSCustomBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = EE46A94AAFB2B77B6C5988766008C437 /* OIDExternalUserAgentIOSCustomBrowser.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C8A2F88E5B694EF87C8FCC0CE9227898 /* BundleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A924AAA29FD04B7AD4ABB472179E1 /* BundleImageProvider.swift */; };
+		C93F0A9B62B43E5F599E5D1A61E68670 /* AnyNodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D3EB8E42F69818835837212E8433F /* AnyNodeProperty.swift */; };
+		CB95D87D1DE15BCD9E615C9E70AF2015 /* SingleValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E2FD1E5BA1A2C1CCBAD95BE6FCE88E2 /* SingleValueProvider.swift */; };
+		CC1E740151AA3B7387E669E61364D074 /* NodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A773612C766419AEEA00F246FDEE45 /* NodeProperty.swift */; };
+		CD8B32EE7981F00D7081C5F52B7B6ECA /* GTMAppAuth-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C213E3FD86AE210E1FFD2DDAEACE9A /* GTMAppAuth-dummy.m */; };
+		CEB3BC396701A0A47CD6A3B1E06D3D12 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97FE159036C9D68D6A4203EDFE8AAD89 /* Color.swift */; };
+		CEB648BCB8FA1A689B8EA0E3535F23EE /* OIDGrantTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 01FE3E198707E422AD5542CAEB49D878 /* OIDGrantTypes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CFDC5CF2306338FA79964AA452A89FDA /* FilepathImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0E3F1EE2AF3E3346780C349274F98B /* FilepathImageProvider.swift */; };
+		D056206A4A0D95ECBD6A3366FEEA3CA2 /* lottie-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDC71B4C3D30EDF79357C0FF33BB47CA /* lottie-ios-dummy.m */; };
+		D05897572139A7A945233AE3890E7298 /* OIDURLQueryComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2F5DE578011C61D188B3A999B1E43A /* OIDURLQueryComponent.m */; };
+		D2872720DAE45D47B475207A656CBE87 /* OIDExternalUserAgentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 192875FFB4C3E9B0E37923E6F47FE598 /* OIDExternalUserAgentRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D2B690A078535AEFD4B0CE9FC5A5FF24 /* OIDRegistrationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B1B901610E32AFEE42CD4BB00E747F88 /* OIDRegistrationRequest.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D381C1ADBE16416E8AFAE6136F00B60D /* GradientValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4720834CD57BEC98DCF68408DF11502A /* GradientValueProvider.swift */; };
+		D51B110A1B250FC321824A4C0AF9E312 /* OIDResponseTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = A3DC5D62526EF76638EE6E6F94D66AE2 /* OIDResponseTypes.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D54C1934DD18677894A647701360A6B9 /* OIDServiceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 38D59DA592BC771B5AE3D9E42B3A292C /* OIDServiceConfiguration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D5D88228D094B5282ED7CF7316A72654 /* OIDURLSessionProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C163A6C6BA717C63200A3E924C9D8133 /* OIDURLSessionProvider.m */; };
+		D6300B04FD918554AFFE0AEFDAA21818 /* LayerImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A0AAA333D3CF4A06355DFC30BA9273 /* LayerImageProvider.swift */; };
+		D6E225B6098A16EA5DCA6BF0AD32A2E8 /* GroupInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BA83377E2361D7D5AD5B81195283CC /* GroupInterpolator.swift */; };
+		DB79484BBC19C6241978211652C0E910 /* FillI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7CA661946E2A6BFDD483BB5CA55394E /* FillI.swift */; };
+		DC80C311199A4C5BED389214086E8EEA /* AnimationTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6DB1EEAFA8659EC1F1057DCCDA85F5 /* AnimationTextProvider.swift */; };
+		DCFB90928DA7D3E0363BAEF1FADC1A6D /* OIDScopeUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0829550D838C95544AE0D0D73224BCD8 /* OIDScopeUtilities.m */; };
+		DD2C19E5FDBD953EAD957AA7622BD0C0 /* OIDExternalUserAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = DE6F484AB4A29BE98F1C9ED932E5F937 /* OIDExternalUserAgent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DE35A340D4BC80D960080EC3B0E942E5 /* GradientStrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E049D9645A0765AB1D4FED4A07CA9AE /* GradientStrokeRenderer.swift */; };
+		DEAECEC42C05837DB479E40FB812FCA1 /* OIDAuthState+IOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 518EA75070CC2720EA6972166EB86BBA /* OIDAuthState+IOS.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E4244B96C14310BE261635057FF9863A /* OIDURLQueryComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 46174A9277BAC9AD703E5B0FCFA23C6C /* OIDURLQueryComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E4C19A4FB369D93C52AB35C65A0C9290 /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F782F608FFC7138EB506EF196E77974 /* GradientFillNode.swift */; };
+		E5E8AB7DEEBD598A8351936523A89934 /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF05D569554CD0392B2BB3BAC741E1A /* TextCompositionLayer.swift */; };
+		E65FE16DDDCD62AD3B9E24190B0E1831 /* OIDRegistrationResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = B38A545BF3338B36979043E75540F02E /* OIDRegistrationResponse.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E752C88BB3B9F00B819B0B704715849A /* OIDAuthStateChangeDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = ACCAA7360286815A99A1B1495214356F /* OIDAuthStateChangeDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E763F6E68E2F53F4AD078E66C025A927 /* KeyframeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B02B388FB1100BC1B41144FE5D3C659 /* KeyframeGroup.swift */; };
+		E77FC396CA62195FB99447A583128666 /* OIDTokenUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C34E0FC8E3D38C4CC0E379C67514F76 /* OIDTokenUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E82DB4EF6F36AE53765FEF86DD5B377F /* OIDTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B49CF8160CD06F0F4E7E81F3502AA1C1 /* OIDTokenRequest.m */; };
+		E83A50563E2422FFF7A3D7E52B68BBAA /* GTMSessionUploadFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7527754F1532FAC0EF58B5EE185FDC /* GTMSessionUploadFetcher.m */; };
+		EB0468534AF17F6CA2763C02395E685B /* TextAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7B11BFC173735B3627B49BB6EB8B67 /* TextAnimator.swift */; };
+		EDD784AA7AC31BF8AC3B4D768B4989E1 /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03394F1028E3C1FFC27BDB2614DE9FE /* RenderNode.swift */; };
+		EF241F0F0FE69ADCEBE70C7EA7D840D3 /* OIDAuthState+IOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3A8EC97D8672A081CD6687510CE891 /* OIDAuthState+IOS.m */; };
+		EF43B17BFB471608ABEF9D543051F247 /* GTMSessionFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = CCE4A3C479A8FABD7123A6DBA94F5F34 /* GTMSessionFetcher.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EF651E5664A2BEB28D3D630E4A8AFAA3 /* GTMOAuth2KeychainCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = A5382C092617A331BFEC4651C15B4A07 /* GTMOAuth2KeychainCompatibility.m */; };
+		F39AFF6CE1F894E56942D18E993F3ABA /* CompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74729E0C39131F7ED62C0C9874C0325B /* CompositionLayer.swift */; };
+		F457CB799F2692B47E141775965C944E /* OIDFieldMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 26D4A365EBCF376BD4BEF138D117EA10 /* OIDFieldMapping.m */; };
+		F515FADAF93C8F04C76579DFBDDDD194 /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F72CE08158C744EB323D18F283C105 /* ShapeRenderLayer.swift */; };
+		F78E4305FA72AB780BEF49013792266B /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A421DC1311AE2BF1C89C1AC99D2EBE10 /* AnimatedButton.swift */; };
+		FA5921AFF1FE1B731A6E92B903F32104 /* OIDServiceDiscovery.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A22A139FEB20306C9DD16374C9CCEA /* OIDServiceDiscovery.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		FBAC3945C3C35BA221A473A74FAE780C /* GTMSessionFetcherLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = B6168742EFB481072C6D1BD925A23026 /* GTMSessionFetcherLogging.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		081F692BFA303E1A12FC2280806BC59B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
+		};
+		127A40EC95E08DBF469783357201CD2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAD3534FC55B0333104E5117C0A9A324;
+			remoteInfo = GoogleSignIn;
+		};
+		1B97D10CA57EFE2BF40060C4765E3C24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
+			remoteInfo = GTMSessionFetcher;
+		};
+		255C113C5B8CEBDE5DFD4788BBC6FC4B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
+			remoteInfo = GTMSessionFetcher;
+		};
+		2D617E13DB226CF02DDBDB578141031F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B967D7F8561D42493EE289EC8D450D1;
+			remoteInfo = "lottie-ios";
+		};
+		41595E0C2EE05A58FE54A80AF3C4C8F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D676E21115185671D7258A56944ABE98;
+			remoteInfo = GTMSessionFetcher;
+		};
+		4A9C56BAE1E1206BFEA2D9E80189B7A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
+			remoteInfo = GTMAppAuth;
+		};
+		8ABAEB1C2A50BF7B539892AA52103F2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
+		};
+		96C4B52CEBD25FE7612CDFAC4EBB56D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C642AA10FB29936669CC269F42079C6;
+			remoteInfo = AppAuth;
+		};
+		CFBE3CB2F286EF0D95A2ACDEBE0C1014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8627999EF1D5E93E13DAFF580DA8CDCF;
+			remoteInfo = GTMAppAuth;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		014A0205A8F0FC602DFB4106703F92A8 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Group.swift"; sourceTree = "<group>"; };
+		01FE3E198707E422AD5542CAEB49D878 /* OIDGrantTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDGrantTypes.h; path = Source/OIDGrantTypes.h; sourceTree = "<group>"; };
+		0310876A533659C86EC9D9FFFD4FC52A /* OIDAuthorizationService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationService.h; path = Source/OIDAuthorizationService.h; sourceTree = "<group>"; };
+		031969EABD8277BD4BB883A51AD44AA3 /* OIDEndSessionResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDEndSessionResponse.m; path = Source/OIDEndSessionResponse.m; sourceTree = "<group>"; };
+		03A66082212639B2882627E09A37CB9B /* OIDAuthorizationService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationService.m; path = Source/OIDAuthorizationService.m; sourceTree = "<group>"; };
+		0472956D2AA6E88EA534C6A6CFFD6ECC /* AnimationTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTime.swift; path = "lottie-swift/src/Public/Primitives/AnimationTime.swift"; sourceTree = "<group>"; };
+		04BA83377E2361D7D5AD5B81195283CC /* GroupInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/GroupInterpolator.swift"; sourceTree = "<group>"; };
+		0598BE1C85611F84BB952F1F5C021CA5 /* Asset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = "lottie-swift/src/Private/Model/Assets/Asset.swift"; sourceTree = "<group>"; };
+		05EE1824B346C51677CAD92161826148 /* GTMAppAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMAppAuth.h; path = Source/GTMAppAuth.h; sourceTree = "<group>"; };
+		07501EE4C21445080C71CB9B46255AC6 /* OIDAuthorizationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationRequest.m; path = Source/OIDAuthorizationRequest.m; sourceTree = "<group>"; };
+		079900A981BB0B8F7D8562F396394EA2 /* InterpolatableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpolatableExtensions.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/InterpolatableExtensions.swift"; sourceTree = "<group>"; };
+		07E8D58DDA13BD39FC6109AFC61547A4 /* GTMGatherInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMGatherInputStream.h; path = Source/GTMGatherInputStream.h; sourceTree = "<group>"; };
+		0829550D838C95544AE0D0D73224BCD8 /* OIDScopeUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopeUtilities.m; path = Source/OIDScopeUtilities.m; sourceTree = "<group>"; };
+		0B21388BB3E29320BCAFDED7D5F9C823 /* TrimPathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrimPathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/ModifierNodes/TrimPathNode.swift"; sourceTree = "<group>"; };
+		0B43FD562959B2BC754AEEF3C190F6DD /* ShapeCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ShapeCompositionLayer.swift"; sourceTree = "<group>"; };
+		0BAB9946B26F7DD1A2B23CEF30DAB5C6 /* OIDAuthState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthState.m; path = Source/OIDAuthState.m; sourceTree = "<group>"; };
+		0D2478EAB406A006BC4748358971C7A6 /* ImageAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageAsset.swift; path = "lottie-swift/src/Private/Model/Assets/ImageAsset.swift"; sourceTree = "<group>"; };
+		0D994B941390EABCAB7CB825ECE735B2 /* Pods-GoodBiology.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GoodBiology.debug.xcconfig"; sourceTree = "<group>"; };
+		0E29600403AD923ABEBE22394A588508 /* Ellipse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ellipse.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Ellipse.swift"; sourceTree = "<group>"; };
+		0E6DB1EEAFA8659EC1F1057DCCDA85F5 /* AnimationTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTextProvider.swift; path = "lottie-swift/src/Public/TextProvider/AnimationTextProvider.swift"; sourceTree = "<group>"; };
+		0F10B9AD57A802B8F14C16CBC8BBBC55 /* MathKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MathKit.swift; path = "lottie-swift/src/Private/Utility/Extensions/MathKit.swift"; sourceTree = "<group>"; };
+		1019C808662080BB278F1088CE533711 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/CGFloatExtensions.swift"; sourceTree = "<group>"; };
+		103A924AAA29FD04B7AD4ABB472179E1 /* BundleImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleImageProvider.swift; path = "lottie-swift/src/Public/iOS/BundleImageProvider.swift"; sourceTree = "<group>"; };
+		10659353924E15C598A28769BC0A112B /* AnimatedSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedSwitch.swift; path = "lottie-swift/src/Public/iOS/AnimatedSwitch.swift"; sourceTree = "<group>"; };
+		116730DA69C09F0DDD74F3B53EEDC0F2 /* StrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/StrokeNode.swift"; sourceTree = "<group>"; };
+		1318FD61C0374272DA99ECB9AC007076 /* OIDTokenResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenResponse.m; path = Source/OIDTokenResponse.m; sourceTree = "<group>"; };
+		133D72AC39B5143A598F4AE7A3C12802 /* OIDClientMetadataParameters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDClientMetadataParameters.h; path = Source/OIDClientMetadataParameters.h; sourceTree = "<group>"; };
+		142755421AE78B1F79359A105FBF0057 /* EllipseNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EllipseNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/EllipseNode.swift"; sourceTree = "<group>"; };
+		143F21DA3AC6C39CBAA5AC73098176B7 /* OIDScopeUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopeUtilities.h; path = Source/OIDScopeUtilities.h; sourceTree = "<group>"; };
+		146F5D39EFBF5D227B20E983EC92F174 /* GTMReadMonitorInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMReadMonitorInputStream.m; path = Source/GTMReadMonitorInputStream.m; sourceTree = "<group>"; };
+		1497851EF65CA75400166558039EB049 /* FloatValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/FloatValueProvider.swift"; sourceTree = "<group>"; };
+		14D92FF491BB2C54F71BA57145BD9FEB /* Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Merge.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Merge.swift"; sourceTree = "<group>"; };
+		15356996D9D9239A2CF36F25AC02AFB8 /* GTMOAuth2KeychainCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2KeychainCompatibility.h; path = Source/GTMOAuth2KeychainCompatibility/GTMOAuth2KeychainCompatibility.h; sourceTree = "<group>"; };
+		1692E42BC41F576E59E31E986333426D /* OIDAuthState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthState.h; path = Source/OIDAuthState.h; sourceTree = "<group>"; };
+		16A0AAA333D3CF4A06355DFC30BA9273 /* LayerImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerImageProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerImageProvider.swift"; sourceTree = "<group>"; };
+		16CFB3827C2E45D70DEC681563DB3C23 /* Interpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/Interpolatable.swift"; sourceTree = "<group>"; };
+		16D8DC41DD02A8A3F44A0BFAA8B8BD09 /* Pods-GoodBiology-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GoodBiology-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1714C0B22641A0150BCE3C22C006FB03 /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Shape.swift"; sourceTree = "<group>"; };
+		172D8281AD4A8D9091B802C149162234 /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
+		17684C6B1A493E0EE26D6ED1A9ABEB44 /* AnimationContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContainer.swift; path = "lottie-swift/src/Private/LayerContainers/AnimationContainer.swift"; sourceTree = "<group>"; };
+		192875FFB4C3E9B0E37923E6F47FE598 /* OIDExternalUserAgentRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentRequest.h; path = Source/OIDExternalUserAgentRequest.h; sourceTree = "<group>"; };
+		1BCD0D61C718107E62257BA4B6DF3FC2 /* PreCompLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/PreCompLayerModel.swift"; sourceTree = "<group>"; };
+		1BFC09598289503E3CB762F127BFC82E /* GTMAppAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMAppAuth-prefix.pch"; sourceTree = "<group>"; };
+		1C34E0FC8E3D38C4CC0E379C67514F76 /* OIDTokenUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenUtilities.h; path = Source/OIDTokenUtilities.h; sourceTree = "<group>"; };
+		1D868FF1274270F63799118EBC241C68 /* PreCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/PreCompositionLayer.swift"; sourceTree = "<group>"; };
+		1F362E35058D1322D5CA1568772B55A5 /* OIDRegistrationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationResponse.m; path = Source/OIDRegistrationResponse.m; sourceTree = "<group>"; };
+		24848B4186A7073F1661462EB9D2C4F6 /* ValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueContainer.swift"; sourceTree = "<group>"; };
+		25A974544FDE32B74E70A70A3B28F529 /* GTMSessionFetcher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMSessionFetcher.xcconfig; sourceTree = "<group>"; };
+		26D4A365EBCF376BD4BEF138D117EA10 /* OIDFieldMapping.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDFieldMapping.m; path = Source/OIDFieldMapping.m; sourceTree = "<group>"; };
+		27A22A139FEB20306C9DD16374C9CCEA /* OIDServiceDiscovery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceDiscovery.h; path = Source/OIDServiceDiscovery.h; sourceTree = "<group>"; };
+		2A4962EBDDB23EF9A1A2752A654D2601 /* Pods-GoodBiology-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GoodBiology-dummy.m"; sourceTree = "<group>"; };
+		2AB78B1CD409BEDEA71EF5CEC6EC619D /* GTMAppAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GTMAppAuth.xcconfig; sourceTree = "<group>"; };
+		2AC0036D610B157037AFE7CF0BD48886 /* Marker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marker.swift; path = "lottie-swift/src/Private/Model/Objects/Marker.swift"; sourceTree = "<group>"; };
+		2B0003AF1E5BDDC2B272FE38530FF6D7 /* OIDTokenUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenUtilities.m; path = Source/OIDTokenUtilities.m; sourceTree = "<group>"; };
+		2CA4ACC5C7CFE2E884ECB3F194BC0B79 /* AppAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AppAuth-dummy.m"; sourceTree = "<group>"; };
+		2D7B11BFC173735B3627B49BB6EB8B67 /* TextAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimator.swift; path = "lottie-swift/src/Private/Model/Text/TextAnimator.swift"; sourceTree = "<group>"; };
+		2E6152E1921D4462B4A6BD3D60153E31 /* Stroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stroke.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Stroke.swift"; sourceTree = "<group>"; };
+		2FF2F014855EB02BC68429F0A8C96D05 /* PathElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathElement.swift; path = "lottie-swift/src/Private/Utility/Primitives/PathElement.swift"; sourceTree = "<group>"; };
+		33259855BFA408D4F8E0DA10AF9C791D /* AnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationView.swift; path = "lottie-swift/src/Public/Animation/AnimationView.swift"; sourceTree = "<group>"; };
+		33A6D1B7E3457E21C19E227C78CB9540 /* AnyValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyValueContainer.swift"; sourceTree = "<group>"; };
+		3450969A22BF5AADADC4B359D78C0749 /* OIDErrorUtilities.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDErrorUtilities.m; path = Source/OIDErrorUtilities.m; sourceTree = "<group>"; };
+		3627CCBA89BEE1C7853F13190D32FBC1 /* OIDEndSessionRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDEndSessionRequest.m; path = Source/OIDEndSessionRequest.m; sourceTree = "<group>"; };
+		365E800F78CF1368D41FA08963E0D1F5 /* Pods-GoodBiology-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GoodBiology-resources.sh"; sourceTree = "<group>"; };
+		379F5302D9FB416C2C43ECA80B09635C /* PathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/PathNode.swift"; sourceTree = "<group>"; };
+		3835EB20B5B8CA9EA3DD2138981786CC /* ItemsExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemsExtension.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Extensions/ItemsExtension.swift"; sourceTree = "<group>"; };
+		38D59DA592BC771B5AE3D9E42B3A292C /* OIDServiceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDServiceConfiguration.h; path = Source/OIDServiceConfiguration.h; sourceTree = "<group>"; };
+		3A20AA721D83FA816578487FF5359D93 /* OIDAuthorizationService+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthorizationService+IOS.h"; path = "Source/iOS/OIDAuthorizationService+IOS.h"; sourceTree = "<group>"; };
+		3B00863BAF4D1FF8DE1070CEC7128A1B /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundBezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/CompoundBezierPath.swift"; sourceTree = "<group>"; };
+		3B45052306C5E40699E8C600680D9086 /* KeyframeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeExtensions.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/KeyframeExtensions.swift"; sourceTree = "<group>"; };
+		3BD256904AC363D1E3DD237AE6DE4D52 /* OIDIDToken.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDIDToken.m; path = Source/OIDIDToken.m; sourceTree = "<group>"; };
+		3CE0D664B877F0D035ACEFCF70DDA3F2 /* OIDAuthorizationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationRequest.h; path = Source/OIDAuthorizationRequest.h; sourceTree = "<group>"; };
+		3D314AA61E9ED900183298CE87CF56AA /* VectorsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VectorsExtensions.swift; path = "lottie-swift/src/Private/Utility/Primitives/VectorsExtensions.swift"; sourceTree = "<group>"; };
+		3DD80319E329104A86A01862DF189D74 /* OIDEndSessionResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDEndSessionResponse.h; path = Source/OIDEndSessionResponse.h; sourceTree = "<group>"; };
+		3E69FB485C5AC4951B4C7551F9B1AAAC /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
+		3F782F608FFC7138EB506EF196E77974 /* GradientFillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/GradientFillNode.swift"; sourceTree = "<group>"; };
+		3FD1B4C1246D643E9476438C28048FA8 /* libAppAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAppAuth.a; path = libAppAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		40B04F335FC1EFA9B9E48906A0F8D647 /* OIDErrorUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDErrorUtilities.h; path = Source/OIDErrorUtilities.h; sourceTree = "<group>"; };
+		410E6C99029AAA34C971F93DB523E1C4 /* OIDIDToken.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDIDToken.h; path = Source/OIDIDToken.h; sourceTree = "<group>"; };
+		4126AB661292E8D12F8F64E56E944DBF /* StarNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/StarNode.swift"; sourceTree = "<group>"; };
+		413A6A5800DF54A87A0288EE619B2DD6 /* OIDServiceConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceConfiguration.m; path = Source/OIDServiceConfiguration.m; sourceTree = "<group>"; };
+		42E94FFB02C41E41DDB9A712758B48C5 /* AnimationPublic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationPublic.swift; path = "lottie-swift/src/Public/Animation/AnimationPublic.swift"; sourceTree = "<group>"; };
+		43A65CA1617BDA69C99B2BFD2E56B4DC /* OIDScopes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDScopes.h; path = Source/OIDScopes.h; sourceTree = "<group>"; };
+		43FE45F5863222CDE55FAAB7B06C7BBD /* PointValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/PointValueProvider.swift"; sourceTree = "<group>"; };
+		46174A9277BAC9AD703E5B0FCFA23C6C /* OIDURLQueryComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLQueryComponent.h; path = Source/OIDURLQueryComponent.h; sourceTree = "<group>"; };
+		4720834CD57BEC98DCF68408DF11502A /* GradientValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/GradientValueProvider.swift"; sourceTree = "<group>"; };
+		4837086CE09007391BA218421432CFF5 /* OIDTokenRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenRequest.h; path = Source/OIDTokenRequest.h; sourceTree = "<group>"; };
+		4A196210CBAA61BA39E1A1EC076A37BD /* GTMSessionFetcher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GTMSessionFetcher-prefix.pch"; sourceTree = "<group>"; };
+		4B32EE47BC75CC3F4476747288931DC5 /* AnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypath.swift; path = "lottie-swift/src/Public/DynamicProperties/AnimationKeypath.swift"; sourceTree = "<group>"; };
+		4D1B2E3FBFC74B7E435BA68974062138 /* LayerTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTextProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTextProvider.swift"; sourceTree = "<group>"; };
+		4E1F24A3E039E9F8FCC3BF098E421DB1 /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
+		4FE0A5790B1A24E6E48FB7E96FF5D2BA /* GoogleSignIn.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleSignIn.xcconfig; sourceTree = "<group>"; };
+		5006871DBD537098D62D54381CE02DFF /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/KeyframeInterpolator.swift"; sourceTree = "<group>"; };
+		518EA75070CC2720EA6972166EB86BBA /* OIDAuthState+IOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "OIDAuthState+IOS.h"; path = "Source/iOS/OIDAuthState+IOS.h"; sourceTree = "<group>"; };
+		51BA97E8B5085EFFB47BC9C0B785CEA7 /* liblottie-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "liblottie-ios.a"; path = "liblottie-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F72CE08158C744EB323D18F283C105 /* ShapeRenderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeRenderLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeRenderLayer.swift"; sourceTree = "<group>"; };
+		54289CEECC7FFFFDAB63CB0AFA79A8EF /* FillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/FillNode.swift"; sourceTree = "<group>"; };
+		544A5BF6F2876A0CC95A6AE80E51512B /* ShapeItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeItem.swift; path = "lottie-swift/src/Private/Model/ShapeItems/ShapeItem.swift"; sourceTree = "<group>"; };
+		54A8A6FF007F600C93835BACEDFD1534 /* Glyph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Glyph.swift; path = "lottie-swift/src/Private/Model/Text/Glyph.swift"; sourceTree = "<group>"; };
+		57667CC60B0B9522D655C576FA1CE185 /* GroupOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/GroupOutputNode.swift"; sourceTree = "<group>"; };
+		5837E0A54C77AF04FDC7A8FE2BB694AC /* OIDRegistrationRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDRegistrationRequest.m; path = Source/OIDRegistrationRequest.m; sourceTree = "<group>"; };
+		5B9554D38B70AB393FC7D0F41181A3DB /* PathOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PathOutputNode.swift"; sourceTree = "<group>"; };
+		5BC1962EA1542E2802B30D0ADB975749 /* AppAuth-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppAuth-prefix.pch"; sourceTree = "<group>"; };
+		5BF63BABB3BAB916425FF99B92826F96 /* GTMAppAuthFetcherAuthorization.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMAppAuthFetcherAuthorization.m; path = Source/GTMAppAuthFetcherAuthorization.m; sourceTree = "<group>"; };
+		5C5A1F91F6205652AECCD97199720FE5 /* SizeValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/SizeValueProvider.swift"; sourceTree = "<group>"; };
+		5DF1664794D0DD4EFAF79BE7C915C507 /* OIDExternalUserAgentCatalyst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentCatalyst.h; path = Source/iOS/OIDExternalUserAgentCatalyst.h; sourceTree = "<group>"; };
+		5E049D9645A0765AB1D4FED4A07CA9AE /* GradientStrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientStrokeRenderer.swift"; sourceTree = "<group>"; };
+		5E7D3EB8E42F69818835837212E8433F /* AnyNodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyNodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyNodeProperty.swift"; sourceTree = "<group>"; };
+		6275A0492651F9B2CF15D581BF4B3901 /* OIDResponseTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDResponseTypes.m; path = Source/OIDResponseTypes.m; sourceTree = "<group>"; };
+		62F33B0FE63754617AC467A859217C59 /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = "lottie-swift/src/Private/Model/Keyframes/Keyframe.swift"; sourceTree = "<group>"; };
+		6505E8A7460ED3149BF7BE297C1B8B00 /* GTMMIMEDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMMIMEDocument.h; path = Source/GTMMIMEDocument.h; sourceTree = "<group>"; };
+		6565C0100F0366CD4DF1E395FBF5BC63 /* LRUAnimationCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUAnimationCache.swift; path = "lottie-swift/src/Public/AnimationCache/LRUAnimationCache.swift"; sourceTree = "<group>"; };
+		66CC78ECD6D8BA5EC156E5E829FC4CA2 /* StrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/StrokeRenderer.swift"; sourceTree = "<group>"; };
+		68C7A91F7B2A94FF85915CF6D63471AD /* AnimationCacheProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationCacheProvider.swift; path = "lottie-swift/src/Public/AnimationCache/AnimationCacheProvider.swift"; sourceTree = "<group>"; };
+		6C393F51BD71E7E7523ECC183948C106 /* NullCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NullCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/NullCompositionLayer.swift"; sourceTree = "<group>"; };
+		6D2BA2F40E0197579923CE3A0FFCA8AE /* TextAnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/Text/TextAnimatorNode.swift"; sourceTree = "<group>"; };
+		6E2FD1E5BA1A2C1CCBAD95BE6FCE88E2 /* SingleValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueProvider.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift"; sourceTree = "<group>"; };
+		6E692AD46BC0A0C943EF07061A1AF601 /* OIDAuthorizationService+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthorizationService+IOS.m"; path = "Source/iOS/OIDAuthorizationService+IOS.m"; sourceTree = "<group>"; };
+		6EF74FD1E8A2767BEBADE70D68756611 /* AnimationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContext.swift; path = "lottie-swift/src/Private/Utility/Helpers/AnimationContext.swift"; sourceTree = "<group>"; };
+		6FD122EA0AB9AB2A8FFA5F676C795DF0 /* libGTMAppAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGTMAppAuth.a; path = libGTMAppAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7143393466031C2D81F674AA4DC00BB3 /* OIDTokenResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDTokenResponse.h; path = Source/OIDTokenResponse.h; sourceTree = "<group>"; };
+		726B5EBB2332EB239CE5D8ED41FDF977 /* OIDEndSessionRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDEndSessionRequest.h; path = Source/OIDEndSessionRequest.h; sourceTree = "<group>"; };
+		739B48A45EB1C86B7877FB8C4E45841E /* LottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "lottie-swift/src/Public/iOS/LottieView.swift"; sourceTree = "<group>"; };
+		74675B8758B43E38F4615F8CE1E2E2FF /* OIDDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDDefines.h; path = Source/OIDDefines.h; sourceTree = "<group>"; };
+		74729E0C39131F7ED62C0C9874C0325B /* CompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/CompositionLayer.swift"; sourceTree = "<group>"; };
+		74A773612C766419AEEA00F246FDEE45 /* NodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/NodeProperty.swift"; sourceTree = "<group>"; };
+		75C213E3FD86AE210E1FFD2DDAEACE9A /* GTMAppAuth-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMAppAuth-dummy.m"; sourceTree = "<group>"; };
+		775BB1354D04DC9D63A0B88E2FCA5D2A /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNodeDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/AnimatorNodeDebugging.swift"; sourceTree = "<group>"; };
+		7AF3AB2D61570CCD609FF485AE1005E3 /* Star.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Star.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Star.swift"; sourceTree = "<group>"; };
+		7B06507E65D3272F9C9EC29AB8FD004F /* AnyValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/AnyValueProvider.swift"; sourceTree = "<group>"; };
+		7B42A3779684CE0034B9C2C5C71AAC61 /* Pods-GoodBiology.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GoodBiology.modulemap"; sourceTree = "<group>"; };
+		7B5BD7D6A3B1C288A1F16B7170ABB1E9 /* Vectors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vectors.swift; path = "lottie-swift/src/Public/Primitives/Vectors.swift"; sourceTree = "<group>"; };
+		7B72EA8034C5FFFE993D691FE54C11A4 /* InvertedMatteLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvertedMatteLayer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/InvertedMatteLayer.swift"; sourceTree = "<group>"; };
+		7C67AA1FB03AC01EC8A29E4BCB44DC08 /* GTMSessionFetcher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GTMSessionFetcher-dummy.m"; sourceTree = "<group>"; };
+		7C7D18C6D69D84FF828385C34189826E /* AnimatedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedControl.swift; path = "lottie-swift/src/Public/iOS/AnimatedControl.swift"; sourceTree = "<group>"; };
+		7C7FB0681CA97D84C3B3C505A4A87466 /* GTMSessionFetcherLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherLogging.m; path = Source/GTMSessionFetcherLogging.m; sourceTree = "<group>"; };
+		7E22DC53AC8B6479D8E20116BE8F0F29 /* OIDAuthorizationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthorizationResponse.h; path = Source/OIDAuthorizationResponse.h; sourceTree = "<group>"; };
+		7E386F6C63AFCE2CA4565F3D9B3AF8D9 /* OIDAuthStateErrorDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateErrorDelegate.h; path = Source/OIDAuthStateErrorDelegate.h; sourceTree = "<group>"; };
+		832B92AF4D86746D1DE09A483B03CE88 /* AppAuthCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppAuthCore.h; path = Source/AppAuthCore.h; sourceTree = "<group>"; };
+		856311B4A352E86D00DBE62D8553340C /* OIDExternalUserAgentIOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentIOS.h; path = Source/iOS/OIDExternalUserAgentIOS.h; sourceTree = "<group>"; };
+		8684C53561367081CE30F1DC9880DD44 /* TextLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/TextLayerModel.swift"; sourceTree = "<group>"; };
+		86DA29D2CD512229799B40D7FD86D124 /* NodePropertyMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodePropertyMap.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/NodePropertyMap.swift"; sourceTree = "<group>"; };
+		87D60AC67A89395B8E8D1CECE134653C /* Pods-GoodBiology.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GoodBiology.release.xcconfig"; sourceTree = "<group>"; };
+		88D252DEA4A9E85D41927F74E16A1401 /* AnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/AnimatorNode.swift"; sourceTree = "<group>"; };
+		892E5AC66E535B9C0455F334065BDDD5 /* ShapeLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ShapeLayerModel.swift"; sourceTree = "<group>"; };
+		89536E817A47DE90B26AE33EDAD5E061 /* OIDAuthorizationResponse.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDAuthorizationResponse.m; path = Source/OIDAuthorizationResponse.m; sourceTree = "<group>"; };
+		896E1AC2D54AF61A00C7ADD5E559F540 /* MaskContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskContainerLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/MaskContainerLayer.swift"; sourceTree = "<group>"; };
+		89B1D68A964B826F69AAAFBD530D8D2F /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainerExtensions.swift; path = "lottie-swift/src/Private/Model/Extensions/KeyedDecodingContainerExtensions.swift"; sourceTree = "<group>"; };
+		8A70F8499EA5998D83EA99800784F397 /* OIDGrantTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDGrantTypes.m; path = Source/OIDGrantTypes.m; sourceTree = "<group>"; };
+		8E9906AD56C97395C04E6EA2E0C78060 /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherService.m; path = Source/GTMSessionFetcherService.m; sourceTree = "<group>"; };
+		8F5F37399C5775D93B9CBE0FDC62A690 /* AppAuth.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppAuth.xcconfig; sourceTree = "<group>"; };
+		909FA0E6404BDC8F8CF2436C4AC5BA8C /* Rectangle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Rectangle.swift"; sourceTree = "<group>"; };
+		9564BE5863F6836C22D0A8F852CCAB61 /* OIDClientMetadataParameters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDClientMetadataParameters.m; path = Source/OIDClientMetadataParameters.m; sourceTree = "<group>"; };
+		957CA4484577E0EA7594F8217C8FD92B /* GTMMIMEDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMMIMEDocument.m; path = Source/GTMMIMEDocument.m; sourceTree = "<group>"; };
+		97FE159036C9D68D6A4203EDFE8AAD89 /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = "lottie-swift/src/Public/Primitives/Color.swift"; sourceTree = "<group>"; };
+		99D5ABFD88466CDD4D9A7FA47C5D76C8 /* FillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/FillRenderer.swift"; sourceTree = "<group>"; };
+		9A4BD36D237DFD9D41AC94FCAD3CFCA4 /* Mask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mask.swift; path = "lottie-swift/src/Private/Model/Objects/Mask.swift"; sourceTree = "<group>"; };
+		9B02B388FB1100BC1B41144FE5D3C659 /* KeyframeGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeGroup.swift; path = "lottie-swift/src/Private/Model/Keyframes/KeyframeGroup.swift"; sourceTree = "<group>"; };
+		9BF793FA2512F412B36504C19BE0BFD8 /* OIDError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDError.m; path = Source/OIDError.m; sourceTree = "<group>"; };
+		9C5B3F48D10063CFAFADF18108FC1FA4 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = "lottie-swift/src/Private/Model/Animation.swift"; sourceTree = "<group>"; };
+		9CC2955964FE65B8282A9F553FF068E5 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = Resources/GoogleSignIn.bundle; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E5E491CCC3D3A8FF905547AC15F9751 /* GTMKeychain_iOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMKeychain_iOS.m; path = Source/iOS/GTMKeychain_iOS.m; sourceTree = "<group>"; };
+		9E5F28A2F47D5A519C297487D8D2540E /* GTMSessionFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
+		9F3A8EC97D8672A081CD6687510CE891 /* OIDAuthState+IOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "OIDAuthState+IOS.m"; path = "Source/iOS/OIDAuthState+IOS.m"; sourceTree = "<group>"; };
+		A03394F1028E3C1FFC27BDB2614DE9FE /* RenderNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/RenderNode.swift"; sourceTree = "<group>"; };
+		A0CB63F856B791F2930D8C9D9B612FBD /* BezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/BezierPath.swift"; sourceTree = "<group>"; };
+		A394BA5C26A50C3B37D36CF8434AA79D /* ColorValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/ColorValueProvider.swift"; sourceTree = "<group>"; };
+		A3DC5D62526EF76638EE6E6F94D66AE2 /* OIDResponseTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDResponseTypes.h; path = Source/OIDResponseTypes.h; sourceTree = "<group>"; };
+		A421DC1311AE2BF1C89C1AC99D2EBE10 /* AnimatedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedButton.swift; path = "lottie-swift/src/Public/iOS/AnimatedButton.swift"; sourceTree = "<group>"; };
+		A5382C092617A331BFEC4651C15B4A07 /* GTMOAuth2KeychainCompatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2KeychainCompatibility.m; path = Source/GTMOAuth2KeychainCompatibility/GTMOAuth2KeychainCompatibility.m; sourceTree = "<group>"; };
+		A7F2ECAB17260791F6115B09B129DD82 /* CompositionLayersInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayersInitializer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/CompositionLayersInitializer.swift"; sourceTree = "<group>"; };
+		A8295F79E5F4216E17145EC842D50BB8 /* lottie-ios.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.xcconfig"; sourceTree = "<group>"; };
+		AABBA1D16D473923E85E9C76739D2877 /* RectNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RectNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/RectNode.swift"; sourceTree = "<group>"; };
+		AB70FAFCF233E04640BAD1B3C607F8D5 /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassThroughOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PassThroughOutputNode.swift"; sourceTree = "<group>"; };
+		AC2623D81E105B6429B07B470580BF56 /* CompatibleAnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationKeypath.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationKeypath.swift"; sourceTree = "<group>"; };
+		ACCAA7360286815A99A1B1495214356F /* OIDAuthStateChangeDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDAuthStateChangeDelegate.h; path = Source/OIDAuthStateChangeDelegate.h; sourceTree = "<group>"; };
+		AF7527754F1532FAC0EF58B5EE185FDC /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
+		AFFC24FD54A1126FA3F68AD97859CF91 /* GTMAppAuthFetcherAuthorization+Keychain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMAppAuthFetcherAuthorization+Keychain.m"; path = "Source/GTMAppAuthFetcherAuthorization+Keychain.m"; sourceTree = "<group>"; };
+		B078E437F8C6B13EA0BCE413D83D003C /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = Frameworks/GoogleSignIn.framework; sourceTree = "<group>"; };
+		B10B5EFCB32AC465116EB0C41E529298 /* LayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/LayerModel.swift"; sourceTree = "<group>"; };
+		B1B901610E32AFEE42CD4BB00E747F88 /* OIDRegistrationRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationRequest.h; path = Source/OIDRegistrationRequest.h; sourceTree = "<group>"; };
+		B2E11E15B81209860CC9C0D1A41C4A28 /* OIDExternalUserAgentSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentSession.h; path = Source/OIDExternalUserAgentSession.h; sourceTree = "<group>"; };
+		B32721B07EB4821569E3F184EC40BE9B /* SolidCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/SolidCompositionLayer.swift"; sourceTree = "<group>"; };
+		B38A545BF3338B36979043E75540F02E /* OIDRegistrationResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDRegistrationResponse.h; path = Source/OIDRegistrationResponse.h; sourceTree = "<group>"; };
+		B49CF8160CD06F0F4E7E81F3502AA1C1 /* OIDTokenRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDTokenRequest.m; path = Source/OIDTokenRequest.m; sourceTree = "<group>"; };
+		B5C9C84F1918BA5914BD1DD492311C02 /* SolidLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/SolidLayerModel.swift"; sourceTree = "<group>"; };
+		B6168742EFB481072C6D1BD925A23026 /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
+		B6A104618FADCD5193BCD2C9E325E104 /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationViewInitializers.swift; path = "lottie-swift/src/Public/Animation/AnimationViewInitializers.swift"; sourceTree = "<group>"; };
+		B7203058A31F9DA9ABEC3717C0D038CD /* KeypathSearchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeypathSearchable.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/KeypathSearchable.swift"; sourceTree = "<group>"; };
+		B77FCAFC44EA321FCA75F151EC01D870 /* PrecompAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecompAsset.swift; path = "lottie-swift/src/Private/Model/Assets/PrecompAsset.swift"; sourceTree = "<group>"; };
+		B7CA661946E2A6BFDD483BB5CA55394E /* FillI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillI.swift; path = "lottie-swift/src/Private/Model/ShapeItems/FillI.swift"; sourceTree = "<group>"; };
+		BCF05D569554CD0392B2BB3BAC741E1A /* TextCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/TextCompositionLayer.swift"; sourceTree = "<group>"; };
+		C0154E06CF432C7134BBD08818962C68 /* OIDFieldMapping.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDFieldMapping.h; path = Source/OIDFieldMapping.h; sourceTree = "<group>"; };
+		C163A6C6BA717C63200A3E924C9D8133 /* OIDURLSessionProvider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLSessionProvider.m; path = Source/OIDURLSessionProvider.m; sourceTree = "<group>"; };
+		C168098DFE0A4FEB7F6A65E0E3CCC8A3 /* GroupNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderContainers/GroupNode.swift"; sourceTree = "<group>"; };
+		C1998E0D8085221AD87F89B614C10E52 /* libGTMSessionFetcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGTMSessionFetcher.a; path = libGTMSessionFetcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1DDC2F24CF3B02C4BBFC2EB4B31E411 /* OIDExternalUserAgentIOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOS.m; path = Source/iOS/OIDExternalUserAgentIOS.m; sourceTree = "<group>"; };
+		C47C00F93B71433C9CBBA3436FF43245 /* AppAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AppAuth.h; path = Source/AppAuth.h; sourceTree = "<group>"; };
+		C56BABB5A6ACB562E6547AEC71A90A8A /* OIDError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDError.h; path = Source/OIDError.h; sourceTree = "<group>"; };
+		C67624CCACF3B9C87E354788D959105D /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = "lottie-swift/src/Private/Model/Objects/Transform.swift"; sourceTree = "<group>"; };
+		C8D416781109233FBEAE21A553CA40CD /* GTMAppAuthFetcherAuthorization+Keychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMAppAuthFetcherAuthorization+Keychain.h"; path = "Source/GTMAppAuthFetcherAuthorization+Keychain.h"; sourceTree = "<group>"; };
+		CCE4A3C479A8FABD7123A6DBA94F5F34 /* GTMSessionFetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
+		CDEE348E6908019FB56805AAA39545E9 /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = "lottie-swift/src/Private/Model/Text/TextDocument.swift"; sourceTree = "<group>"; };
+		CDF024AEF8B701FD97028EC8EB38F3BE /* lottie-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "lottie-ios.modulemap"; sourceTree = "<group>"; };
+		CDF72D81A3C8A47D5F36671532CAC87F /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationView.swift"; sourceTree = "<group>"; };
+		CE895EE925CF940D72DAA9B10E75F4AD /* GradientStroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStroke.swift; path = "lottie-swift/src/Private/Model/ShapeItems/GradientStroke.swift"; sourceTree = "<group>"; };
+		CF0B309E9E51950BCB55065349D5B491 /* GTMReadMonitorInputStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMReadMonitorInputStream.h; path = Source/GTMReadMonitorInputStream.h; sourceTree = "<group>"; };
+		D128DB65D1FEAEDDFC9EBC31935E98EC /* OIDExternalUserAgentCatalyst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentCatalyst.m; path = Source/iOS/OIDExternalUserAgentCatalyst.m; sourceTree = "<group>"; };
+		D2400465F92FF98D3D82A4E38BBC972D /* OIDExternalUserAgentIOSCustomBrowser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDExternalUserAgentIOSCustomBrowser.m; path = Source/iOS/OIDExternalUserAgentIOSCustomBrowser.m; sourceTree = "<group>"; };
+		D327E3E956903BE0478EAD4562B5B78B /* ImageLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ImageLayerModel.swift"; sourceTree = "<group>"; };
+		D3A3A7D3072858BB8450096AF4829770 /* GTMAppAuthFetcherAuthorization.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMAppAuthFetcherAuthorization.h; path = Source/GTMAppAuthFetcherAuthorization.h; sourceTree = "<group>"; };
+		D4B765D745A176C0125A1BBC2FB7BEFF /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = "lottie-swift/src/Public/iOS/AnimationSubview.swift"; sourceTree = "<group>"; };
+		D68E49C19388CF4E8FDFCB39D92A223D /* Pods-GoodBiology-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GoodBiology-umbrella.h"; sourceTree = "<group>"; };
+		D788D671CE6A726E9846AC2FB15A073E /* GradientStrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/GradientStrokeNode.swift"; sourceTree = "<group>"; };
+		DB289FB49B9B0523E458A375567CFD61 /* GTMGatherInputStream.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GTMGatherInputStream.m; path = Source/GTMGatherInputStream.m; sourceTree = "<group>"; };
+		DC0FF52120E1BBBB58D3A98F523B6271 /* AssetLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetLibrary.swift; path = "lottie-swift/src/Private/Model/Assets/AssetLibrary.swift"; sourceTree = "<group>"; };
+		DC5877412A7B8BC7403E6D163280E61A /* CurveVertex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurveVertex.swift; path = "lottie-swift/src/Private/Utility/Primitives/CurveVertex.swift"; sourceTree = "<group>"; };
+		DE609690852DF7C1CC8A94F6F53169C8 /* Repeater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repeater.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Repeater.swift"; sourceTree = "<group>"; };
+		DE6F484AB4A29BE98F1C9ED932E5F937 /* OIDExternalUserAgent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgent.h; path = Source/OIDExternalUserAgent.h; sourceTree = "<group>"; };
+		DEA8F7D89ED1B3DD28543A2527B0E0DD /* ShapeTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeTransform.swift; path = "lottie-swift/src/Private/Model/ShapeItems/ShapeTransform.swift"; sourceTree = "<group>"; };
+		DEC8ABCCEB983C6BC10807C0FA1464C7 /* OIDServiceDiscovery.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDServiceDiscovery.m; path = Source/OIDServiceDiscovery.m; sourceTree = "<group>"; };
+		DF03C77C03C8682DAAACE1FEAF46CDE1 /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = "lottie-swift/src/Private/Utility/Primitives/ColorExtension.swift"; sourceTree = "<group>"; };
+		E1751266FC8786159E9B35E42B0AE4F1 /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherService.h; path = Source/GTMSessionFetcherService.h; sourceTree = "<group>"; };
+		E22298812030D184F11CE275E6AFF5E3 /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = "lottie-swift/src/Public/iOS/UIColorExtension.swift"; sourceTree = "<group>"; };
+		E261260F961982BBD75BAFFE1D25FC6A /* GTMKeychain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GTMKeychain.h; path = Source/GTMKeychain.h; sourceTree = "<group>"; };
+		E409053831F1CB12D7B93EFE18F897B5 /* ShapeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/ShapeNode.swift"; sourceTree = "<group>"; };
+		E5C76BDD96E7442DA5B9DD8C7CBB15C8 /* Font.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Font.swift; path = "lottie-swift/src/Private/Model/Text/Font.swift"; sourceTree = "<group>"; };
+		E6098535BFA93B8DDBA1803602B16F45 /* LayerDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/LayerDebugging.swift"; sourceTree = "<group>"; };
+		E66EF53761C95993A0A6F530ACC1025F /* GradientFillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientFillRenderer.swift"; sourceTree = "<group>"; };
+		E9916D6D8B9CF30A04070035E1D78236 /* LayerTransformNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTransformNode.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTransformNode.swift"; sourceTree = "<group>"; };
+		EA0E3F1EE2AF3E3346780C349274F98B /* FilepathImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilepathImageProvider.swift; path = "lottie-swift/src/Public/iOS/FilepathImageProvider.swift"; sourceTree = "<group>"; };
+		EA78BD591FE7F63C8F5024E48989C3A5 /* AnimationKeypathExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypathExtension.swift; path = "lottie-swift/src/Private/Utility/Extensions/AnimationKeypathExtension.swift"; sourceTree = "<group>"; };
+		EB15011A73A3AC7E96562EDEED6745F5 /* libPods-GoodBiology.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-GoodBiology.a"; path = "libPods-GoodBiology.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE46A94AAFB2B77B6C5988766008C437 /* OIDExternalUserAgentIOSCustomBrowser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDExternalUserAgentIOSCustomBrowser.h; path = Source/iOS/OIDExternalUserAgentIOSCustomBrowser.h; sourceTree = "<group>"; };
+		EF1D9140844ABFB89269CA0A6EF3AB34 /* OIDScopes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDScopes.m; path = Source/OIDScopes.m; sourceTree = "<group>"; };
+		EF2F5DE578011C61D188B3A999B1E43A /* OIDURLQueryComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OIDURLQueryComponent.m; path = Source/OIDURLQueryComponent.m; sourceTree = "<group>"; };
+		F0824E90D3AF4A8DAC6C7DA5965F450E /* Pods-GoodBiology-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GoodBiology-acknowledgements.plist"; sourceTree = "<group>"; };
+		F1A42BE5829F9E98C3FCE8ED7CDC84FE /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Trim.swift"; sourceTree = "<group>"; };
+		F37F8D8233A0808025EE623D923C9B07 /* AnimationImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageProvider.swift; path = "lottie-swift/src/Public/ImageProvider/AnimationImageProvider.swift"; sourceTree = "<group>"; };
+		F522B6E3773EE20BDFA6A3D7583A0912 /* PolygonNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolygonNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/PolygonNode.swift"; sourceTree = "<group>"; };
+		F787690C25BEFEA05F8E9C720323DF12 /* ShapeContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeContainerLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeContainerLayer.swift"; sourceTree = "<group>"; };
+		F82C23BC9C4C3B0BC0975423ADFA22CA /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/StringExtensions.swift"; sourceTree = "<group>"; };
+		F8DB172D1E4110D19E57C23E068E9C80 /* GradientFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFill.swift; path = "lottie-swift/src/Private/Model/ShapeItems/GradientFill.swift"; sourceTree = "<group>"; };
+		F9FAF1BAE2F690735A3D3501C91A0F9D /* ImageCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ImageCompositionLayer.swift"; sourceTree = "<group>"; };
+		FBE2790E17CEF3ABBCD6EA174796CFFA /* DashPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DashPattern.swift; path = "lottie-swift/src/Private/Model/Objects/DashPattern.swift"; sourceTree = "<group>"; };
+		FDC335F9D7C722450B3B3BF769EC48FF /* OIDURLSessionProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OIDURLSessionProvider.h; path = Source/OIDURLSessionProvider.h; sourceTree = "<group>"; };
+		FDC71B4C3D30EDF79357C0FF33BB47CA /* lottie-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "lottie-ios-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EBA6F5740E0717552A5D1D5F9D1327C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6172D785C5E3F5C9426770B7405E013D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		682A4D8B047E96A494B7E3319B5FD19A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73EB6482C18BCA65B80E19DE120E1974 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C01EF192BF04B58B60707681C900EC9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00FD5ECE7F43DEB83F8EEA5D48CD84FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DD251D2D0D1DD844BD476367DDB78DA /* AppAuth */,
+				6BBF9D519F13CD3ED58612491B7A22F5 /* GoogleSignIn */,
+				556BC278FE13EFD8C52F488696129324 /* GTMAppAuth */,
+				EBFFE666F273AE3286E989982D4BCB78 /* GTMSessionFetcher */,
+				CA9C4367D5BAD0D2B0F5F9BBA8EA0FC2 /* lottie-ios */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		43397723536B621DECB0266B8C58ABC1 /* ExternalUserAgent */ = {
+			isa = PBXGroup;
+			children = (
+				C47C00F93B71433C9CBBA3436FF43245 /* AppAuth.h */,
+				3A20AA721D83FA816578487FF5359D93 /* OIDAuthorizationService+IOS.h */,
+				6E692AD46BC0A0C943EF07061A1AF601 /* OIDAuthorizationService+IOS.m */,
+				518EA75070CC2720EA6972166EB86BBA /* OIDAuthState+IOS.h */,
+				9F3A8EC97D8672A081CD6687510CE891 /* OIDAuthState+IOS.m */,
+				5DF1664794D0DD4EFAF79BE7C915C507 /* OIDExternalUserAgentCatalyst.h */,
+				D128DB65D1FEAEDDFC9EBC31935E98EC /* OIDExternalUserAgentCatalyst.m */,
+				856311B4A352E86D00DBE62D8553340C /* OIDExternalUserAgentIOS.h */,
+				C1DDC2F24CF3B02C4BBFC2EB4B31E411 /* OIDExternalUserAgentIOS.m */,
+				EE46A94AAFB2B77B6C5988766008C437 /* OIDExternalUserAgentIOSCustomBrowser.h */,
+				D2400465F92FF98D3D82A4E38BBC972D /* OIDExternalUserAgentIOSCustomBrowser.m */,
+			);
+			name = ExternalUserAgent;
+			sourceTree = "<group>";
+		};
+		4978AEE86FD7E636A5D799385C1EE0EB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8F5F37399C5775D93B9CBE0FDC62A690 /* AppAuth.xcconfig */,
+				2CA4ACC5C7CFE2E884ECB3F194BC0B79 /* AppAuth-dummy.m */,
+				5BC1962EA1542E2802B30D0ADB975749 /* AppAuth-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AppAuth";
+			sourceTree = "<group>";
+		};
+		4DD251D2D0D1DD844BD476367DDB78DA /* AppAuth */ = {
+			isa = PBXGroup;
+			children = (
+				AF519B3E06F948D394C2E5A97074FF9F /* Core */,
+				43397723536B621DECB0266B8C58ABC1 /* ExternalUserAgent */,
+				4978AEE86FD7E636A5D799385C1EE0EB /* Support Files */,
+			);
+			name = AppAuth;
+			path = AppAuth;
+			sourceTree = "<group>";
+		};
+		5225C6227BC316E4849735CCD532BFEB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FE0A5790B1A24E6E48FB7E96FF5D2BA /* GoogleSignIn.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GoogleSignIn";
+			sourceTree = "<group>";
+		};
+		556BC278FE13EFD8C52F488696129324 /* GTMAppAuth */ = {
+			isa = PBXGroup;
+			children = (
+				05EE1824B346C51677CAD92161826148 /* GTMAppAuth.h */,
+				D3A3A7D3072858BB8450096AF4829770 /* GTMAppAuthFetcherAuthorization.h */,
+				5BF63BABB3BAB916425FF99B92826F96 /* GTMAppAuthFetcherAuthorization.m */,
+				C8D416781109233FBEAE21A553CA40CD /* GTMAppAuthFetcherAuthorization+Keychain.h */,
+				AFFC24FD54A1126FA3F68AD97859CF91 /* GTMAppAuthFetcherAuthorization+Keychain.m */,
+				E261260F961982BBD75BAFFE1D25FC6A /* GTMKeychain.h */,
+				9E5E491CCC3D3A8FF905547AC15F9751 /* GTMKeychain_iOS.m */,
+				15356996D9D9239A2CF36F25AC02AFB8 /* GTMOAuth2KeychainCompatibility.h */,
+				A5382C092617A331BFEC4651C15B4A07 /* GTMOAuth2KeychainCompatibility.m */,
+				CE5F3A70EAA95D78C5E1D3DE82B2E9DC /* Support Files */,
+			);
+			name = GTMAppAuth;
+			path = GTMAppAuth;
+			sourceTree = "<group>";
+		};
+		6BBF9D519F13CD3ED58612491B7A22F5 /* GoogleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C2E6360BAC7D16A718D07292848BACD2 /* Frameworks */,
+				8C6D55931087FD8684ACAA5807B1101D /* Resources */,
+				5225C6227BC316E4849735CCD532BFEB /* Support Files */,
+			);
+			name = GoogleSignIn;
+			path = GoogleSignIn;
+			sourceTree = "<group>";
+		};
+		73BB5E60878206160F2384736C965A47 /* Full */ = {
+			isa = PBXGroup;
+			children = (
+				07E8D58DDA13BD39FC6109AFC61547A4 /* GTMGatherInputStream.h */,
+				DB289FB49B9B0523E458A375567CFD61 /* GTMGatherInputStream.m */,
+				6505E8A7460ED3149BF7BE297C1B8B00 /* GTMMIMEDocument.h */,
+				957CA4484577E0EA7594F8217C8FD92B /* GTMMIMEDocument.m */,
+				CF0B309E9E51950BCB55065349D5B491 /* GTMReadMonitorInputStream.h */,
+				146F5D39EFBF5D227B20E983EC92F174 /* GTMReadMonitorInputStream.m */,
+			);
+			name = Full;
+			sourceTree = "<group>";
+		};
+		870A4D377EC152617F17545BCA62509D /* Pods-GoodBiology */ = {
+			isa = PBXGroup;
+			children = (
+				7B42A3779684CE0034B9C2C5C71AAC61 /* Pods-GoodBiology.modulemap */,
+				16D8DC41DD02A8A3F44A0BFAA8B8BD09 /* Pods-GoodBiology-acknowledgements.markdown */,
+				F0824E90D3AF4A8DAC6C7DA5965F450E /* Pods-GoodBiology-acknowledgements.plist */,
+				2A4962EBDDB23EF9A1A2752A654D2601 /* Pods-GoodBiology-dummy.m */,
+				365E800F78CF1368D41FA08963E0D1F5 /* Pods-GoodBiology-resources.sh */,
+				D68E49C19388CF4E8FDFCB39D92A223D /* Pods-GoodBiology-umbrella.h */,
+				0D994B941390EABCAB7CB825ECE735B2 /* Pods-GoodBiology.debug.xcconfig */,
+				87D60AC67A89395B8E8D1CECE134653C /* Pods-GoodBiology.release.xcconfig */,
+			);
+			name = "Pods-GoodBiology";
+			path = "Target Support Files/Pods-GoodBiology";
+			sourceTree = "<group>";
+		};
+		8C6D55931087FD8684ACAA5807B1101D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9CC2955964FE65B8282A9F553FF068E5 /* GoogleSignIn.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		948DE0DA8BAA26C163BC6096D4AF2E08 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				870A4D377EC152617F17545BCA62509D /* Pods-GoodBiology */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AF519B3E06F948D394C2E5A97074FF9F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				832B92AF4D86746D1DE09A483B03CE88 /* AppAuthCore.h */,
+				3CE0D664B877F0D035ACEFCF70DDA3F2 /* OIDAuthorizationRequest.h */,
+				07501EE4C21445080C71CB9B46255AC6 /* OIDAuthorizationRequest.m */,
+				7E22DC53AC8B6479D8E20116BE8F0F29 /* OIDAuthorizationResponse.h */,
+				89536E817A47DE90B26AE33EDAD5E061 /* OIDAuthorizationResponse.m */,
+				0310876A533659C86EC9D9FFFD4FC52A /* OIDAuthorizationService.h */,
+				03A66082212639B2882627E09A37CB9B /* OIDAuthorizationService.m */,
+				1692E42BC41F576E59E31E986333426D /* OIDAuthState.h */,
+				0BAB9946B26F7DD1A2B23CEF30DAB5C6 /* OIDAuthState.m */,
+				ACCAA7360286815A99A1B1495214356F /* OIDAuthStateChangeDelegate.h */,
+				7E386F6C63AFCE2CA4565F3D9B3AF8D9 /* OIDAuthStateErrorDelegate.h */,
+				133D72AC39B5143A598F4AE7A3C12802 /* OIDClientMetadataParameters.h */,
+				9564BE5863F6836C22D0A8F852CCAB61 /* OIDClientMetadataParameters.m */,
+				74675B8758B43E38F4615F8CE1E2E2FF /* OIDDefines.h */,
+				726B5EBB2332EB239CE5D8ED41FDF977 /* OIDEndSessionRequest.h */,
+				3627CCBA89BEE1C7853F13190D32FBC1 /* OIDEndSessionRequest.m */,
+				3DD80319E329104A86A01862DF189D74 /* OIDEndSessionResponse.h */,
+				031969EABD8277BD4BB883A51AD44AA3 /* OIDEndSessionResponse.m */,
+				C56BABB5A6ACB562E6547AEC71A90A8A /* OIDError.h */,
+				9BF793FA2512F412B36504C19BE0BFD8 /* OIDError.m */,
+				40B04F335FC1EFA9B9E48906A0F8D647 /* OIDErrorUtilities.h */,
+				3450969A22BF5AADADC4B359D78C0749 /* OIDErrorUtilities.m */,
+				DE6F484AB4A29BE98F1C9ED932E5F937 /* OIDExternalUserAgent.h */,
+				192875FFB4C3E9B0E37923E6F47FE598 /* OIDExternalUserAgentRequest.h */,
+				B2E11E15B81209860CC9C0D1A41C4A28 /* OIDExternalUserAgentSession.h */,
+				C0154E06CF432C7134BBD08818962C68 /* OIDFieldMapping.h */,
+				26D4A365EBCF376BD4BEF138D117EA10 /* OIDFieldMapping.m */,
+				01FE3E198707E422AD5542CAEB49D878 /* OIDGrantTypes.h */,
+				8A70F8499EA5998D83EA99800784F397 /* OIDGrantTypes.m */,
+				410E6C99029AAA34C971F93DB523E1C4 /* OIDIDToken.h */,
+				3BD256904AC363D1E3DD237AE6DE4D52 /* OIDIDToken.m */,
+				B1B901610E32AFEE42CD4BB00E747F88 /* OIDRegistrationRequest.h */,
+				5837E0A54C77AF04FDC7A8FE2BB694AC /* OIDRegistrationRequest.m */,
+				B38A545BF3338B36979043E75540F02E /* OIDRegistrationResponse.h */,
+				1F362E35058D1322D5CA1568772B55A5 /* OIDRegistrationResponse.m */,
+				A3DC5D62526EF76638EE6E6F94D66AE2 /* OIDResponseTypes.h */,
+				6275A0492651F9B2CF15D581BF4B3901 /* OIDResponseTypes.m */,
+				43A65CA1617BDA69C99B2BFD2E56B4DC /* OIDScopes.h */,
+				EF1D9140844ABFB89269CA0A6EF3AB34 /* OIDScopes.m */,
+				143F21DA3AC6C39CBAA5AC73098176B7 /* OIDScopeUtilities.h */,
+				0829550D838C95544AE0D0D73224BCD8 /* OIDScopeUtilities.m */,
+				38D59DA592BC771B5AE3D9E42B3A292C /* OIDServiceConfiguration.h */,
+				413A6A5800DF54A87A0288EE619B2DD6 /* OIDServiceConfiguration.m */,
+				27A22A139FEB20306C9DD16374C9CCEA /* OIDServiceDiscovery.h */,
+				DEC8ABCCEB983C6BC10807C0FA1464C7 /* OIDServiceDiscovery.m */,
+				4837086CE09007391BA218421432CFF5 /* OIDTokenRequest.h */,
+				B49CF8160CD06F0F4E7E81F3502AA1C1 /* OIDTokenRequest.m */,
+				7143393466031C2D81F674AA4DC00BB3 /* OIDTokenResponse.h */,
+				1318FD61C0374272DA99ECB9AC007076 /* OIDTokenResponse.m */,
+				1C34E0FC8E3D38C4CC0E379C67514F76 /* OIDTokenUtilities.h */,
+				2B0003AF1E5BDDC2B272FE38530FF6D7 /* OIDTokenUtilities.m */,
+				46174A9277BAC9AD703E5B0FCFA23C6C /* OIDURLQueryComponent.h */,
+				EF2F5DE578011C61D188B3A999B1E43A /* OIDURLQueryComponent.m */,
+				FDC335F9D7C722450B3B3BF769EC48FF /* OIDURLSessionProvider.h */,
+				C163A6C6BA717C63200A3E924C9D8133 /* OIDURLSessionProvider.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		B7421227259B15792747C8DCBEF49D88 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				CCE4A3C479A8FABD7123A6DBA94F5F34 /* GTMSessionFetcher.h */,
+				9E5F28A2F47D5A519C297487D8D2540E /* GTMSessionFetcher.m */,
+				B6168742EFB481072C6D1BD925A23026 /* GTMSessionFetcherLogging.h */,
+				7C7FB0681CA97D84C3B3C505A4A87466 /* GTMSessionFetcherLogging.m */,
+				E1751266FC8786159E9B35E42B0AE4F1 /* GTMSessionFetcherService.h */,
+				8E9906AD56C97395C04E6EA2E0C78060 /* GTMSessionFetcherService.m */,
+				3E69FB485C5AC4951B4C7551F9B1AAAC /* GTMSessionUploadFetcher.h */,
+				AF7527754F1532FAC0EF58B5EE185FDC /* GTMSessionUploadFetcher.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		B7951E58691647F049A54177DDC44CA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FD1B4C1246D643E9476438C28048FA8 /* libAppAuth.a */,
+				6FD122EA0AB9AB2A8FFA5F676C795DF0 /* libGTMAppAuth.a */,
+				C1998E0D8085221AD87F89B614C10E52 /* libGTMSessionFetcher.a */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* liblottie-ios.a */,
+				EB15011A73A3AC7E96562EDEED6745F5 /* libPods-GoodBiology.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA4B9AF68992C12469209C92CB86727A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDF024AEF8B701FD97028EC8EB38F3BE /* lottie-ios.modulemap */,
+				A8295F79E5F4216E17145EC842D50BB8 /* lottie-ios.xcconfig */,
+				FDC71B4C3D30EDF79357C0FF33BB47CA /* lottie-ios-dummy.m */,
+				172D8281AD4A8D9091B802C149162234 /* lottie-ios-prefix.pch */,
+				4E1F24A3E039E9F8FCC3BF098E421DB1 /* lottie-ios-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/lottie-ios";
+			sourceTree = "<group>";
+		};
+		C2E6360BAC7D16A718D07292848BACD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B078E437F8C6B13EA0BCE413D83D003C /* GoogleSignIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA9C4367D5BAD0D2B0F5F9BBA8EA0FC2 /* lottie-ios */ = {
+			isa = PBXGroup;
+			children = (
+				A421DC1311AE2BF1C89C1AC99D2EBE10 /* AnimatedButton.swift */,
+				7C7D18C6D69D84FF828385C34189826E /* AnimatedControl.swift */,
+				10659353924E15C598A28769BC0A112B /* AnimatedSwitch.swift */,
+				9C5B3F48D10063CFAFADF18108FC1FA4 /* Animation.swift */,
+				68C7A91F7B2A94FF85915CF6D63471AD /* AnimationCacheProvider.swift */,
+				17684C6B1A493E0EE26D6ED1A9ABEB44 /* AnimationContainer.swift */,
+				6EF74FD1E8A2767BEBADE70D68756611 /* AnimationContext.swift */,
+				F37F8D8233A0808025EE623D923C9B07 /* AnimationImageProvider.swift */,
+				4B32EE47BC75CC3F4476747288931DC5 /* AnimationKeypath.swift */,
+				EA78BD591FE7F63C8F5024E48989C3A5 /* AnimationKeypathExtension.swift */,
+				42E94FFB02C41E41DDB9A712758B48C5 /* AnimationPublic.swift */,
+				D4B765D745A176C0125A1BBC2FB7BEFF /* AnimationSubview.swift */,
+				0E6DB1EEAFA8659EC1F1057DCCDA85F5 /* AnimationTextProvider.swift */,
+				0472956D2AA6E88EA534C6A6CFFD6ECC /* AnimationTime.swift */,
+				33259855BFA408D4F8E0DA10AF9C791D /* AnimationView.swift */,
+				B6A104618FADCD5193BCD2C9E325E104 /* AnimationViewInitializers.swift */,
+				88D252DEA4A9E85D41927F74E16A1401 /* AnimatorNode.swift */,
+				775BB1354D04DC9D63A0B88E2FCA5D2A /* AnimatorNodeDebugging.swift */,
+				5E7D3EB8E42F69818835837212E8433F /* AnyNodeProperty.swift */,
+				33A6D1B7E3457E21C19E227C78CB9540 /* AnyValueContainer.swift */,
+				7B06507E65D3272F9C9EC29AB8FD004F /* AnyValueProvider.swift */,
+				0598BE1C85611F84BB952F1F5C021CA5 /* Asset.swift */,
+				DC0FF52120E1BBBB58D3A98F523B6271 /* AssetLibrary.swift */,
+				A0CB63F856B791F2930D8C9D9B612FBD /* BezierPath.swift */,
+				103A924AAA29FD04B7AD4ABB472179E1 /* BundleImageProvider.swift */,
+				1019C808662080BB278F1088CE533711 /* CGFloatExtensions.swift */,
+				97FE159036C9D68D6A4203EDFE8AAD89 /* Color.swift */,
+				DF03C77C03C8682DAAACE1FEAF46CDE1 /* ColorExtension.swift */,
+				A394BA5C26A50C3B37D36CF8434AA79D /* ColorValueProvider.swift */,
+				AC2623D81E105B6429B07B470580BF56 /* CompatibleAnimationKeypath.swift */,
+				CDF72D81A3C8A47D5F36671532CAC87F /* CompatibleAnimationView.swift */,
+				74729E0C39131F7ED62C0C9874C0325B /* CompositionLayer.swift */,
+				A7F2ECAB17260791F6115B09B129DD82 /* CompositionLayersInitializer.swift */,
+				3B00863BAF4D1FF8DE1070CEC7128A1B /* CompoundBezierPath.swift */,
+				DC5877412A7B8BC7403E6D163280E61A /* CurveVertex.swift */,
+				FBE2790E17CEF3ABBCD6EA174796CFFA /* DashPattern.swift */,
+				0E29600403AD923ABEBE22394A588508 /* Ellipse.swift */,
+				142755421AE78B1F79359A105FBF0057 /* EllipseNode.swift */,
+				EA0E3F1EE2AF3E3346780C349274F98B /* FilepathImageProvider.swift */,
+				B7CA661946E2A6BFDD483BB5CA55394E /* FillI.swift */,
+				54289CEECC7FFFFDAB63CB0AFA79A8EF /* FillNode.swift */,
+				99D5ABFD88466CDD4D9A7FA47C5D76C8 /* FillRenderer.swift */,
+				1497851EF65CA75400166558039EB049 /* FloatValueProvider.swift */,
+				E5C76BDD96E7442DA5B9DD8C7CBB15C8 /* Font.swift */,
+				54A8A6FF007F600C93835BACEDFD1534 /* Glyph.swift */,
+				F8DB172D1E4110D19E57C23E068E9C80 /* GradientFill.swift */,
+				3F782F608FFC7138EB506EF196E77974 /* GradientFillNode.swift */,
+				E66EF53761C95993A0A6F530ACC1025F /* GradientFillRenderer.swift */,
+				CE895EE925CF940D72DAA9B10E75F4AD /* GradientStroke.swift */,
+				D788D671CE6A726E9846AC2FB15A073E /* GradientStrokeNode.swift */,
+				5E049D9645A0765AB1D4FED4A07CA9AE /* GradientStrokeRenderer.swift */,
+				4720834CD57BEC98DCF68408DF11502A /* GradientValueProvider.swift */,
+				014A0205A8F0FC602DFB4106703F92A8 /* Group.swift */,
+				04BA83377E2361D7D5AD5B81195283CC /* GroupInterpolator.swift */,
+				C168098DFE0A4FEB7F6A65E0E3CCC8A3 /* GroupNode.swift */,
+				57667CC60B0B9522D655C576FA1CE185 /* GroupOutputNode.swift */,
+				0D2478EAB406A006BC4748358971C7A6 /* ImageAsset.swift */,
+				F9FAF1BAE2F690735A3D3501C91A0F9D /* ImageCompositionLayer.swift */,
+				D327E3E956903BE0478EAD4562B5B78B /* ImageLayerModel.swift */,
+				16CFB3827C2E45D70DEC681563DB3C23 /* Interpolatable.swift */,
+				079900A981BB0B8F7D8562F396394EA2 /* InterpolatableExtensions.swift */,
+				7B72EA8034C5FFFE993D691FE54C11A4 /* InvertedMatteLayer.swift */,
+				3835EB20B5B8CA9EA3DD2138981786CC /* ItemsExtension.swift */,
+				89B1D68A964B826F69AAAFBD530D8D2F /* KeyedDecodingContainerExtensions.swift */,
+				62F33B0FE63754617AC467A859217C59 /* Keyframe.swift */,
+				3B45052306C5E40699E8C600680D9086 /* KeyframeExtensions.swift */,
+				9B02B388FB1100BC1B41144FE5D3C659 /* KeyframeGroup.swift */,
+				5006871DBD537098D62D54381CE02DFF /* KeyframeInterpolator.swift */,
+				B7203058A31F9DA9ABEC3717C0D038CD /* KeypathSearchable.swift */,
+				E6098535BFA93B8DDBA1803602B16F45 /* LayerDebugging.swift */,
+				16A0AAA333D3CF4A06355DFC30BA9273 /* LayerImageProvider.swift */,
+				B10B5EFCB32AC465116EB0C41E529298 /* LayerModel.swift */,
+				4D1B2E3FBFC74B7E435BA68974062138 /* LayerTextProvider.swift */,
+				E9916D6D8B9CF30A04070035E1D78236 /* LayerTransformNode.swift */,
+				739B48A45EB1C86B7877FB8C4E45841E /* LottieView.swift */,
+				6565C0100F0366CD4DF1E395FBF5BC63 /* LRUAnimationCache.swift */,
+				2AC0036D610B157037AFE7CF0BD48886 /* Marker.swift */,
+				9A4BD36D237DFD9D41AC94FCAD3CFCA4 /* Mask.swift */,
+				896E1AC2D54AF61A00C7ADD5E559F540 /* MaskContainerLayer.swift */,
+				0F10B9AD57A802B8F14C16CBC8BBBC55 /* MathKit.swift */,
+				14D92FF491BB2C54F71BA57145BD9FEB /* Merge.swift */,
+				74A773612C766419AEEA00F246FDEE45 /* NodeProperty.swift */,
+				86DA29D2CD512229799B40D7FD86D124 /* NodePropertyMap.swift */,
+				6C393F51BD71E7E7523ECC183948C106 /* NullCompositionLayer.swift */,
+				AB70FAFCF233E04640BAD1B3C607F8D5 /* PassThroughOutputNode.swift */,
+				2FF2F014855EB02BC68429F0A8C96D05 /* PathElement.swift */,
+				379F5302D9FB416C2C43ECA80B09635C /* PathNode.swift */,
+				5B9554D38B70AB393FC7D0F41181A3DB /* PathOutputNode.swift */,
+				43FE45F5863222CDE55FAAB7B06C7BBD /* PointValueProvider.swift */,
+				F522B6E3773EE20BDFA6A3D7583A0912 /* PolygonNode.swift */,
+				B77FCAFC44EA321FCA75F151EC01D870 /* PrecompAsset.swift */,
+				1BCD0D61C718107E62257BA4B6DF3FC2 /* PreCompLayerModel.swift */,
+				1D868FF1274270F63799118EBC241C68 /* PreCompositionLayer.swift */,
+				909FA0E6404BDC8F8CF2436C4AC5BA8C /* Rectangle.swift */,
+				AABBA1D16D473923E85E9C76739D2877 /* RectNode.swift */,
+				A03394F1028E3C1FFC27BDB2614DE9FE /* RenderNode.swift */,
+				DE609690852DF7C1CC8A94F6F53169C8 /* Repeater.swift */,
+				1714C0B22641A0150BCE3C22C006FB03 /* Shape.swift */,
+				0B43FD562959B2BC754AEEF3C190F6DD /* ShapeCompositionLayer.swift */,
+				F787690C25BEFEA05F8E9C720323DF12 /* ShapeContainerLayer.swift */,
+				544A5BF6F2876A0CC95A6AE80E51512B /* ShapeItem.swift */,
+				892E5AC66E535B9C0455F334065BDDD5 /* ShapeLayerModel.swift */,
+				E409053831F1CB12D7B93EFE18F897B5 /* ShapeNode.swift */,
+				51F72CE08158C744EB323D18F283C105 /* ShapeRenderLayer.swift */,
+				DEA8F7D89ED1B3DD28543A2527B0E0DD /* ShapeTransform.swift */,
+				6E2FD1E5BA1A2C1CCBAD95BE6FCE88E2 /* SingleValueProvider.swift */,
+				5C5A1F91F6205652AECCD97199720FE5 /* SizeValueProvider.swift */,
+				B32721B07EB4821569E3F184EC40BE9B /* SolidCompositionLayer.swift */,
+				B5C9C84F1918BA5914BD1DD492311C02 /* SolidLayerModel.swift */,
+				7AF3AB2D61570CCD609FF485AE1005E3 /* Star.swift */,
+				4126AB661292E8D12F8F64E56E944DBF /* StarNode.swift */,
+				F82C23BC9C4C3B0BC0975423ADFA22CA /* StringExtensions.swift */,
+				2E6152E1921D4462B4A6BD3D60153E31 /* Stroke.swift */,
+				116730DA69C09F0DDD74F3B53EEDC0F2 /* StrokeNode.swift */,
+				66CC78ECD6D8BA5EC156E5E829FC4CA2 /* StrokeRenderer.swift */,
+				2D7B11BFC173735B3627B49BB6EB8B67 /* TextAnimator.swift */,
+				6D2BA2F40E0197579923CE3A0FFCA8AE /* TextAnimatorNode.swift */,
+				BCF05D569554CD0392B2BB3BAC741E1A /* TextCompositionLayer.swift */,
+				CDEE348E6908019FB56805AAA39545E9 /* TextDocument.swift */,
+				8684C53561367081CE30F1DC9880DD44 /* TextLayerModel.swift */,
+				C67624CCACF3B9C87E354788D959105D /* Transform.swift */,
+				F1A42BE5829F9E98C3FCE8ED7CDC84FE /* Trim.swift */,
+				0B21388BB3E29320BCAFDED7D5F9C823 /* TrimPathNode.swift */,
+				E22298812030D184F11CE275E6AFF5E3 /* UIColorExtension.swift */,
+				24848B4186A7073F1661462EB9D2C4F6 /* ValueContainer.swift */,
+				7B5BD7D6A3B1C288A1F16B7170ABB1E9 /* Vectors.swift */,
+				3D314AA61E9ED900183298CE87CF56AA /* VectorsExtensions.swift */,
+				BA4B9AF68992C12469209C92CB86727A /* Support Files */,
+			);
+			name = "lottie-ios";
+			path = "lottie-ios";
+			sourceTree = "<group>";
+		};
+		CE5F3A70EAA95D78C5E1D3DE82B2E9DC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2AB78B1CD409BEDEA71EF5CEC6EC619D /* GTMAppAuth.xcconfig */,
+				75C213E3FD86AE210E1FFD2DDAEACE9A /* GTMAppAuth-dummy.m */,
+				1BFC09598289503E3CB762F127BFC82E /* GTMAppAuth-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GTMAppAuth";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				00FD5ECE7F43DEB83F8EEA5D48CD84FD /* Pods */,
+				B7951E58691647F049A54177DDC44CA8 /* Products */,
+				948DE0DA8BAA26C163BC6096D4AF2E08 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBFFE666F273AE3286E989982D4BCB78 /* GTMSessionFetcher */ = {
+			isa = PBXGroup;
+			children = (
+				B7421227259B15792747C8DCBEF49D88 /* Core */,
+				73BB5E60878206160F2384736C965A47 /* Full */,
+				F25DA7FC355035029401746004C2C6C5 /* Support Files */,
+			);
+			name = GTMSessionFetcher;
+			path = GTMSessionFetcher;
+			sourceTree = "<group>";
+		};
+		F25DA7FC355035029401746004C2C6C5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				25A974544FDE32B74E70A70A3B28F529 /* GTMSessionFetcher.xcconfig */,
+				7C67AA1FB03AC01EC8A29E4BCB44DC08 /* GTMSessionFetcher-dummy.m */,
+				4A196210CBAA61BA39E1A1EC076A37BD /* GTMSessionFetcher-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GTMSessionFetcher";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		68D02B13759E59AAC6FBFFFC656FAABD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7645DED1C95120051C066A78D3354980 /* lottie-ios-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		692DE8E55D02E62C82D26768B619B949 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DD1CDA4C76B9260B5EF3A237FF5540 /* GTMGatherInputStream.h in Headers */,
+				803D1DD273F47E3F09B4FC7F75A3B195 /* GTMMIMEDocument.h in Headers */,
+				1ABA3ABA530411283001334E90E61CDF /* GTMReadMonitorInputStream.h in Headers */,
+				EF43B17BFB471608ABEF9D543051F247 /* GTMSessionFetcher.h in Headers */,
+				FBAC3945C3C35BA221A473A74FAE780C /* GTMSessionFetcherLogging.h in Headers */,
+				932DFBE82888E3A89719BE2899D5A3EC /* GTMSessionFetcherService.h in Headers */,
+				30846928D515A31D381300E2B47412FC /* GTMSessionUploadFetcher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DE53DF318659D60CA48C200DC3A1FC2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				746AC8C3C5FE2D7AFBF645E8027D3E4C /* AppAuth.h in Headers */,
+				6AA4C6C92E294E2DFB6C7C03B6B7E3B6 /* AppAuthCore.h in Headers */,
+				BC6846C1FAD633FDC9EF8AF5CF952E61 /* OIDAuthorizationRequest.h in Headers */,
+				849D6D6CBDF67B89CF899661FF9522A4 /* OIDAuthorizationResponse.h in Headers */,
+				9F1700CD5E28BD24268FDBEC950F9F71 /* OIDAuthorizationService+IOS.h in Headers */,
+				008177D0F7976046D07BBF0BD6EF9830 /* OIDAuthorizationService.h in Headers */,
+				DEAECEC42C05837DB479E40FB812FCA1 /* OIDAuthState+IOS.h in Headers */,
+				8FA2677CC39A1E1D7CA01B7A176CD257 /* OIDAuthState.h in Headers */,
+				E752C88BB3B9F00B819B0B704715849A /* OIDAuthStateChangeDelegate.h in Headers */,
+				1B308D3D2FB0CFBDD7B9961F28E296D1 /* OIDAuthStateErrorDelegate.h in Headers */,
+				C2D291E381C7788911E282424DB41BE9 /* OIDClientMetadataParameters.h in Headers */,
+				4CE3AB4C56666D236A45E9B8FFA5598A /* OIDDefines.h in Headers */,
+				56AA538933BFFB46E90E3AF4BE81BD88 /* OIDEndSessionRequest.h in Headers */,
+				4120EF11193D0E404D28691E193A0753 /* OIDEndSessionResponse.h in Headers */,
+				097EF7325882799B1B4D97A472A0A605 /* OIDError.h in Headers */,
+				4B5A2CF12CF045E9D651B99E9F3BC74A /* OIDErrorUtilities.h in Headers */,
+				DD2C19E5FDBD953EAD957AA7622BD0C0 /* OIDExternalUserAgent.h in Headers */,
+				26263F4CB49D41C60965D725DC3BCC33 /* OIDExternalUserAgentCatalyst.h in Headers */,
+				B7AA76270AC6EF44CF960C56A0E493C1 /* OIDExternalUserAgentIOS.h in Headers */,
+				C859356B41B1895E24569DEA62F30A28 /* OIDExternalUserAgentIOSCustomBrowser.h in Headers */,
+				D2872720DAE45D47B475207A656CBE87 /* OIDExternalUserAgentRequest.h in Headers */,
+				89B99F37B589AC5F00C1B0B1BEFDBD11 /* OIDExternalUserAgentSession.h in Headers */,
+				0A13C06F8C285F14A0AFAEDE92462C6A /* OIDFieldMapping.h in Headers */,
+				CEB648BCB8FA1A689B8EA0E3535F23EE /* OIDGrantTypes.h in Headers */,
+				5F8A14AA39CDA5050D31FCC4FDFED8BF /* OIDIDToken.h in Headers */,
+				D2B690A078535AEFD4B0CE9FC5A5FF24 /* OIDRegistrationRequest.h in Headers */,
+				E65FE16DDDCD62AD3B9E24190B0E1831 /* OIDRegistrationResponse.h in Headers */,
+				D51B110A1B250FC321824A4C0AF9E312 /* OIDResponseTypes.h in Headers */,
+				56F7A309117EF36ADE10E617AD1732F8 /* OIDScopes.h in Headers */,
+				6BEB8662C93FCCA59F60F5A3C197DDA4 /* OIDScopeUtilities.h in Headers */,
+				D54C1934DD18677894A647701360A6B9 /* OIDServiceConfiguration.h in Headers */,
+				FA5921AFF1FE1B731A6E92B903F32104 /* OIDServiceDiscovery.h in Headers */,
+				4877E1DFD13544FDFC2DE9891D8AADA8 /* OIDTokenRequest.h in Headers */,
+				8B65B67F7EFBC7042A8B1A4F2C133261 /* OIDTokenResponse.h in Headers */,
+				E77FC396CA62195FB99447A583128666 /* OIDTokenUtilities.h in Headers */,
+				E4244B96C14310BE261635057FF9863A /* OIDURLQueryComponent.h in Headers */,
+				63C373548F276406DE607EE04DB6F23D /* OIDURLSessionProvider.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D20BCFDFC424D08898AFB20835D0996D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				728041B6CCAB782342F6114F46788340 /* GTMAppAuth.h in Headers */,
+				7B004EFF5E0369DB2D498B21F9A67C52 /* GTMAppAuthFetcherAuthorization+Keychain.h in Headers */,
+				90F746C285B0567933E2B81347A454CD /* GTMAppAuthFetcherAuthorization.h in Headers */,
+				A21F86796F3B89E82EF7EDD192B1630D /* GTMKeychain.h in Headers */,
+				AF33FD538D0A7AE82CFA6B31043E5FC0 /* GTMOAuth2KeychainCompatibility.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D719B6A70471BA2A217E8A93CD850106 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17B2DCEF64E734A13370CA6C8CF81C1F /* Pods-GoodBiology-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2DEE9A5D4D632195A2E41522C09CB61 /* Build configuration list for PBXNativeTarget "lottie-ios" */;
+			buildPhases = (
+				68D02B13759E59AAC6FBFFFC656FAABD /* Headers */,
+				67011758FF7AFCE22F7F637FD5A4FBA9 /* Sources */,
+				73EB6482C18BCA65B80E19DE120E1974 /* Frameworks */,
+				DE3D0BF91B51F837846E4A6A41905321 /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "lottie-ios";
+			productName = "lottie-ios";
+			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* liblottie-ios.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5C642AA10FB29936669CC269F42079C6 /* AppAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B91E7EA7557525EA9AE91C039065C5D /* Build configuration list for PBXNativeTarget "AppAuth" */;
+			buildPhases = (
+				7DE53DF318659D60CA48C200DC3A1FC2 /* Headers */,
+				981A1B1D6D2951C456F780D481C7F28A /* Sources */,
+				6172D785C5E3F5C9426770B7405E013D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppAuth;
+			productName = AppAuth;
+			productReference = 3FD1B4C1246D643E9476438C28048FA8 /* libAppAuth.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABD08A6CBE116F9D9AADCEAE8F53B7E6 /* Build configuration list for PBXNativeTarget "GTMAppAuth" */;
+			buildPhases = (
+				D20BCFDFC424D08898AFB20835D0996D /* Headers */,
+				F1C7C704F535E73C101BFB679D53D567 /* Sources */,
+				682A4D8B047E96A494B7E3319B5FD19A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17F95C18E3EFF34AD53094C236880907 /* PBXTargetDependency */,
+				E89E0382D716E97612D73AB1423F3C40 /* PBXTargetDependency */,
+			);
+			name = GTMAppAuth;
+			productName = GTMAppAuth;
+			productReference = 6FD122EA0AB9AB2A8FFA5F676C795DF0 /* libGTMAppAuth.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B74A06F47A7A1BD8A186FF3E49C806E6 /* Pods-GoodBiology */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7EF8966501F1229C663C0C26DDAD12C /* Build configuration list for PBXNativeTarget "Pods-GoodBiology" */;
+			buildPhases = (
+				D719B6A70471BA2A217E8A93CD850106 /* Headers */,
+				CCEB84B59C984E86765B27C538823A2A /* Sources */,
+				C01EF192BF04B58B60707681C900EC9E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7405713BF540EC7DC0BEA09DAFC73CDC /* PBXTargetDependency */,
+				A60B1E81D292D30E77919874AC6E94CA /* PBXTargetDependency */,
+				C24DB3339CD887F89F6E74917F6D3D93 /* PBXTargetDependency */,
+				2AA86FAB27C62ABED7A7D7F674295DA0 /* PBXTargetDependency */,
+				04FFDCC15BB00A45CC84ED06C053DF14 /* PBXTargetDependency */,
+			);
+			name = "Pods-GoodBiology";
+			productName = "Pods-GoodBiology";
+			productReference = EB15011A73A3AC7E96562EDEED6745F5 /* libPods-GoodBiology.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EF1993CF7086726E525D7DFE80C98DC /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */;
+			buildPhases = (
+				692DE8E55D02E62C82D26768B619B949 /* Headers */,
+				E12610D2EB3FA99C807711C5868BBEFA /* Sources */,
+				0EBA6F5740E0717552A5D1D5F9D1327C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GTMSessionFetcher;
+			productName = GTMSessionFetcher;
+			productReference = C1998E0D8085221AD87F89B614C10E52 /* libGTMSessionFetcher.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B7951E58691647F049A54177DDC44CA8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C642AA10FB29936669CC269F42079C6 /* AppAuth */,
+				CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */,
+				8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */,
+				D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */,
+				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
+				B74A06F47A7A1BD8A186FF3E49C806E6 /* Pods-GoodBiology */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DE3D0BF91B51F837846E4A6A41905321 /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Lottie/lottie-ios.modulemap",
+				"${PODS_ROOT}/Headers/Public/Lottie/lottie-ios-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Lottie/lottie-ios.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Lottie/lottie-ios-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67011758FF7AFCE22F7F637FD5A4FBA9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F78E4305FA72AB780BEF49013792266B /* AnimatedButton.swift in Sources */,
+				01C0CC5FAEEBC79027DD5640F2ABBA33 /* AnimatedControl.swift in Sources */,
+				3A3B889B5979AC1E22DFEB5F2F4BDCA2 /* AnimatedSwitch.swift in Sources */,
+				163D24C89D36F0F105EBFA759D1C1282 /* Animation.swift in Sources */,
+				C149C17C4624ED39AABA0F3C7D076F71 /* AnimationCacheProvider.swift in Sources */,
+				109C1C46C5F21A489DC91A83A52B43DF /* AnimationContainer.swift in Sources */,
+				1D7A0DB0D78276BB2D55645EB0F4EB3E /* AnimationContext.swift in Sources */,
+				20281FF6129175E38FA061276CB402A5 /* AnimationImageProvider.swift in Sources */,
+				06BCE95E5B184277439D01456F0DC9AF /* AnimationKeypath.swift in Sources */,
+				A6CCC3B8610E240CB5078092705DECFC /* AnimationKeypathExtension.swift in Sources */,
+				5AB9FAFC283F24CE2EB1F9975578BB84 /* AnimationPublic.swift in Sources */,
+				0AD16D05DEF9CF39C90DD1BD999B8522 /* AnimationSubview.swift in Sources */,
+				DC80C311199A4C5BED389214086E8EEA /* AnimationTextProvider.swift in Sources */,
+				C7E7496EAD4EE48497E50113469E0750 /* AnimationTime.swift in Sources */,
+				56DB0B92C838BBC584E723BCE4998E97 /* AnimationView.swift in Sources */,
+				29FBE5062D99A140FA0113A8910DFB07 /* AnimationViewInitializers.swift in Sources */,
+				A3510AD9AFE72ACE3F9D9FF4B9F2D692 /* AnimatorNode.swift in Sources */,
+				0E544B7162C2B666BE9C3B8CF63151E0 /* AnimatorNodeDebugging.swift in Sources */,
+				C93F0A9B62B43E5F599E5D1A61E68670 /* AnyNodeProperty.swift in Sources */,
+				936222310914B86E43701FA9A045159C /* AnyValueContainer.swift in Sources */,
+				9FD5A536FC652AF68F529BFCE560D4AC /* AnyValueProvider.swift in Sources */,
+				7B68F0FD0EC9EB4FE69713690BA18BFD /* Asset.swift in Sources */,
+				3D1FD6C68D9C52218E74FD64E03B604D /* AssetLibrary.swift in Sources */,
+				B0941F047B6703254279A6D74F0BCA2A /* BezierPath.swift in Sources */,
+				C8A2F88E5B694EF87C8FCC0CE9227898 /* BundleImageProvider.swift in Sources */,
+				39E27513EB6A8E47A7F1DB1293112852 /* CGFloatExtensions.swift in Sources */,
+				CEB3BC396701A0A47CD6A3B1E06D3D12 /* Color.swift in Sources */,
+				BBD6F782F02BD91F2A704EE15CB1864A /* ColorExtension.swift in Sources */,
+				22B72B26355D28B3A51DFDD0E392210A /* ColorValueProvider.swift in Sources */,
+				AF19917FE015BDB26105140D1A924229 /* CompatibleAnimationKeypath.swift in Sources */,
+				BF5EC9A19DFC40A53DD8BAE69D8C7E9B /* CompatibleAnimationView.swift in Sources */,
+				F39AFF6CE1F894E56942D18E993F3ABA /* CompositionLayer.swift in Sources */,
+				95492EA4882B47254A77ED823876D8AF /* CompositionLayersInitializer.swift in Sources */,
+				76CFA7716B8C4199041F70B1108FC837 /* CompoundBezierPath.swift in Sources */,
+				6B4C060B3EA062BF4CE4FA3E860A896F /* CurveVertex.swift in Sources */,
+				5233C977B875C5688629D345D440420B /* DashPattern.swift in Sources */,
+				7D29DC349C247ECDBDD1A749CA90EDF4 /* Ellipse.swift in Sources */,
+				842D66B997820174C4210781E5E0790B /* EllipseNode.swift in Sources */,
+				CFDC5CF2306338FA79964AA452A89FDA /* FilepathImageProvider.swift in Sources */,
+				DB79484BBC19C6241978211652C0E910 /* FillI.swift in Sources */,
+				B5FE99E8787B4E063AC0083FE1CD47E5 /* FillNode.swift in Sources */,
+				83E7F86437807B0E42C71053A4D1E656 /* FillRenderer.swift in Sources */,
+				A410CEAEC2654D37AF6BDDA76F5FFE42 /* FloatValueProvider.swift in Sources */,
+				2095C74CAE3D8903BF0E12A5CD85EE8E /* Font.swift in Sources */,
+				8E4CB6858563A8ADB4EC9EA0D68F0BB3 /* Glyph.swift in Sources */,
+				3F8B1B6104D60ABE7153458758CC7E48 /* GradientFill.swift in Sources */,
+				E4C19A4FB369D93C52AB35C65A0C9290 /* GradientFillNode.swift in Sources */,
+				261898D86259BADEA8D8A38827A452BA /* GradientFillRenderer.swift in Sources */,
+				B09133BE32DC44B66DE9D3922AB1A864 /* GradientStroke.swift in Sources */,
+				AE6CC67F8717CEE97460E0360F9DC475 /* GradientStrokeNode.swift in Sources */,
+				DE35A340D4BC80D960080EC3B0E942E5 /* GradientStrokeRenderer.swift in Sources */,
+				D381C1ADBE16416E8AFAE6136F00B60D /* GradientValueProvider.swift in Sources */,
+				401B53D53497C1C2286957D671C3E9DA /* Group.swift in Sources */,
+				D6E225B6098A16EA5DCA6BF0AD32A2E8 /* GroupInterpolator.swift in Sources */,
+				8D45F450C0F368D462851CF74DA99597 /* GroupNode.swift in Sources */,
+				A67A0FE9F9E21E31EE4126FAFE559CC9 /* GroupOutputNode.swift in Sources */,
+				A859DDC416431D4804453CB6506D655C /* ImageAsset.swift in Sources */,
+				636B84B173FDE0F6A9E2FCE89CDAFC44 /* ImageCompositionLayer.swift in Sources */,
+				9C15773703D0B9029833F1416DC518C6 /* ImageLayerModel.swift in Sources */,
+				1F8B7EA21A18849298858B8196CD7564 /* Interpolatable.swift in Sources */,
+				5FF9644B3EF1573A53A136FC7DA10908 /* InterpolatableExtensions.swift in Sources */,
+				9A56646CE27136DCA9C7E3A3D5D9F7FD /* InvertedMatteLayer.swift in Sources */,
+				574058CF847591CB3851824EEF69ED8B /* ItemsExtension.swift in Sources */,
+				AA338FDB348A8F16C44F2FD2CEE3703B /* KeyedDecodingContainerExtensions.swift in Sources */,
+				8461FE71CDB0675FD1E9F28C46C50014 /* Keyframe.swift in Sources */,
+				51C8D9A203050AA148AE88AB4CFEAF0D /* KeyframeExtensions.swift in Sources */,
+				E763F6E68E2F53F4AD078E66C025A927 /* KeyframeGroup.swift in Sources */,
+				B391BD4328A682CCC53B01DCBFE2922A /* KeyframeInterpolator.swift in Sources */,
+				8280FA219C5EB3C6E324B2F23248FB81 /* KeypathSearchable.swift in Sources */,
+				5627FE40B2C5B176DB7F54D3D4889E4B /* LayerDebugging.swift in Sources */,
+				D6300B04FD918554AFFE0AEFDAA21818 /* LayerImageProvider.swift in Sources */,
+				15D9EB81F4BA43E3FFCE97B6DC9C5F75 /* LayerModel.swift in Sources */,
+				B070A1BE866B374396C5D1CB6445AA08 /* LayerTextProvider.swift in Sources */,
+				AE10550131EBCB17B9E681AE6B226DDE /* LayerTransformNode.swift in Sources */,
+				D056206A4A0D95ECBD6A3366FEEA3CA2 /* lottie-ios-dummy.m in Sources */,
+				2A6C83D161771AFD8F63051B1BD13940 /* LottieView.swift in Sources */,
+				52B5636B691EB244AFA13E90857CA1B4 /* LRUAnimationCache.swift in Sources */,
+				3F62F80F85449266224E2DF3FC4B146A /* Marker.swift in Sources */,
+				A3CA1E783936D205646A8150A23562C4 /* Mask.swift in Sources */,
+				077D90F2222B02E5BAB24E4B841BF8B3 /* MaskContainerLayer.swift in Sources */,
+				61D57545FDC6527D709666C53C909E17 /* MathKit.swift in Sources */,
+				7412EEC787A87C45E57556735E9F1E75 /* Merge.swift in Sources */,
+				CC1E740151AA3B7387E669E61364D074 /* NodeProperty.swift in Sources */,
+				8F5DEE4EF977197768DBFF9BA7950CC7 /* NodePropertyMap.swift in Sources */,
+				AA8802861856C0D5109044D663BC4906 /* NullCompositionLayer.swift in Sources */,
+				AFA657B8BEBADC437C5825C4139B796D /* PassThroughOutputNode.swift in Sources */,
+				3AB25BBBA0BBC7B575BDA4A453C3CADB /* PathElement.swift in Sources */,
+				73449F37B5976DF0D94BEF9F4FB2BA2F /* PathNode.swift in Sources */,
+				52740025104F26BB4F9A68C1A21BEAE7 /* PathOutputNode.swift in Sources */,
+				695663DF508208C7A2F20230DFE2DEF7 /* PointValueProvider.swift in Sources */,
+				9126A88FE33EAA7B74DF94DC443A6CB5 /* PolygonNode.swift in Sources */,
+				014C3240E843976067968837E96FFF34 /* PrecompAsset.swift in Sources */,
+				8812B3A3806D180E80DC45FF2EB0D23C /* PreCompLayerModel.swift in Sources */,
+				C1004621928CC54EDEDFE94DA7AEF2EC /* PreCompositionLayer.swift in Sources */,
+				C06518D066D1759A6492BA968402330E /* Rectangle.swift in Sources */,
+				0ACEBC3B2B7F288C2B82E41DFB4F938F /* RectNode.swift in Sources */,
+				EDD784AA7AC31BF8AC3B4D768B4989E1 /* RenderNode.swift in Sources */,
+				8616CCC710BA3A67581C412A7E451EBD /* Repeater.swift in Sources */,
+				1FD3881A750BC4984DCFEE3E478EEA60 /* Shape.swift in Sources */,
+				23A07F5E37ABFCD29AB21CD072DA4313 /* ShapeCompositionLayer.swift in Sources */,
+				82EEAB2E422965945E3184A8044D7FC4 /* ShapeContainerLayer.swift in Sources */,
+				A843673B42EB0827D7259E10E6465AA0 /* ShapeItem.swift in Sources */,
+				34AA818DDE81852D49697A4F79B9B34B /* ShapeLayerModel.swift in Sources */,
+				719C4FAA209B26DE3191F83ED816C0A4 /* ShapeNode.swift in Sources */,
+				F515FADAF93C8F04C76579DFBDDDD194 /* ShapeRenderLayer.swift in Sources */,
+				852FA562928D6F8275C333BB1F764C6E /* ShapeTransform.swift in Sources */,
+				CB95D87D1DE15BCD9E615C9E70AF2015 /* SingleValueProvider.swift in Sources */,
+				B197BC62F073FFFF2F0E8F19B4223CDE /* SizeValueProvider.swift in Sources */,
+				ABF90B0960CEB2330125127EAB8E6BFA /* SolidCompositionLayer.swift in Sources */,
+				559C5939C28CE75A4F0322D8825D709C /* SolidLayerModel.swift in Sources */,
+				48F4F29E280EE227BD0CF3219BD36C97 /* Star.swift in Sources */,
+				C162F3DC713E21CE011A67FE7240902B /* StarNode.swift in Sources */,
+				2C1A4F31111277D9385BDDD7730A7F2C /* StringExtensions.swift in Sources */,
+				398D99087C07CF00093A5DA483E7C2ED /* Stroke.swift in Sources */,
+				9B5A54EF28DAA14231178DB8E8D2EAA9 /* StrokeNode.swift in Sources */,
+				A63D2003F8CAFC7DAB509DDE112B1F87 /* StrokeRenderer.swift in Sources */,
+				EB0468534AF17F6CA2763C02395E685B /* TextAnimator.swift in Sources */,
+				B92765E3F779E405406085C982AE3C24 /* TextAnimatorNode.swift in Sources */,
+				E5E8AB7DEEBD598A8351936523A89934 /* TextCompositionLayer.swift in Sources */,
+				190D3C89D4972A2C65518140CC3D31DD /* TextDocument.swift in Sources */,
+				AA09E7726B6E4649EEF2020860F6E13D /* TextLayerModel.swift in Sources */,
+				9862831FE23814F14472DF4E546D22FE /* Transform.swift in Sources */,
+				3E47D0D36898CD24EBA54A0DFB935CB2 /* Trim.swift in Sources */,
+				5B37F23099184FD96C3224E86B343690 /* TrimPathNode.swift in Sources */,
+				7A675C8859C4DB21DABFCD53DFD62417 /* UIColorExtension.swift in Sources */,
+				90DB9801C8A66C90F34138529C3BF20F /* ValueContainer.swift in Sources */,
+				A7FB5EC15760FFC9270740DE97171D9A /* Vectors.swift in Sources */,
+				7DBA4B6AF26329B61D8D2BA401ED585B /* VectorsExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		981A1B1D6D2951C456F780D481C7F28A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FFF1E8A8B66FF01ED0CFCF541E142D0 /* AppAuth-dummy.m in Sources */,
+				6F1FA76436D35798691666312597B249 /* OIDAuthorizationRequest.m in Sources */,
+				774B22683E6D64B7C113BFA192533CFF /* OIDAuthorizationResponse.m in Sources */,
+				710BDE54D9705AB21D699051FF208D6E /* OIDAuthorizationService+IOS.m in Sources */,
+				6CDD8BD6ADE3122ECEEFD699C922845B /* OIDAuthorizationService.m in Sources */,
+				EF241F0F0FE69ADCEBE70C7EA7D840D3 /* OIDAuthState+IOS.m in Sources */,
+				22A0409B3A6E58331D61C9070EE13D5D /* OIDAuthState.m in Sources */,
+				BE65F0B1FD6F542EA5795F9DD65B2983 /* OIDClientMetadataParameters.m in Sources */,
+				92DEE77A6C3DB65AEEAD7F202585E922 /* OIDEndSessionRequest.m in Sources */,
+				0E116491080B3291E2D6165292859312 /* OIDEndSessionResponse.m in Sources */,
+				7C89756B58D9AFD312C58A0B29B91DC8 /* OIDError.m in Sources */,
+				0556C00B979E10C2B037ED00230581B6 /* OIDErrorUtilities.m in Sources */,
+				B9F3C757BB152EC0D36491D7DC534260 /* OIDExternalUserAgentCatalyst.m in Sources */,
+				44BD005E1971FE86DC7A541923CF053B /* OIDExternalUserAgentIOS.m in Sources */,
+				7C6C30320ED520E1B763142B84AC69CE /* OIDExternalUserAgentIOSCustomBrowser.m in Sources */,
+				F457CB799F2692B47E141775965C944E /* OIDFieldMapping.m in Sources */,
+				521AB2D4E68F458FB192A095D8C339E6 /* OIDGrantTypes.m in Sources */,
+				69F93BF06B0CD6A5EA379695A54EBF79 /* OIDIDToken.m in Sources */,
+				985BA0963E67F8DFEE9AE82C31B18548 /* OIDRegistrationRequest.m in Sources */,
+				148E2B7C527BC33F10CDD9FF832EDE79 /* OIDRegistrationResponse.m in Sources */,
+				4E1DD8838C303E1B7385A4BC5BF1552A /* OIDResponseTypes.m in Sources */,
+				96F286D25F19C86FCE048C03A1B503BF /* OIDScopes.m in Sources */,
+				DCFB90928DA7D3E0363BAEF1FADC1A6D /* OIDScopeUtilities.m in Sources */,
+				00C216FFCDCF00EE37F892187017A26F /* OIDServiceConfiguration.m in Sources */,
+				73B44CF0EF098BCDBF40D10E9481A587 /* OIDServiceDiscovery.m in Sources */,
+				E82DB4EF6F36AE53765FEF86DD5B377F /* OIDTokenRequest.m in Sources */,
+				9BB6373E6F2D0B2FEE1EDA7C683ADF62 /* OIDTokenResponse.m in Sources */,
+				A8E2E2EC479B884C4D31FB1ABD5D9899 /* OIDTokenUtilities.m in Sources */,
+				D05897572139A7A945233AE3890E7298 /* OIDURLQueryComponent.m in Sources */,
+				D5D88228D094B5282ED7CF7316A72654 /* OIDURLSessionProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCEB84B59C984E86765B27C538823A2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6955BFA9251D445EA2C227B09ADAD272 /* Pods-GoodBiology-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E12610D2EB3FA99C807711C5868BBEFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6814689C9618A41B064AE0587092BE1D /* GTMGatherInputStream.m in Sources */,
+				1CBAC840CEC1F207490446BBC49F8925 /* GTMMIMEDocument.m in Sources */,
+				0197D29CA9367975F79F64C9E7FBE2C2 /* GTMReadMonitorInputStream.m in Sources */,
+				686A4A9D353604B91C0FE8B0B8FC60E2 /* GTMSessionFetcher-dummy.m in Sources */,
+				277C64427D086ABACEA3A78BFA7B5FB2 /* GTMSessionFetcher.m in Sources */,
+				3BCC19E51809677B704560479FD7451C /* GTMSessionFetcherLogging.m in Sources */,
+				67508E4BC79BA30FCA9DF8664F4F8461 /* GTMSessionFetcherService.m in Sources */,
+				E83A50563E2422FFF7A3D7E52B68BBAA /* GTMSessionUploadFetcher.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F1C7C704F535E73C101BFB679D53D567 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD8B32EE7981F00D7081C5F52B7B6ECA /* GTMAppAuth-dummy.m in Sources */,
+				4E25A7014259878A3B2C90D487869416 /* GTMAppAuthFetcherAuthorization+Keychain.m in Sources */,
+				0F450C3FD65B2B0070981FC07C9FA738 /* GTMAppAuthFetcherAuthorization.m in Sources */,
+				40782DCC7AA39E0E984416B602A576D0 /* GTMKeychain_iOS.m in Sources */,
+				EF651E5664A2BEB28D3D630E4A8AFAA3 /* GTMOAuth2KeychainCompatibility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04FFDCC15BB00A45CC84ED06C053DF14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "lottie-ios";
+			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
+			targetProxy = 2D617E13DB226CF02DDBDB578141031F /* PBXContainerItemProxy */;
+		};
+		17F95C18E3EFF34AD53094C236880907 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 081F692BFA303E1A12FC2280806BC59B /* PBXContainerItemProxy */;
+		};
+		2857566728641F74273DD7DA9E370771 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 96C4B52CEBD25FE7612CDFAC4EBB56D6 /* PBXContainerItemProxy */;
+		};
+		2AA86FAB27C62ABED7A7D7F674295DA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GoogleSignIn;
+			target = CAD3534FC55B0333104E5117C0A9A324 /* GoogleSignIn */;
+			targetProxy = 127A40EC95E08DBF469783357201CD2B /* PBXContainerItemProxy */;
+		};
+		314A9E36FBEA4C73491669F15EA30E5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMAppAuth;
+			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
+			targetProxy = CFBE3CB2F286EF0D95A2ACDEBE0C1014 /* PBXContainerItemProxy */;
+		};
+		7405713BF540EC7DC0BEA09DAFC73CDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppAuth;
+			target = 5C642AA10FB29936669CC269F42079C6 /* AppAuth */;
+			targetProxy = 8ABAEB1C2A50BF7B539892AA52103F2E /* PBXContainerItemProxy */;
+		};
+		74F3D34B7F14020AE0A57D83A7889F98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
+			targetProxy = 255C113C5B8CEBDE5DFD4788BBC6FC4B /* PBXContainerItemProxy */;
+		};
+		A60B1E81D292D30E77919874AC6E94CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMAppAuth;
+			target = 8627999EF1D5E93E13DAFF580DA8CDCF /* GTMAppAuth */;
+			targetProxy = 4A9C56BAE1E1206BFEA2D9E80189B7A7 /* PBXContainerItemProxy */;
+		};
+		C24DB3339CD887F89F6E74917F6D3D93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
+			targetProxy = 1B97D10CA57EFE2BF40060C4765E3C24 /* PBXContainerItemProxy */;
+		};
+		E89E0382D716E97612D73AB1423F3C40 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GTMSessionFetcher;
+			target = D676E21115185671D7258A56944ABE98 /* GTMSessionFetcher */;
+			targetProxy = 41595E0C2EE05A58FE54A80AF3C4C8F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		28AE0641779EE9229957307C1EA562F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AB78B1CD409BEDEA71EF5CEC6EC619D /* GTMAppAuth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMAppAuth/GTMAppAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMAppAuth;
+				PRODUCT_NAME = GTMAppAuth;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CF2667A2137C579B7BBE2F62FC06292 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8295F79E5F4216E17145EC842D50BB8 /* lottie-ios.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = "Headers/Public/Lottie/lottie-ios.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Lottie;
+				PRODUCT_NAME = "lottie-ios";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		554803BFBC93DBDA3BA3D02682301B6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AB78B1CD409BEDEA71EF5CEC6EC619D /* GTMAppAuth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMAppAuth/GTMAppAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMAppAuth;
+				PRODUCT_NAME = GTMAppAuth;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6A5423970469AA4A6BFB99247450D074 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8295F79E5F4216E17145EC842D50BB8 /* lottie-ios.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULEMAP_FILE = "Headers/Public/Lottie/lottie-ios.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Lottie;
+				PRODUCT_NAME = "lottie-ios";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		780AF4C52C53C0B72A801F37528ABDFC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE0A5790B1A24E6E48FB7E96FF5D2BA /* GoogleSignIn.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80E42A87F8E90BB21ED40E26F8FB6F25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FE0A5790B1A24E6E48FB7E96FF5D2BA /* GoogleSignIn.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9C950A21568B7AE5656C9684A7212EA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A974544FDE32B74E70A70A3B28F529 /* GTMSessionFetcher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMSessionFetcher;
+				PRODUCT_NAME = GTMSessionFetcher;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A825BA0E97A846A946863E00534F34B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5F37399C5775D93B9CBE0FDC62A690 /* AppAuth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AppAuth;
+				PRODUCT_NAME = AppAuth;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CC1180F8266A3EF9232D94827EB5C8AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F5F37399C5775D93B9CBE0FDC62A690 /* AppAuth.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AppAuth/AppAuth-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AppAuth;
+				PRODUCT_NAME = AppAuth;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC9283D08A07277700E57690EF2B41CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87D60AC67A89395B8E8D1CECE134653C /* Pods-GoodBiology.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GoodBiology/Pods-GoodBiology.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DE73DAA4DC65FF0308086BB0708EC267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D994B941390EABCAB7CB825ECE735B2 /* Pods-GoodBiology.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GoodBiology/Pods-GoodBiology.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2D86EF45EAF27AEF4555E3B4135F8A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A974544FDE32B74E70A70A3B28F529 /* GTMSessionFetcher.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = GTMSessionFetcher;
+				PRODUCT_NAME = GTMSessionFetcher;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EF1993CF7086726E525D7DFE80C98DC /* Build configuration list for PBXNativeTarget "GTMSessionFetcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C950A21568B7AE5656C9684A7212EA0 /* Debug */,
+				F2D86EF45EAF27AEF4555E3B4135F8A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B91E7EA7557525EA9AE91C039065C5D /* Build configuration list for PBXNativeTarget "AppAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC1180F8266A3EF9232D94827EB5C8AA /* Debug */,
+				A825BA0E97A846A946863E00534F34B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABD08A6CBE116F9D9AADCEAE8F53B7E6 /* Build configuration list for PBXNativeTarget "GTMAppAuth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28AE0641779EE9229957307C1EA562F7 /* Debug */,
+				554803BFBC93DBDA3BA3D02682301B6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0030D626B503D8EB0EA00BB772D6396 /* Build configuration list for PBXAggregateTarget "GoogleSignIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80E42A87F8E90BB21ED40E26F8FB6F25 /* Debug */,
+				780AF4C52C53C0B72A801F37528ABDFC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2DEE9A5D4D632195A2E41522C09CB61 /* Build configuration list for PBXNativeTarget "lottie-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CF2667A2137C579B7BBE2F62FC06292 /* Debug */,
+				6A5423970469AA4A6BFB99247450D074 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7EF8966501F1229C663C0C26DDAD12C /* Build configuration list for PBXNativeTarget "Pods-GoodBiology" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE73DAA4DC65FF0308086BB0708EC267 /* Debug */,
+				CC9283D08A07277700E57690EF2B41CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

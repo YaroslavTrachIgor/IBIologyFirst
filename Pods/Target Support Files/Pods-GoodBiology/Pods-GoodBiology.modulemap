@@ -1,0 +1,6 @@
+module Pods_GoodBiology {
+  umbrella header "Pods-GoodBiology-umbrella.h"
+
+  export *
+  module * { export * }
+}
