@@ -9,10 +9,20 @@
 import Foundation
 import UIKit
 
-extension ForTodayViewController {
-    
-    //MARK: Public
-    public func basicThingsPrefering() {
+protocol ForTodayViewControllerUIViewSetupProtocol {
+    func basicThingsPrefering()
+    func savingProccesings()
+    func shadowsPrefering()
+    func setupNavItemTitle()
+    func UIBarButtonItemAlphaPrefering()
+    func systemBackgroundPrefering()
+    func UIViewsPrefering()
+    func pickerPrfering()
+    func loadingPrefering()
+}
+
+extension ForTodayViewController: ForTodayViewControllerUIViewSetupProtocol {
+    func basicThingsPrefering() {
         textViewACHidden()
         textFieldACHidden()
         
@@ -21,37 +31,27 @@ extension ForTodayViewController {
         reminderOutletButton.notificationButtonBasics()
         segmentControl.segmentedControlForToday()
         choseTimeButton.notificationButtonBasics()
-        
-        setupSaveLabel()
     }
     
-    
-    public func savingProccesings() {
+    func savingProccesings() {
         chekLocationAuthorization()
         checkForSaved()
     }
     
-    
-    public func shadowsPrefering() {
+    func shadowsPrefering() {
         helpButtonOutlet.buttonsShadows()
         pickerView.pickerViewShadow()
         choseTimeButton.buttonsShadows()
         dataPickerView.viewShadows()
         mapTypeView.viewShadows()
-        
-        /// Setup DataPickerView Back Shadow with green Color
-        dataPickerView.layer.shadowColor  = UIColor.biologyGreenColor.cgColor
-        dataPickerView.layer.shadowRadius = 15
     }
     
-    
-    public func setupNavItemTitle() {
+    func setupNavItemTitle() {
         navigationItem.setTitle("Main Notes", subtitle: "For Today Section")
         navigationItem.title = ""
     }
     
-    
-    public func UIBarButtonItemAlphaPrefering() {
+    func UIBarButtonItemAlphaPrefering() {
         let isEnabled: Bool = false
         
         mapTypeButton.isEnabled            = isEnabled
@@ -60,16 +60,14 @@ extension ForTodayViewController {
         saveButton.isEnabled               = isEnabled
     }
     
-    
-    public func systemBackgroundPrefering() {
+    func systemBackgroundPrefering() {
         if #available(iOS 13.0, *) {
             pickerPrfering()
             UIViewsPrefering()
         }
     }
     
-    
-    public func UIViewsPrefering() {
+    func UIViewsPrefering() {
         if #available(iOS 13.0, *) {
             view.viewSystemBack()
             
@@ -79,21 +77,13 @@ extension ForTodayViewController {
         }
     }
     
-    
-    public func pickerPrfering() {
+    func pickerPrfering() {
         if #available(iOS 13.0, *) {
             pickerView.tintColor = .secondaryLabel
         }
     }
     
-    
-    public func setupSaveLabel() {
-        let lastSaveDateLabelText = defaults.value(forKey: Keys.lastSaveLabelKey) as? String ?? "Last Save: "
-        lastSaveDateLabel.text = lastSaveDateLabelText
-    }
-    
-    
-    public func loadingPrefering() {
+    func loadingPrefering() {
         self.textViewActivity.activityIndicatorStarts(colorOfActivity: #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         
         UIView.animate(withDuration: 0.6, delay: 0.5, options: .curveLinear, animations: {
@@ -112,28 +102,5 @@ extension ForTodayViewController {
             self.textFieldActivitu.activityIndicatorStop()
             self.textFieldActivitu.isHidden = true
         }
-    }
-    
-    
-    public func presentPickerViewBack() {
-        if mapView.isHidden == true {
-            if (pickerBackgroundView.isHidden == true) {
-                self.pickerBackgroundView.isHidden = false
-            } else {
-                self.pickerBackgroundView.isHidden = true
-            }
-        } else {
-            let searchController = UISearchController(searchResultsController: nil)
-                searchController.searchBar.delegate = self
-                searchController.view.tintColor = .biologyGreenColor
-            
-            present(searchController, animated: true, completion: nil)
-        }
-    }
-    
-    
-    //MARK: @objc
-    @objc func doneButtonAction() {
-        self.view.endEditing(true)
     }
 }

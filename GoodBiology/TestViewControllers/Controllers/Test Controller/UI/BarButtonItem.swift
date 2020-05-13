@@ -21,6 +21,6 @@ class TestUIBarButtonItem: UIBarButtonItem {
 
 extension TestUIBarButtonItem: TestUIBarButtonItemDelegate {
     func setupButtonItem() {
-        tintColor = .biologyGreenColor
+        tintColor = lazyColor
     }
 }

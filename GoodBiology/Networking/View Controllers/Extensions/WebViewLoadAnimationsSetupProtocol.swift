@@ -14,19 +14,53 @@ import WebKit
 protocol WebViewLoadAnimationsSetupProtocol {
     func webViewLoad()
     func coolReload()
-    func urlAnimation(url: String?)
+    func urlAnimation(url: String)
 }
 
 extension NetworkingViewController: WebViewLoadAnimationsSetupProtocol {
     func webViewLoad() {
-        animationManeger.webViewLoad(webView, activityIndicator: activityIndicator, loadingLabel: loadingLabel)
+        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
+            self.webView.alpha = 1
+        }) {(finished) in
+            self.activityIndicator.activityIndicatorStop()
+            self.loadingLabel.isHidden = true
+        }
     }
     
     func coolReload() {
-        animationManeger.coolReload(activityIndicator: activityIndicator, webView: webView)
+        self.webView.alpha = 0
+        
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1.23, execute: {
+            UIView.animate(withDuration: 0, delay: 1, options: .curveLinear, animations: {
+                self.webView.reload()
+                self.webView.alpha = 1
+                
+                self.activityIndicator.activityWake()
+            }) {(finished) in
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.activityIndicator.activityStartsToSleep()
+                })
+            }
+        })
     }
     
-    func urlAnimation(url: String?) {
-        animationManeger.urlAnimation(activityIndicator: activityIndicator, webView: webView, url: url)
+    func urlAnimation(url: String) {
+        UIView.animate(withDuration: 6) {
+            self.webView.alpha = 0
+            self.webView.load(URLRequest(url: URL(string: url)!))
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.23, execute: {
+                UIView.animate(withDuration: 0.6, delay: 0.6, options: .curveLinear, animations: {
+                    
+                    // Start Animate ActivityIndicator
+                    self.webView.alpha = 1
+                    
+                    self.activityIndicator.activityWake()
+                }) {(finished) in
+                    // Stop Animate ActivityIndicator
+                    self.activityIndicator.activityStartsToSleep()
+                }
+            })
+        }
     }
 }

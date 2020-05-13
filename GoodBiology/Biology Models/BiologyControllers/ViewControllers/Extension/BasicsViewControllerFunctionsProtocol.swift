@@ -9,16 +9,13 @@
 import Foundation
 import UIKit
 import AudioToolbox
-import Signals
 
 protocol BasicsViewControllerFunctionsProtocol {
     func fastActivityVC(item: String)
     func shareAudio()
 }
 
-
-// MARK: - BasicsViewControllerFunctionsProtocol
-extension BiologyViewController: BasicsViewControllerFunctionsProtocol {
+extension BasicsViewController: BasicsViewControllerFunctionsProtocol {
     func shareAudio() {
         AudioServicesPlayAlertSound(SystemSoundID(1001))
     }
@@ -27,7 +24,7 @@ extension BiologyViewController: BasicsViewControllerFunctionsProtocol {
         let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
             
-            UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
+            UIApplication.shared.keyWindow?.tintColor = lazyColor
         
         AudioServicesPlayAlertSound(SystemSoundID(1001))
         

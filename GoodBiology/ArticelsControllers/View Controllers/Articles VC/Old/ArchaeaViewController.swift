@@ -12,8 +12,8 @@ import AudioToolbox
 import Social
 
 @available(iOS 13.0, *)
-final class ArchaeaViewController: UIViewController {
-    
+class ArchaeaViewController: UIViewController {
+
     //MARK: IBOutlets
     @IBOutlet weak var headline:     UINavigationItem!
     @IBOutlet weak var progressView: UIProgressView!
@@ -40,15 +40,87 @@ final class ArchaeaViewController: UIViewController {
     
     //MARK: LifeCycle
     override func viewDidAppear(_ animated: Bool) {
-        let views = [notificationButton, segmentControlOutlet]
-        viewDidApearAnimationPreview(views as! [UIView], nil)
+        UIView.animate(withDuration: 0.4) {
+            let alpha: CGFloat = 1
+            
+            self.notificationButton.alpha   = alpha
+            self.segmentControlOutlet.alpha = alpha
+        }
     }
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
-        FastActivityVC.show(item: content, vc: self)
+        fastActivityVC(item: content)
         shareButton.shareAudio()
+    }
+    
+    private func fastActivityVC(item: String) {
+        //Alert
+        let alert = UIAlertController(title: "Share", message: nil, preferredStyle: .actionSheet)
+            alert.view.tintColor = lazyColor
+        let basicShare = UIAlertAction(title: "Basic Share", style: .default) { (action) in
+            let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
+                activityVC.popoverPresentationController?.sourceView = self.view
+            
+                UIApplication.shared.keyWindow?.tintColor = lazyColor
+            
+            self.present(activityVC, animated: true, completion: nil)
+        }
+        
+        let actionFacebook = UIAlertAction(title: "Share on Facebook", style: .default) { (action) in
+            
+            //Checking if user is connected to Facebook
+            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
+                let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
+                
+                post.setInitialText(ArchaeaArticleData.archaeaMostContent)
+                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
+                
+                self.present(post, animated: true, completion: nil)
+                
+            } else {
+                self.showAlert(service: "Facebook")
+            }
+        }
+        
+        //Second action
+        let actionTwitter = UIAlertAction(title: "Share on Twitter", style: .default) { (action) in
+            
+            //Checking if user is connected to Facebook
+            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
+                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+                
+                post.setInitialText(ArchaeaArticleData.archaeaMostContent)
+                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
+                
+                self.present(post, animated: true, completion: nil)
+                
+            } else {
+                self.showAlert(service: "Twitter")
+            }
+        }
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        //Add action to action sheet
+        alert.addAction(basicShare)
+        alert.addAction(actionFacebook)
+        alert.addAction(actionTwitter)
+        alert.addAction(cancel)
+        alert.setTitle(font: UIFont(name: "AvenirNext-Medium", size: 14), color: .lightGray)
+        
+        //Present alert
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func showAlert(service: String) {
+        let alert = UIAlertController(title: "Error", message: "You are not connected to \(service)", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        
+                alert.addAction(action)
+                alert.view.tintColor = lazyColor
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func editSiwtchButton(_ sender: Any) {
@@ -84,13 +156,13 @@ final class ArchaeaViewController: UIViewController {
         if (stepperBackgroundView.isHidden == true) {
             stepperBackgroundView.isHidden  = false
             
-            shareButton.isEnabled  = false
-            switchButton.isEnabled = false
+            shareButton.isEnabled           = false
+            switchButton.isEnabled          = false
         } else {
             stepperBackgroundView.isHidden  = true
             
-            shareButton.isEnabled  = true
-            switchButton.isEnabled = true
+            shareButton.isEnabled           = true
+            switchButton.isEnabled          = true
         }
     }
     
@@ -103,10 +175,6 @@ final class ArchaeaViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func segmentedControl(_ sender: Any) {
-        /// ArticlesViewCountProtocol
-        setPopularityVoit()
-        
-        /// Set Content
         switch  segmentControlOutlet.selectedSegmentIndex {
         case 0:
             basicsTextView.text = ArchaeaArticleData.archaeaMostContent
@@ -139,70 +207,12 @@ final class ArchaeaViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        PushNotifications.setupBasicNotification(body: "Archaea", inSecond: TimeInterval(timeInterval)) { (success) in
+        archaeaScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
-        notificationNamePost()
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finalView()
-    }
-}
-
-@available(iOS 13.0, *)
-extension ArchaeaViewController: ArticlesViewControllerDelegate {
-    func finalView() {
-        view.viewGradient()
-        
-        viewBasics()
-        procesingInformationShowing()
-    }
-}
-
-extension ArchaeaViewController: ArticlesVCconnectionProtocol {
-    func notificationNamePost() {
-        let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.archaeaVCKey)
-        NotificationCenter.default.post(name: notificationName, object: nil)
-    }
-}
-
-@available(iOS 13.0, *)
-extension ArchaeaViewController: ArticleViewControllerSetupViewPrtocol {
-    func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
-        UIView.animate(withDuration: 0.4) {
-            for view in views {
-                view.alpha = 1
-            }
-        }
-    }
-    
-    func procesingInformationShowing() {
-        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
-            self.textView.mainTextViewTextColor(alpha: 1)
-        }) {(finished) in
-            self.activityIndicator.activityIndicatorStop()
-        }
-        
-        progressView.basicProgress()
-        
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            if self.progressView.progress != 1 {
-                self.progressView.startProgress()
-            } else {
-                self.activityIndicator.activityIndicatorStop()
-                self.basicsTextView.mainTextViewTextColor(alpha: 1)
-                self.progressView.stopProgress()
-            }
-        }
-    }
-}
-
-@available(iOS 13.0, *)
-extension ArchaeaViewController {
     private func stepperViewPrefering() {
         stepper.stepperBaics()
         stepperBackgroundView.viewShadows()
@@ -231,5 +241,42 @@ extension ArchaeaViewController {
     
     private func textViewSetup() {
         textView.mainTextViewTextColor(alpha: 0)
+    }
+    
+    private func procesingInformationShowing() {
+        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
+            self.textView.mainTextViewTextColor(alpha: 1)
+        }) {(finished) in
+            self.activityIndicator.activityIndicatorStop()
+        }
+        
+        progressView.basicProgress()
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            if self.progressView.progress != 1 {
+                self.progressView.startProgress()
+            } else {
+                self.activityIndicator.activityIndicatorStop()
+                self.basicsTextView.mainTextViewTextColor(alpha: 1)
+                self.progressView.stopProgress()
+            }
+        }
+        viewDidLoadPrinting(doing: "Archaea")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        finalView()
+    }
+}
+
+@available(iOS 13.0, *)
+extension ArchaeaViewController: ArticlesViewControllerDelegate {
+    func finalView() {
+        view.viewGradient()
+        
+        viewBasics()
+        procesingInformationShowing()
     }
 }

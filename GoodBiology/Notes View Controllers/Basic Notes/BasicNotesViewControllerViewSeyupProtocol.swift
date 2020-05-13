@@ -26,9 +26,10 @@ protocol BasicNotesViewControllerViewSettup {
 extension BasicNotesViewController: BasicNotesViewControllerViewSettup {
     func datePickerPrefering() {
         datePickerView.viewShadows()
-        viewModel.setViewHidden(datePickerView, hidden: true)
-        viewModel.setViewAffineTransform(datePickerView, scale: 14)
-        viewModel.setViewHidden(pickerViewBackground, hidden: true)
+        datePickerView.isHidden            = true
+        datePickerView.layer.cornerRadius  = 14
+        
+        pickerViewBackground.isHidden = true
     }
     
     func shadowsPrefering() {
@@ -38,14 +39,14 @@ extension BasicNotesViewController: BasicNotesViewControllerViewSettup {
     }
     
     func dateButtonPrefering() {
-        dateChooseButton.fastButtonCostomizing(background: .biologyGreenColor, titleColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), title: "Choose Time", corner: 12, borderWidth: 2.8)
+        dateChooseButton.fastButtonCostomizing(background: lazyColor, titleColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), title: "Choose Time", corner: 12, borderWidth: 2.8)
     }
     
     func alphaPrefering() {
-        let alpha: CGFloat = 0
+        let alpha = 0
         
-        viewModel.setViewAlpha(inputTextField, alpha: alpha)
-        viewModel.setViewAlpha(textView, alpha: alpha)
+        inputTextField.alpha = CGFloat(alpha)
+        textView.alpha       = CGFloat(alpha)
     }
     
     func sizingPrefering() {
@@ -54,12 +55,12 @@ extension BasicNotesViewController: BasicNotesViewControllerViewSettup {
     }
     
     func textViews_Text_Prefering() {
-        viewModel.setTextViewText(textView: textView, text: "")
-        viewModel.setTextFieldText(textField: inputTextField, text: "")
+        textView.text       = ""
+        inputTextField.text = ""
     }
     
     func cornersPrefering() {
-        viewModel.setViewAffineTransform(pickerViewBackground, scale: 21.68)
+        pickerViewBackground.layer.cornerRadius     = 21.68
     }
     
     func activitiesPrefering() {
@@ -76,16 +77,16 @@ extension BasicNotesViewController: BasicNotesViewControllerViewSettup {
     }
     
     func alphaSetup() {
-        let alpha: CGFloat = 1
+        let alpha = 1
         
-        viewModel.setViewAlpha(textViewBackgroundView, alpha: alpha)
-        viewModel.setViewAlpha(textFieldView, alpha: alpha)
+        textViewBackgroundView.alpha = CGFloat(alpha)
+        textFieldView.alpha          = CGFloat(alpha)
     }
     
     func textContainersTintSetup() {
-        let tintColor = UIColor.biologyGreenColor
+        let tintColor = lazyColor
         
-        viewModel.setViewTint(textView, tint: tintColor)
-        viewModel.setViewTint(inputTextField, tint: tintColor)
+        textView.tintColor       = tintColor
+        inputTextField.tintColor = tintColor
     }
 }

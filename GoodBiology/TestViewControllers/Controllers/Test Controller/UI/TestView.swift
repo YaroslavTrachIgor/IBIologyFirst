@@ -15,21 +15,19 @@ protocol TestBackViewDelegate {
 
 class TestBackView: UIView {
     override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+      super.init(frame: frame)
         setupBackView()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
+      super.init(coder: aDecoder)
         setupBackView()
     }
 }
 
 extension TestBackView: TestBackViewDelegate {
     internal func setupBackView() {
-        layer.cornerRadius  = 30
+        layer.cornerRadius  = 16
         transform       = CGAffineTransform(scaleX: 0, y: 0)
         
         viewShadows()

@@ -16,14 +16,12 @@ protocol TestIconBackViewDelegate {
 
 class TestIconBackView: UIView {
     override init(frame: CGRect) {
-        super.init(frame: frame)
-        
+      super.init(frame: frame)
         setupBackView()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
+      super.init(coder: aDecoder)
         setupBackView()
     }
 }
@@ -31,32 +29,5 @@ class TestIconBackView: UIView {
 extension TestIconBackView: TestIconBackViewDelegate {
     internal func setupBackView() {
         preferingViews()
-        shadowsSetup()
-        cornersSetup()
-        backgroundColorSetup()
-    }
-}
-
-extension TestIconBackView {
-    func cornersSetup() {
-        layer.cornerRadius = 25
-    }
-    
-    func shadowsSetup() {
-        setupBackPreviewViewShadow()
-    }
-    
-    func backgroundColorSetup() {
-        setupBackPreviewBackgroundColor()
-    }
-}
-
-extension UIView {
-    func setupBackPreviewViewShadow() {
-        viewShadows()
-    }
-    
-    func setupBackPreviewBackgroundColor() {
-        backgroundColor = #colorLiteral(red: 0.9796359454, green: 0.9796359454, blue: 0.9796359454, alpha: 1)
     }
 }

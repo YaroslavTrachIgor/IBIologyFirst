@@ -9,7 +9,6 @@
 import Foundation
 
 protocol SettingsTableViewSaveAllActionsFunctionsProtocol {
-    
     /// Start
     func acSubViewSetup()
     func acIndicatorViewSetup()

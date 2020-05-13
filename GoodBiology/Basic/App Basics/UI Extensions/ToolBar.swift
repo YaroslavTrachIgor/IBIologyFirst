@@ -36,6 +36,6 @@ extension BasicToolbar: BasicToolbarProtocol {
     }
     
     func tintSetup() {
-        tintColor = .biologyGreenColor
+        tintColor = lazyColor
     }
 }

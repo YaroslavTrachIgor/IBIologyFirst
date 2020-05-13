@@ -11,5 +11,4 @@ import Foundation
 protocol WebControllerDelegate {
     func networkingProccesesPrefering()
     func viewBasicProccesesPrefering()
-    func checkWifi()
 }

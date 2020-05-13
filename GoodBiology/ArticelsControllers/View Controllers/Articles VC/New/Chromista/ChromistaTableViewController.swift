@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ChromistaTableViewController: UITableViewController {
+class ChromistaTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -21,9 +21,11 @@ final class ChromistaTableViewController: UITableViewController {
 
         return cell
     }
+
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         ChromistaData.chromistaIndex = indexPath.row
         performSegue(withIdentifier: "chsegue", sender: self)
-    } 
+    }
 }

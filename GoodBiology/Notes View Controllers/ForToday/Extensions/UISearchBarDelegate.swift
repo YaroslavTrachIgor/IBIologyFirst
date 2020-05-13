@@ -12,6 +12,8 @@ import CoreLocation
 
 extension ForTodayViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let queue = DispatchQueue(label: "mapQueue", attributes: .concurrent)
+        let group = DispatchGroup()
         
         let activityIndicator = UIActivityIndicatorView()
         if #available(iOS 13.0, *) {
@@ -27,7 +29,14 @@ extension ForTodayViewController: UISearchBarDelegate {
         dismiss(animated: true, completion: nil)
         
         let searchRequest = MKLocalSearch.Request()
-            searchRequest.naturalLanguageQuery = searchBar.text
+        
+        queue.async {
+            DispatchQueue.main.async {
+                group.enter()
+                searchRequest.naturalLanguageQuery = searchBar.text
+            }
+            group.leave()
+        }
         
         let activeSearch = MKLocalSearch(request: searchRequest)
         
@@ -40,6 +49,8 @@ extension ForTodayViewController: UISearchBarDelegate {
                 }
             }
             else {
+                let queue = DispatchQueue(label: "mapQueue", attributes: .concurrent)
+                let group = DispatchGroup()
                 
                 //Remove annotations
                 let annotations = self.mapView.annotations
@@ -49,8 +60,16 @@ extension ForTodayViewController: UISearchBarDelegate {
                 let longitude   = response?.boundingRegion.center.longitude
                 
                 let annotation              = MKPointAnnotation()
-                    annotation.title        = searchBar.text
-                    annotation.coordinate   = CLLocationCoordinate2DMake(latitude!, longitude!)
+                
+                queue.async {
+                    DispatchQueue.main.async {
+                        group.enter()
+                        
+                        annotation.title        = searchBar.text
+                        annotation.coordinate   = CLLocationCoordinate2DMake(latitude!, longitude!)
+                    }
+                    group.leave()
+                }
                 
                 self.mapView.addAnnotation(annotation)
                 

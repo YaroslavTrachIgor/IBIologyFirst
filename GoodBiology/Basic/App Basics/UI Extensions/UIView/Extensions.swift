@@ -25,33 +25,6 @@ extension UIView {
         self.viewShadows()
         
         self.isHidden           = true
-        self.layer.cornerRadius = 12
-    }
-}
-
-
-
-// MARK: - Setup Grdients
-extension UIView {
-    func setupBasicGadientView() {
-        if #available(iOS 13.0, *) {
-            self.setGradientBackground(colorOne: .white, colorTwo: .systemGray5)
-        }
-    }
-    
-    func setupBasicGadientView(with secondColor: UIColor) {
-        if #available(iOS 13.0, *) {
-            self.setGradientBackground(colorOne: .white, colorTwo: secondColor)
-        }
-    }
-}
-
-
-
-// MARK: - add Tap Gesture To Hide Keyboard
-extension UIView {
-    func addTapGestureToHideKeyboard() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(endEditing))
-        addGestureRecognizer(tapGesture)
+        self.layer.cornerRadius = CGFloat(cornerRadius)
     }
 }

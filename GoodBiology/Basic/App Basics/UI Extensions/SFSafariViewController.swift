@@ -24,11 +24,7 @@ class BasicSafariVC: SFSafariViewController {
 
 extension BasicSafariVC: BasicSafariVCProtocol {
     func preferringBarTintColor() {
-
-        /// It can't be 'lazyColor'
-        let specialBarTintColor = #colorLiteral(red: 0, green: 0.2316439748, blue: 0, alpha: 1)
-        
-        preferredBarTintColor = specialBarTintColor
+        preferredBarTintColor = #colorLiteral(red: 0, green: 0.2316439748, blue: 0, alpha: 1)
     }
     
     func preferringControlTintColor() {

@@ -6,24 +6,29 @@
 //  Copyright © 2019 Yaroslav. All rights reserved.
 //
 
+
 import UIKit
 
-final class AppIconViewController: UIViewController {
+class AppIconViewController: UIViewController {
 
-    // MARK: IBOutlets
-    @IBOutlet weak var backButton:   UIButton!
-    @IBOutlet weak var backButtonBackground: ChromistaActionButtonsBack! { didSet { backButtonBackground.alpha = 1 } }
-    @IBOutlet weak var imageView:    UIImageView! { didSet { imageView.imageViewShadow() } }
-    @IBOutlet weak var switchOutlet: UISwitch!
-    @IBOutlet weak var switchLabel:  UILabel!
-    @IBOutlet weak var switchView:   UIView!
-    @IBOutlet weak var shareButton:  UIBarButtonItem!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backButtonBackground: ChromistaActionButtonsBack! {
+        didSet { backButtonBackground.alpha = 1 }
+    }
+    
+    @IBOutlet private weak var imageView:       UIImageView!
+    @IBOutlet private weak var switchOutlet:    UISwitch!
+    @IBOutlet private weak var switchLabel:     UILabel!
+    @IBOutlet private weak var switchView:      UIView!
+    @IBOutlet private weak var shareButton:     UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /// AboutAppVCSetupProtocol
-        setupVC()
+        switchViewPrefering()
+        imageView.imageViewShadow()
+        basicSizing()
+        systemColorsPrfering()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,7 +42,6 @@ final class AppIconViewController: UIViewController {
         }
     }
     
-    // MARK: IBActions
     @available(iOS 13.0, *)
     @IBAction func back(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
@@ -47,11 +51,20 @@ final class AppIconViewController: UIViewController {
         let activityVC = UIActivityViewController(activityItems: [imageView], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
         
-            UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
+            UIApplication.shared.keyWindow?.tintColor = lazyColor
         
         self.present(activityVC, animated: true, completion: nil)
         
         shareButton.shareAudio()
+    }
+    
+    private func systemColorsPrfering() {
+        if #available(iOS 13.0, *) {
+            switchLabel.labelSystemColor()
+            
+            switchView.viewSystemBack()
+            view.viewSystemBack()
+        }
     }
     
     @IBAction func switching(_ sender: UISwitch) {
@@ -79,5 +92,17 @@ final class AppIconViewController: UIViewController {
         } else {
             switchView.isHidden = false
         }
+    }
+    
+    private func switchViewPrefering() {
+        switchLabel.text = "Hide Shadow"
+        switchOutlet.switchBasics()
+        switchView.editorsViews()
+    }
+    
+    private func basicSizing() {
+        let alpha = CGFloat(0)
+        
+        imageView.alpha = alpha
     }
 }

@@ -9,44 +9,24 @@
 import Foundation
 import UIKit
 
-protocol BiologyBackViewSetupProtocol {
-    func setupView()
-}
-
-class BiologyBackView: ContentBack {
+class BiologyBackView: UIView {
     override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupView()
+      super.init(frame: frame)
+      setupView()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        
-        setupView()
+      super.init(coder: aDecoder)
+      setupView()
     }
-}
 
-extension BiologyBackView: BiologyBackViewSetupProtocol {
-    func setupView() {
-        setupAlpha()
-        setupCorners()
-        setupShadow()
-    }
-}
-
-extension BiologyBackView {
-    private func setupAlpha() {
+    private func setupView() {
         viewSystemBack()
+        viewShadows()
         
         alpha = 0
-    }
-    
-    private func setupCorners() {
-        layer.cornerRadius = 30
-    }
-    
-    private func setupShadow() {
-        viewShadows()
+        
+        layer.cornerRadius  = 30
+        layer.shadowColor  = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     }
 }

@@ -13,7 +13,7 @@ extension UIStepper {
     public func stepperBaics() {
         
         // Basics for UIStepper
-        self.tintColor          = .biologyGreenColor
+        self.tintColor          = lazyColor
         self.layer.cornerRadius = 5
         
         self.stepperShadow()

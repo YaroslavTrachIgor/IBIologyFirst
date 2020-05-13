@@ -8,7 +8,8 @@
 
 import UIKit
 
-final class SomeMoreView: UIView {
+class SomeMoreView: UIView {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -20,9 +21,7 @@ final class SomeMoreView: UIView {
         
         setupView()
     }
-}
-
-extension SomeMoreView {
+    
     private func setupView() {
         alpha = 0
     }

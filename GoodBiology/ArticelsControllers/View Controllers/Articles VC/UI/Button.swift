@@ -10,18 +10,16 @@ import Foundation
 import UIKit
 
 @available(iOS 13.0, *)
-final class ArticleActivityIndicatorView: UIActivityIndicatorView {
+class ArticleActivityIndicatorView: UIActivityIndicatorView {
     let activityIndicatorViewstyle = UIActivityIndicatorView.Style.medium
     
     override init(style: UIActivityIndicatorView.Style) {
         super.init(style: activityIndicatorViewstyle)
-        
         setup()
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
-        
         setup()
     }
 }
@@ -38,11 +36,10 @@ protocol ArticleActivityIndicatorViewDelegate {
 }
 
 // Notification Button
-final class VideoButton: UIButton {
+class VideoButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        setup()
+            setup()
     }
 }
 
@@ -57,11 +54,10 @@ protocol VideoButtonDelegate {
 }
 
 // Video Button
-final class ImageButton: UIButton {
+class ImageButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        setup()
+            setup()
     }
 }
 
@@ -76,11 +72,10 @@ protocol ImageButtonDelegate {
 }
 
 // Image Button
-final class NotificationButton: UIButton {
+class NotificationButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        setup()
+            setup()
     }
 }
 
@@ -99,9 +94,8 @@ protocol NotificationButtomDelegate {
 extension UIButton {
     func addNotificationButtonPulse(view: UIView) {
         let pulse = Pulsing(numberOfPulses: 2, radius: 200, position: self.center)
-        
-        pulse.animationDuration = 0.9
-        pulse.backgroundColor = UIColor.biologyGreenColor.cgColor
+            pulse.animationDuration = 0.9
+            pulse.backgroundColor = lazyColor.cgColor
         
         view.layer.insertSublayer(pulse, below: self.layer)
     }

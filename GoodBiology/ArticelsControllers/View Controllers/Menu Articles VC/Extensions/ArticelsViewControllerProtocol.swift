@@ -10,20 +10,20 @@ import Foundation
 import UIKit
 
 extension UITextView: ArticelsViewControllerProtocol {
-    func setupNavController() {}
-    
     func articelsViewControllerTextViewSetup() {
         setSecondaryTextColor()
         setMenuFont()
     }
     
     func setSecondaryTextColor() {
-        textColor = .secondaryLabel
+        if #available(iOS 13.0, *) {
+            textColor = .secondaryLabel
+        }
     }
     
     func setMenuFont() {
         let size: CGFloat       = 16.5
-        let fontName: String    = BasicFonts.mediumFont
+        let fontName: String    = mediumFont
         
         self.font = UIFont(name: fontName, size: size)
     }

@@ -32,7 +32,10 @@ extension NetworkingViewController: UIPickerViewDataSource {
         } else {
             label = UILabel()
         }
-        viewModel.labelPickerViewSetup(label, text: sytesMenuArray[row])
+        label.textColor     = .darkGray
+        label.font          = UIFont(name: mediumFont, size: 18.4)
+        label.textAlignment = .center
+        label.text          = sytesMenuArray[row]
         
         if sytesMenuArray[row] == "YouTube About Animals" || sytesMenuArray[row] == "YouTube About Microbes" || sytesMenuArray[row] == "YouTube About Plants"{
             label.font = UIFont(name: "AvenirNext-Medium", size: 15.1)

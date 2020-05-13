@@ -11,7 +11,6 @@ import UIKit
 
 extension ArticelsViewController: MenuViewControllerDelegate {
     func basicViewProccesPrefering() {
-        createObservers()
         preferingSearchController()
         systemColors()
         refreshControlPrefering()

@@ -72,11 +72,13 @@ class ArticlesOnlineVideosViewController: UIViewController {
     }
         
     private func webViewBackgroundPrefering() {
+        cornerRadius = 20
+        
         if #available(iOS 13.0, *) {
             webViewBackground.backgroundColor = .systemBackground
         }
         
-        webViewBackground.layer.cornerRadius = CGFloat(20)
+        webViewBackground.layer.cornerRadius = CGFloat(cornerRadius)
         webViewBackground.viewShadows()
         
         webViewPrefering()
@@ -207,7 +209,7 @@ class ArticlesOnlineVideosViewController: UIViewController {
         let activityVC = UIActivityViewController(activityItems: [content], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
         
-            UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
+            UIApplication.shared.keyWindow?.tintColor = lazyColor
         
         self.present(activityVC, animated: true, completion: nil)
     }

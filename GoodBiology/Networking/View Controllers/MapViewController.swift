@@ -12,81 +12,16 @@ import CoreLocation
 import AudioToolbox
 import MessageUI
 
-class MapViewControllerViewModel {
-    func viewDidLoadNavControllerSetup(_ navigationController: UINavigationController) {
-        navigationController.navigationBar.backgroundColor = .clear
-        navigationController.navigationBar.barTintColor = .white
-    }
-    
-    func viewWillApearNavControllerSetup(_ navigationController: UINavigationController) {
-        navigationController.hidesBarsOnTap = false
-        navigationController.hidesBarsOnSwipe = false
-    }
-    
-    func setAlpha(_ element: UIView, alpha: CGFloat) {
-        element.alpha = alpha
-    }
-    
-    func setHidden(_ view: UIView, hidden: Bool) {
-        view.isHidden = hidden
-    }
-    
-    func setupComposer(_ composer: MFMailComposeViewController) {
-        composer.setSubject("Map Problem")
-        composer.setMessageBody("Here is my problem with map", isHTML: false)
-    }
-    
-    func typeViewBackPrefering(_ typeViewBackground: UIView) {
-        typeViewBackground.layer.cornerRadius   = CGFloat(12)
-        typeViewBackground.isHidden             = true
-        
-        typeViewBackground.viewShadows()
-    }
-    
-    func setupAlertController(_ alertController: UIAlertController, action: UIAlertAction) {
-        alertController.view.tintColor = .biologyGreenColor
-        alertController.addAction(action)
-        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-    }
-    
-    //MARK: MapView
-    func setupMapView(_ mapView: MKMapView) {
-        mapView.mapType = .standard
-        mapView.alpha   = 0
-    }
-    
-    func setRegion(_ mapView: MKMapView, region: MKCoordinateRegion) {
-        mapView.setRegion(region, animated: true)
-    }
-    
-    func setMapType(_ mapView: MKMapView,_ mapType: MKMapType) {
-        mapView.mapType = mapType
-    }
-    
-    func setupLocationManager(_ locManeger: CLLocationManager) {
-        locManeger.desiredAccuracy = kCLLocationAccuracyBest
-    }
-}
-
 class MapViewController: UIViewController, MapBasicViewDelegate {
 
-    // MapViewControllerViewModel
-    let viewModel = MapViewControllerViewModel()
-    
     @IBOutlet weak var mapView:              MKMapView!
     @IBOutlet weak var addressLabel:         UILabel!
     @IBOutlet weak var typeView:             UISegmentedControl!
     @IBOutlet weak var typeViewBackground:   UIView!
     
-    // Problem View Show Button
-    @IBOutlet weak var problumButtonViewLabel: UILabel!
-    @IBOutlet weak var problemViewShowButton:  UIButton!
-    @IBOutlet weak var problemViewShowButtonView: ChromistaActionButtonsBack!
-    
     @IBOutlet weak var mapTypesButtonBackView: ChromistaActionButtonsBack!
     
-    @IBOutlet weak var problemButton: HelpButton!
+    @IBOutlet weak var problemButton:        HelpButton!
     
     private let locationManager        = CLLocationManager()
     private let regionInMeters: Double = 10000
@@ -101,25 +36,17 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         switchingViewPrefering()
 
         checkWiFi()
-        
-        viewModel.viewDidLoadNavControllerSetup(navigationController!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let elements = [mapView, mapTypesButtonBackView, problemViewShowButtonView]
         UIView.animate(withDuration: 0.6) {
-            for element in elements {
-                self.viewModel.setAlpha(element!, alpha: 1)
-            }
+            let alpha: CGFloat = 1
+            
+            self.mapView.alpha                = alpha
+            self.mapTypesButtonBackView.alpha = alpha
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        viewModel.viewWillApearNavControllerSetup(navigationController!)
     }
     
     func mapViewBasics() {
@@ -138,7 +65,10 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         let alertController = UIAlertController(title: "Oops", message: "You are not connected to WiFi", preferredStyle: .alert)
         let action = UIAlertAction(title: "Continue", style: .cancel) { (action) in }
         
-        viewModel.setupAlertController(alertController, action: action)
+        alertController.view.tintColor = lazyColor
+        alertController.addAction(action)
+        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
+        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
         
         switch networkStatus {
         case .Unknown, .Offline:
@@ -153,9 +83,9 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     
     @IBAction func questionButtonShowing(_ sender: Any) {
         if problemButton.isHidden == true {
-            viewModel.setHidden(problemButton, hidden: false)
+            problemButton.isHidden = false
         } else {
-            viewModel.setHidden(problemButton, hidden: true)
+            problemButton.isHidden = true
         }
     }
     
@@ -168,22 +98,24 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         
         let composer                        = BasicMFMailComposeViewController(rootViewController: self)
             composer.mailComposeDelegate    = self
-        viewModel.setupComposer(composer)
-        composer.view.tintColor = .biologyGreenColor
+            composer.setSubject("Map Problem")
+            composer.setMessageBody("Here is my problem with map", isHTML: false)
+            composer.view.tintColor = lazyColor
         
         present(composer, animated: true)
     }
         
     private func mapViewPrefring() {
-        /// Setup Basiscs of UIMapView
+        // Setup Basiscs of UIMapView
         
-        viewModel.setupMapView(mapView)
+        mapView.mapType = .standard
+        mapView.alpha   = 0
     }
     
     @IBAction func share(_ sender: Any) {
         let activityVC = UIActivityViewController(activityItems: [addressLabel.text!], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
-            UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
+            UIApplication.shared.keyWindow?.tintColor = lazyColor
         
         AudioServicesPlayAlertSound(SystemSoundID(1001))
         
@@ -196,7 +128,10 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     }
     
     private func typeViewBackPrefering() {
-        viewModel.typeViewBackPrefering(typeViewBackground)
+        typeViewBackground.layer.cornerRadius   = CGFloat(cornerRadius)
+        typeViewBackground.isHidden             = true
+        
+        typeViewBackground.viewShadows()
     }
     
     private func typeViewPrefering() {
@@ -210,9 +145,9 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     @IBAction func mapViewStyleSwitching(_ sender: UISegmentedControl) {
         switch  typeView.selectedSegmentIndex {
         case 0:
-            viewModel.setMapType(mapView, .standard)
+            mapView.mapType = .standard
         case 1:
-            viewModel.setMapType(mapView, .satellite)
+            mapView.mapType = .satellite
         default:
             print("Error")
         }
@@ -220,21 +155,21 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     
     @IBAction func typeViewBackShowing(_ sender: Any) {
         if typeViewBackground.isHidden == true {
-            viewModel.setHidden(typeViewBackground, hidden: false)
+            typeViewBackground.isHidden = false
         } else {
-            viewModel.setHidden(typeViewBackground, hidden: true)
+            typeViewBackground.isHidden = true
         }
     }
     
     func setupLocationManager() {
-        locationManager.delegate = self
-        viewModel.setupLocationManager(locationManager)
+        locationManager.delegate        = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
     func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
            let region   = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
-            viewModel.setRegion(mapView, region: region)
+            mapView.setRegion(region, animated: true)
         }
     }
     
@@ -335,7 +270,7 @@ extension UILabel {
         
         self.backgroundColor   = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        self.textColor         = .biologyGreenColor
+        self.textColor         = lazyColor
         self.text              = ""
         
         self.labelShadow()

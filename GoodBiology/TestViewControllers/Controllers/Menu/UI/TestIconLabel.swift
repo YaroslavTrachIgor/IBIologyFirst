@@ -11,39 +11,25 @@ import UIKit
 
 // Test Icon Labels
 protocol TestIconLabelDelegate {
-    func labelSetup()
+    func setupAnswerLabel()
 }
 
 class TestIconLabel: UILabel {
     override init(frame: CGRect) {
       super.init(frame: frame)
-        labelSetup()
+        setupAnswerLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
       super.init(coder: aDecoder)
-        labelSetup()
+        setupAnswerLabel()
     }
 }
 
 extension TestIconLabel: TestIconLabelDelegate {
-    func labelSetup() {
-        textColorSetup()
-        fontSetup()
-    }
-}
-
-extension TestIconLabel {
-    func textColorSetup() {
-        let color = #colorLiteral(red: 0.1338435914, green: 0.1338435914, blue: 0.1338435914, alpha: 1)
+    internal func setupAnswerLabel() {
+        labelShadow()
         
-        textColor = color
-    }
-    
-    func fontSetup() {
-        let fontName: String  = "HelveticaNeue-Bold"
-        let fontSize: CGFloat = 21.5
-        
-        font = UIFont(name: fontName, size: fontSize)
+        textColor = lazyColor
     }
 }

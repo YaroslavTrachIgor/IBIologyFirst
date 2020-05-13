@@ -10,37 +10,20 @@ import Foundation
 import UIKit
 
 // Buttons (size, hide functions)
-final class ChromistaButton: UIButton {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupButton()
-    }
-    
+class ChromistaButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        setupButton()
+            setup()
     }
 }
 
 extension ChromistaButton: ChromistaButtonDelegate {
-    func setupButton() {
-        setupTint()
-        setupCorners()
-    }
-}
-
-extension ChromistaButton {
-    func setupTint() {
-        tintColor = .biologyGreenColor
-    }
-    
-    func setupCorners() {
-        layer.cornerRadius = 16
+    func setup() {
+        tintColor           = lazyColor
+        layer.cornerRadius  = 16
     }
 }
 
 protocol ChromistaButtonDelegate {
-    func setupButton()
+    func setup()
 }

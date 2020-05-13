@@ -9,13 +9,19 @@
 import Foundation
 import UIKit
 import AudioToolbox
+
 import UIKit
 
+public func viewDidLoadPrinting(doing: String) {
+    print("View of \(doing) article was done.")
+}
+
+@available(iOS 13.0, *)
 class AppleButtonSettings {
     var titleColor      = UIColor.label
     var backgroundColor = UIColor.systemGray6
     
-    var appleButtonCornerRadius = 12
+    var appleButtonCornerRadius = cornerRadius
     
     var font = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(14.5))
 }

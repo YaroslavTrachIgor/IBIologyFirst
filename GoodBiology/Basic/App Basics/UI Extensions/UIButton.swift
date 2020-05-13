@@ -29,13 +29,14 @@ extension UIButton {
     
     // Basics for diffrent buttons
     public func notificationButtonBasics() {
-        self.backgroundColor    = .biologyGreenColor
-        self.layer.cornerRadius = 10
-        
-        self.layer.borderColor = #colorLiteral(red: 0.01702673263, green: 0.2744213042, blue: 0.09773741148, alpha: 1)
-        self.layer.borderWidth = 3
+        self.backgroundColor    = #colorLiteral(red: 0.02729533613, green: 0.3659711778, blue: 0.133120358, alpha: 1)
+        self.layer.borderColor  = #colorLiteral(red: 0, green: 0.2469184101, blue: 0.009277993813, alpha: 1)
+        self.layer.borderWidth  = 3.07
+        self.layer.cornerRadius = 14.7
         
         self.setTitleColor(.white, for: .normal)
+        
+        self.buttonsShadows()
         
         self.alpha = 0
     }
@@ -59,13 +60,6 @@ extension UIButton {
         self.setTitle("Videos", for: .normal)
     }
     
-    /// Use this Method to make costomButton Quickly
-    /// - Parameters:
-    ///   - background: backgroundColor
-    ///   - titleColor: setTitleColor
-    ///   - title: setTitle
-    ///   - corner: layer.cornerRadius
-    ///   - borderWidth: layer.borderWidth
     public func fastButtonCostomizing(background: UIColor, titleColor: UIColor, title: String, corner: Float, borderWidth: Float) {
         self.backgroundColor    = background
         self.layer.cornerRadius = CGFloat(corner)

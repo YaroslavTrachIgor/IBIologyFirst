@@ -8,7 +8,6 @@
 
 import Foundation
 import AuthenticationServices
-import LocalAuthentication
 
 struct User {
     let id:         String

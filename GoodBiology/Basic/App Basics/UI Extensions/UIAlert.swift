@@ -33,7 +33,6 @@ extension UIAlertController {
             attributeString.addAttributes([NSAttributedString.Key.foregroundColor : titleColor],//3
                 range: NSMakeRange(0, title.utf8.count))
         }
-        
         self.setValue(attributeString, forKey: "attributedTitle")//4
     }
     

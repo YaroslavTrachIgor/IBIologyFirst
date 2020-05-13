@@ -19,12 +19,12 @@
                         <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                            <color key="textColor" red="0.16593047831442229" green="0.17695918218536091" blue="0.19453918147208127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="28"/>
-                            <color key="textColor" red="0.18175757991755753" green="0.19383824493806553" blue="0.21309509369644675" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -33,7 +33,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvI-s5-xxm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1494" y="1053"/>
+            <point key="canvasLocation" x="-1486" y="1056"/>
         </scene>
         <!--Networking View Controller-->
         <scene sceneID="UoI-ji-iyR">
@@ -43,18 +43,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRE-A8-OIF" customClass="WebViewBaxckground" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="49" width="320" height="458"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRE-A8-OIF" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="12" y="56" width="296" height="451"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yfO-Ga-GQl">
-                                        <rect key="frame" x="149.5" y="222.5" width="21" height="20"/>
+                                        <rect key="frame" x="137.5" y="215.5" width="21" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="21" id="lSx-jE-UzU"/>
                                             <constraint firstAttribute="height" constant="20" id="pXM-d2-JaU"/>
                                         </constraints>
                                     </activityIndicatorView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlR-xH-cpz">
-                                        <rect key="frame" x="141" y="250" width="37" height="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UlR-xH-cpz">
+                                        <rect key="frame" x="141" y="243" width="13" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="hM2-TM-nxs"/>
                                         </constraints>
@@ -63,7 +63,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nmz-Lt-lGm">
-                                        <rect key="frame" x="0.0" y="8" width="320" height="442"/>
+                                        <rect key="frame" x="8" y="8" width="280" height="435"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="delegate" destination="npO-hz-aCj" id="85T-zI-LCg"/>
@@ -90,11 +90,11 @@
                                             <constraint firstAttribute="width" constant="173" id="zv7-L6-6ZE"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GI0-f0-hh0" customClass="ExplanatoryView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="166" width="173" height="84"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GI0-f0-hh0" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="166" width="173" height="55"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You can use long press to open wiki whenever you want." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iFs-ah-2TF" customClass="ExplanatoryTextView" customModule="GoodBiology" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="8" width="157" height="68"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You can use long press to open wiki whenever you want" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iFs-ah-2TF">
+                                                <rect key="frame" x="8" y="8" width="157" height="39"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -104,54 +104,36 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="iFs-ah-2TF" firstAttribute="top" secondItem="GI0-f0-hh0" secondAttribute="top" constant="8" id="90O-Bx-4Dc"/>
-                                            <constraint firstAttribute="height" constant="84" id="MUW-uq-Cu2"/>
                                             <constraint firstAttribute="bottom" secondItem="iFs-ah-2TF" secondAttribute="bottom" constant="8" id="NZd-Jw-rZh"/>
                                             <constraint firstAttribute="width" constant="173" id="bmO-Tq-bvO"/>
                                             <constraint firstAttribute="trailing" secondItem="iFs-ah-2TF" secondAttribute="trailing" constant="8" id="hUW-ww-8ZX"/>
+                                            <constraint firstAttribute="height" constant="55" id="kak-Uk-P04"/>
                                             <constraint firstItem="iFs-ah-2TF" firstAttribute="leading" secondItem="GI0-f0-hh0" secondAttribute="leading" constant="8" id="xdK-tK-q5w"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Search" translatesAutoresizingMaskIntoConstraints="NO" id="9nq-OP-v0C" customClass="TransformImageView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="121" y="258" width="199" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="fld-ec-rJh"/>
-                                            <constraint firstAttribute="width" constant="199" id="ki4-B5-cwk"/>
-                                        </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard" translatesAutoresizingMaskIntoConstraints="NO" id="4x7-1f-fYq" customClass="TransformImageView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="182" height="141"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="182" id="0BU-kN-mKd"/>
-                                            <constraint firstAttribute="height" constant="141" id="Tmj-iw-89y"/>
-                                        </constraints>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="UlR-xH-cpz" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="141" id="3z2-CP-iuy"/>
+                                    <constraint firstAttribute="trailing" secondItem="nmz-Lt-lGm" secondAttribute="trailing" constant="8" id="6hU-DF-PV2"/>
                                     <constraint firstItem="AAG-JT-dBK" firstAttribute="top" secondItem="KRE-A8-OIF" secondAttribute="top" constant="8" id="8ch-PF-foB"/>
-                                    <constraint firstAttribute="trailing" secondItem="9nq-OP-v0C" secondAttribute="trailing" id="F5y-Vm-qOH"/>
-                                    <constraint firstItem="nmz-Lt-lGm" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" id="Fhi-6T-iD8"/>
                                     <constraint firstAttribute="bottom" secondItem="nmz-Lt-lGm" secondAttribute="bottom" constant="8" id="GBr-tL-ewk"/>
-                                    <constraint firstAttribute="trailing" secondItem="nmz-Lt-lGm" secondAttribute="trailing" id="IbP-S6-WdZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="9nq-OP-v0C" secondAttribute="bottom" id="MCM-BD-IC4"/>
                                     <constraint firstItem="nmz-Lt-lGm" firstAttribute="top" secondItem="KRE-A8-OIF" secondAttribute="top" constant="8" id="R1f-xz-2Ew"/>
                                     <constraint firstItem="GI0-f0-hh0" firstAttribute="top" secondItem="AAG-JT-dBK" secondAttribute="bottom" constant="8" id="bv4-ks-QiC"/>
                                     <constraint firstItem="UlR-xH-cpz" firstAttribute="top" secondItem="yfO-Ga-GQl" secondAttribute="bottom" constant="7.5" id="dcH-7U-SaM"/>
-                                    <constraint firstItem="4x7-1f-fYq" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" id="n9O-H2-iLS"/>
+                                    <constraint firstItem="nmz-Lt-lGm" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="8" id="iDb-Te-oIy"/>
                                     <constraint firstItem="GI0-f0-hh0" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="8" id="na7-37-cXb"/>
                                     <constraint firstItem="AAG-JT-dBK" firstAttribute="leading" secondItem="KRE-A8-OIF" secondAttribute="leading" constant="8" id="seb-q2-8Qh"/>
-                                    <constraint firstItem="4x7-1f-fYq" firstAttribute="top" secondItem="KRE-A8-OIF" secondAttribute="top" id="vnu-He-sAc"/>
                                     <constraint firstAttribute="trailing" secondItem="UlR-xH-cpz" secondAttribute="trailing" constant="142" id="yu4-dz-csg"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBp-if-4N7">
                                 <rect key="frame" x="139" y="54" width="165" height="50"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hide diffrent functions" translatesAutoresizingMaskIntoConstraints="NO" id="xPY-7F-u9W">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hide diffrent functions" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xPY-7F-u9W">
                                         <rect key="frame" x="0.0" y="0.0" width="97" height="50"/>
                                         <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jHu-Mx-YtU">
@@ -176,73 +158,48 @@
                                     <constraint firstItem="jHu-Mx-YtU" firstAttribute="leading" secondItem="xPY-7F-u9W" secondAttribute="trailing" constant="8" id="zBz-SP-UWu"/>
                                 </constraints>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONK-jt-Cfi" customClass="NetworkingViewControllerMainToolBar" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="511" width="320" height="49"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ONK-jt-Cfi">
+                                <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                                 <items>
-                                    <barButtonItem width="21" style="plain" systemItem="fixedSpace" id="Jlt-91-5ln"/>
-                                    <barButtonItem image="mappin.and.ellipse" catalog="system" id="9Pr-0M-U2i" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                    <barButtonItem title=" " id="3fP-51-PhM" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target"/>
+                                    <barButtonItem title="Map" id="9Pr-0M-U2i" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
                                         <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <segue destination="R7e-EK-KVI" kind="show" id="v4W-ma-FDW"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="16" style="plain" systemItem="fixedSpace" id="50W-Ry-TCy"/>
-                                    <barButtonItem title="Wiki" id="7i1-9C-fJ0" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JaP-zM-zbb" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target"/>
+                                    <barButtonItem systemItem="rewind" id="IvC-yW-TJe" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                        <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <action selector="wikiOpen:" destination="npO-hz-aCj" id="B1z-Ok-KfB"/>
+                                            <action selector="goForwardAction:" destination="npO-hz-aCj" id="c3V-It-d58"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JaP-zM-zbb" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target"/>
-                                    <barButtonItem systemItem="action" id="Kji-Ww-J0W" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                    <barButtonItem systemItem="fastForward" id="efW-iV-Aq1" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
                                         <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="goBackButton:" destination="npO-hz-aCj" id="Imm-rb-xu0"/>
+                                        </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="14" style="plain" systemItem="fixedSpace" id="tVD-mr-Tnb"/>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UI Element 57" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-Va-TkP" customClass="TransformImageView" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="423" width="233" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="68" id="IMV-Y9-1vw"/>
-                                    <constraint firstAttribute="width" constant="233" id="LRb-b3-ZFg"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UI Element 58" translatesAutoresizingMaskIntoConstraints="NO" id="stD-wZ-pI5" customClass="TransformImageView" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="87" y="74" width="233" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="233" id="SuL-O4-JPL"/>
-                                    <constraint firstAttribute="height" constant="68" id="Y1C-tU-kMd"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UI Element 53" translatesAutoresizingMaskIntoConstraints="NO" id="LFk-Ih-HiT" customClass="TransformImageView" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="70.5" y="207" width="179" height="149"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="149" id="0fQ-Nd-kj3"/>
-                                    <constraint firstAttribute="width" constant="179" id="WwL-iR-42O"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="stD-wZ-pI5" firstAttribute="top" secondItem="aCS-NK-uaN" secondAttribute="top" constant="30" id="2Vy-bH-LpK"/>
                             <constraint firstItem="ONK-jt-Cfi" firstAttribute="leading" secondItem="gMb-nY-e2t" secondAttribute="leading" id="4h8-3U-O1j"/>
                             <constraint firstItem="aCS-NK-uaN" firstAttribute="trailing" secondItem="CBp-if-4N7" secondAttribute="trailing" constant="16" id="4iP-Um-UPe"/>
-                            <constraint firstItem="LFk-Ih-HiT" firstAttribute="centerX" secondItem="aCS-NK-uaN" secondAttribute="centerX" id="AhC-5Y-Jmx"/>
                             <constraint firstItem="yfO-Ga-GQl" firstAttribute="centerX" secondItem="aCS-NK-uaN" secondAttribute="centerX" id="C1N-ax-XXP"/>
-                            <constraint firstItem="ONK-jt-Cfi" firstAttribute="top" secondItem="F0F-Va-TkP" secondAttribute="bottom" constant="20" id="D5X-HE-qsG"/>
                             <constraint firstAttribute="trailing" secondItem="ONK-jt-Cfi" secondAttribute="trailing" id="Ga6-WQ-WjI"/>
+                            <constraint firstItem="KRE-A8-OIF" firstAttribute="leading" secondItem="aCS-NK-uaN" secondAttribute="leading" constant="12" id="GvC-Rb-NPU"/>
                             <constraint firstAttribute="trailing" secondItem="ONK-jt-Cfi" secondAttribute="trailing" id="Iod-pl-n7G"/>
                             <constraint firstItem="CBp-if-4N7" firstAttribute="top" secondItem="aCS-NK-uaN" secondAttribute="top" constant="10" id="MbL-aw-m0Q"/>
-                            <constraint firstItem="LFk-Ih-HiT" firstAttribute="centerY" secondItem="aCS-NK-uaN" secondAttribute="centerY" id="NKf-RU-GtZ"/>
-                            <constraint firstAttribute="bottom" secondItem="ONK-jt-Cfi" secondAttribute="bottom" constant="8" id="Ww0-24-8jL"/>
                             <constraint firstItem="aCS-NK-uaN" firstAttribute="bottom" secondItem="KRE-A8-OIF" secondAttribute="bottom" constant="12" id="aDJ-On-GA3"/>
-                            <constraint firstItem="F0F-Va-TkP" firstAttribute="leading" secondItem="aCS-NK-uaN" secondAttribute="leading" id="bj5-0u-5oG"/>
-                            <constraint firstItem="KRE-A8-OIF" firstAttribute="top" secondItem="aCS-NK-uaN" secondAttribute="top" constant="5" id="cUJ-mA-hPw"/>
-                            <constraint firstItem="aCS-NK-uaN" firstAttribute="trailing" secondItem="KRE-A8-OIF" secondAttribute="trailing" id="eAB-FU-Hjc"/>
                             <constraint firstItem="yfO-Ga-GQl" firstAttribute="centerY" secondItem="aCS-NK-uaN" secondAttribute="centerY" id="fdy-yW-wwn"/>
-                            <constraint firstItem="aCS-NK-uaN" firstAttribute="trailing" secondItem="stD-wZ-pI5" secondAttribute="trailing" id="fmc-qc-wdA"/>
-                            <constraint firstItem="KRE-A8-OIF" firstAttribute="leading" secondItem="aCS-NK-uaN" secondAttribute="leading" id="nSy-kZ-H34"/>
+                            <constraint firstItem="aCS-NK-uaN" firstAttribute="trailing" secondItem="KRE-A8-OIF" secondAttribute="trailing" constant="12" id="izY-xv-NK3"/>
                             <constraint firstItem="ONK-jt-Cfi" firstAttribute="leading" secondItem="gMb-nY-e2t" secondAttribute="leading" id="nrJ-Es-26z"/>
+                            <constraint firstItem="KRE-A8-OIF" firstAttribute="top" secondItem="aCS-NK-uaN" secondAttribute="top" constant="12" id="pDq-wv-hL2"/>
+                            <constraint firstAttribute="bottom" secondItem="ONK-jt-Cfi" secondAttribute="bottom" id="pUc-Xc-Csh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aCS-NK-uaN"/>
                         <connections>
@@ -251,31 +208,28 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="never" id="ZNm-3z-w3m">
-                        <leftBarButtonItems>
-                            <barButtonItem title="Item" id="IvC-yW-TJe" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="goForwardAction:" destination="npO-hz-aCj" id="c3V-It-d58"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" id="efW-iV-Aq1" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="goBackButton:" destination="npO-hz-aCj" id="Imm-rb-xu0"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="3fC-mj-N7M" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                            <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="h5M-cX-SYz" kind="presentation" id="Ptf-xf-cFN"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
-                            <barButtonItem image="eye.slash" catalog="system" id="4wf-on-9Xn" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="orgonize:" destination="npO-hz-aCj" id="bwz-Ql-78k"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" image="pencil.and.ellipsis.rectangle" catalog="system" id="Ubj-3g-LQv" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                            <barButtonItem title="Item" image="icons8-menu_filled" id="Ubj-3g-LQv" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
                                 <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="pickerViewBackShowing:" destination="npO-hz-aCj" id="lUa-uF-2ze"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="globe_earth" id="7i1-9C-fJ0" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                <connections>
+                                    <action selector="wikiOpen:" destination="npO-hz-aCj" id="B1z-Ok-KfB"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="eye.slash.fill" catalog="system" id="4wf-on-9Xn" customClass="NetworkingButton" customModule="GoodBiology" customModuleProvider="target">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="orgonize:" destination="npO-hz-aCj" id="bwz-Ql-78k"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -284,22 +238,17 @@
                     <connections>
                         <outlet property="activityIndicator" destination="yfO-Ga-GQl" id="6PW-Nu-GgB"/>
                         <outlet property="backButton" destination="IvC-yW-TJe" id="xSh-6h-gWt"/>
-                        <outlet property="explanatoryTextView" destination="iFs-ah-2TF" id="xel-ak-A0J"/>
-                        <outlet property="explanatoryView" destination="GI0-f0-hh0" id="1dx-hV-GBt"/>
+                        <outlet property="explanatoryTextView" destination="iFs-ah-2TF" id="bvS-cd-bpF"/>
+                        <outlet property="explanatoryView" destination="GI0-f0-hh0" id="1Kk-s4-h0C"/>
                         <outlet property="goForwardButton" destination="efW-iV-Aq1" id="b9H-ug-xIa"/>
-                        <outlet property="image1" destination="F0F-Va-TkP" id="kAF-5I-XEE"/>
-                        <outlet property="image2" destination="LFk-Ih-HiT" id="1Aa-XR-XGj"/>
-                        <outlet property="image3" destination="stD-wZ-pI5" id="i1r-n0-Wzb"/>
-                        <outlet property="image4" destination="9nq-OP-v0C" id="5OG-6P-Bmm"/>
-                        <outlet property="image5" destination="4x7-1f-fYq" id="icL-If-hhI"/>
                         <outlet property="loadingLabel" destination="UlR-xH-cpz" id="Ved-eT-PFU"/>
-                        <outlet property="mainToolBar" destination="ONK-jt-Cfi" id="npz-pU-wgI"/>
                         <outlet property="nextButton" destination="efW-iV-Aq1" id="1X6-TK-qWx"/>
                         <outlet property="pickerView" destination="zuF-Zf-igD" id="b9m-RB-gVV"/>
                         <outlet property="pickerViewBack" destination="AAG-JT-dBK" id="DUQ-Fp-Mio"/>
                         <outlet property="sitesButton" destination="Ubj-3g-LQv" id="gpc-eO-cF3"/>
                         <outlet property="switchOutlet" destination="jHu-Mx-YtU" id="8KZ-De-RJg"/>
                         <outlet property="switchView" destination="CBp-if-4N7" id="X0o-o7-CKP"/>
+                        <outlet property="tabBarVCshowingButton" destination="3fC-mj-N7M" id="gSj-PT-YPJ"/>
                         <outlet property="textSwitchView" destination="xPY-7F-u9W" id="Zsi-Eg-tVO"/>
                         <outlet property="webView" destination="nmz-Lt-lGm" id="zob-1R-f3E"/>
                         <outlet property="webViewBaxckground" destination="KRE-A8-OIF" id="g6P-xp-les"/>
@@ -313,7 +262,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-643.125" y="1053.1690140845071"/>
+            <point key="canvasLocation" x="-701.25" y="1055.2816901408451"/>
         </scene>
         <!--Map-->
         <scene sceneID="pAo-QF-SJ4">
@@ -394,47 +343,15 @@
                                     <constraint firstAttribute="bottom" secondItem="pKZ-o3-QFv" secondAttribute="bottom" constant="11.5" id="zFz-mb-F7v"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zY-ah-PeE" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="188" y="60" width="120" height="45"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Problem ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rAC-BJ-SIz">
-                                        <rect key="frame" x="8" y="8" width="104" height="29"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.2075783085" blue="0.0089962140810000008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-Ia-2hD">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="45"/>
-                                        <connections>
-                                            <action selector="questionButtonShowing:" destination="R7e-EK-KVI" eventType="touchUpInside" id="XEe-cf-Xxd"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rAC-BJ-SIz" secondAttribute="trailing" constant="8" id="6JV-Sd-l53"/>
-                                    <constraint firstItem="XnC-Ia-2hD" firstAttribute="leading" secondItem="5zY-ah-PeE" secondAttribute="leading" id="9Ax-VH-No6"/>
-                                    <constraint firstAttribute="bottom" secondItem="rAC-BJ-SIz" secondAttribute="bottom" constant="8" id="Jb4-3e-Sjy"/>
-                                    <constraint firstItem="rAC-BJ-SIz" firstAttribute="top" secondItem="5zY-ah-PeE" secondAttribute="top" constant="8" id="UMm-i7-otw"/>
-                                    <constraint firstItem="XnC-Ia-2hD" firstAttribute="top" secondItem="5zY-ah-PeE" secondAttribute="top" id="aFC-Cc-F8O"/>
-                                    <constraint firstAttribute="height" constant="45" id="gRQ-Sr-jG4"/>
-                                    <constraint firstAttribute="bottom" secondItem="XnC-Ia-2hD" secondAttribute="bottom" id="tT9-Ew-85N"/>
-                                    <constraint firstAttribute="width" constant="120" id="uk4-VY-MoW"/>
-                                    <constraint firstItem="rAC-BJ-SIz" firstAttribute="leading" secondItem="5zY-ah-PeE" secondAttribute="leading" constant="8" id="vpS-sH-n2c"/>
-                                    <constraint firstAttribute="trailing" secondItem="XnC-Ia-2hD" secondAttribute="trailing" id="y1M-Ai-BmU"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="UrW-Ab-Ru3" secondAttribute="trailing" constant="12" id="2qO-PM-9ic"/>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="bottom" secondItem="UrW-Ab-Ru3" secondAttribute="bottom" constant="11" id="3ea-sI-Ymw"/>
                             <constraint firstItem="U88-BP-L0i" firstAttribute="top" secondItem="gSA-Aa-PVx" secondAttribute="top" constant="16" id="7EC-wd-eVd"/>
-                            <constraint firstItem="5zY-ah-PeE" firstAttribute="top" secondItem="gSA-Aa-PVx" secondAttribute="top" constant="16" id="9Xh-Iv-cys"/>
                             <constraint firstItem="qhO-7B-3jJ" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" constant="16" id="CUq-kP-igh"/>
                             <constraint firstItem="WtF-vH-Hq7" firstAttribute="top" secondItem="gSA-Aa-PVx" secondAttribute="top" id="IA6-8H-NdJ"/>
                             <constraint firstItem="UrW-Ab-Ru3" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" constant="12" id="NQP-XY-EWB"/>
-                            <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="5zY-ah-PeE" secondAttribute="trailing" constant="12" id="f6H-a3-Jli"/>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="trailing" secondItem="dyK-s0-4rM" secondAttribute="trailing" constant="12" id="gvC-pw-6HE"/>
                             <constraint firstItem="gSA-Aa-PVx" firstAttribute="bottom" secondItem="qhO-7B-3jJ" secondAttribute="bottom" constant="14" id="qAJ-CV-aCB"/>
                             <constraint firstItem="U88-BP-L0i" firstAttribute="leading" secondItem="gSA-Aa-PVx" secondAttribute="leading" constant="16" id="r6V-vb-cCs"/>
@@ -447,27 +364,32 @@
                         <viewLayoutGuide key="safeArea" id="gSA-Aa-PVx"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" largeTitleDisplayMode="never" id="8bf-R9-HFQ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Kxr-Jj-Nbs">
-                            <connections>
-                                <action selector="share:" destination="R7e-EK-KVI" id="c6T-Br-C5H"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="Kxr-Jj-Nbs">
+                                <connections>
+                                    <action selector="share:" destination="R7e-EK-KVI" id="c6T-Br-C5H"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="SNQ-LN-j8Z">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="questionButtonShowing:" destination="R7e-EK-KVI" id="waM-9B-Awb"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="qhO-7B-3jJ" id="2vt-68-gTp"/>
                         <outlet property="mapTypesButtonBackView" destination="U88-BP-L0i" id="XIw-Pv-i5h"/>
                         <outlet property="mapView" destination="WtF-vH-Hq7" id="yiY-eW-Bnz"/>
-                        <outlet property="problemButton" destination="UrW-Ab-Ru3" id="1Hd-ci-fFT"/>
-                        <outlet property="problemViewShowButton" destination="XnC-Ia-2hD" id="ZPa-gM-QqV"/>
-                        <outlet property="problemViewShowButtonView" destination="5zY-ah-PeE" id="8sE-5D-WhV"/>
-                        <outlet property="problumButtonViewLabel" destination="rAC-BJ-SIz" id="KyY-NW-C9k"/>
+                        <outlet property="problemButton" destination="UrW-Ab-Ru3" id="eu6-SR-jjS"/>
                         <outlet property="typeView" destination="4CF-S9-GG0" id="DqX-xo-077"/>
                         <outlet property="typeViewBackground" destination="dyK-s0-4rM" id="fgX-mO-bNh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="asd-i0-hOr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="174" y="1055"/>
+            <point key="canvasLocation" x="52.5" y="1055.2816901408451"/>
         </scene>
         <!--ViewCostomTabBar-->
         <scene sceneID="MnH-BP-u7r">
@@ -479,15 +401,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dashboard" width="2310" height="1400"/>
-        <image name="Search" width="2310" height="1400"/>
-        <image name="UI Element 53" width="2310" height="1400"/>
-        <image name="UI Element 57" width="2310" height="1400"/>
-        <image name="UI Element 58" width="2310" height="1400"/>
-        <image name="eye.slash" catalog="system" width="64" height="42"/>
+        <image name="eye.slash.fill" catalog="system" width="64" height="40"/>
         <image name="globe_earth" width="30" height="30"/>
+        <image name="icons8-menu_filled" width="25" height="25"/>
         <image name="map" catalog="system" width="64" height="56"/>
-        <image name="mappin.and.ellipse" catalog="system" width="58" height="64"/>
-        <image name="pencil.and.ellipsis.rectangle" catalog="system" width="64" height="40"/>
     </resources>
 </document>

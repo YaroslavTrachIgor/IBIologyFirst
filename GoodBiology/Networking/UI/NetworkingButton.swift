@@ -15,11 +15,10 @@ class NetworkingButton: UIBarButtonItem {
         
         barButtonItemSetup()
     }
-}
-
-extension NetworkingButton {
-    private func barButtonItemSetup() {
+    
+    
+    func barButtonItemSetup() {
         isEnabled = true
-        tintColor = .black
+        tintColor = lazyColor
     }
 }

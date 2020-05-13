@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QI2-xW-u4f">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-r0-fId">
-                                <rect key="frame" x="32.5" y="263" width="310" height="39"/>
+                                <rect key="frame" x="32.5" y="233" width="310" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="jpI-D5-Hzi"/>
                                 </constraints>
@@ -40,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01e-Pe-VFh">
-                                <rect key="frame" x="32.5" y="310" width="310" height="39"/>
+                                <rect key="frame" x="32.5" y="280" width="310" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="iYP-0Q-KRL"/>
                                 </constraints>
@@ -51,7 +52,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kPl-3u-zPk">
-                                <rect key="frame" x="39" y="160" width="296" height="85"/>
+                                <rect key="frame" x="39" y="130" width="296" height="85"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Privacy Policy site of iBiology" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FrO-dx-cGD">
                                         <rect key="frame" x="4" y="10" width="288" height="64"/>
@@ -74,7 +75,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oK2-r4-Yjp">
-                                <rect key="frame" x="62.5" y="364" width="250" height="54"/>
+                                <rect key="frame" x="62.5" y="334" width="250" height="54"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="It will be open Safari Page" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2QS-eJ-1JA">
                                         <rect key="frame" x="5" y="8" width="240" height="38"/>
@@ -96,31 +97,20 @@
                                     <constraint firstAttribute="trailing" secondItem="2QS-eJ-1JA" secondAttribute="trailing" constant="5" id="n5t-tm-k4r"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Browse Web (woman)" translatesAutoresizingMaskIntoConstraints="NO" id="OGd-NY-ZdB">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="vh0-YI-dhM"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="01e-Pe-VFh" firstAttribute="leading" secondItem="YiH-og-J2p" secondAttribute="leading" constant="32.5" id="0wT-6B-eem"/>
                             <constraint firstItem="oK2-r4-Yjp" firstAttribute="centerX" secondItem="YiH-og-J2p" secondAttribute="centerX" id="17y-lG-Z2Z"/>
                             <constraint firstItem="YiH-og-J2p" firstAttribute="trailing" secondItem="9KH-lW-fPB" secondAttribute="trailing" constant="32.5" id="2fy-JX-v6J"/>
-                            <constraint firstItem="OGd-NY-ZdB" firstAttribute="leading" secondItem="YiH-og-J2p" secondAttribute="leading" id="3ge-8b-5JR"/>
-                            <constraint firstItem="kPl-3u-zPk" firstAttribute="top" secondItem="OGd-NY-ZdB" secondAttribute="bottom" id="DoP-3Q-G4R"/>
                             <constraint firstItem="qpf-r0-fId" firstAttribute="leading" secondItem="YiH-og-J2p" secondAttribute="leading" constant="32.5" id="F5M-Ro-8Dd"/>
                             <constraint firstItem="YiH-og-J2p" firstAttribute="bottom" secondItem="9KH-lW-fPB" secondAttribute="bottom" constant="15" id="G1Z-FB-OVL"/>
-                            <constraint firstItem="YiH-og-J2p" firstAttribute="trailing" secondItem="OGd-NY-ZdB" secondAttribute="trailing" id="K64-Mp-tzK"/>
-                            <constraint firstItem="kPl-3u-zPk" firstAttribute="top" secondItem="OGd-NY-ZdB" secondAttribute="bottom" id="KGn-nh-kkW"/>
                             <constraint firstItem="YiH-og-J2p" firstAttribute="trailing" secondItem="kPl-3u-zPk" secondAttribute="trailing" constant="40" id="QIz-QM-eRN"/>
                             <constraint firstItem="YiH-og-J2p" firstAttribute="trailing" secondItem="01e-Pe-VFh" secondAttribute="trailing" constant="32.5" id="QbZ-nM-cCn"/>
                             <constraint firstItem="9KH-lW-fPB" firstAttribute="centerX" secondItem="YiH-og-J2p" secondAttribute="centerX" id="TVc-hv-3g3"/>
-                            <constraint firstItem="kPl-3u-zPk" firstAttribute="top" secondItem="OGd-NY-ZdB" secondAttribute="bottom" id="UPS-ay-jHZ"/>
                             <constraint firstItem="qpf-r0-fId" firstAttribute="top" secondItem="kPl-3u-zPk" secondAttribute="bottom" constant="18" id="YgE-Gy-2AZ"/>
-                            <constraint firstItem="OGd-NY-ZdB" firstAttribute="top" secondItem="YiH-og-J2p" secondAttribute="top" id="a1I-F4-ly4"/>
                             <constraint firstItem="oK2-r4-Yjp" firstAttribute="top" secondItem="01e-Pe-VFh" secondAttribute="bottom" constant="15" id="bNg-U3-xhj"/>
+                            <constraint firstItem="kPl-3u-zPk" firstAttribute="top" secondItem="YiH-og-J2p" secondAttribute="top" constant="130" id="caX-g1-K21"/>
                             <constraint firstItem="01e-Pe-VFh" firstAttribute="centerX" secondItem="YiH-og-J2p" secondAttribute="centerX" id="fWV-R1-LXK"/>
                             <constraint firstItem="kPl-3u-zPk" firstAttribute="leading" secondItem="YiH-og-J2p" secondAttribute="leading" constant="39" id="lRT-7g-L9r"/>
                             <constraint firstItem="01e-Pe-VFh" firstAttribute="top" secondItem="qpf-r0-fId" secondAttribute="bottom" constant="8" id="pfE-g4-1L1"/>
@@ -153,8 +143,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
@@ -202,58 +192,12 @@
                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5RV-ZT-S9c" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="290" y="506" width="45" height="45"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZv-yB-oXw" customClass="ChromistaButton" customModule="GoodBiology" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                <color key="tintColor" red="0.0" green="0.2075783085" blue="0.0089962140810000008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="camera.circle" catalog="system"/>
-                                                <connections>
-                                                    <segue destination="75i-ns-RbR" kind="show" id="JuV-wk-vrb"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="SZv-yB-oXw" secondAttribute="bottom" id="0J8-T8-LGd"/>
-                                            <constraint firstAttribute="height" constant="45" id="FWj-NK-9hl"/>
-                                            <constraint firstItem="SZv-yB-oXw" firstAttribute="leading" secondItem="5RV-ZT-S9c" secondAttribute="leading" id="Kt8-LI-Aza"/>
-                                            <constraint firstAttribute="trailing" secondItem="SZv-yB-oXw" secondAttribute="trailing" id="gIc-aN-Fpz"/>
-                                            <constraint firstAttribute="width" constant="45" id="qO6-vD-k5y"/>
-                                            <constraint firstItem="SZv-yB-oXw" firstAttribute="top" secondItem="5RV-ZT-S9c" secondAttribute="top" id="ugz-3l-nsT"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g18-lK-Tcv" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="290" y="453" width="45" height="45"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-d1-itV" customClass="ChromistaButton" customModule="GoodBiology" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                <color key="tintColor" red="0.0" green="0.2075783085" blue="0.0089962140810000008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" image="textformat.size" catalog="system"/>
-                                                <connections>
-                                                    <action selector="stepperViewShowing:" destination="4VH-MS-RQq" eventType="touchUpInside" id="D6u-UW-8R2"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="sY3-d1-itV" firstAttribute="top" secondItem="g18-lK-Tcv" secondAttribute="top" id="1h5-or-zNu"/>
-                                            <constraint firstAttribute="width" constant="45" id="FaX-Io-3It"/>
-                                            <constraint firstAttribute="height" constant="45" id="GuM-fL-XfH"/>
-                                            <constraint firstAttribute="bottom" secondItem="sY3-d1-itV" secondAttribute="bottom" id="Ssf-Lr-Zmg"/>
-                                            <constraint firstAttribute="trailing" secondItem="sY3-d1-itV" secondAttribute="trailing" id="YNO-tc-dV0"/>
-                                            <constraint firstItem="sY3-d1-itV" firstAttribute="leading" secondItem="g18-lK-Tcv" secondAttribute="leading" id="eBP-gN-D7g"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="5RV-ZT-S9c" firstAttribute="top" secondItem="g18-lK-Tcv" secondAttribute="bottom" constant="8" id="Bdp-0E-J1A"/>
-                                    <constraint firstAttribute="bottom" secondItem="5RV-ZT-S9c" secondAttribute="bottom" constant="8" id="Ggk-Ge-ABu"/>
                                     <constraint firstItem="S0M-uQ-9KN" firstAttribute="leading" secondItem="nXk-Lo-jCL" secondAttribute="leading" constant="8" id="bpx-LP-qdS"/>
-                                    <constraint firstAttribute="trailing" secondItem="g18-lK-Tcv" secondAttribute="trailing" constant="8" id="eLo-3y-Cik"/>
                                     <constraint firstAttribute="bottom" secondItem="S0M-uQ-9KN" secondAttribute="bottom" constant="8" id="eqr-s4-spb"/>
                                     <constraint firstAttribute="trailing" secondItem="S0M-uQ-9KN" secondAttribute="trailing" constant="8" id="h0k-yi-Cuk"/>
-                                    <constraint firstAttribute="trailing" secondItem="5RV-ZT-S9c" secondAttribute="trailing" constant="8" id="r1k-7b-zjE"/>
                                     <constraint firstItem="S0M-uQ-9KN" firstAttribute="top" secondItem="nXk-Lo-jCL" secondAttribute="top" constant="8" id="xbf-7N-rWY"/>
                                 </constraints>
                             </view>
@@ -294,9 +238,27 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gib-SJ-JUJ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About App" largeTitleDisplayMode="always" id="AJm-OJ-d4k">
+                    <navigationItem key="navigationItem" title="About App" id="AJm-OJ-d4k">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="8Sb-iw-uEI">
+                            <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <segue destination="9d6-Up-Hym" kind="presentation" id="WE8-LV-RN2"/>
+                            </connections>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem id="cJX-4W-bhS"/>
+                            <barButtonItem title="Item" image="icons8-image" id="Oes-SR-835">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="75i-ns-RbR" kind="show" id="ll2-YU-1HO"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="textformat.size" catalog="system" id="K72-Gq-k74">
+                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="stepperViewShowing:" destination="4VH-MS-RQq" id="YsY-8p-5T7"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem systemItem="action" id="x3x-wV-kX1">
                                 <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
@@ -306,15 +268,12 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="appIconShowerButton" destination="SZv-yB-oXw" id="r3Y-qz-S3E"/>
-                        <outlet property="appIconShowerButtonBack" destination="5RV-ZT-S9c" id="ig1-eC-9L9"/>
+                        <outlet property="backButton" destination="8Sb-iw-uEI" id="n30-gE-Ags"/>
                         <outlet property="contentBackground" destination="nXk-Lo-jCL" id="7SV-nt-Gnx"/>
                         <outlet property="contentTextView" destination="S0M-uQ-9KN" id="C0L-lu-WSC"/>
                         <outlet property="shareButton" destination="x3x-wV-kX1" id="hKy-VM-AT7"/>
                         <outlet property="stepper" destination="Mac-aD-cTC" id="XQ4-CK-thv"/>
                         <outlet property="stepperView" destination="AOu-3H-19N" id="rbg-wq-BEp"/>
-                        <outlet property="stepperViewShowerButton" destination="sY3-d1-itV" id="HHC-32-kVS"/>
-                        <outlet property="stepperViewShowerButtonBack" destination="g18-lK-Tcv" id="cIW-rg-iXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6q6-Xo-gIN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -443,9 +402,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Browse Web (woman)" width="2310" height="1400"/>
-        <image name="camera.circle" catalog="system" width="64" height="60"/>
         <image name="eye.slash" catalog="system" width="64" height="42"/>
+        <image name="icons8-image" width="25" height="25"/>
         <image name="realGoodbiologyIcon" width="1024" height="1024"/>
         <image name="textformat.size" catalog="system" width="64" height="40"/>
     </resources>

@@ -10,14 +10,13 @@ import UIKit
 import UserNotifications
 import AudioToolbox
 import Social
-import Combine
-import GoogleMobileAds
+
+enum UserActivityType: String {
+    case openPlantsArticle = "yareyapp.GoodBiology.openPlantsArticle"
+}
 
 @available(iOS 13.0, *)
-final class PlantsViewController: UIViewController {
-    
-    // Google ADMob Banner
-    var interstitial: GADInterstitial!
+class PlantsViewController: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var headLine: UINavigationItem!
@@ -50,208 +49,207 @@ final class PlantsViewController: UIViewController {
     @IBOutlet weak var segmentedControlOutlet:UISegmentedControl!
     
     //MARK: LifeCycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finalView()
-        
-        /// Google Add Banner
-        setupBanner()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
-        viewDidApearAnimation()
-    }
-    
-    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
-}
-
-
-//MARK: - Actions
-extension PlantsViewController {
-    @IBAction func hideSomeMoreView(_ sender: Any) {
-        someMoreView.isHidden = true
-    }
-    
-    @IBAction func cleakHear(_ sender: Any) {
-        showBunner()
-    }
-    
-    //MARK: Action
-    @IBAction func editButton(_ sender: UIBarButtonItem) {
-        sender.viewShowingWithAnimation(animating: switchView, main: view, nil)
-    }
-    
-    @IBAction func sharing(_ sender: Any) {
-        guard let content = basicsTextView.text else { return }
-        FastActivityVC.show(item: content, vc: self)
-        shareButton.shareAudio()
-    }
-    
-    @IBAction func switchAction(_ sender: UISwitch) {
-        let isOn = sender.isOn
+        let objects = [notificationButtonOutlet, segmentedControlOutlet]
         
-        basicsTextView.isEditable           = isOn
-        basicsTextView.isEditable           = isOn
-        basicsTextView.isSelectable         = isOn
-        shareButton.isEnabled               = isOn
-        settingsButton.isEnabled            = isOn
-        segmentedControlOutlet.isHidden     = !isOn
-        segmentedControlOutlet.isHidden     = !isOn
-        notificationButtonOutlet.isHidden   = !isOn
-        switchTextView.text                 = isOn == true ? "Hide  diffrent functions" : "Show diffrent functions"
-    }
-    
-    @IBAction func settingsButtonAction(_ sender: UIBarButtonItem) {
-        stepperView.isHidden    = stepperView.isHidden == true ? false : true
-        shareButton.isEnabled   = stepperView.isHidden == true ? true : false
-        switchButton.isEnabled  = stepperView.isHidden == true ? true : false
-    }
-    
-    @IBAction func stepperAction(_ sender: UIStepper) {
-        let font     = basicsTextView.font?.fontName
-        let fontSize = CGFloat(sender.value)
-        
-        basicsTextView.font = UIFont(name: font!, size: fontSize)
-        
-        UIView.animate(
-            withDuration: 0.33,
-            delay: 0,
-            options: .curveEaseIn,
-            animations: {
-            self.view.layoutIfNeeded()
-        },
-            completion: nil)
-    }
-    
-    //MARK: Actions
-    @IBAction func notificationButton(_ sender: NotificationButton) {
-        sender.notificationButtonBasicFunctions(view)
-        notificationNamePost()
-        PushNotifications.setupBasicNotification(body: "Plants", inSecond: TimeInterval(timeInterval)) { (success) in
-            if success { print(congratsText) } else { print(failText) }
-        }
-    }
-        
-    //MARK: Actions
-    @IBAction func segmetedControl(_ sender: UISegmentedControl) {
-        /// ArticlesViewCountProtocol
-        setPopularityVoit()
-        
-        /// Set Content
-        switch  segmentedControlOutlet.selectedSegmentIndex {
-        case 0:
-            basicsTextView.text = PlantsArticleData.plantsMostContent
-            
-            goToImagesButton.isHidden = true
-            goToVideosButton.isHidden = true
-            
-            notificationButtonOutlet.isHidden = false
-        case 1:
-            basicsTextView.text = PlantsArticleData.plantsBasicsContent
-            
-            goToImagesButton.isHidden = true
-            goToVideosButton.isHidden = true
-            
-            notificationButtonOutlet.isHidden = false
-        case 2:
-            basicsTextView.text = PlantsArticleData.plantsStructureContent
-            
-            goToImagesButton.isHidden = true
-            goToVideosButton.isHidden = true
-            
-            notificationButtonOutlet.isHidden = false
-        case 3:
-            basicsTextView.text = ""
-            goToImagesButton.isHidden = false
-            goToVideosButton.isHidden = false
-            
-            notificationButtonOutlet.isHidden = true
-        default:
-            print(" Error ")
-        }
-    }
-}
-
-
-//MARK: - ArticlesViewControllerDelegate
-extension PlantsViewController: ArticlesViewControllerDelegate {
-    func finalView() {
-        view.viewGradient()
-        
-        viewBasics()
-        procesingInformationShowing()
-        systemBackground()
-    }
-    
-    private func systemBackground() {
-        progressView.viewSystemBack()
-        switchOutlet.viewSystemBack()
-        capitalView.viewSystemBack()
-        switchView.viewSystemBack()
-        stepperView.viewSystemBack()
-        contentTextView.viewSystemBack()
-        view.viewSystemBack()
-    }
-}
-
-
-//MARK: - ArticleViewControllerSetupViewPrtocol
-extension PlantsViewController: ArticleViewControllerSetupViewPrtocol {
-    func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
-        for (index, views) in views.enumerated() {
+        for (index, objects) in objects.enumerated() {
             let delay: Double = Double((index)) * 0.2
             
             UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
                 let alpha: CGFloat = 1
                 
-                views.alpha = alpha
-                bonusAnomation!()
+                objects?.alpha = alpha
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
+                    UIView.animate(withDuration: 0.4) {
+                        self.someMoreView.alpha = 0.96
+                    }
+                }
             })
         }
     }
     
-    func procesingInformationShowing() {
-        UIView.animate(withDuration: 0, delay: 1, options: .curveLinear, animations: {
-            self.basicsTextView.mainTextViewTextColor(alpha: 1)
-        }) {(finished) in
-            UIView.animate(withDuration: 0.3, animations: {
-                self.activityIndicator.activityIndicatorStop()
-                self.basicsTextView.mainTextViewTextColor(alpha: 1)
-                self.progressView.stopProgress()
-            })
-        }
-        progressView.basicProgress()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            if self.progressView.progress != 1 {
-                self.progressView.startProgress()
+        finalView()
+    }
+    
+    func openPlantsArticle() {
+        createUserActivityType()
+    }
+    
+    @IBAction func hideSomeMoreView(_ sender: Any) {
+        someMoreView.isHidden = true
+    }
+    
+    private func createUserActivityType() {
+        let activity = NSUserActivity(activityType: UserActivityType.openPlantsArticle.rawValue)
+        
+        activity.title = "Open Article about Plants"
+        activity.isEligibleForSearch = true
+        
+        if #available(iOS 12.0, *) {
+            activity.isEligibleForPrediction = true
+        }
+        
+        self.userActivity = activity
+        self.userActivity?.becomeCurrent()
+    }
+    
+    private func systemBackground() {
+        if #available(iOS 13.0, *) {
+            progressView.viewSystemBack()
+            switchOutlet.viewSystemBack()
+            capitalView.viewSystemBack()
+            switchView.viewSystemBack()
+            stepperView.viewSystemBack()
+            contentTextView.viewSystemBack()
+            view.viewSystemBack()
+        }
+    }
+    
+    //MARK: Action
+    @IBAction func editButton(_ sender: UIBarButtonItem) {
+        if switchView.isHidden == false {
+            switchView.isHidden = true
+        } else {
+            switchView.isHidden = false
+        }
+    }
+    
+    @IBAction func sharing(_ sender: Any) {
+        guard let content = basicsTextView.text else { return }
+        fastActivityVC(item: content)
+        shareButton.shareAudio()
+    }
+    
+    private func fastActivityVC(item: String) {
+        
+        //Alert
+        let alert = UIAlertController(title: "Share", message: nil, preferredStyle: .actionSheet)
+            alert.view.tintColor = lazyColor
+        let basicShare = UIAlertAction(title: "Basic Share", style: .default) { (action) in
+            let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
+                activityVC.popoverPresentationController?.sourceView = self.view
+            
+                UIApplication.shared.keyWindow?.tintColor = lazyColor
+            
+            self.present(activityVC, animated: true, completion: nil)
+        }
+        
+        let actionFacebook = UIAlertAction(title: "Share on Facebook", style: .default) { (action) in
+            //Checking if user is connected to Facebook
+            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
+                let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
+                
+                post.setInitialText(PlantsArticleData.plantsMostContent)
+                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
+                
+                self.present(post, animated: true, completion: nil)
+                
             } else {
-                UIView.animate(withDuration: 0.3, animations: {
-                    self.activityIndicator.activityIndicatorStop()
-                    self.basicsTextView.mainTextViewTextColor(alpha: 1)
-                    self.progressView.stopProgress()
-                })
+                self.showAlert(service: "Facebook")
             }
         }
+        
+        //Second action
+        let actionTwitter = UIAlertAction(title: "Share on Twitter", style: .default) { (action) in
+            
+            //Checking if user is connected to Facebook
+            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
+                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
+                
+                post.setInitialText(PlantsArticleData.plantsMostContent)
+                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
+                
+                self.present(post, animated: true, completion: nil)
+                
+            } else {
+                self.showAlert(service: "Twitter")
+            }
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        //Add action to action sheet
+        alert.addAction(basicShare)
+        alert.addAction(actionFacebook)
+        alert.addAction(actionTwitter)
+        alert.addAction(cancel)
+        alert.setTitle(font: UIFont(name: "AvenirNext-Medium", size: 14), color: .lightGray)
+        
+        //Present alert
+        self.present(alert, animated: true, completion: nil)
     }
-}
-
-
-//MARK: - ArticlesVCconnectionProtocol
-extension PlantsViewController: ArticlesVCconnectionProtocol {
-    func notificationNamePost() {
-        let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.plantsVCKey)
-        NotificationCenter.default.post(name: notificationName, object: nil)
+    
+    func showAlert(service: String) {
+        let alert = UIAlertController(title: "Error", message: "You are not connected to \(service)", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        
+                alert.addAction(action)
+                alert.view.tintColor = lazyColor
+        present(alert, animated: true, completion: nil)
     }
-}
-
-
-//MARK: - Main Functions
-extension PlantsViewController {
+    
+    @IBAction func switchAction(_ sender: UISwitch) {
+        if sender.isOn == true {
+            basicsTextView.isEditable           = true
+            basicsTextView.isSelectable         = true
+            segmentedControlOutlet.isHidden     = false
+            notificationButtonOutlet.isHidden   = false
+            settingsButton.isEnabled            = true
+            shareButton.isEnabled               = true
+            switchTextView.text                 = "Hide  diffrent functions"
+        } else {
+            basicsTextView.isEditable           = false
+            basicsTextView.isSelectable         = false
+            segmentedControlOutlet.isHidden     = true
+            notificationButtonOutlet.isHidden   = true
+            settingsButton.isEnabled            = false
+            shareButton.isEnabled               = false
+            stepperView.isHidden                = true
+            switchTextView.text                 = "Show diffrent functions"
+            stepperView.isHidden                = true
+        }
+    }
+    
+    @IBAction func settingsButtonAction(_ sender: Any) {
+        if stepperView.isHidden == true {
+            stepperView.isHidden    = false
+            
+            shareButton.isEnabled   = false
+            switchButton.isEnabled  = false
+        } else {
+            stepperView.isHidden    = true
+            
+            shareButton.isEnabled   = true
+            switchButton.isEnabled  = true
+        }
+    }
+    
+    @IBAction func stepperAction(_ sender: UIStepper) {
+        let font            = basicsTextView.font?.fontName
+        let fontSize        = CGFloat(sender.value)
+        
+        basicsTextView.font = UIFont(name: font!, size: fontSize)
+    }
+    
+    deinit {
+        removeNotifications(withIdentifiers: ["MyUniqueIdentifier"])
+    }
+    
+    //MARK: Public
     private func removeNotifications(withIdentifiers identifiers: [String])   {
         let center = UNUserNotificationCenter.current()
             center.removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+    
+    //MARK: Actions
+    @IBAction func notificationButton(_ sender: NotificationButton) {
+        plantsScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
+            if success { print(congratsText) } else { print(failText) }
+        }
+        sender.notificationButtonBasicFunctions(view)
     }
     
     private func switchViewPrefering() {
@@ -295,15 +293,75 @@ extension PlantsViewController {
         segmentedControlOutlet.segmentedControlBasics()
     }
     
-    private func viewDidApearAnimation() {
-        let objects = [notificationButtonOutlet, segmentedControlOutlet]
+    func procesingInformationShowing() {
+        UIView.animate(withDuration: 0, delay: 1, options: .curveLinear, animations: {
+            self.basicsTextView.mainTextViewTextColor(alpha: 1)
+        }) {(finished) in
+            UIView.animate(withDuration: 0.3, animations: {
+                self.activityIndicator.activityIndicatorStop()
+                self.basicsTextView.mainTextViewTextColor(alpha: 1)
+                self.progressView.stopProgress()
+            })
+        }
+        progressView.basicProgress()
         
-        viewDidApearAnimationPreview(objects as! [UIView], {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 30) {
-                UIView.animate(withDuration: 0.4) {
-                    self.someMoreView.alpha = 0.96
-                }
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            if self.progressView.progress != 1 {
+                self.progressView.startProgress()
+            } else {
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.activityIndicator.activityIndicatorStop()
+                    self.basicsTextView.mainTextViewTextColor(alpha: 1)
+                    self.progressView.stopProgress()
+                })
             }
-        })
+        }
+        viewDidLoadPrinting(doing: "Plants")
+    }
+        
+    //MARK: Actions
+    @IBAction func segmetedControl(_ sender: UISegmentedControl) {
+        switch  segmentedControlOutlet.selectedSegmentIndex {
+        case 0:
+            basicsTextView.text = PlantsArticleData.plantsMostContent
+            
+            goToImagesButton.isHidden = true
+            goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
+        case 1:
+            basicsTextView.text = PlantsArticleData.plantsBasicsContent
+            
+            goToImagesButton.isHidden = true
+            goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
+        case 2:
+            basicsTextView.text = PlantsArticleData.plantsStructureContent
+            
+            goToImagesButton.isHidden = true
+            goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
+        case 3:
+            basicsTextView.text = ""
+            goToImagesButton.isHidden = false
+            goToVideosButton.isHidden = false
+            
+            notificationButtonOutlet.isHidden = true
+        default:
+            print(" Error ")
+        }
+    }
+}
+
+@available(iOS 13.0, *)
+extension PlantsViewController: ArticlesViewControllerDelegate {
+    func finalView() {
+        view.viewGradient()
+        
+        viewBasics()
+        procesingInformationShowing()
+        systemBackground()
     }
 }
