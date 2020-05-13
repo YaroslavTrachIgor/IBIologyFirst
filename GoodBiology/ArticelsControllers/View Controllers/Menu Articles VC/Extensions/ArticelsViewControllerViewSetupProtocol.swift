@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 protocol ArticelsViewControllerViewSetupProtocol {
+    
     // view Setup
     func articelsViewControllerTextViewSetup()
     func systemColors()
     
     // TextFields Setup
-    func textViewShadowPrefering()
     func textViewsFontPrefering()
     
     // SearchController Setup
@@ -23,12 +23,27 @@ protocol ArticelsViewControllerViewSetupProtocol {
     
     // RefreshControl Setup
     func refreshControlPrefering()
+    
+    //MARK: - OBSERVERS
+    //MARK: ArticlesByNotificationsTextUpdate
+    func createObservers()
 }
 
-extension ArticelsViewController: ArticelsViewControllerViewSetupProtocol {
+protocol ArticlesByNotificationsTextUpdate {
+    func plantsLabelUpdateText(notification:    NSNotification)
+    func animalsLabelUpdateText(notification:   NSNotification)
+    func microbesLabelUpdateText(notification:  NSNotification)
+    func virusesLabelUpdateText(notification:   NSNotification)
+    func humanLabelUpdateText(notification:     NSNotification)
+    func archaeaLabelUpdateText(notification:   NSNotification)
+    func fungusesLabelUpdateText(notification:  NSNotification)
+}
+
+typealias ArticelsViewControllerMainViewSetupProtocol = ArticlesByNotificationsTextUpdate & ArticelsViewControllerViewSetupProtocol
+
+extension ArticelsViewController: ArticelsViewControllerMainViewSetupProtocol {
     func articelsViewControllerTextViewSetup() {
         textViewsFontPrefering()
-        textViewShadowPrefering()
     }
     
     func systemColors() {
@@ -42,17 +57,6 @@ extension ArticelsViewController: ArticelsViewControllerViewSetupProtocol {
             fungusTextView.setSecondaryTextColor()
             chromistaTextView.setSecondaryTextColor()
         }
-    }
-    
-    func textViewShadowPrefering() {
-        plantTextView.textViewShadow()
-        animalTextView.textViewShadow()
-        microbeTextView.textViewShadow()
-        humanTextView.textViewShadow()
-        virusTextView.textViewShadow()
-        archaeaTextView.textViewShadow()
-        fungusTextView.textViewShadow()
-        chromistaTextView.textViewShadow()
     }
     
     func textViewsFontPrefering() {
@@ -73,5 +77,45 @@ extension ArticelsViewController: ArticelsViewControllerViewSetupProtocol {
     
     func refreshControlPrefering() {
         scrollView.refreshControl = settingsRefreshControl
+    }
+    
+    //MARK: - OBSERVERS
+    func createObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(ArticelsViewController.plantsLabelUpdateText(notification: )), name: NotificationNames.plantsVCKeyName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ArticelsViewController.animalsLabelUpdateText(notification: )), name: NotificationNames.animalsVCKeyName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ArticelsViewController.microbesLabelUpdateText(notification: )), name: NotificationNames.microbesVCKeyName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ArticelsViewController.virusesLabelUpdateText(notification: )), name: NotificationNames.virusesVCKeyName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ArticelsViewController.humanLabelUpdateText(notification: )), name: NotificationNames.humenVCKeyName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ArticelsViewController.archaeaLabelUpdateText(notification: )), name: NotificationNames.archaeaVCKeyName, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ArticelsViewController.fungusesLabelUpdateText(notification: )), name: NotificationNames.fungusesVCKeyName, object: nil)
+    }
+
+    //MARK: ArticlesByNotificationsTextUpdate
+    @objc func plantsLabelUpdateText(notification: NSNotification) {
+        plantsLabel.textColor = .biologyGreenColor
+    }
+    
+    @objc func animalsLabelUpdateText(notification: NSNotification) {
+        animalsLabel.textColor = .biologyGreenColor
+    }
+    
+    @objc func microbesLabelUpdateText(notification: NSNotification) {
+        microbesLabel.textColor = .biologyGreenColor
+    }
+    
+    @objc func virusesLabelUpdateText(notification: NSNotification) {
+        virusesLabel.textColor = .biologyGreenColor
+    }
+       
+    @objc func humanLabelUpdateText(notification: NSNotification) {
+        humanLabel.textColor = .biologyGreenColor
+    }
+    
+    @objc func archaeaLabelUpdateText(notification: NSNotification) {
+        archaeaLabel.textColor = .biologyGreenColor
+    }
+    
+    @objc func fungusesLabelUpdateText(notification: NSNotification) {
+        fungusesLabel.textColor = .biologyGreenColor
     }
 }

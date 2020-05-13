@@ -14,25 +14,40 @@ protocol ChromistaLabelDelegate {
     func setupChromistaLabel()
 }
 
-class ChromistaLabel: UILabel {
+final class ChromistaLabel: UILabel {
     override init(frame: CGRect) {
-      super.init(frame: frame)
+        super.init(frame: frame)
+        
         setupChromistaLabel()
     }
     
     required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
+        
         setupChromistaLabel()
     }
 }
 
 extension ChromistaLabel: ChromistaLabelDelegate {
-    internal func setupChromistaLabel() {
+    func setupChromistaLabel() {
+        setupTextColor()
+        setupAlpha()
+        setupShadow()
+    }
+}
+
+extension ChromistaLabel {
+    func setupTextColor() {
         if #available(iOS 13.0, *) {
             textColor = .secondaryLabel
         }
-        alpha     = 0
-        
+    }
+    
+    func setupAlpha() {
+        alpha = 0
+    }
+    
+    func setupShadow() {
         labelShadow()
     }
 }

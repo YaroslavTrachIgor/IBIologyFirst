@@ -8,28 +8,50 @@
 
 import UIKit
 import AudioToolbox
+import GoogleMobileAds
+import PopMenu
 
-class BasicNotesViewController: UIViewController, NotesDelegate {
+final class BasicNotesViewController: UIViewController {
 
+    let viewModel = BasicNotesViewControllerViewModel()
+    
+    // MARK: - @IBOutlet
+    // MARK: - TextViewBackView
     @IBOutlet weak var textFieldView:                TextViewBackView!
     @IBOutlet weak var textViewBackgroundView:       TextViewBackView!
     
-    @IBOutlet weak var inputTextField:               UITextField!
-    @IBOutlet weak var textView:                     UITextView!
-    @IBOutlet weak var trashItem:                    UIBarButtonItem!
-    @IBOutlet weak var searchItem:                   UIBarButtonItem!
-    @IBOutlet weak var pickerViewBackground:         UIView!
-    @IBOutlet weak var pickerView:                   UIPickerView!
-    @IBOutlet weak var textFieldActivityIndicator:   UIActivityIndicatorView!
-    @IBOutlet weak var textViewActivityIndicator:    UIActivityIndicatorView!
-    @IBOutlet weak var datePicker:                   UIPickerView!
-    @IBOutlet weak var datePickerView:               UIView!
-    @IBOutlet weak var dateChooseButton:             UIButton!
+    // UIButtons
+    @IBOutlet weak var trashButton: UIButton!
     
+    // Banner View
+    @IBOutlet weak var googleAdBannerView: GADBannerView!
+    
+    // Main Fields
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var textView: UITextView!
+    
+    // UIBarButtonItems
+    @IBOutlet weak var searchItem: UIBarButtonItem!
+    
+    // Picker View Background
+    @IBOutlet weak var pickerViewBackground: UIView!
+    @IBOutlet weak var pickerView: UIPickerView!
+    
+    // UIActivityIndicatorViews
+    @IBOutlet weak var textFieldActivityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var textViewActivityIndicator: UIActivityIndicatorView!
+    
+    // Date Picker View
+    @IBOutlet weak var datePicker: UIPickerView!
+    @IBOutlet weak var datePickerView: UIView!
+    @IBOutlet weak var dateChooseButton: UIButton!
+    
+    // MARK: - Array
     let articlesArray = ["Plants", "Animals", "Microbes", "Fungus", "Man", "Viruses", "Archaeas", "Biology", "Internet", "Nothing"]
     
     static public var textViewText: String = ""
     
+    // MARK: - BasicToolbar
     lazy var toolBar: BasicToolbar = {
         let toolBar     = BasicToolbar()
         let spacer      = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -49,18 +71,14 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let objectsArray = [textFieldView, textViewBackgroundView]
-        
-        for (index, objects) in objectsArray.enumerated() {
-            let delay: Double = Double((index)) * 0.2
-            
-            UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                objects?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-            })
-        }
+        setupAnimation()
     }
-    
-    // NotesDelegate Method
+}
+
+
+// MARK: - BasicNotesViewControllerMainProtocols
+typealias BasicNotesViewControllerMainProtocols = NotesDelegate & NotesVCAnimation
+extension BasicNotesViewController: BasicNotesViewControllerMainProtocols {
     func notesBasicViewThings() {
         datePickerPrefering()
         shadowsPrefering()
@@ -75,13 +93,23 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
         systemColorsPrefering()
         textContainersTintSetup()
         alphaSetup()
+        setupGoogleAdBannerView()
+        view.addTapGestureToHideKeyboard()
     }
     
     func setupNavItemTitle() {
-        navigationItem.setTitle("Basic Notes", subtitle: "For Today")
-        navigationItem.title = ""
+        viewModel.setupNavItem(navigationItem: navigationItem)
     }
     
+    func setupAnimation() {
+        let objectsArray = [textFieldView, textViewBackgroundView]
+        viewModel.viewDidApearAnimation(objectsArray as! [UIView])
+    }
+}
+
+
+// MARK: - @Actions
+extension BasicNotesViewController {
     @IBAction func sharing(_ sender: Any) {
         let contentText     = textView.text
         let textFieldText   = inputTextField.text
@@ -89,24 +117,9 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
         guard let content = contentText, let title = textFieldText else { return }
         
         if content.isEmpty || title.isEmpty || content.isEmpty && title.isEmpty {
-            let activityVC = UIActivityViewController(activityItems: ["\(String(describing: textFieldText)) - \(String(describing: contentText))"], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
-
-            UIApplication.shared.keyWindow?.tintColor = lazyColor
-            
-            self.present(activityVC, animated: true, completion: nil)
-            
-            print("""
-                 User want to share with his/her notes in "Basic Notes" section
-                 """)
+            viewModel.showActivityVC(content: "\(String(describing: textFieldText)) - \(String(describing: contentText))", self)
         } else {
-            let alert = UIAlertController(title: "Sorry", message: "But one of the components is empty", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-                    alert.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                    alert.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                    alert.view.tintColor = lazyColor
-                    alert.addAction(cancel)
-            present(alert, animated: true, completion: nil)
+            FastAlert.showBasic(title: "Sorry", message: "But one of the components is empty", vc: self)
         }
     }
     
@@ -119,146 +132,78 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
     }
     
     @IBAction func trash(_ sender: Any) {
-        guard let content = textView.text, let title = inputTextField.text else { return }
+        let manager = PopMenuManager.default
+        let managerProperties = BasicPopMenuAppearanceProperties()
+        let deletedText = ""
         
-        if content.isEmpty || title.isEmpty || content.isEmpty && title.isEmpty {
-            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            let cancel = UIAlertAction(title: cancelWord, style: .cancel) {
-                (action) in }
-            let delete = UIAlertAction(title: "\(deleteWord) All", style: .destructive) {
-            (action) in
+        /// Set Actions
+        manager.actions = [PopMenuDefaultAction(title: "\(deleteWord) Headline and Content", image: UIImage(named: managerProperties.imageName), didSelect: { (_) in
+            self.viewModel.setTextViewText(textView: self.textView, text: deletedText)
+            self.viewModel.setTextFieldText(textField: self.inputTextField, text: deletedText)
             
-            if self.inputTextField.text == "" && self.textView.text == "" || self.inputTextField.text == " " && self.textView.text == " " {
-                let alertController = UIAlertController(title: sorryWord, message: "But you have nothing written.", preferredStyle: .alert)
-                
-                let cancel = UIAlertAction(title: cancelWord, style: .cancel)
-                
-                alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                alertController.addAction(cancel)
-                alertController.view.tintColor = lazyColor
-                
-                self.present(alertController, animated: true)
-            } else {
-                let alertController = UIAlertController(title: "Are You Sure ?", message: "Are you sure you want to delete note content and title, that you had written", preferredStyle: .alert)
-                
-                let delete = UIAlertAction(title: deleteWord, style: .destructive) {
-                    (action) in 
-                    self.inputTextField.text    = ""
-                    self.textView.text          = ""
-                }
-                
-                let cancel = UIAlertAction(title: cancelWord, style: .cancel)
-                
-                alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                alertController.addAction(cancel)
-                alertController.addAction(delete)
-                alertController.view.tintColor = lazyColor
-                
-                self.present(alertController, animated: true)
-                }
-            }
-            let deleteHeadline = UIAlertAction(title: "\(deleteWord) Headline", style: .destructive) {
-            (action) in
+        }), PopMenuDefaultAction(title: "\(deleteWord) Headline", image: UIImage(named: managerProperties.imageName), didSelect: { (_) in
+            self.viewModel.setTextFieldText(textField: self.inputTextField, text: deletedText)
             
-                if self.inputTextField.text == "" || self.inputTextField.text == " " {
-                    let alertController = UIAlertController(title: sorryWord, message: "But you have nothing written.", preferredStyle: .alert)
-                
-                    let cancel = UIAlertAction(title: cancelWord, style: .cancel)
-                
-                    alertController.addAction(cancel)
-                    alertController.view.tintColor = lazyColor
-                
-                    self.present(alertController, animated: true)
-                } else {
-                    let alertController = UIAlertController(title: "Are You Sure ?", message: "Are you sure you want to delete content, that you had written", preferredStyle: .alert)
-                
-                let delete = UIAlertAction(title: deleteWord, style: .destructive) {
-                    (action) in
-                    
-                    self.inputTextField.text = ""
-                }
-                
-                let cancel = UIAlertAction(title: cancelWord, style: .cancel)
-                
-                alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                alertController.addAction(cancel)
-                alertController.addAction(delete)
-                alertController.view.tintColor = lazyColor
-                
-                self.present(alertController, animated: true)
-            }
-        }
-        let deleteContent = UIAlertAction(title: "\(deleteWord) Content", style: .destructive) {
-            (action) in
-            
-            if self.textView.text == "" || self.textView.text == " " {
-                let alertController = UIAlertController(title: sorryWord, message: "But you have nothing written.", preferredStyle: .alert)
-                
-                let cancel = UIAlertAction(title: cancelWord, style: .cancel)
-                
-                alertController.addAction(cancel)
-                self.present(alertController, animated: true)
-            } else {
-                let alertController = UIAlertController(title: "Are You Sure ?", message: "Are you sure you want to delete content, that you had written", preferredStyle: .alert)
-                
-                let delete = UIAlertAction(title: deleteWord, style: .destructive) {
-                    (action) in
-                    
-                    self.textView.text = ""
-                }
-                
-                let cancel = UIAlertAction(title: cancelWord, style: .cancel)
-                
-                alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                alertController.addAction(cancel)
-                alertController.addAction(delete)
-                alertController.view.tintColor = lazyColor
-                
-                self.present(alertController, animated: true)
-            }
-        }
-            alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-            alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-            alertController.addAction(cancel)
-            alertController.addAction(delete)
-            alertController.addAction(deleteHeadline)
-            alertController.addAction(deleteContent)
-            alertController.view.tintColor = lazyColor
+        }), PopMenuDefaultAction(title: "\(deleteWord) Content", image: UIImage(named: managerProperties.imageName), didSelect: { (_) in
+            self.textView.text = deletedText
+            self.viewModel.setTextViewText(textView: self.textView, text: deletedText)
+        })]
         
-            self.present(alertController, animated: true, completion: nil)
-        } else {
-            let alert = UIAlertController(title: "\(sorryWord),", message: "But one or more of the components are empty", preferredStyle: .alert)
-            let cancel = UIAlertAction(title: okWord, style: .cancel, handler: nil)
-            
-                    alert.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-                    alert.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-                    alert.view.tintColor = lazyColor
-                    alert.addAction(cancel)
-            present(alert, animated: true, completion: nil)
-        }
+        /// Set menu view back color and opacity
+        manager.popMenuAppearance.popMenuBackgroundStyle = .dimmed(color: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), opacity: 0.7)
+        
+        // Set UIFont
+        manager.popMenuAppearance.popMenuFont = managerProperties.basicPopMenuAppearanceFont
+        
+        /// Set Corners
+        manager.popMenuAppearance.popMenuCornerRadius = managerProperties.basicPopMenuCornerRadius
+        
+        /// Set animations
+        manager.popMenuAppearance.popMenuPresentationStyle = .cover()
+        
+        /// Set Row Heighr
+        manager.popMenuAppearance.popMenuActionHeight = managerProperties.basicPopMenuActionHeight
+        
+        /// Presnt Maneger
+        manager.present(sourceView: trashButton)
     }
     
     @objc func doneButtonAction() {
-        self.view.endEditing(true)
-    }
-    
-    private func prepareToolBar() {
-        inputTextField.inputAccessoryView   = toolBar
-        textView.inputAccessoryView         = toolBar
+        viewModel.endEditing(view)
     }
     
     @IBAction func dateChoosing(_ sender: Any) {
         if datePickerView.isHidden == true {
-            datePickerView.isHidden = false
+            viewModel.setViewHidden(datePickerView, hidden: false)
         } else {
-            datePickerView.isHidden = true
+            viewModel.setViewHidden(datePickerView, hidden: true)
         }
         timeButtonText()
         dateViewShowingAudio()
+    }
+    
+    @IBAction func dateOnTextView(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        let dateValue = dateFormatter.string(from: sender.date)
+        viewModel.setTextViewText(textView: textView, text: textView.text! + dateValue)
+    }
+}
+
+// MARK: - GADBannerViewDelegate
+extension BasicNotesViewController: GADBannerViewDelegate {
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {}
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {}
+}
+
+
+// MARK: - Main Functions
+extension BasicNotesViewController {
+    
+    // MARK: Private
+    private func prepareToolBar() {
+        inputTextField.inputAccessoryView = toolBar
+        textView.inputAccessoryView       = toolBar
     }
     
     private func dateViewShowingAudio() {
@@ -271,28 +216,23 @@ class BasicNotesViewController: UIViewController, NotesDelegate {
     
     private func timeButtonText() {
         if datePickerView.isHidden == true {
-            dateChooseButton.setTitle("Choose Date", for: .normal)
+            viewModel.setButtonTitle(dateChooseButton, title: "Choose Date")
         } else {
-            dateChooseButton.setTitle("Cancel", for: .normal)
+            viewModel.setButtonTitle(dateChooseButton, title: "Cancel")
         }
-    }
-    
-    @IBAction func dateOnTextView(_ sender: UIDatePicker) {
-        let dateFormatter           = DateFormatter()
-            dateFormatter.dateStyle = .medium
-        
-        let dateValue               = dateFormatter.string(from: sender.date)
-        
-        textView.text = textView.text! + dateValue
     }
     
     private func animationsPrefering() {
         UIView.animate(withDuration: 0, delay: 0.9, options: .curveLinear, animations: {
-            self.inputTextField.alpha = 1
-            self.textView.alpha       = 1
+            self.viewModel.setViewAlpha(self.textView, alpha: 1)
+            self.viewModel.setViewAlpha(self.inputTextField, alpha: 1)
         }) {(finished) in
             self.textFieldActivityIndicator.activityIndicatorStop()
             self.textViewActivityIndicator.activityIndicatorStop()
         }
+    }
+    
+    private func setupGoogleAdBannerView() {
+        viewModel.setupGoogleBanner(googleAdBannerView, unit: "ca-app-pub-8702634561077907/9283193921", vc: self)
     }
 }

@@ -12,7 +12,7 @@ class BasicsDataManager {
     private var models: [BasicsModel] = []
     
     func prepareModels() {
-        let rawData: [[String:String]] = prepareRawDataArray()
+        let rawData: [[String: String]] = prepareRawDataArray()
         
         for item in rawData {
             guard let title = item["title"], let content = item["content"] else { break }
@@ -30,10 +30,10 @@ class BasicsDataManager {
 }
 
 extension BasicsDataManager {
-    func prepareRawDataArray() -> [[String:String]] {
-        let dataArray: [[String:String]] = [
+    func prepareRawDataArray() -> [[String: String]] {
+        let dataArray: [[String: String]] = [
             [
-                "title" : "Basics",
+                "title" : "Biology Basics",
                 "content" : "Biology is the natural science that studies life and living organisms, including their physical structure, chemical processes, molecular interactions, physiological mechanisms, development and evolution. Despite the complexity of the science, there are certain unifying concepts that consolidate it into a single, coherent field. Biology recognizes the cell as the basic unit of life, genes as the basic unit of heredity, and evolution as the engine that propels the creation and extinction of species. Living organisms are open systems that survive by transforming energy and decreasing their local entropy to maintain a stable and vital condition defined as homeostasis. Sub-disciplines of biology are defined by the research methods employed and the kind of system studied: theoretical biology uses mathematical methods to formulate quantitative models while experimental biology performs empirical experiments to test the validity of proposed theories and understand the mechanisms underlying life and how it appeared and evolved from non-living matter about 4 billion years ago through a gradual increase in the complexity of the system. See branches of biology."
             ],
             [
@@ -42,7 +42,7 @@ extension BasicsDataManager {
             ],
             [
                 "title" : "History pt. 2",
-                "content" : "The objects of our research will be the different forms and manifestations of life, the conditions and laws under which these phenomena occur, and the causes through which they have been effected. The science that concerns itself with these objects we will indicate by the name biology or the doctrine of life.Although modern biology is a relatively recent development, sciences related to and included within it have been studied since ancient times. Natural philosophy was studied as early as the ancient civilizations of Mesopotamia, Egypt, the Indian subcontinent, and China. However, the origins of modern biology and its approach to the study of nature are most often traced back to ancient Greece. While the formal study of medicine dates back to Hippocrates (ca. 460–370 BC), it was Aristotle (384–322 BC) who contributed most extensively to the development of biology. Especially important are his History of Animals and other works where he showed naturalist leanings, and later more empirical works that focused on biological causation and the diversity of life."
+                "content" : "The objects of our research will be the different forms and manifestations of life, the conditions and laws under which these phenomena occur, and the causes through which they have been effected. The science that concerns itself with these objects we will indicate by the name biology or the doctrine of life. Although modern biology is a relatively recent development, sciences related to and included within it have been studied since ancient times. Natural philosophy was studied as early as the ancient civilizations of Mesopotamia, Egypt, the Indian subcontinent, and China. However, the origins of modern biology and its approach to the study of nature are most often traced back to ancient Greece. While the formal study of medicine dates back to Hippocrates (ca. 460–370 BC), it was Aristotle (384–322 BC) who contributed most extensively to the development of biology. Especially important are his History of Animals and other works where he showed naturalist leanings, and later more empirical works that focused on biological causation and the diversity of life."
             ],
             [
                 "title" : "Cell Theory",
@@ -216,12 +216,6 @@ extension BasicsDataManager {
                 The most important objectives that are frequently found in nanobiology involve applying nanotools to relevant medical/biological problems and refining these applications. Developing new tools, such as peptoid nanosheets, for medical and biological purposes is another primary objective in nanotechnology. New nanotools are often made by refining the applications of the nanotools that are already being used. The imaging of native biomolecules, biological membranes, and tissues is also a major topic for the nanobiology researchers. Other topics concerning nanobiology include the use of cantilever array sensors and the application of nanophotonics for manipulating molecular processes in living cells.
                 
                 Recently, the use of microorganisms to synthesize functional nanoparticles has been of great interest. Microorganisms can change the oxidation state of metals. These microbial processes have opened up new opportunities for us to explore novel applications, for example, the biosynthesis of metal nanomaterials. In contrast to chemical and physical methods, microbial processes for synthesizing nanomaterials can be achieved in aqueous phase under gentle and environmentally benign conditions. This approach has become an attractive focus in current green bionanotechnology research towards sustainable development.
-                """
-            ],
-            [
-                "title" : "Structural biology",
-                "content" : """
-                Structural biology is a branch of molecular biology, biochemistry, and biophysics concerned with the molecular structure of biological macromolecules (especially proteins, made up of amino acids, RNA or DNA, made up of nucleotides, membranes, made up of lipids) how they acquire the structures they have, and how alterations in their structures affect their function.[1] This subject is of great interest to biologists because macromolecules carry out most of the functions of cells, and it is only by coiling into specific three-dimensional shapes that they are able to perform these functions. This architecture, the "tertiary structure" of molecules, depends in a complicated way on each molecule's basic composition, or "primary structure."
                 """
             ],
             [

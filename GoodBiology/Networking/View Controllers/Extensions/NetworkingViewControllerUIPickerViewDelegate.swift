@@ -18,7 +18,7 @@ extension NetworkingViewController: UIPickerViewDelegate {
         return sytesMenuArray.count
     }
     
-    private func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    internal func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return sytesMenuArray[row]
     }
 }

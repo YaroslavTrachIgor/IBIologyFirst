@@ -8,6 +8,7 @@
 
 import UIKit
 import AudioToolbox
+import Combine
 
 struct TestViewKeys {
     static let plantsViewKey    = "PlantsViewKey"
@@ -19,33 +20,56 @@ struct TestViewKeys {
     static let fungusesViewKey  = "FungusesViewKey"
 }
 
-class TestViewController: UIViewController {
+class TestScores {
+    static let shared = TestScores()
     
+    private init() {}
+    
+    // Main Properties
+    var testScore: Int = 0
+    var doneButtonEnabled = true
+}
+
+final class TestViewController: UIViewController {
+    
+    // Gradient
+    let gradient: BasicRootVCGradient = BasicRootVCGradient(color: #colorLiteral(red: 0.9783470812, green: 0.9783470812, blue: 0.9783470812, alpha: 1))
+    
+    // Notification for set alpha
     var notificationName = Notification.Name("")
     
-    //MARK: IBOutlets
-    @IBOutlet weak var testView:             TestBackView!
-    @IBOutlet weak var secondTestView:       TestBackView!
+    // MARK: IBOutlets
+    // TestBackView
+    @IBOutlet weak var testView:       TestBackView!
+    @IBOutlet weak var secondTestView: TestBackView!
     
-    @IBOutlet weak var answerLabel:          AnswerLabel!
+    // AnswerLabel
+    @IBOutlet weak var answerLabel: AnswerLabel!
     
-    @IBOutlet weak var trueButtonOutlet:     TestButton!
-    @IBOutlet weak var falseButtonOutlet:    TestButton!
+    // TestButton
+    @IBOutlet weak var trueButtonOutlet:  TestButton!
+    @IBOutlet weak var falseButtonOutlet: TestButton!
     private var falseTint = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.798640839)
     
-    @IBOutlet weak var stepperView:          TestStepperView!
-    @IBOutlet weak var stepperOutlet:        UIStepper!
+    // Stepper VIew
+    @IBOutlet weak var stepperView:    TestStepperView!
+    @IBOutlet weak var stepperOutlet:  UIStepper!
     
-    @IBOutlet weak var secondTextView:       TestTextView!
-    @IBOutlet weak var testTextView:         TestTextView!
+    // TestTextView
+    @IBOutlet weak var secondTextView: TestTextView!
+    @IBOutlet weak var testTextView:   TestTextView!
     
-    @IBOutlet weak var stepperViewShower:       TestUIBarButtonItem!
-    @IBOutlet weak var shareButton:             TestUIBarButtonItem!
-    @IBOutlet weak var cancelButton:            TestUIBarButtonItem!
-    @IBOutlet weak var doneButton:              TestUIBarButtonItem!
-    @IBOutlet weak var goToNextTestPageButton:  TestUIBarButtonItem!
+    // TestUIBarButtonItem
+    let barButtonsTint = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     
-    private var score = ""
+    @IBOutlet weak var stepperViewShower:       TestUIBarButtonItem! { didSet { stepperViewShower.setupTestUIBarButtonItemImageFast(image: "textformat.size") } }
+    @IBOutlet weak var shareButton:             TestUIBarButtonItem! { didSet { shareButton.tintColor = barButtonsTint } }
+    @IBOutlet weak var cancelButton:            TestUIBarButtonItem! { didSet { cancelButton.setupTestUIBarButtonItemImageFast(image: "arrow.clockwise") } }
+    @IBOutlet weak var doneButton:              TestUIBarButtonItem! { didSet { doneButton.tintColor = barButtonsTint } }
+    @IBOutlet weak var goToNextTestPageButton:  TestUIBarButtonItem! { didSet { goToNextTestPageButton.setupTestUIBarButtonItemImageFast(image: "chevron.right") } }
+    
+    // Test Score
+    public var score: Int = 0 
     
     //MARK: LifeCycle
     override func viewDidLoad() {
@@ -75,42 +99,29 @@ class TestViewController: UIViewController {
         }
     }
     
-    private func setScore() {
-        if #available(iOS 13.0, *) {
-            if answerLabel.text != answerWord || answerLabel.textColor != .secondaryLabel {
-                if answerLabel.text == falseWord {
-                    let number2  = Int.random(in: 1 ..< 12)
-                    let number1 = 0
-                    let number  = Int.random(in: 20 ..< 35)
-                    
-                    let numberArray = [String(number1), String(number), String(number2)]
-                    
-                    score = String(numberArray.randomElement() ?? description)
-                } else {
-                    let number1 = Int.random(in: 95 ..< 100)
-                    let number  = Int.random(in: 64 ..< 80)
-                    
-                    let numberArray = [String(number1), String(number)]
-                    
-                    score = String(numberArray.randomElement() ?? description)
-                }
-            }
-        }
+    override func viewWillLayoutSubviews() {
+        gradient.setupRootViewsWithBasicGradient(mainView: view, scrollView: nil)
     }
     
-    private func systemBackPrefering() {
-        view.viewSystemBack()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        stepperView.viewSystemBack()
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
     }
     
     //MARK: Actions
     @IBAction func stepper(_ sender: UIStepper) {
-        let font            = testTextView.font?.fontName
-        let font2           = secondTextView.font?.fontName
+        let font  = testTextView.font?.fontName
+        let font2 = secondTextView.font?.fontName
         
-        let fontSize        = CGFloat(sender.value)
-        let fontSize2       = CGFloat(sender.value)
+        let fontSize  = CGFloat(sender.value)
+        let fontSize2 = CGFloat(sender.value)
         
         testTextView.font   = UIFont(name: font!, size: fontSize)
         secondTextView.font = UIFont(name: font2!, size: fontSize2)
@@ -144,7 +155,7 @@ class TestViewController: UIViewController {
         falseButtonOutlet.alpha     = alpha
         
         trueButtonOutlet.setTitle(trueWord, for: .normal)
-        trueButtonOutlet.setTitleColor(lazyColor, for: .normal)
+        trueButtonOutlet.setTitleColor(.biologyGreenColor, for: .normal)
         
         falseButtonOutlet.setTitle(falseWord, for: .normal)
         falseButtonOutlet.setTitleColor(falseTint, for: .normal)
@@ -165,7 +176,9 @@ class TestViewController: UIViewController {
     
     private func trueShow() {
         answerLabel.text        = trueWord
-        answerLabel.textColor   = lazyColor
+        answerLabel.textColor   = .biologyGreenColor
+        
+        TestScores.shared.testScore += 10
     
         falseAndTrueButtonsForAnswersPrefering()
     }
@@ -207,7 +220,7 @@ class TestViewController: UIViewController {
             trueButtonOutlet.setTitle(itsTrueWord, for: .normal)
             falseButtonOutlet.setTitle(itsTrueWord, for: .normal)
             
-            falseButtonOutlet.setTitleColor(lazyColor, for: .normal)
+            falseButtonOutlet.setTitleColor(.biologyGreenColor, for: .normal)
             falseButtonOutlet.layer.borderColor = #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
             falseButtonOutlet.testButtonsShadows()
             
@@ -221,12 +234,9 @@ class TestViewController: UIViewController {
             falseButtonOutlet.alpha = 1
             
             answerLabel.text = answerWord
-            
-            if #available(iOS 13.0, *) {
-                answerLabel.textColor = .secondaryLabel
-            }
+            answerLabel.textColor = .secondaryLabel
         } catch {
-            FastAlert.showBasic(title: "Unavailable", message: "", vc: self)
+            FastAlert.showBasic(title: "Unavailable", message: nil, vc: self)
         }
     }
     
@@ -244,89 +254,28 @@ class TestViewController: UIViewController {
     
     //MARK: Done Test
     @IBAction func doneTest(_ sender: Any) {
-        setScore()
-        setDonningAlerts()
-    }
-    
-    private func doneTestErrorsSetup() throws {
-        if #available(iOS 13.0, *) {
-            if answerLabel.text == answerWord || answerLabel.textColor == .secondaryLabel {
-                throw TestErrors.DoneErrors.answerIsDefault
-            } else {
-                throw TestErrors.DoneErrors.doneTest
-            }
+        if TestScores.shared.testScore > 30 {
+            FastAlert.showBasic(title: "30/30", message: nil, vc: self)
+        } else {
+            FastAlert.showBasic(title: "\(TestScores.shared.testScore)/30", message: nil, vc: self)
         }
+        TestScores.shared.testScore = 0
+        TestScores.shared.doneButtonEnabled = false
+        doneButton.isEnabled = TestScores.shared.doneButtonEnabled
     }
     
-    private func doneTestErrorsShow() {
-        do {
-            try doneTestErrorsSetup()
-        } catch TestErrors.DoneErrors.answerIsDefault {
-            FastAlert.showBasic(title: errorWord, message: "You haven't answerd yet", vc: self)
-        } catch TestErrors.DoneErrors.doneTest {
-            setDonningAlerts()
-            postKeys()
-        } catch {
-            FastAlert.showBasic(title: "Unavailable", message: "", vc: self)
-        }
-    }
-    
-    private func setDonningAlerts() {
-        let alertController = UIAlertController(title: goodWord, message: "Score \(score) %", preferredStyle: .alert)
-        let action = UIAlertAction(title: okWord, style: .cancel) { (action) in
-            self.navigationController?.popToRootViewController(animated: true)
-        }
-        
-        alertController.addAction(action)
-        alertController.view.tintColor = lazyColor
-        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-        
-        self.present(alertController, animated: true, completion: nil)
-        
-        showRatesController()
-    }
-    
-    //MARK: Post Keys
-    private func notificationCenterPost() {
+    // MARK: Post Keys
+    // Public
+    func notificationCenterPost() {
         NotificationCenter.default.post(name: notificationName, object: nil)
     }
     
-    private func notificationNameSet(name: String) {
+    func notificationNameSet(name: String) {
         notificationName = Notification.Name(name)
     }
     
-    private func postKeys() {
-        if navigationItem.title == "Plants Test Final" {
-            notificationNameSet(name: TestViewKeys.plantsViewKey)
-            notificationCenterPost()
-            
-        } else if navigationItem.title == "Animals Test Final" {
-            notificationNameSet(name: TestViewKeys.animalsViewKey)
-            notificationCenterPost()
-            
-        } else if navigationItem.title == "Humen Test Final" {
-            notificationNameSet(name: TestViewKeys.humanViewKey)
-            notificationCenterPost()
-            
-        } else if navigationItem.title == "Microbes Test Final" {
-            notificationNameSet(name: TestViewKeys.microbesViewKey)
-            notificationCenterPost()
-            
-        } else if navigationItem.title == "Viruses Test Final" {
-            notificationNameSet(name: TestViewKeys.virusesViewKey)
-            notificationCenterPost()
-            
-        } else if navigationItem.title == "Archaea Test Final" {
-            notificationNameSet(name: TestViewKeys.archaeaViewKey)
-            notificationCenterPost()
-            
-        } else if navigationItem.title == "Funguses Test Final" {
-            notificationNameSet(name: TestViewKeys.fungusesViewKey)
-            notificationCenterPost()
-        }
-    }
-    
+    // MARK: Rates Controller
+    // Private
     private func showRatesController() {
         if navigationItem.title == "Viruses Test" {
             RateManager.showRatesController()
@@ -353,16 +302,8 @@ class TestViewController: UIViewController {
         let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
                 activityVC.popoverPresentationController?.sourceView = self.view
             
-        UIApplication.shared.keyWindow?.tintColor = lazyColor
+        UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
             
         present(activityVC, animated: true)
     }
-
-    private func otherUIthings() {
-        stepperOutlet.stepperBaics()
-        shareButton.isEnabled = false
-        answerLabel.text = answerWord
-    }
 }
-
-

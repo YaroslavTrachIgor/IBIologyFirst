@@ -30,8 +30,20 @@ class BasicMFMailComposeViewController: MFMailComposeViewController {
 
 extension BasicMFMailComposeViewController: BasicMFMailComposeViewControllerProtocol {
     func setup() {
-        let myStringMail = "zhbr282@gmail.com"
+        let queue = DispatchQueue(label: "BasicMFMailComposeViewControllerQueue", attributes: .concurrent)
+        let group = DispatchGroup()
         
-        setToRecipients([myStringMail])
+        queue.async {
+            group.enter()
+            DispatchQueue.main.async {
+                let myStringMail = "zhbr282@gmail.com"
+                
+                self.setToRecipients([myStringMail])
+                group.leave()
+            }
+        }
+        DispatchQueue.main.async {
+            self.view.tintColor = .biologyGreenColor
+        }
     }
 }

@@ -14,7 +14,7 @@ class ReadingOnTimeStyleVaribles {
     let appleButton = AppleButtonSettings()
     
     // Colors for Control Buttons
-    static var textColor    = lazyColor
+    static var textColor    = UIColor.biologyGreenColor
     static var shadowColor  = UIColor.white
     
     static var shadowRadius: CGFloat = 5

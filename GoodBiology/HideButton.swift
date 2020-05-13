@@ -34,7 +34,7 @@ extension HideButton: HideButtonProtocol {
             
             backgroundColor = appleButton.backgroundColor
         }
-        let titleColor  = lazyColor
+        let titleColor  = UIColor.biologyGreenColor
 
         setTitleColor(titleColor, for: .normal)
         layer.cornerRadius = 12

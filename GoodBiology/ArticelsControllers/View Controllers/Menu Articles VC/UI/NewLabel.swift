@@ -28,9 +28,16 @@ class NewLabel: UILabel {
 
 extension NewLabel: NewLabelProtocol {
     func labelSetup() {
+        textColor = .systemRed
+        
+        shadowSetup()
+    }
+}
+
+extension NewLabel {
+    func shadowSetup() {
         labelShadow()
         
-        textColor           = .systemRed
-        layer.shadowRadius  = 2
+        layer.shadowRadius = 2
     }
 }

@@ -11,19 +11,17 @@
         <scene sceneID="Qok-i0-pxW">
             <objects>
                 <navigationController id="wAR-lS-idm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tests" image="graduation_cap" id="Flr-6B-D7i"/>
+                    <tabBarItem key="tabBarItem" title="Tests" image="timer" catalog="system" id="Flr-6B-D7i"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="ne0-0f-Y5E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" red="0.15581350146130188" green="0.16616977225716206" blue="0.1826778982649746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -105,13 +103,11 @@
                     <navigationItem key="navigationItem" title="About Tests" largeTitleDisplayMode="always" id="uM8-O1-U5Y">
                         <rightBarButtonItems>
                             <barButtonItem title="Item" image="textformat.size" catalog="system" id="IHf-4u-dCd">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowing:" destination="JLE-8Y-8UZ" id="ZaE-Tx-pkw"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="gmz-qe-npV">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="testSharing:" destination="JLE-8Y-8UZ" id="hkx-ZU-iWa"/>
                                 </connections>
@@ -135,25 +131,25 @@
             <objects>
                 <viewController storyboardIdentifier="TestsMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U6D-Xt-23j" customClass="TestsMenuViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5l8-Uo-e9V">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="709"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="848"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ntu-NO-MKR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="709"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="848"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRb-PF-t40" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="470" width="349" height="83"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXh-Vt-6lE" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="15" width="349" height="83"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archaea Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-6l-uM3" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plants Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="332-wh-zlx" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="4" width="333" height="33"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Archaea" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-Yi-gCT">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Interesting and hard test about Plants" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-PG-SdB">
                                                 <rect key="frame" x="8" y="44" width="333" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
@@ -162,223 +158,27 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rS-A9-JAQ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-rw-BDC">
                                                 <rect key="frame" x="8" y="8" width="333" height="67"/>
                                                 <connections>
-                                                    <segue destination="1L1-dr-HmY" kind="show" identifier="setFromTestVCToTestMenuVC" id="xSb-kd-RKC"/>
+                                                    <segue destination="c5a-M8-oyt" kind="show" identifier="setFromTestVCToTestMenuVC" id="czJ-U8-NvH"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="8rS-A9-JAQ" firstAttribute="top" secondItem="rRb-PF-t40" secondAttribute="top" constant="8" id="2Er-1N-r5c"/>
-                                            <constraint firstItem="0Tu-Yi-gCT" firstAttribute="top" secondItem="YmI-6l-uM3" secondAttribute="bottom" constant="7" id="Ell-MO-TAi"/>
-                                            <constraint firstItem="YmI-6l-uM3" firstAttribute="top" secondItem="rRb-PF-t40" secondAttribute="top" constant="4" id="R8k-5L-iPA"/>
-                                            <constraint firstAttribute="trailing" secondItem="0Tu-Yi-gCT" secondAttribute="trailing" constant="8" id="TkG-X4-lsO"/>
-                                            <constraint firstAttribute="bottom" secondItem="8rS-A9-JAQ" secondAttribute="bottom" constant="8" id="WP7-8J-Fcc"/>
-                                            <constraint firstItem="8rS-A9-JAQ" firstAttribute="leading" secondItem="rRb-PF-t40" secondAttribute="leading" constant="8" id="X2j-Tb-IIL"/>
-                                            <constraint firstAttribute="bottom" secondItem="0Tu-Yi-gCT" secondAttribute="bottom" constant="8" id="YxV-6v-n4b"/>
-                                            <constraint firstAttribute="trailing" secondItem="YmI-6l-uM3" secondAttribute="trailing" constant="8" id="cjp-SP-18z"/>
-                                            <constraint firstItem="0Tu-Yi-gCT" firstAttribute="leading" secondItem="rRb-PF-t40" secondAttribute="leading" constant="8" id="dV8-nt-BNC"/>
-                                            <constraint firstAttribute="height" constant="83" id="lF6-SL-zcd"/>
-                                            <constraint firstItem="YmI-6l-uM3" firstAttribute="leading" secondItem="rRb-PF-t40" secondAttribute="leading" constant="8" id="nca-Uu-5gH"/>
-                                            <constraint firstAttribute="trailing" secondItem="8rS-A9-JAQ" secondAttribute="trailing" constant="8" id="rQ8-lD-ad1"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEH-bV-2yo" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="561" width="349" height="83"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funguses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKG-Nt-nn2">
-                                                <rect key="frame" x="8" y="4" width="333" height="33"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Funguses" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="seg-xh-rAD">
-                                                <rect key="frame" x="8" y="44" width="333" height="31"/>
-                                                <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og3-4l-rO5">
-                                                <rect key="frame" x="8" y="8" width="333" height="67"/>
-                                                <connections>
-                                                    <segue destination="M3f-7y-UJR" kind="show" identifier="setFromTestVCToTestMenuVC" id="Jw0-vQ-5AA"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="seg-xh-rAD" firstAttribute="leading" secondItem="kEH-bV-2yo" secondAttribute="leading" constant="8" id="2O3-GB-1Zz"/>
-                                            <constraint firstItem="iKG-Nt-nn2" firstAttribute="leading" secondItem="kEH-bV-2yo" secondAttribute="leading" constant="8" id="Auh-gR-OUg"/>
-                                            <constraint firstItem="seg-xh-rAD" firstAttribute="top" secondItem="iKG-Nt-nn2" secondAttribute="bottom" constant="7" id="KXv-Q4-Xfx"/>
-                                            <constraint firstAttribute="trailing" secondItem="og3-4l-rO5" secondAttribute="trailing" constant="8" id="QcP-3Q-7F9"/>
-                                            <constraint firstItem="iKG-Nt-nn2" firstAttribute="top" secondItem="kEH-bV-2yo" secondAttribute="top" constant="4" id="Roe-eQ-FCi"/>
-                                            <constraint firstAttribute="trailing" secondItem="iKG-Nt-nn2" secondAttribute="trailing" constant="8" id="Svy-Fk-6Gf"/>
-                                            <constraint firstAttribute="height" constant="83" id="dBC-JI-sFd"/>
-                                            <constraint firstItem="og3-4l-rO5" firstAttribute="leading" secondItem="kEH-bV-2yo" secondAttribute="leading" constant="8" id="h6e-Vq-8dy"/>
-                                            <constraint firstAttribute="trailing" secondItem="seg-xh-rAD" secondAttribute="trailing" constant="8" id="hIx-qW-qtW"/>
-                                            <constraint firstItem="og3-4l-rO5" firstAttribute="top" secondItem="kEH-bV-2yo" secondAttribute="top" constant="8" id="lwt-3g-WeM"/>
-                                            <constraint firstAttribute="bottom" secondItem="seg-xh-rAD" secondAttribute="bottom" constant="8" id="oEk-6t-Plv"/>
-                                            <constraint firstAttribute="bottom" secondItem="og3-4l-rO5" secondAttribute="bottom" constant="8" id="rpB-YR-B9B"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JjX-QS-b7I" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="15" y="379" width="345" height="83"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viruses Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WT5-d5-lSc" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="4" width="327" height="33"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Viruses" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-WN-1W0">
-                                                <rect key="frame" x="8" y="44" width="329" height="31"/>
-                                                <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-6L-Kc8">
-                                                <rect key="frame" x="8" y="4" width="329" height="75"/>
-                                                <connections>
-                                                    <segue destination="05W-bg-VFM" kind="show" identifier="setFromTestVCToTestMenuVC" id="LXV-fa-192"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="rDc-6L-Kc8" secondAttribute="bottom" constant="4" id="1sX-XN-sQq"/>
-                                            <constraint firstAttribute="trailing" secondItem="rDc-6L-Kc8" secondAttribute="trailing" constant="8" id="6gH-Vl-l78"/>
-                                            <constraint firstAttribute="trailing" secondItem="WT5-d5-lSc" secondAttribute="trailing" constant="10" id="CbW-1n-G4Q"/>
-                                            <constraint firstAttribute="bottom" secondItem="EQH-WN-1W0" secondAttribute="bottom" constant="8" id="Hca-Ll-Dai"/>
-                                            <constraint firstItem="rDc-6L-Kc8" firstAttribute="leading" secondItem="JjX-QS-b7I" secondAttribute="leading" constant="8" id="JZd-6b-fKN"/>
-                                            <constraint firstItem="rDc-6L-Kc8" firstAttribute="top" secondItem="JjX-QS-b7I" secondAttribute="top" constant="4" id="Kqd-Mn-fOG"/>
-                                            <constraint firstAttribute="height" constant="83" id="Kvl-gK-7Wx"/>
-                                            <constraint firstAttribute="trailing" secondItem="EQH-WN-1W0" secondAttribute="trailing" constant="8" id="g8E-fD-uuP"/>
-                                            <constraint firstItem="WT5-d5-lSc" firstAttribute="leading" secondItem="JjX-QS-b7I" secondAttribute="leading" constant="8" id="kIK-Jr-NF8"/>
-                                            <constraint firstItem="WT5-d5-lSc" firstAttribute="top" secondItem="JjX-QS-b7I" secondAttribute="top" constant="4" id="kTt-se-d6d"/>
-                                            <constraint firstItem="EQH-WN-1W0" firstAttribute="leading" secondItem="JjX-QS-b7I" secondAttribute="leading" constant="8" id="qqy-9t-o4j"/>
-                                            <constraint firstItem="EQH-WN-1W0" firstAttribute="top" secondItem="WT5-d5-lSc" secondAttribute="bottom" constant="7" id="tTy-YM-QZF"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnX-LA-y1C" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="288" width="349" height="83"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microbes Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aak-qI-EwU" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="4" width="333" height="33"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Microbes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-5Y-qrd">
-                                                <rect key="frame" x="8" y="44" width="333" height="31"/>
-                                                <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-gR-bGg">
-                                                <rect key="frame" x="8" y="8" width="333" height="67"/>
-                                                <connections>
-                                                    <segue destination="7jP-X3-bB6" kind="show" identifier="setFromTestVCToTestMenuVC" id="QXu-uO-jkf"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="aak-qI-EwU" secondAttribute="trailing" constant="8" id="6FR-Ns-onB"/>
-                                            <constraint firstItem="aak-qI-EwU" firstAttribute="leading" secondItem="lnX-LA-y1C" secondAttribute="leading" constant="8" id="7wg-fD-pOc"/>
-                                            <constraint firstAttribute="height" constant="83" id="8Pb-o0-Ota"/>
-                                            <constraint firstItem="cgl-5Y-qrd" firstAttribute="top" secondItem="aak-qI-EwU" secondAttribute="bottom" constant="7" id="CHD-zv-syg"/>
-                                            <constraint firstItem="qot-gR-bGg" firstAttribute="leading" secondItem="lnX-LA-y1C" secondAttribute="leading" constant="8" id="EC3-RW-Pvf"/>
-                                            <constraint firstItem="qot-gR-bGg" firstAttribute="top" secondItem="lnX-LA-y1C" secondAttribute="top" constant="8" id="Ggf-bL-gzb"/>
-                                            <constraint firstAttribute="trailing" secondItem="cgl-5Y-qrd" secondAttribute="trailing" constant="8" id="SBc-o3-OUb"/>
-                                            <constraint firstAttribute="bottom" secondItem="qot-gR-bGg" secondAttribute="bottom" constant="8" id="dw2-oq-PO7"/>
-                                            <constraint firstAttribute="trailing" secondItem="qot-gR-bGg" secondAttribute="trailing" constant="8" id="fuK-Dn-nq2"/>
-                                            <constraint firstItem="aak-qI-EwU" firstAttribute="top" secondItem="lnX-LA-y1C" secondAttribute="top" constant="4" id="rAF-o4-3H9"/>
-                                            <constraint firstAttribute="bottom" secondItem="cgl-5Y-qrd" secondAttribute="bottom" constant="8" id="srB-kE-PIQ"/>
-                                            <constraint firstItem="cgl-5Y-qrd" firstAttribute="leading" secondItem="lnX-LA-y1C" secondAttribute="leading" constant="8" id="yJz-0X-70o"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDN-4G-3cI" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="197" width="349" height="83"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5k-Ob-PjP" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
-                                                <rect key="frame" x="8" y="4" width="333" height="33"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
-                                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Man" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-oy-yvt">
-                                                <rect key="frame" x="8" y="44" width="333" height="31"/>
-                                                <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJk-U2-c2n">
-                                                <rect key="frame" x="8" y="8" width="333" height="67"/>
-                                                <connections>
-                                                    <segue destination="IJF-L5-lMC" kind="show" identifier="setFromTestVCToTestMenuVC" id="dUl-nM-ujI"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="o5k-Ob-PjP" firstAttribute="leading" secondItem="aDN-4G-3cI" secondAttribute="leading" constant="8" id="7CH-9P-aDR"/>
-                                            <constraint firstAttribute="trailing" secondItem="Rbs-oy-yvt" secondAttribute="trailing" constant="8" id="JDO-Oi-1P3"/>
-                                            <constraint firstItem="DJk-U2-c2n" firstAttribute="leading" secondItem="aDN-4G-3cI" secondAttribute="leading" constant="8" id="PSF-ez-6ER"/>
-                                            <constraint firstAttribute="bottom" secondItem="DJk-U2-c2n" secondAttribute="bottom" constant="8" id="asH-t2-KYC"/>
-                                            <constraint firstAttribute="trailing" secondItem="DJk-U2-c2n" secondAttribute="trailing" constant="8" id="b4g-cd-A4Z"/>
-                                            <constraint firstItem="Rbs-oy-yvt" firstAttribute="top" secondItem="o5k-Ob-PjP" secondAttribute="bottom" constant="7" id="jtX-au-qfa"/>
-                                            <constraint firstItem="o5k-Ob-PjP" firstAttribute="top" secondItem="aDN-4G-3cI" secondAttribute="top" constant="4" id="nLG-w2-dQe"/>
-                                            <constraint firstItem="DJk-U2-c2n" firstAttribute="top" secondItem="aDN-4G-3cI" secondAttribute="top" constant="8" id="p56-Nq-RA1"/>
-                                            <constraint firstItem="Rbs-oy-yvt" firstAttribute="leading" secondItem="aDN-4G-3cI" secondAttribute="leading" constant="8" id="stg-gh-3eX"/>
-                                            <constraint firstAttribute="trailing" secondItem="o5k-Ob-PjP" secondAttribute="trailing" constant="8" id="u9U-RC-g8R"/>
-                                            <constraint firstAttribute="bottom" secondItem="Rbs-oy-yvt" secondAttribute="bottom" constant="8" id="vXh-AO-nA9"/>
-                                            <constraint firstAttribute="height" constant="83" id="y1Z-aS-Erl"/>
+                                            <constraint firstItem="332-wh-zlx" firstAttribute="leading" secondItem="mXh-Vt-6lE" secondAttribute="leading" constant="8" id="2MR-ne-9VC"/>
+                                            <constraint firstAttribute="height" constant="83" id="Cgy-uZ-QMb"/>
+                                            <constraint firstItem="nc9-PG-SdB" firstAttribute="top" secondItem="332-wh-zlx" secondAttribute="bottom" constant="7" id="PEU-1p-4WI"/>
+                                            <constraint firstItem="332-wh-zlx" firstAttribute="top" secondItem="mXh-Vt-6lE" secondAttribute="top" constant="4" id="U2O-0s-bfY"/>
+                                            <constraint firstItem="LiW-rw-BDC" firstAttribute="leading" secondItem="mXh-Vt-6lE" secondAttribute="leading" constant="8" id="WeZ-4S-xAL"/>
+                                            <constraint firstItem="LiW-rw-BDC" firstAttribute="top" secondItem="mXh-Vt-6lE" secondAttribute="top" constant="8" id="bH1-an-sic"/>
+                                            <constraint firstAttribute="bottom" secondItem="LiW-rw-BDC" secondAttribute="bottom" constant="8" id="coZ-6q-ZB0"/>
+                                            <constraint firstAttribute="trailing" secondItem="nc9-PG-SdB" secondAttribute="trailing" constant="8" id="dPA-YO-Ppe"/>
+                                            <constraint firstAttribute="trailing" secondItem="332-wh-zlx" secondAttribute="trailing" constant="8" id="ezV-SM-ulL"/>
+                                            <constraint firstAttribute="bottom" secondItem="nc9-PG-SdB" secondAttribute="bottom" constant="8" id="mv4-KK-zeL"/>
+                                            <constraint firstItem="nc9-PG-SdB" firstAttribute="leading" secondItem="mXh-Vt-6lE" secondAttribute="leading" constant="8" id="njF-xi-t8O"/>
+                                            <constraint firstAttribute="trailing" secondItem="LiW-rw-BDC" secondAttribute="trailing" constant="8" id="wdG-jc-QVD"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -435,19 +235,19 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXh-Vt-6lE" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="13" y="15" width="349" height="83"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aDN-4G-3cI" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="197" width="349" height="83"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plants Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="332-wh-zlx" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5k-Ob-PjP" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="4" width="333" height="33"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Interesting and hard test about Plants" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-PG-SdB">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Man" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-oy-yvt">
                                                 <rect key="frame" x="8" y="44" width="333" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 <userDefinedRuntimeAttributes>
@@ -456,27 +256,223 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-rw-BDC">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJk-U2-c2n">
                                                 <rect key="frame" x="8" y="8" width="333" height="67"/>
                                                 <connections>
-                                                    <segue destination="c5a-M8-oyt" kind="show" identifier="setFromTestVCToTestMenuVC" id="czJ-U8-NvH"/>
+                                                    <segue destination="IJF-L5-lMC" kind="show" identifier="setFromTestVCToTestMenuVC" id="dUl-nM-ujI"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="332-wh-zlx" firstAttribute="leading" secondItem="mXh-Vt-6lE" secondAttribute="leading" constant="8" id="2MR-ne-9VC"/>
-                                            <constraint firstAttribute="height" constant="83" id="Cgy-uZ-QMb"/>
-                                            <constraint firstItem="nc9-PG-SdB" firstAttribute="top" secondItem="332-wh-zlx" secondAttribute="bottom" constant="7" id="PEU-1p-4WI"/>
-                                            <constraint firstItem="332-wh-zlx" firstAttribute="top" secondItem="mXh-Vt-6lE" secondAttribute="top" constant="4" id="U2O-0s-bfY"/>
-                                            <constraint firstItem="LiW-rw-BDC" firstAttribute="leading" secondItem="mXh-Vt-6lE" secondAttribute="leading" constant="8" id="WeZ-4S-xAL"/>
-                                            <constraint firstItem="LiW-rw-BDC" firstAttribute="top" secondItem="mXh-Vt-6lE" secondAttribute="top" constant="8" id="bH1-an-sic"/>
-                                            <constraint firstAttribute="bottom" secondItem="LiW-rw-BDC" secondAttribute="bottom" constant="8" id="coZ-6q-ZB0"/>
-                                            <constraint firstAttribute="trailing" secondItem="nc9-PG-SdB" secondAttribute="trailing" constant="8" id="dPA-YO-Ppe"/>
-                                            <constraint firstAttribute="trailing" secondItem="332-wh-zlx" secondAttribute="trailing" constant="8" id="ezV-SM-ulL"/>
-                                            <constraint firstAttribute="bottom" secondItem="nc9-PG-SdB" secondAttribute="bottom" constant="8" id="mv4-KK-zeL"/>
-                                            <constraint firstItem="nc9-PG-SdB" firstAttribute="leading" secondItem="mXh-Vt-6lE" secondAttribute="leading" constant="8" id="njF-xi-t8O"/>
-                                            <constraint firstAttribute="trailing" secondItem="LiW-rw-BDC" secondAttribute="trailing" constant="8" id="wdG-jc-QVD"/>
+                                            <constraint firstItem="o5k-Ob-PjP" firstAttribute="leading" secondItem="aDN-4G-3cI" secondAttribute="leading" constant="8" id="7CH-9P-aDR"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rbs-oy-yvt" secondAttribute="trailing" constant="8" id="JDO-Oi-1P3"/>
+                                            <constraint firstItem="DJk-U2-c2n" firstAttribute="leading" secondItem="aDN-4G-3cI" secondAttribute="leading" constant="8" id="PSF-ez-6ER"/>
+                                            <constraint firstAttribute="bottom" secondItem="DJk-U2-c2n" secondAttribute="bottom" constant="8" id="asH-t2-KYC"/>
+                                            <constraint firstAttribute="trailing" secondItem="DJk-U2-c2n" secondAttribute="trailing" constant="8" id="b4g-cd-A4Z"/>
+                                            <constraint firstItem="Rbs-oy-yvt" firstAttribute="top" secondItem="o5k-Ob-PjP" secondAttribute="bottom" constant="7" id="jtX-au-qfa"/>
+                                            <constraint firstItem="o5k-Ob-PjP" firstAttribute="top" secondItem="aDN-4G-3cI" secondAttribute="top" constant="4" id="nLG-w2-dQe"/>
+                                            <constraint firstItem="DJk-U2-c2n" firstAttribute="top" secondItem="aDN-4G-3cI" secondAttribute="top" constant="8" id="p56-Nq-RA1"/>
+                                            <constraint firstItem="Rbs-oy-yvt" firstAttribute="leading" secondItem="aDN-4G-3cI" secondAttribute="leading" constant="8" id="stg-gh-3eX"/>
+                                            <constraint firstAttribute="trailing" secondItem="o5k-Ob-PjP" secondAttribute="trailing" constant="8" id="u9U-RC-g8R"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rbs-oy-yvt" secondAttribute="bottom" constant="8" id="vXh-AO-nA9"/>
+                                            <constraint firstAttribute="height" constant="83" id="y1Z-aS-Erl"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnX-LA-y1C" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="288" width="349" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Microbes Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aak-qI-EwU" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="4" width="333" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Microbes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-5Y-qrd">
+                                                <rect key="frame" x="8" y="44" width="333" height="31"/>
+                                                <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-gR-bGg">
+                                                <rect key="frame" x="8" y="8" width="333" height="67"/>
+                                                <connections>
+                                                    <segue destination="7jP-X3-bB6" kind="show" identifier="setFromTestVCToTestMenuVC" id="QXu-uO-jkf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="aak-qI-EwU" secondAttribute="trailing" constant="8" id="6FR-Ns-onB"/>
+                                            <constraint firstItem="aak-qI-EwU" firstAttribute="leading" secondItem="lnX-LA-y1C" secondAttribute="leading" constant="8" id="7wg-fD-pOc"/>
+                                            <constraint firstAttribute="height" constant="83" id="8Pb-o0-Ota"/>
+                                            <constraint firstItem="cgl-5Y-qrd" firstAttribute="top" secondItem="aak-qI-EwU" secondAttribute="bottom" constant="7" id="CHD-zv-syg"/>
+                                            <constraint firstItem="qot-gR-bGg" firstAttribute="leading" secondItem="lnX-LA-y1C" secondAttribute="leading" constant="8" id="EC3-RW-Pvf"/>
+                                            <constraint firstItem="qot-gR-bGg" firstAttribute="top" secondItem="lnX-LA-y1C" secondAttribute="top" constant="8" id="Ggf-bL-gzb"/>
+                                            <constraint firstAttribute="trailing" secondItem="cgl-5Y-qrd" secondAttribute="trailing" constant="8" id="SBc-o3-OUb"/>
+                                            <constraint firstAttribute="bottom" secondItem="qot-gR-bGg" secondAttribute="bottom" constant="8" id="dw2-oq-PO7"/>
+                                            <constraint firstAttribute="trailing" secondItem="qot-gR-bGg" secondAttribute="trailing" constant="8" id="fuK-Dn-nq2"/>
+                                            <constraint firstItem="aak-qI-EwU" firstAttribute="top" secondItem="lnX-LA-y1C" secondAttribute="top" constant="4" id="rAF-o4-3H9"/>
+                                            <constraint firstAttribute="bottom" secondItem="cgl-5Y-qrd" secondAttribute="bottom" constant="8" id="srB-kE-PIQ"/>
+                                            <constraint firstItem="cgl-5Y-qrd" firstAttribute="leading" secondItem="lnX-LA-y1C" secondAttribute="leading" constant="8" id="yJz-0X-70o"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JjX-QS-b7I" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="379" width="345" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viruses Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WT5-d5-lSc" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="4" width="327" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Viruses" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-WN-1W0">
+                                                <rect key="frame" x="8" y="44" width="329" height="31"/>
+                                                <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-6L-Kc8">
+                                                <rect key="frame" x="8" y="4" width="329" height="75"/>
+                                                <connections>
+                                                    <segue destination="05W-bg-VFM" kind="show" identifier="setFromTestVCToTestMenuVC" id="LXV-fa-192"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="rDc-6L-Kc8" secondAttribute="bottom" constant="4" id="1sX-XN-sQq"/>
+                                            <constraint firstAttribute="trailing" secondItem="rDc-6L-Kc8" secondAttribute="trailing" constant="8" id="6gH-Vl-l78"/>
+                                            <constraint firstAttribute="trailing" secondItem="WT5-d5-lSc" secondAttribute="trailing" constant="10" id="CbW-1n-G4Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="EQH-WN-1W0" secondAttribute="bottom" constant="8" id="Hca-Ll-Dai"/>
+                                            <constraint firstItem="rDc-6L-Kc8" firstAttribute="leading" secondItem="JjX-QS-b7I" secondAttribute="leading" constant="8" id="JZd-6b-fKN"/>
+                                            <constraint firstItem="rDc-6L-Kc8" firstAttribute="top" secondItem="JjX-QS-b7I" secondAttribute="top" constant="4" id="Kqd-Mn-fOG"/>
+                                            <constraint firstAttribute="height" constant="83" id="Kvl-gK-7Wx"/>
+                                            <constraint firstAttribute="trailing" secondItem="EQH-WN-1W0" secondAttribute="trailing" constant="8" id="g8E-fD-uuP"/>
+                                            <constraint firstItem="WT5-d5-lSc" firstAttribute="leading" secondItem="JjX-QS-b7I" secondAttribute="leading" constant="8" id="kIK-Jr-NF8"/>
+                                            <constraint firstItem="WT5-d5-lSc" firstAttribute="top" secondItem="JjX-QS-b7I" secondAttribute="top" constant="4" id="kTt-se-d6d"/>
+                                            <constraint firstItem="EQH-WN-1W0" firstAttribute="leading" secondItem="JjX-QS-b7I" secondAttribute="leading" constant="8" id="qqy-9t-o4j"/>
+                                            <constraint firstItem="EQH-WN-1W0" firstAttribute="top" secondItem="WT5-d5-lSc" secondAttribute="bottom" constant="7" id="tTy-YM-QZF"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRb-PF-t40" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="470" width="349" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archaea Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YmI-6l-uM3" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="4" width="333" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Archaea" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-Yi-gCT">
+                                                <rect key="frame" x="8" y="44" width="333" height="31"/>
+                                                <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rS-A9-JAQ">
+                                                <rect key="frame" x="8" y="8" width="333" height="67"/>
+                                                <connections>
+                                                    <segue destination="1L1-dr-HmY" kind="show" identifier="setFromTestVCToTestMenuVC" id="xSb-kd-RKC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="8rS-A9-JAQ" firstAttribute="top" secondItem="rRb-PF-t40" secondAttribute="top" constant="8" id="2Er-1N-r5c"/>
+                                            <constraint firstItem="0Tu-Yi-gCT" firstAttribute="top" secondItem="YmI-6l-uM3" secondAttribute="bottom" constant="7" id="Ell-MO-TAi"/>
+                                            <constraint firstItem="YmI-6l-uM3" firstAttribute="top" secondItem="rRb-PF-t40" secondAttribute="top" constant="4" id="R8k-5L-iPA"/>
+                                            <constraint firstAttribute="trailing" secondItem="0Tu-Yi-gCT" secondAttribute="trailing" constant="8" id="TkG-X4-lsO"/>
+                                            <constraint firstAttribute="bottom" secondItem="8rS-A9-JAQ" secondAttribute="bottom" constant="8" id="WP7-8J-Fcc"/>
+                                            <constraint firstItem="8rS-A9-JAQ" firstAttribute="leading" secondItem="rRb-PF-t40" secondAttribute="leading" constant="8" id="X2j-Tb-IIL"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Tu-Yi-gCT" secondAttribute="bottom" constant="8" id="YxV-6v-n4b"/>
+                                            <constraint firstAttribute="trailing" secondItem="YmI-6l-uM3" secondAttribute="trailing" constant="8" id="cjp-SP-18z"/>
+                                            <constraint firstItem="0Tu-Yi-gCT" firstAttribute="leading" secondItem="rRb-PF-t40" secondAttribute="leading" constant="8" id="dV8-nt-BNC"/>
+                                            <constraint firstAttribute="height" constant="83" id="lF6-SL-zcd"/>
+                                            <constraint firstItem="YmI-6l-uM3" firstAttribute="leading" secondItem="rRb-PF-t40" secondAttribute="leading" constant="8" id="nca-Uu-5gH"/>
+                                            <constraint firstAttribute="trailing" secondItem="8rS-A9-JAQ" secondAttribute="trailing" constant="8" id="rQ8-lD-ad1"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kEH-bV-2yo" customClass="TestIconBackView" customModule="GoodBiology" customModuleProvider="target">
+                                        <rect key="frame" x="13" y="561" width="349" height="83"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funguses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKG-Nt-nn2" customClass="TestIconLabel" customModule="GoodBiology" customModuleProvider="target">
+                                                <rect key="frame" x="8" y="4" width="333" height="33"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                                <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Funguses" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="seg-xh-rAD">
+                                                <rect key="frame" x="8" y="44" width="333" height="31"/>
+                                                <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og3-4l-rO5">
+                                                <rect key="frame" x="8" y="8" width="333" height="67"/>
+                                                <connections>
+                                                    <segue destination="M3f-7y-UJR" kind="show" identifier="setFromTestVCToTestMenuVC" id="Jw0-vQ-5AA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="seg-xh-rAD" firstAttribute="leading" secondItem="kEH-bV-2yo" secondAttribute="leading" constant="8" id="2O3-GB-1Zz"/>
+                                            <constraint firstItem="iKG-Nt-nn2" firstAttribute="leading" secondItem="kEH-bV-2yo" secondAttribute="leading" constant="8" id="Auh-gR-OUg"/>
+                                            <constraint firstItem="seg-xh-rAD" firstAttribute="top" secondItem="iKG-Nt-nn2" secondAttribute="bottom" constant="7" id="KXv-Q4-Xfx"/>
+                                            <constraint firstAttribute="trailing" secondItem="og3-4l-rO5" secondAttribute="trailing" constant="8" id="QcP-3Q-7F9"/>
+                                            <constraint firstItem="iKG-Nt-nn2" firstAttribute="top" secondItem="kEH-bV-2yo" secondAttribute="top" constant="4" id="Roe-eQ-FCi"/>
+                                            <constraint firstAttribute="trailing" secondItem="iKG-Nt-nn2" secondAttribute="trailing" constant="8" id="Svy-Fk-6Gf"/>
+                                            <constraint firstAttribute="height" constant="83" id="dBC-JI-sFd"/>
+                                            <constraint firstItem="og3-4l-rO5" firstAttribute="leading" secondItem="kEH-bV-2yo" secondAttribute="leading" constant="8" id="h6e-Vq-8dy"/>
+                                            <constraint firstAttribute="trailing" secondItem="seg-xh-rAD" secondAttribute="trailing" constant="8" id="hIx-qW-qtW"/>
+                                            <constraint firstItem="og3-4l-rO5" firstAttribute="top" secondItem="kEH-bV-2yo" secondAttribute="top" constant="8" id="lwt-3g-WeM"/>
+                                            <constraint firstAttribute="bottom" secondItem="seg-xh-rAD" secondAttribute="bottom" constant="8" id="oEk-6t-Plv"/>
+                                            <constraint firstAttribute="bottom" secondItem="og3-4l-rO5" secondAttribute="bottom" constant="8" id="rpB-YR-B9B"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -492,6 +488,7 @@
                                                 <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" image="info.circle.fill" catalog="system"/>
                                                 <connections>
+                                                    <action selector="infoVCShow:" destination="U6D-Xt-23j" eventType="touchUpInside" id="639-8z-fsf"/>
                                                     <segue destination="JLE-8Y-8UZ" kind="show" id="ceE-El-55S"/>
                                                 </connections>
                                             </button>
@@ -506,6 +503,12 @@
                                             <constraint firstAttribute="width" constant="40" id="o0Y-QW-28x"/>
                                         </constraints>
                                     </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Editing shapes (female)" translatesAutoresizingMaskIntoConstraints="NO" id="twH-ik-Dsk">
+                                        <rect key="frame" x="0.0" y="644" width="377" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="tjt-Cn-bKv"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="aDN-4G-3cI" firstAttribute="leading" secondItem="Ntu-NO-MKR" secondAttribute="leading" constant="13" id="0Rd-Fz-rGJ"/>
@@ -526,14 +529,17 @@
                                     <constraint firstItem="kEH-bV-2yo" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="UQg-cE-g2H"/>
                                     <constraint firstItem="rRb-PF-t40" firstAttribute="top" secondItem="JjX-QS-b7I" secondAttribute="bottom" constant="8" id="UmV-D5-ZPV"/>
                                     <constraint firstItem="mXh-Vt-6lE" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="VBd-xa-AvP"/>
-                                    <constraint firstAttribute="bottom" secondItem="kEH-bV-2yo" secondAttribute="bottom" constant="40" id="WXT-6T-X1C"/>
                                     <constraint firstItem="kEH-bV-2yo" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="XVx-sg-fOZ"/>
                                     <constraint firstItem="JjX-QS-b7I" firstAttribute="top" secondItem="lnX-LA-y1C" secondAttribute="bottom" constant="8" id="XpI-l5-gAz"/>
+                                    <constraint firstAttribute="trailing" secondItem="twH-ik-Dsk" secondAttribute="trailing" id="ZGl-Wx-19V"/>
                                     <constraint firstItem="kEH-bV-2yo" firstAttribute="top" secondItem="rRb-PF-t40" secondAttribute="bottom" constant="8" id="bad-qL-ydn"/>
                                     <constraint firstItem="kEH-bV-2yo" firstAttribute="top" secondItem="rRb-PF-t40" secondAttribute="bottom" constant="8" id="cee-ve-PIS"/>
                                     <constraint firstItem="rRb-PF-t40" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="eLC-4W-fZt"/>
                                     <constraint firstAttribute="trailing" secondItem="9kg-hf-i6h" secondAttribute="trailing" constant="15" id="god-Tb-xUO"/>
+                                    <constraint firstItem="twH-ik-Dsk" firstAttribute="top" secondItem="kEH-bV-2yo" secondAttribute="bottom" id="h9u-CJ-vOI"/>
+                                    <constraint firstAttribute="bottom" secondItem="twH-ik-Dsk" secondAttribute="bottom" id="jrH-XS-4H6"/>
                                     <constraint firstItem="9kg-hf-i6h" firstAttribute="top" secondItem="mXh-Vt-6lE" secondAttribute="bottom" constant="8" id="p20-vV-gaV"/>
+                                    <constraint firstItem="twH-ik-Dsk" firstAttribute="leading" secondItem="Ntu-NO-MKR" secondAttribute="leading" id="p4Y-cH-V9p"/>
                                     <constraint firstItem="mXh-Vt-6lE" firstAttribute="leading" secondItem="Ntu-NO-MKR" secondAttribute="leading" constant="13" id="riV-WE-lgJ"/>
                                     <constraint firstItem="mXh-Vt-6lE" firstAttribute="top" secondItem="Ntu-NO-MKR" secondAttribute="top" constant="15" id="sfA-3y-tlo"/>
                                     <constraint firstItem="9kg-hf-i6h" firstAttribute="centerX" secondItem="Ntu-NO-MKR" secondAttribute="centerX" id="x6N-LG-TBm"/>
@@ -551,22 +557,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jU7-kr-NmF"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Tests" largeTitleDisplayMode="always" id="RJp-6t-W0V">
+                    <navigationItem key="navigationItem" title="Tests" id="RJp-6t-W0V">
                         <barButtonItem key="backBarButtonItem" title="Tests" id="myP-1w-gxe"/>
                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="iwC-EN-9DH">
-                            <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="shareButton:" destination="U6D-Xt-23j" id="jBy-VU-cwL"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="online_support" id="N8b-v3-huU">
-                            <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <segue destination="6GB-AH-viY" kind="show" id="fZz-HV-sgN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <size key="freeformSize" width="375" height="800"/>
+                    <size key="freeformSize" width="375" height="939"/>
                     <connections>
                         <outlet property="animalsLabel" destination="709-1M-wAh" id="ChM-qg-rkq"/>
                         <outlet property="animalsTextView" destination="uAy-dG-V2a" id="eP6-BV-9FH"/>
@@ -574,7 +578,7 @@
                         <outlet property="archaeaLabel" destination="YmI-6l-uM3" id="HDV-f4-jME"/>
                         <outlet property="archaeaTextView" destination="0Tu-Yi-gCT" id="X7j-gz-k43"/>
                         <outlet property="archaeaView" destination="rRb-PF-t40" id="3mS-Rg-ssA"/>
-                        <outlet property="fungusesLabel" destination="iKG-Nt-nn2" id="7po-DF-rss"/>
+                        <outlet property="fungusesLabel" destination="iKG-Nt-nn2" id="BF3-vw-L2P"/>
                         <outlet property="fungusesView" destination="kEH-bV-2yo" id="kxx-yN-4mK"/>
                         <outlet property="humanLabel" destination="o5k-Ob-PjP" id="Uh2-RM-pcy"/>
                         <outlet property="humanView" destination="aDN-4G-3cI" id="WuY-0P-rha"/>
@@ -597,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="831-Y9-ZGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174.6875" y="898.94366197183103"/>
+            <point key="canvasLocation" x="1174.6875" y="898.41549295774644"/>
         </scene>
         <!--Plants Test-->
         <scene sceneID="aTm-Zf-he4">
@@ -765,25 +769,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="B6t-u8-i8B"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="Df3-j7-DJQ" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="KUN-cq-SRz" kind="show" id="S2W-Qb-Bkh"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="y9t-Wy-sLJ" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="c5a-M8-oyt" id="Vmh-Tp-Hrj"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="oSL-tk-RiG" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="c5a-M8-oyt" id="igm-Yl-1fS"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="PMy-sr-Bpe" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="c5a-M8-oyt" id="Pcv-yV-JBb"/>
                                 </connections>
@@ -976,26 +976,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="EP7-5L-lGk"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="rOZ-ll-Sqo" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="X1b-VV-Fjq" kind="show" id="Dkx-QJ-Zq1"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="xLS-6v-q6W" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="KUN-cq-SRz" id="d2f-96-c2h"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="UX6-22-Sd3" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="KUN-cq-SRz" id="qIy-34-h2N"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="action" id="cra-GV-75P" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="cra-GV-75P" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -1183,25 +1178,21 @@
                     <navigationItem key="navigationItem" title="Plants Test Final" id="44h-80-Seo">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" image="icons8-double_tick_filled" id="PR3-34-Gwo" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="doneTest:" destination="X1b-VV-Fjq" id="PCI-yg-AyR"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="pGw-kO-4aT" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="X1b-VV-Fjq" id="Wyt-pt-jtj"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="S1S-vT-MgW" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="X1b-VV-Fjq" id="9cj-9l-8u9"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="Bmc-5A-hLH" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="X1b-VV-Fjq" id="QVH-cT-U0y"/>
                                 </connections>
@@ -1236,6 +1227,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="477"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone Element" translatesAutoresizingMaskIntoConstraints="NO" id="pT2-Fa-GAz" customClass="AlphaImageView" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="35" y="16" width="250" height="107"/>
+                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tests Online Support" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-4e-LMy">
                                 <rect key="frame" x="52" y="131" width="217" height="39"/>
                                 <constraints>
@@ -1319,16 +1313,27 @@
                                     <constraint firstItem="8rA-te-Pee" firstAttribute="top" secondItem="cqc-YP-Ppp" secondAttribute="top" constant="8" id="wuo-eV-rzD"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Holding Phone" translatesAutoresizingMaskIntoConstraints="NO" id="h7R-eg-uUm" customClass="AlphaImageView" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="391" width="320" height="86"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ECe-Jt-IiR" firstAttribute="trailing" secondItem="t6P-oH-gpY" secondAttribute="trailing" constant="16" id="3Rd-8X-fJq"/>
+                            <constraint firstItem="ECe-Jt-IiR" firstAttribute="trailing" secondItem="pT2-Fa-GAz" secondAttribute="trailing" constant="35" id="5TW-RG-ta6"/>
+                            <constraint firstItem="h7R-eg-uUm" firstAttribute="top" secondItem="cqc-YP-Ppp" secondAttribute="bottom" constant="8" id="8oA-Xy-2T7"/>
+                            <constraint firstItem="h7R-eg-uUm" firstAttribute="trailing" secondItem="ECe-Jt-IiR" secondAttribute="trailing" id="9Xf-FT-qDR"/>
                             <constraint firstItem="cqc-YP-Ppp" firstAttribute="leading" secondItem="ECe-Jt-IiR" secondAttribute="leading" constant="45" id="ESi-uB-bgI"/>
                             <constraint firstItem="bF9-fO-gaF" firstAttribute="top" secondItem="zbd-4e-LMy" secondAttribute="bottom" constant="28" id="Gpj-Fa-thd"/>
                             <constraint firstItem="zbd-4e-LMy" firstAttribute="top" secondItem="ECe-Jt-IiR" secondAttribute="top" constant="131" id="M45-Ia-Guq"/>
+                            <constraint firstItem="pT2-Fa-GAz" firstAttribute="top" secondItem="ECe-Jt-IiR" secondAttribute="top" constant="16" id="MGj-Ys-8i9"/>
+                            <constraint firstItem="zbd-4e-LMy" firstAttribute="top" secondItem="pT2-Fa-GAz" secondAttribute="bottom" constant="8" id="Qe1-rK-AS5"/>
                             <constraint firstItem="bF9-fO-gaF" firstAttribute="leading" secondItem="ECe-Jt-IiR" secondAttribute="leading" constant="45" id="U48-eQ-1wB"/>
+                            <constraint firstItem="pT2-Fa-GAz" firstAttribute="leading" secondItem="ECe-Jt-IiR" secondAttribute="leading" constant="35" id="Uvx-PK-mSM"/>
                             <constraint firstItem="cqc-YP-Ppp" firstAttribute="top" secondItem="bF9-fO-gaF" secondAttribute="bottom" constant="14" id="XdP-Se-VXf"/>
+                            <constraint firstItem="h7R-eg-uUm" firstAttribute="bottom" secondItem="ECe-Jt-IiR" secondAttribute="bottom" id="dse-J6-1Ov"/>
                             <constraint firstItem="ECe-Jt-IiR" firstAttribute="trailing" secondItem="zbd-4e-LMy" secondAttribute="trailing" constant="51" id="hgc-eY-Rzv"/>
+                            <constraint firstItem="h7R-eg-uUm" firstAttribute="leading" secondItem="ECe-Jt-IiR" secondAttribute="leading" id="nzT-4w-nHW"/>
                             <constraint firstItem="zbd-4e-LMy" firstAttribute="leading" secondItem="ECe-Jt-IiR" secondAttribute="leading" constant="52" id="u6h-0N-nj8"/>
                             <constraint firstItem="ECe-Jt-IiR" firstAttribute="trailing" secondItem="cqc-YP-Ppp" secondAttribute="trailing" constant="45" id="uxa-Xp-Og7"/>
                             <constraint firstItem="t6P-oH-gpY" firstAttribute="top" secondItem="ECe-Jt-IiR" secondAttribute="top" constant="16" id="xa5-HP-6tU"/>
@@ -1339,7 +1344,6 @@
                     <navigationItem key="navigationItem" title="Problem with test ?" id="qfL-vx-mlb">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="action" id="X70-15-O6F">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="shareButton:" destination="6GB-AH-viY" id="zIp-oJ-sRo"/>
                                 </connections>
@@ -1350,7 +1354,6 @@
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="eye.slash" catalog="system" id="XIe-5U-xVP">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="showingSwitchView:" destination="6GB-AH-viY" id="Lgm-Hd-qw2"/>
                                 </connections>
@@ -1360,6 +1363,8 @@
                     <connections>
                         <outlet property="contentTextView" destination="8rA-te-Pee" id="fkL-jp-wjh"/>
                         <outlet property="headLineTextView" destination="zbd-4e-LMy" id="2ZM-N9-4Dt"/>
+                        <outlet property="image1" destination="pT2-Fa-GAz" id="zAa-Sq-mVF"/>
+                        <outlet property="image2" destination="h7R-eg-uUm" id="w8W-s2-uUR"/>
                         <outlet property="sendButton" destination="bF9-fO-gaF" id="tIE-33-L5N"/>
                         <outlet property="shareButton" destination="X70-15-O6F" id="XuW-jn-m6G"/>
                         <outlet property="switchOutlet" destination="UlS-LD-4qZ" id="duU-FI-nh2"/>
@@ -1370,7 +1375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEM-NS-bmw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="308" y="1776"/>
+            <point key="canvasLocation" x="307.5" y="1800"/>
         </scene>
         <!--Animals Test-->
         <scene sceneID="zL3-U4-pNK">
@@ -1538,25 +1543,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="9fR-Bd-gwx"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="UzA-FE-3bs" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="kXa-tf-48q" kind="show" id="XXF-wc-9r6"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="6eK-ih-ZYJ" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="XO7-XI-Uoh" id="uhw-4a-cAM"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="LUm-kl-ywX" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="XO7-XI-Uoh" id="ZUp-iI-mcB"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="hNk-yn-Z7b" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="XO7-XI-Uoh" id="hJf-NO-OXm"/>
                                 </connections>
@@ -1749,25 +1750,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="18Q-ZC-HxQ"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="kB4-c3-rIm" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="2zm-BE-9kH" kind="show" id="oiF-us-uAn"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="vfw-45-bEg" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="kXa-tf-48q" id="OgB-yJ-Rgd"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="i5b-ef-QDy" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="kXa-tf-48q" id="dMO-vI-KbA"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="RVm-lX-dhV" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="kXa-tf-48q" id="Ub2-6n-PWB"/>
                                 </connections>
@@ -1959,25 +1956,21 @@
                     <navigationItem key="navigationItem" title="Animals Test Final" id="gte-oo-Zpl">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" image="icons8-double_tick_filled" id="Wss-aG-DeI" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="doneTest:" destination="2zm-BE-9kH" id="GrV-Zn-gsl"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="LL5-1p-5ZM" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="2zm-BE-9kH" id="LfG-8b-dZy"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="NL3-yc-EoJ" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="2zm-BE-9kH" id="mn8-dn-Jh1"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="FQh-T6-6fu" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="2zm-BE-9kH" id="wQy-V2-cte"/>
                                 </connections>
@@ -2170,25 +2163,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="w5L-Gw-ONk"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="CWt-Sx-ubo" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="wD9-AD-Rj3" kind="show" id="Wvo-lk-0CB"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="s2f-gU-lxm" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="IJF-L5-lMC" id="hm1-uE-jto"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="cnC-7k-7W7" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="IJF-L5-lMC" id="UiP-vO-6bm"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="aPe-s6-hqx" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="IJF-L5-lMC" id="Mt2-4w-yub"/>
                                 </connections>
@@ -2381,25 +2370,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="YfR-Gd-ykv"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="tbP-rV-77J" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="rte-X8-o7Y" kind="show" id="Tw2-BL-fwe"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="arI-lt-DjD" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="wD9-AD-Rj3" id="fa4-tO-41q"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="DGd-lt-BbB" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="wD9-AD-Rj3" id="YuZ-Ru-gcU"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="ozl-I0-I9V" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="wD9-AD-Rj3" id="2id-W9-yLH"/>
                                 </connections>
@@ -2591,25 +2576,21 @@
                     <navigationItem key="navigationItem" title="Humen Test Final" id="UJR-Tg-pM5">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" image="icons8-double_tick_filled" id="ydH-6y-qvp" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="doneTest:" destination="rte-X8-o7Y" id="IkY-WA-14S"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="DE7-gV-DTh" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="rte-X8-o7Y" id="GC1-3q-JZs"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="t1Z-tT-Hcx" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="rte-X8-o7Y" id="is0-X4-ZQS"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="VUO-59-Fir" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="rte-X8-o7Y" id="aa9-gk-30A"/>
                                 </connections>
@@ -2802,25 +2783,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="bFz-Ku-kvQ"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="fgX-ob-0pr" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="lEC-ft-MBl" kind="show" id="MUj-r8-FXh"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="eK6-6Z-FbP" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="M3f-7y-UJR" id="eZM-eB-j43"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="bj8-mW-tSZ" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="M3f-7y-UJR" id="jrE-8d-0g3"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="cgp-jf-Qw3" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="M3f-7y-UJR" id="siF-dD-Mja"/>
                                 </connections>
@@ -3013,25 +2990,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="l3y-3g-pxB"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="Whe-le-kRS" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="9gE-RE-lky" kind="show" id="nyO-zT-g92"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="66N-v8-Cfv" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="lEC-ft-MBl" id="pCa-7Z-6qm"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="pBS-TQ-GWT" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="lEC-ft-MBl" id="pXf-ZG-nv8"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="fkN-3S-VK3" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="lEC-ft-MBl" id="7dv-Uu-1FF"/>
                                 </connections>
@@ -3225,25 +3198,21 @@
                     <navigationItem key="navigationItem" title="Funguses Test Final" id="kc9-pB-hDX">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" image="icons8-double_tick_filled" id="wMD-cc-uQI" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="doneTest:" destination="9gE-RE-lky" id="pTb-eG-Qkr"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="iWS-Vi-I09" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="9gE-RE-lky" id="3Ij-qv-Zu2"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="NZI-F4-aiE" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="9gE-RE-lky" id="Sts-jv-DhI"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="5uG-oU-H29" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="9gE-RE-lky" id="6Yl-Xv-k95"/>
                                 </connections>
@@ -3436,25 +3405,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="Wb4-Wv-dYs"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="Zg8-ph-xFs" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="wk0-3d-ch1" kind="show" id="u0h-jr-3fh"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="BdE-DX-oB7" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="7jP-X3-bB6" id="Sed-GF-Stp"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="RFs-b4-vDZ" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="7jP-X3-bB6" id="Ezy-qh-PtC"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="AVJ-fK-cKC" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="7jP-X3-bB6" id="hpw-g9-mXw"/>
                                 </connections>
@@ -3647,25 +3612,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="AVK-R0-d2c"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="urN-MU-kFf" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="dza-Wh-4Wy" kind="show" id="mmr-nC-32g"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="pFV-FI-Q3I" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="wk0-3d-ch1" id="JGB-Er-9rf"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="ETL-aH-Pqd" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="wk0-3d-ch1" id="Lbn-YG-ePk"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="aNi-3Q-CGM" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="wk0-3d-ch1" id="vcp-3g-fp5"/>
                                 </connections>
@@ -3857,25 +3818,21 @@
                     <navigationItem key="navigationItem" title="Microbes Test Final" id="wI1-aC-IT3">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" image="icons8-double_tick_filled" id="QFu-g7-qYs" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="doneTest:" destination="dza-Wh-4Wy" id="2Ks-a3-Qw2"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="dKh-yF-6nB" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="dza-Wh-4Wy" id="NW2-cH-Vwq"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="Z8H-My-cGe" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="dza-Wh-4Wy" id="BDH-Sb-V6c"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="JNZ-9j-9DY" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="dza-Wh-4Wy" id="0RG-4l-05U"/>
                                 </connections>
@@ -4068,25 +4025,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="4Cb-nz-gTI"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="sK0-Ag-hJn" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="hI5-pz-ToY" kind="show" id="qXt-SL-m48"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="H14-CF-NQg" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="05W-bg-VFM" id="zOm-mp-M7T"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="1vf-9R-mu3" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="05W-bg-VFM" id="5ru-Ny-wE7"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="aMB-LK-mfs" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="05W-bg-VFM" id="ICC-e5-kOq"/>
                                 </connections>
@@ -4279,25 +4232,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="tNS-mg-Ibt"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="OUi-o2-JIi" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="14o-DO-osN" kind="show" id="VwT-h0-TjD"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="3cz-p2-Wnz" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="hI5-pz-ToY" id="YYj-hd-KL8"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="bIZ-gv-RS6" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="hI5-pz-ToY" id="DVx-Cj-Yiq"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="yNI-fc-8eV" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="hI5-pz-ToY" id="qev-xC-2yt"/>
                                 </connections>
@@ -4489,25 +4438,21 @@
                     <navigationItem key="navigationItem" title="Viruses Test Final" id="0Fc-Ee-oiD">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" image="icons8-double_tick_filled" id="qsx-lb-JJ8" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="doneTest:" destination="14o-DO-osN" id="Nkj-PJ-QhZ"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="w7U-FO-2ne" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="14o-DO-osN" id="DA0-ej-jNg"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="UcN-Wq-OBp" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="14o-DO-osN" id="HLf-MK-mAD"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="7re-QM-twc" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="14o-DO-osN" id="cog-Wy-Aj6"/>
                                 </connections>
@@ -4700,25 +4645,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="5y1-nk-O9x"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="Z7k-Yp-g2d" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="Ukv-Jv-3q0" kind="show" id="Z1a-oY-tVB"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="Sdc-tb-Ywp" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="1L1-dr-HmY" id="H01-rF-VXf"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="c7j-iz-oab" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="1L1-dr-HmY" id="SGr-YK-vtP"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="vfb-pv-3zg" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="1L1-dr-HmY" id="Eub-gm-p7x"/>
                                 </connections>
@@ -4911,25 +4852,21 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="ueq-6O-3ef"/>
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="fQB-2s-9aR" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <segue destination="xQd-Xd-eEh" kind="show" id="Ajj-PI-fEw"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="hMV-Bo-WNW" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="Ukv-Jv-3q0" id="4xx-4x-CaW"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="V0P-bb-xTh" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="Ukv-Jv-3q0" id="qt7-x5-Wfh"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="pDN-Lo-uiX" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="Ukv-Jv-3q0" id="TQ8-Jy-zBb"/>
                                 </connections>
@@ -5121,25 +5058,21 @@
                     <navigationItem key="navigationItem" title="Archaea Test Final" id="Y9h-kr-f4o">
                         <rightBarButtonItems>
                             <barButtonItem title="Done" image="icons8-double_tick_filled" id="PcA-7P-zFa" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="doneTest:" destination="xQd-Xd-eEh" id="b6a-rq-Dtc"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem image="icons8-refresh" id="zav-6N-doM" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="cancel:" destination="xQd-Xd-eEh" id="OMh-5n-zkH"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="Item" image="icons8-text_height_filled" id="gZG-gp-V2h" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="stepperViewShowerAction:" destination="xQd-Xd-eEh" id="u7Y-f4-GNU"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="action" id="Ds7-hV-mY6" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
-                                <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="sharing:" destination="xQd-Xd-eEh" id="nT5-Ji-F4l"/>
                                 </connections>
@@ -5168,8 +5101,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Editing shapes (female)" width="2310" height="1400"/>
+        <image name="Holding Phone" width="2310" height="1400"/>
+        <image name="Phone Element" width="2310" height="1400"/>
         <image name="eye.slash" catalog="system" width="64" height="42"/>
-        <image name="graduation_cap" width="30" height="30"/>
         <image name="icons8-double_tick_filled" width="25" height="25"/>
         <image name="icons8-refresh" width="32" height="32"/>
         <image name="icons8-right_4-2" width="25" height="25"/>
@@ -5178,5 +5113,6 @@
         <image name="info.circle.fill" catalog="system" width="64" height="60"/>
         <image name="online_support" width="30" height="30"/>
         <image name="textformat.size" catalog="system" width="64" height="40"/>
+        <image name="timer" catalog="system" width="64" height="60"/>
     </resources>
 </document>

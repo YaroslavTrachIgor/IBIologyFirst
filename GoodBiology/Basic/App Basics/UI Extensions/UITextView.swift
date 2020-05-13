@@ -33,7 +33,7 @@ extension UITextView {
     // Basics for Text Views
     public func mainTextViewTextColor(alpha: Float) {
         self.textColor  = .darkGray
-        self.tintColor  = lazyColor
+        self.tintColor  = .biologyGreenColor
         self.alpha      = CGFloat(alpha)
     }
     

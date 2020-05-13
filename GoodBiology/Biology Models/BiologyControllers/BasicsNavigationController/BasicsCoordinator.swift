@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 13.0, *)
 class BasicsNavigationController: UINavigationController {
     
     //MARK: Constants
@@ -27,7 +28,7 @@ class BasicsNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let firstBasicVeiwController = viewControllers.first as? BasicsViewController else {
+        guard let firstBasicVeiwController = viewControllers.first as? BiologyViewController else {
             fatalError("Fatal Error")
         }
         firstBasicVeiwController.configure(with: dataManager.basicModel(with: 0), nextAction: { [unowned self] in
@@ -36,6 +37,7 @@ class BasicsNavigationController: UINavigationController {
     }
     
     //MARK: Public
+    @available(iOS 13.0, *)
     public func showNextBasicViewСontroller() {
         let currentElementsAmount = viewControllers.count
         let maxElements = dataManager.numberOfModels()
@@ -45,13 +47,31 @@ class BasicsNavigationController: UINavigationController {
         let basicModel = dataManager.basicModel(with: currentElementsAmount)
         let sb         = UIStoryboard(name: kStoryBoardName, bundle: nil)
         
-        guard let vc = sb.instantiateViewController(withIdentifier: kBasicViewControllerName) as? BasicsViewController else { return }
+        guard let vc = sb.instantiateViewController(withIdentifier: kBasicViewControllerName) as? BiologyViewController else { return }
         
-        let isLast      = currentElementsAmount == (maxElements - 1)
-        let nextAction  = isLast == true ? nil : { [unowned self] in
+        let isLast     = currentElementsAmount == (maxElements - 1)
+        let nextAction = isLast == true ? nil : { [unowned self] in
             self.showNextBasicViewСontroller()
         }
              vc.configure(with: basicModel, nextAction: nextAction)
         show(vc, sender: self)
+    }
+}
+
+extension BiologyViewController {
+    
+    //MARK: - Public
+    func configure(with basicsModel: BasicsModel, nextAction: NextAction?) {
+        contentModel = basicsModel
+        
+        guard let nextClosure = nextAction else {
+            self.navigationItem.rightBarButtonItem = nil
+            return
+        }
+        showNext = nextClosure
+    }
+    
+    func removeNotifications(withIdentifiers identifiers: [String]) {
+        removeNotification(identifiers: identifiers)
     }
 }

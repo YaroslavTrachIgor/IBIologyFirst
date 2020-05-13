@@ -12,8 +12,6 @@ import CoreLocation
 
 extension ForTodayViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let queue = DispatchQueue(label: "mapQueue", attributes: .concurrent)
-        let group = DispatchGroup()
         
         let activityIndicator = UIActivityIndicatorView()
         if #available(iOS 13.0, *) {
@@ -29,14 +27,7 @@ extension ForTodayViewController: UISearchBarDelegate {
         dismiss(animated: true, completion: nil)
         
         let searchRequest = MKLocalSearch.Request()
-        
-        queue.async {
-            DispatchQueue.main.async {
-                group.enter()
-                searchRequest.naturalLanguageQuery = searchBar.text
-            }
-            group.leave()
-        }
+            searchRequest.naturalLanguageQuery = searchBar.text
         
         let activeSearch = MKLocalSearch(request: searchRequest)
         
@@ -49,8 +40,6 @@ extension ForTodayViewController: UISearchBarDelegate {
                 }
             }
             else {
-                let queue = DispatchQueue(label: "mapQueue", attributes: .concurrent)
-                let group = DispatchGroup()
                 
                 //Remove annotations
                 let annotations = self.mapView.annotations
@@ -60,16 +49,8 @@ extension ForTodayViewController: UISearchBarDelegate {
                 let longitude   = response?.boundingRegion.center.longitude
                 
                 let annotation              = MKPointAnnotation()
-                
-                queue.async {
-                    DispatchQueue.main.async {
-                        group.enter()
-                        
-                        annotation.title        = searchBar.text
-                        annotation.coordinate   = CLLocationCoordinate2DMake(latitude!, longitude!)
-                    }
-                    group.leave()
-                }
+                    annotation.title        = searchBar.text
+                    annotation.coordinate   = CLLocationCoordinate2DMake(latitude!, longitude!)
                 
                 self.mapView.addAnnotation(annotation)
                 

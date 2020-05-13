@@ -15,7 +15,7 @@ extension UIViewController {
         guard let url = URL(string: url) else { return }
         
         let safariVC = BasicSafariVC(url: url)
-            safariVC.setupSafariVC()
+        safariVC.setupSafariVC()
         
         DispatchQueue.global(qos: .utility).async {
             DispatchQueue.main.async {

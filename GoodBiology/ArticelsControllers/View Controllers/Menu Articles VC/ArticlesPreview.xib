@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="KMm-1T-221" customClass="ArticlesPreviewView" customModule="GoodBiology" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1065"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jsh-Uu-II7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1065"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXS-0h-zth" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="8" width="341" height="117"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Pl" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gn4-DO-DPk" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="333" height="34.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVr-Gb-1K2">
+                                    <rect key="frame" x="8" y="42.5" width="325" height="66.5"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MtC-Ll-49Z">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="117"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="117" id="5lS-Zu-0Qq"/>
+                                <constraint firstAttribute="trailing" secondItem="gn4-DO-DPk" secondAttribute="trailing" id="5qU-34-Fmc"/>
+                                <constraint firstItem="QVr-Gb-1K2" firstAttribute="top" secondItem="gn4-DO-DPk" secondAttribute="bottom" id="8kg-qR-CfU"/>
+                                <constraint firstItem="gn4-DO-DPk" firstAttribute="leading" secondItem="tXS-0h-zth" secondAttribute="leadingMargin" id="CXS-4E-qmt"/>
+                                <constraint firstItem="QVr-Gb-1K2" firstAttribute="centerX" secondItem="MtC-Ll-49Z" secondAttribute="centerX" id="CpB-fV-wSW"/>
+                                <constraint firstItem="MtC-Ll-49Z" firstAttribute="leading" secondItem="tXS-0h-zth" secondAttribute="leading" id="E9g-ht-xqh"/>
+                                <constraint firstItem="gn4-DO-DPk" firstAttribute="top" secondItem="tXS-0h-zth" secondAttribute="topMargin" id="Ndj-V4-mdm"/>
+                                <constraint firstAttribute="trailing" secondItem="MtC-Ll-49Z" secondAttribute="trailing" id="VkX-P2-Roi"/>
+                                <constraint firstItem="QVr-Gb-1K2" firstAttribute="bottom" secondItem="tXS-0h-zth" secondAttribute="bottomMargin" id="dol-OD-6mZ"/>
+                                <constraint firstItem="MtC-Ll-49Z" firstAttribute="top" secondItem="tXS-0h-zth" secondAttribute="top" id="g5w-K4-gsx"/>
+                                <constraint firstItem="gn4-DO-DPk" firstAttribute="leading" secondItem="QVr-Gb-1K2" secondAttribute="leading" id="hh8-EX-rlO"/>
+                                <constraint firstAttribute="bottom" secondItem="MtC-Ll-49Z" secondAttribute="bottom" id="hrD-Ko-gvx"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-Ju-fgq" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="133" width="341" height="117"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" An" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQk-g4-eF5" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="333" height="34.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLL-ar-jYB">
+                                    <rect key="frame" x="8" y="42.5" width="325" height="66.5"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tA7-7N-ks1">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="117"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ZLL-ar-jYB" firstAttribute="centerX" secondItem="tA7-7N-ks1" secondAttribute="centerX" id="2Lg-Uu-92i"/>
+                                <constraint firstItem="iQk-g4-eF5" firstAttribute="leading" secondItem="ZLL-ar-jYB" secondAttribute="leading" id="AbS-XR-fAe"/>
+                                <constraint firstAttribute="trailing" secondItem="iQk-g4-eF5" secondAttribute="trailing" id="Cjv-TU-pgm"/>
+                                <constraint firstItem="iQk-g4-eF5" firstAttribute="leading" secondItem="qEe-Ju-fgq" secondAttribute="leadingMargin" id="QIo-wZ-rSW"/>
+                                <constraint firstItem="ZLL-ar-jYB" firstAttribute="bottom" secondItem="qEe-Ju-fgq" secondAttribute="bottomMargin" id="UsU-uk-PGf"/>
+                                <constraint firstItem="tA7-7N-ks1" firstAttribute="leading" secondItem="qEe-Ju-fgq" secondAttribute="leading" id="beU-8u-Nml"/>
+                                <constraint firstAttribute="trailing" secondItem="tA7-7N-ks1" secondAttribute="trailing" id="cGH-He-J5n"/>
+                                <constraint firstItem="ZLL-ar-jYB" firstAttribute="top" secondItem="iQk-g4-eF5" secondAttribute="bottom" id="dFK-vb-1so"/>
+                                <constraint firstItem="iQk-g4-eF5" firstAttribute="top" secondItem="qEe-Ju-fgq" secondAttribute="topMargin" id="dOx-zi-DhP"/>
+                                <constraint firstAttribute="height" constant="117" id="ftQ-6e-P4L"/>
+                                <constraint firstItem="tA7-7N-ks1" firstAttribute="top" secondItem="qEe-Ju-fgq" secondAttribute="top" id="gum-hs-vNp"/>
+                                <constraint firstAttribute="bottom" secondItem="tA7-7N-ks1" secondAttribute="bottom" id="hEe-uo-XHt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HpT-1N-B6P" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="258" width="341" height="117"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1B-C6-dvr" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="325" height="34.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." translatesAutoresizingMaskIntoConstraints="NO" id="I2B-4U-Y8M">
+                                    <rect key="frame" x="8" y="42.5" width="325" height="66.5"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-eX-es2">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="117"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="sfH-eX-es2" firstAttribute="centerX" secondItem="I2B-4U-Y8M" secondAttribute="centerX" id="2el-Fw-M4y"/>
+                                <constraint firstItem="u1B-C6-dvr" firstAttribute="top" secondItem="HpT-1N-B6P" secondAttribute="topMargin" id="8kA-BC-bWY"/>
+                                <constraint firstItem="sfH-eX-es2" firstAttribute="top" secondItem="HpT-1N-B6P" secondAttribute="top" id="9LH-RZ-KVi"/>
+                                <constraint firstItem="sfH-eX-es2" firstAttribute="leading" secondItem="HpT-1N-B6P" secondAttribute="leading" id="9k2-eo-bLy"/>
+                                <constraint firstAttribute="trailing" secondItem="u1B-C6-dvr" secondAttribute="trailing" constant="8" id="AJr-3Y-bVG"/>
+                                <constraint firstItem="u1B-C6-dvr" firstAttribute="leading" secondItem="HpT-1N-B6P" secondAttribute="leading" constant="8" id="HKX-Og-fiW"/>
+                                <constraint firstItem="I2B-4U-Y8M" firstAttribute="bottom" secondItem="HpT-1N-B6P" secondAttribute="bottomMargin" id="Qv5-hu-8GK"/>
+                                <constraint firstItem="I2B-4U-Y8M" firstAttribute="leading" secondItem="HpT-1N-B6P" secondAttribute="leadingMargin" id="opy-a6-QvH"/>
+                                <constraint firstAttribute="trailing" secondItem="sfH-eX-es2" secondAttribute="trailing" id="qKB-kX-bvD"/>
+                                <constraint firstItem="I2B-4U-Y8M" firstAttribute="top" secondItem="u1B-C6-dvr" secondAttribute="bottom" id="qTx-Pj-Ah1"/>
+                                <constraint firstAttribute="height" constant="117" id="ri0-vo-hAs"/>
+                                <constraint firstAttribute="bottom" secondItem="sfH-eX-es2" secondAttribute="bottom" id="tTE-52-fJI"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="117" id="wjO-dW-PaL"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emI-a6-6QK" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="383" width="341" height="117"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRS-z2-h1p" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="333" height="34.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." translatesAutoresizingMaskIntoConstraints="NO" id="7Qz-mn-OoV">
+                                    <rect key="frame" x="8" y="42.5" width="325" height="66.5"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBb-e9-uSf">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="117"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="XRS-z2-h1p" secondAttribute="trailing" id="47d-GZ-g9s"/>
+                                <constraint firstItem="XRS-z2-h1p" firstAttribute="top" secondItem="emI-a6-6QK" secondAttribute="topMargin" id="EBa-v7-HOa"/>
+                                <constraint firstItem="7Qz-mn-OoV" firstAttribute="centerX" secondItem="CBb-e9-uSf" secondAttribute="centerX" id="Ote-1D-mtU"/>
+                                <constraint firstAttribute="trailing" secondItem="CBb-e9-uSf" secondAttribute="trailing" id="Rhw-4e-ovS"/>
+                                <constraint firstItem="CBb-e9-uSf" firstAttribute="top" secondItem="emI-a6-6QK" secondAttribute="top" id="SoA-uU-1IN"/>
+                                <constraint firstItem="XRS-z2-h1p" firstAttribute="leading" secondItem="emI-a6-6QK" secondAttribute="leadingMargin" id="TFo-fY-gBF"/>
+                                <constraint firstItem="7Qz-mn-OoV" firstAttribute="bottom" secondItem="emI-a6-6QK" secondAttribute="bottomMargin" id="WV9-uL-Aqq"/>
+                                <constraint firstItem="7Qz-mn-OoV" firstAttribute="top" secondItem="XRS-z2-h1p" secondAttribute="bottom" id="ZDP-fY-Gdt"/>
+                                <constraint firstAttribute="height" constant="117" id="anJ-df-TxS"/>
+                                <constraint firstItem="XRS-z2-h1p" firstAttribute="leading" secondItem="7Qz-mn-OoV" secondAttribute="leading" id="cY0-XZ-87N"/>
+                                <constraint firstItem="CBb-e9-uSf" firstAttribute="leading" secondItem="emI-a6-6QK" secondAttribute="leading" id="dxp-pA-4C8"/>
+                                <constraint firstAttribute="bottom" secondItem="CBb-e9-uSf" secondAttribute="bottom" id="iu2-Vp-E1X"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5D-Zx-6DG" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="508" width="341" height="117"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Vi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCf-CO-MRV" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="325" height="34.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." translatesAutoresizingMaskIntoConstraints="NO" id="Edz-Jz-wLm">
+                                    <rect key="frame" x="8" y="42.5" width="325" height="66.5"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgR-HP-0ac">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="117"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="dCf-CO-MRV" firstAttribute="top" secondItem="b5D-Zx-6DG" secondAttribute="topMargin" id="Asj-bi-Uf4"/>
+                                <constraint firstItem="Edz-Jz-wLm" firstAttribute="top" secondItem="dCf-CO-MRV" secondAttribute="bottom" id="JnU-Mq-jQN"/>
+                                <constraint firstAttribute="trailing" secondItem="zgR-HP-0ac" secondAttribute="trailing" id="XoU-HL-3kS"/>
+                                <constraint firstAttribute="trailing" secondItem="dCf-CO-MRV" secondAttribute="trailing" constant="8" id="dVx-cy-JqY"/>
+                                <constraint firstItem="dCf-CO-MRV" firstAttribute="leading" secondItem="b5D-Zx-6DG" secondAttribute="leadingMargin" id="eXw-oy-zza"/>
+                                <constraint firstAttribute="bottom" secondItem="zgR-HP-0ac" secondAttribute="bottom" id="fZG-wU-1b8"/>
+                                <constraint firstItem="Edz-Jz-wLm" firstAttribute="centerX" secondItem="zgR-HP-0ac" secondAttribute="centerX" id="m2c-1l-Nv3"/>
+                                <constraint firstItem="zgR-HP-0ac" firstAttribute="top" secondItem="b5D-Zx-6DG" secondAttribute="top" id="r9L-aH-XWI"/>
+                                <constraint firstItem="zgR-HP-0ac" firstAttribute="leading" secondItem="b5D-Zx-6DG" secondAttribute="leading" id="svi-il-NOt"/>
+                                <constraint firstItem="Edz-Jz-wLm" firstAttribute="bottom" secondItem="b5D-Zx-6DG" secondAttribute="bottomMargin" id="tUf-qN-naA"/>
+                                <constraint firstAttribute="height" constant="117" id="v0P-Cv-Bbs"/>
+                                <constraint firstItem="dCf-CO-MRV" firstAttribute="leading" secondItem="Edz-Jz-wLm" secondAttribute="leading" id="znC-Fo-i3G"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vR9-pp-JCE" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="633" width="341" height="117"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Ar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVH-Ws-IIC" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="325" height="34.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." translatesAutoresizingMaskIntoConstraints="NO" id="4tT-xa-eoP">
+                                    <rect key="frame" x="8" y="42.5" width="325" height="66.5"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YU-bw-oUg">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="117"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="2YU-bw-oUg" secondAttribute="bottom" id="7xC-vD-9nC"/>
+                                <constraint firstAttribute="trailing" secondItem="2YU-bw-oUg" secondAttribute="trailing" id="Gz1-LT-G4P"/>
+                                <constraint firstItem="2YU-bw-oUg" firstAttribute="leading" secondItem="vR9-pp-JCE" secondAttribute="leading" id="JKf-MI-Byj"/>
+                                <constraint firstItem="4tT-xa-eoP" firstAttribute="leading" secondItem="vR9-pp-JCE" secondAttribute="leadingMargin" id="JfA-EY-tNc"/>
+                                <constraint firstItem="2YU-bw-oUg" firstAttribute="top" secondItem="vR9-pp-JCE" secondAttribute="top" id="Q7Y-1W-jhh"/>
+                                <constraint firstItem="4tT-xa-eoP" firstAttribute="centerX" secondItem="hVH-Ws-IIC" secondAttribute="centerX" id="Via-TV-lhi"/>
+                                <constraint firstItem="4tT-xa-eoP" firstAttribute="top" secondItem="hVH-Ws-IIC" secondAttribute="bottom" id="Zth-FD-rfP"/>
+                                <constraint firstAttribute="height" constant="117" id="eXz-eO-Nge"/>
+                                <constraint firstItem="4tT-xa-eoP" firstAttribute="bottom" secondItem="vR9-pp-JCE" secondAttribute="bottomMargin" id="kAJ-AN-Icx"/>
+                                <constraint firstItem="hVH-Ws-IIC" firstAttribute="trailing" secondItem="4tT-xa-eoP" secondAttribute="trailing" id="niL-kr-sXQ"/>
+                                <constraint firstItem="hVH-Ws-IIC" firstAttribute="centerX" secondItem="2YU-bw-oUg" secondAttribute="centerX" id="obO-xu-fjN"/>
+                                <constraint firstItem="hVH-Ws-IIC" firstAttribute="top" secondItem="vR9-pp-JCE" secondAttribute="topMargin" id="xx6-QE-B1e"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Djr-wb-Al8" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="758" width="341" height="117"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Fu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqZ-Ad-NKN" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="333" height="34.5"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." translatesAutoresizingMaskIntoConstraints="NO" id="mbW-yp-oNg">
+                                    <rect key="frame" x="8" y="42.5" width="325" height="66.5"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gn-y5-Tsn">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="117"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="117" id="Sqq-ol-h2U"/>
+                                        <constraint firstAttribute="width" constant="341" id="Z6L-k8-JfB"/>
+                                    </constraints>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="mbW-yp-oNg" firstAttribute="leading" secondItem="Djr-wb-Al8" secondAttribute="leadingMargin" id="6Uy-Jb-8cy"/>
+                                <constraint firstItem="mbW-yp-oNg" firstAttribute="top" secondItem="SqZ-Ad-NKN" secondAttribute="bottom" id="B9w-q4-hJS"/>
+                                <constraint firstAttribute="height" constant="117" id="IpG-cT-EI7"/>
+                                <constraint firstItem="mbW-yp-oNg" firstAttribute="centerX" secondItem="7gn-y5-Tsn" secondAttribute="centerX" id="MeH-z5-OkG"/>
+                                <constraint firstItem="7gn-y5-Tsn" firstAttribute="top" secondItem="Djr-wb-Al8" secondAttribute="top" id="VdC-An-Zx5"/>
+                                <constraint firstItem="7gn-y5-Tsn" firstAttribute="leading" secondItem="Djr-wb-Al8" secondAttribute="leading" id="Wsa-b7-ghG"/>
+                                <constraint firstItem="SqZ-Ad-NKN" firstAttribute="top" secondItem="Djr-wb-Al8" secondAttribute="topMargin" id="b1J-R7-2L3"/>
+                                <constraint firstItem="SqZ-Ad-NKN" firstAttribute="leading" secondItem="Djr-wb-Al8" secondAttribute="leading" constant="8" id="bUJ-bb-PE4"/>
+                                <constraint firstItem="mbW-yp-oNg" firstAttribute="bottom" secondItem="Djr-wb-Al8" secondAttribute="bottomMargin" id="eGF-jN-qXG"/>
+                                <constraint firstAttribute="trailing" secondItem="7gn-y5-Tsn" secondAttribute="trailing" id="ewr-7S-yRc"/>
+                                <constraint firstAttribute="trailing" secondItem="SqZ-Ad-NKN" secondAttribute="trailing" id="kZ3-PI-4qp"/>
+                                <constraint firstAttribute="bottom" secondItem="7gn-y5-Tsn" secondAttribute="bottom" id="uzq-Xw-9c1"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                    <color key="value" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJI-lL-Wd7" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="308" y="13" width="43" height="42"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmY-95-4Zi">
+                                    <rect key="frame" x="10" y="10" width="22" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="WRD-2E-oLG"/>
+                                        <constraint firstAttribute="width" constant="22" id="kKw-bM-SnU"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="qON-bP-e3V"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <state key="normal" title="Button" image="clock.fill" catalog="system"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="jmY-95-4Zi" firstAttribute="leading" secondItem="rJI-lL-Wd7" secondAttribute="leading" constant="10" id="CxW-fw-1Kj"/>
+                                <constraint firstAttribute="height" constant="42" id="QD0-bl-Ptw"/>
+                                <constraint firstAttribute="trailing" secondItem="jmY-95-4Zi" secondAttribute="trailing" constant="11" id="WHE-KJ-nmG"/>
+                                <constraint firstAttribute="width" constant="43" id="aUN-nu-l5l"/>
+                                <constraint firstItem="jmY-95-4Zi" firstAttribute="top" secondItem="rJI-lL-Wd7" secondAttribute="top" constant="10" id="flE-aD-den"/>
+                                <constraint firstAttribute="bottom" secondItem="jmY-95-4Zi" secondAttribute="bottom" constant="10" id="wv9-Ck-MfP"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1h-zG-DAE" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="308" y="68" width="43" height="42"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIZ-sO-KJG">
+                                    <rect key="frame" x="10" y="10" width="22" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="22" id="LQL-4y-nNf"/>
+                                        <constraint firstAttribute="height" constant="22" id="QdH-Bv-xB5"/>
+                                        <constraint firstAttribute="width" constant="22" id="Ufd-YX-J1z"/>
+                                    </constraints>
+                                    <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <state key="normal" title="Button" image="questionmark.video.fill" catalog="system"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="10j-90-sIo"/>
+                                <constraint firstAttribute="bottom" secondItem="YIZ-sO-KJG" secondAttribute="bottom" constant="10" id="61o-aC-xsO"/>
+                                <constraint firstAttribute="width" constant="43" id="S81-JB-TGV"/>
+                                <constraint firstItem="YIZ-sO-KJG" firstAttribute="leading" secondItem="U1h-zG-DAE" secondAttribute="leading" constant="10" id="XiD-cI-bJE"/>
+                                <constraint firstAttribute="trailing" secondItem="YIZ-sO-KJG" secondAttribute="trailing" constant="11" id="bcH-3x-PP0"/>
+                                <constraint firstItem="YIZ-sO-KJG" firstAttribute="top" secondItem="U1h-zG-DAE" secondAttribute="top" constant="10" id="iUG-Ix-kYx"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  New Articles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emQ-hI-NRU" customClass="NewArticleLabel" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="883" width="341" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="gOX-8y-hkW"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qel-ct-FVn" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
+                            <rect key="frame" x="17" y="921" width="341" height="117"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNV-zq-MLh" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="8" y="8" width="325" height="35"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                    <color key="textColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-VB-w2f">
+                                    <rect key="frame" x="8" y="43" width="325" height="66"/>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UIV-Bk-b5T" customClass="NewLabel" customModule="GoodBiology" customModuleProvider="target">
+                                    <rect key="frame" x="287" y="8" width="38" height="27"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="38" id="LEh-OA-FBZ"/>
+                                        <constraint firstAttribute="height" constant="27" id="wQh-pJ-yOT"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-um-SHA">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="117"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="dL9-um-SHA" firstAttribute="leading" secondItem="Qel-ct-FVn" secondAttribute="leading" id="12y-x1-TgO"/>
+                                <constraint firstAttribute="trailing" secondItem="UIV-Bk-b5T" secondAttribute="trailing" constant="16" id="Dwb-55-rNl"/>
+                                <constraint firstAttribute="bottom" secondItem="dL9-um-SHA" secondAttribute="bottom" id="GR9-aA-vQb"/>
+                                <constraint firstItem="2eY-VB-w2f" firstAttribute="top" secondItem="DNV-zq-MLh" secondAttribute="bottom" id="Jwq-gP-krh"/>
+                                <constraint firstAttribute="height" constant="117" id="MAZ-zz-KMr"/>
+                                <constraint firstItem="2eY-VB-w2f" firstAttribute="trailing" secondItem="DNV-zq-MLh" secondAttribute="trailing" id="UhK-Ns-WB3"/>
+                                <constraint firstItem="2eY-VB-w2f" firstAttribute="bottom" secondItem="Qel-ct-FVn" secondAttribute="bottomMargin" id="VZZ-jl-dqi"/>
+                                <constraint firstItem="2eY-VB-w2f" firstAttribute="leading" secondItem="DNV-zq-MLh" secondAttribute="leading" id="c46-Uc-dBc"/>
+                                <constraint firstItem="UIV-Bk-b5T" firstAttribute="top" secondItem="Qel-ct-FVn" secondAttribute="top" constant="8" id="hA8-Ac-Lq5"/>
+                                <constraint firstItem="dL9-um-SHA" firstAttribute="top" secondItem="Qel-ct-FVn" secondAttribute="top" id="i39-CX-5OG"/>
+                                <constraint firstItem="DNV-zq-MLh" firstAttribute="leading" secondItem="Qel-ct-FVn" secondAttribute="leading" constant="8" id="qwC-4e-UCL"/>
+                                <constraint firstItem="DNV-zq-MLh" firstAttribute="top" secondItem="Qel-ct-FVn" secondAttribute="top" constant="8" id="tyO-AH-gSg"/>
+                                <constraint firstAttribute="trailing" secondItem="dL9-um-SHA" secondAttribute="trailing" id="x6s-ei-mD7"/>
+                                <constraint firstAttribute="trailing" secondItem="DNV-zq-MLh" secondAttribute="trailing" constant="8" id="yhp-ZH-NOJ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Djr-wb-Al8" firstAttribute="centerX" secondItem="Jsh-Uu-II7" secondAttribute="centerX" id="4G2-RA-5U2"/>
+                        <constraint firstAttribute="trailing" secondItem="b5D-Zx-6DG" secondAttribute="trailing" constant="17" id="4Tx-6Z-Wwj"/>
+                        <constraint firstAttribute="trailing" secondItem="tXS-0h-zth" secondAttribute="trailing" constant="17" id="4iA-N7-f7s"/>
+                        <constraint firstItem="HpT-1N-B6P" firstAttribute="centerX" secondItem="Jsh-Uu-II7" secondAttribute="centerX" id="6Kd-mJ-AJQ"/>
+                        <constraint firstItem="vR9-pp-JCE" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="AK9-zh-Dgo"/>
+                        <constraint firstAttribute="trailing" secondItem="vR9-pp-JCE" secondAttribute="trailing" constant="17" id="CLC-vc-CEW"/>
+                        <constraint firstAttribute="trailing" secondItem="Djr-wb-Al8" secondAttribute="trailing" constant="17" id="DNP-KH-bYX"/>
+                        <constraint firstAttribute="trailing" secondItem="vR9-pp-JCE" secondAttribute="trailing" constant="17" id="Dv8-dO-FRC"/>
+                        <constraint firstAttribute="trailing" secondItem="qEe-Ju-fgq" secondAttribute="trailing" constant="17" id="E0X-Gx-LAo"/>
+                        <constraint firstItem="Djr-wb-Al8" firstAttribute="top" secondItem="vR9-pp-JCE" secondAttribute="bottom" constant="8" id="EGc-yK-HOX"/>
+                        <constraint firstItem="vR9-pp-JCE" firstAttribute="centerX" secondItem="Jsh-Uu-II7" secondAttribute="centerX" id="FRG-Ca-LmF"/>
+                        <constraint firstItem="b5D-Zx-6DG" firstAttribute="top" secondItem="emI-a6-6QK" secondAttribute="bottom" constant="8" id="G4n-i7-LdV"/>
+                        <constraint firstAttribute="trailing" secondItem="U1h-zG-DAE" secondAttribute="trailing" constant="24" id="IyO-2G-EGk"/>
+                        <constraint firstItem="emI-a6-6QK" firstAttribute="centerX" secondItem="Jsh-Uu-II7" secondAttribute="centerX" id="LGe-IA-45N"/>
+                        <constraint firstItem="b5D-Zx-6DG" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="LLy-YV-G0b"/>
+                        <constraint firstItem="tXS-0h-zth" firstAttribute="centerX" secondItem="Jsh-Uu-II7" secondAttribute="centerX" id="MY9-iR-vsE"/>
+                        <constraint firstItem="HpT-1N-B6P" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="NUw-Td-JfO"/>
+                        <constraint firstItem="rJI-lL-Wd7" firstAttribute="top" secondItem="Jsh-Uu-II7" secondAttribute="top" constant="13" id="NzA-Tx-xTw"/>
+                        <constraint firstItem="Djr-wb-Al8" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="Ogr-rJ-fDe"/>
+                        <constraint firstAttribute="trailing" secondItem="tXS-0h-zth" secondAttribute="trailing" constant="17" id="QIB-FF-iHR"/>
+                        <constraint firstAttribute="trailing" secondItem="Qel-ct-FVn" secondAttribute="trailing" constant="17" id="SaP-fe-W8J"/>
+                        <constraint firstAttribute="trailing" secondItem="rJI-lL-Wd7" secondAttribute="trailing" constant="24" id="U6q-Ys-Vhh"/>
+                        <constraint firstItem="emQ-hI-NRU" firstAttribute="top" secondItem="Djr-wb-Al8" secondAttribute="bottom" constant="8" id="Unv-cc-VTC"/>
+                        <constraint firstAttribute="trailing" secondItem="qEe-Ju-fgq" secondAttribute="trailing" constant="17" id="Uwa-0v-iX2"/>
+                        <constraint firstItem="emI-a6-6QK" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="W3W-5u-D5p"/>
+                        <constraint firstAttribute="trailing" secondItem="emQ-hI-NRU" secondAttribute="trailing" constant="17" id="Wc8-AI-SgD"/>
+                        <constraint firstItem="vR9-pp-JCE" firstAttribute="top" secondItem="b5D-Zx-6DG" secondAttribute="bottom" constant="8" id="Wla-o8-Cef"/>
+                        <constraint firstItem="Qel-ct-FVn" firstAttribute="top" secondItem="emQ-hI-NRU" secondAttribute="bottom" constant="8" id="a6V-39-DHC"/>
+                        <constraint firstAttribute="trailing" secondItem="emI-a6-6QK" secondAttribute="trailing" constant="17" id="cbi-VW-Lql"/>
+                        <constraint firstItem="qEe-Ju-fgq" firstAttribute="centerX" secondItem="Jsh-Uu-II7" secondAttribute="centerX" id="cgl-BN-3QA"/>
+                        <constraint firstAttribute="trailing" secondItem="emI-a6-6QK" secondAttribute="trailing" constant="17" id="e0X-1j-9Mg"/>
+                        <constraint firstItem="b5D-Zx-6DG" firstAttribute="centerX" secondItem="Jsh-Uu-II7" secondAttribute="centerX" id="f2b-WZ-l86"/>
+                        <constraint firstItem="tXS-0h-zth" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="jZH-aa-eFr"/>
+                        <constraint firstItem="qEe-Ju-fgq" firstAttribute="top" secondItem="tXS-0h-zth" secondAttribute="bottom" constant="8" id="kmr-7e-pjn"/>
+                        <constraint firstAttribute="bottom" secondItem="Qel-ct-FVn" secondAttribute="bottom" constant="20" id="ldf-xZ-IV1"/>
+                        <constraint firstItem="qEe-Ju-fgq" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="nQK-6b-BqA"/>
+                        <constraint firstAttribute="trailing" secondItem="Djr-wb-Al8" secondAttribute="trailing" constant="17" id="oem-pN-Sri"/>
+                        <constraint firstItem="tXS-0h-zth" firstAttribute="top" secondItem="Jsh-Uu-II7" secondAttribute="top" constant="8" id="ptw-0U-jz4"/>
+                        <constraint firstItem="U1h-zG-DAE" firstAttribute="top" secondItem="rJI-lL-Wd7" secondAttribute="bottom" constant="13" id="rpQ-HI-FWD"/>
+                        <constraint firstItem="emQ-hI-NRU" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="sf7-5G-9Ty"/>
+                        <constraint firstItem="Qel-ct-FVn" firstAttribute="leading" secondItem="Jsh-Uu-II7" secondAttribute="leading" constant="17" id="slN-3N-Zgj"/>
+                        <constraint firstAttribute="trailing" secondItem="b5D-Zx-6DG" secondAttribute="trailing" constant="17" id="wvo-Rr-raA"/>
+                        <constraint firstAttribute="trailing" secondItem="HpT-1N-B6P" secondAttribute="trailing" constant="17" id="xUZ-V0-QqA"/>
+                        <constraint firstItem="emI-a6-6QK" firstAttribute="top" secondItem="HpT-1N-B6P" secondAttribute="bottom" constant="8" id="z9j-t5-BVi"/>
+                        <constraint firstItem="HpT-1N-B6P" firstAttribute="top" secondItem="qEe-Ju-fgq" secondAttribute="bottom" constant="8" id="zOj-Oa-RZQ"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="R9V-lH-9Jx" firstAttribute="bottom" secondItem="Jsh-Uu-II7" secondAttribute="bottom" id="35J-uf-amn"/>
+                <constraint firstItem="Jsh-Uu-II7" firstAttribute="leading" secondItem="R9V-lH-9Jx" secondAttribute="leading" id="Yok-jT-bhJ"/>
+                <constraint firstAttribute="trailing" secondItem="Jsh-Uu-II7" secondAttribute="trailing" id="ZJe-O4-ybE"/>
+                <constraint firstItem="Jsh-Uu-II7" firstAttribute="top" secondItem="KMm-1T-221" secondAttribute="top" id="fcJ-Ak-nw2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="R9V-lH-9Jx"/>
+            <connections>
+                <outlet property="animalTextView" destination="ZLL-ar-jYB" id="rck-eL-I9F"/>
+                <outlet property="animalsLabel" destination="iQk-g4-eF5" id="FCx-iC-KrM"/>
+                <outlet property="animalsView" destination="qEe-Ju-fgq" id="K1n-an-91m"/>
+                <outlet property="archaeaLabel" destination="hVH-Ws-IIC" id="XEe-38-KwJ"/>
+                <outlet property="archaeaTextView" destination="4tT-xa-eoP" id="Arm-Av-XRm"/>
+                <outlet property="archaeaView" destination="vR9-pp-JCE" id="AwF-V6-jjU"/>
+                <outlet property="chromistaLabel" destination="DNV-zq-MLh" id="ZPW-dG-Hnm"/>
+                <outlet property="chromistaTextView" destination="2eY-VB-w2f" id="9d7-Lp-MZN"/>
+                <outlet property="chromistaView" destination="Qel-ct-FVn" id="7ui-i7-zWH"/>
+                <outlet property="fungusTextView" destination="mbW-yp-oNg" id="c0l-xr-kjC"/>
+                <outlet property="fungusesLabel" destination="SqZ-Ad-NKN" id="Xgw-ou-4c8"/>
+                <outlet property="humanLabel" destination="XRS-z2-h1p" id="dil-f8-3NF"/>
+                <outlet property="humanTextView" destination="7Qz-mn-OoV" id="VCC-Yu-6Cz"/>
+                <outlet property="manView" destination="emI-a6-6QK" id="Awq-qM-Lf5"/>
+                <outlet property="microbeTextView" destination="I2B-4U-Y8M" id="aUf-Eh-l6n"/>
+                <outlet property="microbesLabel" destination="u1B-C6-dvr" id="jcv-oV-Gp7"/>
+                <outlet property="microbesView" destination="HpT-1N-B6P" id="Zqi-xP-L8L"/>
+                <outlet property="mushroomsView" destination="Djr-wb-Al8" id="T4O-VI-wDM"/>
+                <outlet property="newArticleLabel" destination="emQ-hI-NRU" id="Gqz-5V-UP6"/>
+                <outlet property="newLabel" destination="UIV-Bk-b5T" id="KMu-bv-CEZ"/>
+                <outlet property="plantTextView" destination="QVr-Gb-1K2" id="flC-nJ-7An"/>
+                <outlet property="plantsLabel" destination="gn4-DO-DPk" id="4A5-BN-Am9"/>
+                <outlet property="plantsView" destination="tXS-0h-zth" id="9TS-Gi-8HX"/>
+                <outlet property="readingOnTimeVCShowerButtonBackView" destination="U1h-zG-DAE" id="Qoe-2Y-SAm"/>
+                <outlet property="scrollView" destination="Jsh-Uu-II7" id="gue-4v-gQ3"/>
+                <outlet property="videoPlayerVCShowerButtonBackView" destination="rJI-lL-Wd7" id="qHO-9X-qdJ"/>
+                <outlet property="virusTextView" destination="Edz-Jz-wLm" id="05B-sZ-1Nx"/>
+                <outlet property="virusesLabel" destination="dCf-CO-MRV" id="sXa-gj-sXl"/>
+                <outlet property="virusesView" destination="b5D-Zx-6DG" id="ZXc-kc-yWY"/>
+            </connections>
+            <point key="canvasLocation" x="21.600000000000001" y="170.46476761619192"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="clock.fill" catalog="system" width="64" height="60"/>
+        <image name="questionmark.video.fill" catalog="system" width="64" height="40"/>
+    </resources>
+</document>

@@ -47,11 +47,12 @@ extension BasicNotesViewController: UIPickerViewDelegate {
         } else {
             label = UILabel()
         }
-                label.textColor = .darkGray
-                label.font = UIFont(name: "AvenirNext-Medium", size: 21)
-                label.textAlignment = .center
-                label.text = articlesArray[row]
-        return  label
+        label.textColor = .darkGray
+        label.font = UIFont(name: "AvenirNext-Medium", size: 21)
+        label.textAlignment = .center
+        label.text = articlesArray[row]
+        
+        return label
     }
 }
 

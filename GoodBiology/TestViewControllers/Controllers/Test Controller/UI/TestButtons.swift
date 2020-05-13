@@ -28,14 +28,14 @@ protocol TestButtonDelegate {
 
 extension UIButton {
     func testButtonsSetup() {
-        self.setTitleColor(lazyColor, for: .normal)
-        self.titleLabel?.font       = UIFont(name: boldFont, size: 15)
+        self.setTitleColor(.biologyGreenColor, for: .normal)
+        self.titleLabel?.font       = UIFont(name: BasicFonts.boldFont, size: 15)
         
         if #available(iOS 13.0, *) {
             self.backgroundColor        =  .systemBackground
         }
         
-        self.titleLabel?.textColor  =  lazyColor
+        self.titleLabel?.textColor  =  .biologyGreenColor
         
         self.layer.borderColor      =  #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
         self.layer.borderWidth      =  2.55

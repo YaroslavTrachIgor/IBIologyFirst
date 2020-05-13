@@ -10,104 +10,120 @@ import UIKit
 import AVFoundation
 import AVKit
 import AudioToolbox
+import GoogleMobileAds
+import Combine
 
-@available(iOS 13.0, *)
-class VideoPlayerViewController: UIViewController {
+protocol BasicAdBunnerSetupProtocol {
+    func setupAdBunner()
+}
+
+final class VideoPlayerViewController: UIViewController {
     
+    // MARK: - IBOutlets
+    // Banner View
+    @IBOutlet weak var googleAdBannerView: GADBannerView!
     
-    //MARK: IBOutlets
-    @IBOutlet weak var contentTextView:        UITextView!
-    @IBOutlet weak var switchTextView:         UITextView!
+    // MARK: UITextViews
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var switchTextView:  UITextView!
     
-    @IBOutlet weak var contentBackground:      ContentBack!
-    @IBOutlet weak var switchView:             UIView!
+    // MARK: Content Backs
+    @IBOutlet weak var contentBackground: ContentBack!
+    @IBOutlet weak var switchView:        UIView!
     
-    @IBOutlet weak var `switch`:               UISwitch!
+    // MARK: UISwitch
+    @IBOutlet weak var `switch`: UISwitch!
     
+    // MARK: UIButton
     @IBOutlet weak var articlesVideosGoButton: UIButton!
     @IBOutlet weak var videoButton:            UIButton!
     
-    @IBOutlet weak var sharing:                     UIBarButtonItem!
-    @IBOutlet weak var showAndHideButton:           UIBarButtonItem!
-    @IBOutlet weak var articlesMenuVideosButton:    UIBarButtonItem!
+    // MARK: UIBarButtonItem
+    @IBOutlet weak var sharing:                  UIBarButtonItem!
+    @IBOutlet weak var showAndHideButton:        UIBarButtonItem!
+    @IBOutlet weak var articlesMenuVideosButton: UIBarButtonItem!
     
-    // Text for textView that stays on the button
-    static private let shareContent: String = "If you want to get acquainted with the program for better, you can get acquainted for better."
-    private var alpha:        Float  = 0
+    // Image View
+    @IBOutlet weak var imageView: AlphaImageView!
     
-    var appleButton = AppleButtonSettings()
-    
+    // MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         
         basicViewPrefering()
         systemBackPrefering()
+        setupAdBunner()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.6, animations: {
-            self.alpha = 1
-            
-            self.contentBackground.alpha = CGFloat(self.alpha)
-            self.videoButton.alpha       = CGFloat(self.alpha)
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                UIView.animate(withDuration: 0.3) {
-                    self.articlesVideosGoButton.alpha = 1
-                }
-            }
-        }, completion: nil)
+        setuoViewDidApearAnimation()
     }
-    
+}
+
+
+// MARK: - @IBActions
+extension VideoPlayerViewController {
     @IBAction func sortBTNAction(_ sender: UIBarButtonItem) {
         let popVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popoverVC")
-            popVC.modalPresentationStyle = .popover
-    
-        let popOver = popVC.popoverPresentationController
-            popOver?.permittedArrowDirections = .any
-            popOver?.delegate   = self
-            popOver?.sourceView = self.view
-            popOver?.barButtonItem = sender
         
+        /// setup Pop VC
+        setupPopVC(popVC)
+        
+        /// setup Popover
+        let popOver = popVC.popoverPresentationController
+        popOverSetup(popOver, sender: sender)
+        
+        /// Present popover
         present(popVC, animated: true, completion: nil)
     }
     
-    private func systemBackPrefering() {
-        let queue = DispatchQueue.global(qos: .userInteractive)
-        queue.async {
-            DispatchQueue.main.async {
-                self.switchView.viewSystemBack()
-                self.view.viewSystemBack()
-                
-                self.contentTextView.systemTextColor()
-                self.switchTextView.systemTextColor()
-            }
-        }
+    // MARK: - Private
+    private func setupPopVC(_ popVC: UIViewController) {
+        popVC.modalPresentationStyle = .popover
+    }
+    
+    private func popOverSetup(_ popover: UIPopoverPresentationController?, sender: UIBarButtonItem) {
+        /// Set permittedArrowDirections
+        popover?.permittedArrowDirections = .any
+        
+        /// Set delegate
+        popover?.delegate = self
+
+        /// Set sourceView
+        popover?.sourceView = self.view
+        
+        /// Set barButtonItem
+        popover?.barButtonItem = sender
     }
     
     @IBAction func share(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: [VideoPlayerViewController.shareContent], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
+        let shareContent: String = "If you want to get acquainted with the program for better, you can get acquainted for better."
+        let activityVC = UIActivityViewController(activityItems: [shareContent], applicationActivities: nil)
         
-            UIApplication.shared.keyWindow?.tintColor = lazyColor
+        /// Set popoverPresentationController sourceView
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        /// Set UIApplication tintColor
+        UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
         
         self.present(activityVC, animated: true, completion: nil)
     }
     
     @IBAction func videoPlaying(_ sender: UIButton) {
-        if  let path                = Bundle.main.path(forResource: "iBiology", ofType: "mov") {
-            let video               = AVPlayer(url: URL(fileURLWithPath: path))
-            let videoPlayer         = AVPlayerViewController()
-                videoPlayer.player  = video
+        /// Main Video Path
+        if let path = Bundle.main.path(forResource: "iBiology", ofType: "mov") {
+        let video       = AVPlayer(url: URL(fileURLWithPath: path))
+        let videoPlayer = AVPlayerViewController()
+            /// Set Video
+            videoPlayer.player  = video
             
             present(videoPlayer, animated: true) {
                 video.play()
             }
         }
         sender.flash()
-        
         sharing.shareAudio()
     }
     
@@ -128,10 +144,63 @@ class VideoPlayerViewController: UIViewController {
             switchTextView.text = "Show diffrent functions"
         }
     }
+}
+
+
+// MARK: - UIPopoverPresentationControllerDelegate
+extension VideoPlayerViewController: UIPopoverPresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+}
+
+
+// MARK: - GADBannerViewDelegate
+extension VideoPlayerViewController: GADBannerViewDelegate {
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {}
+    
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print(error.localizedDescription)
+    }
+}
+
+
+// MARK: - Main functions and BasicAdBunnerSetupProtocol
+extension VideoPlayerViewController: BasicAdBunnerSetupProtocol {
+    
+    // MARK: - Private
+    private func setuoViewDidApearAnimation() {
+        let alpha: CGFloat  = 1
+        
+        let _ = Future<String, Never> { (_) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.contentBackground.alpha = alpha
+                })
+            }
+        }
+        let _ = Future<String, Never> { (_) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.videoButton.alpha = alpha
+                    self.articlesVideosGoButton.alpha = alpha
+                })
+            }
+        }
+        let _ = Future<String, Never> { (_) in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+                UIView.animate(withDuration: 0.4, animations: {
+                    self.imageView.alpha = alpha
+                })
+            }
+        }
+    }
     
     private func basicSizing() {
-        contentBackground.alpha = CGFloat(alpha)
-        videoButton.alpha       = CGFloat(alpha)
+        let alpha: CGFloat = 1
+        contentBackground.alpha = alpha
+        videoButton.alpha       = alpha
     }
     
     private func basicViewPrefering() {
@@ -150,17 +219,17 @@ class VideoPlayerViewController: UIViewController {
     }
     
     private func buttonsPrefering() {
-        cornerRadius = 12
+        let appleButton = AppleButtonSettings()
         
         videoButton.setTitleColor(appleButton.titleColor, for: .normal)
         videoButton.backgroundColor = appleButton.backgroundColor
-        videoButton.layer.cornerRadius = cornerRadius
+        videoButton.layer.cornerRadius = 12
         videoButton.titleLabel?.font = appleButton.font
         videoButton.setTitle("Play", for: .normal)
         
         articlesVideosGoButton.setTitleColor(appleButton.titleColor, for: .normal)
         articlesVideosGoButton.backgroundColor = appleButton.backgroundColor
-        articlesVideosGoButton.layer.cornerRadius = cornerRadius
+        articlesVideosGoButton.layer.cornerRadius = 12
         articlesVideosGoButton.titleLabel?.font = appleButton.font
         articlesVideosGoButton.setTitle("Videos Menu", for: .normal)
         articlesVideosGoButton.alpha = 0
@@ -187,11 +256,24 @@ class VideoPlayerViewController: UIViewController {
     private func switchOutletSetup() {
         `switch`.switchBasics()
     }
-}
-
-@available(iOS 13.0, *)
-extension VideoPlayerViewController: UIPopoverPresentationControllerDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        return .none
+    
+    private func systemBackPrefering() {
+        let queue = DispatchQueue.global(qos: .userInteractive)
+        queue.async {
+            DispatchQueue.main.async {
+                self.switchView.viewSystemBack()
+                self.view.viewSystemBack()
+                
+                self.contentTextView.systemTextColor()
+                self.switchTextView.systemTextColor()
+            }
+        }
+    }
+    
+    func setupAdBunner() {
+        let adUnitID = "ca-app-pub-8702634561077907/9283193921"
+        googleAdBannerView.adUnitID = adUnitID
+        googleAdBannerView.rootViewController = self
+        googleAdBannerView.load(GADRequest())
     }
 }

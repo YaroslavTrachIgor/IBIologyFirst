@@ -8,7 +8,15 @@
 
 import Foundation
 
+//MARK: - NotesDelegate
 protocol NotesDelegate {
     func notesBasicViewThings()
     func setupNavItemTitle()
+}
+
+
+
+//MARK: - NotesVCAnimation
+protocol NotesVCAnimation {
+    func setupAnimation()
 }

@@ -16,10 +16,10 @@ class FastAlert {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: okWord, style: .cancel, handler: nil)
         
-        alertVC.view.tintColor = lazyColor
+        alertVC.view.tintColor = .biologyGreenColor
         
-        alertVC.setTitle(font: UIFont(name: boldFont, size: 16), color: .none)
-        alertVC.setMessage(font: UIFont(name: mediumFont, size: 13), color: .none)
+        alertVC.setTitle(font: UIFont(name: BasicFonts.boldFont, size: 16), color: .none)
+        alertVC.setMessage(font: UIFont(name: BasicFonts.mediumFont, size: 13), color: .none)
         
         alertVC.addAction(okAction)
         vc.present(alertVC, animated: true)

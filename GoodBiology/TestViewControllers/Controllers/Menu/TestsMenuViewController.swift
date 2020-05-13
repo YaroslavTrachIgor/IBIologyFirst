@@ -8,8 +8,30 @@
 
 import UIKit
 import AudioToolbox
+import GoogleMobileAds
 
-class TestsMenuViewController: UIViewController {
+extension TestsMenuViewController: PlantsViewControllerAdMobBannerSetupProtocol {
+    func showBunner() {
+        if interstitial.isReady {
+          interstitial.present(fromRootViewController: self)
+        }
+    }
+    
+    func setupBanner() {
+        let request = GADRequest()
+        
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/3602528777")
+        interstitial.load(request)
+    }
+}
+
+final class TestsMenuViewController: UIViewController {
+    
+    // Gradient
+    let gradient: BasicRootVCGradient = BasicRootVCGradient(color: #colorLiteral(red: 0.9783470812, green: 0.9783470812, blue: 0.9783470812, alpha: 1))
+    
+    // Google ADMob Banner
+    var interstitial: GADInterstitial!
     
     // MARK: IBOutlets
     // Background Views
@@ -62,16 +84,17 @@ class TestsMenuViewController: UIViewController {
     }
     
     struct Names {
-        static let plantsName      = Notification.Name(rawValue: TestViewKeys.plantsViewKey)
-        static let archaeaName     = Notification.Name(rawValue: TestViewKeys.archaeaViewKey)
-        static let animalsName     = Notification.Name(rawValue: TestViewKeys.animalsViewKey)
-        static let humenName       = Notification.Name(rawValue: TestViewKeys.humanViewKey)
-        static let virusesName     = Notification.Name(rawValue: TestViewKeys.virusesViewKey)
-        static let microbesName    = Notification.Name(rawValue: TestViewKeys.microbesViewKey)
-        static let fungusesName    = Notification.Name(rawValue: TestViewKeys.fungusesViewKey)
+        static let plantsName   = Notification.Name(rawValue: TestViewKeys.plantsViewKey)
+        static let archaeaName  = Notification.Name(rawValue: TestViewKeys.archaeaViewKey)
+        static let animalsName  = Notification.Name(rawValue: TestViewKeys.animalsViewKey)
+        static let humenName    = Notification.Name(rawValue: TestViewKeys.humanViewKey)
+        static let virusesName  = Notification.Name(rawValue: TestViewKeys.virusesViewKey)
+        static let microbesName = Notification.Name(rawValue: TestViewKeys.microbesViewKey)
+        static let fungusesName = Notification.Name(rawValue: TestViewKeys.fungusesViewKey)
     }
     
-    let viewAlphaAfterObserver: CGFloat = 0.8
+    // ViewModel
+    let viewModel = TestsMenuViewControllerViewModel()
     
     //MARK: LifeCycle
     override func viewDidLoad() {
@@ -80,25 +103,163 @@ class TestsMenuViewController: UIViewController {
         /// MenuViewControllerDelegate
         basicViewProccesPrefering()
         createObservers()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.hidesBarsOnSwipe = false
+        
+        setupBanner()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         let views = [plantsView, animalsView, humanView, microbesView, virusesView, archaeaView, fungusesView, infoButtonBack]
         
-        for (index, view) in views.enumerated() {
-            let delay: Double = Double((index)) * 0.2
-            
-            UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                view?.alpha = 1
-            })
-        }
+        viewModel.animationPriview(views as! [UIView])
     }
     
-    //MARK: Update Alpha After Test Ending
+    override func viewWillLayoutSubviews() {
+        gradient.setupRootViewsWithBasicGradient(mainView: view, scrollView: scrollView)
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+extension TestsMenuViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {}
+}
+
+// MARK: - MenuViewControllerDelegate
+extension TestsMenuViewController: MenuViewControllerDelegate {
+    func basicViewProccesPrefering() {
+        view.viewGradient()
+        
+        textPrefering()
+        preferingSearchContrller()
+        viewsShadowsPrefering()
+        systemColorsPrefeing()
+        refreshControlPrefering()
+        searchBarButtonPrefering()
+        setupSearchBarFont()
+        setupNavigationController()
+    }
+}
+
+// MARK: - Main Functions
+extension TestsMenuViewController {
+    
+    //MARK: DarkMode methods Prefering
+    private func systemColorsPrefeing() {
+        systemTextViewColorsPrefering()
+        systemViewPrefering()
+        systemScrollViewPrefering()
+    }
+    
+    //MARK: UITextView
+    private func systemTextViewColorsPrefering() {
+        viewSystemBack()
+        systemTextColor()
+        textViewShadowSetup()
+    }
+    
+    private func viewSystemBack() {
+        viewModel.viewSystemBack(plantsTextView)
+        viewModel.viewSystemBack(animalsTextView)
+        viewModel.viewSystemBack(virusesTextView)
+        viewModel.viewSystemBack(microbesTextView)
+        viewModel.viewSystemBack(manTextView)
+        viewModel.viewSystemBack(mushroomsTextView)
+        viewModel.viewSystemBack(archaeaTextView)
+    }
+    
+    private func systemTextColor() {
+        viewModel.systemTextColor(plantsTextView)
+        viewModel.systemTextColor(animalsTextView)
+        viewModel.systemTextColor(virusesTextView)
+        viewModel.systemTextColor(microbesTextView)
+        viewModel.systemTextColor(manTextView)
+        viewModel.systemTextColor(mushroomsTextView)
+        viewModel.systemTextColor(archaeaTextView)
+    }
+    
+    private func textViewShadowSetup() {
+        viewModel.textViewShadowSetup(plantsTextView)
+        viewModel.textViewShadowSetup(animalsTextView)
+        viewModel.textViewShadowSetup(virusesTextView)
+        viewModel.textViewShadowSetup(microbesTextView)
+        viewModel.textViewShadowSetup(manTextView)
+        viewModel.textViewShadowSetup(mushroomsTextView)
+        viewModel.textViewShadowSetup(archaeaTextView)
+    }
+    
+    private func systemScrollViewPrefering() {
+        viewModel.systemViewPrefering(view)
+        viewModel.systemViewPrefering(scrollView)
+    }
+    
+    //MARK: UIView
+    private func systemViewPrefering() {
+        viewModel.systemViewPrefering(plantsView)
+        viewModel.systemViewPrefering(animalsView)
+        viewModel.systemViewPrefering(microbesView)
+        viewModel.systemViewPrefering(archaeaView)
+        viewModel.systemViewPrefering(fungusesView)
+        viewModel.systemViewPrefering(humanView)
+        viewModel.systemViewPrefering(virusesView)
+    }
+    
+    private func preferingSearchContrller() {
+        searchController.searchResultsUpdater = self
+        viewModel.preferingSearchContrller(vc: self, searchController: searchController)
+    }
+    
+    private func viewsShadowsPrefering() {
+        viewModel.viewsShadowsPrefering(plantsTextView)
+        viewModel.viewsShadowsPrefering(animalsTextView)
+        viewModel.viewsShadowsPrefering(microbesTextView)
+        viewModel.viewsShadowsPrefering(manTextView)
+        viewModel.viewsShadowsPrefering(virusesTextView)
+        viewModel.viewsShadowsPrefering(archaeaTextView)
+        viewModel.viewsShadowsPrefering(mushroomsTextView)
+    }
+    
+    private func textPrefering() {
+        viewModel.textViewFontSetup(plantsTextView)
+        viewModel.textViewFontSetup(animalsTextView)
+        viewModel.textViewFontSetup(microbesTextView)
+        viewModel.textViewFontSetup(manTextView)
+        viewModel.textViewFontSetup(virusesTextView)
+        viewModel.textViewFontSetup(archaeaTextView)
+        viewModel.textViewFontSetup(mushroomsTextView)
+    }
+    
+    func setupNavigationController() {
+        viewModel.setupNavigationController(self)
+        viewModel.setupSearchBar(searchController.searchBar)
+    }
+    
+    private func refreshControlPrefering() {
+        viewModel.refreshControlPrefering(refreshControl: settingsRefreshControl, scrollView: scrollView)
+    }
+    
+    private func searchBarButtonPrefering() {
+        if let buttonItem = searchController.searchBar.subviews.first?.subviews.last as? UIButton {
+            viewModel.searchBarButtonPrefering(buttonItem: buttonItem)
+        }
+    }
+}
+
+// MARK: - @IBActions
+extension TestsMenuViewController {
+    @IBAction func shareButton(_ sender: Any) {
+        let activityVCItem: String = "Good Biology Menu Of Tests."
+        
+        viewModel.share(activityItems: [activityVCItem], self)
+        shareButton.shareAudio()
+    }
+    
+    @IBAction func infoVCShow(_ sender: UIButton) {
+        showBunner()
+    }
+}
+
+// MARK: - Observers setup
+extension TestsMenuViewController {
+    //MARK: - Update Alpha After Test Ending
     //Update Views Alpha
     private func createObservers() {
         NotificationCenter.default.addObserver(self,
@@ -127,179 +288,32 @@ class TestsMenuViewController: UIViewController {
                                                object: nil)
     }
     
-    //Set Alpha
-    private func setAlphaForViews(view: UIView, label: UIView, textView: UIView) {
-        view.alpha      = viewAlphaAfterObserver
-        label.alpha     = viewAlphaAfterObserver
-        textView.alpha  = viewAlphaAfterObserver
-    }
-    
     //Set Alpha For Special Views
     @objc func plantsViewAlphaUpdate(notification: NSNotification) {
-        setAlphaForViews(view: plantsView, label: plantsTitle, textView: plantsTextView)
+        viewModel.setAlphaForViews(view: plantsView, label: plantsTitle, textView: plantsTextView)
     }
     
     @objc func archaeaViewAlphaUpdate(notification: NSNotification) {
-        setAlphaForViews(view: archaeaView, label: archaeaLabel, textView: archaeaTextView)
+        viewModel.setAlphaForViews(view: archaeaView, label: archaeaLabel, textView: archaeaTextView)
     }
     
     @objc func animalsViewAlphaUpdate(notification: NSNotification) {
-        setAlphaForViews(view: animalsView, label: animalsLabel, textView: animalsTextView)
+        viewModel.setAlphaForViews(view: animalsView, label: animalsLabel, textView: animalsTextView)
     }
     
     @objc func humenViewAlphaUpdate(notification: NSNotification) {
-        setAlphaForViews(view: humanView, label: humanLabel, textView: manTextView)
+        viewModel.setAlphaForViews(view: humanView, label: humanLabel, textView: manTextView)
     }
     
     @objc func virusesViewAlphaUpdate(notification: NSNotification) {
-        setAlphaForViews(view: virusesView, label: virusLabel, textView: virusesTextView)
+        viewModel.setAlphaForViews(view: virusesView, label: virusLabel, textView: virusesTextView)
     }
     
     @objc func microbesViewAlphaUpdate(notification: NSNotification) {
-        setAlphaForViews(view: microbesView, label: microbesLabel, textView: microbesTextView)
+        viewModel.setAlphaForViews(view: microbesView, label: microbesLabel, textView: microbesTextView)
     }
     
     @objc func fungusesViewAlphaUpdate(notification: NSNotification) {
-        setAlphaForViews(view: fungusesView, label: fungusesLabel, textView: mushroomsTextView)
-    }
-    
-    //MARK: DarkMode methods Prefering
-    private func systemColorsPrefeing() {
-        systemTextViewColorsPrefering()
-        systemViewPrefering()
-        systemScrollViewPrefering()
-    }
-    
-    //MARK: UITextView
-    private func systemTextViewColorsPrefering() {
-        viewSystemBack()
-        systemTextColor()
-        textViewShadowSetup()
-    }
-    
-    private func viewSystemBack() {
-        plantsTextView.viewSystemBack()
-        animalsTextView.viewSystemBack()
-        virusesTextView.viewSystemBack()
-        microbesTextView.viewSystemBack()
-        manTextView.viewSystemBack()
-        mushroomsTextView.viewSystemBack()
-        archaeaTextView.viewSystemBack()
-    }
-    
-    private func systemTextColor() {
-        plantsTextView.systemTextColor()
-        animalsTextView.systemTextColor()
-        virusesTextView.systemTextColor()
-        microbesTextView.systemTextColor()
-        manTextView.systemTextColor()
-        mushroomsTextView.systemTextColor()
-        archaeaTextView.systemTextColor()
-    }
-    
-    private func textViewShadowSetup() {
-        plantsTextView.textViewShadow()
-        animalsTextView.textViewShadow()
-        virusesTextView.textViewShadow()
-        microbesTextView.textViewShadow()
-        manTextView.textViewShadow()
-        mushroomsTextView.textViewShadow()
-        archaeaTextView.textViewShadow()
-        
-        plantsTextView.layer.shadowRadius = 4
-    }
-    
-    private func systemScrollViewPrefering() {
-        view.viewSystemBack()
-        
-        scrollView.viewSystemBack()
-    }
-    
-    //MARK: UIView
-    private func systemViewPrefering() {
-        plantsView.viewSystemBack()
-        animalsView.viewSystemBack()
-        microbesView.viewSystemBack()
-        archaeaView.viewSystemBack()
-        fungusesView.viewSystemBack()
-        humanView.viewSystemBack()
-        virusesView.viewSystemBack()
-    }
-    
-    @IBAction func shareButton(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: ["Good Biology Menu Of Tests."], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
-            UIApplication.shared.keyWindow?.tintColor = lazyColor
-        
-        self.present(activityVC, animated: true, completion: nil)
-        
-        shareButton.shareAudio()
-    }
-    
-    private func preferingSearchContrller() {
-        searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
-    }
-    
-    private func viewsShadowsPrefering() {
-        animalsTextView.textViewShadow()
-        virusesTextView.textViewShadow()
-        microbesTextView.textViewShadow()
-        manTextView.textViewShadow()
-        mushroomsTextView.textViewShadow()
-        archaeaTextView.textViewShadow()
-    }
-    
-    private func textPrefering() {
-        let sizeFont: Float  = 16.5
-        let nameFont: String = "AvenirNext-DemiBold"
-        
-        plantsTextView.font     = UIFont(name: nameFont, size: CGFloat(sizeFont))
-        animalsTextView.font    = UIFont(name: nameFont, size: CGFloat(sizeFont))
-        microbesTextView.font   = UIFont(name: nameFont, size: CGFloat(sizeFont))
-        manTextView.font        = UIFont(name: nameFont, size: CGFloat(sizeFont))
-        virusesTextView.font    = UIFont(name: nameFont, size: CGFloat(sizeFont))
-        archaeaTextView.font    = UIFont(name: nameFont, size: CGFloat(sizeFont))
-        mushroomsTextView.font  = UIFont(name: nameFont, size: CGFloat(sizeFont))
-    }
-    
-    private func refreshControlPrefering() {
-        scrollView.refreshControl = settingsRefreshControl
-    }
-    
-    private func searchBarButtonPrefering() {
-        if let buttonItem = searchController.searchBar.subviews.first?.subviews.last as? UIButton {
-               buttonItem.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 14)
-        }
-    }
-}
-
-extension TestsMenuViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {}
-}
-
-
-extension TestsMenuViewController: MenuViewControllerDelegate {
-    func basicViewProccesPrefering() {
-        view.viewGradient()
-        
-        textPrefering()
-        preferingSearchContrller()
-        viewsShadowsPrefering()
-        systemColorsPrefeing()
-        refreshControlPrefering()
-        searchBarButtonPrefering()
-        setupSearchBarFont()
-    }
-}
-
-extension UIView {
-    func preferingViews() {
-        cornerRadius = 12.87
-        
-        self.viewShadows()
-        
-        self.alpha = 0
-        self.layer.cornerRadius = cornerRadius
+        viewModel.setAlphaForViews(view: fungusesView, label: fungusesLabel, textView: mushroomsTextView)
     }
 }

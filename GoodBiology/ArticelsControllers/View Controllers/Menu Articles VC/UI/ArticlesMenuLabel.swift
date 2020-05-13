@@ -28,8 +28,22 @@ class ArticlesMenuLabel: UILabel {
 
 extension ArticlesMenuLabel: ArticlesMenuLabelProtocol {
     func labelSetup() {
-        textColor = lazyColor
+        textColorSetup()
+        fontSetup()
+    }
+}
+
+extension ArticlesMenuLabel {
+    func textColorSetup() {
+        let color = #colorLiteral(red: 0.1338435914, green: 0.1338435914, blue: 0.1338435914, alpha: 1)
         
-        labelShadow()
+        textColor = color
+    }
+    
+    func fontSetup() {
+        let fontName: String  = "HelveticaNeue-Bold"
+        let fontSize: CGFloat = 23
+        
+        font = UIFont(name: fontName, size: fontSize)
     }
 }

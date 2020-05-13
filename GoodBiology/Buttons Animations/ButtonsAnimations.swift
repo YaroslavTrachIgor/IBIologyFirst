@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 //MARK: Extension
-extension UIButton {
+public extension UIButton {
     func pulsate(duration: Float) {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
         
@@ -53,7 +53,6 @@ class Pulsing: CALayer {
     var animationDuration:TimeInterval = 1.5
     var radius:CGFloat = 200
     var numberOfPulses:Float = Float.infinity
-    
     
     override init(layer: Any) {
         super.init(layer: layer)

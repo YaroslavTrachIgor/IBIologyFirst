@@ -13,7 +13,9 @@ protocol BasicsViewControllerRateFunctionProtocol {
     func rate()
 }
 
-extension BasicsViewController: BasicsViewControllerRateFunctionProtocol {
+
+// MARK: - BasicsViewControllerRateFunctionProtocol
+extension BiologyViewController: BasicsViewControllerRateFunctionProtocol {
     func rate() {
         if navigationItem.title == "Botany" {
             RateManager.showRatesController()

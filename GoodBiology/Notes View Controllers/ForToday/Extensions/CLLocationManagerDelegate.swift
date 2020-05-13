@@ -14,4 +14,10 @@ extension ForTodayViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         chekLocationAuthorization()
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let currentLocation = locations.first else { return }
+        currentCoordinate = currentLocation.coordinate
+        mapView.userTrackingMode = .followWithHeading
+    }
 }

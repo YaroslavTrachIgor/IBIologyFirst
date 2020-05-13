@@ -12,3 +12,5 @@ public let timeInterval = 720
 
 public let congratsText = "We send it !"
 public let failText     = "Failed"
+
+public let endOfTextBiolgyNotification: String = " of Biology."

@@ -12,57 +12,53 @@ import UIKit
 extension SettingsTableViewController: SettingsTableViewSaveAllActionsFunctionsProtocol {
     func acSubViewSetup() {
         acSubView = UIView(frame: self.view.bounds)
-        acSubView?.backgroundColor = .groupTableViewBackground
-        acSubView?.layer.cornerRadius = 10
         
-        acSubView?.viewShadows()
-        
-        view.addSubview(acSubView!)
+        saveFunctionViewModel.acSubViewSetup(with: acSubView!, mainView: view)
     }
     
     func acIndicatorViewSetup() {
-        acInViewIndicator.center = self.acSubView!.center
-        acInViewIndicator.startAnimating()
-        if #available(iOS 13.0, *) {
-            acInViewIndicator.style = .large
+        let animation = UIViewPropertyAnimator(duration: 1, curve: .easeIn) {
+            self.saveFunctionViewModel.acInViewIndicator_StartAnimation_Setup(with: self.acInViewIndicator, mainView: self.acSubView!)
         }
-        acInViewIndicator.activityIndicatorViewShadow()
-        
-        acSubView?.addSubview(acInViewIndicator)
+        UIView.animate(withDuration: 1) {
+            animation.startAnimation()
+        }
+        saveFunctionViewModel.acInViewIndicator_EndAnimation_Setup(with: self.acInViewIndicator, mainView: self.acSubView!)
     }
     
     func saveImageIcon() {
         let imageData: NSData = self.usersIconImageView.image!.pngData()! as NSData
         let queue = DispatchQueue.global(qos: .utility)
-            queue.async {
+        queue.async {
             UserDefaults.standard.set(imageData, forKey: SettingsKeys.imageKey)
         }
+        
+        UserDefaults.standard.set(self.firstNameLabel.text!,    forKey: SettingsKeys.nameLabelKey)
+        UserDefaults.standard.set(self.secondNameLabel.text!,   forKey: SettingsKeys.secondNameLabelKey)
+        UserDefaults.standard.set(self.emailLabel.text!,        forKey: SettingsKeys.emailLabelKey)
     }
     
     func navItemSetup() {
-        navigationItem.title = ""
+        saveFunctionViewModel.navigationTitleSet(navItem: navigationItem)
     }
     
     func buttonsEnabledSetup() {
-        let isEnabled = false
-        
-        editButton.isEnabled  = isEnabled
-        shareButton.isEnabled = isEnabled
-        saveButton.isEnabled  = isEnabled
+        saveFunctionViewModel.buttonsEnabledSetup(buttons: editButton, enabled: false)
+        saveFunctionViewModel.buttonsEnabledSetup(buttons: shareButton, enabled: false)
+        saveFunctionViewModel.buttonsEnabledSetup(buttons: saveButton, enabled: false)
     }
     
     func loadAnimationSetup() {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.27) {
-            self.navigationItem.title = "User"
+            self.saveFunctionViewModel.loadAnimationSetup(with: self.navigationItem, with: self.acSubView!)
+                
+            self.saveFunctionViewModel.buttonsEnabledSetup(buttons: self.editButton, enabled: true)
+            self.saveFunctionViewModel.buttonsEnabledSetup(buttons: self.shareButton, enabled: true)
+            self.saveFunctionViewModel.buttonsEnabledSetup(buttons: self.saveButton, enabled: false)
             
-            self.acSubView?.isHidden = true
-            self.acSubView?.alpha = 0
-            
-            let isEnabled = true
-            
-            self.editButton.isEnabled  = isEnabled
-            self.shareButton.isEnabled = isEnabled
-            self.saveButton.isEnabled  = isEnabled
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 600) {
+                self.saveFunctionViewModel.buttonsEnabledSetup(buttons: self.saveButton, enabled: true)
+            }
         }
     }
 }

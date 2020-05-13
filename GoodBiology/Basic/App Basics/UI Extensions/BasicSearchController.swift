@@ -29,7 +29,7 @@ class BasicSearchController: UISearchController {
 
 extension BasicSearchController: BasicSearchControllerProtocol {
     func setupTint() {
-        view.tintColor = lazyColor
+        view.tintColor = .biologyGreenColor
     }
     
     func setupSearchBar() {
@@ -42,5 +42,6 @@ extension BasicSearchController: BasicSearchControllerProtocol {
 
 func setupSearchBarFont() {
     let searchTextAppearance      = UITextField.self.appearance(whenContainedInInstancesOf: [UISearchBar.self])
-        searchTextAppearance.font = UIFont(name: mediumFont, size: 14)
+    searchTextAppearance.font = UIFont(name: BasicFonts.mediumFont, size: 14)
+    searchTextAppearance.textColor = .white
 }

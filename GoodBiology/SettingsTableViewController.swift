@@ -8,60 +8,61 @@
 
 import UIKit
 import SafariServices
-import MessageUI
+import GoogleSignIn
 
-class SettingsTableViewController: UITableViewController, SettingsTableViewControllerDelegate, UINavigationControllerDelegate {
+final class SettingsTableViewController: UITableViewController, UINavigationControllerDelegate {
     
     //Users view with Info
-    @IBOutlet private weak var usersInfoView: UIView!
+    @IBOutlet weak var usersInfoView: UsersInfoView!
     
     @IBOutlet weak var usersIconImageViewButton: UIButton!
-    @IBOutlet weak var usersIconImageView:       UIImageView! {
-        didSet {
-            usersIconImageView.layer.borderWidth = 3
-            usersIconImageView.layer.borderColor = #colorLiteral(red: 0.01884926471, green: 0.3037952094, blue: 0.1081991702, alpha: 1)
-            
-            usersIconImageView.layer.cornerRadius = usersIconImageView.frame.height / 2
-            
-            usersIconImageView.imageViewShadow()
-        }
-    }
-    private var hidden: Bool = false
+    @IBOutlet weak var usersIconImageView:       UsersIconImageView!
     
     // UI Hide for hidding Users view with Info
-    @IBOutlet private weak var hideButton:         HideButton!
-    @IBOutlet private weak var hideButtonBackView: ContentBack! {
-        didSet { hideButtonBackView.isHidden = !hidden }
-    }
+    @IBOutlet weak var hideButton:         HideButton!
+    @IBOutlet weak var hideButtonBackView: ContentBack! { didSet { hideButtonBackView.isHidden = true } }
     
     @IBOutlet weak var editButton:  UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var saveButton:  UIBarButtonItem!
     
     //Done Labels
-    @IBOutlet private weak var firstNameLabel:  DoneLabel!
-    @IBOutlet private weak var secondNameLabel: DoneLabel!
-    @IBOutlet private weak var emailLabel:      DoneLabel!
-    ///Special Email Label with blue color
-    @IBOutlet private weak var inputEmailLabel: UILabel!
+    @IBOutlet weak var firstNameLabel:  DoneLabel!
+    @IBOutlet weak var secondNameLabel: DoneLabel!
+    @IBOutlet weak var emailLabel:      DoneLabel!
+    
+    // Special Email Label with blue color
+    @IBOutlet weak var inputEmailLabel: UILabel!
     
     // Personal Information TextFields
-    @IBOutlet private weak var nameTextField:       SettingsTextField!
-    @IBOutlet private weak var secondNameTextField: SettingsTextField!
-    @IBOutlet private weak var emailTextField:      SettingsTextField!
+    @IBOutlet weak var nameTextField:       SettingsTextField!
+    @IBOutlet weak var secondNameTextField: SettingsTextField!
+    @IBOutlet weak var emailTextField:      SettingsTextField!
     
     // Optional Personal Information TextFields
-    @IBOutlet private weak var ageTextField:            SettingsTextField!
-    @IBOutlet private weak var secondEmailTextField:    SettingsTextField!
-    @IBOutlet private weak var countryTextField:        SettingsTextField!
-    @IBOutlet private weak var birthdayTextField:       SettingsTextField!
-    @IBOutlet private weak var phoneNumberTextField:    SettingsTextField!
+    @IBOutlet weak var ageTextField:            SettingsTextField!
+    @IBOutlet weak var secondEmailTextField:    SettingsTextField!
+    @IBOutlet weak var countryTextField:        SettingsTextField!
+    @IBOutlet weak var birthdayTextField:       SettingsTextField! {
+        didSet { birthdayTextField.keyboardType = .numberPad }
+    }
+    @IBOutlet weak var phoneNumberTextField:    SettingsTextField!
     
     //TableView
     @IBOutlet var table: UITableView!
     
+    @IBOutlet weak var questionLabel: QuestionLabel!
+    @IBOutlet weak var faqLabel:      QuestionLabel!
+    @IBOutlet weak var siteLabel:     QuestionLabel!
+    
     struct SettingsKeys {
         /// Personal Information Keys
+        // MARK: - Labels
+        static let nameLabelKey        = "lnameKey"
+        static let secondNameLabelKey  = "lsecondNameKey"
+        static let emailLabelKey       = "lemailKey"
+        
+        // MARK: - TextFields
         static let nameKey        = "nameKey"
         static let secondNameKey  = "secondNameKey"
         static let emailKey       = "emailKey"
@@ -98,18 +99,26 @@ class SettingsTableViewController: UITableViewController, SettingsTableViewContr
         
         return toolBar
     }()
-    
+
     // ubView for ActivityIndicatorView
     var acSubView: UIView?
     let acInViewIndicator = UIActivityIndicatorView()
     
-    @objc dynamic private var inputFirstNameText:  String?
-    @objc dynamic private var inputSecondNameText: String?
-    @objc dynamic private var inputEmailText:      String?
+    @objc dynamic var inputFirstNameText:  String?
+    @objc dynamic var inputSecondNameText: String?
+    @objc dynamic var inputEmailText:      String?
     
-    fileprivate var firstName:  NSKeyValueObservation?
-    fileprivate var secondName: NSKeyValueObservation?
-    fileprivate var email:      NSKeyValueObservation?
+    @objc dynamic var labelFirstNameText:  String?
+    @objc dynamic var labelSecondNameText: String?
+    @objc dynamic var labelEmailText:      String?
+    
+    var firstName:  NSKeyValueObservation?
+    var secondName: NSKeyValueObservation?
+    var email:      NSKeyValueObservation?
+    
+    //MARK: - ViewModel
+    let saveFunctionViewModel = SettingsTableViewControllerSaveFunctionViewModel()
+    let viewModel = SettingsTableViewControllerViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,288 +128,14 @@ class SettingsTableViewController: UITableViewController, SettingsTableViewContr
         prepareObservation()
         
         /// Setup Main View Things
-        setupView()
         gesturesSetup()
+        setupView()
     }
     
-    @IBAction func saveAllActions(_ sender: Any) {
-        /// Start
-        acSubViewSetup()
-        acIndicatorViewSetup()
-        saveImageIcon()
-        navItemSetup()
-        buttonsEnabledSetup()
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        /// End
-        loadAnimationSetup()
-    }
-    
-    @objc func hide() {
-        usersInfoView.isHidden = true
-    }
-    
-    func gesturesSetup() {
-        let gesture = UISwipeGestureRecognizer(target: self, action: #selector(hide))
-        
-        usersInfoView.isUserInteractionEnabled = true
-        usersInfoView.addGestureRecognizer(gesture)
-    }
-    
-    @IBAction func userIconChange(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-        
-        let actionSheet = UIAlertController(title: nil, message: "How do you want to put the icon ?", preferredStyle: .actionSheet)
-        let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action: UIAlertAction) in
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                imagePicker.sourceType = .camera
-                self.present(imagePicker, animated: true, completion: nil)
-            } else {
-                FastAlert.showBasic(title: "Error", message: "Camera is unavailable", vc: self)
-            }
-        }
-        let libraryAction = UIAlertAction(title: "Library", style: .default) { (action: UIAlertAction) in
-            imagePicker.sourceType = .photoLibrary
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        actionSheet.addAction(cameraAction)
-        actionSheet.addAction(libraryAction)
-        actionSheet.addAction(cancelAction)
-        self.present(actionSheet, animated: true)
-    }
-    
-    func setupView() {
-        prepareToolBar()
-        preferingSearchController()
-        refreshControlPrefering()
-        searchBarButtonPrefering()
-        setupSearchBarFont()
-        
-        navigationController?.navigationBar.backgroundColor = .groupTableViewBackground
-        navigationController?.navigationBar.barTintColor    = .groupTableViewBackground
-    }
-    
-    @IBAction func edit(_ sender: Any) {
-        if usersInfoView.isHidden != hidden {
-            usersInfoView.isHidden      = hidden
-            hideButtonBackView.isHidden = !hidden
-            
-        } else if hideButtonBackView.isHidden == hidden {
-            hideButtonBackView.isHidden = !hidden
-            
-        } else {
-            hideButtonBackView.isHidden = hidden
-        }
-    }
-    
-    @IBAction func hideView(_ sender: Any) {
-        usersInfoView.isHidden = !hidden
-    }
-    
-    func prepareInputText() {
-        nameTextField.text       = inputFirstNameText
-        secondNameTextField.text = inputSecondNameText
-        emailTextField.text      = inputSecondNameText
-    }
-    
-    func prepareObservation() {
-        firstName = observe(\.inputFirstNameText, options: .new, changeHandler: { [weak self] (viewController, change) in
-            guard let updateFirstName = change.newValue as? String else { return }
-            if self?.nameTextField.text != "" || self?.nameTextField.text != " " {
-                viewController.firstNameLabel.text = "First Name: " + updateFirstName
-            }
-        })
-        
-        secondName = observe(\.inputSecondNameText, options: .new, changeHandler: { [weak self] (viewController, change) in
-            guard let updateFirstName = change.newValue as? String else { return }
-            if self?.secondNameTextField.text != "" || self?.secondNameTextField.text != " " {
-                viewController.secondNameLabel.text = "Second Name: " + updateFirstName
-            }
-        })
-        
-        email = observe(\.inputEmailText, options: .new, changeHandler: { [weak self] (viewController, change) in
-            guard let updateFirstName = change.newValue as? String else { return }
-            if self?.emailTextField.text != "" || self?.emailTextField.text != " " {
-                viewController.inputEmailLabel.text =  updateFirstName
-            }
-        })
-    }
-    
-    @objc func doneButtonAction() {
-        self.view.endEditing(true)
-    }
-    
-    private func prepareinputAccessoryViewForTextView(_ sender: UITextField) {
-        sender.inputAccessoryView = toolBar
-    }
-    
-    private func prepareToolBar() {
-        prepareinputAccessoryViewForTextView(ageTextField)
-        prepareinputAccessoryViewForTextView(nameTextField)
-        prepareinputAccessoryViewForTextView(countryTextField)
-        prepareinputAccessoryViewForTextView(secondNameTextField)
-        prepareinputAccessoryViewForTextView(emailTextField)
-        prepareinputAccessoryViewForTextView(secondEmailTextField)
-        prepareinputAccessoryViewForTextView(phoneNumberTextField)
-        prepareinputAccessoryViewForTextView(birthdayTextField)
-    }
-    
-    private func searchBarButtonPrefering() {
-        if let buttonItem = searchController.searchBar.subviews.first?.subviews.last as? UIButton {
-               buttonItem.titleLabel?.font = UIFont(name: "AvenirNext-Medium", size: 14)
-        }
-    }
-    
-    private func refreshControlPrefering() {
-        table.refreshControl = settingsRefreshControl
-    }
-    
-    private func preferingSearchController() {
-        searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
-    }
-    
-    @IBAction func share(_ sender: UIBarButtonItem) {
-        let activityVC = UIActivityViewController(activityItems:
-            ["""
-                Name: \(nameTextField.text!)
-                Second Name: \(secondNameTextField.text!)
-                Email: \(emailTextField.text!)
-                
-                Age: \(ageTextField.text!)
-                Country: \(countryTextField.text!)
-                Second Email: \(secondEmailTextField.text!)
-                Birth Day: \(birthdayTextField.text!)
-                Phone: \(phoneNumberTextField.text!)
-            """], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
-        
-            UIApplication.shared.keyWindow?.tintColor = lazyColor
-        
-        self.present(activityVC, animated: true, completion: nil)
-    }
-    
-    @IBAction func questions(_ sender: Any) {
-        let alertController = UIAlertController(title: """
-        Please take a look at the iBiology FAQ: it has important troubelshooting tips and answers to most questions
-        """, message: nil, preferredStyle: .alert)
-        
-        let faqAction = UIAlertAction(title: "FAQ", style: .default) { (_) in
-            self.showSafariVC(for: "https://zhbr282.wixsite.com/goodbiology-policy")
-        }
-        let questionAction = UIAlertAction(title: "Question", style: .cancel) { (_) in
-            self.showMailComposer()
-        }
-        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-        
-        alertController.view.tintColor = lazyColor
-        
-        alertController.addAction(faqAction)
-        alertController.addAction(questionAction)
-
-        self.present(alertController, animated: true)
-    }
-    
-    //MARK: Public
-    private func showMailComposer() {
-        guard MFMailComposeViewController.canSendMail() else { return }
-        
-        let composer                        = BasicMFMailComposeViewController(rootViewController: self)
-            composer.mailComposeDelegate    = self
-            composer.setSubject("My Question")
-            composer.setMessageBody("Here is my Question...", isHTML: false)
-            composer.view.tintColor = lazyColor
-        
-        present(composer, animated: true)
-    }
-    
-    @IBAction func faqSite(_ sender: Any) {
-         showSafariVC(for: "https://zhbr282.wixsite.com/goodbiology-policy")
-    }
-    
-    @IBAction func site(_ sender: Any) {
-        showSafariVC(for: "https://zhbr282.wixsite.com/ibiology-official")
-    }
-    
-    private func loadSettings() {
-        if let name = UserDefaults.standard.string(forKey: SettingsKeys.nameKey) {
-            nameTextField.text = name
-        }
-        
-        if let secondName = UserDefaults.standard.string(forKey: SettingsKeys.secondNameKey) {
-            secondNameTextField.text = secondName
-        }
-        
-        if let email = UserDefaults.standard.string(forKey: SettingsKeys.emailKey) {
-            emailTextField.text = email
-        }
-        
-        if let age = UserDefaults.standard.string(forKey: SettingsKeys.ageKey) {
-            ageTextField.text = age
-        }
-        
-        if let secondEmail = UserDefaults.standard.string(forKey: SettingsKeys.secondEmailKey) {
-            secondEmailTextField.text = secondEmail
-        }
-        
-        if let country = UserDefaults.standard.string(forKey: SettingsKeys.countryKey) {
-            countryTextField.text = country
-        }
-        
-        if let birthday = UserDefaults.standard.string(forKey: SettingsKeys.birthdayKey) {
-            birthdayTextField.text = birthday
-        }
-        
-        if let phone = UserDefaults.standard.string(forKey: SettingsKeys.phoneKey) {
-            phoneNumberTextField.text = phone
-        }
-        
-        let data = UserDefaults.standard.object(forKey: SettingsKeys.imageKey) as! NSData?
-        if data != nil {
-            usersIconImageView.image = UIImage(data: (data!) as Data)
-        } else {
-            return
-        }
-    }
-    
-    @IBAction func changeName(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.nameKey)
-        
-        inputFirstNameText = nameTextField.text
-    }
-    
-    @IBAction func changeSecondName(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.secondNameKey)
-        
-        inputSecondNameText = secondNameTextField.text
-    }
-    
-    @IBAction func changeEmail(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.emailKey)
-        
-        inputEmailText = emailTextField.text
-    }
-    
-    @IBAction func changeAge(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.ageKey)
-    }
-    
-    @IBAction func changeSecondEmail(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.secondEmailKey)
-    }
-    
-    @IBAction func changeCountry(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.countryKey)
-    }
-    
-    @IBAction func changeBirthday(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.birthdayKey)
-    }
-    
-    @IBAction func changePhoneNumber(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: SettingsKeys.phoneKey)
+        viewModel.animation(view: usersInfoView, image: usersIconImageView)
     }
 }
+

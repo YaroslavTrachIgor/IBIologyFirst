@@ -12,7 +12,6 @@ import MessageUI
 
 extension ForTodayViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        
         if let _ = error {
             controller.dismiss(animated: true)
         }

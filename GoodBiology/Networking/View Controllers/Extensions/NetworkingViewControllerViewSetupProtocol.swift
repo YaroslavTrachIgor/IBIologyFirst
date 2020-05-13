@@ -23,9 +23,7 @@ protocol NetworkingViewControllerViewSetupProtocol {
 
 extension NetworkingViewController: NetworkingViewControllerViewSetupProtocol {
     func backItemGiven() {
-        if navigationItem.title == "Wikipedia" {
-            navigationItem.title = "Internet"
-        }
+        viewModel.backItemGiven(navigationItem)
     }
     
     func webViewPrefering() {
@@ -35,49 +33,75 @@ extension NetworkingViewController: NetworkingViewControllerViewSetupProtocol {
     }
     
     func webViewSetup() {
-        webView.load(URLRequest(url: URL(string: "https://www.google.com")!))
-        webView.transform          = CGAffineTransform(scaleX: 0, y: 0)
-        webView.alpha              = 0
+        viewModel.webViewSetup(webView)
     }
     
     func webViewBaxckgroundSetup() {
-        webViewBaxckground.layer.cornerRadius = CGFloat(cornerRadius)
-        webViewBaxckground.viewShadows()
+        viewModel.webViewBaxckgroundSetup(webViewBaxckground)
     }
     
     func loadingLabelSetup() {
-        loadingLabel.textColor = #colorLiteral(red: 0.6289012432, green: 0.6279886961, blue: 0.6433200836, alpha: 1)
+        viewModel.loadingLabelSetup(loadingLabel)
     }
     
     func switchViewPrefering() {
-        switchView.isHidden = true
-        
-        switchView.editorsViews()
-        switchOutlet.switchBasics()
-        
-        textSwitchView.switchTextViewPrefering()
+        viewModel.switchViewPrefering(switchOutlet: switchOutlet, textView: textSwitchView, view: switchView)
     }
     
     func systemBackColor() {
-        if #available(iOS 13.0, *) {
-            pickerView.tintColor = .secondaryLabel
-            
-            pickerViewBack.viewSystemBack()
-            switchView.viewSystemBack()
-            
-            view.viewSystemBack()
-        }
+        viewModel.systemBackColor(pickerView: pickerView, switchView: switchView, pickerViewBack: pickerViewBack, mainView: view)
     }
     
     func pickerViewBackPrefering() {
-        pickerViewBack.viewSystemBack()
-        pickerViewBack.layer.cornerRadius   = 12
-        pickerViewBack.isHidden             = true
-        
-        pickerViewBack.viewShadows()
+        viewModel.pickerViewBackPrefering(pickerViewBack)
     }
     
     func activityINPref() {
         self.activityIndicator.activityIndicatorStarts(colorOfActivity: .darkGray)
+    }
+    
+    func viewDidApperAnimation() {
+        // MARK: - Arrays
+        let objectsArray = [searchBar, webViewBaxckground, webView]
+        let imageArray   = [image1, image2, image3, image4, image5]
+        let buttonsArray = [goForwardButton, backButton, nextButton, wikiButton, sitesButton]
+        
+        for (index, images) in imageArray.enumerated() {
+            let delay: Double = Double((index)) * 0.2
+            
+            /// setup images animation
+            UIView.animate(withDuration: 0.3, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+                
+                /// setup first images animation
+                images?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
+                    
+                    /// setup first images animation
+                    images?.transform = CGAffineTransform(scaleX: 0, y: 0)
+                }
+            }, completion: { _ in
+                /// Animate: barButtonItems
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    
+                    /// setup animation
+                    UIView.animate(withDuration: 5) {
+                        for button in buttonsArray {
+                            button?.isEnabled = true
+                        }
+                    }
+                    
+                    /// Animate: main views
+                    for (index, objects) in objectsArray.enumerated() {
+                        let delay: Double = Double((index)) * 0.2
+                        
+                        /// setup animation
+                        UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+                            
+                            objects?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                        }, completion: nil)
+                    }
+                }
+            })
+        }
     }
 }

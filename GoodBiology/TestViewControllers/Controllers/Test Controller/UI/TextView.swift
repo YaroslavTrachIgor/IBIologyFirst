@@ -28,6 +28,7 @@ extension TestTextView: TestTextViewDelegate {
         alpha = 0
         
         textViewShadow()
+        
         layer.shadowColor  = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         layer.shadowRadius = CGFloat(3)
     }

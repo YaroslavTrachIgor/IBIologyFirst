@@ -9,25 +9,47 @@
 import Foundation
 import UIKit
 
+//MARK: - ContentBack (Basic View with corners and shadows)
+
+//MARK: ContentBack Protocol
+protocol ContentBackProtocol {
+    func setupMainContentBackView()
+}
+
 class ContentBack: UIView {
     override init(frame: CGRect) {
-      super.init(frame: frame)
-      setupView()
+        super.init(frame: frame)
+        
+        setupMainContentBackView()
     }
     
     required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
-      setupView()
+        super.init(coder: aDecoder)
+        
+        setupMainContentBackView()
     }
+}
 
-    private func setupView() {
-        cornerRadius = 20
-        
-        if #available(iOS 13.0, *) {
-            backgroundColor     = .systemBackground
-        }
-        layer.cornerRadius  = cornerRadius
-        
+
+
+//MARK: ContentBackProtocol
+extension ContentBack: ContentBackProtocol {
+    func setupMainContentBackView() {
+        setupBackColor()
+        setupCorners()
         viewShadows()
+    }
+}
+
+
+
+//MARK: Main Functions
+extension ContentBack {
+    private func setupBackColor() {
+        backgroundColor = .systemBackground
+    }
+    
+    private func setupCorners() {
+        layer.cornerRadius = 20
     }
 }

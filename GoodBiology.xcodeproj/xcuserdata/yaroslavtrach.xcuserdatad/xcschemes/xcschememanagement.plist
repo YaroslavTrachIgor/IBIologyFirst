@@ -12,7 +12,7 @@
 		<key>Good Biology (TV).xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>40</integer>
 		</dict>
 		<key>Good Biology (Watch) (Notification).xcscheme_^#shared#^_</key>
 		<dict>
@@ -48,6 +48,16 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>iBiologySiri.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>41</integer>
+		</dict>
+		<key>iBiologySiriUI.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>42</integer>
 		</dict>
 		<key>iOSGoodBiologyUITests.xcscheme_^#shared#^_</key>
 		<dict>

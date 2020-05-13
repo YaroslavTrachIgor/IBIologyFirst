@@ -7,8 +7,17 @@
 //
 
 import UIKit
-
-class BlankSheetViewController: UIViewController, NotesDelegate {
+import GoogleMobileAds
+import RealmSwift
+import Realm
+import Signals
+ 
+final class BlankSheetViewController: UIViewController {
+    
+    // View Model
+    let viewModel = BlankSheetViewControllerViewModel()
+    
+    let copyText = Signal<(String)>()
     
     //IBOutlets
     @IBOutlet weak var shareButton:             UIBarButtonItem!
@@ -19,9 +28,14 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
     @IBOutlet weak var textView:                UITextView!
     @IBOutlet weak var textField:               UITextField!
     
+    // Banner View
+    @IBOutlet weak var googleAdBannerView: GADBannerView!
+    
     //Keys
-    private let textViewKey     = "textViewKey"
-    private let textFieldKey    = "textFieldKey"
+    struct Keys {
+        static let textViewKey  = "textViewKey"
+        static let textFieldKey = "textFieldKey"
+    }
     
     lazy var toolBar: BasicToolbar = {
         let toolBar     = BasicToolbar()
@@ -41,56 +55,29 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
         setupNavItemTitle()
         
         loadSettings()
+        setupGoogleAdBannerView()
     }
-    
-    // Notes Delegate
+}
+
+
+//MARK: - NotesDelegate
+extension BlankSheetViewController: NotesDelegate {
     func notesBasicViewThings() {
         stepperViewSetup()
         textViewBackSetup()
         funcTextField_and_TextViewSetup()
         prepareToolBar()
+        view.addTapGestureToHideKeyboard()
     }
     
     func setupNavItemTitle() {
-        navigationItem.setTitle("Blank Sheet", subtitle: "For Today Section")
-        navigationItem.title = ""
+        viewModel.navItemSetup(navigationItem)
     }
-    
-    private func funcTextField_and_TextViewSetup() {
-        let tint = lazyColor
-        let text = ""
-        
-        textField.text  = text
-        textView.text   = text
-        
-        textField.tintColor = tint
-        textField.tintColor = tint
-    }
-    
-    private func prepareToolBar() {
-        textField.inputAccessoryView = toolBar
-        textView.inputAccessoryView  = toolBar
-    }
-    
-    private func showError() {
-        do {
-            try setupErrors()
-        } catch ForTodayErrors.Errors.textViewIsntReadyForSave {
-            FastAlert.showBasic(title: errorWord, message: "Your note content is empty.", vc: self)
-            
-        } catch {
-            FastAlert.showBasic(title: sorryWord, message: "The application has an unknown problem.", vc: self)
-        }
-    }
-    
-    private func setupErrors() throws {
-        let textViewText = textView.text!
-        
-        if textViewText.isEmpty {
-            throw ForTodayErrors.Errors.textViewIsntReadyForSave
-        }
-    }
-    
+}
+
+
+//MARK: - Actions
+extension BlankSheetViewController {
     @IBAction func stepperViewShower(_ sender: Any) {
         guard let textFieldText = textView.text, let textViewText = textField.text else { return }
         
@@ -98,66 +85,28 @@ class BlankSheetViewController: UIViewController, NotesDelegate {
             showError()
         } else {
             if stepperView.isHidden == true {
-                stepperView.isHidden = false
+                viewModel.setHidden(for: stepperView, hidden: false)
             } else {
-                stepperView.isHidden = true
+                viewModel.setHidden(for: stepperView, hidden: true)
             }
         }
     }
     
-    private func stepperViewSetup() {
-        cornerRadius = 20
-        
-        stepperView.layer.cornerRadius = CGFloat(cornerRadius)
-        stepperView.isHidden           = true
-        
-        stepperView.viewShadows()
-    }
-    
-    private func textViewBackSetup() {
-        let cornerRadius = 20
-        
-        textViewBack.layer.cornerRadius = CGFloat(cornerRadius)
-        textViewBack.viewShadows()
-        
-        textView.layer.cornerRadius = CGFloat(cornerRadius)
-    }
-    
     @IBAction func textField(_ sender: UITextField) {
-        UserDefaults.standard.set(sender.text!, forKey: textFieldKey)
-    }
-    
-    private func loadSettings() {
-        if let textV = UserDefaults.standard.string(forKey: textViewKey) {
-            textView.text = textV
-        }
-        
-        if let textF = UserDefaults.standard.string(forKey: textFieldKey) {
-            textField.text = textF
-        }
+        UserDefaults.standard.set(sender.text!, forKey: Keys.textFieldKey)
     }
     
     @IBAction func share(_ sender: UIBarButtonItem) {
-        let activityVC = UIActivityViewController(activityItems:
-            ["""
-                Headline: \(textField.text!)
-                Content: \(textView.text!)
-            """], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
-        
-            UIApplication.shared.keyWindow?.tintColor = lazyColor
-        
-        self.present(activityVC, animated: true, completion: nil)
+        viewModel.share("""
+            Headline: \(textField.text!)
+            Content: \(textView.text!)
+        """, vc: self)
     }
     
     @IBAction func stepper(_ sender: UIStepper) {
         let font            = textView.font?.fontName
         let fontSize        = CGFloat(sender.value)
         
-        textView.font = UIFont(name: font!, size: fontSize)
-    }
-    
-    @objc func doneButtonAction() {
-        self.view.endEditing(true)
+        viewModel.setTextViewFont(textView, font: UIFont(name: font!, size: fontSize)!)
     }
 }

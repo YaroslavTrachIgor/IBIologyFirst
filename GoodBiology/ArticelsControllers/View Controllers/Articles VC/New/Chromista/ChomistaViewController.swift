@@ -7,41 +7,59 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
+final class ChomistaViewController: UIViewController {
 
+    // Google ADMob Banner
+    var interstitial: GADInterstitial!
+    
+    // ViewModel
+    let viewModel = ChomistaViewControllerViewModel()
+    
+    // MARK: IBOutlets
+    // ChromistaButtons
     @IBOutlet weak var sizeButton:   ChromistaButton!
     @IBOutlet weak var hideButton:   ChromistaButton!
     @IBOutlet weak var searchButton: ChromistaButton!
     
+    // ChromistaActionButtonsBacks
     @IBOutlet weak var sizeButtonBack:      ChromistaActionButtonsBack!
     @IBOutlet weak var hideButtonBack:      ChromistaActionButtonsBack!
     @IBOutlet weak var searchButtonBack:    ChromistaActionButtonsBack!
-    
+
+    // UITextViews
     @IBOutlet weak var textView:            UITextView!
     @IBOutlet weak var structureTextView:   UITextView!
     @IBOutlet weak var historyTextView:     UITextView!
     
+    // ContentBacks
     @IBOutlet weak var textViewBack:             ContentBack!
     @IBOutlet weak var structureTextViewBack:    ContentBack!
     @IBOutlet weak var historyTextViewBack:      ContentBack!
     
+    // structureLabels
     @IBOutlet weak var structureLabel:  ChromistaLabel!
-    @IBOutlet weak var basicsLabel:     ChromistaLabel!
     
+    // stepperView
     @IBOutlet weak var stepperView: UIView!
     @IBOutlet weak var stepper:     UIStepper!
     
+    // switchView
     @IBOutlet weak var switchOutlet:    UISwitch!
     @IBOutlet weak var switchView:      UIView!
     @IBOutlet weak var switchTextView:  UITextView!
     
+    // UIBarButtonItems
     @IBOutlet weak var shareButton: UIBarButtonItem!
+    
+    // UISegmentedControls
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       finalView()
+        finalView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,11 +71,11 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
                 view?.alpha = 1
             })        }
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            let views = [self.basicsLabel,
-                         self.textViewBack,
+            let views = [self.textViewBack,
                          self.structureLabel,
                          self.structureTextViewBack,
-                         self.historyTextViewBack]
+                         self.historyTextViewBack,
+                         self.segmentedControl]
             for (index, view) in views.enumerated() {
                 let delay: Double = Double((index)) * 0.2
                 
@@ -70,80 +88,13 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
             }
         }
     }
-    
-    func finalView() {
-        shadowsSetup()
-        cornersSetup()
-        contentSetup()
-        alphaSetup()
-        switchViewPrefering()
-        stepperViewPrefering()
-        backViewSetup()
-    }
-    
-    func backViewSetup() {
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = .secondarySystemBackground
-            navigationController?.navigationBar.backgroundColor = .secondarySystemBackground
-        }
-    }
-    
-    private func stepperViewPrefering() {
-        stepperView.editorsViews()
-        stepper.stepperBaics()
-    }
-    
-    private func switchViewPrefering() {
-        switchView.editorsViews()
-        switchView.isHidden = true
-        
-        switchOutlet.switchBasics()
-        switchOutlet.backgroundColor = .none
-        
-        switchTextView.mainTextViewTextColor(alpha: 1)
-        switchTextView.textViewShadow()
-        switchTextView.switchTextViewPrefering()
-    }
-    
-    private func alphaSetup() {
-        historyTextViewBack.alpha   = 0
-        textViewBack.alpha          = 0
-        structureTextViewBack.alpha = 0
-    }
-    
-    private func contentSetup() {
-        structureTextView.text =
-        """
-        Chromista has been defined in different ways at different times. The name Chromista was first introduced by Cavalier-Smith in 1981; the earlier names Chromophyta, Chromobiota and Chromobionta correspond to roughly the same group.
 
-        It has been described as consisting of three different groups:
-
-        Heterokonts or stramenopiles: brown algae, diatoms, water moulds, etc.
-        Haptophytes
-        Cryptomonads
-        
-        In 2010, Thomas Cavalier-Smith indicated his desire to move Alveolata, Rhizaria and Heliozoa into Chromista.
-
-        Some examples of classification of the Chromista and related groups are shown below.
-        """
-    }
-    
-    private func cornersSetup() {
-        textView.layer.cornerRadius          = 22
-        structureTextView.layer.cornerRadius = 22
-        historyTextView.layer.cornerRadius   = 22
-    }
-    
-    private func shadowsSetup() {
-        textView.textViewShadow()
-        structureTextView.textViewShadow()
-    }
     //MARK: Action
     @IBAction func editButton(_ sender: Any) {
         if switchView.isHidden == false {
-            switchView.isHidden = true
+            viewModel.setEditorsViewHideen_forShowingMethods(switchView, hidden: true)
         } else {
-            switchView.isHidden = false
+            viewModel.setEditorsViewHideen_forShowingMethods(switchView, hidden: false)
         }
     }
     
@@ -159,15 +110,15 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
 """
         ], applicationActivities: nil)
         
-        UIApplication.shared.keyWindow?.tintColor = lazyColor
+        UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
         present(acVC, animated: true)
     }
     
     @IBAction func settingsButtonAction(_ sender: Any) {
         if stepperView.isHidden == true {
-            stepperView.isHidden    = false
+            viewModel.setEditorsViewHideen_forShowingMethods(stepperView, hidden: false)
         } else {
-            stepperView.isHidden    = true
+            viewModel.setEditorsViewHideen_forShowingMethods(stepperView, hidden: true)
         }
     }
     
@@ -188,14 +139,101 @@ class ChomistaViewController: UIViewController, ArticlesViewControllerDelegate {
     }
     
     @IBAction func stepperAction(_ sender: UIStepper) {
-        let font       = textView.font?.fontName
-        let font1      = historyTextView.font?.fontName
-        let font2      = structureTextView.font?.fontName
+        let font  = textView.font?.fontName
+        let font1 = historyTextView.font?.fontName
+        let font2 = structureTextView.font?.fontName
         
-        let fontSize   = CGFloat(sender.value)
+        let fontSize = CGFloat(sender.value)
         
         textView.font           = UIFont(name: font!, size: fontSize)
         historyTextView.font    = UIFont(name: font1!, size: fontSize)
         structureTextView.font  = UIFont(name: font2!, size: fontSize)
+    }
+    
+    @IBAction func contentSwitch(_ sender: UISegmentedControl) {
+        /// ArticlesViewCountProtocol
+        setPopularityVoit()
+        
+        /// Set Content
+        switch segmentedControl.selectedSegmentIndex {
+        case 0:
+            contentSetup()
+        case 1:
+            textView.text = ChromistaData.ChromistaViewControllerData.BasicsData.chromistaDataBasics
+            structureTextView.text = ChromistaData.ChromistaViewControllerData.BasicsData.chromistaBiologyDataBasics
+            historyTextView.text = ChromistaData.ChromistaViewControllerData.BasicsData.chromistaHistoryDataBasics
+        default:
+            break
+        }
+    }
+}
+
+extension ChomistaViewController {
+    private func stepperViewPrefering() {
+        stepperView.editorsViews()
+        stepper.stepperBaics()
+    }
+    
+    private func switchViewPrefering() {
+        viewModel.chromistaVC_switchViewPropertiesSetup(switchOutlet: switchOutlet, back: switchView)
+        
+        switchView.editorsViews()
+        switchOutlet.switchBasics()
+        
+        switchTextView.mainTextViewTextColor(alpha: 1)
+        switchTextView.textViewShadow()
+        switchTextView.switchTextViewPrefering()
+    }
+    
+    private func segmentedControlSetup() {
+        segmentedControl.segmentedControlShadow()
+        segmentedControl.segmentedControlBasics()
+    }
+}
+
+extension ChomistaViewController: ChomistaViewControllerViewSetupProtocol {
+    
+    func alphaSetup() {
+        viewModel.alphaSetup(historyTextViewBack)
+        viewModel.alphaSetup(textViewBack)
+        viewModel.alphaSetup(structureTextViewBack)
+    }
+    
+    func cornersSetup() {
+        viewModel.cornersSetup(textView)
+        viewModel.cornersSetup(structureTextView)
+        viewModel.cornersSetup(historyTextView)
+        
+        viewModel.cornersSetup(textViewBack)
+        viewModel.cornersSetup(structureTextViewBack)
+        viewModel.cornersSetup(historyTextViewBack)
+    }
+    
+    func shadowsSetup() {
+        viewModel.setTextViewShadow(textView)
+        viewModel.setTextViewShadow(structureTextView)
+    }
+    
+    func backViewSetup() {
+        viewModel.backViewSetup(mainView: view, navController: navigationController!)
+    }
+    
+    func contentSetup() {
+        viewModel.contentSetup(textView, content: ChromistaData.ChromistaViewControllerData.AllData.chromistaData)
+        viewModel.contentSetup(structureTextView, content: ChromistaData.ChromistaViewControllerData.AllData.chromistaBiologyData)
+        viewModel.contentSetup(historyTextView, content: ChromistaData.ChromistaViewControllerData.AllData.chromistaHistoryData)
+    }
+}
+
+extension ChomistaViewController: ArticlesViewControllerDelegate {
+    func finalView() {
+        shadowsSetup()
+        cornersSetup()
+        alphaSetup()
+        segmentedControlSetup()
+        switchViewPrefering()
+        stepperViewPrefering()
+        backViewSetup()
+        contentSetup()
     }
 }

@@ -12,7 +12,7 @@ import AudioToolbox
 import Social
 
 @available(iOS 13.0, *)
-class HumanViewVontroller: UIViewController {
+final class HumanViewVontroller: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var notificationuttonOutlet:  NotificationButton!
@@ -41,81 +41,8 @@ class HumanViewVontroller: UIViewController {
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
-        fastActivityVC(item: content)
+        FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
-    }
-    
-    private func fastActivityVC(item: String) {
-        
-        //Alert
-        let alert = UIAlertController(title: "Share", message: nil, preferredStyle: .actionSheet)
-            alert.view.tintColor = lazyColor
-        let basicShare = UIAlertAction(title: "Basic Share", style: .default) { (action) in
-            let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
-                activityVC.popoverPresentationController?.sourceView = self.view
-                UIApplication.shared.keyWindow?.tintColor = lazyColor
-            
-            self.present(activityVC, animated: true, completion: nil)
-        }
-        
-        let actionFacebook = UIAlertAction(title: "Share on Facebook", style: .default) { (action) in
-            self.shareButton.shareAudio()
-            
-            //Checking if user is connected to Facebook
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-                
-                post.setInitialText(HumanArticleData.manMostContent)
-                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
-                
-                self.present(post, animated: true, completion: nil)
-                
-            } else {
-                self.showAlert(service: "Facebook")
-            }
-        }
-        
-        //Second action
-        let actionTwitter = UIAlertAction(title: "Share on Twitter", style: .default) { (action) in
-            self.shareButton.shareAudio()
-            
-            //Checking if user is connected to Facebook
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-                
-                post.setInitialText(HumanArticleData.manMostContent)
-                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
-                
-                self.present(post, animated: true, completion: nil)
-                
-            } else {
-                self.showAlert(service: "Twitter")
-            }
-        }
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        //Add action to action sheet
-        alert.addAction(basicShare)
-        alert.addAction(actionFacebook)
-        alert.addAction(actionTwitter)
-        alert.addAction(cancel)
-        alert.setTitle(font: UIFont(name: "AvenirNext-Medium", size: 14), color: .lightGray)
-        
-        //Present alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    private func showAlert(service: String) {
-        let alert = UIAlertController(title: "Error", message: "You are not connected to \(service)", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-        
-                alert.addAction(action)
-                alert.view.tintColor = lazyColor
-        
-        present(alert, animated: true, completion: nil)
-        
-        self.shareButton.shareAudio()
     }
     
     @IBAction func editButton(_ sender: Any) {
@@ -167,10 +94,11 @@ class HumanViewVontroller: UIViewController {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        manScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
+        PushNotifications.setupBasicNotification(body: "Human", inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
+        notificationNamePost()
     }
     
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
@@ -183,6 +111,10 @@ class HumanViewVontroller: UIViewController {
     
     //MARK: Actions
     @IBAction func segmentedControAction(_ sender: UISegmentedControl) {
+        /// ArticlesViewCountProtocol
+        setPopularityVoit()
+        
+        /// Set Content
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             textView.text = HumanArticleData.manMostContent
@@ -211,12 +143,65 @@ class HumanViewVontroller: UIViewController {
     
     //MARK: LifeCycle
     override func viewDidAppear(_ animated: Bool) {
+        let views = [notificationuttonOutlet, segmentedControl]
+        viewDidApearAnimationPreview(views as! [UIView], nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        finalView()
+    }
+}
+
+extension HumanViewVontroller: ArticlesViewControllerDelegate {
+    func finalView() {
+        view.viewGradient()
+        
+        viewBasics()
+        procesingInformationShowing()
+    }
+}
+
+extension HumanViewVontroller: ArticlesVCconnectionProtocol {
+    func notificationNamePost() {
+        let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.humanVCKey)
+        NotificationCenter.default.post(name: notificationName, object: nil)
+    }
+}
+
+extension HumanViewVontroller: ArticleViewControllerSetupViewPrtocol {
+    func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
         UIView.animate(withDuration: 0.4) {
-            self.notificationuttonOutlet.alpha   = 1
-            self.segmentedControl.alpha          = 1
+            for view in views {
+                view.alpha = 1
+            }
         }
     }
     
+    func procesingInformationShowing() {
+        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
+            self.textView.mainTextViewTextColor(alpha: 1)
+        }) {(finished) in
+            self.activityIndicator.activityIndicatorStop()
+        }
+        
+        progressView.setProgress(0, animated: true)
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            if self.progressView.progress != 1 {
+                self.progressView.startProgress()
+            } else {
+                self.activityIndicator.activityIndicatorStop()
+                self.textView.mainTextViewTextColor(alpha: 1)
+                self.progressView.stopProgress()
+                UIApplication.shared.endIgnoringInteractionEvents()
+            }
+        }
+    }
+}
+
+extension HumanViewVontroller {
     private func stepperViewPrefering() {
         stepper.stepperBaics()
         stepperBackgroundView.editorsViews()
@@ -245,43 +230,5 @@ class HumanViewVontroller: UIViewController {
     
     private func textViewSetup() {
         textView.mainTextViewTextColor(alpha: 0)
-    }
-    
-    private func procesingInformationShowing() {
-        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
-            self.textView.mainTextViewTextColor(alpha: 1)
-        }) {(finished) in
-            self.activityIndicator.activityIndicatorStop()
-        }
-        
-        progressView.setProgress(0, animated: true)
-        
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            if self.progressView.progress != 1 {
-                self.progressView.startProgress()
-            } else {
-                self.activityIndicator.activityIndicatorStop()
-                self.textView.mainTextViewTextColor(alpha: 1)
-                self.progressView.stopProgress()
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
-        }
-        viewDidLoadPrinting(doing: "Man")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finalView()
-    }
-}
-
-@available(iOS 13.0, *)
-extension HumanViewVontroller: ArticlesViewControllerDelegate {
-    func finalView() {
-        view.viewGradient()
-        
-        viewBasics()
-        procesingInformationShowing()
     }
 }

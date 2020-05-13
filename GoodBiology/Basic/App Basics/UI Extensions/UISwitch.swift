@@ -12,10 +12,13 @@ import UIKit
 extension UISwitch {
     public func switchBasics() {
         
-        // Basics for UISwitch
+        /// Basics for UISwitch
         self.isOn               = true
         self.layer.cornerRadius = 1
-        self.tintColor          = lazyColor
+        
+        /// Colors
+        self.thumbTintColor     = .white
+        self.onTintColor        = .biologyGreenColor
         
         self.switchShadow()
     }

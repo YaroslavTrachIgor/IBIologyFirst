@@ -20,8 +20,7 @@ protocol ForTodayTextFieldAndViewSetupProtocol {
 
 extension ForTodayViewController: ForTodayTextFieldAndViewSetupProtocol {
     func prepareToolBar() {
-        inputTextField.inputAccessoryView = toolBar
-        inputTextView.inputAccessoryView  = toolBar
+        viewModel.setToolBar(textView: inputTextView, textField: inputTextField, toolBar: toolBar)
     }
     
     func textViewACHidden() {
@@ -35,20 +34,14 @@ extension ForTodayViewController: ForTodayTextFieldAndViewSetupProtocol {
     }
     
     func textColorPrefering() {
-        let textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
-        
-        self.inputTextView.textColor  = textColor
-        self.inputTextField.textColor = textColor
+        viewModel.setTextViewsTextColor(textView: inputTextView, textField: inputTextField)
     }
     
     func textContainersTintSetup() {
-        let tintColor = lazyColor
-        
-        inputTextView.tintColor     = tintColor
-        inputTextField.tintColor    = tintColor
+        viewModel.setTextViewsTintColor(textView: inputTextView, textField: inputTextField)
     }
     
     func cornersPrefering() {
-        textViewBackground.layer.cornerRadius  = 20
+        viewModel.setupTextViewBackCorners(textViewBackground)
     }
 }

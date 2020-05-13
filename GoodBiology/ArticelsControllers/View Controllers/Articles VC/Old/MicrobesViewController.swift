@@ -10,15 +10,19 @@ import UIKit
 import AudioToolbox
 import UserNotifications
 import Social
+import GoogleMobileAds
 
 @available(iOS 13.0, *)
-class MicrobesViewController: UIViewController {
+final class MicrobesViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var segmentedControlOutlet:   UISegmentedControl!
     @IBOutlet weak var textView:                 UITextView!
     
     @IBOutlet weak var notificationButtonOutlet: NotificationButton!
+    
+    // Banner View
+    @IBOutlet weak var googleAdBannerView: GADBannerView!
     
     @IBOutlet weak var stepperBackgroundView:    UIView!
     @IBOutlet weak var settingsButton:           UIBarButtonItem!
@@ -37,88 +41,26 @@ class MicrobesViewController: UIViewController {
     @IBOutlet weak var goToVideosButton: VideoButton!
     
     //MARK: LifeCycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        finalView()
+        
+        googleAdBannerView.adUnitID = "ca-app-pub-8702634561077907/9283193921"
+        googleAdBannerView.rootViewController = self
+        googleAdBannerView.load(GADRequest())
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.4) {
-            self.notificationButtonOutlet.alpha  = 1
-            self.segmentedControlOutlet.alpha    = 1
-        }
+        let views = [segmentedControlOutlet ,notificationButtonOutlet]
+        viewDidApearAnimationPreview(views as! [UIView], nil)
     }
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
-        fastActivityVC(item: content)
+        FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
-    }
-    
-    private func fastActivityVC(item: String) {
-        
-        //Alert
-        let alert = UIAlertController(title: "Share", message: nil, preferredStyle: .actionSheet)
-            alert.view.tintColor = lazyColor
-        let basicShare = UIAlertAction(title: "Basic Share", style: .default) { (action) in
-            let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
-                activityVC.popoverPresentationController?.sourceView = self.view
-            
-                UIApplication.shared.keyWindow?.tintColor = lazyColor
-            
-            self.present(activityVC, animated: true, completion: nil)
-        }
-        
-        let actionFacebook = UIAlertAction(title: "Share on Facebook", style: .default) { (action) in
-            
-            //Checking if user is connected to Facebook
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-                
-                post.setInitialText(MicrobesArticleData.microbesMostContent)
-                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
-                
-                self.present(post, animated: true, completion: nil)
-                
-            } else {
-                self.showAlert(service: "Facebook")
-            }
-        }
-        
-        //Second action
-        let actionTwitter = UIAlertAction(title: "Share on Twitter", style: .default) { (action) in
-            
-            //Checking if user is connected to Facebook
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-                
-                post.setInitialText(MicrobesArticleData.microbesMostContent)
-                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
-                
-                self.present(post, animated: true, completion: nil)
-                
-            } else {
-                self.showAlert(service: "Twitter")
-            }
-        }
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        //Add action to action sheet
-        alert.addAction(basicShare)
-        alert.addAction(actionFacebook)
-        alert.addAction(actionTwitter)
-        alert.addAction(cancel)
-        alert.setTitle(font: UIFont(name: "AvenirNext-Medium", size: 14), color: .lightGray)
-        
-        //Present alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    private func showAlert(service: String) {
-        let alert = UIAlertController(title: "Error", message: "You are not connected to \(service)", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-        
-        alert.addAction(action)
-        alert.view.tintColor = lazyColor
-        
-        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func `switch`(_ sender: UISwitch) {
@@ -170,6 +112,10 @@ class MicrobesViewController: UIViewController {
     }
     
     @IBAction func segmentedControlAction(_ sender: Any) {
+        /// ArticlesViewCountProtocol
+        setPopularityVoit()
+        
+        /// Set Content
         switch segmentedControlOutlet.selectedSegmentIndex {
         case 0:
             textView.text = MicrobesArticleData.microbesMostContent
@@ -197,20 +143,77 @@ class MicrobesViewController: UIViewController {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        microbesScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
+        PushNotifications.setupBasicNotification(body: "Microbes", inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
+        notificationNamePost()
     }
     
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
-    
-    //MARK: Public
-    private func removeNotifications(withIdentifiers identifiers: [String])   {
-        let center = UNUserNotificationCenter.current()
-            center.removePendingNotificationRequests(withIdentifiers: identifiers)
+}
+
+extension MicrobesViewController: ArticlesViewControllerDelegate {
+    func finalView() {
+        view.viewGradient()
+        
+        viewBasiscs()
+        procesingInformationShowing()
+    }
+}
+
+extension MicrobesViewController: ArticlesVCconnectionProtocol {
+    func notificationNamePost() {
+        let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.microbesVCKey)
+        NotificationCenter.default.post(name: notificationName, object: nil)
+    }
+}
+
+extension MicrobesViewController: GADBannerViewDelegate {
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("received ad")
     }
     
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("\(error.localizedDescription)")
+    }
+}
+
+extension MicrobesViewController: ArticleViewControllerSetupViewPrtocol {
+    func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
+        UIView.animate(withDuration: 0.4) {
+            for view in views {
+                view.alpha = 1
+            }
+        }
+    }
+    
+    func procesingInformationShowing() {
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
+            self.textView.mainTextViewTextColor(alpha: 1)
+        }) {(finished) in
+            self.activityIndicator.activityIndicatorStop()
+        }
+        
+        progressView.basicProgress()
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            if self.progressView.progress   != 1 {
+                self.progressView.startProgress()
+            } else {
+                self.activityIndicator.stopAnimating()
+                self.textView.mainTextViewTextColor(alpha: 1)
+                self.progressView.stopProgress()
+                
+                UIApplication.shared.endIgnoringInteractionEvents()
+            }
+        }
+    }
+}
+
+extension MicrobesViewController {
     private func stepperViewPrefering() {
         stepper.stepperShadow()
         stepperBackgroundView.editorsViews()
@@ -241,45 +244,8 @@ class MicrobesViewController: UIViewController {
         textView.mainTextViewTextColor(alpha: 0)
     }
     
-    private func procesingInformationShowing() {
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        
-        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
-            self.textView.mainTextViewTextColor(alpha: 1)
-        }) {(finished) in
-            self.activityIndicator.activityIndicatorStop()
-        }
-        
-        progressView.basicProgress()
-        
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            if self.progressView.progress   != 1 {
-                self.progressView.startProgress()
-            } else {
-                self.activityIndicator.stopAnimating()
-                self.textView.mainTextViewTextColor(alpha: 1)
-                self.progressView.stopProgress()
-                
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
-        }
-        
-        viewDidLoadPrinting(doing: "Microbes")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finalView()
-    }
-}
-
-@available(iOS 13.0, *)
-extension MicrobesViewController: ArticlesViewControllerDelegate {
-    func finalView() {
-        view.viewGradient()
-        
-        viewBasiscs()
-        procesingInformationShowing()
+    private func removeNotifications(withIdentifiers identifiers: [String])   {
+        let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: identifiers)
     }
 }

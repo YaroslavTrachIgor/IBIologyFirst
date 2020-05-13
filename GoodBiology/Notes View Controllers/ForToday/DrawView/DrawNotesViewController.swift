@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DrawNotesViewController: UIViewController {
+final class DrawNotesViewController: UIViewController {
     
     // Titles
     @IBOutlet weak var title1: UILabel!
@@ -27,7 +27,7 @@ class DrawNotesViewController: UIViewController {
     
     @IBOutlet weak var brushColorsContentBack: ContentBack! {
         didSet {
-            brushColorsContentBack.backgroundColor = lazyColor
+            brushColorsContentBack.backgroundColor = .biologyGreenColor
             brushColorsContentBack.isHidden = true
         }
     }
@@ -84,7 +84,7 @@ struct DrawNotesViewControllerArrays {
     static let colorsStringArray = ["Black", "Purple", "White", "Red", "Green", "Blue"]
     
     static let textColors = [UIColor.white, UIColor.white, UIColor.darkGray, UIColor.white, UIColor.darkGray, UIColor.white]
-    static let buttonTextColors = [UIColor.white, UIColor.white, lazyColor, lazyColor, lazyColor, UIColor.white]
+    static let buttonTextColors: [UIColor] = [.white, .white, .biologyGreenColor, .biologyGreenColor, .biologyGreenColor, .white]
 }
 
 extension DrawNotesViewController: UIPickerViewDelegate {

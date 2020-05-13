@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class TextViewBackView: UIView {
+final class TextViewBackView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         

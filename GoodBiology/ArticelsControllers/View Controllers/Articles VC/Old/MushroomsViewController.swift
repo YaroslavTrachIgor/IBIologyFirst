@@ -11,8 +11,8 @@ import UserNotifications
 import AudioToolbox
 import Social
 
-@available(iOS 13.0, *)
-class MushroomsViewController: UIViewController {
+
+final class MushroomsViewController: UIViewController {
     
     //MARK: IBOutlets
     @IBOutlet weak var textView:                 UITextView!
@@ -46,84 +46,15 @@ class MushroomsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.6) {
-            self.notificationButtonOutlet.alpha  = 1
-            self.segmentedControlOutlet.alpha    = 1
-        }
+        let views = [notificationButtonOutlet, segmentedControlOutlet]
+        viewDidApearAnimationPreview(views as! [UIView], nil)
     }
     
     //MARK: Actions
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
-        fastActivityVC(item: content)
+        FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
-    }
-    
-    private func fastActivityVC(item: String) {
-        //Alert
-        let alert = UIAlertController(title: "Share", message: nil, preferredStyle: .actionSheet)
-            alert.view.tintColor = lazyColor
-        let basicShare = UIAlertAction(title: "Basic Share", style: .default) { (action) in
-            let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
-                activityVC.popoverPresentationController?.sourceView = self.view
-
-                UIApplication.shared.keyWindow?.tintColor = lazyColor
-            
-            self.present(activityVC, animated: true, completion: nil)
-        }
-        
-        let actionFacebook = UIAlertAction(title: "Share on Facebook", style: .default) { (action) in
-            
-            //Checking if user is connected to Facebook
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)!
-                
-                post.setInitialText(FungusesArticleData.mushroomsMostContent)
-                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
-                
-                self.present(post, animated: true, completion: nil)
-                
-            } else {
-                self.showAlert(service: "Facebook")
-            }
-        }
-        
-        //Second action
-        let actionTwitter = UIAlertAction(title: "Share on Twitter", style: .default) { (action) in
-            
-            //Checking if user is connected to Facebook
-            if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
-                let post = SLComposeViewController(forServiceType: SLServiceTypeTwitter)!
-                
-                post.setInitialText(FungusesArticleData.mushroomsMostContent)
-                post.add(UIImage(named: "realGoodbiologyIcon-1.jpg"))
-                
-                self.present(post, animated: true, completion: nil)
-                
-            } else {
-                self.showAlert(service: "Twitter")
-            }
-        }
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        //Add action to action sheet
-        alert.addAction(basicShare)
-        alert.addAction(actionFacebook)
-        alert.addAction(actionTwitter)
-        alert.addAction(cancel)
-        alert.setTitle(font: UIFont(name: "AvenirNext-Medium", size: 14), color: .lightGray)
-        
-        //Present alert
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    private func showAlert(service: String) {
-        let alert = UIAlertController(title: "Error", message: "You are not connected to \(service)", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-        
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func `switch`(_ sender: UISwitch) {
@@ -175,6 +106,10 @@ class MushroomsViewController: UIViewController {
     }
     
     @IBAction func segmentedControlAction(_ sender: Any) {
+        /// ArticlesViewCountProtocol
+        setPopularityVoit()
+        
+        /// Set Content
         switch segmentedControlOutlet.selectedSegmentIndex {
         case 0:
             textView.text = FungusesArticleData.mushroomsMostContent
@@ -202,15 +137,76 @@ class MushroomsViewController: UIViewController {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        mushroomsScheduleNotification(inSecond: TimeInterval(timeInterval)) { (success) in
+        PushNotifications.setupBasicNotification(body: "Funguses", inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
+        notificationNamePost()
     }
     
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
+}
+
+
+
+extension MushroomsViewController: ArticlesViewControllerDelegate {
+    func finalView() {
+        view.viewGradient()
+        
+        viewBasiscs()
+        procesingInformationShowing()
+    }
+}
+
+
+
+extension MushroomsViewController: ArticlesVCconnectionProtocol {
+    func notificationNamePost() {
+        let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.fungusesVCKey)
+        NotificationCenter.default.post(name: notificationName, object: nil)
+    }
+}
+
+
+
+extension MushroomsViewController: ArticleViewControllerSetupViewPrtocol {
+    func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
+        UIView.animate(withDuration: 0.4) {
+            for view in views {
+                view.alpha = 1
+            }
+        }
+    }
     
-    //MARK: Public
+    func procesingInformationShowing() {
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        
+        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
+            self.textView.alpha = 1
+        }) {(finished) in
+            self.activityIndicator.stopAnimating()
+            UIApplication.shared.endIgnoringInteractionEvents()
+        }
+        progressView.setProgress(0, animated: true)
+        
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            if self.progressView.progress   != 1 {
+               self.progressView.startProgress()
+            } else {
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.activityIndicator.activityIndicatorStop()
+                    self.textView.mainTextViewTextColor(alpha: 1)
+                    self.progressView.stopProgress()
+                })
+                UIApplication.shared.endIgnoringInteractionEvents()
+            }
+        }
+    }
+}
+
+
+
+extension MushroomsViewController {
     private func removeNotifications(withIdentifiers identifiers: [String])   {
         let center = UNUserNotificationCenter.current()
             center.removePendingNotificationRequests(withIdentifiers: identifiers)
@@ -244,41 +240,5 @@ class MushroomsViewController: UIViewController {
     
     private func textViewSetup() {
         textView.mainTextViewTextColor(alpha: 0)
-    }
-    
-    func procesingInformationShowing() {
-        UIApplication.shared.beginIgnoringInteractionEvents()
-        
-        UIView.animate(withDuration: 0, delay: 0.5, options: .curveLinear, animations: {
-            self.textView.alpha = 1
-        }) {(finished) in
-            self.activityIndicator.stopAnimating()
-            UIApplication.shared.endIgnoringInteractionEvents()
-        }
-        progressView.setProgress(0, animated: true)
-        
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            if self.progressView.progress   != 1 {
-               self.progressView.startProgress()
-            } else {
-                UIView.animate(withDuration: 0.1, animations: {
-                    self.activityIndicator.activityIndicatorStop()
-                    self.textView.mainTextViewTextColor(alpha: 1)
-                    self.progressView.stopProgress()
-                })
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
-        }
-        viewDidLoadPrinting(doing: "Mushrooms")
-    }
-}
-
-@available(iOS 13.0, *)
-extension MushroomsViewController: ArticlesViewControllerDelegate {
-    func finalView() {
-        view.viewGradient()
-        
-        viewBasiscs()
-        procesingInformationShowing()
     }
 }

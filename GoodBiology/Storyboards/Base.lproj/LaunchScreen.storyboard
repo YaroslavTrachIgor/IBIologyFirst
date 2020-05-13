@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vbE-K0-9kK">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -34,7 +33,7 @@
         <scene sceneID="kIq-Zg-Tub">
             <objects>
                 <navigationController id="96r-WX-8zJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="V7w-aZ-Mmr"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="V7w-aZ-Mmr"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qde-xi-ij0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -42,16 +41,19 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s1G-xi-vM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2637" y="878"/>
+            <point key="canvasLocation" x="-2214" y="375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vV9-69-plu">
             <objects>
                 <navigationController id="xKe-bf-iZH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="literature" id="Ywj-IV-SJT"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qff-Gh-HoT">
+                    <tabBarItem key="tabBarItem" title="" image="book" catalog="system" id="Ywj-IV-SJT"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="qff-Gh-HoT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="4Fb-g5-8KF"/>
@@ -65,7 +67,7 @@
         <scene sceneID="6vz-y1-lDA">
             <objects>
                 <navigationController id="Vpw-WC-cKf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="today_apps" id="iiJ-bp-tD3"/>
+                    <tabBarItem key="tabBarItem" title="" image="list.bullet.below.rectangle" catalog="system" id="iiJ-bp-tD3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="KIq-jq-Jnj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -95,7 +97,7 @@
         <scene sceneID="agm-84-qbs">
             <objects>
                 <navigationController id="Qkc-Xd-OlU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="layers" id="ZH3-hw-hx1"/>
+                    <tabBarItem key="tabBarItem" title="" image="skew" catalog="system" id="ZH3-hw-hx1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2B6-va-d2A">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -109,7 +111,7 @@
         <scene sceneID="EBN-R0-bnc">
             <objects>
                 <navigationController id="EVP-0t-9q1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="graduation_cap" id="Di6-WC-FXC"/>
+                    <tabBarItem key="tabBarItem" title="" image="timer" catalog="system" id="Di6-WC-FXC"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="T8G-h6-c4q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -121,10 +123,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="graduation_cap" width="30" height="30"/>
-        <image name="layers" width="30" height="30"/>
-        <image name="literature" width="30" height="30"/>
-        <image name="person.fill" catalog="system" width="64" height="60"/>
-        <image name="today_apps" width="30" height="30"/>
+        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="list.bullet.below.rectangle" catalog="system" width="64" height="56"/>
+        <image name="person" catalog="system" width="64" height="58"/>
+        <image name="skew" catalog="system" width="64" height="54"/>
+        <image name="timer" catalog="system" width="64" height="60"/>
     </resources>
 </document>

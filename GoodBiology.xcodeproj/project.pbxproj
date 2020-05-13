@@ -8,16 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		61F44F3134C037BD82740881 /* libPods-GoodBiology.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 866FF06AFF388D236F192D4A /* libPods-GoodBiology.a */; };
-		840887B421F763810026A210 /* BiologyNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840887B321F763810026A210 /* BiologyNotifications.swift */; };
+		84036C2D2423E56F00188795 /* MostPopularArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84036C2C2423E56F00188795 /* MostPopularArticles.swift */; };
 		840FB81223BA20C70081DE59 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81123BA20C70081DE59 /* TextView.swift */; };
 		840FB81423BA3F970081DE59 /* TestButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81323BA3F960081DE59 /* TestButtons.swift */; };
 		840FB81723BA46050081DE59 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81623BA46050081DE59 /* TestView.swift */; };
 		840FB81923BA4E0E0081DE59 /* AnswerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81823BA4E0E0081DE59 /* AnswerLabel.swift */; };
 		840FB81B23BA6D1E0081DE59 /* BarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81A23BA6D1E0081DE59 /* BarButtonItem.swift */; };
 		841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841198FD233F5215004B0DAF /* NetworkingProtocol.swift */; };
-		84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119900233F57AC004B0DAF /* ReviewControllerProtocol.swift */; };
+		84119901233F57AC004B0DAF /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84119900233F57AC004B0DAF /* Protocols.swift */; };
 		841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841199032344AC40004B0DAF /* MenuProtocol.swift */; };
 		841AF1D1235A481D0003A440 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841AF1D0235A481D0003A440 /* URLs.swift */; };
+		84274D302412748A008E82BC /* ChomistaViewControllerViewSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84274D2F2412748A008E82BC /* ChomistaViewControllerViewSetupProtocol.swift */; };
+		84274D372412D397008E82BC /* ReadingOnTimeViewControllerButtonsBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84274D362412D397008E82BC /* ReadingOnTimeViewControllerButtonsBackView.swift */; };
+		84274D7B24142857008E82BC /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84274D7A24142857008E82BC /* Device.swift */; };
+		84274D7D2415163A008E82BC /* BasicASAuthorizationAppleIDButtonSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84274D7C24151639008E82BC /* BasicASAuthorizationAppleIDButtonSetupProtocol.swift */; };
 		842D690623C299F9009CF7E7 /* TextViewBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D690523C299F9009CF7E7 /* TextViewBackView.swift */; };
 		842D690923C29A99009CF7E7 /* DoneLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D690823C29A99009CF7E7 /* DoneLabel.swift */; };
 		842D690B23C29AD1009CF7E7 /* SettingsTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D690A23C29AD1009CF7E7 /* SettingsTextField.swift */; };
@@ -25,7 +29,7 @@
 		842D691323C4299C009CF7E7 /* ContactButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691223C4299C009CF7E7 /* ContactButton.swift */; };
 		842D691623C42A15009CF7E7 /* ArticlesMenuLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691523C42A15009CF7E7 /* ArticlesMenuLabel.swift */; };
 		842D691823C42B9E009CF7E7 /* NewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691723C42B9E009CF7E7 /* NewLabel.swift */; };
-		842D691B23C545FA009CF7E7 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691A23C545FA009CF7E7 /* ArticleView.swift */; };
+		842D691B23C545FA009CF7E7 /* ArticlePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691A23C545FA009CF7E7 /* ArticlePreviewView.swift */; };
 		842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691C23C6993D009CF7E7 /* ToolBar.swift */; };
 		842D691F23C69D01009CF7E7 /* BasicSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D691E23C69D01009CF7E7 /* BasicSearchController.swift */; };
 		842D692223C6CD9C009CF7E7 /* BiologyBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D692123C6CD9C009CF7E7 /* BiologyBackView.swift */; };
@@ -33,9 +37,17 @@
 		842D692623C77AA4009CF7E7 /* SFSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */; };
 		842D692B23C80202009CF7E7 /* RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D692A23C80202009CF7E7 /* RefreshControl.swift */; };
 		84323ECA21CE690700D50B2B /* Shadows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84323EC921CE690700D50B2B /* Shadows.swift */; };
-		84408E49222C4C5000F11996 /* FungusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E48222C4C5000F11996 /* FungusesData.swift */; };
-		84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4A222C529D00F11996 /* ArchaeaData.swift */; };
-		84408E4D222C5F7100F11996 /* ManData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84408E4C222C5F7100F11996 /* ManData.swift */; };
+		843DB9762447A482005D2625 /* ArticleVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DB9752447A482005D2625 /* ArticleVCViewModel.swift */; };
+		843DB97824487059005D2625 /* TestReviewVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DB97724487059005D2625 /* TestReviewVCViewModel.swift */; };
+		843DB97B2448CD8F005D2625 /* PopularInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DB97A2448CD8F005D2625 /* PopularInfoVC.swift */; };
+		843DB97E2448CDF0005D2625 /* PopularInfoContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DB97D2448CDF0005D2625 /* PopularInfoContent.swift */; };
+		843DB9812448CF7E005D2625 /* PopularInfoTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DB9802448CF7E005D2625 /* PopularInfoTextView.swift */; };
+		843DB984244904AD005D2625 /* PupularInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843DB983244904AD005D2625 /* PupularInfoViewModel.swift */; };
+		843F812E24407FDE00A81C09 /* ArticlesViewCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F812D24407FDE00A81C09 /* ArticlesViewCountModel.swift */; };
+		843F81322440981600A81C09 /* PlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F81312440981600A81C09 /* PlantsViewControllerAdMobBannerSetupProtocol.swift */; };
+		843F81352440985B00A81C09 /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F81342440985B00A81C09 /* UserActivityType.swift */; };
+		843F81392440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F81382440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift */; };
+		843F813C2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F813B2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift */; };
 		8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */; };
 		8446582023BC0A5200DC316E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* Button.swift */; };
 		8446582823BD59E200DC316E /* iOSGoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */; };
@@ -51,15 +63,24 @@
 		844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D04223243C800933ABC /* AppIconViewController.swift */; };
 		844E0D0722351BD400933ABC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D0622351BD400933ABC /* MapViewController.swift */; };
 		844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D1D2235765200933ABC /* MakingArticleViewController.swift */; };
-		844E0D212239A0C800933ABC /* iBiology.mov in Resources */ = {isa = PBXBuildFile; fileRef = 844E0D202239A0C700933ABC /* iBiology.mov */; };
 		844E0D242239A16900933ABC /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844E0D232239A16900933ABC /* VideoPlayerViewController.swift */; };
+		8450EACC2444993A00091F37 /* SkipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EACB2444993900091F37 /* SkipButton.swift */; };
+		8450EACE2444998C00091F37 /* ExplanatoryTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EACD2444998C00091F37 /* ExplanatoryTextView.swift */; };
+		8450EAD0244499AD00091F37 /* ExplanatoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EACF244499AD00091F37 /* ExplanatoryView.swift */; };
+		8450EAD2244670D800091F37 /* ForTodayViewControllerSaveFunctionSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EAD1244670D800091F37 /* ForTodayViewControllerSaveFunctionSetupProtocol.swift */; };
+		8450EAD52446711C00091F37 /* ForTodayViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EAD42446711C00091F37 /* ForTodayViewControllerViewModel.swift */; };
+		8450EADF24479DED00091F37 /* ReviewControllerViewSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EADE24479DED00091F37 /* ReviewControllerViewSetupProtocol.swift */; };
+		8450EAE124479E8000091F37 /* ReviewControllerProtcol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EAE024479E8000091F37 /* ReviewControllerProtcol.swift */; };
+		8450EAE324479E9700091F37 /* MFMessageComposeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EAE224479E9700091F37 /* MFMessageComposeViewControllerDelegate.swift */; };
+		8450EAEA2447A0EC00091F37 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450EAE92447A0EC00091F37 /* Actions.swift */; };
 		8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DD9522101F030033A3A2 /* AboutAppViewController.swift */; };
 		8454DD99221323640033A3A2 /* Browser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454DD97221323640033A3A2 /* Browser.storyboard */; };
 		8454DD9B221323CD0033A3A2 /* AboutAppStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8454DD9A221323CD0033A3A2 /* AboutAppStoryBoard.storyboard */; };
 		8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DD9D221326E50033A3A2 /* ThemesController.swift */; };
-		8454DDA52214CA300033A3A2 /* PlantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA42214CA300033A3A2 /* PlantsData.swift */; };
-		8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA62216F8AF0033A3A2 /* AppInformation.swift */; };
-		8454DDA9221750610033A3A2 /* AnimalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8454DDA8221750610033A3A2 /* AnimalsData.swift */; };
+		845BF52B243A737B001DC4DE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845BF52A243A737B001DC4DE /* MainTabBarController.swift */; };
+		845C4AD6242783B500105D92 /* MyColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4AD5242783B500105D92 /* MyColors.swift */; };
+		845C4ADC2428230500105D92 /* MostPopularArticlesViewControllerInfoContentBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4ADB2428230500105D92 /* MostPopularArticlesViewControllerInfoContentBack.swift */; };
+		845C4ADE2428258400105D92 /* MostPopularArticlesViewControllerInfoContentTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845C4ADD2428258400105D92 /* MostPopularArticlesViewControllerInfoContentTextView.swift */; };
 		845EE55923FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55823FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift */; };
 		845EE55B23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55A23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift */; };
 		845EE55D23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */; };
@@ -70,23 +91,50 @@
 		845EE56823FABB6C0036479B /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56723FABB6C0036479B /* CardViewController.swift */; };
 		845EE56A23FB24AA0036479B /* UIImagePickerControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */; };
 		845FE7442322F45400B36E76 /* ArticleOnlineImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */; };
-		8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461367C22C65F8D0019C7FB /* HumanData.swift */; };
 		8461F8C621EB651800586139 /* TestsReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8461F8C521EB651800586139 /* TestsReviewViewController.swift */; };
+		8465FD03244F9A6900E823A6 /* NetworkingViewControllerMainToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465FD02244F9A6800E823A6 /* NetworkingViewControllerMainToolBar.swift */; };
+		8465FD05244F9B9D00E823A6 /* WebViewBaxckground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8465FD04244F9B9D00E823A6 /* WebViewBaxckground.swift */; };
+		84680BF92434B4360048A30B /* MacawPopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680BF82434B4360048A30B /* MacawPopularView.swift */; };
+		84680BFC24372C9D0048A30B /* MacawPopularViewProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680BFB24372C9D0048A30B /* MacawPopularViewProperties.swift */; };
+		84680BFE24372CE50048A30B /* MacawPopularViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680BFD24372CE50048A30B /* MacawPopularViewViewModel.swift */; };
+		84680C012437A07A0048A30B /* MostPopularArticlesViewControllerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680C002437A07A0048A30B /* MostPopularArticlesViewControllerLabel.swift */; };
+		84680C042438F44F0048A30B /* NetworkingViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680C032438F44F0048A30B /* NetworkingViewControllerViewModel.swift */; };
+		84680C07243901340048A30B /* ArticelsViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84680C06243901340048A30B /* ArticelsViewControllerViewModel.swift */; };
 		8468332623A4E5A6004CBFC8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8468332523A4E5A6004CBFC8 /* User.swift */; };
 		84685FCA2219827000F79BF5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84685FC92219827000F79BF5 /* LoginViewController.swift */; };
+		846D1BA0241D867B0036179D /* ReadingOnTimeViewControllerScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D1B9F241D867B0036179D /* ReadingOnTimeViewControllerScoreView.swift */; };
+		846D1BA2241D8F2D0036179D /* ReadingOnTimeScoreLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D1BA1241D8F2D0036179D /* ReadingOnTimeScoreLabel.swift */; };
+		846D1BA6241EC9910036179D /* ArticleThemesControllerDataSetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D1BA5241EC9910036179D /* ArticleThemesControllerDataSetProtocol.swift */; };
 		8471F87F21B30202001AA935 /* NetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8471F87E21B30202001AA935 /* NetworkingViewController.swift */; };
 		84732DA6224003AC005957F2 /* ReadingOnTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84732DA5224003AC005957F2 /* ReadingOnTimeViewController.swift */; };
 		84732DA922400B96005957F2 /* ReadingOnTimeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84732DA822400B96005957F2 /* ReadingOnTimeData.swift */; };
+		84751DC02449D700008918F7 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84751DBF2449D700008918F7 /* MoreViewController.swift */; };
+		84751DC4244A58AE008918F7 /* BasicsViewControllerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84751DC3244A58AE008918F7 /* BasicsViewControllerActions.swift */; };
+		84751DC6244BBB6E008918F7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84751DC5244BBB6E008918F7 /* String.swift */; };
+		84751DC8244BBF13008918F7 /* SettingsTableViewControllerRealmProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84751DC7244BBF13008918F7 /* SettingsTableViewControllerRealmProtocol.swift */; };
+		84751DCA244DBC71008918F7 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84751DC9244DBC71008918F7 /* GoogleService-Info-2.plist */; };
 		8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476128B21E128B10010AEAE /* GradientExtensions.swift */; };
-		84778271237EEC52007C1FD8 /* Basic Varibles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84778270237EEC52007C1FD8 /* Basic Varibles.swift */; };
+		84778271237EEC52007C1FD8 /* BasicFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84778270237EEC52007C1FD8 /* BasicFonts.swift */; };
 		847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A507E2392E52400223AC7 /* BlankSheetViewController.swift */; };
+		847E14E8246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */; };
+		847E14EA246C659700C35F9E /* NetworkingViewControllerINActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */; };
+		847E14EC246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */; };
+		847E14EF246C730100C35F9E /* BrowserAnimationManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EE246C730100C35F9E /* BrowserAnimationManeger.swift */; };
 		848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A92F121DD63E600D1C3C1 /* SafariViewController.swift */; };
+		848BAFDD2461B3D400355430 /* iBiology.mov in Resources */ = {isa = PBXBuildFile; fileRef = 848BAFDC2461B3D400355430 /* iBiology.mov */; };
+		848BAFE024641EE900355430 /* MenuCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BAFDF24641EE800355430 /* MenuCollectionView.swift */; };
 		848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC42B2368FB1F0060709C /* ThemesMenuTableViewController.swift */; };
 		84914E2023FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E1F23FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift */; };
 		84914E2223FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */; };
 		84914E2423FE9DE80048B154 /* HideButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2323FE9DE80048B154 /* HideButton.swift */; };
 		84914E2623FF55C60048B154 /* NewArticleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914E2523FF55C60048B154 /* NewArticleLabel.swift */; };
 		84914E28240175900048B154 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 84914E272401758F0048B154 /* Podfile */; };
+		849369312416928D0087019A /* SwitchTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849369302416928D0087019A /* SwitchTextView.swift */; };
+		84936933241693660087019A /* ArticlesReviewViewControllerSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936932241693660087019A /* ArticlesReviewViewControllerSwitch.swift */; };
+		849369352416951A0087019A /* ArticlesReviewViewControllerIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849369342416951A0087019A /* ArticlesReviewViewControllerIconImageView.swift */; };
+		8496D484243D117F00545DDC /* AppDelegateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496D483243D117F00545DDC /* AppDelegateViewModel.swift */; };
+		8496D487243D11AF00545DDC /* BasicAppDelegateSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496D486243D11AF00545DDC /* BasicAppDelegateSetupProtocol.swift */; };
+		8496D489243D121200545DDC /* BasicDidFinishLaunchingWithOptionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496D488243D121200545DDC /* BasicDidFinishLaunchingWithOptionsProtocol.swift */; };
 		8497E34623566495003CD4A9 /* SystemColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E34523566495003CD4A9 /* SystemColors.swift */; };
 		8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */; };
 		8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */; };
@@ -94,10 +142,6 @@
 		849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38AD2353B8AB002E007D /* MapDelegate.swift */; };
 		849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C38B12353BB27002E007D /* Notes Protocol.swift */; };
 		849E2DA6240189A900CE9FC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 849E2DA5240189A900CE9FC6 /* GoogleService-Info.plist */; };
-		849E2DA82401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json in Resources */ = {isa = PBXBuildFile; fileRef = 849E2DA72401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json */; };
-		849E2DAA2401E16C00CE9FC6 /* 16408-jumping-squares.json in Resources */ = {isa = PBXBuildFile; fileRef = 849E2DA92401E16B00CE9FC6 /* 16408-jumping-squares.json */; };
-		849E2DAC2401E62B00CE9FC6 /* JHBNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E2DAB2401E62B00CE9FC6 /* JHBNViewController.swift */; };
-		849E2DAE2401F0CA00CE9FC6 /* 733-settings.json in Resources */ = {isa = PBXBuildFile; fileRef = 849E2DAD2401F0CA00CE9FC6 /* 733-settings.json */; };
 		849E67FC23FC316900569F32 /* BasicMFMailComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849E67FB23FC316900569F32 /* BasicMFMailComposeViewController.swift */; };
 		849F5381236977CD0027289F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F5380236977CD0027289F /* GradientView.swift */; };
 		84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A15A96236209220069AADE /* SettingsTableViewController.swift */; };
@@ -142,6 +186,14 @@
 		84A3AFD923F865F800836400 /* ArticlesMenuContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFD823F865F700836400 /* ArticlesMenuContentService.swift */; };
 		84A3AFDB23F88AC600836400 /* MenuCellRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFDA23F88AC600836400 /* MenuCellRightView.swift */; };
 		84A3AFDD23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3AFDC23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift */; };
+		84A4B369240943B80013CDB1 /* GoogleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B368240943B80013CDB1 /* GoogleMapViewController.swift */; };
+		84A4B36C240A79460013CDB1 /* BasicGoogleMapViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B36B240A79460013CDB1 /* BasicGoogleMapViewProtocol.swift */; };
+		84A4B36E240A8C410013CDB1 /* ShowGoogleMapViewButtonBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B36D240A8C410013CDB1 /* ShowGoogleMapViewButtonBack.swift */; };
+		84A4B370240A8E7A0013CDB1 /* GoogleMapViewControllerSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B36F240A8E7A0013CDB1 /* GoogleMapViewControllerSegmentedControl.swift */; };
+		84A4B372240A9D460013CDB1 /* TextErrorSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B371240A9D460013CDB1 /* TextErrorSetup.swift */; };
+		84A4B374240A9D9D0013CDB1 /* TrashFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B373240A9D9D0013CDB1 /* TrashFunction.swift */; };
+		84A4B376240AA32F0013CDB1 /* MapTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A4B375240AA32F0013CDB1 /* MapTypeButton.swift */; };
+		84A4B378240BE3590013CDB1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84A4B377240BE3580013CDB1 /* GoogleService-Info.plist */; };
 		84A78C5723ECC542002FEADF /* TestErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5623ECC542002FEADF /* TestErrors.swift */; };
 		84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */; };
 		84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */; };
@@ -156,33 +208,101 @@
 		84A78C7423EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C7323EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift */; };
 		84A78C7623EF006C002FEADF /* MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C7523EF006C002FEADF /* MKMapViewDelegate.swift */; };
 		84A78C7823EF00CA002FEADF /* CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A78C7723EF00CA002FEADF /* CLLocationManagerDelegate.swift */; };
+		84A9352324539FB70061EF89 /* UIBarButtonItemTestViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9352224539FB70061EF89 /* UIBarButtonItemTestViewControllerExtension.swift */; };
+		84A935262454F1F70061EF89 /* BlankSheetViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A935252454F1F60061EF89 /* BlankSheetViewControllerViewModel.swift */; };
+		84A935292454F2700061EF89 /* MainFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A935282454F2700061EF89 /* MainFunctions.swift */; };
+		84A9352B2454F2960061EF89 /* GADBannerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9352A2454F2960061EF89 /* GADBannerViewDelegate.swift */; };
+		84A9352F245623D80061EF89 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9352E245623D80061EF89 /* UIView.swift */; };
+		84AB84D1246B3833001B1856 /* ArticleContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84CA246B3832001B1856 /* ArticleContentData.swift */; };
+		84AB84D4246B3833001B1856 /* BiologyBasicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84CF246B3833001B1856 /* BiologyBasicsData.swift */; };
+		84AB84DE246B3844001B1856 /* ArchaeaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84D6246B3844001B1856 /* ArchaeaData.swift */; };
+		84AB84DF246B3844001B1856 /* PlantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84D7246B3844001B1856 /* PlantsData.swift */; };
+		84AB84E0246B3844001B1856 /* VirusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84D8246B3844001B1856 /* VirusesData.swift */; };
+		84AB84E1246B3844001B1856 /* ManData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84D9246B3844001B1856 /* ManData.swift */; };
+		84AB84E2246B3844001B1856 /* AnimalsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84DA246B3844001B1856 /* AnimalsData.swift */; };
+		84AB84E3246B3844001B1856 /* HumanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84DB246B3844001B1856 /* HumanData.swift */; };
+		84AB84E4246B3844001B1856 /* FungusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84DC246B3844001B1856 /* FungusesData.swift */; };
+		84AB84E5246B3844001B1856 /* MicrobesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84DD246B3844001B1856 /* MicrobesData.swift */; };
+		84AB84E8246B3953001B1856 /* BiologyAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84E7246B3952001B1856 /* BiologyAll.swift */; };
+		84AB84EA246B3CFD001B1856 /* AppInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB84E9246B3CFD001B1856 /* AppInformation.swift */; };
+		84AB8512246BE6A8001B1856 /* LastSaveDateLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB8511246BE6A8001B1856 /* LastSaveDateLabel.swift */; };
+		84AB8516246BFA89001B1856 /* ForTodayViewControllerSetupMainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AB8515246BFA89001B1856 /* ForTodayViewControllerSetupMainProtocols.swift */; };
 		84ADAC3621D2C65100FDDFC4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84ADAC3521D2C65100FDDFC4 /* MapKit.framework */; };
+		84B1D5FD242A71AF0046C4FB /* AboutAppVCSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D5FC242A71AF0046C4FB /* AboutAppVCSetupProtocol.swift */; };
+		84B1D5FF242A72E90046C4FB /* SafariViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D5FE242A72E90046C4FB /* SafariViewControllerExtensions.swift */; };
+		84B1D601242A74150046C4FB /* AboutAppViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D600242A74150046C4FB /* AboutAppViewControllerExtensions.swift */; };
+		84B1D603242A7B550046C4FB /* AppIconViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D602242A7B550046C4FB /* AppIconViewControllerExtensions.swift */; };
+		84B1D605242B8BEB0046C4FB /* QuestionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D604242B8BEB0046C4FB /* QuestionLabel.swift */; };
+		84B1D607242B8C0D0046C4FB /* SettingsTableViewControllerSaveFunctionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D606242B8C0D0046C4FB /* SettingsTableViewControllerSaveFunctionProtocol.swift */; };
+		84B1D60B242C328D0046C4FB /* FastActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D60A242C328D0046C4FB /* FastActivityVC.swift */; };
+		84B1D60D242D097C0046C4FB /* LoginViewControllerGoogleDelegateSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D60C242D097C0046C4FB /* LoginViewControllerGoogleDelegateSetupProtocol.swift */; };
+		84B1D60F242D0B050046C4FB /* BasicGoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D60E242D0B050046C4FB /* BasicGoogleSignInButton.swift */; };
+		84B1D612242D4DD60046C4FB /* MakingArticleViewControllerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D611242D4DD60046C4FB /* MakingArticleViewControllerContent.swift */; };
+		84B1D614242D4EF50046C4FB /* MailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D613242D4EF50046C4FB /* MailButton.swift */; };
+		84B1D616242D50570046C4FB /* MakingArticleVCContentRulesTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D615242D50570046C4FB /* MakingArticleVCContentRulesTextView.swift */; };
+		84B1D61A242D748D0046C4FB /* SettingsTableViewControllerSaveFunctionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D619242D748D0046C4FB /* SettingsTableViewControllerSaveFunctionViewModel.swift */; };
+		84B1D61D242D77D70046C4FB /* SettingsTableViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D61C242D77D70046C4FB /* SettingsTableViewControllerViewModel.swift */; };
+		84B1D629242E5F3B0046C4FB /* TestsMenuViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D628242E5F3B0046C4FB /* TestsMenuViewControllerViewModel.swift */; };
+		84B1D62B242E70530046C4FB /* PopularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D62A242E70530046C4FB /* PopularButton.swift */; };
+		84B1D634242EA9090046C4FB /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D633242EA9090046C4FB /* IntentHandler.swift */; };
+		84B1D63C242EA90A0046C4FB /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1D63B242EA90A0046C4FB /* IntentsUI.framework */; };
+		84B1D63F242EA90A0046C4FB /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D63E242EA90A0046C4FB /* IntentViewController.swift */; };
+		84B1D642242EA90A0046C4FB /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B1D640242EA90A0046C4FB /* MainInterface.storyboard */; };
+		84B1D646242EA90A0046C4FB /* iBiologySiriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84B1D63A242EA90A0046C4FB /* iBiologySiriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84B1D649242EA90A0046C4FB /* iBiologySiri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84B1D631242EA9090046C4FB /* iBiologySiri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84B1D651242FF9F00046C4FB /* SignInIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D650242FF9EF0046C4FB /* SignInIconView.swift */; };
+		84B1D654242FFA290046C4FB /* LoginViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D653242FFA290046C4FB /* LoginViewControllerViewModel.swift */; };
+		84B1D656242FFEDD0046C4FB /* AuthenticationWithTouchIDProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D655242FFEDC0046C4FB /* AuthenticationWithTouchIDProtocol.swift */; };
+		84B1D6592431D5C40046C4FB /* MostPopularArticlesViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B1D6582431D5C30046C4FB /* MostPopularArticlesViewControllerViewModel.swift */; };
 		84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */; };
 		84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD83222A5E9800BA41C9 /* LoginButtonAnimatiol.swift */; };
-		84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD85222AE87C00BA41C9 /* MicrobesData.swift */; };
-		84B2BD88222BDCEA00BA41C9 /* VirusesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B2BD87222BDCEA00BA41C9 /* VirusesData.swift */; };
 		84B9050223201E810002F0E2 /* BasicTestWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B9050123201E810002F0E2 /* BasicTestWords.swift */; };
 		84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */; };
 		84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFDD0236DCAC80088B09E /* VideosMenuTableViewController.swift */; };
 		84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BDFDD3236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift */; };
-		84C6FC602205986300BCE06D /* ArticleContentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FC5F2205986300BCE06D /* ArticleContentData.swift */; };
 		84C6FCAE220620A200BCE06D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCAD220620A200BCE06D /* AppDelegate.swift */; };
 		84C6FCB5220620A200BCE06D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C6FCB3220620A200BCE06D /* Main.storyboard */; };
 		84C6FCB7220620A400BCE06D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C6FCB6220620A400BCE06D /* Assets.xcassets */; };
 		84C6FCBE2209F8AA00BCE06D /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCBC2209F8A500BCE06D /* ArticleViewController.swift */; };
 		84C6FCC22209FDEF00BCE06D /* BasicsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCC02209FAF200BCE06D /* BasicsContent.swift */; };
-		84C7AAEA223C4CDF00A7CF68 /* BiologyShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7AAE9223C4CDF00A7CF68 /* BiologyShareData.swift */; };
-		84C7AAED223C4E9700A7CF68 /* BiologyAll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7AAEC223C4E9700A7CF68 /* BiologyAll.swift */; };
-		84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C7AAEE223C4EF500A7CF68 /* BiologyBasicsData.swift */; };
 		84CDB5CD2221371D002432F7 /* ForToday.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CDB5CB2221371D002432F7 /* ForToday.storyboard */; };
 		84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */; };
+		84EA94F3246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F2246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift */; };
+		84EA94F5246C845C000EEB8E /* LocalizedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F4246C845C000EEB8E /* LocalizedDate.swift */; };
+		84EDAB07240D5ADC0063CF6F /* libAppAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB01240D5ADC0063CF6F /* libAppAuth.a */; };
+		84EDAB08240D5ADC0063CF6F /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB02240D5ADC0063CF6F /* libGoogleUtilities.a */; };
+		84EDAB09240D5ADC0063CF6F /* libGTMAppAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB03240D5ADC0063CF6F /* libGTMAppAuth.a */; };
+		84EDAB0A240D5ADC0063CF6F /* libGTMSessionFetcher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB04240D5ADC0063CF6F /* libGTMSessionFetcher.a */; };
+		84EDAB0B240D5ADC0063CF6F /* liblottie-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB05240D5ADC0063CF6F /* liblottie-ios.a */; };
+		84EDAB0C240D5ADC0063CF6F /* libnanopb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB06240D5ADC0063CF6F /* libnanopb.a */; };
+		84EDAB0D240D5ADC0063CF6F /* libPods-GoodBiology.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 866FF06AFF388D236F192D4A /* libPods-GoodBiology.a */; };
+		84EDAB0F240EFFFF0063CF6F /* SettingsTableViewControllerDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB0E240EFFFE0063CF6F /* SettingsTableViewControllerDelegateExtension.swift */; };
+		84EDAB11240F00350063CF6F /* SettingsTableViewControllerGesturesSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB10240F00350063CF6F /* SettingsTableViewControllerGesturesSetup.swift */; };
+		84EDAB15240F006D0063CF6F /* SettingsTableViewControllerLoadSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB14240F006D0063CF6F /* SettingsTableViewControllerLoadSettings.swift */; };
+		84EDAB17240F036A0063CF6F /* SettingsTableViewControllerObserversSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB16240F036A0063CF6F /* SettingsTableViewControllerObserversSetupProtocol.swift */; };
+		84EDAB19240F038C0063CF6F /* SettingsTableViewControllerMailComposeSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB18240F038C0063CF6F /* SettingsTableViewControllerMailComposeSetupProtocol.swift */; };
+		84EDAB1B240F04F10063CF6F /* UsersInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB1A240F04F10063CF6F /* UsersInfoView.swift */; };
+		84EDAB1D240F08540063CF6F /* UsersIconImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB1C240F08540063CF6F /* UsersIconImageView.swift */; };
+		84EDAB20241019AB0063CF6F /* TitleLabelForNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB1F241019AB0063CF6F /* TitleLabelForNavigationBar.swift */; };
+		84EDAB22241019C90063CF6F /* SubTitleLabelForNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB21241019C90063CF6F /* SubTitleLabelForNavigationBar.swift */; };
+		84EDAB2524101B5C0063CF6F /* BiologyThemesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB2424101B5C0063CF6F /* BiologyThemesTableViewController.swift */; };
+		84EDAB27241045DA0063CF6F /* BasicsViewControllerSearchButtonBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB26241045DA0063CF6F /* BasicsViewControllerSearchButtonBack.swift */; };
+		84EDAB2924104A6D0063CF6F /* BasicsThemesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB2824104A6D0063CF6F /* BasicsThemesViewController.swift */; };
+		84EDAB2C24126B0B0063CF6F /* ArticleViewControllerSetupViewPrtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EDAB2B24126B0A0063CF6F /* ArticleViewControllerSetupViewPrtocol.swift */; };
+		84EEBDF4245CB2CA009A105A /* TransformImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEBDF3245CB2CA009A105A /* TransformImageView.swift */; };
+		84EEBDFB245CD691009A105A /* BasicNotesViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEBDFA245CD691009A105A /* BasicNotesViewControllerViewModel.swift */; };
+		84EEBDFE245CED01009A105A /* BasicNotesViewControllerTrashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EEBDFD245CED01009A105A /* BasicNotesViewControllerTrashButton.swift */; };
+		84EF4A4B2466237E009632A1 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4A4A2466237E009632A1 /* MenuCollectionViewCell.swift */; };
+		84EF4A4D246623AC009632A1 /* MenuCollectionViewCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4A4C246623AC009632A1 /* MenuCollectionViewCellButton.swift */; };
+		84EF4A532467C736009632A1 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4A522467C736009632A1 /* Articles.swift */; };
 		84F5741123F0BCCB00400ED4 /* ChromistaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5741023F0BCCB00400ED4 /* ChromistaButton.swift */; };
 		84F5741323F0BDEF00400ED4 /* ChromistaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5741223F0BDEF00400ED4 /* ChromistaLabel.swift */; };
 		84F5741523F0BE3000400ED4 /* ChromistaActionButtonsBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5741423F0BE3000400ED4 /* ChromistaActionButtonsBack.swift */; };
 		84F5741723F0C0BF00400ED4 /* ArticlesVCButtonBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5741623F0C0BF00400ED4 /* ArticlesVCButtonBack.swift */; };
 		84F5741C23F1E7C500400ED4 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F5741B23F1E7C500400ED4 /* User.storyboard */; };
+		84FBE76F24204D5100266A42 /* CostomGoogleSignInButtonViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FBE76E24204D5100266A42 /* CostomGoogleSignInButtonViewProtocol.swift */; };
 		AA2C423421C842F500D1E680 /* BasicsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C423321C842F500D1E680 /* BasicsCoordinator.swift */; };
-		AAEC22D221C679E900FF69FE /* BasicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC22D121C679E900FF69FE /* BasicsViewController.swift */; };
+		AAEC22D221C679E900FF69FE /* BiologyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC22D121C679E900FF69FE /* BiologyViewController.swift */; };
 		AAEC22D621C67A1300FF69FE /* BasicsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC22D521C67A1300FF69FE /* BasicsDataManager.swift */; };
 		AAEC22D821C67A3200FF69FE /* BasicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEC22D721C67A3200FF69FE /* BasicsModel.swift */; };
 		C40D3D6521B81878009A0211 /* ArchaeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D3D6421B81878009A0211 /* ArchaeaViewController.swift */; };
@@ -205,6 +325,7 @@
 		C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7A23AEC09D00D1F108 /* UIStepper.swift */; };
 		C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C458BD7C23AEC0C100D1F108 /* UISwitch.swift */; };
 		C463227723AD19D10099083F /* ChomistaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463227623AD19D10099083F /* ChomistaViewController.swift */; };
+		C46E93A0241C4A1500C015CD /* TestViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E939F241C4A1500C015CD /* TestViewControllerProtocol.swift */; };
 		C47CAD6721D0E42F00E27E88 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47CAD6621D0E42F00E27E88 /* TestViewController.swift */; };
 		C496AE6B21C93DA400413CB4 /* NotificationsFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496AE6A21C93DA400413CB4 /* NotificationsFunctions.swift */; };
 		C498F9A3219F6B5900DCAC9F /* Tests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C498F9A2219F6B5900DCAC9F /* Tests.storyboard */; };
@@ -229,6 +350,13 @@
 		C4E5E25721975BE5009C3062 /* GoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5E25621975BE5009C3062 /* GoodBiologyUITests.swift */; };
 		C4EE987C23EC6D1B00FBF1E1 /* TestIconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE987B23EC6D1B00FBF1E1 /* TestIconLabel.swift */; };
 		C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EE987D23EC6D5200FBF1E1 /* TestIconBackView.swift */; };
+		C4F49B3A2416D779002A2B17 /* LoginViewControllerBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49B392416D779002A2B17 /* LoginViewControllerBackView.swift */; };
+		C4F49B3D2416D88A002A2B17 /* LoginViewControllerAppleSignInButtonSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49B3C2416D88A002A2B17 /* LoginViewControllerAppleSignInButtonSetupProtocol.swift */; };
+		C4F49B3F2416D8BA002A2B17 /* GIDSignInDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49B3E2416D8BA002A2B17 /* GIDSignInDelegate.swift */; };
+		C4F49B412416D8F3002A2B17 /* ASAuthorizationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49B402416D8F3002A2B17 /* ASAuthorizationControllerDelegate.swift */; };
+		C4F49B432416D91B002A2B17 /* ASAuthorizationControllerPresentationContextProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49B422416D91B002A2B17 /* ASAuthorizationControllerPresentationContextProviding.swift */; };
+		C4F49B452416D953002A2B17 /* LoginViewControllerSystemSignInButtonsSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49B442416D953002A2B17 /* LoginViewControllerSystemSignInButtonsSetupProtocol.swift */; };
+		C4F49B472416DE49002A2B17 /* BasicRootVCGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F49B462416DE49002A2B17 /* BasicRootVCGradient.swift */; };
 		C4FB6D3921B7D7EE00E4FD63 /* PlantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -239,6 +367,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = C4E5E23021975BE4009C3062;
 			remoteInfo = GoodBiology;
+		};
+		84B1D644242EA90A0046C4FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B1D639242EA90A0046C4FB;
+			remoteInfo = iBiologySiriUI;
+		};
+		84B1D647242EA90A0046C4FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4E5E22921975BE4009C3062 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B1D630242EA9090046C4FB;
+			remoteInfo = iBiologySiri;
 		};
 		84C6FC9022061C5300BCE06D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -291,6 +433,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				84B1D646242EA90A0046C4FB /* iBiologySiriUI.appex in Embed App Extensions */,
+				84B1D649242EA90A0046C4FB /* iBiologySiri.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,16 +464,20 @@
 /* Begin PBXFileReference section */
 		0045B572FD23584A651EC5C1 /* Pods-GoodBiology.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBiology.release.xcconfig"; path = "Target Support Files/Pods-GoodBiology/Pods-GoodBiology.release.xcconfig"; sourceTree = "<group>"; };
 		625B4F54138942D262E7B60F /* Pods-GoodBiology.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBiology.debug.xcconfig"; path = "Target Support Files/Pods-GoodBiology/Pods-GoodBiology.debug.xcconfig"; sourceTree = "<group>"; };
-		840887B321F763810026A210 /* BiologyNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyNotifications.swift; sourceTree = "<group>"; };
+		84036C2C2423E56F00188795 /* MostPopularArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticles.swift; sourceTree = "<group>"; };
 		840FB81123BA20C70081DE59 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		840FB81323BA3F960081DE59 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
 		840FB81623BA46050081DE59 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		840FB81823BA4E0E0081DE59 /* AnswerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerLabel.swift; sourceTree = "<group>"; };
 		840FB81A23BA6D1E0081DE59 /* BarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarButtonItem.swift; sourceTree = "<group>"; };
 		841198FD233F5215004B0DAF /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
-		84119900233F57AC004B0DAF /* ReviewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewControllerProtocol.swift; sourceTree = "<group>"; };
+		84119900233F57AC004B0DAF /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		841199032344AC40004B0DAF /* MenuProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProtocol.swift; sourceTree = "<group>"; };
 		841AF1D0235A481D0003A440 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		84274D2F2412748A008E82BC /* ChomistaViewControllerViewSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChomistaViewControllerViewSetupProtocol.swift; sourceTree = "<group>"; };
+		84274D362412D397008E82BC /* ReadingOnTimeViewControllerButtonsBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeViewControllerButtonsBackView.swift; sourceTree = "<group>"; };
+		84274D7A24142857008E82BC /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		84274D7C24151639008E82BC /* BasicASAuthorizationAppleIDButtonSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicASAuthorizationAppleIDButtonSetupProtocol.swift; sourceTree = "<group>"; };
 		842D690523C299F9009CF7E7 /* TextViewBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewBackView.swift; sourceTree = "<group>"; };
 		842D690823C29A99009CF7E7 /* DoneLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneLabel.swift; sourceTree = "<group>"; };
 		842D690A23C29AD1009CF7E7 /* SettingsTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextField.swift; sourceTree = "<group>"; };
@@ -337,7 +485,7 @@
 		842D691223C4299C009CF7E7 /* ContactButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactButton.swift; sourceTree = "<group>"; };
 		842D691523C42A15009CF7E7 /* ArticlesMenuLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesMenuLabel.swift; sourceTree = "<group>"; };
 		842D691723C42B9E009CF7E7 /* NewLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLabel.swift; sourceTree = "<group>"; };
-		842D691A23C545FA009CF7E7 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		842D691A23C545FA009CF7E7 /* ArticlePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlePreviewView.swift; sourceTree = "<group>"; };
 		842D691C23C6993D009CF7E7 /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 		842D691E23C69D01009CF7E7 /* BasicSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSearchController.swift; sourceTree = "<group>"; };
 		842D692123C6CD9C009CF7E7 /* BiologyBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyBackView.swift; sourceTree = "<group>"; };
@@ -345,9 +493,17 @@
 		842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewController.swift; sourceTree = "<group>"; };
 		842D692A23C80202009CF7E7 /* RefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshControl.swift; sourceTree = "<group>"; };
 		84323EC921CE690700D50B2B /* Shadows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shadows.swift; sourceTree = "<group>"; };
-		84408E48222C4C5000F11996 /* FungusesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungusesData.swift; sourceTree = "<group>"; };
-		84408E4A222C529D00F11996 /* ArchaeaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaData.swift; sourceTree = "<group>"; };
-		84408E4C222C5F7100F11996 /* ManData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManData.swift; sourceTree = "<group>"; };
+		843DB9752447A482005D2625 /* ArticleVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVCViewModel.swift; sourceTree = "<group>"; };
+		843DB97724487059005D2625 /* TestReviewVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestReviewVCViewModel.swift; sourceTree = "<group>"; };
+		843DB97A2448CD8F005D2625 /* PopularInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularInfoVC.swift; sourceTree = "<group>"; };
+		843DB97D2448CDF0005D2625 /* PopularInfoContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularInfoContent.swift; sourceTree = "<group>"; };
+		843DB9802448CF7E005D2625 /* PopularInfoTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularInfoTextView.swift; sourceTree = "<group>"; };
+		843DB983244904AD005D2625 /* PupularInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PupularInfoViewModel.swift; sourceTree = "<group>"; };
+		843F812D24407FDE00A81C09 /* ArticlesViewCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewCountModel.swift; sourceTree = "<group>"; };
+		843F81312440981600A81C09 /* PlantsViewControllerAdMobBannerSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsViewControllerAdMobBannerSetupProtocol.swift; sourceTree = "<group>"; };
+		843F81342440985B00A81C09 /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
+		843F81382440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChomistaViewControllerViewModel.swift; sourceTree = "<group>"; };
+		843F813B2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesVCsViewCountExtensions.swift; sourceTree = "<group>"; };
 		8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProtocol.swift; sourceTree = "<group>"; };
 		8446581F23BC0A5200DC316E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSGoodBiologyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -366,15 +522,24 @@
 		844E0D0622351BD400933ABC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		844E0D0D2235625200933ABC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		844E0D1D2235765200933ABC /* MakingArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MakingArticleViewController.swift; path = ../Storyboards/MakingArticleViewController.swift; sourceTree = "<group>"; };
-		844E0D202239A0C700933ABC /* iBiology.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = iBiology.mov; path = ../iBiology.mov; sourceTree = "<group>"; };
 		844E0D232239A16900933ABC /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		8450EACB2444993900091F37 /* SkipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkipButton.swift; sourceTree = "<group>"; };
+		8450EACD2444998C00091F37 /* ExplanatoryTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanatoryTextView.swift; sourceTree = "<group>"; };
+		8450EACF244499AD00091F37 /* ExplanatoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplanatoryView.swift; sourceTree = "<group>"; };
+		8450EAD1244670D800091F37 /* ForTodayViewControllerSaveFunctionSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewControllerSaveFunctionSetupProtocol.swift; sourceTree = "<group>"; };
+		8450EAD42446711C00091F37 /* ForTodayViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewControllerViewModel.swift; sourceTree = "<group>"; };
+		8450EADE24479DED00091F37 /* ReviewControllerViewSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewControllerViewSetupProtocol.swift; sourceTree = "<group>"; };
+		8450EAE024479E8000091F37 /* ReviewControllerProtcol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewControllerProtcol.swift; sourceTree = "<group>"; };
+		8450EAE224479E9700091F37 /* MFMessageComposeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFMessageComposeViewControllerDelegate.swift; sourceTree = "<group>"; };
+		8450EAE92447A0EC00091F37 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		8454DD9522101F030033A3A2 /* AboutAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewController.swift; sourceTree = "<group>"; };
 		8454DD98221323640033A3A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GoodBiology/Storyboards/Base.lproj/Browser.storyboard; sourceTree = "<group>"; };
 		8454DD9A221323CD0033A3A2 /* AboutAppStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AboutAppStoryBoard.storyboard; sourceTree = "<group>"; };
 		8454DD9D221326E50033A3A2 /* ThemesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesController.swift; sourceTree = "<group>"; };
-		8454DDA42214CA300033A3A2 /* PlantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsData.swift; sourceTree = "<group>"; };
-		8454DDA62216F8AF0033A3A2 /* AppInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInformation.swift; sourceTree = "<group>"; };
-		8454DDA8221750610033A3A2 /* AnimalsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsData.swift; sourceTree = "<group>"; };
+		845BF52A243A737B001DC4DE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		845C4AD5242783B500105D92 /* MyColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyColors.swift; sourceTree = "<group>"; };
+		845C4ADB2428230500105D92 /* MostPopularArticlesViewControllerInfoContentBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesViewControllerInfoContentBack.swift; sourceTree = "<group>"; };
+		845C4ADD2428258400105D92 /* MostPopularArticlesViewControllerInfoContentTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesViewControllerInfoContentTextView.swift; sourceTree = "<group>"; };
 		845EE55823FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLoadAnimationsSetupProtocol.swift; sourceTree = "<group>"; };
 		845EE55A23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerUIPickerViewDataSource.swift; sourceTree = "<group>"; };
 		845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerUIPickerViewDelegate.swift; sourceTree = "<group>"; };
@@ -385,24 +550,51 @@
 		845EE56723FABB6C0036479B /* CardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePickerControllerDelegate.swift; sourceTree = "<group>"; };
 		845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOnlineImagesViewController.swift; sourceTree = "<group>"; };
-		8461367C22C65F8D0019C7FB /* HumanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumanData.swift; sourceTree = "<group>"; };
 		8461F8C521EB651800586139 /* TestsReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsReviewViewController.swift; sourceTree = "<group>"; };
+		8465FD02244F9A6800E823A6 /* NetworkingViewControllerMainToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerMainToolBar.swift; sourceTree = "<group>"; };
+		8465FD04244F9B9D00E823A6 /* WebViewBaxckground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewBaxckground.swift; sourceTree = "<group>"; };
+		84680BF82434B4360048A30B /* MacawPopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MacawPopularView.swift; path = "../New Group/MacawPopularView.swift"; sourceTree = "<group>"; };
+		84680BFB24372C9D0048A30B /* MacawPopularViewProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacawPopularViewProperties.swift; sourceTree = "<group>"; };
+		84680BFD24372CE50048A30B /* MacawPopularViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacawPopularViewViewModel.swift; sourceTree = "<group>"; };
+		84680C002437A07A0048A30B /* MostPopularArticlesViewControllerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesViewControllerLabel.swift; sourceTree = "<group>"; };
+		84680C032438F44F0048A30B /* NetworkingViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerViewModel.swift; sourceTree = "<group>"; };
+		84680C06243901340048A30B /* ArticelsViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticelsViewControllerViewModel.swift; sourceTree = "<group>"; };
 		8468332423A44727004CBFC8 /* GoodBiology.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodBiology.entitlements; sourceTree = "<group>"; };
 		8468332523A4E5A6004CBFC8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84685FC92219827000F79BF5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		846D1B9F241D867B0036179D /* ReadingOnTimeViewControllerScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeViewControllerScoreView.swift; sourceTree = "<group>"; };
+		846D1BA1241D8F2D0036179D /* ReadingOnTimeScoreLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeScoreLabel.swift; sourceTree = "<group>"; };
+		846D1BA5241EC9910036179D /* ArticleThemesControllerDataSetProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleThemesControllerDataSetProtocol.swift; sourceTree = "<group>"; };
 		8471F87E21B30202001AA935 /* NetworkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewController.swift; sourceTree = "<group>"; };
 		84732DA5224003AC005957F2 /* ReadingOnTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeViewController.swift; sourceTree = "<group>"; };
 		84732DA822400B96005957F2 /* ReadingOnTimeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingOnTimeData.swift; sourceTree = "<group>"; };
+		84751DBF2449D700008918F7 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		84751DC3244A58AE008918F7 /* BasicsViewControllerActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerActions.swift; sourceTree = "<group>"; };
+		84751DC5244BBB6E008918F7 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		84751DC7244BBF13008918F7 /* SettingsTableViewControllerRealmProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerRealmProtocol.swift; sourceTree = "<group>"; };
+		84751DC9244DBC71008918F7 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		8476128B21E128B10010AEAE /* GradientExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtensions.swift; sourceTree = "<group>"; };
-		84778270237EEC52007C1FD8 /* Basic Varibles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Basic Varibles.swift"; sourceTree = "<group>"; };
+		84778270237EEC52007C1FD8 /* BasicFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFonts.swift; sourceTree = "<group>"; };
 		847A507E2392E52400223AC7 /* BlankSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankSheetViewController.swift; sourceTree = "<group>"; };
+		847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerWebControllerDelegate.swift; sourceTree = "<group>"; };
+		847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerINActions.swift; sourceTree = "<group>"; };
+		847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManegerViewModel.swift; sourceTree = "<group>"; };
+		847E14EE246C730100C35F9E /* BrowserAnimationManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManeger.swift; sourceTree = "<group>"; };
 		848A92F121DD63E600D1C3C1 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
+		848BAFDC2461B3D400355430 /* iBiology.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = iBiology.mov; path = ../../../iBiology.mov; sourceTree = "<group>"; };
+		848BAFDF24641EE800355430 /* MenuCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionView.swift; sourceTree = "<group>"; };
 		848CC42B2368FB1F0060709C /* ThemesMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesMenuTableViewController.swift; sourceTree = "<group>"; };
 		84914E1F23FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewSaveAllActionsFunctionsProtocol.swift; sourceTree = "<group>"; };
 		84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift; sourceTree = "<group>"; };
 		84914E2323FE9DE80048B154 /* HideButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideButton.swift; sourceTree = "<group>"; };
 		84914E2523FF55C60048B154 /* NewArticleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArticleLabel.swift; sourceTree = "<group>"; };
-		84914E272401758F0048B154 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		84914E272401758F0048B154 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		849369302416928D0087019A /* SwitchTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTextView.swift; sourceTree = "<group>"; };
+		84936932241693660087019A /* ArticlesReviewViewControllerSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesReviewViewControllerSwitch.swift; sourceTree = "<group>"; };
+		849369342416951A0087019A /* ArticlesReviewViewControllerIconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesReviewViewControllerIconImageView.swift; sourceTree = "<group>"; };
+		8496D483243D117F00545DDC /* AppDelegateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateViewModel.swift; sourceTree = "<group>"; };
+		8496D486243D11AF00545DDC /* BasicAppDelegateSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAppDelegateSetupProtocol.swift; sourceTree = "<group>"; };
+		8496D488243D121200545DDC /* BasicDidFinishLaunchingWithOptionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDidFinishLaunchingWithOptionsProtocol.swift; sourceTree = "<group>"; };
 		8497E34523566495003CD4A9 /* SystemColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemColors.swift; sourceTree = "<group>"; };
 		8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI Elements Basic Functions, Classes, Structs and as on.swift"; sourceTree = "<group>"; };
 		8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiConnectionRecognizing.swift; sourceTree = "<group>"; };
@@ -410,10 +602,6 @@
 		849C38AD2353B8AB002E007D /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
 		849C38B12353BB27002E007D /* Notes Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes Protocol.swift"; sourceTree = "<group>"; };
 		849E2DA5240189A900CE9FC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		849E2DA72401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "16393-pin-lotation-color-blue.json"; sourceTree = "<group>"; };
-		849E2DA92401E16B00CE9FC6 /* 16408-jumping-squares.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "16408-jumping-squares.json"; sourceTree = "<group>"; };
-		849E2DAB2401E62B00CE9FC6 /* JHBNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHBNViewController.swift; sourceTree = "<group>"; };
-		849E2DAD2401F0CA00CE9FC6 /* 733-settings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "733-settings.json"; sourceTree = "<group>"; };
 		849E67FB23FC316900569F32 /* BasicMFMailComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicMFMailComposeViewController.swift; sourceTree = "<group>"; };
 		849F5380236977CD0027289F /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		84A15A96236209220069AADE /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -447,6 +635,14 @@
 		84A3AFD823F865F700836400 /* ArticlesMenuContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesMenuContentService.swift; sourceTree = "<group>"; };
 		84A3AFDA23F88AC600836400 /* MenuCellRightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCellRightView.swift; sourceTree = "<group>"; };
 		84A3AFDC23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticelsViewControllerContentJsonSetup.swift; sourceTree = "<group>"; };
+		84A4B368240943B80013CDB1 /* GoogleMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewController.swift; sourceTree = "<group>"; };
+		84A4B36B240A79460013CDB1 /* BasicGoogleMapViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGoogleMapViewProtocol.swift; sourceTree = "<group>"; };
+		84A4B36D240A8C410013CDB1 /* ShowGoogleMapViewButtonBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGoogleMapViewButtonBack.swift; sourceTree = "<group>"; };
+		84A4B36F240A8E7A0013CDB1 /* GoogleMapViewControllerSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapViewControllerSegmentedControl.swift; sourceTree = "<group>"; };
+		84A4B371240A9D460013CDB1 /* TextErrorSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextErrorSetup.swift; sourceTree = "<group>"; };
+		84A4B373240A9D9D0013CDB1 /* TrashFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrashFunction.swift; path = "../New Group/TrashFunction.swift"; sourceTree = "<group>"; };
+		84A4B375240AA32F0013CDB1 /* MapTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTypeButton.swift; sourceTree = "<group>"; };
+		84A4B377240BE3580013CDB1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84A78C5623ECC542002FEADF /* TestErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestErrors.swift; sourceTree = "<group>"; };
 		84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerExtensions.swift; sourceTree = "<group>"; };
 		84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchResultUpdating.swift; sourceTree = "<group>"; };
@@ -461,17 +657,61 @@
 		84A78C7323EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFMailComposeViewControllerDelegate.swift; sourceTree = "<group>"; };
 		84A78C7523EF006C002FEADF /* MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewDelegate.swift; sourceTree = "<group>"; };
 		84A78C7723EF00CA002FEADF /* CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerDelegate.swift; sourceTree = "<group>"; };
+		84A9352224539FB70061EF89 /* UIBarButtonItemTestViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItemTestViewControllerExtension.swift; sourceTree = "<group>"; };
+		84A935252454F1F60061EF89 /* BlankSheetViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankSheetViewControllerViewModel.swift; sourceTree = "<group>"; };
+		84A935282454F2700061EF89 /* MainFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFunctions.swift; sourceTree = "<group>"; };
+		84A9352A2454F2960061EF89 /* GADBannerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GADBannerViewDelegate.swift; sourceTree = "<group>"; };
+		84A9352E245623D80061EF89 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIView.swift; path = "GoodBiology/Notes View Controllers/ForToday/Blank Sheet/Extension/UIView.swift"; sourceTree = SOURCE_ROOT; };
+		84AB84CA246B3832001B1856 /* ArticleContentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleContentData.swift; sourceTree = "<group>"; };
+		84AB84CF246B3833001B1856 /* BiologyBasicsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiologyBasicsData.swift; sourceTree = "<group>"; };
+		84AB84D6246B3844001B1856 /* ArchaeaData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchaeaData.swift; sourceTree = "<group>"; };
+		84AB84D7246B3844001B1856 /* PlantsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlantsData.swift; sourceTree = "<group>"; };
+		84AB84D8246B3844001B1856 /* VirusesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirusesData.swift; sourceTree = "<group>"; };
+		84AB84D9246B3844001B1856 /* ManData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManData.swift; sourceTree = "<group>"; };
+		84AB84DA246B3844001B1856 /* AnimalsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalsData.swift; sourceTree = "<group>"; };
+		84AB84DB246B3844001B1856 /* HumanData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HumanData.swift; sourceTree = "<group>"; };
+		84AB84DC246B3844001B1856 /* FungusesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FungusesData.swift; sourceTree = "<group>"; };
+		84AB84DD246B3844001B1856 /* MicrobesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MicrobesData.swift; sourceTree = "<group>"; };
+		84AB84E7246B3952001B1856 /* BiologyAll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiologyAll.swift; sourceTree = SOURCE_ROOT; };
+		84AB84E9246B3CFD001B1856 /* AppInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInformation.swift; sourceTree = "<group>"; };
+		84AB8511246BE6A8001B1856 /* LastSaveDateLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastSaveDateLabel.swift; sourceTree = "<group>"; };
+		84AB8515246BFA89001B1856 /* ForTodayViewControllerSetupMainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewControllerSetupMainProtocols.swift; sourceTree = "<group>"; };
 		84ADAC3321D2C60F00FDDFC4 /* GoodBiology.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GoodBiology.entitlements; sourceTree = "<group>"; };
 		84ADAC3521D2C65100FDDFC4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		84B1D5FC242A71AF0046C4FB /* AboutAppVCSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppVCSetupProtocol.swift; sourceTree = "<group>"; };
+		84B1D5FE242A72E90046C4FB /* SafariViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewControllerExtensions.swift; sourceTree = "<group>"; };
+		84B1D600242A74150046C4FB /* AboutAppViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppViewControllerExtensions.swift; sourceTree = "<group>"; };
+		84B1D602242A7B550046C4FB /* AppIconViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconViewControllerExtensions.swift; sourceTree = "<group>"; };
+		84B1D604242B8BEB0046C4FB /* QuestionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLabel.swift; sourceTree = "<group>"; };
+		84B1D606242B8C0D0046C4FB /* SettingsTableViewControllerSaveFunctionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerSaveFunctionProtocol.swift; sourceTree = "<group>"; };
+		84B1D60A242C328D0046C4FB /* FastActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastActivityVC.swift; sourceTree = "<group>"; };
+		84B1D60C242D097C0046C4FB /* LoginViewControllerGoogleDelegateSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerGoogleDelegateSetupProtocol.swift; sourceTree = "<group>"; };
+		84B1D60E242D0B050046C4FB /* BasicGoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGoogleSignInButton.swift; sourceTree = "<group>"; };
+		84B1D611242D4DD60046C4FB /* MakingArticleViewControllerContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingArticleViewControllerContent.swift; sourceTree = "<group>"; };
+		84B1D613242D4EF50046C4FB /* MailButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailButton.swift; sourceTree = "<group>"; };
+		84B1D615242D50570046C4FB /* MakingArticleVCContentRulesTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingArticleVCContentRulesTextView.swift; sourceTree = "<group>"; };
+		84B1D619242D748D0046C4FB /* SettingsTableViewControllerSaveFunctionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerSaveFunctionViewModel.swift; sourceTree = "<group>"; };
+		84B1D61C242D77D70046C4FB /* SettingsTableViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerViewModel.swift; sourceTree = "<group>"; };
+		84B1D628242E5F3B0046C4FB /* TestsMenuViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsMenuViewControllerViewModel.swift; sourceTree = "<group>"; };
+		84B1D62A242E70530046C4FB /* PopularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularButton.swift; sourceTree = "<group>"; };
+		84B1D631242EA9090046C4FB /* iBiologySiri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iBiologySiri.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B1D633242EA9090046C4FB /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		84B1D635242EA90A0046C4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B1D63A242EA90A0046C4FB /* iBiologySiriUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = iBiologySiriUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B1D63B242EA90A0046C4FB /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		84B1D63E242EA90A0046C4FB /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		84B1D641242EA90A0046C4FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		84B1D643242EA90A0046C4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B1D650242FF9EF0046C4FB /* SignInIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInIconView.swift; sourceTree = "<group>"; };
+		84B1D653242FFA290046C4FB /* LoginViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerViewModel.swift; sourceTree = "<group>"; };
+		84B1D655242FFEDC0046C4FB /* AuthenticationWithTouchIDProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationWithTouchIDProtocol.swift; sourceTree = "<group>"; };
+		84B1D6582431D5C30046C4FB /* MostPopularArticlesViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticlesViewControllerViewModel.swift; sourceTree = "<group>"; };
 		84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewController.swift; sourceTree = "<group>"; };
 		84B2BD83222A5E9800BA41C9 /* LoginButtonAnimatiol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButtonAnimatiol.swift; sourceTree = "<group>"; };
-		84B2BD85222AE87C00BA41C9 /* MicrobesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrobesData.swift; sourceTree = "<group>"; };
-		84B2BD87222BDCEA00BA41C9 /* VirusesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirusesData.swift; sourceTree = "<group>"; };
 		84B9050123201E810002F0E2 /* BasicTestWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTestWords.swift; sourceTree = "<group>"; };
 		84B90505232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForTodayViewControllerBasicWords.swift; sourceTree = "<group>"; };
 		84BDFDD0236DCAC80088B09E /* VideosMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosMenuTableViewController.swift; sourceTree = "<group>"; };
 		84BDFDD3236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesOnlineVideosViewController.swift; sourceTree = "<group>"; };
-		84C6FC5F2205986300BCE06D /* ArticleContentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleContentData.swift; sourceTree = "<group>"; };
 		84C6FC8222061C5100BCE06D /* Good Biology(Apple Watch).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good Biology(Apple Watch).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C6FC8E22061C5300BCE06D /* Good Biology(Apple Watch) Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Good Biology(Apple Watch) Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C6FCAB220620A200BCE06D /* Good Biology (TV).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good Biology (TV).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -481,19 +721,44 @@
 		84C6FCB8220620A400BCE06D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84C6FCBC2209F8A500BCE06D /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		84C6FCC02209FAF200BCE06D /* BasicsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsContent.swift; sourceTree = "<group>"; };
-		84C7AAE9223C4CDF00A7CF68 /* BiologyShareData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyShareData.swift; sourceTree = "<group>"; };
-		84C7AAEC223C4E9700A7CF68 /* BiologyAll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BiologyAll.swift; path = ../../../../BiologyAll.swift; sourceTree = "<group>"; };
-		84C7AAEE223C4EF500A7CF68 /* BiologyBasicsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyBasicsData.swift; sourceTree = "<group>"; };
 		84CDB5CC2221371D002432F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GoodBiology/Storyboards/Base.lproj/ForToday.storyboard; sourceTree = "<group>"; };
 		84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesReviewViewController.swift; sourceTree = "<group>"; };
+		84EA94F2246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift; sourceTree = "<group>"; };
+		84EA94F4246C845C000EEB8E /* LocalizedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedDate.swift; sourceTree = "<group>"; };
+		84EDAB01240D5ADC0063CF6F /* libAppAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAppAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EDAB02240D5ADC0063CF6F /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EDAB03240D5ADC0063CF6F /* libGTMAppAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGTMAppAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EDAB04240D5ADC0063CF6F /* libGTMSessionFetcher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGTMSessionFetcher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EDAB05240D5ADC0063CF6F /* liblottie-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EDAB06240D5ADC0063CF6F /* libnanopb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnanopb.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84EDAB0E240EFFFE0063CF6F /* SettingsTableViewControllerDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerDelegateExtension.swift; sourceTree = "<group>"; };
+		84EDAB10240F00350063CF6F /* SettingsTableViewControllerGesturesSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerGesturesSetup.swift; sourceTree = "<group>"; };
+		84EDAB14240F006D0063CF6F /* SettingsTableViewControllerLoadSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerLoadSettings.swift; sourceTree = "<group>"; };
+		84EDAB16240F036A0063CF6F /* SettingsTableViewControllerObserversSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerObserversSetupProtocol.swift; sourceTree = "<group>"; };
+		84EDAB18240F038C0063CF6F /* SettingsTableViewControllerMailComposeSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewControllerMailComposeSetupProtocol.swift; sourceTree = "<group>"; };
+		84EDAB1A240F04F10063CF6F /* UsersInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInfoView.swift; sourceTree = "<group>"; };
+		84EDAB1C240F08540063CF6F /* UsersIconImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersIconImageView.swift; sourceTree = "<group>"; };
+		84EDAB1F241019AB0063CF6F /* TitleLabelForNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabelForNavigationBar.swift; sourceTree = "<group>"; };
+		84EDAB21241019C90063CF6F /* SubTitleLabelForNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTitleLabelForNavigationBar.swift; sourceTree = "<group>"; };
+		84EDAB2424101B5C0063CF6F /* BiologyThemesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyThemesTableViewController.swift; sourceTree = "<group>"; };
+		84EDAB26241045DA0063CF6F /* BasicsViewControllerSearchButtonBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewControllerSearchButtonBack.swift; sourceTree = "<group>"; };
+		84EDAB2824104A6D0063CF6F /* BasicsThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsThemesViewController.swift; sourceTree = "<group>"; };
+		84EDAB2B24126B0A0063CF6F /* ArticleViewControllerSetupViewPrtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewControllerSetupViewPrtocol.swift; sourceTree = "<group>"; };
+		84EEBDF3245CB2CA009A105A /* TransformImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformImageView.swift; sourceTree = "<group>"; };
+		84EEBDFA245CD691009A105A /* BasicNotesViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewControllerViewModel.swift; sourceTree = "<group>"; };
+		84EEBDFD245CED01009A105A /* BasicNotesViewControllerTrashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNotesViewControllerTrashButton.swift; sourceTree = "<group>"; };
+		84EF4A4A2466237E009632A1 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		84EF4A4C246623AC009632A1 /* MenuCollectionViewCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCellButton.swift; sourceTree = "<group>"; };
+		84EF4A522467C736009632A1 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
 		84F5741023F0BCCB00400ED4 /* ChromistaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaButton.swift; sourceTree = "<group>"; };
 		84F5741223F0BDEF00400ED4 /* ChromistaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaLabel.swift; sourceTree = "<group>"; };
 		84F5741423F0BE3000400ED4 /* ChromistaActionButtonsBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaActionButtonsBack.swift; sourceTree = "<group>"; };
 		84F5741623F0C0BF00400ED4 /* ArticlesVCButtonBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesVCButtonBack.swift; sourceTree = "<group>"; };
 		84F5741B23F1E7C500400ED4 /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		84FBE76E24204D5100266A42 /* CostomGoogleSignInButtonViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostomGoogleSignInButtonViewProtocol.swift; sourceTree = "<group>"; };
 		866FF06AFF388D236F192D4A /* libPods-GoodBiology.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoodBiology.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2C423321C842F500D1E680 /* BasicsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsCoordinator.swift; sourceTree = "<group>"; };
-		AAEC22D121C679E900FF69FE /* BasicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsViewController.swift; sourceTree = "<group>"; };
+		AAEC22D121C679E900FF69FE /* BiologyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiologyViewController.swift; sourceTree = "<group>"; };
 		AAEC22D521C67A1300FF69FE /* BasicsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsDataManager.swift; sourceTree = "<group>"; };
 		AAEC22D721C67A3200FF69FE /* BasicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsModel.swift; sourceTree = "<group>"; };
 		C40D3D6421B81878009A0211 /* ArchaeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchaeaViewController.swift; sourceTree = "<group>"; };
@@ -516,6 +781,7 @@
 		C458BD7A23AEC09D00D1F108 /* UIStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStepper.swift; sourceTree = "<group>"; };
 		C458BD7C23AEC0C100D1F108 /* UISwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISwitch.swift; sourceTree = "<group>"; };
 		C463227623AD19D10099083F /* ChomistaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChomistaViewController.swift; sourceTree = "<group>"; };
+		C46E939F241C4A1500C015CD /* TestViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewControllerProtocol.swift; sourceTree = "<group>"; };
 		C47CAD6621D0E42F00E27E88 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C496AE6A21C93DA400413CB4 /* NotificationsFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsFunctions.swift; sourceTree = "<group>"; };
 		C498F9A2219F6B5900DCAC9F /* Tests.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Tests.storyboard; sourceTree = "<group>"; };
@@ -565,6 +831,13 @@
 		C4E5E28621975DE4009C3062 /* Good BiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Good BiologyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4EE987B23EC6D1B00FBF1E1 /* TestIconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIconLabel.swift; sourceTree = "<group>"; };
 		C4EE987D23EC6D5200FBF1E1 /* TestIconBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestIconBackView.swift; sourceTree = "<group>"; };
+		C4F49B392416D779002A2B17 /* LoginViewControllerBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerBackView.swift; sourceTree = "<group>"; };
+		C4F49B3C2416D88A002A2B17 /* LoginViewControllerAppleSignInButtonSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerAppleSignInButtonSetupProtocol.swift; sourceTree = "<group>"; };
+		C4F49B3E2416D8BA002A2B17 /* GIDSignInDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIDSignInDelegate.swift; sourceTree = "<group>"; };
+		C4F49B402416D8F3002A2B17 /* ASAuthorizationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerDelegate.swift; sourceTree = "<group>"; };
+		C4F49B422416D91B002A2B17 /* ASAuthorizationControllerPresentationContextProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ASAuthorizationControllerPresentationContextProviding.swift; sourceTree = "<group>"; };
+		C4F49B442416D953002A2B17 /* LoginViewControllerSystemSignInButtonsSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerSystemSignInButtonsSetupProtocol.swift; sourceTree = "<group>"; };
+		C4F49B462416DE49002A2B17 /* BasicRootVCGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRootVCGradient.swift; sourceTree = "<group>"; };
 		C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -573,6 +846,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B1D62E242EA9090046C4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B1D637242EA90A0046C4FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B1D63C242EA90A0046C4FB /* IntentsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,7 +883,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				84ADAC3621D2C65100FDDFC4 /* MapKit.framework in Frameworks */,
+				84EDAB0D240D5ADC0063CF6F /* libPods-GoodBiology.a in Frameworks */,
+				84EDAB0B240D5ADC0063CF6F /* liblottie-ios.a in Frameworks */,
+				84EDAB07240D5ADC0063CF6F /* libAppAuth.a in Frameworks */,
+				84EDAB09240D5ADC0063CF6F /* libGTMAppAuth.a in Frameworks */,
+				84EDAB0A240D5ADC0063CF6F /* libGTMSessionFetcher.a in Frameworks */,
 				61F44F3134C037BD82740881 /* libPods-GoodBiology.a in Frameworks */,
+				84EDAB08240D5ADC0063CF6F /* libGoogleUtilities.a in Frameworks */,
+				84EDAB0C240D5ADC0063CF6F /* libnanopb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,12 +959,12 @@
 			path = "Networking Protocol";
 			sourceTree = "<group>";
 		};
-		841198FF233F577F004B0DAF /* Protocol */ = {
+		841198FF233F577F004B0DAF /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				84119900233F57AC004B0DAF /* ReviewControllerProtocol.swift */,
+				84119900233F57AC004B0DAF /* Protocols.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		841199022344AC24004B0DAF /* Protocols */ = {
@@ -679,6 +974,14 @@
 				841199032344AC40004B0DAF /* MenuProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		84274D2E2412747D008E82BC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				84274D2F2412748A008E82BC /* ChomistaViewControllerViewSetupProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		842D690423C29551009CF7E7 /* UI */ = {
@@ -696,6 +999,9 @@
 				842D690823C29A99009CF7E7 /* DoneLabel.swift */,
 				842D690A23C29AD1009CF7E7 /* SettingsTextField.swift */,
 				84914E2323FE9DE80048B154 /* HideButton.swift */,
+				84EDAB1A240F04F10063CF6F /* UsersInfoView.swift */,
+				84EDAB1C240F08540063CF6F /* UsersIconImageView.swift */,
+				84B1D604242B8BEB0046C4FB /* QuestionLabel.swift */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -704,6 +1010,11 @@
 			isa = PBXGroup;
 			children = (
 				845EE56323FA044A0036479B /* NetworkingButton.swift */,
+				8450EACD2444998C00091F37 /* ExplanatoryTextView.swift */,
+				8450EACF244499AD00091F37 /* ExplanatoryView.swift */,
+				8465FD02244F9A6800E823A6 /* NetworkingViewControllerMainToolBar.swift */,
+				8465FD04244F9B9D00E823A6 /* WebViewBaxckground.swift */,
+				84EEBDF3245CB2CA009A105A /* TransformImageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -721,10 +1032,11 @@
 			children = (
 				842D691523C42A15009CF7E7 /* ArticlesMenuLabel.swift */,
 				842D691723C42B9E009CF7E7 /* NewLabel.swift */,
-				842D691A23C545FA009CF7E7 /* ArticleView.swift */,
+				842D691A23C545FA009CF7E7 /* ArticlePreviewView.swift */,
 				84F5741623F0C0BF00400ED4 /* ArticlesVCButtonBack.swift */,
 				84A3AFDA23F88AC600836400 /* MenuCellRightView.swift */,
 				84914E2523FF55C60048B154 /* NewArticleLabel.swift */,
+				84B1D62A242E70530046C4FB /* PopularButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -734,6 +1046,7 @@
 			children = (
 				842D692123C6CD9C009CF7E7 /* BiologyBackView.swift */,
 				842D692323C6CDD5009CF7E7 /* BiologyNotificationButton.swift */,
+				84EDAB26241045DA0063CF6F /* BasicsViewControllerSearchButtonBack.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -746,9 +1059,89 @@
 			path = Shadows;
 			sourceTree = "<group>";
 		};
+		843DB9742447A470005D2625 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				843DB9752447A482005D2625 /* ArticleVCViewModel.swift */,
+				843DB97724487059005D2625 /* TestReviewVCViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		843DB9792448CD77005D2625 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				843DB982244904A2005D2625 /* ViewModel */,
+				843DB97F2448CDFF005D2625 /* UI */,
+				843DB97C2448CDDE005D2625 /* Content */,
+				843DB97A2448CD8F005D2625 /* PopularInfoVC.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		843DB97C2448CDDE005D2625 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				843DB97D2448CDF0005D2625 /* PopularInfoContent.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		843DB97F2448CDFF005D2625 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				843DB9802448CF7E005D2625 /* PopularInfoTextView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		843DB982244904A2005D2625 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				843DB983244904AD005D2625 /* PupularInfoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		843F812C24407FD300A81C09 /* ArticlesViewCountModel */ = {
+			isa = PBXGroup;
+			children = (
+				843F813A2440E25A00A81C09 /* Extensions */,
+				843F812D24407FDE00A81C09 /* ArticlesViewCountModel.swift */,
+			);
+			path = ArticlesViewCountModel;
+			sourceTree = "<group>";
+		};
+		843F81302440980600A81C09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				843F81312440981600A81C09 /* PlantsViewControllerAdMobBannerSetupProtocol.swift */,
+				843F81342440985B00A81C09 /* UserActivityType.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		843F81362440DCE500A81C09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				843F81382440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		843F813A2440E25A00A81C09 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				843F813B2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8445F0A923678FA8007413B7 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				84A9352D245623BE0061EF89 /* Extensions */,
+				84B1D627242E5F280046C4FB /* ViewModel */,
 				C4EE987A23EC6CF400FBF1E1 /* UI */,
 				C4C7253721C42EA800F64612 /* TestsMenuViewController.swift */,
 			);
@@ -758,6 +1151,7 @@
 		8445F0AA23678FB0007413B7 /* Test Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C46E939E241C4A0500C015CD /* Extensions */,
 				84A78C5523ECC525002FEADF /* Test Errors */,
 				8446583223BFF42900DC316E /* Data */,
 				840FB81023BA20B60081DE59 /* UI */,
@@ -771,6 +1165,7 @@
 			children = (
 				8446581F23BC0A5200DC316E /* Button.swift */,
 				C4D9615F23CE545500C0ED57 /* SomeMoreView.swift */,
+				84B1D60A242C328D0046C4FB /* FastActivityVC.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -811,6 +1206,7 @@
 		844E0D1F2235766000933ABC /* Making Article */ = {
 			isa = PBXGroup;
 			children = (
+				84B1D610242D4DC60046C4FB /* Content */,
 				849E67FA23FC306400569F32 /* UI */,
 				844E0D1D2235765200933ABC /* MakingArticleViewController.swift */,
 			);
@@ -830,34 +1226,67 @@
 		844E0D25223AAE2900933ABC /* Videoes */ = {
 			isa = PBXGroup;
 			children = (
-				844E0D202239A0C700933ABC /* iBiology.mov */,
+				848BAFDC2461B3D400355430 /* iBiology.mov */,
 			);
 			name = Videoes;
 			path = "New Group2";
+			sourceTree = "<group>";
+		};
+		8450EAD32446710A00091F37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8450EAD42446711C00091F37 /* ForTodayViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8450EADD24479DD500091F37 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8450EADE24479DED00091F37 /* ReviewControllerViewSetupProtocol.swift */,
+				8450EAE024479E8000091F37 /* ReviewControllerProtcol.swift */,
+				8450EAE224479E9700091F37 /* MFMessageComposeViewControllerDelegate.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8454DD9C221326820033A3A2 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
 				848CC42A2368FAE90060709C /* Menu */,
-				848CC4292368FAC20060709C /* Themes Control */,
+				848CC4292368FAC20060709C /* Themes Controller */,
 			);
 			path = Themes;
 			sourceTree = "<group>";
 		};
-		8454DDA32214CA1A0033A3A2 /* Data Files */ = {
+		845BF529243A7357001DC4DE /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				8454DDA42214CA300033A3A2 /* PlantsData.swift */,
-				8454DDA8221750610033A3A2 /* AnimalsData.swift */,
-				84B2BD85222AE87C00BA41C9 /* MicrobesData.swift */,
-				84B2BD87222BDCEA00BA41C9 /* VirusesData.swift */,
-				84408E48222C4C5000F11996 /* FungusesData.swift */,
-				84408E4A222C529D00F11996 /* ArchaeaData.swift */,
-				84408E4C222C5F7100F11996 /* ManData.swift */,
-				8461367C22C65F8D0019C7FB /* HumanData.swift */,
+				845BF52A243A737B001DC4DE /* MainTabBarController.swift */,
 			);
-			path = "Data Files";
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		845C4AD72427C93400105D92 /* Popular Charte */ = {
+			isa = PBXGroup;
+			children = (
+				843DB9792448CD77005D2625 /* Info */,
+				84B1D6572431D5A10046C4FB /* ViewModel */,
+				845C4ADA242822F800105D92 /* UI */,
+				84036C2C2423E56F00188795 /* MostPopularArticles.swift */,
+			);
+			path = "Popular Charte";
+			sourceTree = "<group>";
+		};
+		845C4ADA242822F800105D92 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84680BFA24372C710048A30B /* MacawPopularView */,
+				845C4ADB2428230500105D92 /* MostPopularArticlesViewControllerInfoContentBack.swift */,
+				845C4ADD2428258400105D92 /* MostPopularArticlesViewControllerInfoContentTextView.swift */,
+				84680C002437A07A0048A30B /* MostPopularArticlesViewControllerLabel.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		845EE55723FA02BA0036479B /* Extensions */ = {
@@ -868,6 +1297,8 @@
 				845EE55C23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift */,
 				845EE55E23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift */,
 				845EE56023FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift */,
+				847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */,
+				847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -879,6 +1310,52 @@
 				849F5387236A40D40027289F /* String URLs */,
 			);
 			path = "Article Online Videos and Images";
+			sourceTree = "<group>";
+		};
+		84680BFA24372C710048A30B /* MacawPopularView */ = {
+			isa = PBXGroup;
+			children = (
+				84680BFB24372C9D0048A30B /* MacawPopularViewProperties.swift */,
+				84680BF82434B4360048A30B /* MacawPopularView.swift */,
+				84680BFD24372CE50048A30B /* MacawPopularViewViewModel.swift */,
+			);
+			path = MacawPopularView;
+			sourceTree = "<group>";
+		};
+		84680C022438F42E0048A30B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84680C032438F44F0048A30B /* NetworkingViewControllerViewModel.swift */,
+				847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84680C05243901270048A30B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84680C06243901340048A30B /* ArticelsViewControllerViewModel.swift */,
+				84A3AFDC23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		846D1BA3241E41B50036179D /* Main Functions */ = {
+			isa = PBXGroup;
+			children = (
+				84A4B371240A9D460013CDB1 /* TextErrorSetup.swift */,
+				84A4B373240A9D9D0013CDB1 /* TrashFunction.swift */,
+				8450EAD1244670D800091F37 /* ForTodayViewControllerSaveFunctionSetupProtocol.swift */,
+			);
+			path = "Main Functions";
+			sourceTree = "<group>";
+		};
+		846D1BA4241EC9840036179D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				846D1BA5241EC9910036179D /* ArticleThemesControllerDataSetProtocol.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8471F87D21B301E8001AA935 /* Networking */ = {
@@ -913,6 +1390,7 @@
 		847A50782390720400223AC7 /* Settings Controller */ = {
 			isa = PBXGroup;
 			children = (
+				84B1D61B242D77B60046C4FB /* ViewModel */,
 				84A78C5D23ED6604002FEADF /* Protocols */,
 				84A78C5823ED6530002FEADF /* Extension */,
 				842D690723C29A83009CF7E7 /* UI */,
@@ -924,14 +1402,26 @@
 		847A507D2392E4FF00223AC7 /* Blank Sheet */ = {
 			isa = PBXGroup;
 			children = (
+				84A935272454F25C0061EF89 /* Extension */,
+				84A935242454F1E30061EF89 /* ViewModel */,
 				847A507E2392E52400223AC7 /* BlankSheetViewController.swift */,
 			);
 			path = "Blank Sheet";
 			sourceTree = "<group>";
 		};
+		847E14ED246C72F700C35F9E /* BrowserAnimationManeger */ = {
+			isa = PBXGroup;
+			children = (
+				847E14EE246C730100C35F9E /* BrowserAnimationManeger.swift */,
+			);
+			path = BrowserAnimationManeger;
+			sourceTree = "<group>";
+		};
 		848A92F321DD63F400D1C3C1 /* All About App For User */ = {
 			isa = PBXGroup;
 			children = (
+				84B1D5FB242A71870046C4FB /* Protocol */,
+				84B1D5FA242A717C0046C4FB /* Extension */,
 				848A92F121DD63E600D1C3C1 /* SafariViewController.swift */,
 				8454DD9522101F030033A3A2 /* AboutAppViewController.swift */,
 				844E0D04223243C800933ABC /* AppIconViewController.swift */,
@@ -939,12 +1429,23 @@
 			path = "All About App For User";
 			sourceTree = "<group>";
 		};
-		848CC4292368FAC20060709C /* Themes Control */ = {
+		848BAFDE24641EA000355430 /* ArticlesMenuCollection */ = {
 			isa = PBXGroup;
 			children = (
+				84EF4A512467C729009632A1 /* Model */,
+				84EF4A492466236C009632A1 /* UI */,
+				848BAFDF24641EE800355430 /* MenuCollectionView.swift */,
+			);
+			path = ArticlesMenuCollection;
+			sourceTree = "<group>";
+		};
+		848CC4292368FAC20060709C /* Themes Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846D1BA4241EC9840036179D /* Extensions */,
 				8454DD9D221326E50033A3A2 /* ThemesController.swift */,
 			);
-			path = "Themes Control";
+			path = "Themes Controller";
 			sourceTree = "<group>";
 		};
 		848CC42A2368FAE90060709C /* Menu */ = {
@@ -953,6 +1454,33 @@
 				848CC42B2368FB1F0060709C /* ThemesMenuTableViewController.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		8493692F2416927F0087019A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				849369302416928D0087019A /* SwitchTextView.swift */,
+				84936932241693660087019A /* ArticlesReviewViewControllerSwitch.swift */,
+				849369342416951A0087019A /* ArticlesReviewViewControllerIconImageView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8496D482243D115F00545DDC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8496D483243D117F00545DDC /* AppDelegateViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8496D485243D119800545DDC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8496D486243D11AF00545DDC /* BasicAppDelegateSetupProtocol.swift */,
+				8496D488243D121200545DDC /* BasicDidFinishLaunchingWithOptionsProtocol.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8497E34423566471003CD4A9 /* System Colors */ = {
@@ -966,6 +1494,8 @@
 		8497E3472358E3A2003CD4A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84680C022438F42E0048A30B /* ViewModel */,
+				847E14ED246C72F700C35F9E /* BrowserAnimationManeger */,
 				845EE55723FA02BA0036479B /* Extensions */,
 				8471F87E21B30202001AA935 /* NetworkingViewController.swift */,
 				844E0D0622351BD400933ABC /* MapViewController.swift */,
@@ -982,28 +1512,12 @@
 			path = "App Basics";
 			sourceTree = "<group>";
 		};
-		8497E34B2358E494003CD4A9 /* About App Information */ = {
-			isa = PBXGroup;
-			children = (
-				84C6FC5F2205986300BCE06D /* ArticleContentData.swift */,
-				8454DDA62216F8AF0033A3A2 /* AppInformation.swift */,
-			);
-			path = "About App Information";
-			sourceTree = "<group>";
-		};
-		8497E34C2358E4C4003CD4A9 /* Share Data */ = {
-			isa = PBXGroup;
-			children = (
-				84C7AAE9223C4CDF00A7CF68 /* BiologyShareData.swift */,
-			);
-			path = "Share Data";
-			sourceTree = "<group>";
-		};
 		8497E34D2358E4D7003CD4A9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8461F8C521EB651800586139 /* TestsReviewViewController.swift */,
-				84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */,
+				84A4B334240715490013CDB1 /* Articles Review */,
+				84A4B3332407153E0013CDB1 /* Tests Review */,
+				841198FF233F577F004B0DAF /* Protocols */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1011,6 +1525,7 @@
 		8497E34E2358E4F7003CD4A9 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				845C4AD72427C93400105D92 /* Popular Charte */,
 				C458BD5C23AE4A8800D1F108 /* Json Data */,
 				8497E3512358E536003CD4A9 /* Articles VC */,
 				8497E34F2358E507003CD4A9 /* Menu Articles VC */,
@@ -1021,6 +1536,7 @@
 		8497E34F2358E507003CD4A9 /* Menu Articles VC */ = {
 			isa = PBXGroup;
 			children = (
+				84680C05243901270048A30B /* ViewModel */,
 				84A3AFD523F8314C00836400 /* ArticlesMenuContentService */,
 				84A3AFCB23F82F6000836400 /* Extensions */,
 				842D691423C429F5009CF7E7 /* UI */,
@@ -1032,6 +1548,8 @@
 		8497E3512358E536003CD4A9 /* Articles VC */ = {
 			isa = PBXGroup;
 			children = (
+				843F812C24407FD300A81C09 /* ArticlesViewCountModel */,
+				84EDAB2A24126AE20063CF6F /* Protocol */,
 				8446581E23BC0A4100DC316E /* UI */,
 				C458BD7F23AEC1C300D1F108 /* Old */,
 				C458BD7E23AEC1B800D1F108 /* New */,
@@ -1084,6 +1602,7 @@
 		849C38A92353B58B002E007D /* ForToday */ = {
 			isa = PBXGroup;
 			children = (
+				84A4B3672409412B0013CDB1 /* Google Map */,
 				84A3AFB923F6149700836400 /* Data */,
 				84A3AFB223F613E400836400 /* DrawView */,
 				84A78C6C23EE07D4002FEADF /* Extensions */,
@@ -1098,6 +1617,9 @@
 		849C38AA2353B5A2002E007D /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				84B1D652242FFA130046C4FB /* ViewModel */,
+				84A4B377240BE3580013CDB1 /* GoogleService-Info.plist */,
+				C4F49B3B2416D873002A2B17 /* Extension */,
 				C4D9616123D2497800C0ED57 /* UI */,
 				84685FC92219827000F79BF5 /* LoginViewController.swift */,
 				8468332523A4E5A6004CBFC8 /* User.swift */,
@@ -1108,6 +1630,8 @@
 		849C38AB2353B5AB002E007D /* Basic Notes */ = {
 			isa = PBXGroup;
 			children = (
+				84EEBDFC245CECF2009A105A /* UI */,
+				84EEBDF9245CD67B009A105A /* ViewModel */,
 				84B2BD812229C62200BA41C9 /* BasicNotesViewController.swift */,
 				84A3AFAF23F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift */,
 				84A3AFAC23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift */,
@@ -1115,12 +1639,12 @@
 			path = "Basic Notes";
 			sourceTree = "<group>";
 		};
-		849C38AC2353B893002E007D /* MapProtocol */ = {
+		849C38AC2353B893002E007D /* Map Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				849C38AD2353B8AB002E007D /* MapDelegate.swift */,
 			);
-			path = MapProtocol;
+			path = "Map Protocols";
 			sourceTree = "<group>";
 		};
 		849C38AF2353BB09002E007D /* Notes Delegate */ = {
@@ -1135,6 +1659,8 @@
 			isa = PBXGroup;
 			children = (
 				849E67FB23FC316900569F32 /* BasicMFMailComposeViewController.swift */,
+				84B1D613242D4EF50046C4FB /* MailButton.swift */,
+				84B1D615242D50570046C4FB /* MakingArticleVCContentRulesTextView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1177,6 +1703,9 @@
 			isa = PBXGroup;
 			children = (
 				84A3AF8A23F2155900836400 /* ControlButton.swift */,
+				84274D362412D397008E82BC /* ReadingOnTimeViewControllerButtonsBackView.swift */,
+				846D1B9F241D867B0036179D /* ReadingOnTimeViewControllerScoreView.swift */,
+				846D1BA1241D8F2D0036179D /* ReadingOnTimeScoreLabel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1203,12 +1732,14 @@
 		84A3AFBC23F6ADBD00836400 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				84A3AFC123F6B0BB00836400 /* ArticlesViewControllerDelegate.swift */,
 				84A3AFBD23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift */,
 				84A3AFBF23F6B09200836400 /* BasicsViewControllerInfoSwitchActionProtocol.swift */,
-				84A3AFC123F6B0BB00836400 /* ArticlesViewControllerDelegate.swift */,
 				84A3AFC323F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift */,
 				84A3AFC523F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift */,
 				84A3AFC723F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift */,
+				84751DC3244A58AE008918F7 /* BasicsViewControllerActions.swift */,
+				84EA94F2246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1220,7 +1751,6 @@
 				84A3AFCE23F82FA300836400 /* MenuViewControllerDelegate.swift */,
 				84A3AFD123F82FD400836400 /* UISearchResultsUpdating.swift */,
 				84A3AFD323F830DF00836400 /* ArticelsViewControllerViewSetupProtocol.swift */,
-				84A3AFDC23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1231,6 +1761,42 @@
 				84A3AFD823F865F700836400 /* ArticlesMenuContentService.swift */,
 			);
 			path = ArticlesMenuContentService;
+			sourceTree = "<group>";
+		};
+		84A4B3332407153E0013CDB1 /* Tests Review */ = {
+			isa = PBXGroup;
+			children = (
+				8461F8C521EB651800586139 /* TestsReviewViewController.swift */,
+			);
+			path = "Tests Review";
+			sourceTree = "<group>";
+		};
+		84A4B334240715490013CDB1 /* Articles Review */ = {
+			isa = PBXGroup;
+			children = (
+				8450EADD24479DD500091F37 /* Extensions */,
+				8493692F2416927F0087019A /* UI */,
+				84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */,
+			);
+			path = "Articles Review";
+			sourceTree = "<group>";
+		};
+		84A4B3672409412B0013CDB1 /* Google Map */ = {
+			isa = PBXGroup;
+			children = (
+				84A4B36A240A79360013CDB1 /* UI */,
+				84A4B368240943B80013CDB1 /* GoogleMapViewController.swift */,
+			);
+			path = "Google Map";
+			sourceTree = "<group>";
+		};
+		84A4B36A240A79360013CDB1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84A4B36B240A79460013CDB1 /* BasicGoogleMapViewProtocol.swift */,
+				84A4B36F240A8E7A0013CDB1 /* GoogleMapViewControllerSegmentedControl.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		84A78C5523ECC525002FEADF /* Test Errors */ = {
@@ -1244,10 +1810,18 @@
 		84A78C5823ED6530002FEADF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				84B1D617242D746A0046C4FB /* Save Function */,
 				84A78C5923ED6555002FEADF /* SettingsTableViewControllerExtensions.swift */,
 				84A78C5B23ED65B4002FEADF /* UISearchResultUpdating.swift */,
 				845EE56923FB24AA0036479B /* UIImagePickerControllerDelegate.swift */,
-				84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */,
+				84EDAB0E240EFFFE0063CF6F /* SettingsTableViewControllerDelegateExtension.swift */,
+				84EDAB10240F00350063CF6F /* SettingsTableViewControllerGesturesSetup.swift */,
+				84EDAB14240F006D0063CF6F /* SettingsTableViewControllerLoadSettings.swift */,
+				84EDAB16240F036A0063CF6F /* SettingsTableViewControllerObserversSetupProtocol.swift */,
+				84EDAB18240F038C0063CF6F /* SettingsTableViewControllerMailComposeSetupProtocol.swift */,
+				84B1D606242B8C0D0046C4FB /* SettingsTableViewControllerSaveFunctionProtocol.swift */,
+				84751DC7244BBF13008918F7 /* SettingsTableViewControllerRealmProtocol.swift */,
+				8450EAE92447A0EC00091F37 /* Actions.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -1264,11 +1838,11 @@
 		84A78C6223ED67E8002FEADF /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				84EDAB1E2410199C0063CF6F /* NavigationTitleView */,
 				C458BD6B23AEBF2000D1F108 /* Extensions.swift */,
 				84A78C6823ED6893002FEADF /* ContentBack.swift */,
 				84A78C6323ED682A002FEADF /* StepperView.swift */,
 				84A78C6623ED686C002FEADF /* TestStepperView.swift */,
-				84A78C6A23ED68B4002FEADF /* NavigationTitleView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1276,9 +1850,9 @@
 		84A78C6C23EE07D4002FEADF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				849E2DAD2401F0CA00CE9FC6 /* 733-settings.json */,
-				849E2DA92401E16B00CE9FC6 /* 16408-jumping-squares.json */,
-				849E2DA72401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json */,
+				8450EAD32446710A00091F37 /* ViewModel */,
+				84AB8515246BFA89001B1856 /* ForTodayViewControllerSetupMainProtocols.swift */,
+				846D1BA3241E41B50036179D /* Main Functions */,
 				84A3AF9323F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift */,
 				84A3AF9023F2E85D00836400 /* ForTodayViewControllerMapSetupProtocol.swift */,
 				84A78C6D23EE085F002FEADF /* UIPickerViewDelegate.swift */,
@@ -1297,14 +1871,195 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		84A935242454F1E30061EF89 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84A935252454F1F60061EF89 /* BlankSheetViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84A935272454F25C0061EF89 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84A935282454F2700061EF89 /* MainFunctions.swift */,
+				84A9352A2454F2960061EF89 /* GADBannerViewDelegate.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		84A9352D245623BE0061EF89 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84A9352E245623D80061EF89 /* UIView.swift */,
+			);
+			name = Extensions;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		84AB84C7246B3832001B1856 /* BiologyData */ = {
+			isa = PBXGroup;
+			children = (
+				84AB84C8246B3832001B1856 /* About App Information */,
+				84AB84CD246B3833001B1856 /* Biology Data For Code */,
+			);
+			name = BiologyData;
+			path = "GoodBiology/New Group3/Data/Data Files/Data/BiologyData";
+			sourceTree = SOURCE_ROOT;
+		};
+		84AB84C8246B3832001B1856 /* About App Information */ = {
+			isa = PBXGroup;
+			children = (
+				84AB84E9246B3CFD001B1856 /* AppInformation.swift */,
+				84AB84CA246B3832001B1856 /* ArticleContentData.swift */,
+			);
+			path = "About App Information";
+			sourceTree = "<group>";
+		};
+		84AB84CD246B3833001B1856 /* Biology Data For Code */ = {
+			isa = PBXGroup;
+			children = (
+				84AB84E7246B3952001B1856 /* BiologyAll.swift */,
+				84AB84CF246B3833001B1856 /* BiologyBasicsData.swift */,
+			);
+			path = "Biology Data For Code";
+			sourceTree = "<group>";
+		};
+		84AB84D5246B3844001B1856 /* Data Files */ = {
+			isa = PBXGroup;
+			children = (
+				84AB84D6246B3844001B1856 /* ArchaeaData.swift */,
+				84AB84D7246B3844001B1856 /* PlantsData.swift */,
+				84AB84D8246B3844001B1856 /* VirusesData.swift */,
+				84AB84D9246B3844001B1856 /* ManData.swift */,
+				84AB84DA246B3844001B1856 /* AnimalsData.swift */,
+				84AB84DB246B3844001B1856 /* HumanData.swift */,
+				84AB84DC246B3844001B1856 /* FungusesData.swift */,
+				84AB84DD246B3844001B1856 /* MicrobesData.swift */,
+			);
+			name = "Data Files";
+			path = "GoodBiology/New Group3/Data/Data Files";
+			sourceTree = SOURCE_ROOT;
+		};
+		84AB84E6246B386C001B1856 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				84AB84D5246B3844001B1856 /* Data Files */,
+				84AB84C7246B3832001B1856 /* BiologyData */,
+			);
+			name = Data;
+			path = "New Group3/Data/Data Files/Data";
+			sourceTree = "<group>";
+		};
 		84ADAC3421D2C65100FDDFC4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84EDAB01240D5ADC0063CF6F /* libAppAuth.a */,
+				84EDAB02240D5ADC0063CF6F /* libGoogleUtilities.a */,
+				84EDAB03240D5ADC0063CF6F /* libGTMAppAuth.a */,
+				84EDAB04240D5ADC0063CF6F /* libGTMSessionFetcher.a */,
+				84EDAB05240D5ADC0063CF6F /* liblottie-ios.a */,
+				84EDAB06240D5ADC0063CF6F /* libnanopb.a */,
 				84ADAC3521D2C65100FDDFC4 /* MapKit.framework */,
 				844E0D0D2235625200933ABC /* NotificationCenter.framework */,
 				866FF06AFF388D236F192D4A /* libPods-GoodBiology.a */,
+				84B1D63B242EA90A0046C4FB /* IntentsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84B1D5FA242A717C0046C4FB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D5FE242A72E90046C4FB /* SafariViewControllerExtensions.swift */,
+				84B1D600242A74150046C4FB /* AboutAppViewControllerExtensions.swift */,
+				84B1D602242A7B550046C4FB /* AppIconViewControllerExtensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		84B1D5FB242A71870046C4FB /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D5FC242A71AF0046C4FB /* AboutAppVCSetupProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		84B1D610242D4DC60046C4FB /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D611242D4DD60046C4FB /* MakingArticleViewControllerContent.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		84B1D617242D746A0046C4FB /* Save Function */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D618242D74780046C4FB /* ViewModel */,
+				84914E2123FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift */,
+			);
+			name = "Save Function";
+			sourceTree = "<group>";
+		};
+		84B1D618242D74780046C4FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D619242D748D0046C4FB /* SettingsTableViewControllerSaveFunctionViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		84B1D61B242D77B60046C4FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D61C242D77D70046C4FB /* SettingsTableViewControllerViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		84B1D627242E5F280046C4FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D628242E5F3B0046C4FB /* TestsMenuViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84B1D632242EA9090046C4FB /* iBiologySiri */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D633242EA9090046C4FB /* IntentHandler.swift */,
+				84B1D635242EA90A0046C4FB /* Info.plist */,
+			);
+			path = iBiologySiri;
+			sourceTree = "<group>";
+		};
+		84B1D63D242EA90A0046C4FB /* iBiologySiriUI */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D63E242EA90A0046C4FB /* IntentViewController.swift */,
+				84B1D640242EA90A0046C4FB /* MainInterface.storyboard */,
+				84B1D643242EA90A0046C4FB /* Info.plist */,
+			);
+			path = iBiologySiriUI;
+			sourceTree = "<group>";
+		};
+		84B1D652242FFA130046C4FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D653242FFA290046C4FB /* LoginViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84B1D6572431D5A10046C4FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84B1D6582431D5C30046C4FB /* MostPopularArticlesViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		84BDFDCF236DC9970088B09E /* Videos Menu */ = {
@@ -1321,15 +2076,6 @@
 				8476128B21E128B10010AEAE /* GradientExtensions.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		84C6FC612205986D00BCE06D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				84C7AAE6223C4CA200A7CF68 /* BiologyData */,
-				8454DDA32214CA1A0033A3A2 /* Data Files */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		84C6FCAC220620A200BCE06D /* Good Biology (TV) */ = {
@@ -1361,28 +2107,12 @@
 			path = ArticlesViewController;
 			sourceTree = "<group>";
 		};
-		84C7AAE6223C4CA200A7CF68 /* BiologyData */ = {
-			isa = PBXGroup;
-			children = (
-				8497E34C2358E4C4003CD4A9 /* Share Data */,
-				8497E34B2358E494003CD4A9 /* About App Information */,
-				84C7AAEB223C4E4B00A7CF68 /* Biology Data For Code */,
-			);
-			path = BiologyData;
-			sourceTree = "<group>";
-		};
-		84C7AAEB223C4E4B00A7CF68 /* Biology Data For Code */ = {
-			isa = PBXGroup;
-			children = (
-				84C7AAEC223C4E9700A7CF68 /* BiologyAll.swift */,
-				84C7AAEE223C4EF500A7CF68 /* BiologyBasicsData.swift */,
-			);
-			path = "Biology Data For Code";
-			sourceTree = "<group>";
-		};
 		84CDB5CA2220B0AA002432F7 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				84751DC9244DBC71008918F7 /* GoogleService-Info-2.plist */,
+				8496D485243D119800545DDC /* Extensions */,
+				8496D482243D115F00545DDC /* ViewModel */,
 				849E2DA5240189A900CE9FC6 /* GoogleService-Info.plist */,
 				C4E5E23421975BE4009C3062 /* AppDelegate.swift */,
 				84ADAC3321D2C60F00FDDFC4 /* GoodBiology.entitlements */,
@@ -1394,11 +2124,71 @@
 		84D968D621D919FA0079596C /* Review Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				843DB9742447A470005D2625 /* ViewModels */,
 				842D691123C4298C009CF7E7 /* UI */,
 				8497E34D2358E4D7003CD4A9 /* Controllers */,
-				841198FF233F577F004B0DAF /* Protocol */,
 			);
 			path = "Review Controllers";
+			sourceTree = "<group>";
+		};
+		84EDAB1E2410199C0063CF6F /* NavigationTitleView */ = {
+			isa = PBXGroup;
+			children = (
+				84A78C6A23ED68B4002FEADF /* NavigationTitleView.swift */,
+				84EDAB1F241019AB0063CF6F /* TitleLabelForNavigationBar.swift */,
+				84EDAB21241019C90063CF6F /* SubTitleLabelForNavigationBar.swift */,
+			);
+			path = NavigationTitleView;
+			sourceTree = "<group>";
+		};
+		84EDAB2324101B340063CF6F /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				84EDAB2424101B5C0063CF6F /* BiologyThemesTableViewController.swift */,
+				84EDAB2824104A6D0063CF6F /* BasicsThemesViewController.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
+		84EDAB2A24126AE20063CF6F /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				84EDAB2B24126B0A0063CF6F /* ArticleViewControllerSetupViewPrtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		84EEBDF9245CD67B009A105A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				84EEBDFA245CD691009A105A /* BasicNotesViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84EEBDFC245CECF2009A105A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84EEBDFD245CED01009A105A /* BasicNotesViewControllerTrashButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		84EF4A492466236C009632A1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84EF4A4A2466237E009632A1 /* MenuCollectionViewCell.swift */,
+				84EF4A4C246623AC009632A1 /* MenuCollectionViewCellButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		84EF4A512467C729009632A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84EF4A522467C736009632A1 /* Articles.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		84F5740F23F0BCB200400ED4 /* UI */ = {
@@ -1431,9 +2221,11 @@
 		AAEC22D421C679F900FF69FE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84EDAB2324101B340063CF6F /* Themes */,
 				84A3AFBC23F6ADBD00836400 /* Extension */,
 				842D692023C6CD88009CF7E7 /* UI */,
-				AAEC22D121C679E900FF69FE /* BasicsViewController.swift */,
+				AAEC22D121C679E900FF69FE /* BiologyViewController.swift */,
+				84751DBF2449D700008918F7 /* MoreViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1444,6 +2236,9 @@
 				845EE56523FABB0F0036479B /* CardViewController.xib */,
 				845EE56723FABB6C0036479B /* CardViewController.swift */,
 				C447BD3023D8C94C0026F176 /* FastAlert.swift */,
+				84A4B36D240A8C410013CDB1 /* ShowGoogleMapViewButtonBack.swift */,
+				84A4B375240AA32F0013CDB1 /* MapTypeButton.swift */,
+				84AB8511246BE6A8001B1856 /* LastSaveDateLabel.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1468,6 +2263,8 @@
 		C458BD5F23AE55A700D1F108 /* Chromista */ = {
 			isa = PBXGroup;
 			children = (
+				843F81362440DCE500A81C09 /* ViewModel */,
+				84274D2E2412747D008E82BC /* Protocol */,
 				84F5740F23F0BCB200400ED4 /* UI */,
 				C463227623AD19D10099083F /* ChomistaViewController.swift */,
 				C458BD6023AE55C800D1F108 /* ChromistaTableViewController.swift */,
@@ -1494,6 +2291,7 @@
 				842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */,
 				842D692A23C80202009CF7E7 /* RefreshControl.swift */,
 				84A3AFC923F7D98600836400 /* UIViewController.swift */,
+				84EA94F4246C845C000EEB8E /* LocalizedDate.swift */,
 			);
 			path = "UI Extensions";
 			sourceTree = "<group>";
@@ -1502,9 +2300,13 @@
 			isa = PBXGroup;
 			children = (
 				8497E34423566471003CD4A9 /* System Colors */,
-				84778270237EEC52007C1FD8 /* Basic Varibles.swift */,
+				84778270237EEC52007C1FD8 /* BasicFonts.swift */,
 				8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */,
 				8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */,
+				84274D7A24142857008E82BC /* Device.swift */,
+				C4F49B462416DE49002A2B17 /* BasicRootVCGradient.swift */,
+				845C4AD5242783B500105D92 /* MyColors.swift */,
+				84751DC5244BBB6E008918F7 /* String.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1520,6 +2322,7 @@
 		C458BD7F23AEC1C300D1F108 /* Old */ = {
 			isa = PBXGroup;
 			children = (
+				843F81302440980600A81C09 /* Extensions */,
 				C4FB6D3821B7D7EE00E4FD63 /* PlantsViewController.swift */,
 				C40D3D6421B81878009A0211 /* ArchaeaViewController.swift */,
 				C4C7230E21B968F500F64612 /* AnimalsViewController.swift */,
@@ -1529,6 +2332,15 @@
 				C4C7231621B9B08900F64612 /* MushroomsViewController.swift */,
 			);
 			path = Old;
+			sourceTree = "<group>";
+		};
+		C46E939E241C4A0500C015CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C46E939F241C4A1500C015CD /* TestViewControllerProtocol.swift */,
+				84A9352224539FB70061EF89 /* UIBarButtonItemTestViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C496AE2021C59B0B00413CB4 /* BiologyControllers */ = {
@@ -1573,7 +2385,7 @@
 			children = (
 				842D690423C29551009CF7E7 /* UI */,
 				849C38AF2353BB09002E007D /* Notes Delegate */,
-				849C38AC2353B893002E007D /* MapProtocol */,
+				849C38AC2353B893002E007D /* Map Protocols */,
 				849C38A92353B58B002E007D /* ForToday */,
 				849C38AB2353B5AB002E007D /* Basic Notes */,
 				849C38AA2353B5A2002E007D /* Login */,
@@ -1585,7 +2397,6 @@
 			isa = PBXGroup;
 			children = (
 				C496AE6A21C93DA400413CB4 /* NotificationsFunctions.swift */,
-				840887B321F763810026A210 /* BiologyNotifications.swift */,
 				C4CEC54B225200FD005BA8C6 /* BasicNotificationThings.swift */,
 			);
 			path = "Notification Functions";
@@ -1595,6 +2406,12 @@
 			isa = PBXGroup;
 			children = (
 				C4D9616423D2B56800C0ED57 /* ASAuthorizationController.swift */,
+				84274D7C24151639008E82BC /* BasicASAuthorizationAppleIDButtonSetupProtocol.swift */,
+				C4F49B392416D779002A2B17 /* LoginViewControllerBackView.swift */,
+				84FBE76E24204D5100266A42 /* CostomGoogleSignInButtonViewProtocol.swift */,
+				84B1D60E242D0B050046C4FB /* BasicGoogleSignInButton.swift */,
+				84B1D650242FF9EF0046C4FB /* SignInIconView.swift */,
+				8450EACB2444993900091F37 /* SkipButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1608,6 +2425,8 @@
 				C4E5E25521975BE5009C3062 /* GoodBiologyUITests */,
 				84C6FCAC220620A200BCE06D /* Good Biology (TV) */,
 				8446582623BD59E200DC316E /* iOSGoodBiologyUITests */,
+				84B1D632242EA9090046C4FB /* iBiologySiri */,
+				84B1D63D242EA90A0046C4FB /* iBiologySiriUI */,
 				C4E5E23221975BE4009C3062 /* Products */,
 				84ADAC3421D2C65100FDDFC4 /* Frameworks */,
 				D6458B87408458F233FE4CFD /* Pods */,
@@ -1627,6 +2446,8 @@
 				84C6FC8E22061C5300BCE06D /* Good Biology(Apple Watch) Extension.appex */,
 				84C6FCAB220620A200BCE06D /* Good Biology (TV).app */,
 				8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */,
+				84B1D631242EA9090046C4FB /* iBiologySiri.appex */,
+				84B1D63A242EA90A0046C4FB /* iBiologySiriUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1634,32 +2455,34 @@
 		C4E5E23321975BE4009C3062 /* GoodBiology */ = {
 			isa = PBXGroup;
 			children = (
-				8468332423A44727004CBFC8 /* GoodBiology.entitlements */,
 				84CDB5CA2220B0AA002432F7 /* AppDelegate */,
 				C4FA2D1F21FCD7F40023B655 /* Basic */,
-				84A15A95236209010069AADE /* Settings */,
-				8476128D21E12FB50010AEAE /* Gradient Extension */,
-				8471F87D21B301E8001AA935 /* Networking */,
-				845FE7422322F42500B36E76 /* Article Online Videos and Images */,
-				C496AE6921C9392E00413CB4 /* Notes View Controllers */,
-				C4FE303421A4AEA900E352E1 /* Biology Models */,
-				84732DA7224003BC005957F2 /* ReadingOnTime */,
-				844E0D25223AAE2900933ABC /* Videoes */,
-				844E0D222239A15000933ABC /* About App */,
-				844E0D1F2235766000933ABC /* Making Article */,
-				8454DD9C221326820033A3A2 /* Themes */,
-				84C6FC612205986D00BCE06D /* Data */,
-				848A92F321DD63F400D1C3C1 /* All About App For User */,
-				84D968D621D919FA0079596C /* Review Controllers */,
 				C4FE302921A4AE3500E352E1 /* Storyboards */,
+				8468332423A44727004CBFC8 /* GoodBiology.entitlements */,
+				845BF529243A7357001DC4DE /* TabBarController */,
+				848BAFDE24641EA000355430 /* ArticlesMenuCollection */,
+				8476128D21E12FB50010AEAE /* Gradient Extension */,
 				84323ECB21CE691200D50B2B /* Shadows */,
 				C496AE6C21C93DAD00413CB4 /* Notification Functions */,
-				C496AE6521C938CA00413CB4 /* ArticelsControllers */,
 				C496AE6721C9390100413CB4 /* Buttons Animations */,
 				C496AE6821C9391D00413CB4 /* Rate Maneger */,
+				8471F87D21B301E8001AA935 /* Networking */,
+				845FE7422322F42500B36E76 /* Article Online Videos and Images */,
+				844E0D25223AAE2900933ABC /* Videoes */,
+				844E0D222239A15000933ABC /* About App */,
+				8454DD9C221326820033A3A2 /* Themes */,
+				848A92F321DD63F400D1C3C1 /* All About App For User */,
+				C496AE6521C938CA00413CB4 /* ArticelsControllers */,
+				844E0D1F2235766000933ABC /* Making Article */,
+				84732DA7224003BC005957F2 /* ReadingOnTime */,
+				84A15A95236209010069AADE /* Settings */,
+				C496AE6921C9392E00413CB4 /* Notes View Controllers */,
+				C4FE303421A4AEA900E352E1 /* Biology Models */,
+				84D968D621D919FA0079596C /* Review Controllers */,
 				C4FE302721A4ADF800E352E1 /* TestViewControllers */,
-				C4E5E23D21975BE5009C3062 /* Assets.xcassets */,
+				84AB84E6246B386C001B1856 /* Data */,
 				C4E5E24221975BE5009C3062 /* Info.plist */,
+				C4E5E23D21975BE5009C3062 /* Assets.xcassets */,
 			);
 			path = GoodBiology;
 			sourceTree = "<group>";
@@ -1691,10 +2514,23 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		C4F49B3B2416D873002A2B17 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C4F49B3C2416D88A002A2B17 /* LoginViewControllerAppleSignInButtonSetupProtocol.swift */,
+				C4F49B3E2416D8BA002A2B17 /* GIDSignInDelegate.swift */,
+				C4F49B402416D8F3002A2B17 /* ASAuthorizationControllerDelegate.swift */,
+				C4F49B422416D91B002A2B17 /* ASAuthorizationControllerPresentationContextProviding.swift */,
+				C4F49B442416D953002A2B17 /* LoginViewControllerSystemSignInButtonsSetupProtocol.swift */,
+				84B1D60C242D097C0046C4FB /* LoginViewControllerGoogleDelegateSetupProtocol.swift */,
+				84B1D655242FFEDC0046C4FB /* AuthenticationWithTouchIDProtocol.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		C4FA2D1F21FCD7F40023B655 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				849E2DAB2401E62B00CE9FC6 /* JHBNViewController.swift */,
 				8497E3482358E3C5003CD4A9 /* App Basics */,
 			);
 			path = Basic;
@@ -1761,6 +2597,40 @@
 			productName = iOSGoodBiologyUITests;
 			productReference = 8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		84B1D630242EA9090046C4FB /* iBiologySiri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B1D64D242EA90A0046C4FB /* Build configuration list for PBXNativeTarget "iBiologySiri" */;
+			buildPhases = (
+				84B1D62D242EA9090046C4FB /* Sources */,
+				84B1D62E242EA9090046C4FB /* Frameworks */,
+				84B1D62F242EA9090046C4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iBiologySiri;
+			productName = iBiologySiri;
+			productReference = 84B1D631242EA9090046C4FB /* iBiologySiri.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		84B1D639242EA90A0046C4FB /* iBiologySiriUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B1D64A242EA90A0046C4FB /* Build configuration list for PBXNativeTarget "iBiologySiriUI" */;
+			buildPhases = (
+				84B1D636242EA90A0046C4FB /* Sources */,
+				84B1D637242EA90A0046C4FB /* Frameworks */,
+				84B1D638242EA90A0046C4FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iBiologySiriUI;
+			productName = iBiologySiriUI;
+			productReference = 84B1D63A242EA90A0046C4FB /* iBiologySiriUI.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		84C6FC8122061C5100BCE06D /* Good Biology(Apple Watch) */ = {
 			isa = PBXNativeTarget;
@@ -1830,6 +2700,8 @@
 			);
 			dependencies = (
 				84C6FC9E22061C5300BCE06D /* PBXTargetDependency */,
+				84B1D645242EA90A0046C4FB /* PBXTargetDependency */,
+				84B1D648242EA90A0046C4FB /* PBXTargetDependency */,
 			);
 			name = GoodBiology;
 			productName = GoodBiology;
@@ -1931,13 +2803,20 @@
 		C4E5E22921975BE4009C3062 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				DefaultBuildSystemTypeForWorkspace = Original;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Yaroslav;
 				TargetAttributes = {
 					8446582423BD59E200DC316E = {
 						CreatedOnToolsVersion = 11.0;
 						TestTargetID = C4E5E23021975BE4009C3062;
+					};
+					84B1D630242EA9090046C4FB = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					84B1D639242EA90A0046C4FB = {
+						CreatedOnToolsVersion = 11.3;
 					};
 					84C6FC8122061C5100BCE06D = {
 						CreatedOnToolsVersion = 10.1;
@@ -2038,6 +2917,8 @@
 				84C6FC8D22061C5300BCE06D /* Good Biology(Apple Watch) Extension */,
 				84C6FCAA220620A200BCE06D /* Good Biology (TV) */,
 				8446582423BD59E200DC316E /* iOSGoodBiologyUITests */,
+				84B1D630242EA9090046C4FB /* iBiologySiri */,
+				84B1D639242EA90A0046C4FB /* iBiologySiriUI */,
 			);
 		};
 /* End PBXProject section */
@@ -2047,6 +2928,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B1D62F242EA9090046C4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B1D638242EA90A0046C4FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B1D642242EA90A0046C4FB /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2083,16 +2979,15 @@
 				84CDB5CD2221371D002432F7 /* ForToday.storyboard in Resources */,
 				84F5741C23F1E7C500400ED4 /* User.storyboard in Resources */,
 				8454DD99221323640033A3A2 /* Browser.storyboard in Resources */,
-				844E0D212239A0C800933ABC /* iBiology.mov in Resources */,
-				849E2DAE2401F0CA00CE9FC6 /* 733-settings.json in Resources */,
 				C4E5E23E21975BE5009C3062 /* Assets.xcassets in Resources */,
 				845EE56623FABB0F0036479B /* CardViewController.xib in Resources */,
 				84914E28240175900048B154 /* Podfile in Resources */,
+				84751DCA244DBC71008918F7 /* GoogleService-Info-2.plist in Resources */,
+				848BAFDD2461B3D400355430 /* iBiology.mov in Resources */,
+				84A4B378240BE3590013CDB1 /* GoogleService-Info.plist in Resources */,
 				C4C7252121C058DD00F64612 /* Biology.storyboard in Resources */,
 				C498F9A3219F6B5900DCAC9F /* Tests.storyboard in Resources */,
 				C4E5E23C21975BE4009C3062 /* Main.storyboard in Resources */,
-				849E2DAA2401E16C00CE9FC6 /* 16408-jumping-squares.json in Resources */,
-				849E2DA82401E01A00CE9FC6 /* 16393-pin-lotation-color-blue.json in Resources */,
 				849E2DA6240189A900CE9FC6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2185,6 +3080,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84B1D62D242EA9090046C4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B1D634242EA9090046C4FB /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B1D636242EA90A0046C4FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B1D63F242EA90A0046C4FB /* IntentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		84C6FC8A22061C5300BCE06D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2222,50 +3133,79 @@
 				84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */,
 				84A3AFC823F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift in Sources */,
 				84A3AFD423F830DF00836400 /* ArticelsViewControllerViewSetupProtocol.swift in Sources */,
+				84AB84E3246B3844001B1856 /* HumanData.swift in Sources */,
 				84F5741123F0BCCB00400ED4 /* ChromistaButton.swift in Sources */,
+				84EDAB27241045DA0063CF6F /* BasicsViewControllerSearchButtonBack.swift in Sources */,
 				84A3AFBB23F6190700836400 /* DrawNotesViewController.swift in Sources */,
 				8446583A23BFF5FF00DC316E /* TrueAnswers.swift in Sources */,
-				84C7AAEF223C4EF500A7CF68 /* BiologyBasicsData.swift in Sources */,
+				8496D489243D121200545DDC /* BasicDidFinishLaunchingWithOptionsProtocol.swift in Sources */,
+				84EDAB20241019AB0063CF6F /* TitleLabelForNavigationBar.swift in Sources */,
+				8450EACE2444998C00091F37 /* ExplanatoryTextView.swift in Sources */,
 				8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */,
 				845EE55D23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift in Sources */,
 				842D690D23C29D24009CF7E7 /* HelpButton.swift in Sources */,
 				848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */,
+				84AB8512246BE6A8001B1856 /* LastSaveDateLabel.swift in Sources */,
 				8446583E23BFF6EF00DC316E /* HumenTestsData.swift in Sources */,
 				845EE56A23FB24AA0036479B /* UIImagePickerControllerDelegate.swift in Sources */,
 				84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */,
 				84A78C6423ED682A002FEADF /* StepperView.swift in Sources */,
 				8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */,
 				84F5741523F0BE3000400ED4 /* ChromistaActionButtonsBack.swift in Sources */,
+				84274D7B24142857008E82BC /* Device.swift in Sources */,
+				84751DC8244BBF13008918F7 /* SettingsTableViewControllerRealmProtocol.swift in Sources */,
 				840FB81223BA20C70081DE59 /* TextView.swift in Sources */,
 				84A3AFC223F6B0BB00836400 /* ArticlesViewControllerDelegate.swift in Sources */,
 				84A78C7623EF006C002FEADF /* MKMapViewDelegate.swift in Sources */,
-				84408E4B222C529D00F11996 /* ArchaeaData.swift in Sources */,
 				8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */,
+				843DB984244904AD005D2625 /* PupularInfoViewModel.swift in Sources */,
 				C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */,
 				84914E2423FE9DE80048B154 /* HideButton.swift in Sources */,
 				842D692623C77AA4009CF7E7 /* SFSafariViewController.swift in Sources */,
+				847E14EA246C659700C35F9E /* NetworkingViewControllerINActions.swift in Sources */,
 				84A15A97236209220069AADE /* SettingsTableViewController.swift in Sources */,
-				8454DDA9221750610033A3A2 /* AnimalsData.swift in Sources */,
+				84B1D656242FFEDD0046C4FB /* AuthenticationWithTouchIDProtocol.swift in Sources */,
 				84323ECA21CE690700D50B2B /* Shadows.swift in Sources */,
 				8497E34A2358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift in Sources */,
+				84AB84DF246B3844001B1856 /* PlantsData.swift in Sources */,
+				84EDAB1D240F08540063CF6F /* UsersIconImageView.swift in Sources */,
 				C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */,
+				84B1D614242D4EF50046C4FB /* MailButton.swift in Sources */,
 				84914E2023FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift in Sources */,
+				84EDAB2924104A6D0063CF6F /* BasicsThemesViewController.swift in Sources */,
 				84A3AFA023F37D9700836400 /* ForTodayViewControllerMailComposerProtocol.swift in Sources */,
+				84680BFE24372CE50048A30B /* MacawPopularViewViewModel.swift in Sources */,
+				84B1D60F242D0B050046C4FB /* BasicGoogleSignInButton.swift in Sources */,
+				84EF4A4D246623AC009632A1 /* MenuCollectionViewCellButton.swift in Sources */,
+				84EF4A4B2466237E009632A1 /* MenuCollectionViewCell.swift in Sources */,
 				842D691823C42B9E009CF7E7 /* NewLabel.swift in Sources */,
+				84B1D61A242D748D0046C4FB /* SettingsTableViewControllerSaveFunctionViewModel.swift in Sources */,
 				84732DA6224003AC005957F2 /* ReadingOnTimeViewController.swift in Sources */,
+				84EDAB17240F036A0063CF6F /* SettingsTableViewControllerObserversSetupProtocol.swift in Sources */,
 				84A78C6123ED6636002FEADF /* SettingsTableViewControllerDelegate.swift in Sources */,
 				C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */,
 				C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */,
 				84A78C7223EEFFA0002FEADF /* UISearchBarDelegate.swift in Sources */,
+				84680BFC24372C9D0048A30B /* MacawPopularViewProperties.swift in Sources */,
 				C447BD3123D8C94C0026F176 /* FastAlert.swift in Sources */,
 				84A3AFDB23F88AC600836400 /* MenuCellRightView.swift in Sources */,
+				C4F49B3F2416D8BA002A2B17 /* GIDSignInDelegate.swift in Sources */,
+				848BAFE024641EE900355430 /* MenuCollectionView.swift in Sources */,
 				849E67FC23FC316900569F32 /* BasicMFMailComposeViewController.swift in Sources */,
+				84B1D607242B8C0D0046C4FB /* SettingsTableViewControllerSaveFunctionProtocol.swift in Sources */,
 				84F5741723F0C0BF00400ED4 /* ArticlesVCButtonBack.swift in Sources */,
+				84A935262454F1F70061EF89 /* BlankSheetViewControllerViewModel.swift in Sources */,
 				84A3AFB623F6140A00836400 /* ShadowView.swift in Sources */,
 				84A3AFA323F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift in Sources */,
+				845C4ADC2428230500105D92 /* MostPopularArticlesViewControllerInfoContentBack.swift in Sources */,
 				84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */,
+				84B1D62B242E70530046C4FB /* PopularButton.swift in Sources */,
+				845C4ADE2428258400105D92 /* MostPopularArticlesViewControllerInfoContentTextView.swift in Sources */,
 				848CC42C2368FB1F0060709C /* ThemesMenuTableViewController.swift in Sources */,
+				84EDAB11240F00350063CF6F /* SettingsTableViewControllerGesturesSetup.swift in Sources */,
+				84AB84E8246B3953001B1856 /* BiologyAll.swift in Sources */,
 				842D692223C6CD9C009CF7E7 /* BiologyBackView.swift in Sources */,
+				8450EAD52446711C00091F37 /* ForTodayViewControllerViewModel.swift in Sources */,
 				842D691323C4299C009CF7E7 /* ContactButton.swift in Sources */,
 				849C38A82353B121002E007D /* ReadingOnTimeStyleVaribles.swift in Sources */,
 				849C38B22353BB27002E007D /* Notes Protocol.swift in Sources */,
@@ -2273,41 +3213,55 @@
 				C4C7231321B9901100F64612 /* HumanViewVontroller.swift in Sources */,
 				84A3AF8E23F2E75100836400 /* ForTodayTextFieldAndViewSetupProtocol.swift in Sources */,
 				842D690B23C29AD1009CF7E7 /* SettingsTextField.swift in Sources */,
-				84408E49222C4C5000F11996 /* FungusesData.swift in Sources */,
+				84A4B370240A8E7A0013CDB1 /* GoogleMapViewControllerSegmentedControl.swift in Sources */,
+				C4F49B3A2416D779002A2B17 /* LoginViewControllerBackView.swift in Sources */,
+				84A9352B2454F2960061EF89 /* GADBannerViewDelegate.swift in Sources */,
+				84680C042438F44F0048A30B /* NetworkingViewControllerViewModel.swift in Sources */,
+				84EEBDF4245CB2CA009A105A /* TransformImageView.swift in Sources */,
 				844E0D0722351BD400933ABC /* MapViewController.swift in Sources */,
-				84778271237EEC52007C1FD8 /* Basic Varibles.swift in Sources */,
+				84778271237EEC52007C1FD8 /* BasicFonts.swift in Sources */,
+				8450EAE324479E9700091F37 /* MFMessageComposeViewControllerDelegate.swift in Sources */,
 				841AF1D1235A481D0003A440 /* URLs.swift in Sources */,
-				849E2DAC2401E62B00CE9FC6 /* JHBNViewController.swift in Sources */,
+				C4F49B412416D8F3002A2B17 /* ASAuthorizationControllerDelegate.swift in Sources */,
+				84EA94F5246C845C000EEB8E /* LocalizedDate.swift in Sources */,
 				8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */,
 				8471F87F21B30202001AA935 /* NetworkingViewController.swift in Sources */,
 				84A3AFC423F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift in Sources */,
+				84B1D654242FFA290046C4FB /* LoginViewControllerViewModel.swift in Sources */,
 				84A78C6723ED686C002FEADF /* TestStepperView.swift in Sources */,
-				84408E4D222C5F7100F11996 /* ManData.swift in Sources */,
 				C463227723AD19D10099083F /* ChomistaViewController.swift in Sources */,
+				84AB84EA246B3CFD001B1856 /* AppInformation.swift in Sources */,
 				8461F8C621EB651800586139 /* TestsReviewViewController.swift in Sources */,
 				C4FB6D3921B7D7EE00E4FD63 /* PlantsViewController.swift in Sources */,
+				843F81322440981600A81C09 /* PlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */,
 				C40D3D6521B81878009A0211 /* ArchaeaViewController.swift in Sources */,
 				C496AE6B21C93DA400413CB4 /* NotificationsFunctions.swift in Sources */,
-				AAEC22D221C679E900FF69FE /* BasicsViewController.swift in Sources */,
+				AAEC22D221C679E900FF69FE /* BiologyViewController.swift in Sources */,
 				8446584423BFFE9900DC316E /* VirusesTestsData.swift in Sources */,
 				840FB81B23BA6D1E0081DE59 /* BarButtonItem.swift in Sources */,
+				84751DC6244BBB6E008918F7 /* String.swift in Sources */,
+				84B1D616242D50570046C4FB /* MakingArticleVCContentRulesTextView.swift in Sources */,
 				84A3AFCF23F82FA300836400 /* MenuViewControllerDelegate.swift in Sources */,
+				845BF52B243A737B001DC4DE /* MainTabBarController.swift in Sources */,
 				C4C7231521B9ACA900F64612 /* MicrobesViewController.swift in Sources */,
 				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
+				84274D7D2415163A008E82BC /* BasicASAuthorizationAppleIDButtonSetupProtocol.swift in Sources */,
 				84A78C6923ED6893002FEADF /* ContentBack.swift in Sources */,
 				C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */,
 				84914E2623FF55C60048B154 /* NewArticleLabel.swift in Sources */,
 				84A3AFAD23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift in Sources */,
 				8446582023BC0A5200DC316E /* Button.swift in Sources */,
-				84119901233F57AC004B0DAF /* ReviewControllerProtocol.swift in Sources */,
+				84119901233F57AC004B0DAF /* Protocols.swift in Sources */,
 				84F5741323F0BDEF00400ED4 /* ChromistaLabel.swift in Sources */,
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,
 				845EE55923FA02CF0036479B /* WebViewLoadAnimationsSetupProtocol.swift in Sources */,
+				84B1D60D242D097C0046C4FB /* LoginViewControllerGoogleDelegateSetupProtocol.swift in Sources */,
+				84AB84E5246B3844001B1856 /* MicrobesData.swift in Sources */,
 				C4C7251221BED93D00F64612 /* Model.xcdatamodeld in Sources */,
 				84A3AFDD23F8916000836400 /* ArticelsViewControllerContentJsonSetup.swift in Sources */,
 				8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */,
 				84A78C6E23EE085F002FEADF /* UIPickerViewDelegate.swift in Sources */,
-				84C6FC602205986300BCE06D /* ArticleContentData.swift in Sources */,
+				843DB97824487059005D2625 /* TestReviewVCViewModel.swift in Sources */,
 				84BDFDD1236DCAC90088B09E /* VideosMenuTableViewController.swift in Sources */,
 				84A3AFC623F6B2E200836400 /* BasicsViewControllerNotificationSetProtocol.swift in Sources */,
 				84A3AF9423F374DA00836400 /* ForTodayViewControllerUIViewSetupProtocol.swift in Sources */,
@@ -2315,93 +3269,166 @@
 				845EE56423FA044A0036479B /* NetworkingButton.swift in Sources */,
 				AAEC22D621C67A1300FF69FE /* BasicsDataManager.swift in Sources */,
 				C458BD6A23AEBF0000D1F108 /* UIAlert.swift in Sources */,
+				84A4B372240A9D460013CDB1 /* TextErrorSetup.swift in Sources */,
+				843DB97E2448CDF0005D2625 /* PopularInfoContent.swift in Sources */,
+				84A4B369240943B80013CDB1 /* GoogleMapViewController.swift in Sources */,
 				8446584223BFF95A00DC316E /* MicrobesTestsData.swift in Sources */,
-				84B2BD88222BDCEA00BA41C9 /* VirusesData.swift in Sources */,
+				84AB8516246BFA89001B1856 /* ForTodayViewControllerSetupMainProtocols.swift in Sources */,
 				84A3AFD723F8316200836400 /* MenuContent.swift in Sources */,
 				C43B125E21A8ABEE00D58C44 /* ButtonsAnimations.swift in Sources */,
 				847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */,
+				84A4B376240AA32F0013CDB1 /* MapTypeButton.swift in Sources */,
 				8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */,
+				84274D372412D397008E82BC /* ReadingOnTimeViewControllerButtonsBackView.swift in Sources */,
+				8450EADF24479DED00091F37 /* ReviewControllerViewSetupProtocol.swift in Sources */,
+				8450EACC2444993A00091F37 /* SkipButton.swift in Sources */,
+				84B1D5FF242A72E90046C4FB /* SafariViewControllerExtensions.swift in Sources */,
 				84A3AFB823F6140A00836400 /* DrawView.swift in Sources */,
 				84A3AF9A23F37C2900836400 /* ForTodayViewControllerNotificationProcesesSetupProtocol.swift in Sources */,
+				C4F49B3D2416D88A002A2B17 /* LoginViewControllerAppleSignInButtonSetupProtocol.swift in Sources */,
 				840FB81423BA3F970081DE59 /* TestButtons.swift in Sources */,
 				84A3AFB023F382EB00836400 /* BasicNotesViewControllerViewSeyupProtocol.swift in Sources */,
-				8454DDA52214CA300033A3A2 /* PlantsData.swift in Sources */,
+				84B1D601242A74150046C4FB /* AboutAppViewControllerExtensions.swift in Sources */,
+				84EDAB2524101B5C0063CF6F /* BiologyThemesTableViewController.swift in Sources */,
+				846D1BA0241D867B0036179D /* ReadingOnTimeViewControllerScoreView.swift in Sources */,
+				84B1D603242A7B550046C4FB /* AppIconViewControllerExtensions.swift in Sources */,
+				84B1D651242FF9F00046C4FB /* SignInIconView.swift in Sources */,
+				84A9352F245623D80061EF89 /* UIView.swift in Sources */,
+				84EDAB1B240F04F10063CF6F /* UsersInfoView.swift in Sources */,
 				844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */,
+				84EDAB22241019C90063CF6F /* SubTitleLabelForNavigationBar.swift in Sources */,
 				AAEC22D821C67A3200FF69FE /* BasicsModel.swift in Sources */,
 				845FE7442322F45400B36E76 /* ArticleOnlineImagesViewController.swift in Sources */,
 				C4C7230F21B968F500F64612 /* AnimalsViewController.swift in Sources */,
+				84A4B374240A9D9D0013CDB1 /* TrashFunction.swift in Sources */,
 				C458BD7123AEBFD200D1F108 /* UITextView.swift in Sources */,
 				841198FE233F5216004B0DAF /* NetworkingProtocol.swift in Sources */,
+				84FBE76F24204D5100266A42 /* CostomGoogleSignInButtonViewProtocol.swift in Sources */,
+				84EDAB2C24126B0B0063CF6F /* ArticleViewControllerSetupViewPrtocol.swift in Sources */,
 				84A3AFC023F6B09200836400 /* BasicsViewControllerInfoSwitchActionProtocol.swift in Sources */,
+				C4F49B452416D953002A2B17 /* LoginViewControllerSystemSignInButtonsSetupProtocol.swift in Sources */,
+				843F81392440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift in Sources */,
 				8454DD9622101F030033A3A2 /* AboutAppViewController.swift in Sources */,
+				8450EAEA2447A0EC00091F37 /* Actions.swift in Sources */,
+				846D1BA6241EC9910036179D /* ArticleThemesControllerDataSetProtocol.swift in Sources */,
 				84A3AFCD23F82F8100836400 /* ArticelsViewControllerProtocol.swift in Sources */,
+				84EEBDFE245CED01009A105A /* BasicNotesViewControllerTrashButton.swift in Sources */,
+				84EDAB15240F006D0063CF6F /* SettingsTableViewControllerLoadSettings.swift in Sources */,
+				84936933241693660087019A /* ArticlesReviewViewControllerSwitch.swift in Sources */,
+				84EF4A532467C736009632A1 /* Articles.swift in Sources */,
 				84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */,
+				8465FD03244F9A6900E823A6 /* NetworkingViewControllerMainToolBar.swift in Sources */,
 				C458BD6C23AEBF2000D1F108 /* Extensions.swift in Sources */,
 				84A3AF9D23F37D2200836400 /* TextErrorsProtocol.swift in Sources */,
+				84B1D61D242D77D70046C4FB /* SettingsTableViewControllerViewModel.swift in Sources */,
 				C458BD7723AEC05E00D1F108 /* UISegmentedControl.swift in Sources */,
 				C458BD6E23AEBF4200D1F108 /* UIActivityIndicatorView.swift in Sources */,
 				84A3AFBE23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift in Sources */,
+				84EEBDFB245CD691009A105A /* BasicNotesViewControllerViewModel.swift in Sources */,
+				84751DC02449D700008918F7 /* MoreViewController.swift in Sources */,
 				849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */,
+				84AB84E4246B3844001B1856 /* FungusesData.swift in Sources */,
 				845EE56823FABB6C0036479B /* CardViewController.swift in Sources */,
+				843F81352440985B00A81C09 /* UserActivityType.swift in Sources */,
+				84B1D6592431D5C40046C4FB /* MostPopularArticlesViewControllerViewModel.swift in Sources */,
+				84B1D612242D4DD60046C4FB /* MakingArticleViewControllerContent.swift in Sources */,
 				8446583C23BFF61800DC316E /* AnimalsTestsData.swift in Sources */,
-				8454DDA72216F8AF0033A3A2 /* AppInformation.swift in Sources */,
 				C4D9616023CE545500C0ED57 /* SomeMoreView.swift in Sources */,
+				843DB9762447A482005D2625 /* ArticleVCViewModel.swift in Sources */,
 				C4C7231921B9BC0F00F64612 /* RateManeger.swift in Sources */,
+				84A4B36C240A79460013CDB1 /* BasicGoogleMapViewProtocol.swift in Sources */,
 				84A78C5723ECC542002FEADF /* TestErrors.swift in Sources */,
 				84685FCA2219827000F79BF5 /* LoginViewController.swift in Sources */,
+				8450EAD0244499AD00091F37 /* ExplanatoryView.swift in Sources */,
 				84A3AF8B23F2155900836400 /* ControlButton.swift in Sources */,
+				84751DC4244A58AE008918F7 /* BasicsViewControllerActions.swift in Sources */,
+				84AB84E1246B3844001B1856 /* ManData.swift in Sources */,
+				84AB84E0246B3844001B1856 /* VirusesData.swift in Sources */,
+				84AB84D1246B3833001B1856 /* ArticleContentData.swift in Sources */,
 				C458BD7923AEC08200D1F108 /* UIBarButtonItem.swift in Sources */,
 				84A78C6B23ED68B4002FEADF /* NavigationTitleView.swift in Sources */,
+				84B1D629242E5F3B0046C4FB /* TestsMenuViewControllerViewModel.swift in Sources */,
 				84A3AFD923F865F800836400 /* ArticlesMenuContentService.swift in Sources */,
-				8461367D22C65F8D0019C7FB /* HumanData.swift in Sources */,
+				8450EAE124479E8000091F37 /* ReviewControllerProtcol.swift in Sources */,
 				84732DA922400B96005957F2 /* ReadingOnTimeData.swift in Sources */,
 				AA2C423421C842F500D1E680 /* BasicsCoordinator.swift in Sources */,
-				84C7AAEA223C4CDF00A7CF68 /* BiologyShareData.swift in Sources */,
 				84914E2223FD64730048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocolExtension.swift in Sources */,
+				84A935292454F2700061EF89 /* MainFunctions.swift in Sources */,
 				84A3AF9123F2E85D00836400 /* ForTodayViewControllerMapSetupProtocol.swift in Sources */,
 				C4CEC54C225200FE005BA8C6 /* BasicNotificationThings.swift in Sources */,
 				84B9050223201E810002F0E2 /* BasicTestWords.swift in Sources */,
+				8496D484243D117F00545DDC /* AppDelegateViewModel.swift in Sources */,
 				8497E34623566495003CD4A9 /* SystemColors.swift in Sources */,
+				84EDAB0F240EFFFF0063CF6F /* SettingsTableViewControllerDelegateExtension.swift in Sources */,
+				849369312416928D0087019A /* SwitchTextView.swift in Sources */,
 				842D692B23C80202009CF7E7 /* RefreshControl.swift in Sources */,
+				843DB9812448CF7E005D2625 /* PopularInfoTextView.swift in Sources */,
 				84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */,
+				84AB84D4246B3833001B1856 /* BiologyBasicsData.swift in Sources */,
+				84036C2D2423E56F00188795 /* MostPopularArticles.swift in Sources */,
 				C4C7231721B9B08900F64612 /* MushroomsViewController.swift in Sources */,
 				C43B126A21AB22DC00D58C44 /* ForTodayViewController.swift in Sources */,
+				846D1BA2241D8F2D0036179D /* ReadingOnTimeScoreLabel.swift in Sources */,
 				842D691F23C69D01009CF7E7 /* BasicSearchController.swift in Sources */,
 				8446584623C00F2B00DC316E /* ArchaeaTestsData.swift in Sources */,
+				84274D302412748A008E82BC /* ChomistaViewControllerViewSetupProtocol.swift in Sources */,
 				84A3AFCA23F7D98600836400 /* UIViewController.swift in Sources */,
 				84A3AF9723F37B0E00836400 /* ForTodayViewControllerChooseTimeFunctionProtocol.swift in Sources */,
 				C47CAD6721D0E42F00E27E88 /* TestViewController.swift in Sources */,
-				840887B421F763810026A210 /* BiologyNotifications.swift in Sources */,
+				84A4B36E240A8C410013CDB1 /* ShowGoogleMapViewButtonBack.swift in Sources */,
 				8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */,
+				84B1D5FD242A71AF0046C4FB /* AboutAppVCSetupProtocol.swift in Sources */,
+				84B1D60B242C328D0046C4FB /* FastActivityVC.swift in Sources */,
 				840FB81723BA46050081DE59 /* TestView.swift in Sources */,
 				845EE55B23FA03450036479B /* NetworkingViewControllerUIPickerViewDataSource.swift in Sources */,
+				84EA94F3246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */,
 				84A3AFD223F82FD400836400 /* UISearchResultsUpdating.swift in Sources */,
 				C4D9616523D2B56800C0ED57 /* ASAuthorizationController.swift in Sources */,
 				84A78C7023EE0902002FEADF /* UIPickerViewDataSource.swift in Sources */,
-				842D691B23C545FA009CF7E7 /* ArticleView.swift in Sources */,
+				842D691B23C545FA009CF7E7 /* ArticlePreviewView.swift in Sources */,
 				C4E5E23521975BE4009C3062 /* AppDelegate.swift in Sources */,
+				84EDAB19240F038C0063CF6F /* SettingsTableViewControllerMailComposeSetupProtocol.swift in Sources */,
+				847E14E8246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift in Sources */,
 				C447BD3423D8C9770026F176 /* Errors.swift in Sources */,
 				849F5381236977CD0027289F /* GradientView.swift in Sources */,
 				84A78C5C23ED65B4002FEADF /* UISearchResultUpdating.swift in Sources */,
 				84A78C7823EF00CA002FEADF /* CLLocationManagerDelegate.swift in Sources */,
-				84B2BD86222AE87C00BA41C9 /* MicrobesData.swift in Sources */,
+				84A9352324539FB70061EF89 /* UIBarButtonItemTestViewControllerExtension.swift in Sources */,
 				845EE56123FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift in Sources */,
+				843DB97B2448CD8F005D2625 /* PopularInfoVC.swift in Sources */,
+				847E14EF246C730100C35F9E /* BrowserAnimationManeger.swift in Sources */,
+				849369352416951A0087019A /* ArticlesReviewViewControllerIconImageView.swift in Sources */,
+				84AB84DE246B3844001B1856 /* ArchaeaData.swift in Sources */,
+				845C4AD6242783B500105D92 /* MyColors.swift in Sources */,
 				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
+				84680C07243901340048A30B /* ArticelsViewControllerViewModel.swift in Sources */,
 				C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */,
+				84B1D605242B8BEB0046C4FB /* QuestionLabel.swift in Sources */,
 				C4C7231121B98A1E00F64612 /* VirusesViewController.swift in Sources */,
+				84AB84E2246B3844001B1856 /* AnimalsData.swift in Sources */,
+				84680C012437A07A0048A30B /* MostPopularArticlesViewControllerLabel.swift in Sources */,
+				C4F49B432416D91B002A2B17 /* ASAuthorizationControllerPresentationContextProviding.swift in Sources */,
 				844E0D242239A16900933ABC /* VideoPlayerViewController.swift in Sources */,
 				840FB81923BA4E0E0081DE59 /* AnswerLabel.swift in Sources */,
 				C458BD6523AEBE4400D1F108 /* UIButton.swift in Sources */,
 				842D690923C29A99009CF7E7 /* DoneLabel.swift in Sources */,
 				C4C7252521C2B75800F64612 /* ArticelsViewController.swift in Sources */,
+				843F812E24407FDE00A81C09 /* ArticlesViewCountModel.swift in Sources */,
 				C43B126021A8AF8300D58C44 /* TestButtonAnimation.swift in Sources */,
 				84A78C7423EEFFDF002FEADF /* MFMailComposeViewControllerDelegate.swift in Sources */,
-				84C7AAED223C4E9700A7CF68 /* BiologyAll.swift in Sources */,
+				C4F49B472416DE49002A2B17 /* BasicRootVCGradient.swift in Sources */,
+				8496D487243D11AF00545DDC /* BasicAppDelegateSetupProtocol.swift in Sources */,
+				84680BF92434B4360048A30B /* MacawPopularView.swift in Sources */,
 				C4EE987C23EC6D1B00FBF1E1 /* TestIconLabel.swift in Sources */,
 				84B90506232184EF0002F0E2 /* ForTodayViewControllerBasicWords.swift in Sources */,
+				847E14EC246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift in Sources */,
+				8465FD05244F9B9D00E823A6 /* WebViewBaxckground.swift in Sources */,
 				842D692423C6CDD5009CF7E7 /* BiologyNotificationButton.swift in Sources */,
+				843F813C2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift in Sources */,
 				8468332623A4E5A6004CBFC8 /* User.swift in Sources */,
+				C46E93A0241C4A1500C015CD /* TestViewControllerProtocol.swift in Sources */,
 				845EE55F23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift in Sources */,
+				8450EAD2244670D800091F37 /* ForTodayViewControllerSaveFunctionSetupProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2450,6 +3477,16 @@
 			target = C4E5E23021975BE4009C3062 /* GoodBiology */;
 			targetProxy = 8446582A23BD59E200DC316E /* PBXContainerItemProxy */;
 		};
+		84B1D645242EA90A0046C4FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B1D639242EA90A0046C4FB /* iBiologySiriUI */;
+			targetProxy = 84B1D644242EA90A0046C4FB /* PBXContainerItemProxy */;
+		};
+		84B1D648242EA90A0046C4FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B1D630242EA9090046C4FB /* iBiologySiri */;
+			targetProxy = 84B1D647242EA90A0046C4FB /* PBXContainerItemProxy */;
+		};
 		84C6FC9122061C5300BCE06D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 84C6FC8D22061C5300BCE06D /* Good Biology(Apple Watch) Extension */;
@@ -2489,6 +3526,14 @@
 				8454DD98221323640033A3A2 /* Base */,
 			);
 			name = Browser.storyboard;
+			sourceTree = "<group>";
+		};
+		84B1D640242EA90A0046C4FB /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84B1D641242EA90A0046C4FB /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 		84C6FCB3220620A200BCE06D /* Main.storyboard */ = {
@@ -2587,6 +3632,90 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = GoodBiology;
+			};
+			name = Release;
+		};
+		84B1D64B242EA90A0046C4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = iBiologySiriUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.iBiologySiriUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84B1D64C242EA90A0046C4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = iBiologySiriUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.iBiologySiriUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84B1D64E242EA90A0046C4FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = iBiologySiri/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.iBiologySiri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84B1D64F242EA90A0046C4FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59C6H8HQ42;
+				INFOPLIST_FILE = iBiologySiri/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yareyapp.GoodBiology.iBiologySiri;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -2836,6 +3965,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 625B4F54138942D262E7B60F /* Pods-GoodBiology.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GoodBiology/GoodBiology.entitlements;
@@ -2843,7 +3973,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59C6H8HQ42;
 				INFOPLIST_FILE = GoodBiology/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2853,8 +3983,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoodBiology-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -2862,6 +3992,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0045B572FD23584A651EC5C1 /* Pods-GoodBiology.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = GoodBiology/GoodBiology.entitlements;
@@ -2869,7 +4000,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59C6H8HQ42;
 				INFOPLIST_FILE = GoodBiology/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2878,8 +4009,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GoodBiology-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -3101,6 +4232,24 @@
 			buildConfigurations = (
 				8446582D23BD59E200DC316E /* Debug */,
 				8446582E23BD59E200DC316E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B1D64A242EA90A0046C4FB /* Build configuration list for PBXNativeTarget "iBiologySiriUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B1D64B242EA90A0046C4FB /* Debug */,
+				84B1D64C242EA90A0046C4FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B1D64D242EA90A0046C4FB /* Build configuration list for PBXNativeTarget "iBiologySiri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B1D64E242EA90A0046C4FB /* Debug */,
+				84B1D64F242EA90A0046C4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

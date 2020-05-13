@@ -9,32 +9,37 @@
 import UIKit
 import AudioToolbox
 
-class AboutAppViewController: UIViewController {
+final class AboutAppViewController: UIViewController {
 
-    @IBOutlet weak var contentBackground:    ContentBack!
-    @IBOutlet weak var contentTextView:      UITextView!
+    //MARK: IBOutlets
+    @IBOutlet weak var contentBackground: ContentBack!
+    @IBOutlet weak var contentTextView:   UITextView!
     
-    @IBOutlet weak var stepper:              UIStepper!
-    @IBOutlet weak var stepperView:          UIView!
+    @IBOutlet weak var stepper:     UIStepper!
+    @IBOutlet weak var stepperView: UIView!
     
-    @IBOutlet weak var shareButton:          TestUIBarButtonItem!
-    @IBOutlet weak var backButton:           TestUIBarButtonItem!
+    @IBOutlet weak var shareButton: TestUIBarButtonItem!
+    
+    // stepperViewShowerButton
+    @IBOutlet weak var stepperViewShowerButton:     ChromistaButton!
+    @IBOutlet weak var stepperViewShowerButtonBack: ChromistaActionButtonsBack!
+    
+    // appIconShowerButton
+    @IBOutlet weak var appIconShowerButton:     ChromistaButton!
+    @IBOutlet weak var appIconShowerButtonBack: ChromistaActionButtonsBack!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewsPrefering()
-        contentPrefering()
-        otherUIthings()
-        navItem()
-        systemBackSetup()
+        /// AboutAppVCSetupProtocol
+        setupVC()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         UIView.animate(withDuration: 0.4) {
-            let views = [self.contentBackground, self.contentTextView]
+            let views = [self.contentBackground, self.contentTextView, self.appIconShowerButtonBack, self.stepperViewShowerButtonBack]
             
             for (index, view) in views.enumerated() {
                 let delay: Double = Double((index)) * 0.2
@@ -46,54 +51,7 @@ class AboutAppViewController: UIViewController {
         }
     }
     
-    private func systemBackSetup() {
-        stepperView.viewSystemBack()
-        contentTextView.systemTextColor()
-        view.viewSystemBack()
-    }
-    
-    private func viewsPrefering() {
-        stepperViewSetup()
-        preferingCorners()
-        contentTextViewPrefering()
-    }
-    
-    private func stepperViewSetup() {
-        stepperView.editorsViews()
-        
-        stepperOutletSetup()
-    }
-    
-    private func stepperOutletSetup() {
-        stepper.stepperBaics()
-    }
-    
-    private func backButtonPrefering() {
-        backButton.setTitleTextAttributes([
-        NSAttributedString.Key.font : UIFont(name: "AvenirNext-Medium", size: 18.74)!,
-        NSAttributedString.Key.foregroundColor : lazyColor,
-        ], for: .normal)
-    }
-    
-    private func contentPrefering() {
-        let alpha: CGFloat = 0
-        
-        contentBackground.alpha = alpha
-        contentTextView.alpha   = alpha
-    }
-    
-    private func otherUIthings() {
-        stepperView.isHidden = true
-    }
-    
-    private func contentTextViewPrefering() {
-        contentTextView.bigContentTextViewsPrefering(size: 16)
-    }
-    
-    private func navItem() {
-        self.navigationItem.title = "General"
-    }
-    
+    // MARK: IBActions
     @IBAction func contentSizing(_ sender: UIStepper) {
         let font     = contentTextView.font?.fontName
         let fontSize = CGFloat(sender.value)
@@ -109,29 +67,13 @@ class AboutAppViewController: UIViewController {
         }
     }
     
-    private func preferingCorners() {
-        let cornerRadius = 20
-        
-        contentTextView.layer.cornerRadius   = CGFloat(cornerRadius)
-        contentBackground.layer.cornerRadius = CGFloat(cornerRadius)
-    }
-    
     @IBAction func sharing(_ sender: Any) {
-        fastActivityVC(item: appInfo)
+        fastActivityVC(item: AboutAppStringInformation.appInfo)
         shareButton.shareAudio()
     }
     
     @IBAction func testSharing(_ sender: Any) {
-        fastActivityVC(item: testInfo)
+        fastActivityVC(item: AboutAppStringInformation.testInfo)
         shareButton.shareAudio()
-    }
-    
-    private func fastActivityVC(item: String) {
-        let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
-        
-            UIApplication.shared.keyWindow?.tintColor = lazyColor
-        
-        self.present(activityVC, animated: true, completion: nil)
     }
 }

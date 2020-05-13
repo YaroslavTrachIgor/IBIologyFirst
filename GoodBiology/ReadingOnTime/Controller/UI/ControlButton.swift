@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ReadingOnTimeViewControllerControllButton: UIButton {
+final class ReadingOnTimeViewControllerControllButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -21,21 +21,27 @@ class ReadingOnTimeViewControllerControllButton: UIButton {
         
         setupButton()
     }
-    
+}
+
+extension ReadingOnTimeViewControllerControllButton {
     private func setupButton() {
-        if #available(iOS 13.0, *) {
-            let appleButton = AppleButtonSettings()
-            
-            titleLabel?.font = appleButton.font
-            backgroundColor = appleButton.backgroundColor
-        }
         
-        buttonsShadows()
-        layer.shadowColor  = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        if #available(iOS 13.0, *) {
-            layer.shadowRadius = ReadingOnTimeStyleVaribles.shadowRadius
-            setTitleColor(ReadingOnTimeStyleVaribles.textColor, for: .normal)
-        }
-        layer.cornerRadius = 10
+        /// set font
+        let basicProperties = AppleButtonSettings()
+        titleLabel?.font = basicProperties.font
+        
+        /// setup border
+        layer.borderColor = UIColor.white.cgColor
+        layer.borderWidth = 1.5
+        
+        /// set background Color
+        backgroundColor = .clear
+        
+        /// set Title Color
+        setTitleColor(.white, for: .normal)
+        
+        
+        /// Set corner Radius
+        layer.cornerRadius = 15
     }
 }

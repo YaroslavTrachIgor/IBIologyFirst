@@ -35,6 +35,6 @@ class DoneLabel: UILabel {
 extension DoneLabel: DoneLabelProtocol {
     func setupLabel() {
         font        = UIFont(name: "HelveticaNeue-Bold", size: 18)
-        textColor   = .darkGray
+        textColor   = .biologyGreenColor
     }
 }

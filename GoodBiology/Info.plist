@@ -41,10 +41,14 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-8702634561077907~4234881375</string>
 	<key>LSApplicationCategoryType</key>
 	<string>public.app-category.education</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>The application wants to use your Photo Library to choose photoes for making your personal user icon.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>The application wants to use your Face ID, beacause the application should recognize the real master of this iPhone. Since this section is stored a lot of confidential information about it. </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -94,6 +98,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<false/>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>
@@ -115,5 +121,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

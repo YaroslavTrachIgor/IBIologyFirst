@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-extension BasicsViewController: ArticlesViewControllerDelegate {
+
+// MARK: - ArticlesViewControllerDelegate
+extension BiologyViewController: ArticlesViewControllerDelegate {
     func finalView() {
         view.viewGradient()
         
@@ -18,6 +20,7 @@ extension BasicsViewController: ArticlesViewControllerDelegate {
         prepareBackgroundView()
         modelsPrefering()
         contentTextViewFontPrefering()
+        navigationControllerSetup()
         viewBasics()
     }
 }

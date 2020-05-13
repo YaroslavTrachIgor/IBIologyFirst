@@ -13,6 +13,8 @@ protocol BasicsViewControllerViewSetupProtocol {
     // Setup UIView
     func viewBasics()
     
+    func viewBackSetup()
+    
     func prepareBackgroundView()
     func systemBackPrefering()
     func editorsViewTextPrefering()
@@ -36,9 +38,31 @@ protocol BasicsViewControllerViewSetupProtocol {
     
     // Set Text
     func modelsPrefering()
+    
+    // Navigation Bar Setup
+    func navigationControllerSetup()
+    
+    // viewDidApearAnimation
+    func viewDidApearAnimation()
+    
 }
 
-extension BasicsViewController: BasicsViewControllerViewSetupProtocol {
+
+// MARK: - BasicsViewControllerViewSetupProtocol
+extension BiologyViewController: BasicsViewControllerViewSetupProtocol {
+    func viewDidApearAnimation() {
+        let objectsArray = [switchViewShowingButtonBackView ,stepperViewShowingButtonBack  ,segmentedControl ,backgroundView, notificationButton, switchView, stepperView]
+        
+        for (index, objects) in objectsArray.enumerated() {
+            let delay: Double = Double((index)) * 0.3
+            
+            UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveLinear, animations: {
+                
+                objects?.alpha = 1
+            })
+        }
+    }
+    
     func viewBasics() {
         editorsViewTextPrefering()
         segmentedControlSetup()
@@ -46,6 +70,11 @@ extension BasicsViewController: BasicsViewControllerViewSetupProtocol {
         loadingViewPrefering()
         cornersPrefering()
         contentTextViewSetup()
+        viewBackSetup()
+    }
+    
+    func viewBackSetup() {
+        view.backgroundColor = .groupTableViewBackground
     }
     
     func systemBackPrefering() {
@@ -61,7 +90,7 @@ extension BasicsViewController: BasicsViewControllerViewSetupProtocol {
     }
     
     func editorsViewTextPrefering() {
-        switchTextView.font = UIFont(name: mediumFont, size: 13)
+        switchTextView.font = UIFont(name: BasicFonts.mediumFont, size: 13)
         
         switchTextView.isEditable   = false
         switchTextView.isSelectable = false
@@ -80,6 +109,7 @@ extension BasicsViewController: BasicsViewControllerViewSetupProtocol {
     
     func stepperViewSetup() {
         stepperView.editorsViews()
+        stepperView.alpha = 1
         stepperView.layer.cornerRadius = 10
         
         stepperSetup()
@@ -88,13 +118,14 @@ extension BasicsViewController: BasicsViewControllerViewSetupProtocol {
     func switchViewSetup() {
         switchView.editorsViews()
         switchView.layer.cornerRadius = 9
+        switchView.alpha = 1
         
         switchTextViewSetup()
         switchSetup()
     }
     
     func cornersPrefering() {
-        stepperView.layer.cornerRadius     = CGFloat(cornerRadius)
+        stepperView.layer.cornerRadius     = CGFloat(12)
         contentTextView.layer.cornerRadius = 30
     }
     
@@ -125,10 +156,7 @@ extension BasicsViewController: BasicsViewControllerViewSetupProtocol {
     }
     
     func contentTextViewSetup() {
-        contentTextView.font = UIFont(name: mediumFont, size: 17)
-        contentTextView.layer.shadowColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        
-        contentTextView.textViewShadow()
+        contentTextView.font = UIFont(name: BasicFonts.mediumFont, size: 17)
     }
     
     func loadingViewPrefering() {
@@ -140,7 +168,22 @@ extension BasicsViewController: BasicsViewControllerViewSetupProtocol {
     }
     
     func modelsPrefering() {
-        navigationItem.title = contentModel?.title
+        title = contentModel?.title
         contentTextView.text = contentModel?.content
+    }
+    
+    func navigationControllerSetup() {
+        navigationController?.navigationBar.tintColor       = .biologyGreenColor
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.barTintColor    = .white
+        navigationController?.navigationBar.barStyle        = .default
+        
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+}
+
+extension BiologyViewController {
+    func setCorners(radius: CGFloat) {
+        backgroundView.layer.cornerRadius = radius
     }
 }
