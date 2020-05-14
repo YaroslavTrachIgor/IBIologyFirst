@@ -17,6 +17,7 @@ import CoreLocation
 import AudioToolbox
 import Signals
 import Lottie
+import FirebaseAnalytics
 
 final class ForTodayViewController: UIViewController, NCWidgetProviding {
     
@@ -56,21 +57,8 @@ final class ForTodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
     // Note Copied View
-    @IBOutlet weak var noteCopiedView: UIView! {
-        didSet {
-            noteCopiedView.layer.cornerRadius = 3
-            noteCopiedView.layer.borderColor = UIColor.black.cgColor
-            noteCopiedView.layer.borderWidth = 2
-            noteCopiedView.backgroundColor = #colorLiteral(red: 0.2310164321, green: 0.2501265394, blue: 0.2778887783, alpha: 1)
-            noteCopiedView.alpha = 0
-            noteCopiedView.isHidden = true
-        }
-    }
-    @IBOutlet weak var copyButton: UIButton! {
-        didSet {
-            copyButton.alpha = 0
-        }
-    }
+    @IBOutlet weak var noteCopiedView: NoteCopiedView! 
+    @IBOutlet weak var copyButton: CopyButton!
     
     // UIBarButtonItems
     @IBOutlet weak var mapShowingButton:        UIBarButtonItem!
@@ -174,6 +162,7 @@ extension ForTodayViewController {
     }
     
     @IBAction func copy(sender: UIButton) {
+        Analytics.logEvent("note_copy_button_pressed", parameters: nil)
         viewModel.copyFunction(inputTextView.text!, noteCopiedView)
     }
     
@@ -254,9 +243,5 @@ extension ForTodayViewController {
     
     @IBAction func helpButton(_ sender: Any) {
         showMailComposer()
-    }
-    
-    private func shareButtonsAudio() {
-        viewModel.setAudio(soundID: 1006)
     }
 }

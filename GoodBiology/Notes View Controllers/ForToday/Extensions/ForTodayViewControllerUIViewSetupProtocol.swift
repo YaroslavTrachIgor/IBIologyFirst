@@ -10,6 +10,11 @@ import Foundation
 import UIKit
 
 extension ForTodayViewController {
+
+    private func shareButtonsAudio() {
+        viewModel.setAudio(soundID: 1006)
+    }
+    
     
     //MARK: Public
     public func basicThingsPrefering() {

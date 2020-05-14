@@ -269,6 +269,9 @@
 		84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */; };
 		84EA94F3246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F2246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift */; };
 		84EA94F5246C845C000EEB8E /* LocalizedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F4246C845C000EEB8E /* LocalizedDate.swift */; };
+		84EA94F7246D3A14000EEB8E /* NoteCopiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F6246D3A14000EEB8E /* NoteCopiedView.swift */; };
+		84EA94F9246D3A44000EEB8E /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F8246D3A44000EEB8E /* CopyButton.swift */; };
+		84EA94FB246D46E5000EEB8E /* AnalyticsManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94FA246D46E5000EEB8E /* AnalyticsManeger.swift */; };
 		84EDAB07240D5ADC0063CF6F /* libAppAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB01240D5ADC0063CF6F /* libAppAuth.a */; };
 		84EDAB08240D5ADC0063CF6F /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB02240D5ADC0063CF6F /* libGoogleUtilities.a */; };
 		84EDAB09240D5ADC0063CF6F /* libGTMAppAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB03240D5ADC0063CF6F /* libGTMAppAuth.a */; };
@@ -725,6 +728,9 @@
 		84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesReviewViewController.swift; sourceTree = "<group>"; };
 		84EA94F2246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift; sourceTree = "<group>"; };
 		84EA94F4246C845C000EEB8E /* LocalizedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedDate.swift; sourceTree = "<group>"; };
+		84EA94F6246D3A14000EEB8E /* NoteCopiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCopiedView.swift; sourceTree = "<group>"; };
+		84EA94F8246D3A44000EEB8E /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
+		84EA94FA246D46E5000EEB8E /* AnalyticsManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManeger.swift; sourceTree = "<group>"; };
 		84EDAB01240D5ADC0063CF6F /* libAppAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAppAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EDAB02240D5ADC0063CF6F /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EDAB03240D5ADC0063CF6F /* libGTMAppAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGTMAppAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -2239,6 +2245,8 @@
 				84A4B36D240A8C410013CDB1 /* ShowGoogleMapViewButtonBack.swift */,
 				84A4B375240AA32F0013CDB1 /* MapTypeButton.swift */,
 				84AB8511246BE6A8001B1856 /* LastSaveDateLabel.swift */,
+				84EA94F6246D3A14000EEB8E /* NoteCopiedView.swift */,
+				84EA94F8246D3A44000EEB8E /* CopyButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -2307,6 +2315,7 @@
 				C4F49B462416DE49002A2B17 /* BasicRootVCGradient.swift */,
 				845C4AD5242783B500105D92 /* MyColors.swift */,
 				84751DC5244BBB6E008918F7 /* String.swift */,
+				84EA94FA246D46E5000EEB8E /* AnalyticsManeger.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -3184,6 +3193,7 @@
 				84EDAB17240F036A0063CF6F /* SettingsTableViewControllerObserversSetupProtocol.swift in Sources */,
 				84A78C6123ED6636002FEADF /* SettingsTableViewControllerDelegate.swift in Sources */,
 				C458BD6123AE55C800D1F108 /* ChromistaTableViewController.swift in Sources */,
+				84EA94FB246D46E5000EEB8E /* AnalyticsManeger.swift in Sources */,
 				C458BD7323AEBFF300D1F108 /* UIProgressView.swift in Sources */,
 				84A78C7223EEFFA0002FEADF /* UISearchBarDelegate.swift in Sources */,
 				84680BFC24372C9D0048A30B /* MacawPopularViewProperties.swift in Sources */,
@@ -3220,6 +3230,7 @@
 				84EEBDF4245CB2CA009A105A /* TransformImageView.swift in Sources */,
 				844E0D0722351BD400933ABC /* MapViewController.swift in Sources */,
 				84778271237EEC52007C1FD8 /* BasicFonts.swift in Sources */,
+				84EA94F7246D3A14000EEB8E /* NoteCopiedView.swift in Sources */,
 				8450EAE324479E9700091F37 /* MFMessageComposeViewControllerDelegate.swift in Sources */,
 				841AF1D1235A481D0003A440 /* URLs.swift in Sources */,
 				C4F49B412416D8F3002A2B17 /* ASAuthorizationControllerDelegate.swift in Sources */,
@@ -3428,6 +3439,7 @@
 				8468332623A4E5A6004CBFC8 /* User.swift in Sources */,
 				C46E93A0241C4A1500C015CD /* TestViewControllerProtocol.swift in Sources */,
 				845EE55F23FA03A30036479B /* NetworkingViewControllerViewSetupProtocol.swift in Sources */,
+				84EA94F9246D3A44000EEB8E /* CopyButton.swift in Sources */,
 				8450EAD2244670D800091F37 /* ForTodayViewControllerSaveFunctionSetupProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
