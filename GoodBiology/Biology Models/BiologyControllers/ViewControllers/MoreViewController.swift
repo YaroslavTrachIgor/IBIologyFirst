@@ -84,6 +84,9 @@ extension MoreViewController {
     
     @IBAction func show_hideFunctions(_ sender: UISwitch) {
         setFunctionsEnabled(functionsSwitch: sender)
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: "BiologyBasicsVC")
     }
 }
 

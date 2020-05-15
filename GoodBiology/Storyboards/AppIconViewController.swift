@@ -13,10 +13,16 @@ final class AppIconViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var backButton:   UIButton!
     @IBOutlet weak var backButtonBackground: ChromistaActionButtonsBack! { didSet { backButtonBackground.alpha = 1 } }
-    @IBOutlet weak var imageView:    UIImageView! { didSet { imageView.imageViewShadow() } }
+    
+    //MARK: UIImageView
+    @IBOutlet weak var imageView: UIImageView! { didSet { imageView.imageViewShadow() } }
+    
+    //MARK: switchView
     @IBOutlet weak var switchOutlet: UISwitch!
     @IBOutlet weak var switchLabel:  UILabel!
     @IBOutlet weak var switchView:   UIView!
+    
+    //MARK: UIBarButtonItem
     @IBOutlet weak var shareButton:  UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -32,12 +38,7 @@ final class AppIconViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.5) {
-            let alpha: CGFloat = 1
-            
-            self.imageView.alpha            = alpha
-            self.backButtonBackground.alpha = alpha
-        }
+        setupViewDidApearAnimation()
     }
 }
 
@@ -84,6 +85,23 @@ extension AppIconViewController {
             switchView.isHidden = true
         } else {
             switchView.isHidden = false
+        }
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: "VideoPlayerViewController")
+    }
+}
+
+
+
+//MARK: Main Functions
+extension AppIconViewController {
+    private func setupViewDidApearAnimation() {
+        UIView.animate(withDuration: 0.5) {
+            let alpha: CGFloat = 1
+            
+            self.imageView.alpha            = alpha
+            self.backButtonBackground.alpha = alpha
         }
     }
 }

@@ -102,6 +102,9 @@ final class TestsReviewViewController: UIViewController {
             
             viewModel.setEnabled(shareButton, enabled: false)
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: "TestReviewViewController")
     }
     
     @IBAction func showingSwitchView(_ sender: UIBarButtonItem) {

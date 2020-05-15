@@ -63,6 +63,9 @@ final class ArticlesReviewViewController: UIViewController {
             
             viewModel.switchTextViewTextSetup(switchTextView, text: "Show diffrent functions")
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: "ArticlesReviewViewController")
     }
     
     @IBAction func orgonizeButton(_ sender: UIBarButtonItem) {

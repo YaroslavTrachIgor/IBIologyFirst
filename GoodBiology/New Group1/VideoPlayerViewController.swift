@@ -147,6 +147,9 @@ extension VideoPlayerViewController {
             contentBackground.isHidden = false
             switchTextView.text = "Show diffrent functions"
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: "VideoPlayerViewController")
     }
 }
 
