@@ -38,6 +38,10 @@ final class ThemesController: UIViewController {
 
 // MARK: - ArticlesViewControllerDelegate
 extension ThemesController: ArticlesViewControllerDelegate {
+    var articleName: String {
+        get { return "Themes" }
+    }
+    
     func finalView() {
         rate()
         cornerGiven()
@@ -75,10 +79,16 @@ extension ThemesController {
         let fontSize = CGFloat(sender.value)
         
         contentTextView.font = UIFont(name: font!, size: fontSize)
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     @IBAction func share(_ sender: Any) {
         shareContentGiven()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
 }
 

@@ -12,6 +12,8 @@ import UIKit
 
 // MARK: - ArticlesViewControllerDelegate
 extension BiologyViewController: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Biology" } }
+    
     func finalView() {
         view.viewGradient()
         

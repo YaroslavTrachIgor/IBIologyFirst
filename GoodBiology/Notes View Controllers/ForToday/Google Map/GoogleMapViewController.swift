@@ -70,7 +70,7 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate {
     func textFieldChanged() {
         geocoder.geocodeAddressString((searchTextField.text!)) { (placemarks, error) in
             if error != nil {
-                FastAlert.showBasic(title: errorWord, message: error?.localizedDescription, vc: self)
+                FastAlert.showBasic(title: BasicTestWords.errorWord, message: error?.localizedDescription, vc: self)
             }
         }
     }

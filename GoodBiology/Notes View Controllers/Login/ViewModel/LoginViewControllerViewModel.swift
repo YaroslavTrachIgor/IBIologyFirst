@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AuthenticationServices
 
 class LoginViewControllerViewModel {
     func setupLoginButton(_ loginButton: UIButton) {
@@ -82,5 +83,9 @@ class LoginViewControllerViewModel {
         navController.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navController.navigationBar.shadowImage = UIImage()
         navController.navigationBar.barStyle    = .default
+    }
+    
+    func setupAuthorizationAppleIDRequest(request: ASAuthorizationAppleIDRequest) {
+        request.requestedScopes = [.fullName, .email]
     }
 }

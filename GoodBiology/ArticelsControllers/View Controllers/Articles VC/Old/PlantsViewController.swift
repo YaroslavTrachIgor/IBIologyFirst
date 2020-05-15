@@ -67,7 +67,8 @@ final class PlantsViewController: UIViewController {
 }
 
 
-//MARK: - Actions
+
+//MARK: - @IBActions
 extension PlantsViewController {
     @IBAction func hideSomeMoreView(_ sender: Any) {
         someMoreView.isHidden = true
@@ -77,7 +78,7 @@ extension PlantsViewController {
         showBunner()
     }
     
-    //MARK: Action
+
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         sender.viewShowingWithAnimation(animating: switchView, main: view, nil)
     }
@@ -86,6 +87,9 @@ extension PlantsViewController {
         guard let content = basicsTextView.text else { return }
         FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func switchAction(_ sender: UISwitch) {
@@ -122,18 +126,22 @@ extension PlantsViewController {
             self.view.layoutIfNeeded()
         },
             completion: nil)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
-    //MARK: Actions
+   
     @IBAction func notificationButton(_ sender: NotificationButton) {
+        AnalyticsManeger.addNotificationAnalytics(article: articleName)
         sender.notificationButtonBasicFunctions(view)
         notificationNamePost()
-        PushNotifications.setupBasicNotification(body: "Plants", inSecond: TimeInterval(timeInterval)) { (success) in
+        PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
     }
         
-    //MARK: Actions
+    
     @IBAction func segmetedControl(_ sender: UISegmentedControl) {
         /// ArticlesViewCountProtocol
         setPopularityVoit()
@@ -174,8 +182,11 @@ extension PlantsViewController {
 }
 
 
+
 //MARK: - ArticlesViewControllerDelegate
 extension PlantsViewController: ArticlesViewControllerDelegate {
+    var articleName: String { return "Plants" }
+    
     func finalView() {
         view.viewGradient()
         
@@ -194,6 +205,7 @@ extension PlantsViewController: ArticlesViewControllerDelegate {
         view.viewSystemBack()
     }
 }
+
 
 
 //MARK: - ArticleViewControllerSetupViewPrtocol
@@ -238,6 +250,7 @@ extension PlantsViewController: ArticleViewControllerSetupViewPrtocol {
 }
 
 
+
 //MARK: - ArticlesVCconnectionProtocol
 extension PlantsViewController: ArticlesVCconnectionProtocol {
     func notificationNamePost() {
@@ -245,6 +258,7 @@ extension PlantsViewController: ArticlesVCconnectionProtocol {
         NotificationCenter.default.post(name: notificationName, object: nil)
     }
 }
+
 
 
 //MARK: - Main Functions

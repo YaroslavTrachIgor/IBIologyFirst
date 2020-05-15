@@ -8,8 +8,16 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 class TestReviewVCViewModel {
+    func presentMessageComposer(composer: MFMailComposeViewController) {
+        composer.setToRecipients(["zhbr282@gmail.com"])
+        composer.setSubject("Tests Review")
+        composer.setMessageBody("Here is my problem or review on this app article or articles", isHTML: false)
+        composer.view.tintColor = .biologyGreenColor
+    }
+    
     func setHidden(_ view: UIView, hidden: Bool) {
         view.isHidden = hidden
     }

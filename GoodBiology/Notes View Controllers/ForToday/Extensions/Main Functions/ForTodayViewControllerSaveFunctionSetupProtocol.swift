@@ -74,6 +74,8 @@ extension ForTodayViewController: ForTodayViewControllerSaveFunctionSetupProtoco
         alertController.view.tintColor = .biologyGreenColor
         
         self.present(alertController, animated: true, completion: nil)
+        
+        setupAnalyticsAction()
     }
     
     
@@ -87,6 +89,11 @@ extension ForTodayViewController: ForTodayViewControllerSaveFunctionSetupProtoco
     
     
     //MARK: - Private
+    private func setupAnalyticsAction() {
+        /// For Analytics
+        AnalyticsManeger.addUserPropertie(name: "save_Action", forName: UserPropertieNames.forTodayVC_UserPropertieName)
+    }
+    
     private func setupLastSaveDate() {
         let date = LocalizedDate("us", datePosix: "MMMM d  'at'  h:mm a")
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - String extension for Full name validation of credit card
+// MARK: - String extension for Full name validation 
 public extension String {
 
     /// Maps current string against a regular expression and returns all matched strings

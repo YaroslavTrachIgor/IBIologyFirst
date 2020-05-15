@@ -58,5 +58,12 @@ extension ForTodayViewController {
         
         /// Presnt Maneger
         manager.present(sourceView: deleteButtonBack)
+        
+        setupAnalyticsAction()
+    }
+    
+    private func setupAnalyticsAction() {
+        /// For Analytics
+        AnalyticsManeger.addUserPropertie(name: "trash_Action", forName: UserPropertieNames.forTodayVC_UserPropertieName)
     }
 }

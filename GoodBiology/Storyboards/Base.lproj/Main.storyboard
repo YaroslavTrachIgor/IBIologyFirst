@@ -1676,7 +1676,7 @@
                                     <segue destination="5QW-Ei-eCH" kind="show" id="gia-v6-TMe"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Entertainment (man)" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-c5-A9E" customClass="AlphaImageView" customModule="GoodBiology" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Entertainment (man)" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-c5-A9E" customClass="ZeroAlphaImageView" customModule="GoodBiology" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="225" width="375" height="238"/>
                             </imageView>
                         </subviews>

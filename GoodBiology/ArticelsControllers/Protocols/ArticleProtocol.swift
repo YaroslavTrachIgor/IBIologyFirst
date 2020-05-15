@@ -9,5 +9,7 @@
 import Foundation
 
 protocol ArticlesViewControllerDelegate {
+    var articleName: String { get }
+    
     func finalView()
 }

@@ -1227,7 +1227,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="477"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone Element" translatesAutoresizingMaskIntoConstraints="NO" id="pT2-Fa-GAz" customClass="AlphaImageView" customModule="GoodBiology" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Phone Element" translatesAutoresizingMaskIntoConstraints="NO" id="pT2-Fa-GAz" customClass="ZeroAlphaImageView" customModule="GoodBiology" customModuleProvider="target">
                                 <rect key="frame" x="35" y="16" width="250" height="107"/>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Tests Online Support" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-4e-LMy">
@@ -1313,7 +1313,7 @@
                                     <constraint firstItem="8rA-te-Pee" firstAttribute="top" secondItem="cqc-YP-Ppp" secondAttribute="top" constant="8" id="wuo-eV-rzD"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Holding Phone" translatesAutoresizingMaskIntoConstraints="NO" id="h7R-eg-uUm" customClass="AlphaImageView" customModule="GoodBiology" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Holding Phone" translatesAutoresizingMaskIntoConstraints="NO" id="h7R-eg-uUm" customClass="ZeroAlphaImageView" customModule="GoodBiology" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="391" width="320" height="86"/>
                             </imageView>
                         </subviews>

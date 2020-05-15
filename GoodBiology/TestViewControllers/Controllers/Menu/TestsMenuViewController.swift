@@ -118,10 +118,14 @@ final class TestsMenuViewController: UIViewController {
     }
 }
 
+
+
 // MARK: - UISearchResultsUpdating
 extension TestsMenuViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {}
 }
+
+
 
 // MARK: - MenuViewControllerDelegate
 extension TestsMenuViewController: MenuViewControllerDelegate {
@@ -138,6 +142,8 @@ extension TestsMenuViewController: MenuViewControllerDelegate {
         setupNavigationController()
     }
 }
+
+
 
 // MARK: - Main Functions
 extension TestsMenuViewController {
@@ -243,6 +249,9 @@ extension TestsMenuViewController {
     }
 }
 
+
+
+
 // MARK: - @IBActions
 extension TestsMenuViewController {
     @IBAction func shareButton(_ sender: Any) {
@@ -250,12 +259,18 @@ extension TestsMenuViewController {
         
         viewModel.share(activityItems: [activityVCItem], self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "TestsMenuViewController")
     }
     
     @IBAction func infoVCShow(_ sender: UIButton) {
         showBunner()
     }
 }
+
+
+
 
 // MARK: - Observers setup
 extension TestsMenuViewController {

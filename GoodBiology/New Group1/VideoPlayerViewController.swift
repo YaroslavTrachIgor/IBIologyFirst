@@ -44,7 +44,7 @@ final class VideoPlayerViewController: UIViewController {
     @IBOutlet weak var articlesMenuVideosButton: UIBarButtonItem!
     
     // Image View
-    @IBOutlet weak var imageView: AlphaImageView!
+    @IBOutlet weak var imageView: ZeroAlphaImageView!
     
     // MARK: - Override
     override func viewDidLoad() {
@@ -61,6 +61,7 @@ final class VideoPlayerViewController: UIViewController {
         setuoViewDidApearAnimation()
     }
 }
+
 
 
 // MARK: - @IBActions
@@ -109,6 +110,9 @@ extension VideoPlayerViewController {
         UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
         
         self.present(activityVC, animated: true, completion: nil)
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "VideoPlayerViewController")
     }
     
     @IBAction func videoPlaying(_ sender: UIButton) {
@@ -147,12 +151,14 @@ extension VideoPlayerViewController {
 }
 
 
+
 // MARK: - UIPopoverPresentationControllerDelegate
 extension VideoPlayerViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
     }
 }
+
 
 
 // MARK: - GADBannerViewDelegate
@@ -164,6 +170,7 @@ extension VideoPlayerViewController: GADBannerViewDelegate {
         print(error.localizedDescription)
     }
 }
+
 
 
 // MARK: - Main functions and BasicAdBunnerSetupProtocol

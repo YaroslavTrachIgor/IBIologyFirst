@@ -38,11 +38,38 @@ final class HumanViewVontroller: UIViewController {
     @IBOutlet weak var goToImagesButton: ImageButton!
     @IBOutlet weak var goToVideosButton: VideoButton!
     
-    //MARK: Actions
+    //MARK: LifeCycle
+    override func viewDidAppear(_ animated: Bool) {
+        let views = [notificationuttonOutlet, segmentedControl]
+        viewDidApearAnimationPreview(views as! [UIView], nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        finalView()
+    }
+    
+    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
+    
+    //MARK: Public
+    private func removeNotifications(withIdentifiers identifiers: [String])   {
+        let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+}
+
+
+
+//MARK: - @IBActions
+extension HumanViewVontroller {
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
         FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func editButton(_ sender: Any) {
@@ -91,25 +118,20 @@ final class HumanViewVontroller: UIViewController {
         let fontSize = CGFloat(sender.value)
         
         textView.font = UIFont(name: font!, size: fontSize)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        PushNotifications.setupBasicNotification(body: "Human", inSecond: TimeInterval(timeInterval)) { (success) in
+        AnalyticsManeger.addNotificationAnalytics(article: articleName)
+        PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
         notificationNamePost()
     }
-    
-    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
-    
-    //MARK: Public
-    private func removeNotifications(withIdentifiers identifiers: [String])   {
-        let center = UNUserNotificationCenter.current()
-            center.removePendingNotificationRequests(withIdentifiers: identifiers)
-    }
-    
-    //MARK: Actions
+
     @IBAction func segmentedControAction(_ sender: UISegmentedControl) {
         /// ArticlesViewCountProtocol
         setPopularityVoit()
@@ -140,21 +162,14 @@ final class HumanViewVontroller: UIViewController {
             print("Error")
         }
     }
-    
-    //MARK: LifeCycle
-    override func viewDidAppear(_ animated: Bool) {
-        let views = [notificationuttonOutlet, segmentedControl]
-        viewDidApearAnimationPreview(views as! [UIView], nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finalView()
-    }
 }
 
+
+
+//MARK: - ArticlesViewControllerDelegate
 extension HumanViewVontroller: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Human" } }
+    
     func finalView() {
         view.viewGradient()
         
@@ -163,6 +178,9 @@ extension HumanViewVontroller: ArticlesViewControllerDelegate {
     }
 }
 
+
+
+//MARK: - ArticlesVCconnectionProtocol
 extension HumanViewVontroller: ArticlesVCconnectionProtocol {
     func notificationNamePost() {
         let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.humanVCKey)
@@ -170,6 +188,9 @@ extension HumanViewVontroller: ArticlesVCconnectionProtocol {
     }
 }
 
+
+
+//MARK: - ArticleViewControllerSetupViewPrtocol
 extension HumanViewVontroller: ArticleViewControllerSetupViewPrtocol {
     func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
         UIView.animate(withDuration: 0.4) {
@@ -201,6 +222,9 @@ extension HumanViewVontroller: ArticleViewControllerSetupViewPrtocol {
     }
 }
 
+
+
+//MARK: - Main Functions
 extension HumanViewVontroller {
     private func stepperViewPrefering() {
         stepper.stepperBaics()

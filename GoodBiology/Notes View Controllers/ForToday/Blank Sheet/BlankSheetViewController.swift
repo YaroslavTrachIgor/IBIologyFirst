@@ -101,6 +101,9 @@ extension BlankSheetViewController {
             Headline: \(textField.text!)
             Content: \(textView.text!)
         """, vc: self)
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "BlankSheetViewController")
     }
     
     @IBAction func stepper(_ sender: UIStepper) {

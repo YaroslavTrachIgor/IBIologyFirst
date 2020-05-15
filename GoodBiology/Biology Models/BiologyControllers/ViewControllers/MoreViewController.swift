@@ -73,6 +73,9 @@ final class MoreViewController: UIViewController {
 extension MoreViewController {
     @IBAction func share(_ sender: Any) {
         viewModel.share(self)
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "BiologyBasicsVC")
     }
     
     @IBAction func stepper(_ sender: UIStepper) {

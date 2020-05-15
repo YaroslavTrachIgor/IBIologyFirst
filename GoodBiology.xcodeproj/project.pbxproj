@@ -116,6 +116,15 @@
 		8476128C21E128B10010AEAE /* GradientExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476128B21E128B10010AEAE /* GradientExtensions.swift */; };
 		84778271237EEC52007C1FD8 /* BasicFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84778270237EEC52007C1FD8 /* BasicFonts.swift */; };
 		847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A507E2392E52400223AC7 /* BlankSheetViewController.swift */; };
+		847CFCA4246EAE7700484B54 /* TestTextViewsFontChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCA3246EAE7700484B54 /* TestTextViewsFontChange.swift */; };
+		847CFCA6246EAEA300484B54 /* TestVCMainFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCA5246EAEA300484B54 /* TestVCMainFunctions.swift */; };
+		847CFCA8246EAF0700484B54 /* TestVCPostKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCA7246EAF0700484B54 /* TestVCPostKeys.swift */; };
+		847CFCAA246EAF4800484B54 /* TestVCCancelAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCA9246EAF4800484B54 /* TestVCCancelAction.swift */; };
+		847CFCAC246EAF6C00484B54 /* TestVCDoneTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCAB246EAF6C00484B54 /* TestVCDoneTest.swift */; };
+		847CFCAE246EAF9600484B54 /* TestVCRatesControllerAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCAD246EAF9600484B54 /* TestVCRatesControllerAction.swift */; };
+		847CFCB0246EAFB200484B54 /* TestVCSharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCAF246EAFB200484B54 /* TestVCSharing.swift */; };
+		847CFCB2246EB02900484B54 /* TestVCTrueAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB1246EB02900484B54 /* TestVCTrueAction.swift */; };
+		847CFCB4246EB05900484B54 /* TestVCFalseAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB3246EB05900484B54 /* TestVCFalseAction.swift */; };
 		847E14E8246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */; };
 		847E14EA246C659700C35F9E /* NetworkingViewControllerINActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */; };
 		847E14EC246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */; };
@@ -272,6 +281,7 @@
 		84EA94F7246D3A14000EEB8E /* NoteCopiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F6246D3A14000EEB8E /* NoteCopiedView.swift */; };
 		84EA94F9246D3A44000EEB8E /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F8246D3A44000EEB8E /* CopyButton.swift */; };
 		84EA94FB246D46E5000EEB8E /* AnalyticsManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94FA246D46E5000EEB8E /* AnalyticsManeger.swift */; };
+		84EA94FE246DEFBD000EEB8E /* AlphaImageViewSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94FD246DEFBD000EEB8E /* AlphaImageViewSetupProtocol.swift */; };
 		84EDAB07240D5ADC0063CF6F /* libAppAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB01240D5ADC0063CF6F /* libAppAuth.a */; };
 		84EDAB08240D5ADC0063CF6F /* libGoogleUtilities.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB02240D5ADC0063CF6F /* libGoogleUtilities.a */; };
 		84EDAB09240D5ADC0063CF6F /* libGTMAppAuth.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EDAB03240D5ADC0063CF6F /* libGTMAppAuth.a */; };
@@ -579,6 +589,15 @@
 		8476128B21E128B10010AEAE /* GradientExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientExtensions.swift; sourceTree = "<group>"; };
 		84778270237EEC52007C1FD8 /* BasicFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFonts.swift; sourceTree = "<group>"; };
 		847A507E2392E52400223AC7 /* BlankSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankSheetViewController.swift; sourceTree = "<group>"; };
+		847CFCA3246EAE7700484B54 /* TestTextViewsFontChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTextViewsFontChange.swift; sourceTree = "<group>"; };
+		847CFCA5246EAEA300484B54 /* TestVCMainFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCMainFunctions.swift; sourceTree = "<group>"; };
+		847CFCA7246EAF0700484B54 /* TestVCPostKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCPostKeys.swift; sourceTree = "<group>"; };
+		847CFCA9246EAF4800484B54 /* TestVCCancelAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCCancelAction.swift; sourceTree = "<group>"; };
+		847CFCAB246EAF6C00484B54 /* TestVCDoneTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCDoneTest.swift; sourceTree = "<group>"; };
+		847CFCAD246EAF9600484B54 /* TestVCRatesControllerAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCRatesControllerAction.swift; sourceTree = "<group>"; };
+		847CFCAF246EAFB200484B54 /* TestVCSharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCSharing.swift; sourceTree = "<group>"; };
+		847CFCB1246EB02900484B54 /* TestVCTrueAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCTrueAction.swift; sourceTree = "<group>"; };
+		847CFCB3246EB05900484B54 /* TestVCFalseAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCFalseAction.swift; sourceTree = "<group>"; };
 		847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerWebControllerDelegate.swift; sourceTree = "<group>"; };
 		847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerINActions.swift; sourceTree = "<group>"; };
 		847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManegerViewModel.swift; sourceTree = "<group>"; };
@@ -731,6 +750,7 @@
 		84EA94F6246D3A14000EEB8E /* NoteCopiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCopiedView.swift; sourceTree = "<group>"; };
 		84EA94F8246D3A44000EEB8E /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		84EA94FA246D46E5000EEB8E /* AnalyticsManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManeger.swift; sourceTree = "<group>"; };
+		84EA94FD246DEFBD000EEB8E /* AlphaImageViewSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphaImageViewSetupProtocol.swift; sourceTree = "<group>"; };
 		84EDAB01240D5ADC0063CF6F /* libAppAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libAppAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EDAB02240D5ADC0063CF6F /* libGoogleUtilities.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGoogleUtilities.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EDAB03240D5ADC0063CF6F /* libGTMAppAuth.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGTMAppAuth.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1415,6 +1435,21 @@
 			path = "Blank Sheet";
 			sourceTree = "<group>";
 		};
+		847CFCA2246EAE4400484B54 /* MainTestVCAction */ = {
+			isa = PBXGroup;
+			children = (
+				847CFCA3246EAE7700484B54 /* TestTextViewsFontChange.swift */,
+				847CFCA7246EAF0700484B54 /* TestVCPostKeys.swift */,
+				847CFCA9246EAF4800484B54 /* TestVCCancelAction.swift */,
+				847CFCAB246EAF6C00484B54 /* TestVCDoneTest.swift */,
+				847CFCAD246EAF9600484B54 /* TestVCRatesControllerAction.swift */,
+				847CFCAF246EAFB200484B54 /* TestVCSharing.swift */,
+				847CFCB1246EB02900484B54 /* TestVCTrueAction.swift */,
+				847CFCB3246EB05900484B54 /* TestVCFalseAction.swift */,
+			);
+			path = MainTestVCAction;
+			sourceTree = "<group>";
+		};
 		847E14ED246C72F700C35F9E /* BrowserAnimationManeger */ = {
 			isa = PBXGroup;
 			children = (
@@ -1772,6 +1807,7 @@
 		84A4B3332407153E0013CDB1 /* Tests Review */ = {
 			isa = PBXGroup;
 			children = (
+				84EA94FC246DEE57000EEB8E /* UI */,
 				8461F8C521EB651800586139 /* TestsReviewViewController.swift */,
 			);
 			path = "Tests Review";
@@ -2137,6 +2173,14 @@
 			path = "Review Controllers";
 			sourceTree = "<group>";
 		};
+		84EA94FC246DEE57000EEB8E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				84EA94FD246DEFBD000EEB8E /* AlphaImageViewSetupProtocol.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		84EDAB1E2410199C0063CF6F /* NavigationTitleView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2346,8 +2390,10 @@
 		C46E939E241C4A0500C015CD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				847CFCA2246EAE4400484B54 /* MainTestVCAction */,
 				C46E939F241C4A1500C015CD /* TestViewControllerProtocol.swift */,
 				84A9352224539FB70061EF89 /* UIBarButtonItemTestViewControllerExtension.swift */,
+				847CFCA5246EAEA300484B54 /* TestVCMainFunctions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -3139,10 +3185,12 @@
 			files = (
 				842D691623C42A15009CF7E7 /* ArticlesMenuLabel.swift in Sources */,
 				842D690623C299F9009CF7E7 /* TextViewBackView.swift in Sources */,
+				847CFCB4246EB05900484B54 /* TestVCFalseAction.swift in Sources */,
 				84A78C5A23ED6555002FEADF /* SettingsTableViewControllerExtensions.swift in Sources */,
 				84A3AFC823F6B3D900836400 /* BasicsViewControllerFunctionsProtocol.swift in Sources */,
 				84A3AFD423F830DF00836400 /* ArticelsViewControllerViewSetupProtocol.swift in Sources */,
 				84AB84E3246B3844001B1856 /* HumanData.swift in Sources */,
+				847CFCA8246EAF0700484B54 /* TestVCPostKeys.swift in Sources */,
 				84F5741123F0BCCB00400ED4 /* ChromistaButton.swift in Sources */,
 				84EDAB27241045DA0063CF6F /* BasicsViewControllerSearchButtonBack.swift in Sources */,
 				84A3AFBB23F6190700836400 /* DrawNotesViewController.swift in Sources */,
@@ -3151,6 +3199,7 @@
 				84EDAB20241019AB0063CF6F /* TitleLabelForNavigationBar.swift in Sources */,
 				8450EACE2444998C00091F37 /* ExplanatoryTextView.swift in Sources */,
 				8446584023BFF7FB00DC316E /* FungusesTestsData.swift in Sources */,
+				847CFCAE246EAF9600484B54 /* TestVCRatesControllerAction.swift in Sources */,
 				845EE55D23FA03790036479B /* NetworkingViewControllerUIPickerViewDelegate.swift in Sources */,
 				842D690D23C29D24009CF7E7 /* HelpButton.swift in Sources */,
 				848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */,
@@ -3167,6 +3216,7 @@
 				84A3AFC223F6B0BB00836400 /* ArticlesViewControllerDelegate.swift in Sources */,
 				84A78C7623EF006C002FEADF /* MKMapViewDelegate.swift in Sources */,
 				8497E3552358EBF4003CD4A9 /* WifiConnectionRecognizing.swift in Sources */,
+				847CFCAA246EAF4800484B54 /* TestVCCancelAction.swift in Sources */,
 				843DB984244904AD005D2625 /* PupularInfoViewModel.swift in Sources */,
 				C4C7253821C42EA800F64612 /* TestsMenuViewController.swift in Sources */,
 				84914E2423FE9DE80048B154 /* HideButton.swift in Sources */,
@@ -3180,6 +3230,7 @@
 				84EDAB1D240F08540063CF6F /* UsersIconImageView.swift in Sources */,
 				C458BD7B23AEC09D00D1F108 /* UIStepper.swift in Sources */,
 				84B1D614242D4EF50046C4FB /* MailButton.swift in Sources */,
+				847CFCA6246EAEA300484B54 /* TestVCMainFunctions.swift in Sources */,
 				84914E2023FD63B40048B154 /* SettingsTableViewSaveAllActionsFunctionsProtocol.swift in Sources */,
 				84EDAB2924104A6D0063CF6F /* BasicsThemesViewController.swift in Sources */,
 				84A3AFA023F37D9700836400 /* ForTodayViewControllerMailComposerProtocol.swift in Sources */,
@@ -3334,11 +3385,13 @@
 				84B1D61D242D77D70046C4FB /* SettingsTableViewControllerViewModel.swift in Sources */,
 				C458BD7723AEC05E00D1F108 /* UISegmentedControl.swift in Sources */,
 				C458BD6E23AEBF4200D1F108 /* UIActivityIndicatorView.swift in Sources */,
+				847CFCAC246EAF6C00484B54 /* TestVCDoneTest.swift in Sources */,
 				84A3AFBE23F6ADE700836400 /* BasicsViewControllerViewSetupProtocol.swift in Sources */,
 				84EEBDFB245CD691009A105A /* BasicNotesViewControllerViewModel.swift in Sources */,
 				84751DC02449D700008918F7 /* MoreViewController.swift in Sources */,
 				849C38AE2353B8AB002E007D /* MapDelegate.swift in Sources */,
 				84AB84E4246B3844001B1856 /* FungusesData.swift in Sources */,
+				847CFCA4246EAE7700484B54 /* TestTextViewsFontChange.swift in Sources */,
 				845EE56823FABB6C0036479B /* CardViewController.swift in Sources */,
 				843F81352440985B00A81C09 /* UserActivityType.swift in Sources */,
 				84B1D6592431D5C40046C4FB /* MostPopularArticlesViewControllerViewModel.swift in Sources */,
@@ -3377,6 +3430,7 @@
 				84B2BD84222A5E9800BA41C9 /* LoginButtonAnimatiol.swift in Sources */,
 				84AB84D4246B3833001B1856 /* BiologyBasicsData.swift in Sources */,
 				84036C2D2423E56F00188795 /* MostPopularArticles.swift in Sources */,
+				847CFCB2246EB02900484B54 /* TestVCTrueAction.swift in Sources */,
 				C4C7231721B9B08900F64612 /* MushroomsViewController.swift in Sources */,
 				C43B126A21AB22DC00D58C44 /* ForTodayViewController.swift in Sources */,
 				846D1BA2241D8F2D0036179D /* ReadingOnTimeScoreLabel.swift in Sources */,
@@ -3406,6 +3460,7 @@
 				84A78C7823EF00CA002FEADF /* CLLocationManagerDelegate.swift in Sources */,
 				84A9352324539FB70061EF89 /* UIBarButtonItemTestViewControllerExtension.swift in Sources */,
 				845EE56123FA03E40036479B /* NetworkingViewControllerUIActivityIndicatorView.swift in Sources */,
+				847CFCB0246EAFB200484B54 /* TestVCSharing.swift in Sources */,
 				843DB97B2448CD8F005D2625 /* PopularInfoVC.swift in Sources */,
 				847E14EF246C730100C35F9E /* BrowserAnimationManeger.swift in Sources */,
 				849369352416951A0087019A /* ArticlesReviewViewControllerIconImageView.swift in Sources */,
@@ -3413,6 +3468,7 @@
 				845C4AD6242783B500105D92 /* MyColors.swift in Sources */,
 				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
 				84680C07243901340048A30B /* ArticelsViewControllerViewModel.swift in Sources */,
+				84EA94FE246DEFBD000EEB8E /* AlphaImageViewSetupProtocol.swift in Sources */,
 				C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */,
 				84B1D605242B8BEB0046C4FB /* QuestionLabel.swift in Sources */,
 				C4C7231121B98A1E00F64612 /* VirusesViewController.swift in Sources */,

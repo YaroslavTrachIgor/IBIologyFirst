@@ -80,6 +80,9 @@ extension ThemesMenuTableViewController {
         AudioServicesPlayAlertSound(SystemSoundID(1001))
         
         present(activityVC, animated: true)
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "ThemesMenuTableViewController")
     }
 }
 

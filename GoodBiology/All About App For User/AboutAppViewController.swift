@@ -33,6 +33,9 @@ final class AboutAppViewController: UIViewController {
         
         /// AboutAppVCSetupProtocol
         setupVC()
+        
+        /// For Analytics
+        AnalyticsManeger.addInfoVCctionAnalytics(for: "Main_About_App_ViewController")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -50,8 +53,12 @@ final class AboutAppViewController: UIViewController {
             }
         }
     }
-    
-    // MARK: IBActions
+}
+
+
+
+// MARK: - IBActions
+extension AboutAppViewController {
     @IBAction func contentSizing(_ sender: UIStepper) {
         let font     = contentTextView.font?.fontName
         let fontSize = CGFloat(sender.value)

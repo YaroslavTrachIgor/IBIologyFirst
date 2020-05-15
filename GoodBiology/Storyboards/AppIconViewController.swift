@@ -24,6 +24,9 @@ final class AppIconViewController: UIViewController {
         
         /// AboutAppVCSetupProtocol
         setupVC()
+        
+        /// For Analytics
+        AnalyticsManeger.addInfoVCctionAnalytics(for: "App_Icon_View_Controller")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,15 +39,18 @@ final class AppIconViewController: UIViewController {
             self.backButtonBackground.alpha = alpha
         }
     }
-    
-    // MARK: IBActions
-    @available(iOS 13.0, *)
+}
+
+
+
+// MARK: IBActions
+extension AppIconViewController {
     @IBAction func back(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func share(_ sender: Any) {
-        let activityVC = UIActivityViewController(activityItems: [imageView], applicationActivities: nil)
+        let activityVC = UIActivityViewController(activityItems: [imageView.image], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
         
             UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor

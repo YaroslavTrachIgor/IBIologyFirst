@@ -188,6 +188,9 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         AudioServicesPlayAlertSound(SystemSoundID(1001))
         
         self.present(activityVC, animated: true, completion: nil)
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "MapViewController")
     }
     
     private func switchingViewPrefering() {

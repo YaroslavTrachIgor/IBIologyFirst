@@ -55,11 +55,38 @@ final class VirusesViewController: UIViewController {
     @IBOutlet weak var goToImagesButton: ImageButton!
     @IBOutlet weak var goToVideosButton: VideoButton!
     
-    //MARK: Actions
+    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
+    
+    //MARK: Public
+    private func removeNotifications(withIdentifiers identifiers: [String])   {
+        let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+    
+    //MARK: LifeCycle
+    override func viewDidAppear(_ animated: Bool) {
+        let views = [notificationOutletButton, segmentedControl]
+        viewDidApearAnimationPreview(views as! [UIView], nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        finalView()
+    }
+}
+
+
+
+//MARK: - @IBActions
+extension VirusesViewController {
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
         FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func `switch`(_ sender: UISwitch) {
@@ -94,6 +121,9 @@ final class VirusesViewController: UIViewController {
         let fontSize    = CGFloat(sender.value)
         
         textView.font   = UIFont(name: font!, size: fontSize)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     @IBAction func settings(_ sender: Any) {
@@ -150,35 +180,21 @@ final class VirusesViewController: UIViewController {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
+        AnalyticsManeger.addNotificationAnalytics(article: "Viruses")
         PushNotifications.setupBasicNotification(body: "Viruses", inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
         notificationNamePost()
     }
-    
-    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
-    
-    //MARK: Public
-    private func removeNotifications(withIdentifiers identifiers: [String])   {
-        let center = UNUserNotificationCenter.current()
-            center.removePendingNotificationRequests(withIdentifiers: identifiers)
-    }
-    
-    //MARK: LifeCycle
-    override func viewDidAppear(_ animated: Bool) {
-        let views = [notificationOutletButton, segmentedControl]
-        viewDidApearAnimationPreview(views as! [UIView], nil)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finalView()
-    }
 }
 
+
+
+//MARK: - ArticlesViewControllerDelegate
 extension VirusesViewController: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Viruses" } }
+    
     func finalView() {
         view.viewGradient()
         
@@ -188,6 +204,9 @@ extension VirusesViewController: ArticlesViewControllerDelegate {
     }
 }
 
+
+
+//MARK: - ArticlesVCconnectionProtocol
 extension VirusesViewController: ArticlesVCconnectionProtocol {
     func notificationNamePost() {
         let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.virusesVCKey)
@@ -195,6 +214,9 @@ extension VirusesViewController: ArticlesVCconnectionProtocol {
     }
 }
 
+
+
+//MARK: - ArticleViewControllerSetupViewPrtocol
 extension VirusesViewController: ArticleViewControllerSetupViewPrtocol {
     func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
         UIView.animate(withDuration: 0.4) {
@@ -226,6 +248,9 @@ extension VirusesViewController: ArticleViewControllerSetupViewPrtocol {
     }
 }
 
+
+
+//MARK: - Main Functions
 extension VirusesViewController {
     private func stepperViewPrefering() {
         stepper.stepperBaics()

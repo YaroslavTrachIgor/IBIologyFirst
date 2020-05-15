@@ -44,11 +44,32 @@ final class ArchaeaViewController: UIViewController {
         viewDidApearAnimationPreview(views as! [UIView], nil)
     }
     
-    //MARK: Actions
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        finalView()
+    }
+    
+    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
+    
+    //MARK: Public
+    private func removeNotifications(withIdentifiers identifiers: [String])   {
+        let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+}
+
+
+
+//MARK: - @IBActions
+extension ArchaeaViewController {
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
         FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func editSiwtchButton(_ sender: Any) {
@@ -99,6 +120,9 @@ final class ArchaeaViewController: UIViewController {
         let fontSize        = CGFloat(sender.value)
         
         basicsTextView.font = UIFont(name: font!, size: fontSize)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     //MARK: Actions
@@ -129,32 +153,23 @@ final class ArchaeaViewController: UIViewController {
         }
     }
     
-    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
-    
-    //MARK: Public
-    private func removeNotifications(withIdentifiers identifiers: [String])   {
-        let center = UNUserNotificationCenter.current()
-            center.removePendingNotificationRequests(withIdentifiers: identifiers)
-    }
-    
     //MARK: Actions
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        PushNotifications.setupBasicNotification(body: "Archaea", inSecond: TimeInterval(timeInterval)) { (success) in
+        AnalyticsManeger.addNotificationAnalytics(article: articleName)
+        PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
         notificationNamePost()
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        finalView()
-    }
 }
 
-@available(iOS 13.0, *)
+
+
+//MARK: - ArticlesViewControllerDelegate
 extension ArchaeaViewController: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Archaea" } }
+    
     func finalView() {
         view.viewGradient()
         
@@ -163,6 +178,8 @@ extension ArchaeaViewController: ArticlesViewControllerDelegate {
     }
 }
 
+
+//MARK: - ArticlesVCconnectionProtocol
 extension ArchaeaViewController: ArticlesVCconnectionProtocol {
     func notificationNamePost() {
         let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.archaeaVCKey)
@@ -170,7 +187,9 @@ extension ArchaeaViewController: ArticlesVCconnectionProtocol {
     }
 }
 
-@available(iOS 13.0, *)
+
+
+//MARK: - ArticleViewControllerSetupViewPrtocol
 extension ArchaeaViewController: ArticleViewControllerSetupViewPrtocol {
     func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
         UIView.animate(withDuration: 0.4) {
@@ -201,7 +220,9 @@ extension ArchaeaViewController: ArticleViewControllerSetupViewPrtocol {
     }
 }
 
-@available(iOS 13.0, *)
+
+
+//MARK: - Main Functions
 extension ArchaeaViewController {
     private func stepperViewPrefering() {
         stepper.stepperBaics()

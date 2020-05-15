@@ -36,7 +36,7 @@ extension ForTodayViewController: UISearchBarDelegate {
             
             if response == nil {
                 DispatchQueue.global(qos: .utility).async {
-                    FastAlert.showBasic(title: errorWord, message: nil, vc: self)
+                    FastAlert.showBasic(title: BasicTestWords.errorWord, message: nil, vc: self)
                 }
             }
             else {

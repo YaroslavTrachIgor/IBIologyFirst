@@ -80,11 +80,8 @@ final class ChomistaViewController: UIViewController {
                 let delay: Double = Double((index)) * 0.2
                 
                 UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                    UIApplication.shared.beginIgnoringInteractionEvents()
                     view?.alpha = 1
-                }) { (_) in
-                    UIApplication.shared.endIgnoringInteractionEvents()
-                }
+                })
             }
         }
     }
@@ -112,6 +109,9 @@ final class ChomistaViewController: UIViewController {
         
         UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
         present(acVC, animated: true)
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func settingsButtonAction(_ sender: Any) {
@@ -148,6 +148,9 @@ final class ChomistaViewController: UIViewController {
         textView.font           = UIFont(name: font!, size: fontSize)
         historyTextView.font    = UIFont(name: font1!, size: fontSize)
         structureTextView.font  = UIFont(name: font2!, size: fontSize)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     @IBAction func contentSwitch(_ sender: UISegmentedControl) {
@@ -226,6 +229,8 @@ extension ChomistaViewController: ChomistaViewControllerViewSetupProtocol {
 }
 
 extension ChomistaViewController: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Chromista" } }
+    
     func finalView() {
         shadowsSetup()
         cornersSetup()

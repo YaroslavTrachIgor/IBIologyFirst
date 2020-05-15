@@ -11,12 +11,14 @@ import GoogleSignIn
 import UIKit
 
 extension LoginViewController: GIDSignInDelegate {
-    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if error != nil { return }
         
         makeGoButtonEnabledWithAnimation()
         showWelcomeAlert(message: "Dear \(user.profile.name ?? "User")")
+        
+        /// For Analytics
+        AnalyticsManeger.addLoginOptionsAnalytics(for: "Google")
     }
     
     private func makeGoButtonEnabledWithAnimation() {

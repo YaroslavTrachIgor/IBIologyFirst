@@ -14,7 +14,7 @@ class FastAlert {
     
     class func showBasic(title: String?, message: String?, vc: UIViewController) {
         let alertVC = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: okWord, style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: BasicTestWords.okWord, style: .cancel, handler: nil)
         
         alertVC.view.tintColor = .biologyGreenColor
         

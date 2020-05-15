@@ -74,6 +74,9 @@ extension MenuCollectionViewCell {
     
     private func setupNotification() {
         PushNotifications.setupBasicNotification(body: headerLabel.text!, inSecond: TimeInterval(timeInterval)) { (_) in }
+        
+        ///For Analytics
+        AnalyticsManeger.addNotificationAnalytics(article: headerLabel.text! + "_CollectionView")
     }
     
     private func showNotificateionAlert() {

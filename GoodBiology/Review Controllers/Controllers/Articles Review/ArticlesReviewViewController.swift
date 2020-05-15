@@ -72,22 +72,33 @@ final class ArticlesReviewViewController: UIViewController {
     @IBAction func shareButton(_ sender: Any) {
         viewModel.presentActivityVC(text: contentTextView.text!, self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "ArticlesReviewViewController")
     }
     
     @IBAction func sending(_ sender: UIButton) {
         showAndSetupMailComposer()
         sender.flash()
+        
+        /// For Analytics
+        AnalyticsManeger.addSupportActionEmailAnalytics(for: "ArticlesReviewViewController_email")
     }
     
     @IBAction func sendingWithMessages(_ sender: UIButton) {
         showAndSetupMessageComposer()
         sender.flash()
+        
+        /// For Analytics
+        AnalyticsManeger.addSupportActionMessageAnalytics(for: "ArticlesReviewViewController_meassege")
     }
     
     @IBAction func faqSite(_ sender: Any) {
          showSafariVC(for: "https://zhbr282.wixsite.com/goodbiology-policy")
     }
 }
+
+
 
 // MARK: MFMailComposeViewControllerDelegate
 extension ArticlesReviewViewController: MFMailComposeViewControllerDelegate {
@@ -111,6 +122,8 @@ extension ArticlesReviewViewController: MFMailComposeViewControllerDelegate {
         controller.dismiss(animated: true, completion: nil)
     }
 }
+
+
 
 // MARK: ReviewVCMailComposeVCSetupProtocol
 extension ArticlesReviewViewController: ReviewVCMailComposeVCSetupProtocol {

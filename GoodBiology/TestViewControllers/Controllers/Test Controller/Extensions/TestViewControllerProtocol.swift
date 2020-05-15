@@ -20,7 +20,7 @@ extension TestViewController: TestViewControllerProtocol {
     func otherUIthings() {
         stepperOutlet.stepperBaics()
         shareButton.isEnabled = false
-        answerLabel.text = answerWord
+        answerLabel.text = BasicTestWords.answerWord
     }
     
     func systemBackPrefering() {

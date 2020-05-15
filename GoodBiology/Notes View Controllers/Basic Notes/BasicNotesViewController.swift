@@ -121,6 +121,9 @@ extension BasicNotesViewController {
         } else {
             FastAlert.showBasic(title: "Sorry", message: "But one of the components is empty", vc: self)
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "BasicNotesViewController")
     }
     
     @IBAction func search(_ sender: Any) {

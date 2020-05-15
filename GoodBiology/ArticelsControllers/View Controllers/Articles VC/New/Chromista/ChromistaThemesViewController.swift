@@ -84,8 +84,8 @@ struct ChromistaData {
     static var chromistaIndex = 0
 }
 
-class ChromistaThemesViewController: UIViewController, ArticlesViewControllerDelegate {
-
+class ChromistaThemesViewController: UIViewController {
+    
     @IBOutlet weak var stepperButtonBack:   ChromistaActionButtonsBack!
     @IBOutlet weak var stepperButton:       ChromistaButton!
     
@@ -103,11 +103,7 @@ class ChromistaThemesViewController: UIViewController, ArticlesViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       finalView()
-        
-        googleAdBannerView.adUnitID = "ca-app-pub-8702634561077907/8292481193"
-        googleAdBannerView.rootViewController = self
-        googleAdBannerView.load(GADRequest())
+        finalView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -121,14 +117,6 @@ class ChromistaThemesViewController: UIViewController, ArticlesViewControllerDel
                 view?.alpha = 1
             })
         }
-    }
-    
-    func finalView() {
-        shadowsSetup()
-        buttonTintSetup()
-        contentSetup()
-        cornersSetup()
-        alpha()
     }
     
     private func cornersSetup() {
@@ -158,14 +146,26 @@ class ChromistaThemesViewController: UIViewController, ArticlesViewControllerDel
         stepperButton.tintColor = .biologyGreenColor
     }
     
+    private func setupGoogleAdBannerView() {
+        googleAdBannerView.adUnitID = "ca-app-pub-8702634561077907/8292481193"
+        googleAdBannerView.rootViewController = self
+        googleAdBannerView.load(GADRequest())
+    }
+    
     @IBAction func stepperAction(_ sender: UIStepper) {
         let font       = contentTextView.font?.fontName
         let fontSize   = CGFloat(sender.value)
         
-        contentTextView.font           = UIFont(name: font!, size: fontSize)
+        contentTextView.font = UIFont(name: font!, size: fontSize)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     @IBAction func shareContent(_ sender: Any) {
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func settingsButtonAction(_ sender: Any) {
@@ -184,5 +184,18 @@ extension ChromistaThemesViewController: GADBannerViewDelegate {
     
     func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
         print("\(error.localizedDescription)")
+    }
+}
+
+extension ChromistaThemesViewController: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Chromista Theme" } }
+    
+    func finalView() {
+        setupGoogleAdBannerView()
+        shadowsSetup()
+        buttonTintSetup()
+        contentSetup()
+        cornersSetup()
+        alpha()
     }
 }

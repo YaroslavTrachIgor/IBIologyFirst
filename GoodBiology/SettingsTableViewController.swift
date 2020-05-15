@@ -43,9 +43,7 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
     @IBOutlet weak var ageTextField:            SettingsTextField!
     @IBOutlet weak var secondEmailTextField:    SettingsTextField!
     @IBOutlet weak var countryTextField:        SettingsTextField!
-    @IBOutlet weak var birthdayTextField:       SettingsTextField! {
-        didSet { birthdayTextField.keyboardType = .numberPad }
-    }
+    @IBOutlet weak var birthdayTextField:       SettingsTextField! { didSet { birthdayTextField.keyboardType = .numberPad } }
     @IBOutlet weak var phoneNumberTextField:    SettingsTextField!
     
     //TableView

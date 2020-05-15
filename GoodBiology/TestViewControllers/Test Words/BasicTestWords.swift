@@ -8,15 +8,17 @@
 
 import Foundation
 
-public let trueWord  = "True"
-public let falseWord = "False"
+struct BasicTestWords {
+    static public let trueWord  = "True"
+    static public let falseWord = "False"
 
-public let okWord    = "OK"
-public let errorWord = "Error"
-
-public let itsTrueWord = "It's True"
-
-public let answerWord = "Answer"
-
-public let sorryWord = "Sorry"
-public let goodWord  = "Good"
+    static public let okWord    = "OK"
+    static public let errorWord = "Error"
+   
+    static public let itsTrueWord = "It's True"
+   
+    static public let answerWord = "Answer"
+   
+    static public let sorryWord = "Sorry"
+    static public let goodWord  = "Good"
+}

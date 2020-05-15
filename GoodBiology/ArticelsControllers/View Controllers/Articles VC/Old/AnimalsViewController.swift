@@ -53,11 +53,31 @@ final class AnimalsViewController: UIViewController {
         googleAdBannerView.load(GADRequest())
     }
     
-    //MARK: Actions
+    override func viewDidAppear(_ animated: Bool) {
+        let views = [notificationButtonOutlet, segmentedControl]
+        viewDidApearAnimationPreview(views as! [UIView], nil)
+    }
+    
+    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
+    
+    //MARK: Public
+    private func removeNotifications(withIdentifiers identifiers: [String])   {
+        let center = UNUserNotificationCenter.current()
+            center.removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+}
+
+
+
+//MARK: - @IBActions
+extension AnimalsViewController {
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
         FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func editButton(_ sender: Any) {
@@ -92,6 +112,9 @@ final class AnimalsViewController: UIViewController {
         let fontSize = CGFloat(sender.value)
         
         textView.font = UIFont(name: font!, size: fontSize)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     @IBAction func settingsButton(_ sender: Any) {
@@ -109,19 +132,12 @@ final class AnimalsViewController: UIViewController {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        PushNotifications.setupBasicNotification(body: "Animals", inSecond: TimeInterval(timeInterval)) { (success) in
+        AnalyticsManeger.addNotificationAnalytics(article: articleName)
+        PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
         notificationNamePost()
-    }
-    
-    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
-    
-    //MARK: Public
-    private func removeNotifications(withIdentifiers identifiers: [String])   {
-        let center = UNUserNotificationCenter.current()
-            center.removePendingNotificationRequests(withIdentifiers: identifiers)
     }
     
     //MARK: Actions
@@ -151,14 +167,14 @@ final class AnimalsViewController: UIViewController {
             print ("Error")
         }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        let views = [notificationButtonOutlet, segmentedControl]
-        viewDidApearAnimationPreview(views as! [UIView], nil)
-    }
 }
 
+
+
+//MARK: - ArticlesViewControllerDelegate
 extension AnimalsViewController: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Animals" } }
+    
     func finalView() {
         view.viewGradient()
         
@@ -167,12 +183,18 @@ extension AnimalsViewController: ArticlesViewControllerDelegate {
     }
 }
 
+
+
+//MARK: - ArticlesVCconnectionProtocol
 extension AnimalsViewController: ArticlesVCconnectionProtocol {
     func notificationNamePost() {
         let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.animalsVCKey)
         NotificationCenter.default.post(name: notificationName, object: nil)
     }
 }
+
+
+
 
 extension AnimalsViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
@@ -184,6 +206,9 @@ extension AnimalsViewController: GADBannerViewDelegate {
     }
 }
 
+
+
+//MARK: - ArticleViewControllerSetupViewPrtocol
 extension AnimalsViewController: ArticleViewControllerSetupViewPrtocol {
     func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
         UIView.animate(withDuration: 0.4) {
@@ -214,7 +239,9 @@ extension AnimalsViewController: ArticleViewControllerSetupViewPrtocol {
     }
 }
 
-@available(iOS 13.0, *)
+
+
+//MARK: - Main Functions
 extension AnimalsViewController {
     private func stepperViewPrefering() {
         stepper.stepperBaics()

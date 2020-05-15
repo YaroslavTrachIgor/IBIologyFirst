@@ -19,7 +19,8 @@ struct LoginViewControllerKeys {
     static let goButtonKey = "goButtonKey"
 }
 
-@available(iOS 13.0, *)
+
+//MARK: Main Class
 class LoginViewController: UIViewController {
     
     // UIButtons
@@ -120,33 +121,7 @@ class LoginViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.lightContent
-    }
-    
-    @IBAction func loginButton(_ sender: Any) {
-        authenticationWithTouchID()
-    }
-    
-    @IBAction func signInWithEmail(_ sender: Any) {
-        let authUI = FUIAuth.defaultAuthUI()
-        
-        guard authUI != nil else { return }
-        authUI?.delegate = self
-        let authVC = authUI!.authViewController()
-        present(authVC, animated: true)
-    }
-    
-    @IBAction func googleSignOut(_ sender: UIBarButtonItem) {
-        GIDSignIn.sharedInstance()?.signOut()
-        
-        if goButton.backgroundColor == .costomGoogleColor {
-            FastAlert.showBasic(title: "Operation complete", message: "You are logged out of your Google account.", vc: self)
-        } else {
-            FastAlert.showBasic(title: errorWord, message: "You did not enter your Google account", vc: self)
-        }
-        
-        /// Setup standart goButton
-        uiLogOut()
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -156,8 +131,46 @@ class LoginViewController: UIViewController {
     }
 }
 
-// Setup Google Sign In
-@available(iOS 13.0, *)
+
+
+//MARK: - @IBActions
+extension LoginViewController {
+    @IBAction func loginButton(_ sender: Any) {
+        authenticationWithTouchID()
+        
+        /// For Analytics
+        AnalyticsManeger.addLoginOptionsAnalytics(for: "TouchID")
+    }
+    
+    @IBAction func signInWithEmail(_ sender: Any) {
+        let authUI = FUIAuth.defaultAuthUI()
+        
+        guard authUI != nil else { return }
+        authUI?.delegate = self
+        let authVC = authUI!.authViewController()
+        present(authVC, animated: true)
+        
+        /// For Analytics
+        AnalyticsManeger.addLoginOptionsAnalytics(for: "Email")
+    }
+    
+    @IBAction func googleSignOut(_ sender: UIBarButtonItem) {
+        GIDSignIn.sharedInstance()?.signOut()
+        
+        if goButton.backgroundColor == .costomGoogleColor {
+            FastAlert.showBasic(title: "Operation complete", message: "You are logged out of your Google account.", vc: self)
+        } else {
+            FastAlert.showBasic(title: BasicTestWords.errorWord, message: "You did not enter your Google account", vc: self)
+        }
+        
+        /// Setup standart goButton
+        uiLogOut()
+    }
+}
+
+
+
+//MARK: - Setup Google Sign In
 extension LoginViewController {
     func setupGoogleSignInButton() {
         GIDSignIn.sharedInstance()?.presentingViewController = navigationController
@@ -165,30 +178,39 @@ extension LoginViewController {
     }
 }
 
-@available(iOS 13.0, *)
+
+//MARK: - Setup AppleButton
 extension LoginViewController {
     @objc func didTapAppleButton() {
         let provider = ASAuthorizationAppleIDProvider()
         let request  = provider.createRequest()
         
         DispatchQueue.global(qos: .userInteractive).async {
-            request.requestedScopes = [.fullName, .email]
+            self.viewModel.setupAuthorizationAppleIDRequest(request: request)
             
             let controller = BasicASAuthorizationController(authorizationRequests: [request])
             
             controller.delegate = self
             controller.presentationContextProvider = self
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addLoginOptionsAnalytics(for: "Apple")
     }
 }
 
-@available(iOS 13.0, *)
+
+
+//MARK: - Setup NavigationController
 extension LoginViewController {
     func setupNavController() {
         viewModel.setupNavController(navigationController!)
     }
 }
 
+
+
+//MARK: - FUIAuthDelegate
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         guard error != nil else {

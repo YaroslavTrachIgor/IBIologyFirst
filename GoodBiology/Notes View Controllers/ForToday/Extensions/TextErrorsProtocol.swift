@@ -19,19 +19,19 @@ extension ForTodayViewController: TextErrorsProtocol {
             try textErrorSetup()
           
         } catch ForTodayErrors.Errors.textViewIsntReadyForSave {
-            FastAlert.showBasic(title: errorWord, message: "Your note content is empty.", vc: self)
+            FastAlert.showBasic(title: BasicTestWords.errorWord, message: "Your note content is empty.", vc: self)
             
         } catch ForTodayErrors.Errors.textFieldIsntReadyForSave {
-            FastAlert.showBasic(title: errorWord, message: "Your note title is empty.", vc: self)
+            FastAlert.showBasic(title: BasicTestWords.errorWord, message: "Your note title is empty.", vc: self)
             
         } catch ForTodayErrors.Errors.textViewContentBackHidden {
-            FastAlert.showBasic(title: errorWord, message: "Your note content is empty.", vc: self)
+            FastAlert.showBasic(title: BasicTestWords.errorWord, message: "Your note content is empty.", vc: self)
             
         } catch ForTodayErrors.Errors.textFieldContentBackHidden {
-            FastAlert.showBasic(title: errorWord, message: "Your note title is empty.", vc: self)
+            FastAlert.showBasic(title: BasicTestWords.errorWord, message: "Your note title is empty.", vc: self)
             
         } catch {
-            FastAlert.showBasic(title: sorryWord, message: "The application has an unknown problem.", vc: self)
+            FastAlert.showBasic(title: BasicTestWords.sorryWord, message: "The application has an unknown problem.", vc: self)
         }
     }
 }

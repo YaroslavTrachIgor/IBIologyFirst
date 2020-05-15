@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MessageUI
 
 protocol SettingsTableViewControllerViewModelProtocol {
     func prepareinputAccessoryViewForTextView(textField: UITextField, toolBar: BasicToolbar)
@@ -190,5 +191,12 @@ class SettingsTableViewControllerViewModel: SettingsTableViewControllerViewModel
                 }
             }
         }
+    }
+    
+    func presentMessageComposer(composer: MFMailComposeViewController) {
+        composer.setToRecipients(["zhbr282@gmail.com"])
+        composer.setSubject("Tests Review")
+        composer.setMessageBody("Here is my problem or review on this app article or articles", isHTML: false)
+        composer.view.tintColor = .biologyGreenColor
     }
 }

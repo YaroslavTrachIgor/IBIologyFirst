@@ -97,6 +97,11 @@ final class ForTodayViewController: UIViewController, NCWidgetProviding {
         static let lastSaveLabelKey     = "lastSaveLabelKey"
     }
     
+    //MARK: - UserPropertieNames
+    struct UserPropertieNames {
+        static let forTodayVC_UserPropertieName = "For_Today_VC_Action"
+    }
+    
     //MARK: Public
     static public var textViewText = ""
     
@@ -162,21 +167,32 @@ extension ForTodayViewController {
     }
     
     @IBAction func copy(sender: UIButton) {
-        Analytics.logEvent("note_copy_button_pressed", parameters: nil)
         viewModel.copyFunction(inputTextView.text!, noteCopiedView)
+        
+        /// For Analytics
+        AnalyticsManeger.addAnalyticsObject(name: "note_copy_button_pressed")
     }
     
     @IBAction func mapViewShowingButton(_ sender: Any) {
         showMapView()
+        
+        /// For Analytics
+        AnalyticsManeger.addUserPropertie(name: "show_Map_Action", forName: UserPropertieNames.forTodayVC_UserPropertieName)
     }
     
     @IBAction func pickerViewShwingButtonAction(_ sender: Any) {
         presentPickerViewBack()
+        
+        /// For Analytics
+        AnalyticsManeger.addUserPropertie(name: "base_NotesVariants_Action", forName: UserPropertieNames.forTodayVC_UserPropertieName)
     }
     
     @IBAction func forTodayNot(_ sender: UIButton) {
         forTodayNotShow()
         sender.pulsate()
+        
+        /// Analytics
+        AnalyticsManeger.addNotificationAnalytics(article: "For_Today_VC")
     }
     
     @IBAction func trash(_ sender: Any) {
@@ -192,6 +208,9 @@ extension ForTodayViewController {
         }
         timeButtonText()
         dateViewShowingAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addUserPropertie(name: "choose_Dates_Action", forName: UserPropertieNames.forTodayVC_UserPropertieName)
     }
     
     @IBAction func changeTimeWithDatePicker(_ sender: UIDatePicker) {
@@ -202,6 +221,9 @@ extension ForTodayViewController {
         let dateValue = dateFormatter.string(from: sender.date)
         
         viewModel.setTextViewText(inputTextView, textViewText: "\(text) ( \(dateValue) )")
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: "For_TodayVC")
     }
     
     @IBAction func mapTypeViewShowing(_ sender: Any) {
@@ -243,5 +265,8 @@ extension ForTodayViewController {
     
     @IBAction func helpButton(_ sender: Any) {
         showMailComposer()
+        
+        /// For Analytics
+        AnalyticsManeger.addSupportActionEmailAnalytics(for: "ForTodayVC")
     }
 }

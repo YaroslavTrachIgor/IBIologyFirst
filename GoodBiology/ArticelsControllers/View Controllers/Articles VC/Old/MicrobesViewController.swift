@@ -56,11 +56,19 @@ final class MicrobesViewController: UIViewController {
         viewDidApearAnimationPreview(views as! [UIView], nil)
     }
     
-    //MARK: Actions
+    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
+}
+
+
+
+extension MicrobesViewController {
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
         FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func `switch`(_ sender: UISwitch) {
@@ -95,6 +103,9 @@ final class MicrobesViewController: UIViewController {
         let fontSize = CGFloat(sender.value)
         
         textView.font = UIFont(name: font!, size: fontSize)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     @IBAction func settings(_ sender: Any) {
@@ -143,17 +154,21 @@ final class MicrobesViewController: UIViewController {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        PushNotifications.setupBasicNotification(body: "Microbes", inSecond: TimeInterval(timeInterval)) { (success) in
+        AnalyticsManeger.addNotificationAnalytics(article: articleName)
+        PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
         notificationNamePost()
     }
-    
-    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
 }
 
+
+
+//MARK: - ArticlesViewControllerDelegate
 extension MicrobesViewController: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Microbes" } }
+    
     func finalView() {
         view.viewGradient()
         
@@ -162,12 +177,18 @@ extension MicrobesViewController: ArticlesViewControllerDelegate {
     }
 }
 
+
+
+//MARK: - ArticlesVCconnectionProtocol
 extension MicrobesViewController: ArticlesVCconnectionProtocol {
     func notificationNamePost() {
         let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.microbesVCKey)
         NotificationCenter.default.post(name: notificationName, object: nil)
     }
 }
+
+
+
 
 extension MicrobesViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
@@ -179,6 +200,9 @@ extension MicrobesViewController: GADBannerViewDelegate {
     }
 }
 
+
+
+//MARK: - ArticleViewControllerSetupViewPrtocol
 extension MicrobesViewController: ArticleViewControllerSetupViewPrtocol {
     func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
         UIView.animate(withDuration: 0.4) {
@@ -213,6 +237,9 @@ extension MicrobesViewController: ArticleViewControllerSetupViewPrtocol {
     }
 }
 
+
+
+//MARK: - Main Functions
 extension MicrobesViewController {
     private func stepperViewPrefering() {
         stepper.stepperShadow()

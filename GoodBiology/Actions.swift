@@ -62,6 +62,9 @@ extension SettingsTableViewController {
             Phone: \(phoneNumberTextField.text!)
         """
         viewModel.share(item: shareContent, vc: self)
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "SettingsTableViewController")
     }
     
     @IBAction func questions(_ sender: Any) {
@@ -74,12 +77,18 @@ extension SettingsTableViewController {
         let url = "https://zhbr282.wixsite.com/goodbiology-policy"
         
         showSafariVC(for: url)
+        
+        /// For Analytics
+        AnalyticsManeger.addSafariFAQOpenAnalytics(for: "User(Settings)_View_Controller")
     }
     
     @IBAction func site(_ sender: Any) {
         let url = "https://zhbr282.wixsite.com/ibiology-official"
         
         showSafariVC(for: url)
+        
+        /// For Analytics
+        AnalyticsManeger.addSafariMainSyteOpenAnalytics(for: "User(Settings)_View_Controller")
     }
     
     @IBAction func changeName(_ sender: UITextField) {

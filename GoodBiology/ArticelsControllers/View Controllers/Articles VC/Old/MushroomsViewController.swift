@@ -11,7 +11,6 @@ import UserNotifications
 import AudioToolbox
 import Social
 
-
 final class MushroomsViewController: UIViewController {
     
     //MARK: IBOutlets
@@ -50,11 +49,19 @@ final class MushroomsViewController: UIViewController {
         viewDidApearAnimationPreview(views as! [UIView], nil)
     }
     
-    //MARK: Actions
+    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
+}
+
+
+//MARK:
+extension MushroomsViewController {
     @IBAction func sharing(_ sender: Any) {
         guard let content = textView.text else { return }
         FastActivityVC.show(item: content, vc: self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: articleName)
     }
     
     @IBAction func `switch`(_ sender: UISwitch) {
@@ -89,6 +96,9 @@ final class MushroomsViewController: UIViewController {
         let fontSize = CGFloat(sender.value)
         
         textView.font = UIFont(name: font!, size: fontSize)
+        
+        /// Analytics
+        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
     }
     
     @IBAction func settings(_ sender: Any) {
@@ -137,19 +147,21 @@ final class MushroomsViewController: UIViewController {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
-        PushNotifications.setupBasicNotification(body: "Funguses", inSecond: TimeInterval(timeInterval)) { (success) in
+        AnalyticsManeger.addNotificationAnalytics(article: articleName)
+        PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
         sender.notificationButtonBasicFunctions(view)
         notificationNamePost()
     }
-    
-    deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
 }
 
 
 
+//MARK: - ArticlesViewControllerDelegate
 extension MushroomsViewController: ArticlesViewControllerDelegate {
+    var articleName: String { get { return "Funguses" } }
+    
     func finalView() {
         view.viewGradient()
         
@@ -160,6 +172,7 @@ extension MushroomsViewController: ArticlesViewControllerDelegate {
 
 
 
+//MARK: - ArticlesVCconnectionProtocol
 extension MushroomsViewController: ArticlesVCconnectionProtocol {
     func notificationNamePost() {
         let notificationName = Notification.Name(rawValue: ArticelsViewControllerKeys.fungusesVCKey)
@@ -168,7 +181,7 @@ extension MushroomsViewController: ArticlesVCconnectionProtocol {
 }
 
 
-
+//MARK: - ArticleViewControllerSetupViewPrtocol
 extension MushroomsViewController: ArticleViewControllerSetupViewPrtocol {
     func viewDidApearAnimationPreview(_ views: [UIView], _ bonusAnomation: (() -> Void)?) {
         UIView.animate(withDuration: 0.4) {
@@ -206,6 +219,7 @@ extension MushroomsViewController: ArticleViewControllerSetupViewPrtocol {
 
 
 
+//MARK: - Main Functions
 extension MushroomsViewController {
     private func removeNotifications(withIdentifiers identifiers: [String])   {
         let center = UNUserNotificationCenter.current()

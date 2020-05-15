@@ -12,30 +12,6 @@ import AudioToolbox
 import SafariServices
 import Combine
 
-protocol AlphaImageViewSetupProtocol {
-    func setupImageView()
-}
-
-class AlphaImageView: UIImageView {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupImageView()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        setupImageView()
-    }
-}
-
-extension AlphaImageView: AlphaImageViewSetupProtocol {
-    func setupImageView() {
-        alpha = 0
-    }
-}
-
 // MARK: Main Class
 final class TestsReviewViewController: UIViewController {
     
@@ -57,8 +33,8 @@ final class TestsReviewViewController: UIViewController {
     @IBOutlet weak var sendButton: ContactButton!
     
     // ImageViews
-    @IBOutlet weak var image1: AlphaImageView!
-    @IBOutlet weak var image2: AlphaImageView!
+    @IBOutlet weak var image1: ZeroAlphaImageView!
+    @IBOutlet weak var image2: ZeroAlphaImageView!
     
     //MARK: LifeCycle
     override func viewDidLoad() {
@@ -134,15 +110,24 @@ final class TestsReviewViewController: UIViewController {
     
     @IBAction func faqSite(_ sender: Any) {
          showSafariVC(for: "https://zhbr282.wixsite.com/goodbiology-policy")
+        
+        /// For Analytics
+        AnalyticsManeger.addSafariFAQOpenAnalytics(for: "TestsReviewVC")
     }
     
     @IBAction func shareButton(_ sender: UIBarButtonItem) {
         viewModel.presentActivityVC(textViewText: contentTextView.text!, labelText: headLineTextView.text!, self)
         shareButton.shareAudio()
+        
+        /// For Analytics
+        AnalyticsManeger.addShareActionAnalytics(for: "TestsReviewVC")
     }
     
     @IBAction func contact(_ sender: Any) {
         showAndSetupMailComposer()
+        
+        /// For Analytics
+        AnalyticsManeger.addSupportActionEmailAnalytics(for: "TestsReviewViewController_email")
     }
 }
 
@@ -234,9 +219,9 @@ extension TestsReviewViewController: ReviewVCMailComposeVCSetupProtocol {
     func showAndSetupMailComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
         
-        let composer = BasicMFMailComposeViewController(rootViewController: self)
+        let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
-        viewModel.mailComposerSetup(composer: composer)
+        viewModel.presentMessageComposer(composer: composer)
         present(composer, animated: true)
     }
 }
