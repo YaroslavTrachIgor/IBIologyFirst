@@ -104,6 +104,9 @@ extension PlantsViewController {
         segmentedControlOutlet.isHidden     = !isOn
         notificationButtonOutlet.isHidden   = !isOn
         switchTextView.text                 = isOn == true ? "Hide  diffrent functions" : "Show diffrent functions"
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: articleName)
     }
     
     @IBAction func settingsButtonAction(_ sender: UIBarButtonItem) {

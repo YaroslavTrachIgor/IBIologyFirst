@@ -105,6 +105,9 @@ extension AnimalsViewController {
             switchTextView.text                 = "Show diffrent functions"
             stepperBackgroundView.isHidden      = true
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: articleName)
     }
     
     @IBAction func stepper(_ sender: UIStepper) {

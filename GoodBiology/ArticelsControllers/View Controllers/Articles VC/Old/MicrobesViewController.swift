@@ -88,6 +88,9 @@ extension MicrobesViewController {
             switchTextView.text                 = "Show diffrent functions"
             stepperBackgroundView.isHidden      = true
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: articleName)
     }
     
     @IBAction func editButton(_ sender: Any) {

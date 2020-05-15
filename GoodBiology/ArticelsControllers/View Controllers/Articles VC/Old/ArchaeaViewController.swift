@@ -99,6 +99,9 @@ extension ArchaeaViewController {
             switchTextView.text             = "Show diffrent functions"
             stepperBackgroundView.isHidden  = true
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: articleName)
     }
     
     @IBAction func settingsButton(_ sender: Any) {

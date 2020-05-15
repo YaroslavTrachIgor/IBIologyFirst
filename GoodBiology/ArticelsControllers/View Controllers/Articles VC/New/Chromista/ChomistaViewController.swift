@@ -136,6 +136,9 @@ final class ChomistaViewController: UIViewController {
             stepperView.isHidden                = true
             switchTextView.text                 = "Show diffrent functions"
         }
+        
+        /// For Analytics
+        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: articleName)
     }
     
     @IBAction func stepperAction(_ sender: UIStepper) {
