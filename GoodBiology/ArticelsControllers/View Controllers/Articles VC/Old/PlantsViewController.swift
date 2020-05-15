@@ -77,7 +77,6 @@ extension PlantsViewController {
     @IBAction func cleakHear(_ sender: Any) {
         showBunner()
     }
-    
 
     @IBAction func editButton(_ sender: UIBarButtonItem) {
         sender.viewShowingWithAnimation(animating: switchView, main: view, nil)
