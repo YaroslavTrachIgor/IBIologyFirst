@@ -13,7 +13,7 @@ struct MenuCollectionViewConterollerVCsPresentKeys {
     static let mainArticlesMenuVCpopKey = Notification.Name("popToRootArticlesMenuVCKey")
 }
 
-class MenuCollectionViewConteroller: UICollectionViewController {
+final class MenuCollectionViewConteroller: UICollectionViewController {
     
     // Content Properties
     private var articleHeader = MenuCollectionViewConterollerContent.headerContentArray
@@ -78,6 +78,12 @@ extension MenuCollectionViewConteroller: UISearchResultsUpdating {
 
 // MARK: - Main Functions
 extension MenuCollectionViewConteroller {
+    
+    /// Setup MenuCollectionView Cell
+    /// - Parameters:
+    ///   - cell: My Cell
+    ///   - textViewContent: preview content
+    ///   - labelContent: header content
     private func setupCell(cell: MenuCollectionViewCell, textViewContent: String, labelContent: String) {
         // MARK: - Setup headerLabel
         setupCellLabel(cell: cell, text: labelContent)
@@ -97,28 +103,29 @@ extension MenuCollectionViewConteroller {
 
     
     private func setupCellTextView(cell: MenuCollectionViewCell, text: String) {
+        let textView = cell.cellTextView!
         
         /// Set text
-        cell.cellTextView.text = text
+        textView.text = text
         
         /// Set cornerRadius
-        cell.cellTextView.layer.cornerRadius = 14
+        textView.layer.cornerRadius = 14
         
         /// Set font
-        cell.cellTextView.font = UIFont(name: "AvenirNext-Medium", size: 12)
+        textView.font = UIFont(name: "AvenirNext-Medium", size: 12)
         
         /// Set text Color
-        cell.cellTextView.textColor = #colorLiteral(red: 0.1831960106, green: 0.198350324, blue: 0.2203657771, alpha: 1)
+        textView.textColor = #colorLiteral(red: 0.1831960106, green: 0.198350324, blue: 0.2203657771, alpha: 1)
         
         /// Set Properties
-        cell.cellTextView.isEditable = false
-        cell.cellTextView.isSelectable = true
+        textView.isEditable = false
+        textView.isSelectable = true
         
         /// Set Shadow
-        cell.cellTextView.textViewShadow()
+        textView.textViewShadow()
     }
     
-    
+    //MARK: setup setup SearchBar
     private func setupSearchBar(_ searchBar: UISearchBar) {
         let searchField = searchBar.value(forKey: "searchField") as? UITextField
 
@@ -132,7 +139,7 @@ extension MenuCollectionViewConteroller {
         }
     }
     
-    
+    //MARK: setup Navigation Controller
     private func setupNavController() {
         setupSearchBar(searchController.searchBar)
         collectionViewMenu.refreshControl = collectionViewMenuRefreshControl
@@ -141,7 +148,7 @@ extension MenuCollectionViewConteroller {
     }
     
     
-    private func setupRows() -> Int{
+    private func setupRows() -> Int {
         if isSearching {
             return searchedArticle.count
         } else {
@@ -149,7 +156,10 @@ extension MenuCollectionViewConteroller {
         }
     }
     
-    
+    /// Setup Collection View Cell
+    /// - Parameters:
+    ///   - collectionView: collectionView that wiil be 'cellForItemAt' use
+    ///   - indexPath: thing for UICollectionViewCell
     private func setupCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as! MenuCollectionViewCell
         UIView.animate(withDuration: 0.4) {
@@ -159,7 +169,6 @@ extension MenuCollectionViewConteroller {
                 self.setupCell(cell: cell, textViewContent: self.articleContent[indexPath.row], labelContent: self.articleHeader[indexPath.row])
             }
         }
-        
         return cell
     }
 }

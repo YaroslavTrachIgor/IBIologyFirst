@@ -12,7 +12,6 @@ import SafariServices
 final class SafariViewController: UIViewController {
     
     //MARK: IBOutlets
-    
     // UIViews
     @IBOutlet weak var contentTextView1Back: UIView!
     @IBOutlet weak var contentTextView2Back: UIView!
@@ -27,6 +26,7 @@ final class SafariViewController: UIViewController {
     
     @IBOutlet weak var goToContentAppButton: UIButton!
     
+    //MARK: AppleButtonSettings
     var appleButton = AppleButtonSettings()
     
     //MARK: LifeCycle

@@ -125,6 +125,8 @@
 		847CFCB0246EAFB200484B54 /* TestVCSharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCAF246EAFB200484B54 /* TestVCSharing.swift */; };
 		847CFCB2246EB02900484B54 /* TestVCTrueAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB1246EB02900484B54 /* TestVCTrueAction.swift */; };
 		847CFCB4246EB05900484B54 /* TestVCFalseAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB3246EB05900484B54 /* TestVCFalseAction.swift */; };
+		847CFCB624709BE900484B54 /* LoginViewControllerMainFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB524709BE900484B54 /* LoginViewControllerMainFunctions.swift */; };
+		847CFCB824709D8500484B54 /* FUIAuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB724709D8500484B54 /* FUIAuthDelegate.swift */; };
 		847E14E8246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */; };
 		847E14EA246C659700C35F9E /* NetworkingViewControllerINActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */; };
 		847E14EC246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */; };
@@ -598,6 +600,8 @@
 		847CFCAF246EAFB200484B54 /* TestVCSharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCSharing.swift; sourceTree = "<group>"; };
 		847CFCB1246EB02900484B54 /* TestVCTrueAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCTrueAction.swift; sourceTree = "<group>"; };
 		847CFCB3246EB05900484B54 /* TestVCFalseAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCFalseAction.swift; sourceTree = "<group>"; };
+		847CFCB524709BE900484B54 /* LoginViewControllerMainFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerMainFunctions.swift; sourceTree = "<group>"; };
+		847CFCB724709D8500484B54 /* FUIAuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUIAuthDelegate.swift; sourceTree = "<group>"; };
 		847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerWebControllerDelegate.swift; sourceTree = "<group>"; };
 		847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerINActions.swift; sourceTree = "<group>"; };
 		847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManegerViewModel.swift; sourceTree = "<group>"; };
@@ -2579,6 +2583,8 @@
 				C4F49B442416D953002A2B17 /* LoginViewControllerSystemSignInButtonsSetupProtocol.swift */,
 				84B1D60C242D097C0046C4FB /* LoginViewControllerGoogleDelegateSetupProtocol.swift */,
 				84B1D655242FFEDC0046C4FB /* AuthenticationWithTouchIDProtocol.swift */,
+				847CFCB524709BE900484B54 /* LoginViewControllerMainFunctions.swift */,
+				847CFCB724709D8500484B54 /* FUIAuthDelegate.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -3345,6 +3351,7 @@
 				8450EADF24479DED00091F37 /* ReviewControllerViewSetupProtocol.swift in Sources */,
 				8450EACC2444993A00091F37 /* SkipButton.swift in Sources */,
 				84B1D5FF242A72E90046C4FB /* SafariViewControllerExtensions.swift in Sources */,
+				847CFCB624709BE900484B54 /* LoginViewControllerMainFunctions.swift in Sources */,
 				84A3AFB823F6140A00836400 /* DrawView.swift in Sources */,
 				84A3AF9A23F37C2900836400 /* ForTodayViewControllerNotificationProcesesSetupProtocol.swift in Sources */,
 				C4F49B3D2416D88A002A2B17 /* LoginViewControllerAppleSignInButtonSetupProtocol.swift in Sources */,
@@ -3467,6 +3474,7 @@
 				84AB84DE246B3844001B1856 /* ArchaeaData.swift in Sources */,
 				845C4AD6242783B500105D92 /* MyColors.swift in Sources */,
 				841199042344AC40004B0DAF /* MenuProtocol.swift in Sources */,
+				847CFCB824709D8500484B54 /* FUIAuthDelegate.swift in Sources */,
 				84680C07243901340048A30B /* ArticelsViewControllerViewModel.swift in Sources */,
 				84EA94FE246DEFBD000EEB8E /* AlphaImageViewSetupProtocol.swift in Sources */,
 				C458BD7D23AEC0C100D1F108 /* UISwitch.swift in Sources */,

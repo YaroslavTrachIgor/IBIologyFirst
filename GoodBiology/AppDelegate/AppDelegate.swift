@@ -29,7 +29,11 @@ import Firebase
     }()
 }
 
+
+//MARK: Main Functions
 extension AppDelegate {
+    
+    //MARK: Did Finish Launching With Options
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         setupDidFinishLaunchingMethods()
         FirebaseApp.configure()
@@ -37,14 +41,19 @@ extension AppDelegate {
         return true
     }
     
+    //MARK: Application open url options
+    /// [UIApplication.OpenURLOptionsKey : Any]
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
     }
     
+    //MARK: Application open url sourceApplication
+    /// sourceApplication
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
       return GIDSignIn.sharedInstance().handle(url)
     }
     
+    //MARK: Application continue userActivity
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         switch userActivity.activityType {
         case UserActivityType.openPlantsArticle.rawValue:
@@ -59,9 +68,11 @@ extension AppDelegate {
         return true
     }
     
+    //MARK: Application Will Terminate
     func applicationWillTerminate(_ application: UIApplication) {
         self.saveContext()
     }
+    
     
     // MARK: - Core Data Saving support
     func saveContext () {

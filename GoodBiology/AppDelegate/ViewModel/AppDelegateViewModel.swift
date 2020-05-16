@@ -10,15 +10,19 @@ import Foundation
 import UIKit
 
 class AppDelegateViewModel {
+    
+    //MARK: setup UIWindow Tint Color
     func setUIWindowTintColor(_ window: UIWindow) {
         window.tintColor = .biologyGreenColor
     }
     
+    //MARK: setup Navigation bar
     func setupNavBar() {
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         UINavigationBar.appearance().shadowImage = UIImage()
     }
     
+    //MARK: setup Tab Bar
     func setupTabBar() {
         
         /// Hide Separator
@@ -32,6 +36,7 @@ class AppDelegateViewModel {
         UITabBar.appearance().viewSystemBack()
     }
     
+    //MARK: setup UITabBarItem
     func setupUITabBarItem(font: UIFont) {
         let font: UIFont = font
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)

@@ -41,23 +41,13 @@ final class AboutAppViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.4) {
-            let views = [self.contentBackground, self.contentTextView, self.appIconShowerButtonBack, self.stepperViewShowerButtonBack]
-            
-            for (index, view) in views.enumerated() {
-                let delay: Double = Double((index)) * 0.2
-                
-                UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                    view?.alpha = 1
-                })
-            }
-        }
+        viewDidApearAnimationSetup()
     }
 }
 
 
 
-// MARK: - IBActions
+// MARK: - @IBActions
 extension AboutAppViewController {
     @IBAction func contentSizing(_ sender: UIStepper) {
         let font     = contentTextView.font?.fontName
@@ -82,5 +72,24 @@ extension AboutAppViewController {
     @IBAction func testSharing(_ sender: Any) {
         fastActivityVC(item: AboutAppStringInformation.testInfo)
         shareButton.shareAudio()
+    }
+}
+
+
+
+// MARK: - Main Functions
+extension AboutAppViewController {
+    func viewDidApearAnimationSetup() {
+        UIView.animate(withDuration: 0.4) {
+            let views = [self.contentBackground, self.contentTextView, self.appIconShowerButtonBack, self.stepperViewShowerButtonBack]
+            
+            for (index, view) in views.enumerated() {
+                let delay: Double = Double((index)) * 0.2
+                
+                UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+                    view?.alpha = 1
+                })
+            }
+        }
     }
 }

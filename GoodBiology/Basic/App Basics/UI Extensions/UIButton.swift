@@ -38,6 +38,9 @@ extension UIButton {
         self.setTitleColor(.white, for: .normal)
         
         self.alpha = 0
+        
+        /// Set Shadow
+        buttonsShadows()
     }
     
     public func imageButton() {

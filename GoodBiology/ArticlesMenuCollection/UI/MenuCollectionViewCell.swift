@@ -44,6 +44,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
 // MARK: - @IBAction
 extension MenuCollectionViewCell {
     @IBAction func addToNotes(sender: UIButton) {
+        
         /// Push Notifications
         setupNotification()
         showNotificateionAlert()
@@ -56,29 +57,35 @@ extension MenuCollectionViewCell {
 // MARK: - MenuCollectionViewCellProtocol extension
 extension MenuCollectionViewCell: MenuCollectionViewCellProtocol {
     func setupCollectionViewCell() {
-        setupShadow()
-        setupCorners()
+        setupShadow(self)
+        setupCorners(self)
     }
 }
 
 
+
+// MARK: - MenuCollectionViewCellProtocol extension for setup cell
+extension MenuCollectionViewCellProtocol {
+    func setupCorners(_ cell: MenuCollectionViewCell) {
+        cell.layer.cornerRadius = 12
+    }
+    
+    func setupShadow(_ cell: MenuCollectionViewCell) {
+        cell.viewShadows()
+    }
+}
+
+
+
 // MARK: - Main Functions
 extension MenuCollectionViewCell {
-    private func setupCorners() {
-        layer.cornerRadius = 12
-    }
-    
-    private func setupShadow() {
-        viewShadows()
-    }
-    
     private func setupNotification() {
         PushNotifications.setupBasicNotification(body: headerLabel.text!, inSecond: TimeInterval(timeInterval)) { (_) in }
         
         ///For Analytics
         AnalyticsManeger.addNotificationAnalytics(article: headerLabel.text! + "_CollectionView")
     }
-    
+
     private func showNotificateionAlert() {
         let notificationAlert = UIAlertController(title: nil, message: "A reminder for an \(headerLabel.text!) article was set !", preferredStyle: .alert)
         let notificationAlertAction = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
@@ -91,7 +98,7 @@ extension MenuCollectionViewCell {
             self.window?.rootViewController?.present(notificationAlert, animated: true)
         }
     }
-    
+
     private func notificationCellAnimation() {
         /// Use for cycle to maka animation greener
         for _ in 0...5 { addToNotesButton.addNotificationButtonPulse(view: self) }

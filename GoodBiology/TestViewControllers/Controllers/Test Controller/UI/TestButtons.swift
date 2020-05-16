@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+//MARK: - TestButtonDelegate Protocol
+protocol TestButtonDelegate {
+    func setup()
+}
+
 class TestButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -16,35 +21,42 @@ class TestButton: UIButton {
     }
 }
 
+
+
+//MARK: - TestButtonDelegate
 extension TestButton: TestButtonDelegate {
     func setup() {
-        testButtonsSetup()
+        setupTitle()
+        setupCorners()
+        setupBorders()
+        setupBackground()
+        setupShadow()
     }
 }
 
-protocol TestButtonDelegate {
-    func setup()
-}
 
-extension UIButton {
-    func testButtonsSetup() {
-        self.setTitleColor(.biologyGreenColor, for: .normal)
-        self.titleLabel?.font       = UIFont(name: BasicFonts.boldFont, size: 15)
-        
-        if #available(iOS 13.0, *) {
-            self.backgroundColor        =  .systemBackground
-        }
-        
-        self.titleLabel?.textColor  =  .biologyGreenColor
-        
-        self.layer.borderColor      =  #colorLiteral(red: 0.03378171101, green: 0.2793948948, blue: 0.1025686339, alpha: 1)
-        self.layer.borderWidth      =  2.55
-        
-        layer.cornerRadius  = CGFloat(14)
-        
-        titleLabel?.labelShadow()
-        titleLabel?.layer.shadowOpacity = Float(0.7)
-        
+
+//MARK: - Main Functions
+extension TestButton {
+    private func setupTitle() {
+        setTitleColor(.biologyGreenColor, for: .normal)
+        titleLabel?.font = UIFont(name: BasicFonts.boldFont, size: 13.3)
+    }
+    
+    private func setupCorners() {
+        layer.cornerRadius = 15
+    }
+    
+    private func setupBorders() {
+        layer.borderColor = UIColor.biologyGreenColor.cgColor
+        layer.borderWidth = 2.7
+    }
+    
+    private func setupBackground() {
+        backgroundColor =  .systemBackground
+    }
+    
+    private func setupShadow() {
         testButtonsShadows()
     }
 }

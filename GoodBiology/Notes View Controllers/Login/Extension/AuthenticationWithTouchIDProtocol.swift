@@ -21,46 +21,40 @@ protocol AuthenticationWithTouchIDProtocol {
 extension LoginViewController: AuthenticationWithTouchIDProtocol {
     func authenticationWithTouchID() {
         let localAuthenticationContext = LAContext()
-            localAuthenticationContext.localizedFallbackTitle = "Use Passcode"
-        
+        localAuthenticationContext.localizedFallbackTitle = "Use Passcode"
         var authError: NSError?
         let reasonString = "To access the secure data"
         
         if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
-
             localAuthenticationContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reasonString) { success, evaluateError in
                 
                 if success {
                     DispatchQueue.main.async {
                         let authenticationViewModel = AuthenticationWithTouchIDViewModel()
-                        
                         authenticationViewModel.setupSucsessVariant(loginButton: self.loginButton, goButton: self.goButton)
+                        
+                        /// Setup Audio
                         AudioServicesPlayAlertSound(SystemSoundID(1001))
                     }
                 } else {
                     DispatchQueue.main.async {
                         let authenticationViewModel = AuthenticationWithTouchIDViewModel()
-                        
                         authenticationViewModel.setupFaildVariant(loginButton: self.loginButton, goButton: self.goButton)
                         
+                        /// Setup Audio
                         AudioServicesPlayAlertSound(SystemSoundID(1033))
                     }
-                    
-                    guard let error = evaluateError else {
-                        return
-                    }
-                    
+                    guard let error = evaluateError else { return }
                     print(self.evaluateAuthenticationPolicyMessageForLA(errorCode: error._code))
                     //MARK: If you have choosen the 'Fallback authentication mechanism selected' (LAError.userFallback). Handle gracefully
                 }
             }
         } else {
-            guard let error = authError else {
-                return
-            }
+            guard let error = authError else { return }
             //MARK: Show appropriate alert if biometry/TouchID/FaceID is lockout or not enrolled
             print(self.evaluateAuthenticationPolicyMessageForLA(errorCode: error.code))
             
+            /// Setup Audio
             AudioServicesPlayAlertSound(SystemSoundID(1033))
         }
     }
