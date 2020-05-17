@@ -10,21 +10,6 @@ import UIKit
 import AudioToolbox
 import GoogleMobileAds
 
-extension TestsMenuViewController: PlantsViewControllerAdMobBannerSetupProtocol {
-    func showBunner() {
-        if interstitial.isReady {
-          interstitial.present(fromRootViewController: self)
-        }
-    }
-    
-    func setupBanner() {
-        let request = GADRequest()
-        
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/3602528777")
-        interstitial.load(request)
-    }
-}
-
 final class TestsMenuViewController: UIViewController {
     
     // Gradient
@@ -44,13 +29,13 @@ final class TestsMenuViewController: UIViewController {
     @IBOutlet weak var archaeaView:     TestIconBackView!
     
     // Text View
-    @IBOutlet weak var plantsTextView:       UITextView!
-    @IBOutlet weak var animalsTextView:      UITextView!
-    @IBOutlet weak var manTextView:          UITextView!
-    @IBOutlet weak var microbesTextView:     UITextView!
-    @IBOutlet weak var virusesTextView:      UITextView!
-    @IBOutlet weak var mushroomsTextView:    UITextView!
-    @IBOutlet weak var archaeaTextView:      UITextView!
+    @IBOutlet weak var plantsTextView:    TestPreviewTextView!
+    @IBOutlet weak var animalsTextView:   TestPreviewTextView!
+    @IBOutlet weak var manTextView:       TestPreviewTextView!
+    @IBOutlet weak var microbesTextView:  TestPreviewTextView!
+    @IBOutlet weak var virusesTextView:   TestPreviewTextView!
+    @IBOutlet weak var mushroomsTextView: TestPreviewTextView!
+    @IBOutlet weak var archaeaTextView:   TestPreviewTextView!
     
     // UILabel
     @IBOutlet weak var plantsTitle:     TestIconLabel!
@@ -132,9 +117,7 @@ extension TestsMenuViewController: MenuViewControllerDelegate {
     func basicViewProccesPrefering() {
         view.viewGradient()
         
-        textPrefering()
         preferingSearchContrller()
-        viewsShadowsPrefering()
         systemColorsPrefeing()
         refreshControlPrefering()
         searchBarButtonPrefering()
@@ -150,46 +133,8 @@ extension TestsMenuViewController {
     
     //MARK: DarkMode methods Prefering
     private func systemColorsPrefeing() {
-        systemTextViewColorsPrefering()
         systemViewPrefering()
         systemScrollViewPrefering()
-    }
-    
-    //MARK: UITextView
-    private func systemTextViewColorsPrefering() {
-        viewSystemBack()
-        systemTextColor()
-        textViewShadowSetup()
-    }
-    
-    private func viewSystemBack() {
-        viewModel.viewSystemBack(plantsTextView)
-        viewModel.viewSystemBack(animalsTextView)
-        viewModel.viewSystemBack(virusesTextView)
-        viewModel.viewSystemBack(microbesTextView)
-        viewModel.viewSystemBack(manTextView)
-        viewModel.viewSystemBack(mushroomsTextView)
-        viewModel.viewSystemBack(archaeaTextView)
-    }
-    
-    private func systemTextColor() {
-        viewModel.systemTextColor(plantsTextView)
-        viewModel.systemTextColor(animalsTextView)
-        viewModel.systemTextColor(virusesTextView)
-        viewModel.systemTextColor(microbesTextView)
-        viewModel.systemTextColor(manTextView)
-        viewModel.systemTextColor(mushroomsTextView)
-        viewModel.systemTextColor(archaeaTextView)
-    }
-    
-    private func textViewShadowSetup() {
-        viewModel.textViewShadowSetup(plantsTextView)
-        viewModel.textViewShadowSetup(animalsTextView)
-        viewModel.textViewShadowSetup(virusesTextView)
-        viewModel.textViewShadowSetup(microbesTextView)
-        viewModel.textViewShadowSetup(manTextView)
-        viewModel.textViewShadowSetup(mushroomsTextView)
-        viewModel.textViewShadowSetup(archaeaTextView)
     }
     
     private func systemScrollViewPrefering() {
@@ -211,26 +156,6 @@ extension TestsMenuViewController {
     private func preferingSearchContrller() {
         searchController.searchResultsUpdater = self
         viewModel.preferingSearchContrller(vc: self, searchController: searchController)
-    }
-    
-    private func viewsShadowsPrefering() {
-        viewModel.viewsShadowsPrefering(plantsTextView)
-        viewModel.viewsShadowsPrefering(animalsTextView)
-        viewModel.viewsShadowsPrefering(microbesTextView)
-        viewModel.viewsShadowsPrefering(manTextView)
-        viewModel.viewsShadowsPrefering(virusesTextView)
-        viewModel.viewsShadowsPrefering(archaeaTextView)
-        viewModel.viewsShadowsPrefering(mushroomsTextView)
-    }
-    
-    private func textPrefering() {
-        viewModel.textViewFontSetup(plantsTextView)
-        viewModel.textViewFontSetup(animalsTextView)
-        viewModel.textViewFontSetup(microbesTextView)
-        viewModel.textViewFontSetup(manTextView)
-        viewModel.textViewFontSetup(virusesTextView)
-        viewModel.textViewFontSetup(archaeaTextView)
-        viewModel.textViewFontSetup(mushroomsTextView)
     }
     
     func setupNavigationController() {
@@ -330,5 +255,23 @@ extension TestsMenuViewController {
     
     @objc func fungusesViewAlphaUpdate(notification: NSNotification) {
         viewModel.setAlphaForViews(view: fungusesView, label: fungusesLabel, textView: mushroomsTextView)
+    }
+}
+
+
+
+//MARK: PlantsViewControllerAdMobBannerSetupProtocol
+extension TestsMenuViewController: PlantsViewControllerAdMobBannerSetupProtocol {
+    func showBunner() {
+        if interstitial.isReady {
+          interstitial.present(fromRootViewController: self)
+        }
+    }
+    
+    func setupBanner() {
+        let request = GADRequest()
+        
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/3602528777")
+        interstitial.load(request)
     }
 }

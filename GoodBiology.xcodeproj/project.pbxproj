@@ -127,6 +127,7 @@
 		847CFCB4246EB05900484B54 /* TestVCFalseAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB3246EB05900484B54 /* TestVCFalseAction.swift */; };
 		847CFCB624709BE900484B54 /* LoginViewControllerMainFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB524709BE900484B54 /* LoginViewControllerMainFunctions.swift */; };
 		847CFCB824709D8500484B54 /* FUIAuthDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB724709D8500484B54 /* FUIAuthDelegate.swift */; };
+		847CFCBA2471A29A00484B54 /* TestPreviewTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCB92471A29A00484B54 /* TestPreviewTextView.swift */; };
 		847E14E8246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */; };
 		847E14EA246C659700C35F9E /* NetworkingViewControllerINActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */; };
 		847E14EC246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */; };
@@ -602,6 +603,7 @@
 		847CFCB3246EB05900484B54 /* TestVCFalseAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCFalseAction.swift; sourceTree = "<group>"; };
 		847CFCB524709BE900484B54 /* LoginViewControllerMainFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerMainFunctions.swift; sourceTree = "<group>"; };
 		847CFCB724709D8500484B54 /* FUIAuthDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FUIAuthDelegate.swift; sourceTree = "<group>"; };
+		847CFCB92471A29A00484B54 /* TestPreviewTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPreviewTextView.swift; sourceTree = "<group>"; };
 		847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerWebControllerDelegate.swift; sourceTree = "<group>"; };
 		847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerINActions.swift; sourceTree = "<group>"; };
 		847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManegerViewModel.swift; sourceTree = "<group>"; };
@@ -2569,6 +2571,7 @@
 			children = (
 				C4EE987B23EC6D1B00FBF1E1 /* TestIconLabel.swift */,
 				C4EE987D23EC6D5200FBF1E1 /* TestIconBackView.swift */,
+				847CFCB92471A29A00484B54 /* TestPreviewTextView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -3367,6 +3370,7 @@
 				844E0D05223243C800933ABC /* AppIconViewController.swift in Sources */,
 				84EDAB22241019C90063CF6F /* SubTitleLabelForNavigationBar.swift in Sources */,
 				AAEC22D821C67A3200FF69FE /* BasicsModel.swift in Sources */,
+				847CFCBA2471A29A00484B54 /* TestPreviewTextView.swift in Sources */,
 				845FE7442322F45400B36E76 /* ArticleOnlineImagesViewController.swift in Sources */,
 				C4C7230F21B968F500F64612 /* AnimalsViewController.swift in Sources */,
 				84A4B374240A9D9D0013CDB1 /* TrashFunction.swift in Sources */,

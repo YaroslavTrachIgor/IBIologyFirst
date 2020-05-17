@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import GoodBiology
 
 class GoodBiologyTests: XCTestCase {
 
@@ -20,10 +19,14 @@ class GoodBiologyTests: XCTestCase {
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertTrue(square(num: 3) == 9)
     }
 
+    
+    private func square(num: Int) -> Int {
+        return num * num
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

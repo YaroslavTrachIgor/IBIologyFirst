@@ -146,17 +146,12 @@
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Interesting and hard test about Plants" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-PG-SdB">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Interesting and hard test about Plants" translatesAutoresizingMaskIntoConstraints="NO" id="nc9-PG-SdB" customClass="TestPreviewTextView" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="44" width="333" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiW-rw-BDC">
                                                 <rect key="frame" x="8" y="8" width="333" height="67"/>
@@ -195,17 +190,12 @@
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Animals" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uAy-dG-V2a">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Animals" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uAy-dG-V2a" customClass="TestPreviewTextView" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="44" width="333" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBV-TE-KoP">
                                                 <rect key="frame" x="8" y="8" width="333" height="67"/>
@@ -244,17 +234,12 @@
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Man" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-oy-yvt">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Man" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rbs-oy-yvt" customClass="TestPreviewTextView" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="44" width="333" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJk-U2-c2n">
                                                 <rect key="frame" x="8" y="8" width="333" height="67"/>
@@ -293,17 +278,12 @@
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Microbes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-5Y-qrd">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Microbes" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cgl-5Y-qrd" customClass="TestPreviewTextView" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="44" width="333" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qot-gR-bGg">
                                                 <rect key="frame" x="8" y="8" width="333" height="67"/>
@@ -342,17 +322,12 @@
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Viruses" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-WN-1W0">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Viruses" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-WN-1W0" customClass="TestPreviewTextView" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="44" width="329" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDc-6L-Kc8">
                                                 <rect key="frame" x="8" y="4" width="329" height="75"/>
@@ -391,17 +366,12 @@
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Archaea" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-Yi-gCT">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Archaea" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Tu-Yi-gCT" customClass="TestPreviewTextView" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="44" width="333" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rS-A9-JAQ">
                                                 <rect key="frame" x="8" y="8" width="333" height="67"/>
@@ -440,17 +410,12 @@
                                                 <color key="textColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Funguses" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="seg-xh-rAD">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Interesting and hard test about Funguses" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="seg-xh-rAD" customClass="TestPreviewTextView" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="44" width="333" height="31"/>
                                                 <color key="backgroundColor" red="0.92147842639999999" green="0.92147842639999999" blue="0.92147842639999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                        <integer key="value" value="12"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="og3-4l-rO5">
                                                 <rect key="frame" x="8" y="8" width="333" height="67"/>
