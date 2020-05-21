@@ -33,6 +33,9 @@ class TestScores {
 
 final class TestViewController: UIViewController {
     
+    // Presenter
+    var presenter: TestVCPresenter = TestVCPresenter()
+    
     // Google ADMob Banner
     var interstitial: GADInterstitial!
     
@@ -99,23 +102,5 @@ final class TestViewController: UIViewController {
         
         /// Show Ads Bunner
         showBunner()
-    }
-}
-
-
-
-//MARK: PlantsViewControllerAdMobBannerSetupProtocol
-extension TestViewController: PlantsViewControllerAdMobBannerSetupProtocol {
-    func showBunner() {
-        if interstitial.isReady {
-          interstitial.present(fromRootViewController: self)
-        }
-    }
-    
-    func setupInterstitial() {
-        let request = GADRequest()
-        
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/2094984293")
-        interstitial.load(request)
     }
 }

@@ -16,19 +16,16 @@ extension TestViewController {
         trueShow()
         trueAudio()
         
+        /// Animation
         sender.flash()
     }
     
     private func trueShow() {
-        answerLabel.text        = BasicTestWords.trueWord
-        answerLabel.textColor   = .biologyGreenColor
-        
-        TestScores.shared.testScore += 10
-    
+        presenter.trueActionFunction(answerLabel: answerLabel)
         falseAndTrueButtonsForAnswersPrefering()
     }
     
     private func trueAudio() {
-        AudioServicesPlayAlertSound(SystemSoundID(1008))
+        presenter.trueAudio()
     }
 }

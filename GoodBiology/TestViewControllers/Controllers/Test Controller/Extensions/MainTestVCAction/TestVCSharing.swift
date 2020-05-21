@@ -22,21 +22,15 @@ extension TestViewController {
     
     //MARK: - Private
     private func shareAudio() {
-        AudioServicesPlayAlertSound(SystemSoundID(1001))
+        presenter.shareAudio()
     }
     
     private func share() {
-        let string = navigationItem.title
-        
-        fastActivityVCforTest(item: string ?? .init())
+        let title = navigationItem.title
+        fastActivityVCforTest(item: title ?? .init())
     }
     
     private func fastActivityVCforTest(item: String) {
-        let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
-                activityVC.popoverPresentationController?.sourceView = self.view
-            
-        UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
-            
-        present(activityVC, animated: true)
+        presenter.fastActivityVCforTest(item: item, for: self)
     }
 }

@@ -27,7 +27,6 @@ extension TestViewController: TestViewControllerProtocol {
     //MARK: - SystemBack Prefering
     func systemBackPrefering() {
         view.viewSystemBack()
-        
         stepperView.viewSystemBack()
     }
     

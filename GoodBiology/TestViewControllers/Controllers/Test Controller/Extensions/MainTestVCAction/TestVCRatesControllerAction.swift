@@ -14,7 +14,7 @@ extension TestViewController {
     
     //MARK: Private
     private func showRatesController() {
-        if navigationItem.title == "Viruses Test" {
+        if title == "Viruses Test" {
             RateManager.showRatesController()
         }
     }

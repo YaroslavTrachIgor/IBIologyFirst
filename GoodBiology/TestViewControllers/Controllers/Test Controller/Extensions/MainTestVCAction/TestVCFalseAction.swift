@@ -16,17 +16,16 @@ extension TestViewController {
         falseShow()
         falseAudio()
         
+        /// Animation
         sender.flash()
     }
     
     private func falseShow() {
-        answerLabel.text        = BasicTestWords.falseWord
-        answerLabel.textColor   = falseTint
-        
+        presenter.falseActionSetup(answerLabel: answerLabel)
         falseAndTrueButtonsForAnswersPrefering()
     }
     
     private func falseAudio() {
-        AudioServicesPlayAlertSound(SystemSoundID(1009))
+        presenter.falseAudio()
     }
 }

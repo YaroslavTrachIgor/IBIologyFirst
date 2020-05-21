@@ -24,13 +24,12 @@ extension TestViewController {
     }
     
     private func endTestDone() {
-        TestScores.shared.testScore = 0
         TestScores.shared.doneButtonEnabled = false
         
         setDoneButtonEnabled()
     }
     
     private func setDoneButtonEnabled() {
-        doneButton.isEnabled = TestScores.shared.doneButtonEnabled
+        presenter.setDoneButtonEnabled(doneButton: doneButton)
     }
 }

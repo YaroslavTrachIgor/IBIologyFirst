@@ -139,6 +139,7 @@
 		847CFCCF2475574900484B54 /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCCE2475574900484B54 /* SaveView.swift */; };
 		847CFCD22476A9B600484B54 /* TestVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCD12476A9B500484B54 /* TestVCPresenter.swift */; };
 		847CFCD42476AA1600484B54 /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCD32476AA1600484B54 /* DoneButton.swift */; };
+		847CFCD624771E8200484B54 /* TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCD524771E8200484B54 /* TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift */; };
 		847E14E8246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */; };
 		847E14EA246C659700C35F9E /* NetworkingViewControllerINActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */; };
 		847E14EC246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */; };
@@ -626,6 +627,7 @@
 		847CFCCE2475574900484B54 /* SaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
 		847CFCD12476A9B500484B54 /* TestVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCPresenter.swift; sourceTree = "<group>"; };
 		847CFCD32476AA1600484B54 /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		847CFCD524771E8200484B54 /* TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift; sourceTree = "<group>"; };
 		847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerWebControllerDelegate.swift; sourceTree = "<group>"; };
 		847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerINActions.swift; sourceTree = "<group>"; };
 		847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManegerViewModel.swift; sourceTree = "<group>"; };
@@ -2464,6 +2466,7 @@
 				C46E939F241C4A1500C015CD /* TestViewControllerProtocol.swift */,
 				84A9352224539FB70061EF89 /* UIBarButtonItemTestViewControllerExtension.swift */,
 				847CFCA5246EAEA300484B54 /* TestVCMainFunctions.swift */,
+				847CFCD524771E8200484B54 /* TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -3465,6 +3468,7 @@
 				84BDFDD4236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift in Sources */,
 				8465FD03244F9A6900E823A6 /* NetworkingViewControllerMainToolBar.swift in Sources */,
 				847CFCC324743A9900484B54 /* ShowScoreButton.swift in Sources */,
+				847CFCD624771E8200484B54 /* TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */,
 				C458BD6C23AEBF2000D1F108 /* Extensions.swift in Sources */,
 				84A3AF9D23F37D2200836400 /* TextErrorsProtocol.swift in Sources */,
 				84B1D61D242D77D70046C4FB /* SettingsTableViewControllerViewModel.swift in Sources */,
