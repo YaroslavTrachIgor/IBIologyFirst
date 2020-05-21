@@ -725,6 +725,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="Df3-j7-DJQ" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="c5a-M8-oyt" id="ni3-NC-42m"/>
                                     <segue destination="KUN-cq-SRz" kind="show" id="S2W-Qb-Bkh"/>
                                 </connections>
                             </barButtonItem>
@@ -922,6 +923,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="rOZ-ll-Sqo" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="KUN-cq-SRz" id="i8A-Da-vt4"/>
                                     <segue destination="X1b-VV-Fjq" kind="show" id="Dkx-QJ-Zq1"/>
                                 </connections>
                             </barButtonItem>
@@ -1112,7 +1114,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Plants Test Final" id="44h-80-Seo">
                         <rightBarButtonItems>
-                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="PR3-34-Gwo" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
+                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="PR3-34-Gwo" customClass="DoneButton" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
                                     <action selector="doneTest:" destination="X1b-VV-Fjq" id="PCI-yg-AyR"/>
                                 </connections>
@@ -1469,6 +1471,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="UzA-FE-3bs" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="XO7-XI-Uoh" id="Z8F-7i-Kiw"/>
                                     <segue destination="kXa-tf-48q" kind="show" id="XXF-wc-9r6"/>
                                 </connections>
                             </barButtonItem>
@@ -1666,6 +1669,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="kB4-c3-rIm" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="kXa-tf-48q" id="Ssz-ms-CUC"/>
                                     <segue destination="2zm-BE-9kH" kind="show" id="oiF-us-uAn"/>
                                 </connections>
                             </barButtonItem>
@@ -1860,7 +1864,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Animals Test Final" id="gte-oo-Zpl">
                         <rightBarButtonItems>
-                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="Wss-aG-DeI" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
+                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="Wss-aG-DeI" customClass="DoneButton" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
                                     <action selector="doneTest:" destination="2zm-BE-9kH" id="GrV-Zn-gsl"/>
                                 </connections>
@@ -2059,6 +2063,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="CWt-Sx-ubo" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="IJF-L5-lMC" id="pwg-44-VQ7"/>
                                     <segue destination="wD9-AD-Rj3" kind="show" id="Wvo-lk-0CB"/>
                                 </connections>
                             </barButtonItem>
@@ -2256,6 +2261,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="tbP-rV-77J" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="wD9-AD-Rj3" id="s39-w5-gzQ"/>
                                     <segue destination="rte-X8-o7Y" kind="show" id="Tw2-BL-fwe"/>
                                 </connections>
                             </barButtonItem>
@@ -2450,7 +2456,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Humen Test Final" id="UJR-Tg-pM5">
                         <rightBarButtonItems>
-                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="ydH-6y-qvp" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
+                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="ydH-6y-qvp" customClass="DoneButton" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
                                     <action selector="doneTest:" destination="rte-X8-o7Y" id="IkY-WA-14S"/>
                                 </connections>
@@ -2649,6 +2655,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="fgX-ob-0pr" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="M3f-7y-UJR" id="mwb-wF-3u0"/>
                                     <segue destination="lEC-ft-MBl" kind="show" id="MUj-r8-FXh"/>
                                 </connections>
                             </barButtonItem>
@@ -2846,6 +2853,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="Whe-le-kRS" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="lEC-ft-MBl" id="m9W-bM-ws8"/>
                                     <segue destination="9gE-RE-lky" kind="show" id="nyO-zT-g92"/>
                                 </connections>
                             </barButtonItem>
@@ -3042,7 +3050,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Funguses Test Final" id="kc9-pB-hDX">
                         <rightBarButtonItems>
-                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="wMD-cc-uQI" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
+                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="wMD-cc-uQI" customClass="DoneButton" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
                                     <action selector="doneTest:" destination="9gE-RE-lky" id="pTb-eG-Qkr"/>
                                 </connections>
@@ -3222,6 +3230,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="Zg8-ph-xFs" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="7jP-X3-bB6" id="sfq-0u-u96"/>
                                     <segue destination="wk0-3d-ch1" kind="show" id="u0h-jr-3fh"/>
                                 </connections>
                             </barButtonItem>
@@ -3418,6 +3427,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="urN-MU-kFf" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="wk0-3d-ch1" id="0W9-9b-gBL"/>
                                     <segue destination="dza-Wh-4Wy" kind="show" id="mmr-nC-32g"/>
                                 </connections>
                             </barButtonItem>
@@ -3612,7 +3622,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Microbes Test Final" id="wI1-aC-IT3">
                         <rightBarButtonItems>
-                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="QFu-g7-qYs" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
+                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="QFu-g7-qYs" customClass="DoneButton" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
                                     <action selector="doneTest:" destination="dza-Wh-4Wy" id="2Ks-a3-Qw2"/>
                                 </connections>
@@ -3811,6 +3821,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="sK0-Ag-hJn" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="05W-bg-VFM" id="7DF-IU-yzN"/>
                                     <segue destination="hI5-pz-ToY" kind="show" id="qXt-SL-m48"/>
                                 </connections>
                             </barButtonItem>
@@ -4008,6 +4019,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="OUi-o2-JIi" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="hI5-pz-ToY" id="nhn-7m-iTF"/>
                                     <segue destination="14o-DO-osN" kind="show" id="VwT-h0-TjD"/>
                                 </connections>
                             </barButtonItem>
@@ -4202,7 +4214,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Viruses Test Final" id="0Fc-Ee-oiD">
                         <rightBarButtonItems>
-                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="qsx-lb-JJ8" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
+                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="qsx-lb-JJ8" customClass="DoneButton" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
                                     <action selector="doneTest:" destination="14o-DO-osN" id="Nkj-PJ-QhZ"/>
                                 </connections>
@@ -4401,6 +4413,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="Z7k-Yp-g2d" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="1L1-dr-HmY" id="8kj-yM-OcY"/>
                                     <segue destination="Ukv-Jv-3q0" kind="show" id="Z1a-oY-tVB"/>
                                 </connections>
                             </barButtonItem>
@@ -4598,6 +4611,7 @@
                         <rightBarButtonItems>
                             <barButtonItem image="icons8-right_4-2" id="fQB-2s-9aR" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
+                                    <action selector="showNextPageWithSender:" destination="Ukv-Jv-3q0" id="axF-NK-PaR"/>
                                     <segue destination="xQd-Xd-eEh" kind="show" id="Ajj-PI-fEw"/>
                                 </connections>
                             </barButtonItem>
@@ -4792,7 +4806,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Archaea Test Final" id="Y9h-kr-f4o">
                         <rightBarButtonItems>
-                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="PcA-7P-zFa" customClass="TestUIBarButtonItem" customModule="GoodBiology" customModuleProvider="target">
+                            <barButtonItem title="Done" image="icons8-double_tick_filled" id="PcA-7P-zFa" customClass="DoneButton" customModule="GoodBiology" customModuleProvider="target">
                                 <connections>
                                     <action selector="doneTest:" destination="xQd-Xd-eEh" id="b6a-rq-Dtc"/>
                                 </connections>

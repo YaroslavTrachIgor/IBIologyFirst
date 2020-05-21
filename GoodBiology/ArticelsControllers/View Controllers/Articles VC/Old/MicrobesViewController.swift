@@ -45,10 +45,7 @@ final class MicrobesViewController: UIViewController {
         super.viewDidLoad()
         
         finalView()
-        
-        googleAdBannerView.adUnitID = "ca-app-pub-8702634561077907/9283193921"
-        googleAdBannerView.rootViewController = self
-        googleAdBannerView.load(GADRequest())
+        setupBunnerView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -157,12 +154,19 @@ extension MicrobesViewController {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
+        /// For Analytics
         AnalyticsManeger.addNotificationAnalytics(article: articleName)
+        
+        /// Push Notification
+        notificationNamePost()
         PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
+        
+        /// UI animations
+        let alertsManeger = AlertsManeger()
+        alertsManeger.showNotificationView()
         sender.notificationButtonBasicFunctions(view)
-        notificationNamePost()
     }
 }
 
@@ -277,5 +281,11 @@ extension MicrobesViewController {
     private func removeNotifications(withIdentifiers identifiers: [String])   {
         let center = UNUserNotificationCenter.current()
             center.removePendingNotificationRequests(withIdentifiers: identifiers)
+    }
+    
+    private func setupBunnerView() {
+        googleAdBannerView.adUnitID = "ca-app-pub-8702634561077907/9283193921"
+        googleAdBannerView.rootViewController = self
+        googleAdBannerView.load(GADRequest())
     }
 }

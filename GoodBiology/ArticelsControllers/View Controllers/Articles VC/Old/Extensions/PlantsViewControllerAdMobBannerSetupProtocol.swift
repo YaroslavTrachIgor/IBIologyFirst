@@ -11,7 +11,7 @@ import GoogleMobileAds
 
 protocol PlantsViewControllerAdMobBannerSetupProtocol {
     func showBunner()
-    func setupBanner()
+    func setupInterstitial()
 }
 
 @available(iOS 13.0, *)
@@ -22,7 +22,7 @@ extension PlantsViewController: PlantsViewControllerAdMobBannerSetupProtocol {
         }
     }
     
-    func setupBanner() {
+    func setupInterstitial() {
         let request = GADRequest()
         
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/4154366575")

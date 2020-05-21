@@ -193,6 +193,10 @@ extension ForTodayViewController {
         
         /// Analytics
         AnalyticsManeger.addNotificationAnalytics(article: "For_Today_VC")
+        
+        /// UI animations
+        let alertsManeger = AlertsManeger()
+        alertsManeger.showNotificationView()
     }
     
     @IBAction func trash(_ sender: Any) {

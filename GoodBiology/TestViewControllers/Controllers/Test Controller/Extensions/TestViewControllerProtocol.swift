@@ -17,18 +17,21 @@ protocol TestViewControllerProtocol {
 
 extension TestViewController: TestViewControllerProtocol {
     
+    //MARK: - UI setup
     func otherUIthings() {
         stepperOutlet.stepperBaics()
-        shareButton.isEnabled = false
-        answerLabel.text = BasicTestWords.answerWord
+        setupAnswerLabel()
+        setupButtonsImages_Tints()
     }
     
+    //MARK: - SystemBack Prefering
     func systemBackPrefering() {
         view.viewSystemBack()
         
         stepperView.viewSystemBack()
     }
     
+    //MARK: - Post Keys
     func postKeys() {
         guard let title = navigationController?.navigationItem.title else { return }
         

@@ -114,9 +114,9 @@ protocol NotificationButtonBasicFunctionsProtocol {
 
 extension UIButton: NotificationButtonBasicFunctionsProtocol {
     func notificationButtonBasicFunctions(_ view: UIView) {
-        self.notificationButtonAudio()
-        self.settingTittleForNotificationButton()
-        self.addNotificationButtonPulse(view: view)
-        self.pulsate()
+        notificationButtonAudio()
+        settingTittleForNotificationButton()
+        addNotificationButtonPulse(view: view)
+        pulsate()
     }
 }

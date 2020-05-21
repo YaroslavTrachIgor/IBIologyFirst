@@ -8,9 +8,11 @@
 
 import Foundation
 import UIKit
+import SwiftEntryKit
 
 //MARK: - Done Test
 extension TestViewController {
+    
     //MARK: @IBAction
     @IBAction func doneTest(_ sender: Any) {
         returnScore()
@@ -18,11 +20,7 @@ extension TestViewController {
     }
     
     private func returnScore() {
-        if TestScores.shared.testScore > 30 {
-            FastAlert.showBasic(title: "30/30", message: nil, vc: self)
-        } else {
-            FastAlert.showBasic(title: "\(TestScores.shared.testScore)/30", message: nil, vc: self)
-        }
+        SwiftEntryKit.display(entry: DoneTestPopView.instanceFromNib(), using: EKAttributesManeger.setupDoneTestPopViewAttributes())
     }
     
     private func endTestDone() {

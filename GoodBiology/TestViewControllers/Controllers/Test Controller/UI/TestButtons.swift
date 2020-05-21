@@ -17,7 +17,8 @@ protocol TestButtonDelegate {
 class TestButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-            setup()
+        
+        setup()
     }
 }
 

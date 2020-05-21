@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftEntryKit
 
 extension SettingsTableViewController: SettingsTableViewSaveAllActionsFunctionsProtocol {
     func acSubViewSetup() {
@@ -36,6 +37,7 @@ extension SettingsTableViewController: SettingsTableViewSaveAllActionsFunctionsP
         UserDefaults.standard.set(self.firstNameLabel.text!,    forKey: SettingsKeys.nameLabelKey)
         UserDefaults.standard.set(self.secondNameLabel.text!,   forKey: SettingsKeys.secondNameLabelKey)
         UserDefaults.standard.set(self.emailLabel.text!,        forKey: SettingsKeys.emailLabelKey)
+        lastSaveButtonDateSetup()
     }
     
     func navItemSetup() {
@@ -60,5 +62,34 @@ extension SettingsTableViewController: SettingsTableViewSaveAllActionsFunctionsP
                 self.saveFunctionViewModel.buttonsEnabledSetup(buttons: self.saveButton, enabled: true)
             }
         }
+    }
+    
+    func lastSaveButtonDateSetup() {
+        let date = LocalizedDate("us", datePosix: "MMMM d  'at'  h:mm a")
+        let content = "Last Save: " + date.returnDate()
+        
+        /// Set Label text
+        saveFunctionViewModel.lastSaveButton(lastSaveButton, content: content)
+        
+        /// Save Label text
+        defaults.setValue(lastSaveButton?.titleLabel?.text!, forKey: SettingsKeys.lastSave)
+    }
+    
+    func presentSaveView() {
+        SwiftEntryKit.display(entry: SaveView.instanceFromNib(), using: setupDoneTestPopViewAttributes())
+    }
+    
+    //MARK: - Private
+    private func setupDoneTestPopViewAttributes() -> EKAttributes {
+        var attributes = EKAttributes.centerFloat
+        
+        attributes.displayDuration                    = .infinity
+        attributes.shadow                             = .active(with: .init(color: .init(light: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1), dark: #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)), opacity: 20, radius: 15, offset: CGSize.zero))
+        attributes.screenInteraction                  = .dismiss
+        attributes.entryInteraction                   = .absorbTouches
+        attributes.scroll                             = .enabled(swipeable: true, pullbackAnimation: .jolt)
+        attributes.positionConstraints.verticalOffset = 10
+        
+        return attributes
     }
 }

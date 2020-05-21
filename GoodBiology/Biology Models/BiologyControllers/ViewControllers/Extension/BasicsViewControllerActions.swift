@@ -12,10 +12,12 @@ import UIKit
 
 // MARK: - @IBActions
 extension BiologyViewController {
-    
-    //MARK: Actions
-    @IBAction func bottomButtonAction(sender: UIButton) {
+    @IBAction func setNotification(sender: UIButton) {
         sender.notificationButtonBasicFunctions(view)
+        
+        /// UI animations
+        let alertsManeger = AlertsManeger()
+        alertsManeger.showNotificationView()
     }
     
     @IBAction func nextAction() {
@@ -40,7 +42,7 @@ extension BiologyViewController {
                 }
             }
             
-            let isEnabled: Bool
+            var isEnabled: Bool
             let hidden: Bool
             
             if self.stepperView.isHidden == true {

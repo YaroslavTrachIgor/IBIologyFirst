@@ -65,7 +65,7 @@ final class BiologyViewController: UIViewController {
         /// Setup Final View
         finalView()
         viewBackSetup()
-        setupBanner()
+        setupInterstitial()
         setupSharedContent()
         createObservers()
         

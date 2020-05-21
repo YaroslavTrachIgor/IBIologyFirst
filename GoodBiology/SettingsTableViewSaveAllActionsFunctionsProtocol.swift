@@ -19,5 +19,6 @@ protocol SettingsTableViewSaveAllActionsFunctionsProtocol {
     
     /// End
     func loadAnimationSetup()
+    func lastSaveButtonDateSetup()
 }
 

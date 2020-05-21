@@ -16,7 +16,7 @@ extension BiologyViewController: PlantsViewControllerAdMobBannerSetupProtocol {
         }
     }
     
-    func setupBanner() {
+    func setupInterstitial() {
         let request = GADRequest()
         
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/3602528777")

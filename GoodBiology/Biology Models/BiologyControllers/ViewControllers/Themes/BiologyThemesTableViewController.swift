@@ -72,7 +72,7 @@ extension BiologyThemesTableViewController {
     
     //MARK: navigation Bar Setup
     private func navBarSetup() {
-        let color: UIColor = .groupTableViewBackground
+        let color: UIColor = .systemBackground
         
         navigationController?.navigationBar.barTintColor    = color
         navigationController?.navigationBar.backgroundColor = color
@@ -97,16 +97,49 @@ extension BiologyThemesTableViewController {
     private func setupCell(indexPath: IndexPath) -> UITableViewCell {
         
         /// Setup tableViewCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BiologyThemesTableViewControllerCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BiologyThemesTableViewControllerCell", for: indexPath) as! BiologyThemesTableViewCell
         
         /// Setup content
-        cell.textLabel?.text = titleArray[indexPath.row]
-        cell.detailTextLabel?.text = "\(titleArray[indexPath.row]) of Biology"
+        cell.titleLabel?.text = " " + titleArray[indexPath.row]
+        cell.contentTextView?.text = " \(titleArray[indexPath.row]) of Biology"
         
         /// Setup accessory Type
         cell.accessoryType = .disclosureIndicator
         
+        /// Setup Cell TextView
+        setupCellTextView(cell)
+        
+        /// Setup Cell notificationButton
+        setupCellNotificationButton(cell)
+        
         return cell
+    }
+    
+    private func setupCellTextView(_ cell: BiologyThemesTableViewCell) {
+        let textView = cell.contentTextView!
+        let securityProperie: Bool = false
+        
+        /// Set cornerRadius
+        textView.layer.cornerRadius = 12.5
+        
+        /// Set security level
+        textView.isEditable      = securityProperie
+        textView.isSelectable    = securityProperie
+        textView.isScrollEnabled = securityProperie
+        
+        /// Set shadow
+        textView.textViewShadow()
+    }
+    
+    private func setupCellNotificationButton(_ cell: BiologyThemesTableViewCell) {
+        let button = cell.notificationButton!
+        
+        /// Set cornerRadius
+        button.layer.cornerRadius = 15
+        
+        /// Set border
+        button.layer.borderColor = #colorLiteral(red: 0, green: 0.2469184101, blue: 0.009277993813, alpha: 1)
+        button.layer.borderWidth = 1.3
     }
     
     
@@ -121,4 +154,33 @@ extension BiologyThemesTableViewController {
 // MARK: - UISearchResultsUpdating
 extension BiologyThemesTableViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) { }
+}
+
+
+
+class BiologyThemesTableViewCell: UITableViewCell {
+    
+    //MARK: @IBOutlets
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var contentTextView: UITextView!
+    
+    // UIButtons
+    @IBOutlet weak var notificationButton: UIButton!
+}
+
+extension BiologyThemesTableViewCell {
+    @IBAction func setNotification(_ sender: UIButton) {
+        
+        /// For Analytics
+        AnalyticsManeger.addNotificationAnalytics(article: "BiologyMenuVC")
+        
+        /// Push Notification
+        PushNotifications.setupBasicNotification(body: "Biology", inSecond: TimeInterval(timeInterval)) { (success) in
+            if success { print(congratsText) } else { print(failText) }
+        }
+        
+        /// UI animations
+        let alertsManeger = AlertsManeger()
+        alertsManeger.showNotificationView()
+    }
 }

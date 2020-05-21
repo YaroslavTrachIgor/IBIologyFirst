@@ -8,6 +8,7 @@
 
 import UIKit
 import SafariServices
+import GoogleMobileAds
 
 final class SafariViewController: UIViewController {
     
@@ -25,6 +26,9 @@ final class SafariViewController: UIViewController {
     @IBOutlet weak var safariButtonOutlet: UIButton!
     
     @IBOutlet weak var goToContentAppButton: UIButton!
+    
+    // GADBannerView
+    @IBOutlet weak var bunnerView: GADBannerView!
     
     //MARK: AppleButtonSettings
     var appleButton = AppleButtonSettings()

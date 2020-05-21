@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftEntryKit
 
 protocol SettingsTableViewControllerSaveFunctionProtocol {
     func setupSaveErrors() throws
@@ -43,9 +44,6 @@ extension SettingsTableViewController: SettingsTableViewControllerSaveFunctionPr
         } catch Errors.nameError where !nameTextField.text!.isEmpty || !secondNameTextField.text!.isEmpty {
             FastAlert.showBasic(title: "Error saving your name", message: "Check how big or small it is.", vc: self)
             
-        } catch {
-            FastAlert.showBasic(title: "Error saving your data.", message:
-                "Check that the fields 'First Name', 'Last Name', 'Mail' were completed.", vc: self)
-        }
+        } catch { }
     }
 }

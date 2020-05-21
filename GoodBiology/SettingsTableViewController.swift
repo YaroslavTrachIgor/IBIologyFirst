@@ -53,6 +53,9 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
     @IBOutlet weak var faqLabel:      QuestionLabel!
     @IBOutlet weak var siteLabel:     QuestionLabel!
     
+    // LastSaveButton
+    @IBOutlet weak var lastSaveButton: UIButton!
+    
     struct SettingsKeys {
         /// Personal Information Keys
         // MARK: - Labels
@@ -74,6 +77,9 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
         
         /// User Icon Image Key
         static let imageKey = "imageKey"
+        
+        /// lastSave Key
+        static let lastSave = "lastSaveKey"
     }
     
     lazy var searchController = BasicSearchController()
@@ -113,6 +119,9 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
     var firstName:  NSKeyValueObservation?
     var secondName: NSKeyValueObservation?
     var email:      NSKeyValueObservation?
+    
+    //MARK: - User Defaults
+    let defaults = UserDefaults.standard
     
     //MARK: - ViewModel
     let saveFunctionViewModel = SettingsTableViewControllerSaveFunctionViewModel()

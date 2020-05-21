@@ -24,6 +24,7 @@ extension SettingsTableViewController {
         showSaveErrors()
         realmEmailPost()
         allAvailableInfoPost()
+        presentSaveView()
     }
     
     @objc func hide() {

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 extension SafariViewController: AboutAppVCSetupProtocol {
     
@@ -20,6 +21,7 @@ extension SafariViewController: AboutAppVCSetupProtocol {
         contentTextViewsPrefering()
         viewBasicSizingPrefering()
         textViewBacksSetup()
+        setupBunnerView()
     }
 }
 
@@ -120,6 +122,12 @@ extension SafariViewController {
         Privacy Policy and site of
         iBiology
         """
+    }
+    
+    private func setupBunnerView() {
+        bunnerView.adUnitID = "ca-app-pub-8702634561077907/9283193921"
+        bunnerView.rootViewController = self
+        bunnerView.load(GADRequest())
     }
 }
 

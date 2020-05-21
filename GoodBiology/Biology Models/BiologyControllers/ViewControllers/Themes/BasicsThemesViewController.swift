@@ -10,25 +10,11 @@ import Foundation
 import UIKit
 import GoogleMobileAds
 
-extension BasicsThemesViewController: PlantsViewControllerAdMobBannerSetupProtocol {
-    func showBunner() {
-        if interstitial.isReady {
-          interstitial.present(fromRootViewController: self)
-        }
-    }
-    
-    func setupBanner() {
-        let request = GADRequest()
-        
-        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/3602528777")
-        interstitial.load(request)
-    }
-}
-
 class BasicsThemesViewController: UIViewController {
     
     // Google ADMob Banner
     var interstitial: GADInterstitial!
+    @IBOutlet weak var bunnerView: GADBannerView!
     
     // Share Button
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -49,9 +35,9 @@ class BasicsThemesViewController: UIViewController {
         
         /// BasicsThemesViewControllerSetupProtocol
         setupVC()
-        setupBanner()
     }
 }
+
 
 
 // MARK: - @IBActions
@@ -85,6 +71,7 @@ extension BasicsThemesViewController {
 }
 
 
+
 // MARK: - Main Functions
 extension BasicsThemesViewController {
     func setupContent() {
@@ -109,6 +96,12 @@ extension BasicsThemesViewController {
     func viewBackColorSetup() {
         view.backgroundColor = .groupTableViewBackground
     }
+    
+    func setupBunnerView() {
+        bunnerView.adUnitID = "ca-app-pub-8702634561077907/9283193921"
+        bunnerView.rootViewController = self
+        bunnerView.load(GADRequest())
+    }
 }
  
 
@@ -117,12 +110,31 @@ protocol BasicsThemesViewControllerSetupProtocol {
 }
 
 
+
 // MARK: - BasicsThemesViewControllerSetupProtocol
 extension BasicsThemesViewController: BasicsThemesViewControllerSetupProtocol {
     func setupVC() {
         setupContentTextView()
         setupContent()
-        
+        setupInterstitial()
+        setupBunnerView()
         viewBackColorSetup()
+    }
+}
+
+
+// MARK: - BasicsThemesViewController
+extension BasicsThemesViewController: PlantsViewControllerAdMobBannerSetupProtocol {
+    func showBunner() {
+        if interstitial.isReady {
+          interstitial.present(fromRootViewController: self)
+        }
+    }
+    
+    func setupInterstitial() {
+        let request = GADRequest()
+        
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/3602528777")
+        interstitial.load(request)
     }
 }

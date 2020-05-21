@@ -89,7 +89,7 @@ final class TestsMenuViewController: UIViewController {
         basicViewProccesPrefering()
         createObservers()
         
-        setupBanner()
+        setupInterstitial()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -268,7 +268,7 @@ extension TestsMenuViewController: PlantsViewControllerAdMobBannerSetupProtocol 
         }
     }
     
-    func setupBanner() {
+    func setupInterstitial() {
         let request = GADRequest()
         
         interstitial = GADInterstitial(adUnitID: "ca-app-pub-8702634561077907/3602528777")

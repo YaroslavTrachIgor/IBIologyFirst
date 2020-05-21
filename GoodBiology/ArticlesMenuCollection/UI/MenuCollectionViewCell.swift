@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftEntryKit
 
 // MARK: - MenuCollectionViewCellProtocol
 protocol MenuCollectionViewCellProtocol {
@@ -22,7 +23,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var cellTextView: UITextView!
     
-    // UIButtons
+    // MenuCollectionViewCellButtons
     @IBOutlet weak var addToNotesButton: MenuCollectionViewCellButton!
     @IBOutlet weak var showArticleButton: MenuCollectionViewCellButton!
     
@@ -47,7 +48,10 @@ extension MenuCollectionViewCell {
         
         /// Push Notifications
         setupNotification()
-        showNotificateionAlert()
+        
+        // UI animations
+        let alertsManeger = AlertsManeger()
+        alertsManeger.showNotificationView()
         notificationCellAnimation()
     }
 }
@@ -86,20 +90,8 @@ extension MenuCollectionViewCell {
         AnalyticsManeger.addNotificationAnalytics(article: headerLabel.text! + "_CollectionView")
     }
 
-    private func showNotificateionAlert() {
-        let notificationAlert = UIAlertController(title: nil, message: "A reminder for an \(headerLabel.text!) article was set !", preferredStyle: .alert)
-        let notificationAlertAction = UIAlertAction(title: "Continue", style: .cancel, handler: nil)
-        
-        /// add Action
-        notificationAlert.addAction(notificationAlertAction)
-        
-        /// present alert
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
-            self.window?.rootViewController?.present(notificationAlert, animated: true)
-        }
-    }
-
     private func notificationCellAnimation() {
+        
         /// Use for cycle to maka animation greener
         for _ in 0...5 { addToNotesButton.addNotificationButtonPulse(view: self) }
     }

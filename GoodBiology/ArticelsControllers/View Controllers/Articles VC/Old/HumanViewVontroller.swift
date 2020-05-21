@@ -127,12 +127,19 @@ extension HumanViewVontroller {
     }
     
     @IBAction func notificationButton(_ sender: NotificationButton) {
+        /// For Analytics
         AnalyticsManeger.addNotificationAnalytics(article: articleName)
+        
+        /// Push Notification
+        notificationNamePost()
         PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
+        
+        /// UI animations
+        let alertsManeger = AlertsManeger()
+        alertsManeger.showNotificationView()
         sender.notificationButtonBasicFunctions(view)
-        notificationNamePost()
     }
 
     @IBAction func segmentedControAction(_ sender: UISegmentedControl) {

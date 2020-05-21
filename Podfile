@@ -14,4 +14,5 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'FirebaseUI/Auth'
 pod 'Signals'
+pod 'SwiftEntryKit'
 end

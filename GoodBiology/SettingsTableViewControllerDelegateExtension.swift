@@ -17,6 +17,7 @@ extension SettingsTableViewController: SettingsTableViewControllerDelegate {
         searchBarButtonPrefering()
         setupSearchBarFont()
         navControllerSetup()
+        setupLastSaveLabel()
     }
 }
 
@@ -53,5 +54,12 @@ extension SettingsTableViewController {
     
     func navControllerSetup() {
         viewModel.navControllerSetup(navController: navigationController!, searchController.searchBar)
+    }
+    
+    func setupLastSaveLabel() {
+        let content = defaults.value(forKey: SettingsKeys.lastSave) as? String ?? "Last Save:"
+        
+        lastSaveButton.titleLabel?.text = content
+        lastSaveButton.setTitle(content, for: .normal)
     }
 }

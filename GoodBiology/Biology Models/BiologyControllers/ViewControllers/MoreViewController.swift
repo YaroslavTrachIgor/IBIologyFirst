@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 struct MoreVCKeys {
     static let fontKey = "MoreViewControllerVCKeys(fontKey)"
@@ -52,6 +53,9 @@ final class MoreViewController: UIViewController {
     @IBOutlet var switchLabel: UILabel!
     @IBOutlet weak var mainSwitch: UISwitch!
     
+    // Banner View
+    @IBOutlet weak var googleAdBannerView: GADBannerView!
+    
     //MARK: - UserDefaults.standard
     let defaults = UserDefaults.standard
     
@@ -61,6 +65,7 @@ final class MoreViewController: UIViewController {
         viewModel.setupItenViews(itemViews)
         viewModel.setupBacksColors(navBar: navigationController!.navigationBar, mainView: view)
         checkForSaved()
+        setupBunnerView()
     }
     
     deinit {
@@ -126,6 +131,12 @@ extension MoreViewController {
         
         /// Set size
         MoreViewControllerSharedProperties.shared.size = stepperLabelFontSize
+    }
+    
+    private func setupBunnerView() {
+        googleAdBannerView.adUnitID = "ca-app-pub-8702634561077907/9283193921"
+        googleAdBannerView.rootViewController = self
+        googleAdBannerView.load(GADRequest())
     }
 }
 

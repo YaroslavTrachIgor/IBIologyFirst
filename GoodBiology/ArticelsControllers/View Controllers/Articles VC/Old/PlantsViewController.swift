@@ -56,7 +56,7 @@ final class PlantsViewController: UIViewController {
         finalView()
         
         /// Google Add Banner
-        setupBanner()
+        setupInterstitial()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -135,12 +135,20 @@ extension PlantsViewController {
     
    
     @IBAction func notificationButton(_ sender: NotificationButton) {
+        
+        /// For Analytics
         AnalyticsManeger.addNotificationAnalytics(article: articleName)
-        sender.notificationButtonBasicFunctions(view)
+        
+        /// Push Notification
         notificationNamePost()
         PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
             if success { print(congratsText) } else { print(failText) }
         }
+        
+        /// UI animations
+        let alertsManeger = AlertsManeger()
+        alertsManeger.showNotificationView()
+        sender.notificationButtonBasicFunctions(view)
     }
         
     

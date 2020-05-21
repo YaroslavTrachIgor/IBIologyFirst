@@ -51,4 +51,9 @@ class SettingsTableViewControllerSaveFunctionViewModel {
     func navigationTitleSet(navItem: UINavigationItem) {
         navItem.title = ""
     }
+    
+    func lastSaveButton(_ button: UIButton, content: String) {
+        button.titleLabel?.text = content
+        button.setTitle(content, for: .normal)
+    }
 }

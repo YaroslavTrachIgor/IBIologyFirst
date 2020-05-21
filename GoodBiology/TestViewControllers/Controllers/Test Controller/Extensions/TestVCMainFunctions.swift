@@ -51,4 +51,21 @@ extension TestViewController {
             })
         }
     }
+    
+    public func setupButtonsImages_Tints() {
+        
+        /// Setup cancelButton
+        cancelButton.setupTestUIBarButtonItemImageFast(image: "arrow.clockwise")
+        
+        /// Setup shareButton
+        shareButton.tintColor = barButtonsTint
+        shareButton.isEnabled = false
+        
+        /// Setup stepperViewShower
+        stepperViewShower.setupTestUIBarButtonItemImageFast(image: "textformat.size")
+    }
+    
+    public func setupAnswerLabel() {
+        answerLabel.text = BasicTestWords.answerWord
+    }
 }
