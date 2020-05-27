@@ -12,38 +12,41 @@ import CoreLocation
 import AudioToolbox
 import MessageUI
 
+//MARK: MapViewControllerViewModel
 class MapViewControllerViewModel {
-    func viewDidLoadNavControllerSetup(_ navigationController: UINavigationController) {
+    
+    //MARK: Public
+    public func viewDidLoadNavControllerSetup(_ navigationController: UINavigationController) {
         navigationController.navigationBar.backgroundColor = .clear
         navigationController.navigationBar.barTintColor = .white
     }
     
-    func viewWillApearNavControllerSetup(_ navigationController: UINavigationController) {
+    public func viewWillApearNavControllerSetup(_ navigationController: UINavigationController) {
         navigationController.hidesBarsOnTap = false
         navigationController.hidesBarsOnSwipe = false
     }
     
-    func setAlpha(_ element: UIView, alpha: CGFloat) {
+    public func setAlpha(_ element: UIView, alpha: CGFloat) {
         element.alpha = alpha
     }
     
-    func setHidden(_ view: UIView, hidden: Bool) {
+    public func setHidden(_ view: UIView, hidden: Bool) {
         view.isHidden = hidden
     }
     
-    func setupComposer(_ composer: MFMailComposeViewController) {
+    public func setupComposer(_ composer: MFMailComposeViewController) {
         composer.setSubject("Map Problem")
         composer.setMessageBody("Here is my problem with map", isHTML: false)
     }
     
-    func typeViewBackPrefering(_ typeViewBackground: UIView) {
+    public func typeViewBackPrefering(_ typeViewBackground: UIView) {
         typeViewBackground.layer.cornerRadius   = CGFloat(12)
         typeViewBackground.isHidden             = true
         
         typeViewBackground.viewShadows()
     }
     
-    func setupAlertController(_ alertController: UIAlertController, action: UIAlertAction) {
+    public func setupAlertController(_ alertController: UIAlertController, action: UIAlertAction) {
         alertController.view.tintColor = .biologyGreenColor
         alertController.addAction(action)
         alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
@@ -51,20 +54,20 @@ class MapViewControllerViewModel {
     }
     
     //MARK: MapView
-    func setupMapView(_ mapView: MKMapView) {
+    public func setupMapView(_ mapView: MKMapView) {
         mapView.mapType = .standard
         mapView.alpha   = 0
     }
     
-    func setRegion(_ mapView: MKMapView, region: MKCoordinateRegion) {
+    public func setRegion(_ mapView: MKMapView, region: MKCoordinateRegion) {
         mapView.setRegion(region, animated: true)
     }
     
-    func setMapType(_ mapView: MKMapView,_ mapType: MKMapType) {
+    public func setMapType(_ mapView: MKMapView,_ mapType: MKMapType) {
         mapView.mapType = mapType
     }
     
-    func setupLocationManager(_ locManeger: CLLocationManager) {
+    public func setupLocationManager(_ locManeger: CLLocationManager) {
         locManeger.desiredAccuracy = kCLLocationAccuracyBest
     }
 }
@@ -121,36 +124,15 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         
         viewModel.viewWillApearNavControllerSetup(navigationController!)
     }
-    
-    func mapViewBasics() {
-        let semaphore = DispatchSemaphore(value: 2)
-        DispatchQueue.global(qos: .utility).async {
-            semaphore.wait()
-            self.checkLocationServices()
-        }
-        semaphore.signal()
-        adressLabelPrefering()
-        mapViewPrefring()
-    }
-    
-    private func checkWiFi() {
-        let networkStatus = Reachability().connectionStatus()
-        let alertController = UIAlertController(title: "Oops", message: "You are not connected to WiFi", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Continue", style: .cancel) { (action) in }
-        
-        viewModel.setupAlertController(alertController, action: action)
-        
-        switch networkStatus {
-        case .Unknown, .Offline:
-            print("Offline")
-            self.present(alertController, animated: true, completion: nil)
-        case .Online(.WWAN):
-            print("Connected via WWAN")
-        case .Online(.WiFi):
-            print("Connected via WiFi")
-        }
-    }
-    
+}
+
+
+
+//MARK: - @IBActions
+extension MapViewController {
+    /////////
+    //MARK: -------- Write Presenter
+    /////////
     @IBAction func questionButtonShowing(_ sender: Any) {
         if problemButton.isHidden == true {
             viewModel.setHidden(problemButton, hidden: false)
@@ -161,23 +143,6 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
     
     @IBAction func contact(_ sender: Any) {
         showMailComposer()
-    }
-    
-    private func showMailComposer() {
-        guard MFMailComposeViewController.canSendMail() else { return }
-        
-        let composer                        = BasicMFMailComposeViewController(rootViewController: self)
-            composer.mailComposeDelegate    = self
-        viewModel.setupComposer(composer)
-        composer.view.tintColor = .biologyGreenColor
-        
-        present(composer, animated: true)
-    }
-        
-    private func mapViewPrefring() {
-        /// Setup Basiscs of UIMapView
-        
-        viewModel.setupMapView(mapView)
     }
     
     @IBAction func share(_ sender: Any) {
@@ -193,25 +158,8 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         AnalyticsManeger.addShareActionAnalytics(for: "MapViewController")
     }
     
-    private func switchingViewPrefering() {
-        typeViewPrefering()
-        typeViewBackPrefering()
-    }
-    
-    private func typeViewBackPrefering() {
-        viewModel.typeViewBackPrefering(typeViewBackground)
-    }
-    
-    private func typeViewPrefering() {
-        typeView.segmentedControlForToday()
-    }
-    
-    private func adressLabelPrefering() {
-        addressLabel.adressLabelPrefering()
-    }
-    
     @IBAction func mapViewStyleSwitching(_ sender: UISegmentedControl) {
-        switch  typeView.selectedSegmentIndex {
+        switch typeView.selectedSegmentIndex {
         case 0:
             viewModel.setMapType(mapView, .standard)
         case 1:
@@ -226,6 +174,72 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
             viewModel.setHidden(typeViewBackground, hidden: false)
         } else {
             viewModel.setHidden(typeViewBackground, hidden: true)
+        }
+    }
+}
+
+
+
+//MARK: - MapViewControllerMainFunctionsProtocol protocol
+protocol MapViewControllerMainFunctionsProtocol {
+    func showMailComposer()
+    func mapViewPrefring()
+    func checkWiFi()
+    func setupLocationManager()
+    func centerViewOnUserLocation()
+    func checkLocationServices()
+    func checkLocationAuthorization()
+    func startTackingUserLocation()
+    func getCenterLocation(for mapView: MKMapView) -> CLLocation
+}
+
+
+
+//MARK: - MapViewControllerMainFunctionsProtocol and other
+extension MapViewController {
+    
+    //MARK: - MapViewControllerMainFunctionsProtocol methods
+    func showMailComposer() {
+        guard MFMailComposeViewController.canSendMail() else { return }
+        let composer = BasicMFMailComposeViewController(rootViewController: self)
+        composer.mailComposeDelegate = self
+        composer.view.tintColor = .biologyGreenColor
+        viewModel.setupComposer(composer)
+        present(composer, animated: true)
+    }
+        
+    func mapViewPrefring() {
+        /// Setup Basiscs of UIMapView
+        
+        viewModel.setupMapView(mapView)
+    }
+    
+    func mapViewBasics() {
+        let semaphore = DispatchSemaphore(value: 2)
+        DispatchQueue.global(qos: .utility).async {
+            semaphore.wait()
+            self.checkLocationServices()
+        }
+        semaphore.signal()
+        adressLabelPrefering()
+        mapViewPrefring()
+    }
+    
+    func checkWiFi() {
+        let networkStatus = Reachability().connectionStatus()
+        let alertController = UIAlertController(title: "Oops", message: "You are not connected to WiFi", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Continue", style: .cancel) { (action) in }
+        
+        viewModel.setupAlertController(alertController, action: action)
+        
+        switch networkStatus {
+        case .Unknown, .Offline:
+            print("Offline")
+            self.present(alertController, animated: true, completion: nil)
+        case .Online(.WWAN):
+            print("Connected via WWAN")
+        case .Online(.WiFi):
+            print("Connected via WiFi")
         }
     }
     
@@ -284,8 +298,30 @@ class MapViewController: UIViewController, MapBasicViewDelegate {
         
         return CLLocation(latitude: latitude, longitude: longitude)
     }
+    
+    
+    //MARK: Private
+    private func switchingViewPrefering() {
+        typeViewPrefering()
+        typeViewBackPrefering()
+    }
+    
+    private func typeViewBackPrefering() {
+        viewModel.typeViewBackPrefering(typeViewBackground)
+    }
+    
+    private func typeViewPrefering() {
+        typeView.segmentedControlForToday()
+    }
+    
+    private func adressLabelPrefering() {
+        addressLabel.adressLabelPrefering()
+    }
 }
 
+
+
+//MARK: - CLLocationManagerDelegate
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         DispatchQueue.global(qos: .utility).async {
@@ -296,32 +332,29 @@ extension MapViewController: CLLocationManagerDelegate {
     }
 }
 
+
+
+//MARK: - MKMapViewDelegate
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let center = getCenterLocation(for: mapView)
         let geoCoder = CLGeocoder()
         
         guard let previousLocation = self.previousLocation else { return }
-        
         guard center.distance(from: previousLocation) > 50 else { return }
+        
+        /// Set previousLocation
         self.previousLocation = center
         
         geoCoder.reverseGeocodeLocation(center) { [weak self] (placemarks, error) in
             guard let self = self else { return }
+            if let _ = error { FastAlert.showBasic(title: nil, message: error?.localizedDescription, vc: self); return }
+            guard let placemark = placemarks?.first else { return }
             
-            if let _ = error {
-                //TODO: Show alert informing the user
-                return
-            }
+            let streetNumber = placemark.subThoroughfare ?? ""
+            let streetName   = placemark.thoroughfare ?? ""
             
-            guard let placemark = placemarks?.first else {
-                //TODO: Show alert informing the user
-                return
-            }
-            
-            let streetNumber    = placemark.subThoroughfare ?? ""
-            let streetName      = placemark.thoroughfare ?? ""
-            
+            /// Setup addressLabel text
             DispatchQueue.main.async {
                 self.addressLabel.text = "\(streetNumber) \(streetName)"
             }
@@ -329,22 +362,35 @@ extension MapViewController: MKMapViewDelegate {
     }
 }
 
+
+
+
+//MARK: - Adress Label Setup
 extension UILabel {
     func adressLabelPrefering() {
-        self.layer.cornerRadius = 1.7
         
-        self.layer.borderColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
-        self.layer.borderWidth = 2.5
+        /// Setup cornerRadius
+        layer.cornerRadius = 1.7
         
-        self.backgroundColor   = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        /// Setup borders
+        layer.borderColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
+        layer.borderWidth = 2.5
         
-        self.textColor         = .biologyGreenColor
-        self.text              = ""
+        /// Setup backgroundColor
+        backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        self.labelShadow()
+        /// Setup text and textColor
+        textColor = .biologyGreenColor
+        text = ""
+        
+        /// Setup Shadow
+        labelShadow()
     }
 }
 
+
+
+//MARK: - MFMailComposeViewControllerDelegate
 extension MapViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         if let _ = error {

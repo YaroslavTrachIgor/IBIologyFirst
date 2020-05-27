@@ -9,29 +9,28 @@
 import UIKit
 import WebKit
 
-protocol ArticleOnlineVCsSetupProtocol {
-    func share(_ sender: Any)
-    func urlGiven()
-    func viewDidApearAnimationSetup()
-}
-
+//MARK: - Main ArticleOnlineImagesViewController class
 class ArticleOnlineImagesViewController: UIViewController {
     
-    //MARK: @IBOutlet
+    //MARK: @IBOutlets
+    //MARK: UIBarButtonItems
     @IBOutlet weak var shareURl:              UIBarButtonItem!
     @IBOutlet weak var leftButton:            UIBarButtonItem!
     @IBOutlet weak var rightButton:           UIBarButtonItem!
-    @IBOutlet weak var webViewBackground:     UIView!
-    @IBOutlet weak var webView:               WKWebView!
     @IBOutlet weak var reloadButton:          UIBarButtonItem!
     
-    //MARK: override
+    //MARK: webViewBackground and webView
+    @IBOutlet weak var webViewBackground:     UIView!
+    @IBOutlet weak var webView:               WKWebView!
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
         networkingProccesesPrefering()
         viewBasicProccesesPrefering()
         articleVCProperty_NavBarHiddenSet()
+        setuoNavController()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,7 +38,9 @@ class ArticleOnlineImagesViewController: UIViewController {
     }
 }
 
-// MARK: - Actions
+
+
+// MARK: - @IBActions
 extension ArticleOnlineImagesViewController {
     @IBAction func goForwardAction(_ sender: Any) {
         if webView.canGoBack {
@@ -56,72 +57,78 @@ extension ArticleOnlineImagesViewController {
     @IBAction func reload(_ sender: Any) {
         webView.reload()
     }
+    
+    @IBAction func share(_ sender: Any) {
+        guard navigationItem.title != nil, let url = webView?.url!.absoluteString else { return }
+        fastActivityVC(item: url)
+    }
 }
+
+
 
 // MARK: - Main Functions
 extension ArticleOnlineImagesViewController {
     
     // MARK: - Private
     private func basicAlpha() {
-        let alpha: CGFloat = 0
-        let enabled: Bool = false
         
         /// Set alpha
-        webViewBackground.alpha = alpha
-        webView.alpha           = alpha
+        let views: [UIView] = [webViewBackground, webView]
+        for view in views {
+            view.alpha = 0
+        }
         
         /// set enabled
-        shareURl.isEnabled     = enabled
-        leftButton.isEnabled   = enabled
-        rightButton.isEnabled  = enabled
-        reloadButton.isEnabled = enabled
+        let buttons: [UIBarButtonItem] = [shareURl, leftButton, rightButton, reloadButton]
+        for button in buttons {
+            button.isEnabled = false
+        }
     }
     
     private func webViewBackgroundPrefering() {
         
         /// webViewBackground setup
         webViewBackground.backgroundColor = .systemBackground
-        webViewBackground.layer.cornerRadius = CGFloat(20)
+        webViewBackground.layer.cornerRadius = 20
         webViewBackground.viewShadows()
         
         /// webView setup
         webView.layer.cornerRadius = 20
     }
     
-    private func viewPrefering() {
-        
-        /// views backgroundColors setup
-        view.backgroundColor = .systemBackground
-        navigationController?.navigationBar.barTintColor = .systemBackground
-    }
-    
     private func fastActivityVC(item: String) {
+        
+        /// Setup UIActivityViewController
         let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)
             activityVC.popoverPresentationController?.sourceView = self.view
-        
-            UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
-        
         self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    private func setuoNavController() {
+        
+        /// Setup navigationController
+        let navController = navigationController
+        navController?.hidesBarsOnTap   = false
+        navController?.hidesBarsOnSwipe = false
     }
 }
 
-// MARK: - WebControllerDelegate
+
+
+//MARK: - WebControllerDelegate
 extension ArticleOnlineImagesViewController: WebControllerDelegate {
     func checkWifi() {
         let networkStatus = Reachability().connectionStatus()
         switch networkStatus {
-        case .Unknown, .Offline:
-            print("Offline")
-            FastAlert.showBasic(title: "Oops", message: "You are not connected to WiFi", vc: self)
-        case .Online(.WWAN):
-            print("Connected via WWAN")
-        case .Online(.WiFi):
-            print("Connected via WiFi")
+            case .Unknown, .Offline:
+                FastAlert.showBasic(title: "Oops", message: "You are not connected to WiFi", vc: self)
+            case .Online(.WWAN): return
+            case .Online(.WiFi): return
         }
     }
     
     func networkingProccesesPrefering() {
-        let queue = DispatchQueue.global(qos: .utility)
+        let queue = DispatchQueue.global(qos: .userInteractive)
         queue.async {
             DispatchQueue.main.async {
                 self.urlGiven()
@@ -135,29 +142,40 @@ extension ArticleOnlineImagesViewController: WebControllerDelegate {
     }
 }
 
+
+
+// MARK: - ArticleOnlineVCsSetupProtocol extension
 extension ArticleOnlineImagesViewController: ArticleOnlineVCsSetupProtocol {
+    
+    // MARK: Setup Animation for viewDidApear
     func viewDidApearAnimationSetup() {
+        let views: [UIView] = [webViewBackground, webView]
+        let buttons: [UIBarButtonItem] = [shareURl, leftButton, rightButton, reloadButton]
+        
+        /// Setup animation
         UIView.animate(withDuration: 0.6) {
-            let alpha: CGFloat = 1
             
-            self.webViewBackground.alpha = alpha
-            self.webView.alpha           = alpha
+            /// Set alpha
+            for view in views {
+                view.alpha = 1
+            }
             
             UIView.animate(withDuration: 5) {
-                let enabled = true
-                
-                self.shareURl.isEnabled     = enabled
-                self.leftButton.isEnabled   = enabled
-                self.rightButton.isEnabled  = enabled
-                self.reloadButton.isEnabled = enabled
+                /// set enabled
+                for button in buttons {
+                    button.isEnabled = true
+                }
             }
         }
     }
     
+    // MARK: Setup webView content
     func urlGiven() {
-        /// guard
+        
+        //MARK: Title guard
         guard title != nil else { return }
         
+        /// Fast webView load
         func webViewLoad(url string: String) {
             webView.load(URLRequest(url: URL(string: string)!))
         }
@@ -205,11 +223,5 @@ extension ArticleOnlineImagesViewController: ArticleOnlineVCsSetupProtocol {
         } else if title == "Humen Images" {
             webViewLoad(url: ArticlesImagesURLs.humanImagesURL)
         }
-    }
-    
-    // MARK: @IBAction
-    @IBAction func share(_ sender: Any) {
-        guard navigationItem.title != nil, let url = webView?.url!.absoluteString else { return }
-        fastActivityVC(item: url)
     }
 }

@@ -40,4 +40,10 @@ struct AboutAppStringInformation {
 
     4) After you have answered all the questions, you will have a button to finish the test for, as is obvious, to finish the test.
     """
+    
+    struct WhatsNewContent {
+        static let images: [String]     = ["paintbrush.fill", "lock.shield.fill", "tray.2.fill"]
+        static let titles: [String]     = ["New Application Design", "Bug fix", "Application has been shared"]
+        static let subtitles: [String]  = ["Developers have changed fonts, shadows, colors. We did everything to make the application more intuitive.", "Fixed many different bugs in the application. Since the last update, every part of the program has been checked.", "The application has been structured. Many parts of the application have been separated and become much more user-friendly."]
+    }
 }

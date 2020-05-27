@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
+//MARK: - UIView Gradient Extensions
 extension UIView {
     
     //MARK: Public
-    func setGradientBackground(colorOne: UIColor, colorTwo: UIColor) {
+    public func setGradientBackground(colorOne: UIColor, colorTwo: UIColor) {
         let gradientLayer = CAGradientLayer()
         
             gradientLayer.frame         = bounds
@@ -26,7 +27,7 @@ extension UIView {
         layer.insertSublayer(gradientLayer, at: 0)
     }
 
-    func setTestGradientBackground(colorOne: UIColor, colorTwo: UIColor, colorThird: UIColor, colorForth: UIColor) {
+    public func setTestGradientBackground(colorOne: UIColor, colorTwo: UIColor, colorThird: UIColor, colorForth: UIColor) {
         let gradientLayer = CAGradientLayer()
         
             gradientLayer.frame         = bounds

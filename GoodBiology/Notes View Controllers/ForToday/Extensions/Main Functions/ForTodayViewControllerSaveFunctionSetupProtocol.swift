@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import NotificationBannerSwift
 
 protocol ForTodayViewControllerSaveFunctionSetupProtocol {
     
@@ -107,6 +108,7 @@ extension ForTodayViewController: ForTodayViewControllerSaveFunctionSetupProtoco
     private func setupSaveAlert(alert: UIAlertController, indicator: UIActivityIndicatorView) {
         let alertAction = UIAlertAction(title: "Continue", style: .cancel) { (_) in
             self.setupLastSaveDate()
+            self.setupSaveBunner()
         }
         
         /// Set Font
@@ -141,6 +143,22 @@ extension ForTodayViewController: ForTodayViewControllerSaveFunctionSetupProtoco
         
         indicator.style = .large
         alert.title = " "
+    }
+    
+    private func setupSaveBunner() {
+        
+        /// Setup Banner
+        let banner = StatusBarNotificationBanner(title: "Your note was saved",
+                                                 style: .success,
+                                                 colors: nil)
+        let dismissEnabled = true
+        
+        /// Setup StatusBarNotificationBanner properties
+        banner.autoDismiss  = dismissEnabled
+        banner.dismissOnTap = dismissEnabled
+        
+        /// Show Banner
+        banner.show()
     }
 }
 

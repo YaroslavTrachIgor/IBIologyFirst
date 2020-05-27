@@ -10,6 +10,9 @@ import UIKit
 
 final class ThemesController: UIViewController {
     
+    //MARK: ViewModel
+    let viewModel = ThemesControllersViewModel()
+    
     // MARK: @IBOutles
     @IBOutlet weak var contentBackground: UIView!
     @IBOutlet weak var contentTextView:   UITextView!
@@ -30,11 +33,11 @@ final class ThemesController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        UIView.animate(withDuration: 0.6) {
-            self.contentBackground.alpha = 1
-        }
+        viewModel.viewDidAppearAnimationSetup(back: contentBackground)
     }
 }
+
+
 
 // MARK: - ArticlesViewControllerDelegate
 extension ThemesController: ArticlesViewControllerDelegate {
@@ -50,6 +53,8 @@ extension ThemesController: ArticlesViewControllerDelegate {
     }
 }
 
+
+
 // MARK: - @IBAction
 extension ThemesController {
     @objc func shareContentGiven() {
@@ -59,26 +64,15 @@ extension ThemesController {
     }
     
     @objc func stepperViewShowing() {
-        if stepperView.isHidden == true {
-            stepperView.isHidden = false
-        } else {
-            stepperView.isHidden = true
-        }
+        viewModel.stepperViewHiddenSetup(stepperView: stepperView)
     }
     
     @IBAction func stepperViewShowing(_ sender: Any) {
-        if stepperView.isHidden == true {
-            stepperView.isHidden = false
-        } else {
-            stepperView.isHidden = true
-        }
+        viewModel.stepperViewHiddenSetup(stepperView: stepperView)
     }
     
     @IBAction func stepper(_ sender: UIStepper) {
-        let font     = contentTextView.font?.fontName
-        let fontSize = CGFloat(sender.value)
-        
-        contentTextView.font = UIFont(name: font!, size: fontSize)
+        viewModel.contentFontChange(contentTextView: contentTextView, stepper: sender)
         
         /// For Analytics
         AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
@@ -92,69 +86,62 @@ extension ThemesController {
     }
 }
 
+
+
 // MARK: - Main Functions
 extension ThemesController {
-    private func fastActivityVC(content: String) {
-        let activityVC = UIActivityViewController(activityItems: [content], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
-        
-            UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
-        
-        self.present(activityVC, animated: true, completion: nil)
+    fileprivate func fastActivityVC(content: String) {
+        viewModel.fastActivityVC(content: content, vc: self)
     }
     
-    private func basicView() {
+    fileprivate func basicView() {
         contentTextViewSetup()
         stepperViewSetup()
         contentBackgroundSetup()
     }
     
-    private func rate() {
-        if navigationItem.title == "Fungi" {
+    fileprivate func rate() {
+        viewModel.checkForRatesEnabled(navIten: navigationItem, rateFunc: {
             RateManager.showRatesController()
-        }
+        })
     }
     
-    private func cornerGiven() {
-        let cornerRadius = 20
+    fileprivate func cornerGiven() {
+        let cornerRadius: CGFloat = 20
         
-        contentBackground.layer.cornerRadius = CGFloat(cornerRadius)
-        contentTextView.layer.cornerRadius   = CGFloat(cornerRadius)
+        viewModel.viewCornersSetup(view: contentBackground, corners: cornerRadius)
+        viewModel.viewCornersSetup(view: contentTextView, corners: cornerRadius)
     }
     
-    private func contentTextViewSetup() {
-        contentTextView.font      = UIFont(name: "AvenirNext-Medium", size: 17)
-        contentTextView.textColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+    fileprivate func contentTextViewSetup() {
+        viewModel.contentTextViewSetup(contentTextView: contentTextView)
     }
     
-    private func contentBackgroundSetup() {
+    fileprivate func contentBackgroundSetup() {
         contentBackground.viewShadows()
-        contentBackground.alpha = 0
+        viewModel.viewAlphaSetup(view: contentBackground, alpha: 0)
     }
     
-    private func stepperViewSetup() {
+    fileprivate func stepperViewSetup() {
         stepperView.editorsViews()
-        
         stepperSetup()
     }
     
-    private func stepperSetup() {
+    fileprivate func stepperSetup() {
         stepper.stepperBaics()
     }
     
-    private func systemColorPrefering() {
+    fileprivate func systemColorPrefering() {
         view.viewSystemBack()
-        
         contentBackground.viewSystemBack()
         stepperView.viewSystemBack()
     }
     
-    private func navControllerSetup() {
-        if #available(iOS 13.0, *) {
-            let stepperViewShowingButton = UIBarButtonItem(image: UIImage(systemName: "textformat.size"), style: .plain, target: self, action: #selector(stepperViewShowing(_:)))
-            let shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareContentGiven))
-            
-            navigationItem.rightBarButtonItems = [stepperViewShowingButton, shareButton]
-        }
+    fileprivate func navControllerSetup() {
+        let stepperViewShowingButton = UIBarButtonItem(image: UIImage(systemName: "textformat.size"), style: .plain, target: self, action: #selector(stepperViewShowing(_:)))
+        let shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareContentGiven))
+        let buttons = [stepperViewShowingButton, shareButton]
+        
+        viewModel.navItemSetup(buttons: buttons, navItem: navigationItem)
     }
 }

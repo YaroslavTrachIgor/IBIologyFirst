@@ -169,26 +169,28 @@ extension ThemesController: ArticleThemesControllerDataSetProtocol {
             contentTextView.text = archeaRelationToEukaryotes
             
         } else if navigationItem.title == "Archea Morphology" {
-            contentTextView.text = archeaMorphology
+            viewModel.setupContentTextViewContent(textView: contentTextView, text: archeaMorphology)
             
         } else if navigationItem.title == "Archea Cell Wall And Flagella" {
-            contentTextView.text = archeaCellWallAndFlagella
+            viewModel.setupContentTextViewContent(textView: contentTextView, text: archeaCellWallAndFlagella)
             
         } else if navigationItem.title == "Human Etymology and definition" {
-            contentTextView.text = etymologyAndDefinition
+            viewModel.setupContentTextViewContent(textView: contentTextView, text: etymologyAndDefinition)
             
         } else if navigationItem.title == "Human Evolution and range" {
-            contentTextView.text = humanEvolutionAndRange
+            viewModel.setupContentTextViewContent(textView: contentTextView, text: humanEvolutionAndRange)
             
         } else if navigationItem.title == "Human Evidence from molecular biology" {
             contentTextView.text = evidenceFromMolecularBiology
             
         } else if navigationItem.title == "Human Evidence from the fossil record" {
-            contentTextView.text = evidenceFromFossilRecord
+            viewModel.setupContentTextViewContent(textView: contentTextView, text: evidenceFromFossilRecord)
             
         } else if navigationItem.title == "Human Anatomical adaptations" {
-            contentTextView.text = anatomicalAdaptations
+            viewModel.setupContentTextViewContent(textView: contentTextView, text: anatomicalAdaptations)
         }
-        contentTextView.isEditable = false
+        
+        /// Set Editable
+        viewModel.contentTextViewEditableSetup(textView: contentTextView, editable: false)
     }
 }

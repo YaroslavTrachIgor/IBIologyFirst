@@ -7,78 +7,66 @@
 //
 
 import UIKit
+import WebKit
 
+//MARK: - Main ArticlesOnlineVideosViewController class
 class ArticlesOnlineVideosViewController: UIViewController {
 
-    @IBOutlet weak var shareURl:              UIBarButtonItem!
-    @IBOutlet weak var leftButton:            UIBarButtonItem!
-    @IBOutlet weak var rightButton:           UIBarButtonItem!
-    @IBOutlet weak var webViewBackground:     UIView!
-    @IBOutlet weak var webView:               UIWebView!
-    @IBOutlet weak var reloadButton:          UIBarButtonItem!
+    //MARK: - @IBOutlets
+    //MARK: UIBarButtonItems
+    @IBOutlet weak var shareURl:     UIBarButtonItem!
+    @IBOutlet weak var leftButton:   UIBarButtonItem!
+    @IBOutlet weak var rightButton:  UIBarButtonItem!
+    @IBOutlet weak var reloadButton: UIBarButtonItem!
+    
+    //MARK: webViewBackground and webView
+    @IBOutlet weak var webViewBackground: UIView!
+    @IBOutlet weak var webView:           WKWebView!
         
+    
+    //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
         networkingProccesesPrefering()
         viewBasicProccesesPrefering()
-        
         articleVCProperty_NavBarHiddenSet()
+        setuoNavController()
     }
         
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.6) {
-            let alpha = 1
-            
-            self.webViewBackground.alpha = CGFloat(alpha)
-            self.webView.alpha           = CGFloat(alpha)
-                
-            UIView.animate(withDuration: 5) {
-                let enabled = true
-                
-                self.shareURl.isEnabled     = enabled
-                self.leftButton.isEnabled   = enabled
-                self.rightButton.isEnabled  = enabled
-                self.reloadButton.isEnabled = enabled
-            }
-        }
+        viewDidApearAnimationSetup()
     }
-        
-    func networkingProccesesPrefering() {
-        let queue = DispatchQueue.global(qos: .utility)
-        queue.async {
-            DispatchQueue.main.async {
-                self.urlGiven()
-            }
-        }
-    }
-        
-    func viewBasicProccesesPrefering() {
-        webViewBackgroundPrefering()
-        basicAlpha()
-    }
-        
+}
+
+
+
+// MARK: - Main Methods
+extension ArticlesOnlineVideosViewController {
+    
+    //MARK: Private
     private func basicAlpha() {
-        let alpha   = 0
-        let enabled = false
+        /// Set alpha
+        let views: [UIView] = [webViewBackground, webView]
+        for view in views {
+            view.alpha = 0
+        }
         
-        webViewBackground.alpha = CGFloat(alpha)
-        webView.alpha           = CGFloat(alpha)
-            
-        shareURl.isEnabled     = enabled
-        leftButton.isEnabled   = enabled
-        rightButton.isEnabled  = enabled
-        reloadButton.isEnabled = enabled
+        /// set enabled
+        let buttons: [UIBarButtonItem] = [shareURl, leftButton, rightButton, reloadButton]
+        for button in buttons {
+            button.isEnabled = false
+        }
     }
         
     private func webViewBackgroundPrefering() {
-        if #available(iOS 13.0, *) {
-            webViewBackground.backgroundColor = .systemBackground
-        }
         
+        /// Setup webViewBackground
+        webViewBackground.backgroundColor = .systemBackground
         webViewBackground.layer.cornerRadius = CGFloat(20)
         webViewBackground.viewShadows()
         
+        /// Setup webView
         webViewPrefering()
     }
         
@@ -87,60 +75,35 @@ class ArticlesOnlineVideosViewController: UIViewController {
     }
         
     private func viewPrefering() {
-        if #available(iOS 13.0, *) {
-            view.backgroundColor = .systemBackground
-            navigationController?.navigationBar.barTintColor = .systemBackground
-        }
-    }
+        let backColor: UIColor = .systemBackground
         
-    private func urlGiven() {
-        guard navigationItem.title != nil else { return }
-        
-        if navigationItem.title == "Plants Videos" {
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.plantsURL)!))
-            
-        } else if navigationItem.title == "Animals Videos" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.animalURL)!))
-        } else if navigationItem.title == "Microbes Videos" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.microbeURL)!))
-        } else if navigationItem.title == "Viruses Videos" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.virusURL)!))
-        } else if navigationItem.title == "Funguses Videos" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.fungusURL)!))
-        } else if navigationItem.title == "Archaea Videos" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.archaeaURL)!))
-        } else if navigationItem.title == "Humen Videos" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesVideosURLs.humanURL)!))
-        } else if navigationItem.title == "Plants Images" {
-                   
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesImagesURLs.plantsImagesURL)!))
-        } else if navigationItem.title == "Animals Images" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesImagesURLs.animalImagesURL)!))
-        } else if navigationItem.title == "Microbes Images" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesImagesURLs.microbeImagesURL)!))
-        } else if navigationItem.title == "Viruses Images" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesImagesURLs.virusImagesURL)!))
-        } else if navigationItem.title == "Funguses Images" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesImagesURLs.fungusImagesURL)!))
-        } else if navigationItem.title == "Archaea Images" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: (ArticlesImagesURLs.archaeaImagesURL))!))
-        } else if navigationItem.title == "Humen Images" {
-            
-            self.webView.loadRequest(URLRequest(url: URL(string: ArticlesImagesURLs.humanImagesURL)!))
-        }
+        view.backgroundColor                             = backColor
+        navigationController?.navigationBar.barTintColor = backColor
     }
     
+    private func setuoNavController() {
+        
+        /// Setup navigationController
+        let navController = navigationController
+        navController?.hidesBarsOnTap   = false
+        navController?.hidesBarsOnSwipe = false
+    }
+    
+    
+    //MARK: Internal
+    internal func fastActivityVC(content: String) {
+        
+        /// Setup UIActivityViewController
+        let activityVC = UIActivityViewController(activityItems: [content], applicationActivities: nil)
+            activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+    }
+}
+
+
+
+// MARK: - @IBActions
+extension ArticlesOnlineVideosViewController {
     @IBAction func goForwardAction(_ sender: Any) {
         if webView.canGoBack {
             webView.goBack()
@@ -198,17 +161,121 @@ class ArticlesOnlineVideosViewController: UIViewController {
                    
             fastActivityVC(content: ArticlesImagesURLs.archaeaImagesURL)
         } else if navigationItem.title == "Humen Images" {
-                   
+            
             fastActivityVC(content: ArticlesImagesURLs.humanImagesURL)
         }
     }
+}
+
+
+
+// MARK: - ArticleOnlineVCsSetupProtocol extension
+extension ArticlesOnlineVideosViewController: ArticleOnlineVCsSetupProtocol {
     
-    private func fastActivityVC(content: String) {
-        let activityVC = UIActivityViewController(activityItems: [content], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
+    // MARK: Setup Animation for viewDidApear
+    func viewDidApearAnimationSetup() {
+        let views: [UIView] = [webViewBackground, webView]
+        let buttons: [UIBarButtonItem] = [shareURl, leftButton, rightButton, reloadButton]
         
-            UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
+        /// Setup animation
+        UIView.animate(withDuration: 0.6) {
+            
+            /// Set alpha
+            for view in views {
+                view.alpha = 1
+            }
+            
+            UIView.animate(withDuration: 5) {
+                /// set enabled
+                for button in buttons {
+                    button.isEnabled = true
+                }
+            }
+        }
+    }
+    
+    // MARK: Setup webView content
+    func urlGiven() {
         
-        self.present(activityVC, animated: true, completion: nil)
+        //MARK: Title guard
+        guard title != nil else { return }
+        
+        /// Fast webView load
+        func webViewLoad(url string: String) {
+            webView.load(URLRequest(url: URL(string: string)!))
+        }
+        
+        //MARK: Set webView URL
+        if title == "Plants Videos" {
+            webViewLoad(url: ArticlesVideosURLs.plantsURL)
+            
+        } else if title == "Animals Videos" {
+            webViewLoad(url: ArticlesVideosURLs.animalURL)
+            
+        } else if title == "Microbes Videos" {
+            webViewLoad(url: ArticlesVideosURLs.microbeURL)
+            
+        } else if title == "Viruses Videos" {
+            webViewLoad(url: ArticlesVideosURLs.virusURL)
+            
+        } else if title == "Funguses Videos" {
+            webViewLoad(url: ArticlesVideosURLs.fungusURL)
+            
+        } else if title == "Archaea Videos" {
+            webViewLoad(url: ArticlesVideosURLs.archaeaURL)
+            
+        } else if title == "Humen Videos" {
+            webViewLoad(url: ArticlesVideosURLs.humanURL)
+            
+        } else if title == "Plants Images" {
+            webViewLoad(url: ArticlesImagesURLs.plantsImagesURL)
+            
+        } else if title == "Animals Images" {
+            webViewLoad(url: ArticlesImagesURLs.animalImagesURL)
+
+        } else if title == "Microbes Images" {
+            webViewLoad(url: ArticlesImagesURLs.microbeImagesURL)
+            
+        } else if title == "Viruses Images" {
+            webViewLoad(url: ArticlesImagesURLs.virusImagesURL)
+            
+        } else if title == "Funguses Images" {
+            webViewLoad(url: ArticlesImagesURLs.fungusImagesURL)
+            
+        } else if title == "Archaea Images" {
+            webViewLoad(url: ArticlesImagesURLs.archaeaImagesURL)
+            
+        } else if title == "Humen Images" {
+            webViewLoad(url: ArticlesImagesURLs.humanImagesURL)
+        }
+    }
+}
+
+
+
+// MARK: - WebControllerDelegate
+extension ArticlesOnlineVideosViewController: WebControllerDelegate {
+    func checkWifi() {
+        let networkStatus = Reachability().connectionStatus()
+        switch networkStatus {
+            case .Unknown, .Offline:
+                FastAlert.showBasic(title: "Oops", message: "You are not connected to WiFi", vc: self)
+            case .Online(.WWAN): return
+            case .Online(.WiFi): return
+        }
+    }
+    
+    func networkingProccesesPrefering() {
+        let queue = DispatchQueue.global(qos: .userInteractive)
+        queue.async {
+            DispatchQueue.main.async {
+                self.urlGiven()
+            }
+        }
+    }
+    
+    func viewBasicProccesesPrefering() {
+        webViewBackgroundPrefering()
+        basicAlpha()
     }
 }

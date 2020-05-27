@@ -15,4 +15,6 @@ pod 'Firebase/Auth'
 pod 'FirebaseUI/Auth'
 pod 'Signals'
 pod 'SwiftEntryKit'
+pod 'WhatsNewKit'
+pod 'NotificationBannerSwift'
 end

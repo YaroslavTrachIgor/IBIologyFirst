@@ -12,13 +12,16 @@ import AudioToolbox
 
 final class NetworkingViewController: UIViewController, UISearchBarDelegate {
     
+    //MARK: URLs
     struct URLs {
         static let wikiURL = "https://www.wikipedia.org"
     }
     
+    
     //MARK: Public
     let viewModel = NetworkingViewControllerViewModel()
     let animationManeger = BrowserAnimationManeger()
+    
     
     //MARK: - IBOutlets
     /// UIImages for animation Preview
@@ -29,19 +32,24 @@ final class NetworkingViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var image4: TransformImageView!
     @IBOutlet weak var image5: TransformImageView!
     
-    // MARK: - searchBar
+    
+    // MARK: - UISearchBar
     @IBOutlet weak var searchBar: UISearchBar!
+    
     
     // MARK: - explanatoryView
     @IBOutlet weak var explanatoryView:     ExplanatoryView!
     @IBOutlet weak var explanatoryTextView: ExplanatoryTextView!
     
+    
     // MARK: - webViewBaxckground and webView
     @IBOutlet weak var webViewBaxckground: WebViewBaxckground!
     @IBOutlet weak var webView:            WKWebView!
     
+    
     // MARK: - UIActivityIndicatorView
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView! { didSet { activityIndicator.activityIndicatorViewShadow() } }
+    
     
     // MARK: - NetworkingButtons
     @IBOutlet weak var goForwardButton: NetworkingButton!
@@ -51,23 +59,29 @@ final class NetworkingViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var sitesButton:     NetworkingButton!
     @IBOutlet weak var mapGoButton:     NetworkingButton!
     
+    
     // MARK: - switchView
     @IBOutlet weak var textSwitchView: UITextView!
     @IBOutlet weak var switchView:     UIView!
     @IBOutlet weak var switchOutlet:   UISwitch!
     
+    
     // MARK: - UILabel
     @IBOutlet weak var loadingLabel: UILabel!
     
+    
     // Main Tool Bar
     @IBOutlet weak var mainToolBar: NetworkingViewControllerMainToolBar!
+    
     
     // MARK: - pickerView and pickerViewBack
     @IBOutlet weak var pickerView:     UIPickerView!
     @IBOutlet weak var pickerViewBack: UIView!
     
+    
     // MARK: - Array
     let sytesMenuArray = ["Wikipedia", "Google", "YouTube", "YouTube About Plants", "YouTube About Animals", "YouTube About Microbes"]
+    
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -78,9 +92,11 @@ final class NetworkingViewController: UIViewController, UISearchBarDelegate {
         articleVCProperty_NavBarHiddenSet()
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         viewDidApperAnimation()
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

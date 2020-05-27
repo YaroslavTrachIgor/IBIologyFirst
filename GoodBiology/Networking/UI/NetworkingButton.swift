@@ -9,6 +9,14 @@
 import Foundation
 import UIKit
 
+//MARK: NetworkingButtonProtocol protocol
+protocol NetworkingButtonProtocol {
+    func barButtonItemSetup()
+}
+
+
+
+//MARK: NetworkingButton main class
 class NetworkingButton: UIBarButtonItem {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -17,9 +25,16 @@ class NetworkingButton: UIBarButtonItem {
     }
 }
 
-extension NetworkingButton {
-    private func barButtonItemSetup() {
+
+
+//MARK: NetworkingButtonProtocol extension
+extension NetworkingButton: NetworkingButtonProtocol {
+    func barButtonItemSetup() {
+        
+        /// Setup Enabled
         isEnabled = true
+        
+        /// Setup tintColor
         tintColor = .black
     }
 }

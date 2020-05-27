@@ -10,20 +10,26 @@ import UIKit
 import StoreKit
 
 //MARK: RateManeger
-@available(iOS 10.3, *)
 class RateManager {
-    
-    //MARK: Classes Functions
+    struct Keys {
+        static let runCountKey = "run_count"
+    }
+}
+
+
+
+//MARK:  - Classes Functions
+extension RateManager {
     class func incrementCount() {
-        let count = UserDefaults.standard.integer(forKey: "run_count")
+        let count = UserDefaults.standard.integer(forKey: Keys.runCountKey)
         if  count < 7 {
-            UserDefaults.standard.set(count + 1, forKey: "run_count")
+            UserDefaults.standard.set(count + 1, forKey: Keys.runCountKey)
             UserDefaults.standard.synchronize()
         }
     }
     
     class func showRatesController() {
-            let count = UserDefaults.standard.integer(forKey: "run_count")
+            let count = UserDefaults.standard.integer(forKey: Keys.runCountKey)
             if  count == 7 {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
                     SKStoreReviewController.requestReview()

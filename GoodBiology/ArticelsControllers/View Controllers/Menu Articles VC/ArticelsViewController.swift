@@ -20,7 +20,7 @@ struct ArticelsViewControllerKeys {
     static let microbesVCKey    = "microbesVCKey"
 }
 
-class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
+class ArticelsViewController: UIViewController {
     struct NotificationNames {
         static let plantsVCKeyName      = Notification.Name(rawValue: ArticelsViewControllerKeys.plantsVCKey)
         static let animalsVCKeyName     = Notification.Name(rawValue: ArticelsViewControllerKeys.animalsVCKey)
@@ -84,6 +84,7 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
     
     @IBOutlet weak var videoPlayerVCShowerButtonBackView:   ChromistaActionButtonsBack!
     @IBOutlet weak var readingOnTimeVCShowerButtonBackView: ChromistaActionButtonsBack!
+    @IBOutlet weak var supportVCShowerButtonBackView:       ChromistaActionButtonsBack!
     
     // UISearchController
     lazy var searchController = BasicSearchController()
@@ -114,6 +115,65 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
         setupNavBarTitle()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        viewModel.setupNavigationController(navigationController!)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let views = [plantsView, animalsView, microbesView, manView, virusesView, archaeaView, mushroomsView, chromistaView, popularButton]
+        let buttons = [videoPlayerVCShowerButtonBackView, readingOnTimeVCShowerButtonBackView, supportVCShowerButtonBackView, popularButton]
+        let labels: [ArticlesMenuLabel] = [plantsLabel, animalsLabel, microbesLabel, virusesLabel, chromistaLabel, humanLabel, fungusesLabel, archaeaLabel]
+        
+        viewModel.previewAnimation(views: views as! [UIView], buttons: buttons as! [UIView])
+        viewModel.previewLabelsAnimation(labels: labels, navBar: navigationController!.navigationBar)
+        viewModel.setupWhatsNewVC(for: self)
+    }
+    
+    override func viewWillLayoutSubviews() {
+        gradient.setupRootViewsWithBasicGradient(mainView: view, scrollView: scrollView)
+    }
+    
+    func notificationAlert() {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
+    }
+}
+
+
+
+// MARK: - Setup NavItem and NavController
+extension ArticelsViewController {
+    private func setupNavBarTitle() {
+        NotificationCenter.default.addObserver(self, selector: #selector(setupNavItemTextColorWhenPresentFRaomCollectionView(notification:)), name: MenuCollectionViewConterollerVCsPresentKeys.mainArticlesMenuVCpopKey, object: nil)
+    }
+    
+    @objc func setupNavItemTextColorWhenPresentFRaomCollectionView(notification: NSNotification) {
+        let labels: [ArticlesMenuLabel] = [plantsLabel, animalsLabel, microbesLabel, virusesLabel, chromistaLabel, humanLabel, fungusesLabel, archaeaLabel]
+        
+        for label in labels {
+            label.textColor = .biologyGreenColor
+            navigationController!.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.biologyGreenColor]
+        }
+    }
+}
+
+
+
+//MARK: - ArticelsViewControllerProtocol
+extension ArticelsViewController: ArticelsViewControllerProtocol {
+    func setupNavController() {
+        viewModel.setupNavigationControllerBackColor(navigationController!)
+        viewModel.setupSearchBar(searchController.searchBar)
+    }
+}
+
+
+
+//MARK: - Setup Content
+extension ArticelsViewController {
     private func contentJsonSetup() {
         //MARK: Data Give
         viewModel.setJsonData(label: plantsLabel,
@@ -158,61 +218,4 @@ class ArticelsViewController: UIViewController, ArticelsViewControllerProtocol {
                     articlePreviewJsonID: "FungusesArticlePreview", vc: self)
 
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        UIApplication.shared.statusBarStyle = .default
-        
-        viewModel.setupNavigationController(navigationController!)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        let views = [plantsView, animalsView, microbesView, manView, virusesView, archaeaView, mushroomsView, chromistaView, popularButton]
-        let buttons = [videoPlayerVCShowerButtonBackView, readingOnTimeVCShowerButtonBackView, popularButton]
-        let labels: [ArticlesMenuLabel] = [plantsLabel, animalsLabel, microbesLabel, virusesLabel, chromistaLabel, humanLabel, fungusesLabel, archaeaLabel]
-        
-        viewModel.previewAnimation(views: views as! [UIView], buttons: buttons as! [UIView])
-        viewModel.previewLabelsAnimation(labels: labels, navBar: navigationController!.navigationBar)
-    }
-    
-    override func viewWillLayoutSubviews() {
-        gradient.setupRootViewsWithBasicGradient(mainView: view, scrollView: scrollView)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        UIApplication.shared.statusBarStyle = UIStatusBarStyle.default
-    }
-    
-    func notificationAlert() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge], completionHandler: {didAllow, error in})
-    }
-    
-    func setupNavController() {
-        viewModel.setupNavigationControllerBackColor(navigationController!)
-        viewModel.setupSearchBar(searchController.searchBar)
-    }
 }
-
-
-
-// MARK: - Setup Nav Item
-extension ArticelsViewController {
-    private func setupNavBarTitle() {
-        NotificationCenter.default.addObserver(self, selector: #selector(setupNavItemTextColorWhenPresentFRaomCollectionView(notification:)), name: MenuCollectionViewConterollerVCsPresentKeys.mainArticlesMenuVCpopKey, object: nil)
-    }
-    
-    @objc func setupNavItemTextColorWhenPresentFRaomCollectionView(notification: NSNotification) {
-        let labels: [ArticlesMenuLabel] = [plantsLabel, animalsLabel, microbesLabel, virusesLabel, chromistaLabel, humanLabel, fungusesLabel, archaeaLabel]
-        
-        for label in labels {
-            label.textColor = .biologyGreenColor
-            navigationController!.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.biologyGreenColor]
-        }
-    }
-}
-

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		61F44F3134C037BD82740881 /* libPods-GoodBiology.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 866FF06AFF388D236F192D4A /* libPods-GoodBiology.a */; };
+		84035365247DF108007DE3BB /* VideosMenuTableViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035364247DF108007DE3BB /* VideosMenuTableViewControllerPresenter.swift */; };
+		84035368247EF1D9007DE3BB /* ArticleOnlineVCsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84035367247EF1D9007DE3BB /* ArticleOnlineVCsProtocols.swift */; };
 		84036C2D2423E56F00188795 /* MostPopularArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84036C2C2423E56F00188795 /* MostPopularArticles.swift */; };
 		840FB81223BA20C70081DE59 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81123BA20C70081DE59 /* TextView.swift */; };
 		840FB81423BA3F970081DE59 /* TestButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840FB81323BA3F960081DE59 /* TestButtons.swift */; };
@@ -140,6 +142,9 @@
 		847CFCD22476A9B600484B54 /* TestVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCD12476A9B500484B54 /* TestVCPresenter.swift */; };
 		847CFCD42476AA1600484B54 /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCD32476AA1600484B54 /* DoneButton.swift */; };
 		847CFCD624771E8200484B54 /* TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCD524771E8200484B54 /* TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift */; };
+		847CFCD92478375C00484B54 /* ThemesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCD82478375C00484B54 /* ThemesViewModel.swift */; };
+		847CFCDC247890E000484B54 /* VideoPlayerViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCDB247890E000484B54 /* VideoPlayerViewControllerPresenter.swift */; };
+		847CFCDF247C5FB800484B54 /* MakingArticleViewControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CFCDE247C5FB800484B54 /* MakingArticleViewControllerPresenter.swift */; };
 		847E14E8246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */; };
 		847E14EA246C659700C35F9E /* NetworkingViewControllerINActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */; };
 		847E14EC246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */; };
@@ -492,6 +497,8 @@
 /* Begin PBXFileReference section */
 		0045B572FD23584A651EC5C1 /* Pods-GoodBiology.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBiology.release.xcconfig"; path = "Target Support Files/Pods-GoodBiology/Pods-GoodBiology.release.xcconfig"; sourceTree = "<group>"; };
 		625B4F54138942D262E7B60F /* Pods-GoodBiology.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBiology.debug.xcconfig"; path = "Target Support Files/Pods-GoodBiology/Pods-GoodBiology.debug.xcconfig"; sourceTree = "<group>"; };
+		84035364247DF108007DE3BB /* VideosMenuTableViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosMenuTableViewControllerPresenter.swift; sourceTree = "<group>"; };
+		84035367247EF1D9007DE3BB /* ArticleOnlineVCsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleOnlineVCsProtocols.swift; sourceTree = "<group>"; };
 		84036C2C2423E56F00188795 /* MostPopularArticles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostPopularArticles.swift; sourceTree = "<group>"; };
 		840FB81123BA20C70081DE59 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		840FB81323BA3F960081DE59 /* TestButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestButtons.swift; sourceTree = "<group>"; };
@@ -628,6 +635,9 @@
 		847CFCD12476A9B500484B54 /* TestVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCPresenter.swift; sourceTree = "<group>"; };
 		847CFCD32476AA1600484B54 /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
 		847CFCD524771E8200484B54 /* TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVCPlantsViewControllerAdMobBannerSetupProtocol.swift; sourceTree = "<group>"; };
+		847CFCD82478375C00484B54 /* ThemesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesViewModel.swift; sourceTree = "<group>"; };
+		847CFCDB247890E000484B54 /* VideoPlayerViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewControllerPresenter.swift; sourceTree = "<group>"; };
+		847CFCDE247C5FB800484B54 /* MakingArticleViewControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakingArticleViewControllerPresenter.swift; sourceTree = "<group>"; };
 		847E14E7246C64FF00C35F9E /* NetworkingViewControllerWebControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerWebControllerDelegate.swift; sourceTree = "<group>"; };
 		847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerINActions.swift; sourceTree = "<group>"; };
 		847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManegerViewModel.swift; sourceTree = "<group>"; };
@@ -995,6 +1005,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84035363247DF0EF007DE3BB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				84035364247DF108007DE3BB /* VideosMenuTableViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		84035366247EF1BF007DE3BB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				84035367247EF1D9007DE3BB /* ArticleOnlineVCsProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		840FB81023BA20B60081DE59 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -1264,6 +1290,7 @@
 		844E0D1F2235766000933ABC /* Making Article */ = {
 			isa = PBXGroup;
 			children = (
+				847CFCDD247C5F9F00484B54 /* Presenter */,
 				84B1D610242D4DC60046C4FB /* Content */,
 				849E67FA23FC306400569F32 /* UI */,
 				844E0D1D2235765200933ABC /* MakingArticleViewController.swift */,
@@ -1275,6 +1302,7 @@
 		844E0D222239A15000933ABC /* About App */ = {
 			isa = PBXGroup;
 			children = (
+				847CFCDA247890C100484B54 /* Presenter */,
 				844E0D232239A16900933ABC /* VideoPlayerViewController.swift */,
 			);
 			name = "About App";
@@ -1311,6 +1339,7 @@
 		8454DD9C221326820033A3A2 /* Themes */ = {
 			isa = PBXGroup;
 			children = (
+				847CFCD72478373700484B54 /* ViewModel */,
 				848CC42A2368FAE90060709C /* Menu */,
 				848CC4292368FAC20060709C /* Themes Controller */,
 			);
@@ -1482,13 +1511,6 @@
 			path = MainTestVCAction;
 			sourceTree = "<group>";
 		};
-		847CFCBB2473F8C200484B54 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		847CFCBE247439E400484B54 /* DoneTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1514,6 +1536,30 @@
 				847CFCD12476A9B500484B54 /* TestVCPresenter.swift */,
 			);
 			path = TestPresenter;
+			sourceTree = "<group>";
+		};
+		847CFCD72478373700484B54 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				847CFCD82478375C00484B54 /* ThemesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		847CFCDA247890C100484B54 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				847CFCDB247890E000484B54 /* VideoPlayerViewControllerPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		847CFCDD247C5F9F00484B54 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				847CFCDE247C5FB800484B54 /* MakingArticleViewControllerPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		847E14ED246C72F700C35F9E /* BrowserAnimationManeger */ = {
@@ -1783,6 +1829,7 @@
 		849F5386236A40BC0027289F /* With Wifi */ = {
 			isa = PBXGroup;
 			children = (
+				84035366247EF1BF007DE3BB /* Protocols */,
 				84BDFDCF236DC9970088B09E /* Videos Menu */,
 				845FE7432322F45400B36E76 /* ArticleOnlineImagesViewController.swift */,
 				84BDFDD3236DD3C80088B09E /* ArticlesOnlineVideosViewController.swift */,
@@ -2175,6 +2222,7 @@
 		84BDFDCF236DC9970088B09E /* Videos Menu */ = {
 			isa = PBXGroup;
 			children = (
+				84035363247DF0EF007DE3BB /* Presenter */,
 				84BDFDD0236DCAC80088B09E /* VideosMenuTableViewController.swift */,
 			);
 			path = "Videos Menu";
@@ -2474,7 +2522,6 @@
 		C496AE2021C59B0B00413CB4 /* BiologyControllers */ = {
 			isa = PBXGroup;
 			children = (
-				847CFCBB2473F8C200484B54 /* New Group */,
 				AAEC22D321C679F100FF69FE /* Model */,
 				AA2C423221C842AF00D1E680 /* BasicsNavigationController */,
 				AAEC22D421C679F900FF69FE /* ViewControllers */,
@@ -3317,7 +3364,10 @@
 				84EDAB2924104A6D0063CF6F /* BasicsThemesViewController.swift in Sources */,
 				84A3AFA023F37D9700836400 /* ForTodayViewControllerMailComposerProtocol.swift in Sources */,
 				84680BFE24372CE50048A30B /* MacawPopularViewViewModel.swift in Sources */,
+				847CFCDC247890E000484B54 /* VideoPlayerViewControllerPresenter.swift in Sources */,
+				84035368247EF1D9007DE3BB /* ArticleOnlineVCsProtocols.swift in Sources */,
 				84B1D60F242D0B050046C4FB /* BasicGoogleSignInButton.swift in Sources */,
+				847CFCDF247C5FB800484B54 /* MakingArticleViewControllerPresenter.swift in Sources */,
 				84EF4A4D246623AC009632A1 /* MenuCollectionViewCellButton.swift in Sources */,
 				84EF4A4B2466237E009632A1 /* MenuCollectionViewCell.swift in Sources */,
 				842D691823C42B9E009CF7E7 /* NewLabel.swift in Sources */,
@@ -3424,6 +3474,7 @@
 				847A507F2392E52400223AC7 /* BlankSheetViewController.swift in Sources */,
 				84A4B376240AA32F0013CDB1 /* MapTypeButton.swift in Sources */,
 				8454DD9E221326E50033A3A2 /* ThemesController.swift in Sources */,
+				847CFCD92478375C00484B54 /* ThemesViewModel.swift in Sources */,
 				84274D372412D397008E82BC /* ReadingOnTimeViewControllerButtonsBackView.swift in Sources */,
 				8450EADF24479DED00091F37 /* ReviewControllerViewSetupProtocol.swift in Sources */,
 				8450EACC2444993A00091F37 /* SkipButton.swift in Sources */,
@@ -3589,6 +3640,7 @@
 				84EA94F9246D3A44000EEB8E /* CopyButton.swift in Sources */,
 				8450EAD2244670D800091F37 /* ForTodayViewControllerSaveFunctionSetupProtocol.swift in Sources */,
 				847CFCCF2475574900484B54 /* SaveView.swift in Sources */,
+				84035365247DF108007DE3BB /* VideosMenuTableViewControllerPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

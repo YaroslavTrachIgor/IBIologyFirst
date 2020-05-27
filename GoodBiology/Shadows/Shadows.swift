@@ -9,8 +9,11 @@
 import UIKit
 import WebKit
 
+
+
+//MARK: - UISlider
 extension UISlider {
-    func sliderShadow() {
+    public func sliderShadow() {
         layer.shadowOpacity = 0.7
         layer.shadowColor   = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
         layer.shadowRadius  = 4
@@ -18,8 +21,11 @@ extension UISlider {
     }
 }
 
+
+
+//MARK: - UIActivityIndicatorView
 extension UIActivityIndicatorView {
-    func activityIndicatorViewShadow() {
+    public func activityIndicatorViewShadow() {
         layer.shadowOpacity = 0.8
         layer.shadowColor   = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         layer.shadowRadius  = 11
@@ -27,22 +33,25 @@ extension UIActivityIndicatorView {
     }
 }
 
+
+
+//MARK: - UIButton
 extension UIButton {
-    func buttonsShadows() {
+    public func buttonsShadows() {
         layer.shadowOpacity = 0.7
         layer.shadowColor  = #colorLiteral(red: 0, green: 0.2469184101, blue: 0.009277993813, alpha: 1)
         layer.shadowRadius = 2.9
         layer.shadowOffset  = CGSize(width: 0, height: 4)
     }
     
-    func testButtonsShadows() {
+    public func testButtonsShadows() {
         layer.shadowOpacity = 3
         layer.shadowColor   = #colorLiteral(red: 0, green: 0.2469184101, blue: 0.009277993813, alpha: 1)
         layer.shadowRadius  = 2.2
         layer.shadowOffset  = CGSize(width: 0, height: 0)
     }
     
-    func testFalseButtonsShadows() {
+    public func testFalseButtonsShadows() {
         layer.shadowOpacity = 3
         layer.shadowColor   = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
         layer.shadowRadius  = 4
@@ -50,17 +59,23 @@ extension UIButton {
     }
 }
 
+
+
+//MARK: - UIView
 extension UIView {
-    func viewShadows() {
-        layer.shadowOffset  = CGSize(width: 0, height: 5)
+    public func viewShadows() {
+        layer.shadowOffset  = CGSize(width: 0, height: 1)
         layer.shadowOpacity = 0.7
         layer.shadowColor   = #colorLiteral(red: 0.8915841755, green: 0.8915841755, blue: 0.8915841755, alpha: 1)
-        layer.shadowRadius  = 5
+        layer.shadowRadius  = 3
     }
 }
 
+
+
+//MARK: - WKWebView
 extension WKWebView {
-    func webViewShadow() {
+    public func webViewShadow() {
         layer.shadowOpacity = 0.8
         layer.shadowColor   = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         layer.shadowRadius  = 5
@@ -68,8 +83,11 @@ extension WKWebView {
     }
 }
 
+
+
+//MARK: - UIPickerView
 extension UIPickerView {
-    func pickerViewShadow() {
+    public func pickerViewShadow() {
         layer.shadowOpacity = 0.5
         layer.shadowColor   = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         layer.shadowRadius  = 3
@@ -77,8 +95,11 @@ extension UIPickerView {
     }
 }
 
+
+
+//MARK: - UIDatePicker
 extension UIDatePicker {
-    func datePickerShadow() {
+    public func datePickerShadow() {
         layer.shadowOpacity = 0.5
         layer.shadowColor   = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         layer.shadowRadius  = 3
@@ -86,8 +107,11 @@ extension UIDatePicker {
     }
 }
 
+
+
+//MARK: - UISegmentedControl
 extension UISegmentedControl {
-    func segmentedControlShadow() {
+    public func segmentedControlShadow() {
         layer.shadowOpacity = 0.5
         layer.shadowColor   = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         layer.shadowRadius  = 3
@@ -95,8 +119,11 @@ extension UISegmentedControl {
     }
 }
 
+
+
+//MARK: - UIStepper
 extension UIStepper {
-    func stepperShadow() {
+    public func stepperShadow() {
         layer.shadowOpacity = 0.9
         layer.shadowColor   = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         layer.shadowRadius  = 4
@@ -104,8 +131,11 @@ extension UIStepper {
     }
 }
 
+
+
+//MARK: - UISwitch
 extension UISwitch {
-    func switchShadow() {
+    public func switchShadow() {
         layer.shadowOpacity = 0.7
         layer.shadowColor   = #colorLiteral(red: 0, green: 0.1297192259, blue: 0.005621887637, alpha: 1)
         layer.shadowRadius  = 4
@@ -113,8 +143,11 @@ extension UISwitch {
     }
 }
 
+
+
+//MARK: - UITextView
 extension UITextView {
-    func textViewShadow() {
+    public func textViewShadow() {
         layer.shadowOpacity = 0.7
         layer.shadowColor   = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         layer.shadowRadius  = 9
@@ -122,8 +155,11 @@ extension UITextView {
     }
 }
 
+
+
+//MARK: - UIImageView
 extension UIImageView {
-    func imageViewShadow() {
+    public func imageViewShadow() {
         layer.shadowOpacity = 0.5
         layer.shadowColor   = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         layer.shadowRadius  = 9
@@ -131,8 +167,11 @@ extension UIImageView {
     }
 }
 
+
+
+//MARK: - UILabel
 extension UILabel {
-    func labelShadow() {
+    public func labelShadow() {
         layer.shadowOpacity = 0.5
         layer.shadowColor   = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         layer.shadowRadius  = 6

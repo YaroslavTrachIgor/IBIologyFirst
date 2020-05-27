@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//MARK: NetworkingViewControllerViewSetupProtocol protocol
 protocol NetworkingViewControllerViewSetupProtocol {
     func pickerViewBackPrefering()
     func systemBackColor()
@@ -21,6 +22,9 @@ protocol NetworkingViewControllerViewSetupProtocol {
     func activityINPref()
 }
 
+
+
+//MARK: NetworkingViewControllerViewSetupProtocol extension
 extension NetworkingViewController: NetworkingViewControllerViewSetupProtocol {
     func backItemGiven() {
         viewModel.backItemGiven(navigationItem)

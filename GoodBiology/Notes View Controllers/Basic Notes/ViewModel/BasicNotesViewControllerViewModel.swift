@@ -10,7 +10,37 @@ import Foundation
 import UIKit
 import GoogleMobileAds
 
-class BasicNotesViewControllerViewModel {
+//MARK: - BasicNotesViewControllerViewModelOverridesProtocol protocol
+protocol BasicNotesViewControllerViewModelOverridesProtocol {
+    func setupNavItem(navigationItem: UINavigationItem)
+    func setViewTint(_ view: UIView, tint: UIColor)
+    func setViewAffineTransform(_ view: UIView, scale: CGFloat)
+    func setTextViewText(textView: UITextView, text: String)
+    func setTextFieldText(textField: UITextField, text: String)
+    func setupGoogleBanner(_ bunner: GADBannerView, unit: String, vc: UIViewController)
+    func viewDidApearAnimation(_ objectsArray: [UIView])
+}
+
+
+
+//MARK: - BasicNotesViewControllerViewModelProtocol protocol
+protocol BasicNotesViewControllerViewModelProtocol: BasicNotesViewControllerViewModelOverridesProtocol {
+    func setViewAlpha(_ view: UIView, alpha: CGFloat)
+    func setViewHidden(_ view: UIView, hidden: Bool)
+    func setButtonTitle(_ button: UIButton, title: String)
+    func showActivityVC(content: String, _ vc: UIViewController)
+    func endEditing(_ view: UIView)
+}
+
+
+
+//MARK: - Main BasicNotesViewControllerViewModel Class
+class BasicNotesViewControllerViewModel {}
+
+
+
+//MARK: - BasicNotesViewControllerViewModelProtocol extension
+extension BasicNotesViewControllerViewModel: BasicNotesViewControllerViewModelProtocol {
     func setupNavItem(navigationItem: UINavigationItem) {
         navigationItem.setTitle("Basic Notes", subtitle: "For Today")
         navigationItem.title = ""

@@ -17,7 +17,7 @@ protocol BasicsViewControllerInfoSwitchActionProtocol {
 // MARK: - BasicsViewControllerInfoSwitchActionProtocol
 extension BiologyViewController: BasicsViewControllerInfoSwitchActionProtocol {
     struct NavigationItemTitles {
-        static let basicsItem       = "Basics"
+        static let basicsItem       = "Biology Basics"
         static let historyItem      = "History"
         static let cellTheoryItem   = "Cell Theory"
         static let history2Item     = "History p. 2"

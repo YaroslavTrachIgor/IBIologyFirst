@@ -11,7 +11,38 @@ import UIKit
 import MapKit
 import AudioToolbox
 
-class ForTodayViewControllerViewModel {
+//MARK: - ForTodayViewControllerViewModelOverridesProtocol protocol
+protocol ForTodayViewControllerViewModelOverridesProtocol {
+    func setPickerViewBackground(_ pickerViewBack: ContentBack)
+    func setPickerView(_ pickerView: UIPickerView)
+    func setBarButtonEnabled(barButtonItem: UIBarButtonItem, enabled: Bool)
+    func setupTextViewBackCorners(_ view: UIView)
+    func setTextViewsTintColor(textView: UITextView, textField: UITextField)
+    func setTextViewsTextColor(textView: UITextView, textField: UITextField)
+    func setToolBar(textView: UITextView, textField: UITextField, toolBar: UIToolbar)
+    func setupNavBar(_ navBar: UINavigationBar)
+}
+
+
+
+//MARK: - ForTodayViewControllerViewModelMainProtocol protocol
+protocol ForTodayViewControllerViewModelMainProtocol: ForTodayViewControllerViewModelOverridesProtocol {
+    func setAudio(soundID: SystemSoundID)
+    func setupAnnotation(annotation: MKPointAnnotation, coordinates: CLLocationCoordinate2D, annotationTitle: String, annotationSubtitle: String)
+    func addAnnotation(_ annotation: MKPointAnnotation, mapView: MKMapView)
+    func setViewAlpha(_ view: UIView, alpha: CGFloat)
+    func setViewHidden(_ view: UIView, hidden: Bool)
+    func copyFunction(_ textViewText: String!, _ view: UIView)
+    func setTextViewText(_ textView: UITextView, textViewText: String?)
+}
+
+//MARK: - Main ForTodayViewControllerViewModel Class
+class ForTodayViewControllerViewModel {}
+
+
+
+//MARK: ForTodayViewControllerViewModelMainProtocol extension
+extension ForTodayViewControllerViewModel: ForTodayViewControllerViewModelMainProtocol {
     func setMapType(_ map: MKMapView, style: MKMapType) {
         map.mapType = style
     }

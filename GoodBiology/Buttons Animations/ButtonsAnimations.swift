@@ -44,15 +44,20 @@ public extension UIButton {
     }
 }
 
+
+
+//MARK: Pulsing animation for notificationButtons
 class Pulsing: CALayer {
 
+    //MARK: CAAnimationGroup
     var animationGroup = CAAnimationGroup()
     
-    var initialPulseScale:Float = 0
-    var nextPulseAfter:TimeInterval = 0
-    var animationDuration:TimeInterval = 1.5
-    var radius:CGFloat = 200
-    var numberOfPulses:Float = Float.infinity
+    //MARK: Properties
+    var initialPulseScale: Float = 0
+    var nextPulseAfter: TimeInterval = 0
+    var animationDuration: TimeInterval = 1.5
+    var radius: CGFloat = 200
+    var numberOfPulses: Float = Float.infinity
     
     override init(layer: Any) {
         super.init(layer: layer)
@@ -68,10 +73,7 @@ class Pulsing: CALayer {
         self.backgroundColor = UIColor.black.cgColor
         self.contentsScale = UIScreen.main.scale
         self.opacity = 0
-        self.radius = radius
-        self.numberOfPulses = numberOfPulses
         self.position = position
-        
         self.bounds = CGRect(x: 0, y: 0, width: radius * 2, height: radius * 2)
         self.cornerRadius = radius
         
@@ -82,10 +84,17 @@ class Pulsing: CALayer {
             DispatchQueue.main.async {
                  self.add(self.animationGroup, forKey: "pulse")
             }
+            self.radius = radius
+            self.numberOfPulses = numberOfPulses
         }
     }
-    
-    func createScaleAnimation () -> CABasicAnimation {
+}
+
+
+
+//MARK: Main Methods
+extension Pulsing {
+    private func createScaleAnimation () -> CABasicAnimation {
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale.xy")
         scaleAnimation.fromValue = NSNumber(value: initialPulseScale)
         scaleAnimation.toValue = NSNumber(value: 1)
@@ -94,8 +103,7 @@ class Pulsing: CALayer {
         return scaleAnimation
     }
     
-    func createOpacityAnimation() -> CAKeyframeAnimation {
-        
+    private func createOpacityAnimation() -> CAKeyframeAnimation {
         let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
         opacityAnimation.duration = animationDuration
         opacityAnimation.values = [0.4, 0.8, 0]
@@ -104,7 +112,8 @@ class Pulsing: CALayer {
         return opacityAnimation
     }
     
-    func setupAnimationGroup() {
+    private func setupAnimationGroup() {
+        
         self.animationGroup = CAAnimationGroup()
         self.animationGroup.duration = animationDuration + nextPulseAfter
         self.animationGroup.repeatCount = numberOfPulses

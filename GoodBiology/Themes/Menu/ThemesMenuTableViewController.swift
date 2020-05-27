@@ -9,8 +9,13 @@
 import UIKit
 import AudioToolbox
 
+//MARK: ThemesTableView class
 final class ThemesTableView: UITableView {
     
+    //MARK: ViewModel
+    let viewModel = ThemesControllersViewModel()
+    
+    //MARK: IBOutlets
     @IBOutlet weak var imageHeightConstrint: NSLayoutConstraint?
     @IBOutlet weak var imageBottomConstraint: NSLayoutConstraint?
     
@@ -24,27 +29,36 @@ final class ThemesTableView: UITableView {
     }
 }
 
+
+
+//MARK: ThemesTableView Main Functions
 extension ThemesTableView {
-    func setImageConstraints(_ header: UIView) {
+    fileprivate func setImageConstraints(_ header: UIView) {
         if let imageView = header.subviews.first as? UIImageView {
             imageHeightConstrint  = imageView.constraints.filter{ $0.identifier == "height" }.first
             imageBottomConstraint = imageView.constraints.filter{ $0.identifier == "bottom" }.first
         }
     }
     
-    func setConstants(_ header: UIView) {
+    fileprivate func setConstants(_ header: UIView) {
         let offsetY = -contentOffset.y
-        imageBottomConstraint?.constant = offsetY >= 0 ? 0 : offsetY / 2
-        imageHeightConstrint?.constant = max(header.bounds.height, header.bounds.height + offsetY)
+        viewModel.setupConstant(constant: offsetY >= 0 ? 0 : offsetY / 2, for: imageBottomConstraint)
+        viewModel.setupConstant(constant: max(header.bounds.height, header.bounds.height + offsetY), for: imageHeightConstrint)
     }
     
-    func setupHeader(_ header: UIView) {
-        header.clipsToBounds = true
+    fileprivate func setupHeader(_ header: UIView) {
+        viewModel.setupHeader(header)
     }
 }
 
+
+
+//MARK: UITableViewController class
 final class ThemesMenuTableViewController: UITableViewController {
 
+    //MARK: ViewModel
+    let viewModel = ThemesControllersViewModel()
+    
     //MARK: IBOutlets
     @IBOutlet weak var table:       ThemesTableView! {
         didSet { table.refreshControl = settingsRefreshControl }
@@ -73,13 +87,7 @@ final class ThemesMenuTableViewController: UITableViewController {
 //MARK: - Actions
 extension ThemesMenuTableViewController {
     @IBAction func share(_ sender: UIBarButtonItem) {
-        let shareInformation = navigationItem.title!
-        let activityVC = UIActivityViewController(activityItems: [shareInformation], applicationActivities: nil)
-        
-        UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
-        AudioServicesPlayAlertSound(SystemSoundID(1001))
-        
-        present(activityVC, animated: true)
+        viewModel.setupShare(navigationItem: navigationItem, vc: self)
         
         /// For Analytics
         AnalyticsManeger.addShareActionAnalytics(for: "ThemesMenuTableViewController")
@@ -89,6 +97,6 @@ extension ThemesMenuTableViewController {
 //MARK: - Main Functions
 extension ThemesMenuTableViewController {
     private func navigationControllerSetup() {
-        navigationController?.hidesBarsOnTap = false
+        viewModel.setupNavController(navigationController: navigationController!)
     }
 }
