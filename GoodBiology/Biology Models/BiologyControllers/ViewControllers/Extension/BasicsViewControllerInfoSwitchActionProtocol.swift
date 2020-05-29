@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
+// MARK: - BasicsViewControllerInfoSwitchActionProtocol protocol
 protocol BasicsViewControllerInfoSwitchActionProtocol {
     func infoSwitchSetup()
 }
 
 
-// MARK: - BasicsViewControllerInfoSwitchActionProtocol
+// MARK: - BasicsViewControllerInfoSwitchActionProtocol extension
 extension BiologyViewController: BasicsViewControllerInfoSwitchActionProtocol {
     struct NavigationItemTitles {
         static let basicsItem       = "Biology Basics"

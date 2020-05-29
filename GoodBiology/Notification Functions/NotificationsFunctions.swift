@@ -9,25 +9,32 @@
 import Foundation
 import UserNotifications
 
+//MARK: - PushNotifications Maneger
 struct PushNotifications {
+    
+    //MARK: Setup Basic Words
     struct PushNotificationsBasicWords {
         static let basicNotificationHeader: String = "Will you be able to read something about "
         static let userAction = "User Action"
     }
     
+    //MARK: Setup Notification
     static func setupBasicNotification(body: String, inSecond seconds: TimeInterval, completion: (Bool) -> ()) {
+        
+        ///Remove Notififications
         removeNotifications(withIdentifiers: ["MyUniqueIdentifier"])
         
+        ///Setup Date
         let date = Date(timeIntervalSinceNow: seconds)
-        print(Date())
-        print(date)
         
+        ///Setup Content
         let content = UNMutableNotificationContent()
         content.title = "Let's Go !"
         content.body  = PushNotificationsBasicWords.basicNotificationHeader + body + "?"
         content.sound = UNNotificationSound.default
         content.categoryIdentifier = PushNotificationsBasicWords.userAction
         
+        ///Setup Center
         let calendar        = Calendar(identifier: .gregorian)
         let components      = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: date)
         let trigger         = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
@@ -36,12 +43,19 @@ struct PushNotifications {
         let deleteAction    = UNNotificationAction(identifier: "Delete", title: "Delete", options: [.destructive])
         let category        = UNNotificationCategory(identifier: PushNotificationsBasicWords.userAction, actions: [deleteAction], intentIdentifiers: [], options: [])
         
+        ///Setup Categories
         center.setNotificationCategories([category])
+        
+        ///Setup Request
         center.add(request, withCompletionHandler: nil)
     }
 }
 
-func removeNotifications(withIdentifiers identifiers: [String])   {
+
+
+//MARK: - Remove Notifications Function (Public Method)
+public func removeNotifications(withIdentifiers identifiers: [String])   {
     let center = UNUserNotificationCenter.current()
-        center.removePendingNotificationRequests(withIdentifiers: identifiers)
+    center.removePendingNotificationRequests(withIdentifiers: identifiers)
 }
+

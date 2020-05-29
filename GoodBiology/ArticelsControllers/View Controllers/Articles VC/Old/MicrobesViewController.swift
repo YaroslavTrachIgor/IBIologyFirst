@@ -159,8 +159,8 @@ extension MicrobesViewController {
         
         /// Push Notification
         notificationNamePost()
-        PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(timeInterval)) { (success) in
-            if success { print(congratsText) } else { print(failText) }
+        PushNotifications.setupBasicNotification(body: articleName, inSecond: TimeInterval(BasicPushNotificationAttributes.timeInterval)) { (success) in
+            if success { print(BasicPushNotificationAttributes.congratsText) } else { print(BasicPushNotificationAttributes.failText) }
         }
         
         /// UI animations

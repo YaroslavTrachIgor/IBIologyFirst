@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 
+//MARK: - Keys
 struct MenuCollectionViewConterollerVCsPresentKeys {
     static let mainArticlesMenuVCpopKey = Notification.Name("popToRootArticlesMenuVCKey")
 }
 
+
+
+//MARK: - MenuCollectionViewConteroller main class
 final class MenuCollectionViewConteroller: UICollectionViewController {
     
     // Content Properties
@@ -35,9 +39,11 @@ final class MenuCollectionViewConteroller: UICollectionViewController {
     private var searchedArticle = [String]()
     private var isSearching: Bool = false
     
-    // MARK: - @IBOutlets
+    //MARK: - @IBOutlets
     @IBOutlet weak var collectionViewMenu: UICollectionView!
     
+    
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -125,21 +131,31 @@ extension MenuCollectionViewConteroller {
         textView.textViewShadow()
     }
     
-    //MARK: setup setup SearchBar
+    //MARK: Setup setup SearchBar
     private func setupSearchBar(_ searchBar: UISearchBar) {
         let searchField = searchBar.value(forKey: "searchField") as? UITextField
 
         if let field = searchField {
+            
+            ///Set cornerRadiuses
             field.layer.cornerRadius = 16
+            
+            ///Set colors
             field.textColor = .black
             field.tintColor = .biologyGreenColor
+            
+            ///Set font
+            field.font = UIFont(name: "AvenirNext-Medium", size: 15)
 
+            ///Set masksToBounds
             field.layer.masksToBounds = true
+            
+            ///Set KeyType
             field.returnKeyType = .search
         }
     }
     
-    //MARK: setup Navigation Controller
+    //MARK: Setup Navigation Controller
     private func setupNavController() {
         setupSearchBar(searchController.searchBar)
         collectionViewMenu.refreshControl = collectionViewMenuRefreshControl
@@ -181,6 +197,7 @@ extension MenuCollectionViewConteroller: UISearchBarDelegate {
         searchedArticle = articleHeader.filter({$0.contains(searchText)})
         isSearching = true
         
+        ///Reload tableView
         DispatchQueue.main.async {
             self.collectionViewMenu.reloadData()
         }

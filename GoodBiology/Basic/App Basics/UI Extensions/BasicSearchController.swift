@@ -8,13 +8,16 @@
 
 import UIKit
 
+//MARK: - BasicSearchControllerProtocol protocol
 protocol BasicSearchControllerProtocol {
     func setupTint()
     func setupSearchBar()
 }
 
-class BasicSearchController: UISearchController {
 
+
+//MARK: - BasicSearchController main class
+final class BasicSearchController: UISearchController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,12 +30,17 @@ class BasicSearchController: UISearchController {
     }
 }
 
+
+
+//MARK: - BasicSearchControllerProtocol extension
 extension BasicSearchController: BasicSearchControllerProtocol {
     func setupTint() {
-        view.tintColor = .biologyGreenColor
+        view.tintColor = .orange
     }
     
     func setupSearchBar() {
+        
+        ///Setup style
         searchBar.barStyle       = .default
         searchBar.searchBarStyle = .minimal
         
@@ -40,6 +48,9 @@ extension BasicSearchController: BasicSearchControllerProtocol {
     }
 }
 
+
+
+//MARK: - Setup SearchBar UIFont
 func setupSearchBarFont() {
     let searchTextAppearance      = UITextField.self.appearance(whenContainedInInstancesOf: [UISearchBar.self])
     searchTextAppearance.font = UIFont(name: BasicFonts.mediumFont, size: 14)

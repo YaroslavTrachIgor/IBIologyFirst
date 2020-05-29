@@ -9,31 +9,45 @@
 import Foundation
 import UIKit
 
+//MARK: SegmentedControlBasics protocol
 fileprivate protocol SegmentedControlBasics {
     func segConBasicView()
 }
 
+
+
+//MARK: SegmentedControlBasics extension
 extension UISegmentedControl: SegmentedControlBasics {
     
     public func segmentedControlBasics() {
-        self.alpha = 0
         
+        ///Set Alpha
+        alpha = 0
+        
+        ///Setup Basics
         segConBasicView()
     }
     
     public func segmentedControlForToday() {
+        
+        ///Setup Basics
         segConBasicView()
     }
     
     public func segConBasicView() {
-        self.segmentedControlShadow()
         
-        self.tintColor = .biologyGreenColor
+        ///Setup Shadow
+        segmentedControlShadow()
         
-        self.layer.cornerRadius  = 25
-        self.layer.masksToBounds = true
+        ///Set Tint
+        tintColor = .biologyGreenColor
         
+        ///Set Corners
+        layer.cornerRadius  = 25
+        layer.masksToBounds = true
+        
+        ///Set Font
         let font  = UIFont(name: "AvenirNext-DemiBold", size: 12)
-        self.setTitleTextAttributes([NSAttributedString.Key.font: font!], for: .normal)
+        setTitleTextAttributes([NSAttributedString.Key.font: font!], for: .normal)
     }
 }

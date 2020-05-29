@@ -16,12 +16,10 @@ extension PlantsViewController {
     private func createUserActivityType() {
         let activity = NSUserActivity(activityType: UserActivityType.openPlantsArticle.rawValue)
         
+        /// Setup activity
         activity.title = "Open Article about Plants"
         activity.isEligibleForSearch = true
-        
-        if #available(iOS 12.0, *) {
-            activity.isEligibleForPrediction = true
-        }
+        activity.isEligibleForPrediction = true
         
         self.userActivity = activity
         self.userActivity?.becomeCurrent()

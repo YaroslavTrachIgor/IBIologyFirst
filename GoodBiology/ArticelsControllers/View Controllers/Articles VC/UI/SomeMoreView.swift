@@ -7,7 +7,16 @@
 //
 
 import UIKit
+import Foundation
 
+//MARK: - SomeMoreViewProtocol protocol
+protocol SomeMoreViewProtocol {
+    func setupView()
+}
+
+
+
+//MARK: - SomeMoreViewProtocol main class
 final class SomeMoreView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,8 +31,11 @@ final class SomeMoreView: UIView {
     }
 }
 
-extension SomeMoreView {
-    private func setupView() {
+
+
+//MARK: - SomeMoreViewProtocol extension
+extension SomeMoreView: SomeMoreViewProtocol {
+    func setupView() {
         alpha = 0
     }
 }

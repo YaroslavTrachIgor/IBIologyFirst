@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//MARK: - ActivityVCs Maneger
 class FastActivityVC {
     static func show(item: String, vc: UIViewController) {
         let activityVC = UIActivityViewController(activityItems: [item], applicationActivities: nil)

@@ -14,12 +14,12 @@ import Signals
  
 final class BlankSheetViewController: UIViewController {
     
-    // View Model
+    //MARK: - ViewModel
     let viewModel = BlankSheetViewControllerViewModel()
     
     let copyText = Signal<(String)>()
     
-    //IBOutlets
+    //MARK: - @IBOutlets
     @IBOutlet weak var shareButton:             UIBarButtonItem!
     @IBOutlet weak var stepperViewShowerButton: UIBarButtonItem!
     @IBOutlet weak var stepper:                 UIStepper!
@@ -28,15 +28,16 @@ final class BlankSheetViewController: UIViewController {
     @IBOutlet weak var textView:                UITextView!
     @IBOutlet weak var textField:               UITextField!
     
-    // Banner View
+    //MARK: - Banner View
     @IBOutlet weak var googleAdBannerView: GADBannerView!
     
-    //Keys
+    //MARK: - Keys
     struct Keys {
         static let textViewKey  = "textViewKey"
         static let textFieldKey = "textFieldKey"
     }
     
+    //MARK: - Lazy
     lazy var toolBar: BasicToolbar = {
         let toolBar     = BasicToolbar()
         let spacer      = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -47,6 +48,7 @@ final class BlankSheetViewController: UIViewController {
         return toolBar
     }()
     
+    //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -76,7 +78,7 @@ extension BlankSheetViewController: NotesDelegate {
 }
 
 
-//MARK: - Actions
+//MARK: - @IBActions
 extension BlankSheetViewController {
     @IBAction func stepperViewShower(_ sender: Any) {
         guard let textFieldText = textView.text, let textViewText = textField.text else { return }

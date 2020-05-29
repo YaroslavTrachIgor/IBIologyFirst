@@ -8,9 +8,15 @@
 
 import Foundation
 
-public let timeInterval = 720
+//MARK: - BasicPushNotificationAttributes
+struct BasicPushNotificationAttributes {
+    
+    //Basic time interval
+    static let timeInterval = 720
 
-public let congratsText = "We send it !"
-public let failText     = "Failed"
+    //Basic frases
+    static let congratsText = "We send it !"
+    static let failText     = "Failed"
 
-public let endOfTextBiolgyNotification: String = " of Biology."
+    static let endOfTextBiolgyNotification: String = " of Biology."
+}

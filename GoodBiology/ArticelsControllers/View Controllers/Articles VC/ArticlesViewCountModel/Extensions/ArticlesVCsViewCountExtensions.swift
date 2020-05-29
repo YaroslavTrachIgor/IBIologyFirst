@@ -28,7 +28,7 @@ extension PlantsViewController: ArticlesViewCountProtocol {
                 ArticlesViewCountModelProperties.realm?.add(model)
             }
         } catch {
-            FastAlert.showBasic(title: "Server Error", message: error.localizedDescription, vc: self)
+            return
         }
     }
 }
@@ -125,7 +125,7 @@ extension ChomistaViewController: ArticlesViewCountProtocol {
     func setPopularityVoit() {
         let model = ArticlesViewCountModel()
         model.chromistaViewCount = 1
-
+        
         try! ArticlesViewCountModelProperties.realm?.write {
             ArticlesViewCountModelProperties.realm?.add(model)
         }

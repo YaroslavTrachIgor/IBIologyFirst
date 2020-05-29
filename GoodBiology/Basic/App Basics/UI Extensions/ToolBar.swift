@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
+//MARK: - BasicToolbarProtocol protocol
 protocol BasicToolbarProtocol {
     func sizeSetup()
     func tintSetup()
 }
 
+
+
+//MARK: - Basic UIToolbar main class
 class BasicToolbar: UIToolbar {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,6 +34,9 @@ class BasicToolbar: UIToolbar {
     }
 }
 
+
+
+//MARK: - BasicToolbarProtocol extension
 extension BasicToolbar: BasicToolbarProtocol {
     func sizeSetup() {
         sizeToFit()

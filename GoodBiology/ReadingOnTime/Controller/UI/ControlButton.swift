@@ -40,6 +40,8 @@ extension ReadingOnTimeViewControllerControllButton {
         /// set Title Color
         setTitleColor(.white, for: .normal)
         
+        /// Set font
+        titleLabel?.font = UIFont(name: BasicFonts.mediumFont, size: 15.5)
         
         /// Set corner Radius
         layer.cornerRadius = 15

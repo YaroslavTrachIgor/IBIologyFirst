@@ -10,7 +10,7 @@ import Foundation
 import SwiftEntryKit
 
 //MARK: - EKAttributesManeger
-class EKAttributesManeger {
+final class EKAttributesManeger {
     static func setupNotificationViewEKAttributes() -> EKAttributes {
         var attributes = EKAttributes.topFloat
         

@@ -26,11 +26,11 @@ extension ForTodayViewController: ForTodayViewControllerNotificationProcesesSetu
     
     func forTodayNotShow() {
         if inputTextField.text != "Nothing" {
-            PushNotifications.setupBasicNotification(body: "Hey, today you wanted to read \(inputTextField.text!)", inSecond: TimeInterval(timeInterval)) { (success) in
+            PushNotifications.setupBasicNotification(body: "Hey, today you wanted to read \(inputTextField.text!)", inSecond: TimeInterval(BasicPushNotificationAttributes.timeInterval)) { (success) in
                     if success {
-                        print(congratsText)
+                        print(BasicPushNotificationAttributes.congratsText)
                     } else {
-                        print(failText)
+                        print(BasicPushNotificationAttributes.failText)
                     }
             }
             reminderOutletButton.settingTittleForNotificationButton()

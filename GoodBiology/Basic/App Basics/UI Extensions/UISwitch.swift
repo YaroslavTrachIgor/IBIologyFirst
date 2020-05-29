@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//MARK: - Setup UISwitch basics
 extension UISwitch {
     public func switchBasics() {
         

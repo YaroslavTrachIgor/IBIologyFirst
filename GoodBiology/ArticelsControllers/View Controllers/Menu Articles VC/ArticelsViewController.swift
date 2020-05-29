@@ -86,6 +86,7 @@ class ArticelsViewController: UIViewController {
     @IBOutlet weak var readingOnTimeVCShowerButtonBackView: ChromistaActionButtonsBack!
     @IBOutlet weak var supportVCShowerButtonBackView:       ChromistaActionButtonsBack!
     
+    //MARK: - Lazy Properties
     // UISearchController
     lazy var searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
@@ -93,12 +94,14 @@ class ArticelsViewController: UIViewController {
         return    text.isEmpty
     }
     
+    
     // UIRefreshControl
     lazy var settingsRefreshControl: UIRefreshControl = {
         let refreshControl = BasicRefreshControl()
         
         return refreshControl
     }()
+    
     
     //MARK: LifeCycle
     override func viewDidLoad() {
@@ -115,6 +118,8 @@ class ArticelsViewController: UIViewController {
         setupNavBarTitle()
     }
     
+    
+    //MARK: - Overrides
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

@@ -11,13 +11,14 @@ import UIKit
 import AudioToolbox
 import Signals
 
+//MARK: - BasicsViewControllerFunctionsProtocol protocol
 protocol BasicsViewControllerFunctionsProtocol {
     func fastActivityVC(item: String)
     func shareAudio()
 }
 
 
-// MARK: - BasicsViewControllerFunctionsProtocol
+//MARK: - BasicsViewControllerFunctionsProtocol extension
 extension BiologyViewController: BasicsViewControllerFunctionsProtocol {
     func shareAudio() {
         AudioServicesPlayAlertSound(SystemSoundID(1001))

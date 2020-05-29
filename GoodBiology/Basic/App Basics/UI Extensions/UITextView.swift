@@ -9,24 +9,35 @@
 import Foundation
 import UIKit
 
+//MARK: - Setup UITextView basics
 extension UITextView {
     public func switchTextViewPrefering() {
+        
+        ///Setup Properties
         self.isSelectable = false
         self.isEditable = false
         
+        ///Setup text
         self.text = "Hide diffrent functions"
+        
+        ///Setup font
         self.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
         
+        ///Setup Text Color
         self.systemTextColor()
+        
+        ///Setup shadow
         self.textViewShadow()
     }
     
     public func systemTextColor() {
-        if #available(iOS 13.0, *) {
-            self.textColor = .secondaryLabel
-        }
+        
+        //Setup Text Color
+        self.textColor = .secondaryLabel
     }
 }
+
+
 
 extension UITextView {
     

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//MARK: - Setup UIProgressView basics
 extension UIProgressView {
     
     // Basics Metods for Progress Views

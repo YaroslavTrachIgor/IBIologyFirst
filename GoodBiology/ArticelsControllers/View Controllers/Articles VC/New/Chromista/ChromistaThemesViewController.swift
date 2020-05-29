@@ -86,6 +86,7 @@ struct ChromistaData {
 
 class ChromistaThemesViewController: UIViewController {
     
+    //MARK: @IBOutlets
     @IBOutlet weak var stepperButtonBack:   ChromistaActionButtonsBack!
     @IBOutlet weak var stepperButton:       ChromistaButton!
     
@@ -100,6 +101,8 @@ class ChromistaThemesViewController: UIViewController {
     // Banner View
     @IBOutlet weak var googleAdBannerView: GADBannerView!
     
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -107,26 +110,24 @@ class ChromistaThemesViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let views = [self.label,
-                     self.contentBack,
-                     self.stepperButtonBack]
-        for (index, view) in views.enumerated() {
-            let delay: Double = Double((index)) * 0.2
-            
-            UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                view?.alpha = 1
-            })
-        }
+        super.viewDidAppear(animated)
+        
+        setupViewDidApearAnimation()
     }
-    
+}
+
+
+
+//MARK: Main Methods
+extension ChromistaThemesViewController {
     private func cornersSetup() {
         contentTextView.layer.cornerRadius = 20
     }
     
     private func contentSetup() {
-        contentTextView.text    = ChromistaData.chromistaContent[ChromistaData.chromistaIndex]
-        label.text              = ChromistaData.chromistaTitle[ChromistaData.chromistaIndex]
-        navigationItem.title    = ChromistaData.years[ChromistaData.chromistaIndex]
+        contentTextView.text = ChromistaData.chromistaContent[ChromistaData.chromistaIndex]
+        label.text           = ChromistaData.chromistaTitle[ChromistaData.chromistaIndex]
+        navigationItem.title = ChromistaData.years[ChromistaData.chromistaIndex]
     }
     
     private func alpha() {
@@ -152,6 +153,26 @@ class ChromistaThemesViewController: UIViewController {
         googleAdBannerView.load(GADRequest())
     }
     
+    private func setupViewDidApearAnimation() {
+        
+        /// Setup views array
+        let views = [label, contentBack, stepperButtonBack]
+        
+        /// Setup Animation
+        for (index, view) in views.enumerated() {
+            let delay: Double = Double((index)) * 0.2
+            
+            UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+                view?.alpha = 1
+            })
+        }
+    }
+}
+
+
+
+//MARK: @IBActions
+extension ChromistaThemesViewController {
     @IBAction func stepperAction(_ sender: UIStepper) {
         let font       = contentTextView.font?.fontName
         let fontSize   = CGFloat(sender.value)
@@ -177,6 +198,9 @@ class ChromistaThemesViewController: UIViewController {
     }
 }
 
+
+
+//MARK: GADBannerViewDelegate extension
 extension ChromistaThemesViewController: GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("received ad")
@@ -187,6 +211,9 @@ extension ChromistaThemesViewController: GADBannerViewDelegate {
     }
 }
 
+
+
+//MARK: ArticlesViewControllerDelegate extension
 extension ChromistaThemesViewController: ArticlesViewControllerDelegate {
     var articleName: String { get { return "Chromista Theme" } }
     

@@ -9,9 +9,13 @@
 import Foundation
 import UIKit
 
-class BasicFonts {
+//MARK: - BasicFonts struct
+struct BasicFonts {
+    
+    //MARK: Setup basic font names
     static var mediumFont = "AvenirNext-Medium"
     static var boldFont   = "AvenirNext-Bold"
     
+    //MARK: Setup basic font size
     static var appleFontSize = 14
 }

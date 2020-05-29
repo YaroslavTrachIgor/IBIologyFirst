@@ -23,15 +23,14 @@ struct LoginViewControllerKeys {
 //MARK: Main Class
 final class LoginViewController: UIViewController {
     
+    //MARK: - @IBOutlets
     // UIButtons
     @IBOutlet weak var useLoginWithTouch:   UIButton!
     @IBOutlet weak var signInWithApple:     UIButton!
     @IBOutlet weak var emailButton:         UIButton!
     
-    private var defaults = UserDefaults.standard
-    
-    fileprivate var useSignInWithApple:   Bool = false
-    fileprivate var useSignInWithTouchID: Bool = false
+    // UIBarButtonItem
+    @IBOutlet weak var logOutButton: UIBarButtonItem!
     
     struct Keys {
         fileprivate static let appleViewHiddenKey              = "AppleViewHidden"
@@ -62,30 +61,44 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var loginIcaonImageView: UIImageView!
     @IBOutlet weak var emailIcon:           UIImageView!
     
+    //MARK: appleSignInButton
+    @IBOutlet weak var appleSignInButton: BasicASAuthorizationAppleIDButton!
+    
     // String Message
     lazy var message = {
         return ""
     }()
+    
+    
+    //MARK: - Private
     private let twoButtonsBack: UIColor = .biologyGreenColor
     
+    //UserDefaults
+    private var defaults = UserDefaults.standard
+    
+    
+    //MARK: - Fileprivate
+    fileprivate var useSignInWithApple:   Bool = false
+    fileprivate var useSignInWithTouchID: Bool = false
+    
+    
+    //MARK: - VCKeys
     struct VCKeys {
         
         // Key for this VC
         static let goButtonKey = Notification.Name(rawValue: LoginViewControllerKeys.goButtonKey)
     }
     
+    
     //MARK: ViewModel
     let viewModel = LoginViewControllerViewModel()
     
-    //MARK: appleSignInButton
-    @IBOutlet weak var appleSignInButton: BasicASAuthorizationAppleIDButton!
     
     //MARK: AppleButtonSettings
     var appleButton = AppleButtonSettings()
     
-    // UIBarButtonItem
-    @IBOutlet weak var logOutButton: UIBarButtonItem!
     
+    //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -160,6 +173,7 @@ extension LoginViewController {
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
     }
 }
+
 
 
 //MARK: - Setup AppleButton

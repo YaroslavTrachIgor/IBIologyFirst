@@ -59,10 +59,14 @@ class Pulsing: CALayer {
     var radius: CGFloat = 200
     var numberOfPulses: Float = Float.infinity
     
+    
+    //MARK: Overrides
     override init(layer: Any) {
         super.init(layer: layer)
     }
     
+    
+    //MARK: Inits
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -70,6 +74,7 @@ class Pulsing: CALayer {
     init (numberOfPulses:Float = Float.infinity, radius:CGFloat, position:CGPoint) {
         super.init()
         
+        ///Setup Properties
         self.backgroundColor = UIColor.black.cgColor
         self.contentsScale = UIScreen.main.scale
         self.opacity = 0
@@ -78,6 +83,7 @@ class Pulsing: CALayer {
         self.cornerRadius = radius
         
         
+        ///Start Animation
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             self.setupAnimationGroup()
             
@@ -86,6 +92,19 @@ class Pulsing: CALayer {
             }
             self.radius = radius
             self.numberOfPulses = numberOfPulses
+        }
+        
+        ///Clear Animation
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            
+            ///Setup clear animation
+            self.animationDuration = 0
+            self.radius = 0
+            
+            self.backgroundColor = UIColor.clear.cgColor
+            
+            ///Return from finction
+            return
         }
     }
 }
@@ -113,7 +132,6 @@ extension Pulsing {
     }
     
     private func setupAnimationGroup() {
-        
         self.animationGroup = CAAnimationGroup()
         self.animationGroup.duration = animationDuration + nextPulseAfter
         self.animationGroup.repeatCount = numberOfPulses

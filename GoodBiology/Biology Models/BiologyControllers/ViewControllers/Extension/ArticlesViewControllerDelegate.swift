@@ -19,8 +19,8 @@ extension BiologyViewController: ArticlesViewControllerDelegate {
         
         rate()
         editorsViewSetup()
-        prepareBackgroundView()
-        modelsPrefering()
+        prepareShadows()
+        modelContentSetup()
         contentTextViewFontPrefering()
         navigationControllerSetup()
         viewBasics()

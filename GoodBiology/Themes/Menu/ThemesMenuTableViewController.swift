@@ -60,23 +60,28 @@ final class ThemesMenuTableViewController: UITableViewController {
     let viewModel = ThemesControllersViewModel()
     
     //MARK: IBOutlets
-    @IBOutlet weak var table:       ThemesTableView! {
-        didSet { table.refreshControl = settingsRefreshControl }
-    }
+    // ThemesTableView
+    @IBOutlet weak var table: ThemesTableView! { didSet { table.refreshControl = settingsRefreshControl } }
+    
+    // UIBarButtonItem
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
+    //MARK: Lazy Properties
     lazy var settingsRefreshControl: UIRefreshControl = {
         let refreshControl = BasicRefreshControl()
         
         return refreshControl
     }()
-    
     lazy var searchController = BasicSearchController()
+    
+    //MARK: Private Properties
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
     }
     
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -84,7 +89,9 @@ final class ThemesMenuTableViewController: UITableViewController {
     }
 }
 
-//MARK: - Actions
+
+
+//MARK: - @IBActions
 extension ThemesMenuTableViewController {
     @IBAction func share(_ sender: UIBarButtonItem) {
         viewModel.setupShare(navigationItem: navigationItem, vc: self)
@@ -94,9 +101,12 @@ extension ThemesMenuTableViewController {
     }
 }
 
+
+
 //MARK: - Main Functions
 extension ThemesMenuTableViewController {
     private func navigationControllerSetup() {
+        viewModel.setupSearchBar(searchController.searchBar)
         viewModel.setupNavController(navigationController: navigationController!)
     }
 }

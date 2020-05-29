@@ -9,12 +9,13 @@
 import Foundation
 import GoogleMobileAds
 
+//MARK: - PlantsViewControllerAdMobBannerSetupProtocol
 protocol PlantsViewControllerAdMobBannerSetupProtocol {
     func showBunner()
     func setupInterstitial()
 }
 
-@available(iOS 13.0, *)
+
 extension PlantsViewController: PlantsViewControllerAdMobBannerSetupProtocol {
     func showBunner() {
         if interstitial.isReady {

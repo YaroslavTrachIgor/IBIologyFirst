@@ -41,19 +41,15 @@ extension BiologyViewController {
                     self.setCorners(radius: 20)
                 }
             }
-            
-            var isEnabled: Bool
             let hidden: Bool
             
             if self.stepperView.isHidden == true {
-                isEnabled = true
-                hidden    = false
+                hidden = false
                 
                 self.segmentedControl.isHidden  = hidden
                 
             } else {
-                isEnabled = false
-                hidden    = true
+                hidden = true
             
                 self.segmentedControl.isHidden  = hidden
             }

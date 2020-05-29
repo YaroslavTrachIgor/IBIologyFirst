@@ -9,7 +9,7 @@
 import Foundation
 import FirebaseAnalytics
 
-class AnalyticsManeger {
+final class AnalyticsManeger {
     static func addAnalyticsObject(name: String) {
         Analytics.logEvent(name, parameters: nil)
     }

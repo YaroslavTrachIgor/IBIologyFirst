@@ -9,21 +9,30 @@
 import Foundation
 import UIKit
 
-class TestStepperView: StepperView {
+//MARK: - TestStepperView main class
+final class TestStepperView: StepperView {
     override init(frame: CGRect) {
-      super.init(frame: frame)
+        super.init(frame: frame)
+        
         setupTestStepperView()
     }
     
     required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
+        
         setupTestStepperView()
     }
-    
+}
+
+
+
+//MARK: - Main Methods
+extension TestStepperView {
     private func setupTestStepperView() {
         isHidden = true
         
         layer.shadowColor  = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         layer.shadowRadius = 8.4
     }
+
 }

@@ -175,8 +175,8 @@ extension BiologyThemesTableViewCell {
         AnalyticsManeger.addNotificationAnalytics(article: "BiologyMenuVC")
         
         /// Push Notification
-        PushNotifications.setupBasicNotification(body: "Biology", inSecond: TimeInterval(timeInterval)) { (success) in
-            if success { print(congratsText) } else { print(failText) }
+        PushNotifications.setupBasicNotification(body: "Biology", inSecond: TimeInterval(BasicPushNotificationAttributes.timeInterval)) { (success) in
+            if success { print(BasicPushNotificationAttributes.congratsText) } else { print(BasicPushNotificationAttributes.failText) }
         }
         
         /// UI animations

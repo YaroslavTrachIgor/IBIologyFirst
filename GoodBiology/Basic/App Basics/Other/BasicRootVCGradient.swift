@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class BasicRootVCGradient: NSObject {
+final class BasicRootVCGradient: NSObject {
     
     var color: UIColor
     

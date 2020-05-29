@@ -9,15 +9,8 @@
 import Foundation
 import UIKit
 
-extension TitleLabelForNavigationBar {
-    
-    func setupLabel() {
-        textColor = .white
-        
-        font = UIFont(name: "AvenirNext-DemiBold", size: 15.4)
-    }
-}
 
+//MARK: - TitleLabelForNavigationBar
 class TitleLabelForNavigationBar: UILabel {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -29,5 +22,18 @@ class TitleLabelForNavigationBar: UILabel {
         super.init(frame: frame)
         
         setupLabel()
+    }
+}
+
+
+//MARK: - TitleLabelForNavigationBar extension
+extension TitleLabelForNavigationBar {
+    func setupLabel() {
+        
+        ///Set textColor
+        textColor = .white
+        
+        ///Set font
+        font = UIFont(name: "AvenirNext-DemiBold", size: 15.4)
     }
 }

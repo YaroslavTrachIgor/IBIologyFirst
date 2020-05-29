@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 
+//MARK: - ArticleViewControllerSetupViewPrtocol
 protocol ArticleViewControllerSetupViewPrtocol {
     func procesingInformationShowing()
     func viewDidApearAnimationPreview(_ views: [UIView],_ bonusAnomation: (() -> Void)?)
 }
 
+
+//MARK: - ArticlesVCconnectionProtocol
 protocol ArticlesVCconnectionProtocol {
     func notificationNamePost()
 }

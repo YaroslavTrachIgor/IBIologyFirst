@@ -9,22 +9,31 @@
 import Foundation
 import UIKit
 
+//MARK: - StepperViewProtocol
 protocol StepperViewProtocol {
     func setupStepperView()
 }
 
+
+
+//MARK: - StepperView main class
 class StepperView: UIView {
     override init(frame: CGRect) {
-      super.init(frame: frame)
+        super.init(frame: frame)
+        
         setupStepperView()
     }
     
     required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
+        
         setupStepperView()
     }
 }
 
+
+
+//MARK: - StepperViewProtocol extension
 extension StepperView: StepperViewProtocol {
     internal func setupStepperView() {
         editorsViews()

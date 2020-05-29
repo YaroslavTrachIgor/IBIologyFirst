@@ -9,6 +9,7 @@
 import Foundation
 import RealmSwift
 
+//MARK: - ArticlesViewCountModel
 class ArticlesViewCountModel: Object {
     @objc dynamic var plantsViewCount    = 0
     @objc dynamic var animalsViewCount   = 0
@@ -20,6 +21,9 @@ class ArticlesViewCountModel: Object {
     @objc dynamic var chromistaViewCount = 0
 }
 
+
+
+//MARK: - ArticlesViewCountModelProperties
 class ArticlesViewCountModelProperties {
     /// Model
     static let model = ArticlesViewCountModel()

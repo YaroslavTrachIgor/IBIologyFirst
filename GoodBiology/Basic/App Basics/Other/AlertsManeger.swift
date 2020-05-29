@@ -9,7 +9,7 @@
 import Foundation
 import SwiftEntryKit
 
-class AlertsManeger {
+final class AlertsManeger {
     
     // Notification View animation
     private func setupDoneTestPopViewAttributes() -> EKAttributes {

@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
-
-@available(iOS 13.0, *)
+ 
+//MARK: - ArticleActivityIndicatorView
+//MARK: ArticleActivityIndicatorView main class
 final class ArticleActivityIndicatorView: UIActivityIndicatorView {
     let activityIndicatorViewstyle = UIActivityIndicatorView.Style.medium
     
@@ -26,18 +27,33 @@ final class ArticleActivityIndicatorView: UIActivityIndicatorView {
     }
 }
 
-@available(iOS 13.0, *)
+
+
+//MARK: ArticleActivityIndicatorViewDelegate extension
 extension ArticleActivityIndicatorView: ArticleActivityIndicatorViewDelegate {
     func setup() {
         activityIndicatorStarts(colorOfActivity: .darkGray)
     }
 }
 
+
+
+//MARK: ArticleActivityIndicatorViewDelegate protocol
 protocol ArticleActivityIndicatorViewDelegate {
     func setup()
 }
 
-// Notification Button
+
+
+//MARK: -  Buttons
+//MARK: VideoButtonDelegate protocol
+protocol VideoButtonDelegate {
+    func setup()
+}
+
+
+
+//MARK: VideoButton main class
 final class VideoButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -46,17 +62,19 @@ final class VideoButton: UIButton {
     }
 }
 
+
+
+//MARK: VideoButtonDelegate extension
 extension VideoButton: VideoButtonDelegate {
     func setup() {
         videoButton()
     }
 }
 
-protocol VideoButtonDelegate {
-    func setup()
-}
 
-// Video Button
+
+//MARK: - Image Button
+//MARK: ImageButton main class
 final class ImageButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -65,39 +83,57 @@ final class ImageButton: UIButton {
     }
 }
 
+
+
+//MARK: ImageButtonDelegate protocol
+protocol ImageButtonDelegate {
+    func setup()
+}
+
+
+
+//MARK: ImageButtonDelegate extension
 extension ImageButton: ImageButtonDelegate {
     func setup() {
         imageButton()
     }
 }
 
-protocol ImageButtonDelegate {
-    func setup()
-}
 
-// Image Button
+
+//MARK: -  Notification Button
+//MARK: NotificationButton main class
 final class NotificationButton: UIButton {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        setup()
+        setupButton()
     }
 }
 
+
+
+//MARK: NotificationButtomDelegate protocol
+protocol NotificationButtomDelegate {
+    func setupButton()
+}
+
+
+
+//MARK: NotificationButtomDelegate extension
 extension NotificationButton: NotificationButtomDelegate {
-    func setup() {
+    func setupButton() {
         notificationButtonBasics()
         buttonsShadows()
     }
 }
 
-protocol NotificationButtomDelegate {
-    func setup()
-}
 
-// Second Pulse Animation
+
+//MARK: - Setup second pulse animation
+//MARK: Notification Button (UIButton) setup animation
 extension UIButton {
-    func addNotificationButtonPulse(view: UIView) {
+    public func addNotificationButtonPulse(view: UIView) {
         let pulse = Pulsing(numberOfPulses: 2, radius: 200, position: self.center)
         
         pulse.animationDuration = 0.9
@@ -107,11 +143,16 @@ extension UIButton {
     }
 }
 
-// Notification Button Basic Functions
+
+
+//MARK: - NotificationButtonBasicFunctionsProtocol protocol
 protocol NotificationButtonBasicFunctionsProtocol {
     func notificationButtonBasicFunctions(_ view: UIView)
 }
 
+
+
+//MARK: - NotificationButtonBasicFunctionsProtocol extension
 extension UIButton: NotificationButtonBasicFunctionsProtocol {
     func notificationButtonBasicFunctions(_ view: UIView) {
         notificationButtonAudio()

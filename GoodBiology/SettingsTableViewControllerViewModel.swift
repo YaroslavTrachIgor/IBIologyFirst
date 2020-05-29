@@ -69,11 +69,21 @@ class SettingsTableViewControllerViewModel: SettingsTableViewControllerViewModel
         let searchField = searchBar.value(forKey: "searchField") as? UITextField
 
         if let field = searchField {
+            
+            ///Set cornerRadiuses
             field.layer.cornerRadius = 16
+            
+            ///Set colors
             field.textColor = .black
             field.tintColor = .biologyGreenColor
+            
+            ///Set font
+            field.font = UIFont(name: "AvenirNext-Medium", size: 15)
 
+            ///Set masksToBounds
             field.layer.masksToBounds = true
+            
+            ///Set KeyType
             field.returnKeyType = .search
         }
     }

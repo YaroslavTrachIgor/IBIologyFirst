@@ -10,6 +10,7 @@ import UIKit
 
 final class ChromistaTableViewController: UITableViewController {
     
+    //MARK: Overrides
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return ChromistaData.chromistaTitle.count

@@ -9,6 +9,14 @@
 import Foundation
 import UIKit
 
+//MARK: - TextViewBackViewProtocol protocol
+protocol TextViewBackViewProtocol {
+    func setupTextViewBack()
+}
+
+
+
+//MARK: - TextViewBackView main class
 final class TextViewBackView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -23,10 +31,9 @@ final class TextViewBackView: UIView {
     }
 }
 
-protocol TextViewBackViewProtocol {
-    func setupTextViewBack()
-}
 
+
+//MARK: - TextViewBackViewProtocol extension
 extension TextViewBackView: TextViewBackViewProtocol {
     internal func setupTextViewBack() {
         alpha = 0

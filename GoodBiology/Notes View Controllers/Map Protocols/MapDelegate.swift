@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK: - MapBasicViewDelegate
 protocol MapBasicViewDelegate {
     func mapViewBasics()
 }

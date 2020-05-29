@@ -88,7 +88,7 @@ extension ThemesControllersViewModel: ThemesControllerViewModelMainFunctionsProt
 
 
 
-//MARK: - for @IBActions
+//MARK: - For @IBActions
 extension ThemesControllersViewModel {
     
     //MARK: - Public
@@ -110,7 +110,7 @@ extension ThemesControllersViewModel {
 
 
 
-//MARK: - for ThemesTableVC
+//MARK: - For ThemesTableVC
 extension ThemesControllersViewModel: ThemesTableVControllersViewModelProtocol {
     func setupConstant(constant: CGFloat, for constraint: NSLayoutConstraint?) {
         constraint?.constant = constant
@@ -132,5 +132,28 @@ extension ThemesControllersViewModel: ThemesTableVControllersViewModelProtocol {
     
     func setupHeader(_ header: UIView) {
         header.clipsToBounds = true
+    }
+    
+    func setupSearchBar(_ searchBar: UISearchBar) {
+        let searchField = searchBar.value(forKey: "searchField") as? UITextField
+
+        if let field = searchField {
+            
+            ///Set cornerRadiuses
+            field.layer.cornerRadius = 16
+            
+            ///Set colors
+            field.textColor = .black
+            field.tintColor = .biologyGreenColor
+            
+            ///Set font
+            field.font = UIFont(name: "AvenirNext-Medium", size: 15)
+
+            ///Set masksToBounds
+            field.layer.masksToBounds = true
+            
+            ///Set KeyType
+            field.returnKeyType = .search
+        }
     }
 }

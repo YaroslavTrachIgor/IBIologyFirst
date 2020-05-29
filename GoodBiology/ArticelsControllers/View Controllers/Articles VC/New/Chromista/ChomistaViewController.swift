@@ -56,6 +56,8 @@ final class ChomistaViewController: UIViewController {
     // UISegmentedControls
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -63,117 +65,113 @@ final class ChomistaViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let views = [sizeButtonBack, searchButtonBack, hideButtonBack]
-        for (index, view) in views.enumerated() {
-            let delay: Double = Double((index)) * 0.2
-            
-            UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                view?.alpha = 1
-            })        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            let views = [self.textViewBack,
-                         self.structureLabel,
-                         self.structureTextViewBack,
-                         self.historyTextViewBack,
-                         self.segmentedControl]
-            for (index, view) in views.enumerated() {
-                let delay: Double = Double((index)) * 0.2
-                
-                UIView.animate(withDuration: 0.73, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                    view?.alpha = 1
-                })
-            }
-        }
-    }
-
-    //MARK: Action
-    @IBAction func editButton(_ sender: Any) {
-        if switchView.isHidden == false {
-            viewModel.setEditorsViewHideen_forShowingMethods(switchView, hidden: true)
-        } else {
-            viewModel.setEditorsViewHideen_forShowingMethods(switchView, hidden: false)
-        }
-    }
-    
-    @IBAction func shareContent(_ sender: Any) {
-        let acVC = UIActivityViewController(activityItems:
-        [
-"""
-            \(textView.text!)
-            
-            \(structureTextView.text!)
-            
-            \(historyTextView.text!)
-"""
-        ], applicationActivities: nil)
-        
-        UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
-        present(acVC, animated: true)
-        
-        /// For Analytics
-        AnalyticsManeger.addShareActionAnalytics(for: articleName)
-    }
-    
-    @IBAction func settingsButtonAction(_ sender: Any) {
-        if stepperView.isHidden == true {
-            viewModel.setEditorsViewHideen_forShowingMethods(stepperView, hidden: false)
-        } else {
-            viewModel.setEditorsViewHideen_forShowingMethods(stepperView, hidden: true)
-        }
-    }
-    
-    @IBAction func switchAction(_ sender: UISwitch) {
-        if sender.isOn == true {
-            hideButtonBack.isHidden             = false
-            searchButtonBack.isHidden           = false
-            sizeButtonBack.isHidden             = false
-            shareButton.isEnabled               = true
-            switchTextView.text                 = "Hide  diffrent functions"
-        } else {
-            hideButtonBack.isHidden             = true
-            searchButtonBack.isHidden           = true
-            shareButton.isEnabled               = false
-            stepperView.isHidden                = true
-            switchTextView.text                 = "Show diffrent functions"
-        }
-        
-        /// For Analytics
-        AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: articleName)
-    }
-    
-    @IBAction func stepperAction(_ sender: UIStepper) {
-        let font  = textView.font?.fontName
-        let font1 = historyTextView.font?.fontName
-        let font2 = structureTextView.font?.fontName
-        
-        let fontSize = CGFloat(sender.value)
-        
-        textView.font           = UIFont(name: font!, size: fontSize)
-        historyTextView.font    = UIFont(name: font1!, size: fontSize)
-        structureTextView.font  = UIFont(name: font2!, size: fontSize)
-        
-        /// Analytics
-        AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
-    }
-    
-    @IBAction func contentSwitch(_ sender: UISegmentedControl) {
-        /// ArticlesViewCountProtocol
-        setPopularityVoit()
-        
-        /// Set Content
-        switch segmentedControl.selectedSegmentIndex {
-        case 0:
-            contentSetup()
-        case 1:
-            textView.text = ChromistaData.ChromistaViewControllerData.BasicsData.chromistaDataBasics
-            structureTextView.text = ChromistaData.ChromistaViewControllerData.BasicsData.chromistaBiologyDataBasics
-            historyTextView.text = ChromistaData.ChromistaViewControllerData.BasicsData.chromistaHistoryDataBasics
-        default:
-            break
-        }
+        setupViewDidAppearAnimation()
     }
 }
 
+
+
+//MARK: @IBAction
+extension ChomistaViewController {
+    @IBAction func editButton(_ sender: Any) {
+            if switchView.isHidden == false {
+                viewModel.setEditorsViewHideen_forShowingMethods(switchView, hidden: true)
+            } else {
+                viewModel.setEditorsViewHideen_forShowingMethods(switchView, hidden: false)
+            }
+        }
+        
+        @IBAction func shareContent(_ sender: Any) {
+            viewModel.setupActivityVC(content: [
+            """
+                        \(textView.text!)
+                        
+                        \(structureTextView.text!)
+                        
+                        \(historyTextView.text!)
+            """
+                    ], for: self)
+            
+            /// For Analytics
+            AnalyticsManeger.addShareActionAnalytics(for: articleName)
+        }
+        
+        @IBAction func settingsButtonAction(_ sender: Any) {
+            if stepperView.isHidden == true {
+                viewModel.setEditorsViewHideen_forShowingMethods(stepperView, hidden: false)
+            } else {
+                viewModel.setEditorsViewHideen_forShowingMethods(stepperView, hidden: true)
+            }
+        }
+        
+        @IBAction func switchAction(_ sender: UISwitch) {
+            if sender.isOn == true {
+                
+                /// Setup views hidden
+                viewModel.setupViewHidden(hideButtonBack, hidden: false)
+                viewModel.setupViewHidden(searchButtonBack, hidden: false)
+                viewModel.setupViewHidden(stepperView, hidden: false)
+                
+                /// Setup button enabled
+                viewModel.setupViewHidden(shareButton, enabled: true)
+                
+                /// Setup switchTextView text
+                viewModel.contentSetup(switchTextView, content: "Hide  diffrent functions")
+            } else {
+                
+                /// Setup views hidden
+                viewModel.setupViewHidden(hideButtonBack, hidden: true)
+                viewModel.setupViewHidden(searchButtonBack, hidden: true)
+                viewModel.setupViewHidden(stepperView, hidden: true)
+                
+                /// Setup button enabled
+                viewModel.setupViewHidden(shareButton, enabled: false)
+                
+                /// Setup switchTextView text
+                viewModel.contentSetup(switchTextView, content: "Show diffrent functions")
+            }
+            
+            /// For Analytics
+            AnalyticsManeger.addArtcileChangeFunctionsHiddenAnalytics(article: articleName)
+        }
+        
+        @IBAction func stepperAction(_ sender: UIStepper) {
+            let font  = textView.font?.fontName
+            let font1 = historyTextView.font?.fontName
+            let font2 = structureTextView.font?.fontName
+            
+            let fontSize = CGFloat(sender.value)
+            
+            viewModel.textViewFontSetup(textView, font: UIFont(name: font!, size: fontSize)!)
+            viewModel.textViewFontSetup(historyTextView, font: UIFont(name: font1!, size: fontSize)!)
+            viewModel.textViewFontSetup(structureTextView, font: UIFont(name: font2!, size: fontSize)!)
+            
+            /// Analytics
+            AnalyticsManeger.addArtcileChangeFontAnalytics(article: articleName)
+        }
+        
+        @IBAction func contentSwitch(_ sender: UISegmentedControl) {
+            
+            /// ArticlesViewCountProtocol
+            setPopularityVoit()
+            
+            /// Set Content
+            switch segmentedControl.selectedSegmentIndex {
+            case 0:
+                contentSetup()
+            case 1:
+                viewModel.contentSetup(textView,            content: ChromistaData.ChromistaViewControllerData.BasicsData.chromistaDataBasics)
+                viewModel.contentSetup(structureTextView,   content: ChromistaData.ChromistaViewControllerData.BasicsData.chromistaBiologyDataBasics)
+                viewModel.contentSetup(historyTextView,     content: ChromistaData.ChromistaViewControllerData.BasicsData.chromistaHistoryDataBasics)
+            default:
+                break
+            }
+        }
+}
+
+
+
+//MARK: - Main Methods
 extension ChomistaViewController {
     private func stepperViewPrefering() {
         stepperView.editorsViews()
@@ -195,10 +193,19 @@ extension ChomistaViewController {
         segmentedControl.segmentedControlShadow()
         segmentedControl.segmentedControlBasics()
     }
+    
+    private func setupViewDidAppearAnimation() {
+        let viewsArray = [sizeButtonBack, searchButtonBack, hideButtonBack]
+        let secondViewsArray = [textViewBack, structureLabel, structureTextViewBack, historyTextViewBack, segmentedControl]
+        
+        viewModel.setupViewDidApearAnimation(viewsArray: viewsArray as! [UIView], secondViewsArray: secondViewsArray as! [UIView])
+    }
 }
 
+
+
+//MARK: - ChomistaViewControllerViewSetupProtocol extension
 extension ChomistaViewController: ChomistaViewControllerViewSetupProtocol {
-    
     func alphaSetup() {
         viewModel.alphaSetup(historyTextViewBack)
         viewModel.alphaSetup(textViewBack)
@@ -231,6 +238,9 @@ extension ChomistaViewController: ChomistaViewControllerViewSetupProtocol {
     }
 }
 
+
+
+//MARK: - ArticlesViewControllerDelegate extension
 extension ChomistaViewController: ArticlesViewControllerDelegate {
     var articleName: String { get { return "Chromista" } }
     

@@ -17,6 +17,7 @@ struct ScreenSize {
 }
 
 struct DeviceType {
+    
     // iPhones
     static let IS_IPHONE            = UIDevice.current.userInterfaceIdiom == .phone
     static let IS_IPHONE_4_OR_LESS  = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH < 568.0

@@ -13,6 +13,7 @@ import SystemConfiguration.CaptiveNetwork
 
 public let ReachabilityStatusChangedNotification = "ReachabilityStatusChangedNotification"
 
+//MARK: - ReachabilityType enum
 public enum ReachabilityType: CustomStringConvertible {
     case WWAN
     case WiFi
@@ -25,6 +26,10 @@ public enum ReachabilityType: CustomStringConvertible {
     }
 }
 
+
+
+
+//MARK: - ReachabilityStatus enum
 public enum ReachabilityStatus: CustomStringConvertible  {
     case Offline
     case Online(ReachabilityType)
@@ -39,6 +44,9 @@ public enum ReachabilityStatus: CustomStringConvertible  {
     }
 }
 
+
+
+//MARK: - Reachability public class
 public class Reachability {
     func connectionStatus() -> ReachabilityStatus {
         var zeroAddress = sockaddr_in()
@@ -75,6 +83,9 @@ public class Reachability {
     }
 }
 
+
+
+//MARK: - ReachabilityStatus init setup
 extension ReachabilityStatus {
     public init(reachabilityFlags flags: SCNetworkReachabilityFlags) {
         let connectionRequired = flags.contains(.connectionRequired)

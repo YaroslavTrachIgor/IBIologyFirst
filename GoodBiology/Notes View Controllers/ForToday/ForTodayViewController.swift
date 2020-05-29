@@ -48,10 +48,8 @@ final class ForTodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var navItem: UINavigationItem!
     
     // UIActivityIndicatorViews
-    @IBOutlet weak var textViewActivity: UIActivityIndicatorView! {
-        didSet { textViewACHidden() } }
-    @IBOutlet weak var textFieldActivitu: UIActivityIndicatorView! {
-        didSet { textFieldACHidden() } }
+    @IBOutlet weak var textViewActivity: UIActivityIndicatorView! { didSet { textViewACHidden(); } }
+    @IBOutlet weak var textFieldActivitu: UIActivityIndicatorView! { didSet { textFieldACHidden(); } }
     
     // UISegmentedControl
     @IBOutlet weak var segmentControl: UISegmentedControl!
@@ -124,9 +122,10 @@ final class ForTodayViewController: UIViewController, NCWidgetProviding {
     var currentCoordinate: CLLocationCoordinate2D!
     var previousLocation: CLLocation?
     
-    //MARK: Private
+    //MARK: - Private
     private var geocoder: CLGeocoder!
     
+    //MARK: - Lazy
     lazy var toolBar: BasicToolbar = {
         let toolBar = BasicToolbar()
         let spacer      = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -138,6 +137,7 @@ final class ForTodayViewController: UIViewController, NCWidgetProviding {
     
     // acView for ActivityIndicatorView When Map is showing
     var acSubView: UIView?
+    
     
     //MARK: LyfeCycle
     override func viewDidLoad() {

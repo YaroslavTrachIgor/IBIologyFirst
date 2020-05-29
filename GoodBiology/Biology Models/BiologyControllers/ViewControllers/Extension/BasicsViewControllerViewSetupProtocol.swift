@@ -10,19 +10,21 @@ import Foundation
 import UIKit
 
 protocol BasicsViewControllerViewSetupProtocol {
-    // Setup UIView
+    
+    /// Setup view
     func viewBasics()
     
     func viewBackSetup()
     
-    func prepareBackgroundView()
+    func prepareShadows()
     func systemBackPrefering()
     func editorsViewTextPrefering()
     func cornersPrefering()
     func segmentedControlCostomizing()
     func contentTextViewFontPrefering()
+    func setCorners(radius: CGFloat)
     
-    // UIControls Setup
+    /// UIControls Setup
     func editorsViewSetup()
     func stepperViewSetup()
     func switchViewSetup()
@@ -33,36 +35,42 @@ protocol BasicsViewControllerViewSetupProtocol {
     func switchTextViewSetup()
     func contentTextViewSetup()
     
-    // Load animation with activity indicator
+    /// Load animation with activity indicator
     func loadingViewPrefering()
     
-    // Set Text
-    func modelsPrefering()
+    /// Set content
+    func modelContentSetup()
     
-    // Navigation Bar Setup
+    /// Navigation Bar Setup
     func navigationControllerSetup()
     
-    // viewDidApearAnimation
-    func viewDidApearAnimation()
-    
+    /// ViewDidApearAnimation Setup
+    func viewDidApearAnimationSetup()
 }
 
 
 // MARK: - BasicsViewControllerViewSetupProtocol
 extension BiologyViewController: BasicsViewControllerViewSetupProtocol {
-    func viewDidApearAnimation() {
+    
+    //MARK: ViewDidApearAnimation Setup
+    func viewDidApearAnimationSetup() {
         let objectsArray = [switchViewShowingButtonBackView ,stepperViewShowingButtonBack  ,segmentedControl ,backgroundView, notificationButton, switchView, stepperView]
         
-        for (index, objects) in objectsArray.enumerated() {
+        for (index, view) in objectsArray.enumerated() {
             let delay: Double = Double((index)) * 0.3
-            
+            setupAnimation(view: view, delay: delay)
+        }
+    }
+    
+    func setupAnimation(view: UIView?, delay: Double) {
+        DispatchQueue.main.async {
             UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveLinear, animations: {
-                
-                objects?.alpha = 1
+                view?.alpha = 1
             })
         }
     }
     
+    //MARK: Setup View
     func viewBasics() {
         editorsViewTextPrefering()
         segmentedControlSetup()
@@ -82,7 +90,7 @@ extension BiologyViewController: BasicsViewControllerViewSetupProtocol {
         stepperView.viewSystemBack()
     }
     
-    func prepareBackgroundView() {
+    func prepareShadows() {
         switchView.viewShadows()
         stepper.stepperShadow()
         stepperView.viewShadows()
@@ -97,7 +105,7 @@ extension BiologyViewController: BasicsViewControllerViewSetupProtocol {
         
         switchTextView.textViewShadow()
     }
-    
+
     func editorsViewSetup() {
         stepperViewSetup()
         switchViewSetup()
@@ -167,23 +175,29 @@ extension BiologyViewController: BasicsViewControllerViewSetupProtocol {
         }
     }
     
-    func modelsPrefering() {
-        title = contentModel?.title
+    func setCorners(radius: CGFloat) {
+        backgroundView.layer.cornerRadius = radius
+    }
+    
+    
+    //MARK: Setup Content
+    func modelContentSetup() {
+        title                = contentModel?.title
         contentTextView.text = contentModel?.content
     }
     
+    
+    //MARK: Setup NavigationBar
     func navigationControllerSetup() {
-        navigationController?.navigationBar.tintColor       = .biologyGreenColor
-        navigationController?.navigationBar.backgroundColor = .white
-        navigationController?.navigationBar.barTintColor    = .white
-        navigationController?.navigationBar.barStyle        = .default
+        let navBar = navigationController?.navigationBar
         
-        navigationController?.navigationBar.prefersLargeTitles = false
-    }
-}
-
-extension BiologyViewController {
-    func setCorners(radius: CGFloat) {
-        backgroundView.layer.cornerRadius = radius
+        /// Setup Bar colors
+        navBar?.tintColor       = .biologyGreenColor
+        navBar?.backgroundColor = .white
+        navBar?.barTintColor    = .white
+        navBar?.barStyle        = .default
+        
+        /// Setup Bar Large Titles
+        navBar?.prefersLargeTitles = false
     }
 }

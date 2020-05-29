@@ -75,11 +75,13 @@ final class BiologyViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewDidApearAnimation()
+        viewDidApearAnimationSetup()
     }
     
     override func viewWillLayoutSubviews() {
-        view.setGradientBackground(colorOne: .white, colorTwo: .groupTableViewBackground)
+        let colorOne: UIColor = .white
+        let colorTwo: UIColor = .groupTableViewBackground
+        view.setGradientBackground(colorOne: colorOne, colorTwo: colorTwo)
     }
     
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }

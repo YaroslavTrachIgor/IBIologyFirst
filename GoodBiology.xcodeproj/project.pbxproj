@@ -51,7 +51,7 @@
 		843F81392440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F81382440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift */; };
 		843F813C2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F813B2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift */; };
 		8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */; };
-		8446582023BC0A5200DC316E /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* Button.swift */; };
+		8446582023BC0A5200DC316E /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* Buttons.swift */; };
 		8446582823BD59E200DC316E /* iOSGoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */; };
 		8446583423BFF44A00DC316E /* PlantsTestsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583323BFF44A00DC316E /* PlantsTestsData.swift */; };
 		8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446583623BFF5E900DC316E /* FalseAnswers.swift */; };
@@ -540,7 +540,7 @@
 		843F81382440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChomistaViewControllerViewModel.swift; sourceTree = "<group>"; };
 		843F813B2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesVCsViewCountExtensions.swift; sourceTree = "<group>"; };
 		8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProtocol.swift; sourceTree = "<group>"; };
-		8446581F23BC0A5200DC316E /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		8446581F23BC0A5200DC316E /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSGoodBiologyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSGoodBiologyUITests.swift; sourceTree = "<group>"; };
 		8446582923BD59E200DC316E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1247,7 +1247,7 @@
 		8446581E23BC0A4100DC316E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8446581F23BC0A5200DC316E /* Button.swift */,
+				8446581F23BC0A5200DC316E /* Buttons.swift */,
 				C4D9615F23CE545500C0ED57 /* SomeMoreView.swift */,
 				84B1D60A242C328D0046C4FB /* FastActivityVC.swift */,
 			);
@@ -3444,7 +3444,7 @@
 				C4EE987E23EC6D5200FBF1E1 /* TestIconBackView.swift in Sources */,
 				84914E2623FF55C60048B154 /* NewArticleLabel.swift in Sources */,
 				84A3AFAD23F382A300836400 /* BasicNotesViewControllerPickerViewDelegate.swift in Sources */,
-				8446582023BC0A5200DC316E /* Button.swift in Sources */,
+				8446582023BC0A5200DC316E /* Buttons.swift in Sources */,
 				84119901233F57AC004B0DAF /* Protocols.swift in Sources */,
 				84F5741323F0BDEF00400ED4 /* ChromistaLabel.swift in Sources */,
 				842D691D23C6993D009CF7E7 /* ToolBar.swift in Sources */,

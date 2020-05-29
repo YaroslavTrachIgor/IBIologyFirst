@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
+// MARK: - BasicsViewControllerRateFunctionProtocol protocol
 protocol BasicsViewControllerRateFunctionProtocol {
     func rate()
 }
 
 
-// MARK: - BasicsViewControllerRateFunctionProtocol
+// MARK: - BasicsViewControllerRateFunctionProtocol extension
 extension BiologyViewController: BasicsViewControllerRateFunctionProtocol {
     func rate() {
         if navigationItem.title == "Botany" {

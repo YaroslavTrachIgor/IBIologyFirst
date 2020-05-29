@@ -11,6 +11,8 @@ import SafariServices
 import Foundation
 
 extension UIViewController {
+    
+    //MARK: - Show SafariVC
     func showSafariVC(for url: String) {
         guard let url = URL(string: url) else { return }
         
@@ -24,6 +26,7 @@ extension UIViewController {
         }
     }
     
+    //MARK: - Sr=etup Bar Hidden on Tap
     func articleVCProperty_NavBarHiddenSet() {
         navigationController?.hidesBarsOnTap = true
     }

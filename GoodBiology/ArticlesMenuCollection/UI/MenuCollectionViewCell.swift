@@ -84,7 +84,7 @@ extension MenuCollectionViewCellProtocol {
 // MARK: - Main Functions
 extension MenuCollectionViewCell {
     private func setupNotification() {
-        PushNotifications.setupBasicNotification(body: headerLabel.text!, inSecond: TimeInterval(timeInterval)) { (_) in }
+        PushNotifications.setupBasicNotification(body: headerLabel.text!, inSecond: TimeInterval(BasicPushNotificationAttributes.timeInterval)) { (_) in }
         
         ///For Analytics
         AnalyticsManeger.addNotificationAnalytics(article: headerLabel.text! + "_CollectionView")

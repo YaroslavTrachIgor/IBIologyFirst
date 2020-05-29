@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK: - BasicsDataManager main class
 class BasicsDataManager {
     private var models: [BasicsModel] = []
     
@@ -29,6 +30,9 @@ class BasicsDataManager {
     }
 }
 
+
+
+//MARK: - Prepare Raw Data Array
 extension BasicsDataManager {
     func prepareRawDataArray() -> [[String: String]] {
         let dataArray: [[String: String]] = [

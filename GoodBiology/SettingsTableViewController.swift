@@ -12,6 +12,7 @@ import GoogleSignIn
 
 final class SettingsTableViewController: UITableViewController, UINavigationControllerDelegate {
     
+    //MARK: - @IBOutlets
     //Users view with Info
     @IBOutlet weak var usersInfoView: UsersInfoView!
     
@@ -56,6 +57,8 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
     // LastSaveButton
     @IBOutlet weak var lastSaveButton: UIButton!
     
+    
+    //MARK: - SettingsKeys
     struct SettingsKeys {
         /// Personal Information Keys
         // MARK: - Labels
@@ -82,6 +85,8 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
         static let lastSave = "lastSaveKey"
     }
     
+    
+    //MARK: - Lazy
     lazy var searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
@@ -104,10 +109,14 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
         return toolBar
     }()
 
-    // ubView for ActivityIndicatorView
-    var acSubView: UIView?
-    let acInViewIndicator = UIActivityIndicatorView()
     
+    // ubView for ActivityIndicatorView
+    //MARK: Public
+    public var acSubView: UIView?
+    public let acInViewIndicator = UIActivityIndicatorView()
+    
+    
+    //MARK: @objc dynamic
     @objc dynamic var inputFirstNameText:  String?
     @objc dynamic var inputSecondNameText: String?
     @objc dynamic var inputEmailText:      String?
@@ -116,17 +125,23 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
     @objc dynamic var labelSecondNameText: String?
     @objc dynamic var labelEmailText:      String?
     
-    var firstName:  NSKeyValueObservation?
-    var secondName: NSKeyValueObservation?
-    var email:      NSKeyValueObservation?
+    
+    //MARK: Public
+    public var firstName:  NSKeyValueObservation?
+    public var secondName: NSKeyValueObservation?
+    public var email:      NSKeyValueObservation?
+    
     
     //MARK: - User Defaults
     let defaults = UserDefaults.standard
+    
     
     //MARK: - ViewModel
     let saveFunctionViewModel = SettingsTableViewControllerSaveFunctionViewModel()
     let viewModel = SettingsTableViewControllerViewModel()
     
+    
+    //MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
