@@ -19,18 +19,19 @@ struct MenuCollectionViewConterollerVCsPresentKeys {
 //MARK: - MenuCollectionViewConteroller main class
 final class MenuCollectionViewConteroller: UICollectionViewController {
     
-    // Content Properties
+    //MARK: Private
+    ///Content Properties
     private var articleHeader = MenuCollectionViewConterollerContent.headerContentArray
     private var articleContent = MenuCollectionViewConterollerContent.textViewContentArray
     
-    // UISearchController
+    ///UISearchController
     private lazy var searchController = BasicSearchController()
     private var searchBarIsEmpty: Bool {
         guard let text = searchController.searchBar.text else { return false }
         return text.isEmpty
     }
     
-    // UIRefreshControl
+    ///UIRefreshControl
     private lazy var collectionViewMenuRefreshControl: UIRefreshControl = {
         let refreshControl = BasicRefreshControl()
         return refreshControl
@@ -91,10 +92,10 @@ extension MenuCollectionViewConteroller {
     ///   - textViewContent: preview content
     ///   - labelContent: header content
     private func setupCell(cell: MenuCollectionViewCell, textViewContent: String, labelContent: String) {
-        // MARK: - Setup headerLabel
+        /// Setup headerLabel
         setupCellLabel(cell: cell, text: labelContent)
         
-        // MARK: - Setup cellTextView
+        /// Setup cellTextView
         setupCellTextView(cell: cell, text: textViewContent)
     }
     
@@ -107,7 +108,6 @@ extension MenuCollectionViewConteroller {
         cell.headerLabel.labelShadow()
     }
 
-    
     private func setupCellTextView(cell: MenuCollectionViewCell, text: String) {
         let textView = cell.cellTextView!
         textView.text = text
@@ -118,6 +118,7 @@ extension MenuCollectionViewConteroller {
         textView.isSelectable = true
         textView.textViewShadow()
     }
+    
     
     //MARK: Setup setup SearchBar
     private func setupSearchBar(_ searchBar: UISearchBar) {
@@ -133,6 +134,7 @@ extension MenuCollectionViewConteroller {
         }
     }
     
+    
     //MARK: Setup Navigation Controller
     private func setupNavController() {
         setupSearchBar(searchController.searchBar)
@@ -140,7 +142,6 @@ extension MenuCollectionViewConteroller {
         navigationItem.searchController = searchController
         searchController.searchBar.delegate = self
     }
-    
     
     private func setupRows() -> Int {
         if isSearching {

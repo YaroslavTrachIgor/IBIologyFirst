@@ -8,8 +8,8 @@
 
 import Foundation
 
-//MARK: - BasicPushNotificationAttributes
-struct BasicPushNotificationAttributes {
+//MARK: - BasicPushNotificationAttributes public struct
+public struct BasicPushNotificationAttributes {
     
     ///Basic time interval
     static let timeInterval = 720

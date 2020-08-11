@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension NetworkingViewController: UIPickerViewDataSource {
+internal extension NetworkingViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if sytesMenuArray[row] == "Wikipedia" {
             urlAnimation(url: "https://www.wikipedia.org")

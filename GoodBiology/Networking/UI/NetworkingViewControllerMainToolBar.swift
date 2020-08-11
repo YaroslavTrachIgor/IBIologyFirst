@@ -9,11 +9,14 @@
 import Foundation
 import UIKit
 
+//MARK: - NetworkingViewControllerMainToolBarProtocol protocol
 protocol NetworkingViewControllerMainToolBarProtocol {
     func setupToolbar()
 }
 
-class NetworkingViewControllerMainToolBar: UIToolbar {
+
+//MARK: - NetworkingViewControllerMainToolBar main class
+final class NetworkingViewControllerMainToolBar: UIToolbar {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,8 +31,11 @@ class NetworkingViewControllerMainToolBar: UIToolbar {
     }
 }
 
+
+
+//MARK: - NetworkingViewControllerMainToolBarProtocol extension
 extension NetworkingViewControllerMainToolBar: NetworkingViewControllerMainToolBarProtocol {
-    func setupToolbar() {
+    internal func setupToolbar() {
         barTintColor = .white
         setShadowImage(UIImage(), forToolbarPosition: .any)
     }

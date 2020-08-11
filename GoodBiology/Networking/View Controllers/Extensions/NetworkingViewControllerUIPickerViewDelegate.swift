@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension NetworkingViewController: UIPickerViewDelegate {
+internal  extension NetworkingViewController: UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -18,7 +18,7 @@ extension NetworkingViewController: UIPickerViewDelegate {
         return sytesMenuArray.count
     }
     
-    internal func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return sytesMenuArray[row]
     }
 }

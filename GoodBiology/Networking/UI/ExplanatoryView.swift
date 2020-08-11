@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
+//MARK: - ExplanatoryViewProtocol protocol
 protocol ExplanatoryViewProtocol {
     func setupView()
 }
 
-class ExplanatoryView: UIView {
+
+
+//MARK: - ExplanatoryView main class
+final class ExplanatoryView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -27,12 +31,18 @@ class ExplanatoryView: UIView {
     }
 }
 
+
+
+//MARK: - ExplanatoryViewProtocol extension
 extension ExplanatoryView: ExplanatoryViewProtocol {
-    func setupView() {
+    internal func setupView() {
         setupHidden()
     }
 }
 
+
+
+//MARK: - ExplanatoryView main methods
 extension ExplanatoryView {
     private func setupHidden() {
         isHidden = true

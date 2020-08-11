@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-// MARK: - WebControllerDelegate
-extension NetworkingViewController: WebControllerDelegate {
+//MARK: - WebControllerDelegate
+internal extension NetworkingViewController: WebControllerDelegate {
     func checkWifi() {
         let networkStatus = Reachability().connectionStatus()
         switch networkStatus {

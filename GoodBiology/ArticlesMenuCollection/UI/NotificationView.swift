@@ -14,16 +14,23 @@ protocol NotificationViewProtocol {
     func setupView()
 }
 
-class NotificationView: UIView {
+
+
+//MARK: - NotificationView main class
+final class NotificationView: UIView {
     
     //MARK: @IBOutlets
-    @IBOutlet weak var dateLabel: UILabel! { didSet {
-        let date = LocalizedDate("us", datePosix: "MMMM d  'at'  h:mm a")
+    @IBOutlet weak var dateLabel: UILabel! {
+        didSet {
+            let date = LocalizedDate("us", datePosix: "MMMM d  'at'  h:mm a")
         
-        /// Set Label text
-        dateLabel.text = "Date: " + date.returnDate() //Date in English
-    } }
+            /// Set Label text
+            dateLabel.text = "Date: " + date.returnDate() //Date in English
+        }
+    }
     
+    
+    //MARK: Inits
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -42,7 +49,7 @@ class NotificationView: UIView {
 
 //MARK: - NotificationViewProtocol
 extension NotificationView: NotificationViewProtocol {
-    func setupView() {
+    internal func setupView() {
         let active = true
         heightAnchor.constraint(equalToConstant: 65).isActive = active
         widthAnchor.constraint(equalToConstant: 360).isActive = active

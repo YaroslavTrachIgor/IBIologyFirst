@@ -11,25 +11,29 @@ import Foundation
 //MARK: - LocalizedDate struct
 struct LocalizedDate {
     
-    //MARK: String
+    /// String
     var location: String
     var datePosix: String
     
-    //MARK: DateFormatter
+    /// DateFormatter
     let dateFormatter = DateFormatter()
     
-    //MARK: Date
+    /// Date
     let date = Date()
-
+    
+    
+    //MARK: Init
+    init(_ location: String, datePosix: String ){
+        self.location = location
+        self.datePosix = datePosix
+    }
+    
+    
+    //MARK: Public
     public func returnDate() -> String {
         let local = Locale(identifier: location)
         dateFormatter.locale = local
         dateFormatter.setLocalizedDateFormatFromTemplate(datePosix)
         return dateFormatter.string(from: date)
-    }
-
-    init(_ location: String, datePosix: String ){
-        self.location = location
-        self.datePosix = datePosix
     }
 }

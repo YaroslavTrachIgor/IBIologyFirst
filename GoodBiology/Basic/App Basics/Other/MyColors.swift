@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-extension UIColor {
+//MARK: - UIColor public extension
+public extension UIColor {
     static var biologyGreenColor: UIColor {
         return #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
     }

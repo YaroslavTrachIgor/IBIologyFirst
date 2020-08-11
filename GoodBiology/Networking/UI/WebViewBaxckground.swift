@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
+//MARK: - WebViewBaxckgroundProtocol protocol
 protocol WebViewBaxckgroundProtocol {
     func setupView()
 }
 
-class WebViewBaxckground: ContentBack {
+
+
+//MARK: - WebViewBaxckground main class
+final class WebViewBaxckground: ContentBack {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -27,8 +31,11 @@ class WebViewBaxckground: ContentBack {
     }
 }
 
+
+
+//MARK: - WebViewBaxckgroundProtocol extension
 extension WebViewBaxckground: WebViewBaxckgroundProtocol {
-    func setupView() {
+    internal func setupView() {
         layer.shadowColor  = UIColor.clear.cgColor
         layer.shadowRadius = 0
     }

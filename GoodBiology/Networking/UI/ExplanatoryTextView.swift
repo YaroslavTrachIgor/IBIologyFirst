@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-
-//MARK: ExplanatoryViewTextProtocol protocol
+//MARK: - ExplanatoryViewTextProtocol protocol
 protocol ExplanatoryViewTextProtocol {
     func setupTextView()
 }
@@ -18,7 +17,7 @@ protocol ExplanatoryViewTextProtocol {
 
 
 //MARK: ExplanatoryTextView main class
-class ExplanatoryTextView: UITextView {
+final class ExplanatoryTextView: UITextView {
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         
@@ -34,9 +33,9 @@ class ExplanatoryTextView: UITextView {
 
 
 
-//MARK: ExplanatoryViewTextProtocol extension
+//MARK: - ExplanatoryViewTextProtocol extension
 extension ExplanatoryTextView: ExplanatoryViewTextProtocol {
-    func setupTextView() {
+    internal func setupTextView() {
         setupFont()
         setupTextColor()
     }
@@ -44,7 +43,7 @@ extension ExplanatoryTextView: ExplanatoryViewTextProtocol {
 
 
 
-//MARK: ExplanatoryTextView extension
+//MARK: - ExplanatoryTextView extension
 extension ExplanatoryTextView {
     private func setupFont() {
         font = UIFont(name: BasicFonts.mediumFont, size: 14)

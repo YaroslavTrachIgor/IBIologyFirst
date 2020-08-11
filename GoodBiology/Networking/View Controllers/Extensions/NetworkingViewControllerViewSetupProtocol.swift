@@ -9,23 +9,9 @@
 import Foundation
 import UIKit
 
-//MARK: NetworkingViewControllerViewSetupProtocol protocol
-protocol NetworkingViewControllerViewSetupProtocol {
-    func pickerViewBackPrefering()
-    func systemBackColor()
-    func switchViewPrefering()
-    func loadingLabelSetup()
-    func webViewBaxckgroundSetup()
-    func webViewSetup()
-    func webViewPrefering()
-    func backItemGiven()
-    func activityINPref()
-}
 
-
-
-//MARK: NetworkingViewControllerViewSetupProtocol extension
-extension NetworkingViewController: NetworkingViewControllerViewSetupProtocol {
+//MARK: - NetworkingViewControllerViewSetupProtocol extension
+internal extension NetworkingViewController {
     func backItemGiven() {
         viewModel.backItemGiven(navigationItem)
     }
@@ -65,7 +51,8 @@ extension NetworkingViewController: NetworkingViewControllerViewSetupProtocol {
     }
     
     func viewDidApperAnimation() {
-        // MARK: - Arrays
+        
+        ///Arrays
         let objectsArray = [searchBar, webViewBaxckground, webView]
         let imageArray   = [image1, image2, image3, image4, image5]
         let buttonsArray = [goForwardButton, backButton, nextButton, wikiButton, sitesButton]
@@ -74,10 +61,16 @@ extension NetworkingViewController: NetworkingViewControllerViewSetupProtocol {
             let delay: Double = Double((index)) * 0.2
             
             /// setup images animation
-            UIView.animate(withDuration: 0.3, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+            UIView.animate(withDuration: 0.3,
+                           delay: delay,
+                           usingSpringWithDamping: 0.8,
+                           initialSpringVelocity: 0,
+                           options: .curveLinear,
+                           animations: {
                 
                 /// setup first images animation
-                images?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+                images?.transform = CGAffineTransform(scaleX: 1.0,
+                                                      y: 1.0)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) {
                     
                     /// setup first images animation
@@ -99,7 +92,12 @@ extension NetworkingViewController: NetworkingViewControllerViewSetupProtocol {
                         let delay: Double = Double((index)) * 0.2
                         
                         /// setup animation
-                        UIView.animate(withDuration: 0.23, delay: delay, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveLinear, animations: {
+                        UIView.animate(withDuration: 0.23,
+                                       delay: delay,
+                                       usingSpringWithDamping: 0.8,
+                                       initialSpringVelocity: 0,
+                                       options: .curveLinear,
+                                       animations: {
                             
                             objects?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                         }, completion: nil)

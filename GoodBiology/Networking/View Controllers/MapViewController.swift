@@ -23,18 +23,16 @@ final class MapViewController: UIViewController, MapBasicViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var typeView: UISegmentedControl!
-    @IBOutlet weak var typeViewBackground:   UIView!
+    @IBOutlet weak var typeViewBackground: UIView!
     @IBOutlet weak var problumButtonViewLabel: UILabel!
-    @IBOutlet weak var problemViewShowButton:  UIButton!
+    @IBOutlet weak var problemViewShowButton: UIButton!
     @IBOutlet weak var problemViewShowButtonView: ChromistaActionButtonsBack!
     @IBOutlet weak var mapTypesButtonBackView: ChromistaActionButtonsBack!
     @IBOutlet weak var problemButton: HelpButton!
     
-    
     //MARK: Private
-    private let locationManager        = CLLocationManager()
+    private let locationManager = CLLocationManager()
     private let regionInMeters: Double = 10000
-    
     private var previousLocation: CLLocation?
     
     
@@ -90,11 +88,9 @@ extension MapViewController {
     
     @IBAction func share(_ sender: Any) {
         let activityVC = UIActivityViewController(activityItems: [addressLabel.text!], applicationActivities: nil)
-            activityVC.popoverPresentationController?.sourceView = self.view
-            UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
-        
+        activityVC.popoverPresentationController?.sourceView = self.view
+        UIApplication.shared.keyWindow?.tintColor = .biologyGreenColor
         AudioServicesPlayAlertSound(SystemSoundID(1001))
-        
         self.present(activityVC, animated: true, completion: nil)
         
         /// For Analytics
@@ -123,26 +119,11 @@ extension MapViewController {
 
 
 
-//MARK: - MapViewControllerMainFunctionsProtocol protocol
-protocol MapViewControllerMainFunctionsProtocol {
-    func showMailComposer()
-    func mapViewPrefring()
-    func checkWiFi()
-    func setupLocationManager()
-    func centerViewOnUserLocation()
-    func checkLocationServices()
-    func checkLocationAuthorization()
-    func startTackingUserLocation()
-    func getCenterLocation(for mapView: MKMapView) -> CLLocation
-}
-
-
-
 //MARK: - MapViewControllerMainFunctionsProtocol and other
 extension MapViewController {
     
-    //MARK: - MapViewControllerMainFunctionsProtocol methods
-    internal func showMailComposer() {
+    //MARK: - Private
+    private func showMailComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
         let composer = BasicMFMailComposeViewController(rootViewController: self)
         composer.mailComposeDelegate = self
@@ -151,7 +132,7 @@ extension MapViewController {
         present(composer, animated: true)
     }
         
-    internal func mapViewPrefring() {
+    private func mapViewPrefring() {
         viewModel.setupMapView(mapView)
     }
     
@@ -166,7 +147,7 @@ extension MapViewController {
         mapViewPrefring()
     }
     
-    internal func checkWiFi() {
+    private func checkWiFi() {
         let networkStatus = Reachability().connectionStatus()
         let alertController = UIAlertController(title: "Oops", message: "You are not connected to WiFi", preferredStyle: .alert)
         let action = UIAlertAction(title: "Continue", style: .cancel) { (action) in }
@@ -184,19 +165,19 @@ extension MapViewController {
         }
     }
     
-    internal func setupLocationManager() {
+    private func setupLocationManager() {
         locationManager.delegate = self
         viewModel.setupLocationManager(locationManager)
     }
     
-    internal func centerViewOnUserLocation() {
+    private func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
            let region   = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             viewModel.setRegion(mapView, region: region)
         }
     }
     
-    internal func checkLocationServices() {
+    private func checkLocationServices() {
         DispatchQueue.global(qos: .utility).async {
             DispatchQueue.main.async {
                 if CLLocationManager.locationServicesEnabled() {
@@ -207,7 +188,7 @@ extension MapViewController {
         }
     }
     
-    internal func checkLocationAuthorization() {
+    private func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             startTackingUserLocation()
@@ -226,22 +207,20 @@ extension MapViewController {
         }
     }
     
-    internal func startTackingUserLocation() {
+    private func startTackingUserLocation() {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
         previousLocation = getCenterLocation(for: mapView)
     }
     
-    internal func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+    private func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         let latitude    = mapView.centerCoordinate.latitude
         let longitude   = mapView.centerCoordinate.longitude
         
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
-    
-    //MARK: Private
     private func switchingViewPrefering() {
         typeViewPrefering()
         typeViewBackPrefering()
@@ -291,9 +270,8 @@ extension MapViewController: MKMapViewDelegate {
             guard let self = self else { return }
             if let _ = error { FastAlert.showBasic(title: nil, message: error?.localizedDescription, vc: self); return }
             guard let placemark = placemarks?.first else { return }
-            
             let streetNumber = placemark.subThoroughfare ?? ""
-            let streetName   = placemark.thoroughfare ?? ""
+            let streetName = placemark.thoroughfare ?? ""
             
             /// Setup addressLabel text
             DispatchQueue.main.async {

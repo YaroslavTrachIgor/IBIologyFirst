@@ -9,16 +9,17 @@
 import Foundation
 import FirebaseAnalytics
 
+//MARK: - AnalyticsManeger main class
 final class AnalyticsManeger {
+    
+    //MARK: Static
     static func addAnalyticsObject(name: String) {
         Analytics.logEvent(name, parameters: nil)
     }
     
-    
     static func addAnaliticsObjectWithParameters(name: String, parameters: [String : Any]?) {
         Analytics.logEvent(name, parameters: parameters)
     }
-    
     
     static func addUserPropertie(name: String, forName: String) {
         Analytics.setUserProperty(name, forName: forName)
@@ -41,7 +42,6 @@ extension AnalyticsManeger {
         AnalyticsManeger.addUserPropertie(name: "email_support_for_\(vc)", forName: UserProperties.supportName)
     }
     
-    
     static func addSupportActionMessageAnalytics(for vc: String) {
         AnalyticsManeger.addUserPropertie(name: "message_support_for_\(vc)", forName: UserProperties.supportName)
     }
@@ -63,7 +63,6 @@ extension AnalyticsManeger {
     static func addSafariFAQOpenAnalytics(for vc: String) {
         AnalyticsManeger.addUserPropertie(name: "open_faq_for_\(vc)", forName: UserProperties.safariSytesName)
     }
-    
     
     static func addSafariMainSyteOpenAnalytics(for vc: String) {
         AnalyticsManeger.addUserPropertie(name: "open_syte_for_\(vc)", forName: UserProperties.safariSytesName)
@@ -93,7 +92,6 @@ extension AnalyticsManeger {
         AnalyticsManeger.addAnalyticsObject(name: "articlestepper_\(name)_font_change")
     }
     
-    
     static func addTestChangeFontAnalytics() {
         AnalyticsManeger.addAnalyticsObject(name: "test_stepper_font_change")
     }
@@ -101,7 +99,7 @@ extension AnalyticsManeger {
 
 
 
-//MARK: - UserProperties
+//MARK: - UserProperties main struct
 struct UserProperties {
     static let supportName = "Support"
     static let shareName = "Share"

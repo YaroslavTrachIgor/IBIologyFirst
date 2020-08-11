@@ -11,7 +11,7 @@ import WebKit
 import UIKit
 
 //MARK: - NETWORK Animation Maneger
-class BrowserAnimationManeger {
+final class BrowserAnimationManeger {
     public func urlAnimation(activityIndicator: UIActivityIndicatorView, webView: WKWebView, url: String?) {
         UIView.animate(withDuration: 6) {
             let networkAnimViewModel = BrowserAnimationManegerViewModel()

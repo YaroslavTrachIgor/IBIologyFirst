@@ -12,10 +12,15 @@ import AudioToolbox
 import UIKit
 
 class AppleButtonSettings {
+    
+    ///UIColor
     var titleColor      = UIColor.label
     var backgroundColor = UIColor.systemGray6
     
+    ///Int
     var appleButtonCornerRadius = 12
     
-    var font = UIFont(name: "HelveticaNeue-Bold", size: CGFloat(14.5))
+    ///UIFont
+    var font = UIFont(name: "HelveticaNeue-Bold",
+                      size: CGFloat(14.5))
 }

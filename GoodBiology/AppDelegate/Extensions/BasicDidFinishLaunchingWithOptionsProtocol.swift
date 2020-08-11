@@ -17,7 +17,7 @@ protocol BasicDidFinishLaunchingWithOptionsProtocol {
 
 //MARK: BasicDidFinishLaunchingWithOptionsProtocol extension
 extension AppDelegate: BasicDidFinishLaunchingWithOptionsProtocol {
-    func setupDidFinishLaunchingMethods() {
+    internal func setupDidFinishLaunchingMethods() {
         setupGoogleMaps()
         rateManeger()
         UIViewTintColorPrefering()

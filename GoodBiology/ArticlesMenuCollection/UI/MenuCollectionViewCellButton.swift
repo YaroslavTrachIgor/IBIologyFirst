@@ -9,15 +9,17 @@
 import Foundation
 import UIKit
 
-// MARK: - MenuCollectionViewCellButtonProtocol setup
+//MARK: - MenuCollectionViewCellButtonProtocol setup
 protocol MenuCollectionViewCellButtonProtocol {
     func setupView()
 }
 
 
 
-// MARK: - Main class
-class MenuCollectionViewCellButton: UIButton {
+//MARK: - Main class
+final class MenuCollectionViewCellButton: UIButton {
+    
+    //MARK: Inits
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -33,7 +35,7 @@ class MenuCollectionViewCellButton: UIButton {
 
 
 
-// MARK: - MenuCollectionViewCellButtonProtocol
+//MARK: - MenuCollectionViewCellButtonProtocol
 extension MenuCollectionViewCellButton: MenuCollectionViewCellButtonProtocol {
     func setupView() {
         setupTitleColor()
@@ -42,7 +44,7 @@ extension MenuCollectionViewCellButton: MenuCollectionViewCellButtonProtocol {
 
 
 
-// MARK: - Main Functions
+//MARK: - Main Functions
 extension MenuCollectionViewCellButton {
     private func setupTitleColor() {
         titleLabel?.textColor = .biologyGreenColor

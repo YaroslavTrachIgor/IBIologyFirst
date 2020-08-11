@@ -11,13 +11,7 @@ import UIKit
 import AudioToolbox
 import WebKit
 
-protocol WebViewLoadAnimationsSetupProtocol {
-    func webViewLoad()
-    func coolReload()
-    func urlAnimation(url: String?)
-}
-
-extension NetworkingViewController: WebViewLoadAnimationsSetupProtocol {
+internal extension NetworkingViewController {
     func webViewLoad() {
         animationManeger.webViewLoad(webView, activityIndicator: activityIndicator, loadingLabel: loadingLabel)
     }

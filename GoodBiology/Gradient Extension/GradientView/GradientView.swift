@@ -8,7 +8,8 @@
 
 import UIKit
 
-class GradientView: UIView {
+//MARK: - GradientView main class
+final class GradientView: UIView {
     
     //MARK: - Properties
     public let gradientLayer = CAGradientLayer()
@@ -42,7 +43,7 @@ class GradientView: UIView {
 
 
 
-//MARK: Private methods are here
+//MARK: GradientView main methods
 extension GradientView {
     private func setupGradient() {
         layer.addSublayer(gradientLayer)

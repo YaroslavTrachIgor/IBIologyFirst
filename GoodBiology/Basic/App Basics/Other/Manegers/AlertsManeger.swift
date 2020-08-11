@@ -9,13 +9,16 @@
 import Foundation
 import SwiftEntryKit
 
+//MARK: - AlertsManeger main class
 final class AlertsManeger {
     
-    // Notification View animation
+    //MARK: Private
     private func setupDoneTestPopViewAttributes() -> EKAttributes {
         return EKAttributesManeger.setupNotificationViewEKAttributes()
     }
     
+    
+    //MARK: Public
     public func showNotificationView() {
         SwiftEntryKit.display(entry: NotificationView.instanceFromNib(), using: setupDoneTestPopViewAttributes())
     }

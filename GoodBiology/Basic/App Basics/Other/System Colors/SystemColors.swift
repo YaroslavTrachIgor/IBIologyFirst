@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-extension UITextView {
+//MARK: - UITextView public extension
+public extension UITextView {
     func textSystemBack() {
         if #available(iOS 13.0, *) {
             self.backgroundColor = .tertiaryLabel
@@ -23,7 +24,10 @@ extension UITextView {
     }
 }
 
-extension UILabel {
+
+
+//MARK: - UILabel public extension
+public extension UILabel {
     func labelSystemBack() {
         if #available(iOS 13.0, *) {
             self.backgroundColor = .tertiaryLabel
@@ -37,8 +41,12 @@ extension UILabel {
     }
 }
 
-extension UIView {
-    public func viewSystemBack() {
+
+
+
+//MARK: - UIView public extension
+public extension UIView {
+    func viewSystemBack() {
         if #available(iOS 13.0, *) {
             self.backgroundColor = .systemBackground
         }

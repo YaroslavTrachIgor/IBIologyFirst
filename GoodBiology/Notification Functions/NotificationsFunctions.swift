@@ -33,14 +33,27 @@ struct PushNotifications {
         content.categoryIdentifier = PushNotificationsBasicWords.userAction
         
         ///Setup Center
-        let calendar        = Calendar(identifier: .gregorian)
-        let components      = calendar.dateComponents([.month, .day, .hour, .minute, .second], from: date)
-        let trigger         = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
-        let request         = UNNotificationRequest(identifier: "MyUniqueIdentifier", content: content, trigger: trigger)
-        let center          = UNUserNotificationCenter.current()
-        let deleteAction    = UNNotificationAction(identifier: "Delete", title: "Delete", options: [.destructive])
-        let category        = UNNotificationCategory(identifier: PushNotificationsBasicWords.userAction, actions: [deleteAction], intentIdentifiers: [], options: [])
+        let dateComponents: Set<Calendar.Component> = [.month, .day, .hour, .minute, .second]
+        let calendar = Calendar(identifier: .gregorian)
+        let components = calendar.dateComponents(dateComponents,
+                                                 from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: components,
+                                                    repeats: false)
+        let request = UNNotificationRequest(identifier: "MyUniqueIdentifier",
+                                            content: content,
+                                            trigger: trigger)
+        let center = UNUserNotificationCenter.current()
         
+        ///Setup delete action
+        let actionIdentifier = "DeleteAction"
+        let deleteActionTitle = "Delete"
+        let deleteAction = UNNotificationAction(identifier: actionIdentifier,
+                                                title: deleteActionTitle,
+                                                options: [.destructive])
+        let category = UNNotificationCategory(identifier: PushNotificationsBasicWords.userAction,
+                                              actions: [deleteAction],
+                                              intentIdentifiers: [],
+                                              options: [])
         center.setNotificationCategories([category])
         center.add(request, withCompletionHandler: nil)
     }

@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 //MARK: - Main ArticleOnlineImagesViewController class
-class ArticleOnlineImagesViewController: UIViewController {
+final class ArticleOnlineImagesViewController: UIViewController {
     
     //MARK: @IBOutlets
     @IBOutlet weak var shareURl: UIBarButtonItem!
@@ -31,11 +31,9 @@ class ArticleOnlineImagesViewController: UIViewController {
         setuoNavController()
     }
     
-    
     override func viewDidAppear(_ animated: Bool) {
         viewDidApearAnimationSetup()
     }
-    
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -47,7 +45,7 @@ class ArticleOnlineImagesViewController: UIViewController {
 
 
 
-// MARK: - @IBActions
+//MARK: - @IBActions
 extension ArticleOnlineImagesViewController {
     @IBAction func goForwardAction(_ sender: Any) {
         if webView.canGoBack {
@@ -73,10 +71,10 @@ extension ArticleOnlineImagesViewController {
 
 
 
-// MARK: - Main Functions
+//MARK: - Main Functions
 extension ArticleOnlineImagesViewController {
     
-    // MARK: - Private
+    //MARK: Private
     private func basicAlpha() {
         
         /// Set alpha
@@ -111,13 +109,12 @@ extension ArticleOnlineImagesViewController {
         
         /// Setup navigationController
         let navController = navigationController
-        navController?.hidesBarsOnTap   = false
+        navController?.hidesBarsOnTap = false
         navController?.hidesBarsOnSwipe = false
         
         ///Setup titles colors
         setupNavBarColors()
     }
-    
     
     private func setupNavBarColors() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -127,9 +124,9 @@ extension ArticleOnlineImagesViewController {
 
 
 
-//MARK: - WebControllerDelegate
+//MARK: - WebControllerDelegate extension
 extension ArticleOnlineImagesViewController: WebControllerDelegate {
-    func checkWifi() {
+    internal func checkWifi() {
         let networkStatus = Reachability().connectionStatus()
         switch networkStatus {
             case .Unknown, .Offline:
@@ -139,7 +136,7 @@ extension ArticleOnlineImagesViewController: WebControllerDelegate {
         }
     }
     
-    func networkingProccesesPrefering() {
+    internal func networkingProccesesPrefering() {
         let queue = DispatchQueue.global(qos: .userInteractive)
         queue.async {
             DispatchQueue.main.async {
@@ -148,7 +145,7 @@ extension ArticleOnlineImagesViewController: WebControllerDelegate {
         }
     }
     
-    func viewBasicProccesesPrefering() {
+    internal func viewBasicProccesesPrefering() {
         webViewBackgroundPrefering()
         basicAlpha()
     }
@@ -156,11 +153,11 @@ extension ArticleOnlineImagesViewController: WebControllerDelegate {
 
 
 
-// MARK: - ArticleOnlineVCsSetupProtocol extension
+//MARK: - ArticleOnlineVCsSetupProtocol extension
 extension ArticleOnlineImagesViewController: ArticleOnlineVCsSetupProtocol {
     
-    // MARK: Setup Animation for viewDidApear
-    func viewDidApearAnimationSetup() {
+    //MARK: Setup Animation for viewDidApear
+    internal func viewDidApearAnimationSetup() {
         let views: [UIView] = [webViewBackground, webView]
         let buttons: [UIBarButtonItem] = [shareURl, leftButton, rightButton, reloadButton]
         
@@ -181,8 +178,8 @@ extension ArticleOnlineImagesViewController: ArticleOnlineVCsSetupProtocol {
         }
     }
     
-    // MARK: Setup webView content
-    func urlGiven() {
+    //MARK: Setup webView content
+    internal func urlGiven() {
         
         //MARK: Title guard
         guard title != nil else { return }
@@ -193,47 +190,37 @@ extension ArticleOnlineImagesViewController: ArticleOnlineVCsSetupProtocol {
         }
         
         //MARK: Set webView URL
-        if title == "Plants Videos" {
+        switch title {
+        case "Plants Videos":
             webViewLoad(url: ArticlesVideosURLs.plantsURL)
-            
-        } else if title == "Animals Videos" {
+        case "Animals Videos":
             webViewLoad(url: ArticlesVideosURLs.animalURL)
-            
-        } else if title == "Microbes Videos" {
+        case "Microbes Videos":
             webViewLoad(url: ArticlesVideosURLs.microbeURL)
-            
-        } else if title == "Viruses Videos" {
+        case "Viruses Videos":
             webViewLoad(url: ArticlesVideosURLs.virusURL)
-            
-        } else if title == "Funguses Videos" {
+        case "Funguses Videos":
             webViewLoad(url: ArticlesVideosURLs.fungusURL)
-            
-        } else if title == "Archaea Videos" {
+        case "Archaea Videos":
             webViewLoad(url: ArticlesVideosURLs.archaeaURL)
-            
-        } else if title == "Humen Videos" {
+        case "Humen Videos":
             webViewLoad(url: ArticlesVideosURLs.humanURL)
-            
-        } else if title == "Plants Images" {
+        case "Plants Images":
             webViewLoad(url: ArticlesImagesURLs.plantsImagesURL)
-            
-        } else if title == "Animals Images" {
+        case "Animals Images":
             webViewLoad(url: ArticlesImagesURLs.animalImagesURL)
-
-        } else if title == "Microbes Images" {
+        case "Microbes Images":
             webViewLoad(url: ArticlesImagesURLs.microbeImagesURL)
-            
-        } else if title == "Viruses Images" {
+        case "Viruses Images":
             webViewLoad(url: ArticlesImagesURLs.virusImagesURL)
-            
-        } else if title == "Funguses Images" {
+        case "Funguses Images":
             webViewLoad(url: ArticlesImagesURLs.fungusImagesURL)
-            
-        } else if title == "Archaea Images" {
+        case "Archaea Images":
             webViewLoad(url: ArticlesImagesURLs.archaeaImagesURL)
-            
-        } else if title == "Humen Images" {
+        case "Humen Images":
             webViewLoad(url: ArticlesImagesURLs.humanImagesURL)
+        default:
+            webViewLoad(url: ArticlesVideosURLs.plantsURL)
         }
     }
 }

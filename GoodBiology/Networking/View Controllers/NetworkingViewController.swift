@@ -17,36 +17,18 @@ final class NetworkingViewController: UIViewController, UISearchBarDelegate {
         static let wikiURL = "https://www.wikipedia.org"
     }
     
-    
     //MARK: Public
     let viewModel = NetworkingViewControllerViewModel()
     let animationManeger = BrowserAnimationManeger()
     
     
     //MARK: - IBOutlets
-    ///TransformImageViews
-    @IBOutlet weak var image1: TransformImageView!
-    @IBOutlet weak var image2: TransformImageView!
-    @IBOutlet weak var image3: TransformImageView!
-    @IBOutlet weak var image4: TransformImageView!
-    @IBOutlet weak var image5: TransformImageView!
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var explanatoryView: ExplanatoryView!
     @IBOutlet weak var explanatoryTextView: ExplanatoryTextView!
     @IBOutlet weak var webViewBaxckground: WebViewBaxckground!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView! { didSet { activityIndicator.activityIndicatorViewShadow() } }
-    
-    ///NetworkingButtons
-    @IBOutlet weak var goForwardButton:  NetworkingButton!
-    @IBOutlet weak var backButton:       NetworkingButton! { didSet { backButton.image = UIImage(systemName: "arrow.left") } }
-    @IBOutlet weak var nextButton:       NetworkingButton! { didSet { nextButton.image = UIImage(systemName: "arrow.right") } }
-    @IBOutlet weak var wikiButton:       NetworkingButton!
-    @IBOutlet weak var sitesButton:      NetworkingButton!
-    @IBOutlet weak var mapGoButton:      NetworkingButton!
-    
-    
     @IBOutlet weak var textSwitchView: UITextView!
     @IBOutlet weak var switchView: UIView!
     @IBOutlet weak var switchOutlet: UISwitch!
@@ -56,11 +38,28 @@ final class NetworkingViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var pickerViewBack: UIView!
     
     
-    // MARK: - Array
+    ///NetworkingButtons
+    @IBOutlet weak var goForwardButton: NetworkingButton!
+    @IBOutlet weak var backButton: NetworkingButton! { didSet { backButton.image = UIImage(systemName: "arrow.left") } }
+    @IBOutlet weak var nextButton: NetworkingButton! { didSet { nextButton.image = UIImage(systemName: "arrow.right") } }
+    @IBOutlet weak var wikiButton: NetworkingButton!
+    @IBOutlet weak var sitesButton: NetworkingButton!
+    @IBOutlet weak var mapGoButton: NetworkingButton!
+    
+    
+    ///TransformImageViews
+    @IBOutlet weak var image1: TransformImageView!
+    @IBOutlet weak var image2: TransformImageView!
+    @IBOutlet weak var image3: TransformImageView!
+    @IBOutlet weak var image4: TransformImageView!
+    @IBOutlet weak var image5: TransformImageView!
+
+    
+    //MARK: Array
     let sytesMenuArray = ["Wikipedia", "Google", "YouTube", "YouTube About Plants", "YouTube About Animals", "YouTube About Microbes"]
     
     
-    //MARK: - LifeCycle
+    //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         

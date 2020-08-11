@@ -12,7 +12,7 @@ import MessageUI
 import CoreLocation
 import MapKit
 
-//MARK: - MapViewControllerViewModel
+//MARK: - MapViewControllerViewModel main class
 final class MapViewControllerViewModel {
     
     //MARK: Public
@@ -40,8 +40,8 @@ final class MapViewControllerViewModel {
     }
     
     public func typeViewBackPrefering(_ typeViewBackground: UIView) {
-        typeViewBackground.layer.cornerRadius   = CGFloat(12)
-        typeViewBackground.isHidden             = true
+        typeViewBackground.layer.cornerRadius = CGFloat(12)
+        typeViewBackground.isHidden = true
         typeViewBackground.viewShadows()
     }
     
@@ -55,7 +55,7 @@ final class MapViewControllerViewModel {
     //MARK: MapView
     public func setupMapView(_ mapView: MKMapView) {
         mapView.mapType = .standard
-        mapView.alpha   = 0
+        mapView.alpha = 0
     }
     
     public func setRegion(_ mapView: MKMapView, region: MKCoordinateRegion) {

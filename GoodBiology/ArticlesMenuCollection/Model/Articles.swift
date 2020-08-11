@@ -8,9 +8,10 @@
 
 import Foundation
 
-struct MenuCollectionViewConterollerContent {
+//MARK: - MenuCollectionViewConterollerContent public struct
+public struct MenuCollectionViewConterollerContent {
     
-    // MARK: - Label
+    //MARK: - Label
     static let headerContentArray = ["Plants",
                                      "Animals",
                                      "Microbes",
@@ -24,7 +25,7 @@ struct MenuCollectionViewConterollerContent {
                                      "Biology History pt. 2"
     ]
     
-    // MARK: - For Text View
+    //MARK: - For Text View
     static let textViewContentArray = [
         "Plants are mainly multicellular, predominantly photosynthetic eukaryotes of the kingdom Plantae...", "Animals are multicellular eukaryotic organisms that form the biological kingdom Animalia. With few exceptions, animals consume organic material...",
                                        

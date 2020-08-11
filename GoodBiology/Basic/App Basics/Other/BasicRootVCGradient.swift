@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
-
+ 
+//MARK: - BasicRootVCGradient main class
 final class BasicRootVCGradient: NSObject {
     var color: UIColor
     
@@ -16,7 +17,9 @@ final class BasicRootVCGradient: NSObject {
         self.color = color
     }
     
-    func setupRootViewsWithBasicGradient(mainView: UIView, scrollView: UIScrollView?) {
+    
+    //MARK: Public
+    public func setupRootViewsWithBasicGradient(mainView: UIView, scrollView: UIScrollView?) {
         scrollView?.setupBasicGadientView(with: color)
         mainView.setupBasicGadientView(with: color)
     }

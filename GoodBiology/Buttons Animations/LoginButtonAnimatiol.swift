@@ -15,8 +15,10 @@ public extension UIButton {
         animation.duration = 0.05
         animation.repeatCount = 5
         animation.autoreverses = true
-        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - horizantaly, y: self.center.y - Verticaly ))
-        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + horizantaly, y: self.center.y + Verticaly ))
+        animation.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - horizantaly,
+                                                       y: self.center.y - Verticaly ))
+        animation.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + horizantaly,
+                                                     y: self.center.y + Verticaly ))
         self.layer.add(animation, forKey: "position")
     }
 }

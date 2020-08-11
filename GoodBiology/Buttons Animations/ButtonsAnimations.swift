@@ -43,7 +43,7 @@ public extension UIButton {
 
 
 //MARK: Pulsing animation for notificationButtons
-class Pulsing: CALayer {
+final class Pulsing: CALayer {
 
     //MARK: CAAnimationGroup
     var animationGroup = CAAnimationGroup()

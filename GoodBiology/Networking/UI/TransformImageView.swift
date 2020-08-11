@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
+//MARK: - TransformImageViewSetupProtocol protocol
 protocol TransformImageViewSetupProtocol {
     func setupImageView()
 }
 
-class TransformImageView: UIImageView {
+
+
+//MARK: - TransformImageView main class
+final class TransformImageView: UIImageView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -27,8 +31,11 @@ class TransformImageView: UIImageView {
     }
 }
 
+
+
+//MARK: - TransformImageViewSetupProtocol extension
 extension TransformImageView: TransformImageViewSetupProtocol {
-    func setupImageView() {
+    internal func setupImageView() {
         transform = CGAffineTransform(scaleX: 0, y: 0)
     }
 }

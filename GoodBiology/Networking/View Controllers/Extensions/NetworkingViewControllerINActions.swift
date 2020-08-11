@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-// MARK: - @IBActions
+//MARK: - @IBActions
 extension NetworkingViewController {
     @IBAction func pickerViewBackShowing(_ sender: Any) {
         if pickerViewBack.isHidden == true {
-            pickerViewBack.isHidden  = false
+            pickerViewBack.isHidden = false
             explanatoryView.isHidden = false
         } else {
-            pickerViewBack.isHidden  = true
+            pickerViewBack.isHidden = true
             explanatoryView.isHidden = true
         }
     }
@@ -31,11 +31,9 @@ extension NetworkingViewController {
     
     @IBAction func `switch`(_ sender: UISwitch) {
         let isOn = sender.isOn
-        
         wikiButton.isEnabled = isOn
         nextButton.isEnabled = isOn
         backButton.isEnabled = isOn
-        
         textSwitchView.text = isOn == true ? "Hide  diffrent functions" : "Show diffrent functions"
     }
     

@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 import WebKit
 
-//MARK: - WebViewLoadAnimationsViewModel
-class BrowserAnimationManegerViewModel {
+//MARK: - WebViewLoadAnimationsViewModel main class
+final class BrowserAnimationManegerViewModel {
     public func setWebViewAlpha(_ webView: WKWebView, alpha: CGFloat) {
         webView.alpha = alpha
     }

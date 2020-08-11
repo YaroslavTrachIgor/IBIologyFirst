@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 import SwiftEntryKit
 
-// MARK: - MenuCollectionViewCellProtocol
+//MARK: - MenuCollectionViewCellProtocol
 protocol MenuCollectionViewCellProtocol {
     func setupCollectionViewCell()
 }
 
 
-// MARK: - MenuCollectionViewCell
-class MenuCollectionViewCell: UICollectionViewCell {
+//MARK: - MenuCollectionViewCell
+final class MenuCollectionViewCell: UICollectionViewCell {
     
     //MARK: @IBOutlets
     @IBOutlet weak var headerLabel: UILabel!
@@ -26,6 +26,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var showArticleButton: MenuCollectionViewCellButton!
     
     
+    //MARK: Inits
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -41,7 +42,7 @@ class MenuCollectionViewCell: UICollectionViewCell {
 
 
 
-// MARK: - @IBActions
+//MARK: - @IBActions
 extension MenuCollectionViewCell {
     @IBAction func addToNotes(sender: UIButton) {
         
@@ -57,7 +58,7 @@ extension MenuCollectionViewCell {
 
 
 
-// MARK: - MenuCollectionViewCellProtocol extension
+//MARK: - MenuCollectionViewCellProtocol extension
 extension MenuCollectionViewCell: MenuCollectionViewCellProtocol {
     func setupCollectionViewCell() {
         setupShadow(self)
@@ -67,7 +68,7 @@ extension MenuCollectionViewCell: MenuCollectionViewCellProtocol {
 
 
 
-// MARK: - MenuCollectionViewCellProtocol extension for setup cell
+//MARK: - MenuCollectionViewCellProtocol extension for setup cell
 extension MenuCollectionViewCellProtocol {
     func setupCorners(_ cell: MenuCollectionViewCell) {
         cell.layer.cornerRadius = 12
