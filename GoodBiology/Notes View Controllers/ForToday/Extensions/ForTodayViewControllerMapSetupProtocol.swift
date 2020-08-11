@@ -13,8 +13,8 @@ import CoreLocation
 
 extension ForTodayViewController {
     func mapPrefering() {
-        mapView.mapType    = .standard
-        mapView.isHidden   = true
+        mapView.mapType = .standard
+        mapView.isHidden = true
     }
     
     func showMapView() {

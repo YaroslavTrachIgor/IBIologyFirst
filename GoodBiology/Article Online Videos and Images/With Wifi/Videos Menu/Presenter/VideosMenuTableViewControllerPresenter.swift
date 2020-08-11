@@ -24,11 +24,11 @@ class VideosMenuTableViewControllerPresenter {}
 
 //MARK: - VideosMenuTableViewControllerPresenterProtocol extension
 extension VideosMenuTableViewControllerPresenter: VideosMenuTableViewControllerPresenterProtocol {
-    func setSearchController(navigationItem: UINavigationItem, searchController: UISearchController) {
+    internal func setSearchController(navigationItem: UINavigationItem, searchController: UISearchController) {
         navigationItem.searchController = searchController
     }
     
-    func setRefreshControl(tableView: UITableView, refreshControl: UIRefreshControl) {
+    internal func setRefreshControl(tableView: UITableView, refreshControl: UIRefreshControl) {
         tableView.refreshControl = refreshControl
     }
 }

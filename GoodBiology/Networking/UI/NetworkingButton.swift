@@ -30,11 +30,7 @@ class NetworkingButton: UIBarButtonItem {
 //MARK: NetworkingButtonProtocol extension
 extension NetworkingButton: NetworkingButtonProtocol {
     func barButtonItemSetup() {
-        
-        /// Setup Enabled
         isEnabled = true
-        
-        /// Setup tintColor
         tintColor = .black
     }
 }

@@ -59,6 +59,7 @@ final class ThemesMenuTableViewController: UITableViewController {
     //MARK: ViewModel
     let viewModel = ThemesControllersViewModel()
     
+    
     //MARK: IBOutlets
     // ThemesTableView
     @IBOutlet weak var table: ThemesTableView! { didSet { table.refreshControl = settingsRefreshControl } }
@@ -69,7 +70,6 @@ final class ThemesMenuTableViewController: UITableViewController {
     //MARK: Lazy Properties
     lazy var settingsRefreshControl: UIRefreshControl = {
         let refreshControl = BasicRefreshControl()
-        
         return refreshControl
     }()
     lazy var searchController = BasicSearchController()

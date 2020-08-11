@@ -23,8 +23,6 @@ struct PushNotifications {
         
         ///Remove Notififications
         removeNotifications(withIdentifiers: ["MyUniqueIdentifier"])
-        
-        ///Setup Date
         let date = Date(timeIntervalSinceNow: seconds)
         
         ///Setup Content
@@ -43,10 +41,7 @@ struct PushNotifications {
         let deleteAction    = UNNotificationAction(identifier: "Delete", title: "Delete", options: [.destructive])
         let category        = UNNotificationCategory(identifier: PushNotificationsBasicWords.userAction, actions: [deleteAction], intentIdentifiers: [], options: [])
         
-        ///Setup Categories
         center.setNotificationCategories([category])
-        
-        ///Setup Request
         center.add(request, withCompletionHandler: nil)
     }
 }

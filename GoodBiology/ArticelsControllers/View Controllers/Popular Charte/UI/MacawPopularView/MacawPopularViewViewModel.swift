@@ -12,7 +12,6 @@ import Macaw
 class MacawPopularViewViewModel {
     func setTextProperties(_ text: Text, size: Font) {
         let macawPopularViewProperties = MacawPopularViewProperties()
-        
         text.font = size
         text.fill = macawPopularViewProperties.color
     }

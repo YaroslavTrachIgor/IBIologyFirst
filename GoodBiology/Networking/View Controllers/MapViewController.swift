@@ -12,90 +12,33 @@ import CoreLocation
 import AudioToolbox
 import MessageUI
 
-//MARK: MapViewControllerViewModel
-class MapViewControllerViewModel {
-    
-    //MARK: Public
-    public func viewDidLoadNavControllerSetup(_ navigationController: UINavigationController) {
-        navigationController.navigationBar.backgroundColor = .clear
-        navigationController.navigationBar.barTintColor = .white
-    }
-    
-    public func viewWillApearNavControllerSetup(_ navigationController: UINavigationController) {
-        navigationController.hidesBarsOnTap = false
-        navigationController.hidesBarsOnSwipe = false
-    }
-    
-    public func setAlpha(_ element: UIView, alpha: CGFloat) {
-        element.alpha = alpha
-    }
-    
-    public func setHidden(_ view: UIView, hidden: Bool) {
-        view.isHidden = hidden
-    }
-    
-    public func setupComposer(_ composer: MFMailComposeViewController) {
-        composer.setSubject("Map Problem")
-        composer.setMessageBody("Here is my problem with map", isHTML: false)
-    }
-    
-    public func typeViewBackPrefering(_ typeViewBackground: UIView) {
-        typeViewBackground.layer.cornerRadius   = CGFloat(12)
-        typeViewBackground.isHidden             = true
-        
-        typeViewBackground.viewShadows()
-    }
-    
-    public func setupAlertController(_ alertController: UIAlertController, action: UIAlertAction) {
-        alertController.view.tintColor = .biologyGreenColor
-        alertController.addAction(action)
-        alertController.setTitle(font: UIFont(name: "AvenirNext-DemiBold", size: 18), color: .none)
-        alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
-    }
-    
-    //MARK: MapView
-    public func setupMapView(_ mapView: MKMapView) {
-        mapView.mapType = .standard
-        mapView.alpha   = 0
-    }
-    
-    public func setRegion(_ mapView: MKMapView, region: MKCoordinateRegion) {
-        mapView.setRegion(region, animated: true)
-    }
-    
-    public func setMapType(_ mapView: MKMapView,_ mapType: MKMapType) {
-        mapView.mapType = mapType
-    }
-    
-    public func setupLocationManager(_ locManeger: CLLocationManager) {
-        locManeger.desiredAccuracy = kCLLocationAccuracyBest
-    }
-}
+//MARK: - MapViewController main class
+final class MapViewController: UIViewController, MapBasicViewDelegate {
 
-class MapViewController: UIViewController, MapBasicViewDelegate {
-
-    // MapViewControllerViewModel
+    //MARK: MapViewControllerViewModel
     let viewModel = MapViewControllerViewModel()
     
-    @IBOutlet weak var mapView:              MKMapView!
-    @IBOutlet weak var addressLabel:         UILabel!
-    @IBOutlet weak var typeView:             UISegmentedControl!
-    @IBOutlet weak var typeViewBackground:   UIView!
     
-    // Problem View Show Button
+    //MARK: @IBOutlets
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var typeView: UISegmentedControl!
+    @IBOutlet weak var typeViewBackground:   UIView!
     @IBOutlet weak var problumButtonViewLabel: UILabel!
     @IBOutlet weak var problemViewShowButton:  UIButton!
     @IBOutlet weak var problemViewShowButtonView: ChromistaActionButtonsBack!
-    
     @IBOutlet weak var mapTypesButtonBackView: ChromistaActionButtonsBack!
-    
     @IBOutlet weak var problemButton: HelpButton!
     
+    
+    //MARK: Private
     private let locationManager        = CLLocationManager()
     private let regionInMeters: Double = 10000
     
     private var previousLocation: CLLocation?
     
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -199,7 +142,7 @@ protocol MapViewControllerMainFunctionsProtocol {
 extension MapViewController {
     
     //MARK: - MapViewControllerMainFunctionsProtocol methods
-    func showMailComposer() {
+    internal func showMailComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
         let composer = BasicMFMailComposeViewController(rootViewController: self)
         composer.mailComposeDelegate = self
@@ -208,13 +151,11 @@ extension MapViewController {
         present(composer, animated: true)
     }
         
-    func mapViewPrefring() {
-        /// Setup Basiscs of UIMapView
-        
+    internal func mapViewPrefring() {
         viewModel.setupMapView(mapView)
     }
     
-    func mapViewBasics() {
+    internal func mapViewBasics() {
         let semaphore = DispatchSemaphore(value: 2)
         DispatchQueue.global(qos: .utility).async {
             semaphore.wait()
@@ -225,7 +166,7 @@ extension MapViewController {
         mapViewPrefring()
     }
     
-    func checkWiFi() {
+    internal func checkWiFi() {
         let networkStatus = Reachability().connectionStatus()
         let alertController = UIAlertController(title: "Oops", message: "You are not connected to WiFi", preferredStyle: .alert)
         let action = UIAlertAction(title: "Continue", style: .cancel) { (action) in }
@@ -243,19 +184,19 @@ extension MapViewController {
         }
     }
     
-    func setupLocationManager() {
+    internal func setupLocationManager() {
         locationManager.delegate = self
         viewModel.setupLocationManager(locationManager)
     }
     
-    func centerViewOnUserLocation() {
+    internal func centerViewOnUserLocation() {
         if let location = locationManager.location?.coordinate {
            let region   = MKCoordinateRegion.init(center: location, latitudinalMeters: regionInMeters, longitudinalMeters: regionInMeters)
             viewModel.setRegion(mapView, region: region)
         }
     }
     
-    func checkLocationServices() {
+    internal func checkLocationServices() {
         DispatchQueue.global(qos: .utility).async {
             DispatchQueue.main.async {
                 if CLLocationManager.locationServicesEnabled() {
@@ -266,7 +207,7 @@ extension MapViewController {
         }
     }
     
-    func checkLocationAuthorization() {
+    internal func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             startTackingUserLocation()
@@ -285,14 +226,14 @@ extension MapViewController {
         }
     }
     
-    func startTackingUserLocation() {
+    internal func startTackingUserLocation() {
         mapView.showsUserLocation = true
         centerViewOnUserLocation()
         locationManager.startUpdatingLocation()
         previousLocation = getCenterLocation(for: mapView)
     }
     
-    func getCenterLocation(for mapView: MKMapView) -> CLLocation {
+    internal func getCenterLocation(for mapView: MKMapView) -> CLLocation {
         let latitude    = mapView.centerCoordinate.latitude
         let longitude   = mapView.centerCoordinate.longitude
         
@@ -359,32 +300,6 @@ extension MapViewController: MKMapViewDelegate {
                 self.addressLabel.text = "\(streetNumber) \(streetName)"
             }
         }
-    }
-}
-
-
-
-
-//MARK: - Adress Label Setup
-extension UILabel {
-    func adressLabelPrefering() {
-        
-        /// Setup cornerRadius
-        layer.cornerRadius = 1.7
-        
-        /// Setup borders
-        layer.borderColor = #colorLiteral(red: 0.02162307128, green: 0.3310916722, blue: 0.1151730046, alpha: 1)
-        layer.borderWidth = 2.5
-        
-        /// Setup backgroundColor
-        backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
-        /// Setup text and textColor
-        textColor = .biologyGreenColor
-        text = ""
-        
-        /// Setup Shadow
-        labelShadow()
     }
 }
 

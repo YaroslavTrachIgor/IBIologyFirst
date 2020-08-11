@@ -13,8 +13,7 @@ protocol MakingArticleVCContentRulesTextViewProtocol {
     func setupTextView()
 }
 
-class MakingArticleVCContentRulesTextView: UITextView {
-    
+final class MakingArticleVCContentRulesTextView: UITextView {
     override init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         

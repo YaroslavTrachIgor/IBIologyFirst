@@ -60,15 +60,9 @@ extension DoneTestPopView {
 //MARK: DoneTestPopViewProtocol
 extension DoneTestPopView: DoneTestPopViewProtocol {
     func setupView() {
-        
-        /// Set backgroundColor
         backgroundColor = .systemBackground
-        
-        /// Set constraints
         heightAnchor.constraint(equalToConstant: 300).isActive = true
         widthAnchor.constraint(equalToConstant: 350).isActive = true
-        
-        /// Set corner radius
         layer.cornerRadius = 20
     }
 }

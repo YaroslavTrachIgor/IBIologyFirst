@@ -119,7 +119,6 @@ extension BiologyViewController: BasicsViewControllerViewSetupProtocol {
         stepperView.editorsViews()
         stepperView.alpha = 1
         stepperView.layer.cornerRadius = 10
-        
         stepperSetup()
     }
     
@@ -127,7 +126,6 @@ extension BiologyViewController: BasicsViewControllerViewSetupProtocol {
         switchView.editorsViews()
         switchView.layer.cornerRadius = 9
         switchView.alpha = 1
-        
         switchTextViewSetup()
         switchSetup()
     }
@@ -190,14 +188,10 @@ extension BiologyViewController: BasicsViewControllerViewSetupProtocol {
     //MARK: Setup NavigationBar
     func navigationControllerSetup() {
         let navBar = navigationController?.navigationBar
-        
-        /// Setup Bar colors
         navBar?.tintColor       = .biologyGreenColor
         navBar?.backgroundColor = .white
         navBar?.barTintColor    = .white
         navBar?.barStyle        = .default
-        
-        /// Setup Bar Large Titles
         navBar?.prefersLargeTitles = false
     }
 }

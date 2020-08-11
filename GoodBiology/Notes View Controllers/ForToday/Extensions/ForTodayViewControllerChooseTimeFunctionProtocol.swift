@@ -10,13 +10,7 @@ import Foundation
 import UIKit
 import AudioToolbox
 
-protocol ForTodayViewControllerChooseTimeFunctionProtocol {
-    func timeButtonText()
-    func dateViewShowingAudio()
-    func pulsatingWhenDatePickNotHidden(_ sender: UIButton)
-}
-
-extension ForTodayViewController: ForTodayViewControllerChooseTimeFunctionProtocol {
+extension ForTodayViewController {
     func pulsatingWhenDatePickNotHidden(_ sender: UIButton) {
         sender.pulsate(duration: 1)
     }

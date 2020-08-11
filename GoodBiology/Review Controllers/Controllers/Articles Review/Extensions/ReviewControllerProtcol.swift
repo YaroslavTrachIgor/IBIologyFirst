@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: ReviewControllerProtcol
+// MARK: - ReviewControllerProtcol
 extension ArticlesReviewViewController: ReviewControllerProtcol {
     func basicViewProcessesPrefering() { }
 }

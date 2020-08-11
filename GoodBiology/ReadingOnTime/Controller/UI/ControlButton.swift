@@ -32,7 +32,7 @@ extension ReadingOnTimeViewControllerControllButton {
         
         /// setup border
         layer.borderColor = UIColor.white.cgColor
-        layer.borderWidth = 1.5
+        layer.borderWidth = 1.9
         
         /// set background Color
         backgroundColor = .clear
@@ -41,7 +41,7 @@ extension ReadingOnTimeViewControllerControllButton {
         setTitleColor(.white, for: .normal)
         
         /// Set font
-        titleLabel?.font = UIFont(name: BasicFonts.mediumFont, size: 15.5)
+        titleLabel?.font = UIFont(name: "AvenirNext-DemiBold", size: 14)
         
         /// Set corner Radius
         layer.cornerRadius = 15

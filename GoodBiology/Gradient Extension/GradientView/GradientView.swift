@@ -45,9 +45,8 @@ class GradientView: UIView {
 //MARK: Private methods are here
 extension GradientView {
     private func setupGradient() {
-        self.layer.addSublayer(gradientLayer)
-        self.layer.cornerRadius = 4
-        
+        layer.addSublayer(gradientLayer)
+        layer.cornerRadius = 4
         setupGradientColors()
     }
     

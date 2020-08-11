@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 
+//MARK: - ZeroAlphaImageViewSetupProtocol protocol
 protocol ZeroAlphaImageViewSetupProtocol {
     func setupImageView()
 }
 
+
+
+//MARK: - ZeroAlphaImageView main class
 class ZeroAlphaImageView: UIImageView {
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,6 +31,8 @@ class ZeroAlphaImageView: UIImageView {
     }
 }
 
+
+//MARK: - ZeroAlphaImageViewSetupProtocol extension
 extension ZeroAlphaImageView: ZeroAlphaImageViewSetupProtocol {
     func setupImageView() {
         alpha = 0

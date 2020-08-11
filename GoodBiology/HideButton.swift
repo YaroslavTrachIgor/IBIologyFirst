@@ -13,7 +13,7 @@ protocol HideButtonProtocol {
     func setupButton()
 }
 
-class HideButton: UIButton {
+final class HideButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         

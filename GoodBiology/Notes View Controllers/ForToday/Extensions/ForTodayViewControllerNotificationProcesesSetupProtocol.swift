@@ -11,14 +11,7 @@ import UIKit
 import UserNotifications
 import AudioToolbox
 
-protocol ForTodayViewControllerNotificationProcesesSetupProtocol {
-    func removeNotifications(withIdentifiers identifiers: [String])
-    func forTodayNotShow()
-    func notificationAudio()
-    func notificationAlertPrefering()
-}
-
-extension ForTodayViewController: ForTodayViewControllerNotificationProcesesSetupProtocol {
+extension ForTodayViewController {
     func removeNotifications(withIdentifiers identifiers: [String])   {
         let center = UNUserNotificationCenter.current()
             center.removePendingNotificationRequests(withIdentifiers: identifiers)

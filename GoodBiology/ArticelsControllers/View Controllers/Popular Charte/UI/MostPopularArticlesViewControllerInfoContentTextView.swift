@@ -45,7 +45,6 @@ extension MostPopularArticlesViewControllerInfoContentTextView {
     
     private func setupFont() {
         let font = UIFont(name: BasicFonts.mediumFont, size: 16)
-        
         self.font = font
     }
     

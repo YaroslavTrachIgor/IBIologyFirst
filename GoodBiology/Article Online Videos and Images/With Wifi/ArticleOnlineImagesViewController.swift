@@ -13,15 +13,13 @@ import WebKit
 class ArticleOnlineImagesViewController: UIViewController {
     
     //MARK: @IBOutlets
-    //MARK: UIBarButtonItems
-    @IBOutlet weak var shareURl:              UIBarButtonItem!
-    @IBOutlet weak var leftButton:            UIBarButtonItem!
-    @IBOutlet weak var rightButton:           UIBarButtonItem!
-    @IBOutlet weak var reloadButton:          UIBarButtonItem!
+    @IBOutlet weak var shareURl: UIBarButtonItem!
+    @IBOutlet weak var leftButton: UIBarButtonItem!
+    @IBOutlet weak var rightButton: UIBarButtonItem!
+    @IBOutlet weak var reloadButton: UIBarButtonItem!
+    @IBOutlet weak var webViewBackground: UIView!
+    @IBOutlet weak var webView: WKWebView!
     
-    //MARK: webViewBackground and webView
-    @IBOutlet weak var webViewBackground:     UIView!
-    @IBOutlet weak var webView:               WKWebView!
     
     //MARK: Overrides
     override func viewDidLoad() {
@@ -33,8 +31,17 @@ class ArticleOnlineImagesViewController: UIViewController {
         setuoNavController()
     }
     
+    
     override func viewDidAppear(_ animated: Bool) {
         viewDidApearAnimationSetup()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        ///Set basic navBar title color
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
     }
 }
 
@@ -86,13 +93,9 @@ extension ArticleOnlineImagesViewController {
     }
     
     private func webViewBackgroundPrefering() {
-        
-        /// webViewBackground setup
         webViewBackground.backgroundColor = .systemBackground
         webViewBackground.layer.cornerRadius = 20
         webViewBackground.viewShadows()
-        
-        /// webView setup
         webView.layer.cornerRadius = 20
     }
     
@@ -110,6 +113,15 @@ extension ArticleOnlineImagesViewController {
         let navController = navigationController
         navController?.hidesBarsOnTap   = false
         navController?.hidesBarsOnSwipe = false
+        
+        ///Setup titles colors
+        setupNavBarColors()
+    }
+    
+    
+    private func setupNavBarColors() {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }
 

@@ -24,7 +24,6 @@ extension UITextView: ArticelsViewControllerProtocol {
     func setMenuFont() {
         let size: CGFloat       = 16.5
         let fontName: String    = BasicFonts.mediumFont
-        
         self.font = UIFont(name: fontName, size: size)
     }
 }

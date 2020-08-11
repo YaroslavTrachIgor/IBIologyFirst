@@ -11,10 +11,10 @@ import Foundation
 //MARK: - BasicPushNotificationAttributes
 struct BasicPushNotificationAttributes {
     
-    //Basic time interval
+    ///Basic time interval
     static let timeInterval = 720
 
-    //Basic frases
+    ///Basic frases
     static let congratsText = "We send it !"
     static let failText     = "Failed"
 

@@ -13,15 +13,16 @@ final class ThemesController: UIViewController {
     //MARK: ViewModel
     let viewModel = ThemesControllersViewModel()
     
-    // MARK: @IBOutles
+    
+    //MARK: @IBOutles
     @IBOutlet weak var contentBackground: UIView!
-    @IBOutlet weak var contentTextView:   UITextView!
-    
+    @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var stepperViewShowingButton: UIBarButtonItem!
-    
     @IBOutlet weak var stepperView: UIView!
-    @IBOutlet weak var stepper:     UIStepper!
+    @IBOutlet weak var stepper: UIStepper!
     
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +35,18 @@ final class ThemesController: UIViewController {
         super.viewDidAppear(animated)
         
         viewModel.viewDidAppearAnimationSetup(back: contentBackground)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setTabBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        setTabBarHidden(false)
     }
 }
 
@@ -88,56 +101,58 @@ extension ThemesController {
 
 
 
-// MARK: - Main Functions
+//MARK: - Main Functions
 extension ThemesController {
-    fileprivate func fastActivityVC(content: String) {
+    
+    //MARK: Private
+    private func fastActivityVC(content: String) {
         viewModel.fastActivityVC(content: content, vc: self)
     }
     
-    fileprivate func basicView() {
+    private func basicView() {
         contentTextViewSetup()
         stepperViewSetup()
         contentBackgroundSetup()
     }
     
-    fileprivate func rate() {
+    private func rate() {
         viewModel.checkForRatesEnabled(navIten: navigationItem, rateFunc: {
             RateManager.showRatesController()
         })
     }
     
-    fileprivate func cornerGiven() {
+    private func cornerGiven() {
         let cornerRadius: CGFloat = 20
         
         viewModel.viewCornersSetup(view: contentBackground, corners: cornerRadius)
         viewModel.viewCornersSetup(view: contentTextView, corners: cornerRadius)
     }
     
-    fileprivate func contentTextViewSetup() {
+    private func contentTextViewSetup() {
         viewModel.contentTextViewSetup(contentTextView: contentTextView)
     }
     
-    fileprivate func contentBackgroundSetup() {
+    private func contentBackgroundSetup() {
         contentBackground.viewShadows()
         viewModel.viewAlphaSetup(view: contentBackground, alpha: 0)
     }
     
-    fileprivate func stepperViewSetup() {
+    private func stepperViewSetup() {
         stepperView.editorsViews()
         stepperSetup()
     }
     
-    fileprivate func stepperSetup() {
+    private func stepperSetup() {
         stepper.stepperBaics()
     }
     
-    fileprivate func systemColorPrefering() {
+    private func systemColorPrefering() {
         view.viewSystemBack()
         contentBackground.viewSystemBack()
         stepperView.viewSystemBack()
     }
     
-    fileprivate func navControllerSetup() {
+    private func navControllerSetup() {
         let stepperViewShowingButton = UIBarButtonItem(image: UIImage(systemName: "textformat.size"), style: .plain, target: self, action: #selector(stepperViewShowing(_:)))
         let shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareContentGiven))
         let buttons = [stepperViewShowingButton, shareButton]

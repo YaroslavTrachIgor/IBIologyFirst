@@ -18,21 +18,19 @@ final class ArticlesReviewViewController: UIViewController {
     //MARK: ViewModel
     let viewModel = ArticleVCViewModel()
     
+    
     //MARK: IBOutlets
     @IBOutlet weak var contentTextView:  UITextView!
-    @IBOutlet weak var emailButton:      UIButton!
-    @IBOutlet weak var shareButton:      UIBarButtonItem!
-    
-    @IBOutlet weak var switchTextView:   SwitchTextView!
-    @IBOutlet weak var switchOutlet:     ArticlesReviewViewControllerSwitch!
+    @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var switchTextView: SwitchTextView!
+    @IBOutlet weak var switchOutlet: ArticlesReviewViewControllerSwitch!
     @IBOutlet weak var switchView: UIView! { didSet { switchView.editorsViews() } }
-    
     @IBOutlet weak var contentBackgroundView: ContentBack!
-    
     @IBOutlet weak var imageView: ArticlesReviewViewControllerIconImageView!
-    
     @IBOutlet weak var sendButton: ContactButton!
     @IBOutlet weak var senfMessageButton: ContactButton! { didSet { senfMessageButton.setTitle("Contact with Messages", for: .normal) } }
+    
     
     //MARK: LifeCycle
     override func viewDidLoad() {
@@ -47,8 +45,12 @@ final class ArticlesReviewViewController: UIViewController {
         let views = [imageView, sendButton, contentBackgroundView, senfMessageButton, switchTextView, contentTextView]
         viewModel.setupAnimation(views as! [UIView])
     }
-    
-    //MARK: Actions
+}
+
+
+
+//MARK: - @IBActions
+extension ArticlesReviewViewController {
     @IBAction func `switch`(_ sender: UISwitch) {
         if sender.isOn == true {
             viewModel.viewHidden(contentBackgroundView, hidden: false)
@@ -132,7 +134,6 @@ extension ArticlesReviewViewController: MFMailComposeViewControllerDelegate {
 extension ArticlesReviewViewController: ReviewVCMailComposeVCSetupProtocol {
     func showAndSetupMailComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
-        
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
         viewModel.presentMessageComposer(composer: composer)
@@ -141,7 +142,6 @@ extension ArticlesReviewViewController: ReviewVCMailComposeVCSetupProtocol {
     
     func showAndSetupMessageComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
-        
         let composeVC = MFMessageComposeViewController()
         composeVC.messageComposeDelegate = self
         viewModel.presentMailComposer(composeVC: composeVC)

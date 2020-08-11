@@ -22,10 +22,9 @@ class MenuCollectionViewCell: UICollectionViewCell {
     //MARK: @IBOutlets
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var cellTextView: UITextView!
-    
-    // MenuCollectionViewCellButtons
     @IBOutlet weak var addToNotesButton: MenuCollectionViewCellButton!
     @IBOutlet weak var showArticleButton: MenuCollectionViewCellButton!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,14 +41,14 @@ class MenuCollectionViewCell: UICollectionViewCell {
 
 
 
-// MARK: - @IBAction
+// MARK: - @IBActions
 extension MenuCollectionViewCell {
     @IBAction func addToNotes(sender: UIButton) {
         
         /// Push Notifications
         setupNotification()
         
-        // UI animations
+        ///UI animations
         let alertsManeger = AlertsManeger()
         alertsManeger.showNotificationView()
         notificationCellAnimation()

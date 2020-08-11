@@ -16,37 +16,26 @@ protocol BasicAdBunnerSetupProtocol {
 
 final class VideoPlayerViewController: UIViewController {
     
-    // MARK: - Presenter
+    //MARK: - Presenter
     let presenter = VideoPlayerViewControllerPresenter()
     
-    // MARK: - @IBOutlets
-    // Banner View
-    @IBOutlet weak var googleAdBannerView: GADBannerView!
     
-    // MARK: UITextViews
+    //MARK: - @IBOutlets
+    @IBOutlet weak var googleAdBannerView: GADBannerView!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var switchTextView:  UITextView!
-    
-    // MARK: Content Backs
     @IBOutlet weak var contentBackground: ContentBack!
-    @IBOutlet weak var switchView:        UIView!
-    
-    // MARK: UISwitch
+    @IBOutlet weak var switchView: UIView!
     @IBOutlet weak var `switch`: UISwitch!
-    
-    // MARK: UIButton
     @IBOutlet weak var articlesVideosGoButton: UIButton!
-    @IBOutlet weak var videoButton:            UIButton!
-    
-    // MARK: UIBarButtonItem
-    @IBOutlet weak var sharing:                  UIBarButtonItem!
-    @IBOutlet weak var showAndHideButton:        UIBarButtonItem!
+    @IBOutlet weak var videoButton: UIButton!
+    @IBOutlet weak var sharing: UIBarButtonItem!
+    @IBOutlet weak var showAndHideButton: UIBarButtonItem!
     @IBOutlet weak var articlesMenuVideosButton: UIBarButtonItem!
-    
-    // Image View
     @IBOutlet weak var imageView: ZeroAlphaImageView!
     
-    // MARK: - Override
+    
+    //MARK: - Override
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -84,16 +73,9 @@ extension VideoPlayerViewController {
     }
     
     private func popOverSetup(_ popover: UIPopoverPresentationController?, sender: UIBarButtonItem) {
-        /// Set permittedArrowDirections
         popover?.permittedArrowDirections = .any
-        
-        /// Set delegate
         popover?.delegate = self
-
-        /// Set sourceView
         popover?.sourceView = self.view
-        
-        /// Set barButtonItem
         popover?.barButtonItem = sender
     }
     
@@ -246,7 +228,6 @@ extension VideoPlayerViewController {
             DispatchQueue.main.async {
                 self.switchView.viewSystemBack()
                 self.view.viewSystemBack()
-                
                 self.contentTextView.systemTextColor()
                 self.switchTextView.systemTextColor()
             }

@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FastAlert {
+final class FastAlert {
     typealias Action = () -> Void
     
     class func showBasic(title: String?, message: String?, vc: UIViewController) {

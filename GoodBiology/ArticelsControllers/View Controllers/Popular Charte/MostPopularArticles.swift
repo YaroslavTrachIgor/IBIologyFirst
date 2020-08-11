@@ -21,26 +21,23 @@ protocol MostPopularArticlesViewControllerProtocol {
     func viewShowWithAnimations()
 }
 
+
 final class MostPopularArticlesViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
-    // Chart View
+    //MARK: @IBOutlets
     @IBOutlet weak var chartView: PieChartView!
-    
-    // Tabel View IBOutlets
     @IBOutlet var mainTabelView: UITableView! { didSet { mainTabelView.allowsSelection = false } }
-    
     @IBOutlet weak var shareButtonBack: ChromistaActionButtonsBack!
-    @IBOutlet weak var shareButton:     ChromistaButton!
-    
-    @IBOutlet weak var viewsLabel:   MostPopularArticlesViewControllerLabel!
+    @IBOutlet weak var shareButton: ChromistaButton!
+    @IBOutlet weak var viewsLabel: MostPopularArticlesViewControllerLabel!
     @IBOutlet weak var percentLabel: MostPopularArticlesViewControllerLabel!
-    
     @IBOutlet weak var popularityMacawView: PopularityMacawView!
-    
-    @IBOutlet weak var infoButton:       UIBarButtonItem!
-    @IBOutlet weak var infoTextView:     MostPopularArticlesViewControllerInfoContentTextView!
+    @IBOutlet weak var infoButton: UIBarButtonItem!
+    @IBOutlet weak var infoTextView: MostPopularArticlesViewControllerInfoContentTextView!
     @IBOutlet weak var infoTextViewBack: MostPopularArticlesViewControllerInfoContentBack!
     
+    
+    //MARK: DataEntries
     struct DataEntries {
         static let plantsDataEntry     = PieChartDataEntry(value: 0)
         static let animalseDataEntry   = PieChartDataEntry(value: 0)
@@ -52,13 +49,13 @@ final class MostPopularArticlesViewController: UITableViewController, UIPopoverP
         static let fungusesDataEntry   = PieChartDataEntry(value: 0)
     }
     
-    // numberOfEntries Array
+    ///numberOfEntries Array
     var numberOfEntries = [PieChartDataEntry]()
     
-    // values Array
+    ///values Array
     var values: [Double] = [18.9, 7.1, 9, 12.5, 3.0, 25.5, 4.8, 20.2]
     
-    // ViewModel
+    ///ViewModel
     let viewModel = MostPopularArticlesViewControllerViewModel()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -152,6 +149,8 @@ extension MostPopularArticlesViewController: MostPopularArticlesViewControllerPr
     }
 }
 
+
+
 extension MostPopularArticlesViewController {
     private func setupChartViewColors(dataSet: PieChartDataSet) {
         let colors: [UIColor] = [.systemBlue, .systemRed, .systemGreen, .systemOrange, .systemYellow, .systemPurple, .systemTeal, .systemPink]
@@ -167,6 +166,8 @@ extension MostPopularArticlesViewController {
         viewModel.setChartDescriptionSet(chartView: chartView)
     }
 }
+
+
 
 public extension PieChartDataEntry {
     func quickSetupEntry(value: Double, label: String) {

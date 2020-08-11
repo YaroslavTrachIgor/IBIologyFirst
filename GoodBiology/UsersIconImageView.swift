@@ -13,7 +13,7 @@ protocol UsersInfoViewProtocol {
     func setupImageView()
 }
 
-class UsersIconImageView: UIImageView {
+final class UsersIconImageView: UIImageView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         

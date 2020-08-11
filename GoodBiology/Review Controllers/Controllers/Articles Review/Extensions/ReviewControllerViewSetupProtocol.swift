@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// MARK: ReviewControllerViewSetupProtocol
+//MARK: - ReviewControllerViewSetupProtocol
 extension ArticlesReviewViewController: ReviewControllerViewSetupProtocol {
     func systemBackSetup() {
         viewModel.systemBackSetup(mainView: view, contentTextView: contentTextView, switchTextView: switchTextView, switchView: switchView)
@@ -17,7 +17,6 @@ extension ArticlesReviewViewController: ReviewControllerViewSetupProtocol {
     
     func alphaSetup() {
         let alpha: CGFloat = 0
-        
         viewModel.setupAlpha(contentTextView, alpha: alpha)
         viewModel.setupAlpha(switchTextView,  alpha: alpha)
         viewModel.setupAlpha(imageView,       alpha: alpha)

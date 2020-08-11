@@ -17,9 +17,13 @@ final class PupularInfo: UIViewController {
     //MARK: ViewModel
     let viewModel = PupularInfoViewModel()
     
+    
+    //MARK: UI
     let textViewBackground = ContentBack()
     let textView = PopularInfoTextView()
     
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,19 +31,24 @@ final class PupularInfo: UIViewController {
     }
 }
 
+
+
 extension PupularInfo: PupularInfoProtocol {
     func setupVC() {
         addSubviews()
         setupNavController()
         setupViewBack()
         setupTextView()
-        
         setupTextViewBackground()
         setupRightBarButtonItem()
     }
 }
 
+
+
 extension PupularInfo {
+    
+    //MARK: Private
     private func setupTextView() {
         setupTextConstraints()
     }

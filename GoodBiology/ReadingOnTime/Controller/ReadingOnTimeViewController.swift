@@ -8,41 +8,7 @@
 
 import UIKit
 
-protocol AddCostomArticleButtonSetupProtocol {
-    func setupButton()
-}
-
-final class AddCostomArticleButton: UIButton {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        
-        setupButton()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        
-        setupButton()
-    }
-}
-
-extension AddCostomArticleButton: AddCostomArticleButtonSetupProtocol {
-    func setupButton() {
-        setupShadow()
-        setupCorners()
-    }
-}
-
-extension AddCostomArticleButton {
-    private func setupShadow() {
-        buttonsShadows()
-    }
-    
-    private func setupCorners() {
-        layer.cornerRadius = 8
-    }
-}
-
+//MARK: DaneFunctionsSetup protocol
 protocol DaneFunctionsSetup {
     /// Fast Alert Making Beacouse default is without actions
     /// - Parameters:
@@ -55,35 +21,39 @@ protocol DaneFunctionsSetup {
     func setScores()
 }
 
+
+
+//MARK: ReadingOnTimeViewController main class
 final class ReadingOnTimeViewController: UIViewController {
     
     //MARK: Score properties
-    var score = 0
-    var scoreArray: [Int] = []
+    private var score = 0
+    private var scoreArray: [Int] = []
+    
     
     //MARK: Alert TextView
-    let alertTextView = UITextView(frame: CGRect.zero)
+    private let alertTextView = UITextView(frame: CGRect.zero)
+    
     
     // MARK: - @IBOutlets
     @IBOutlet weak var addCostomArticleButton: AddCostomArticleButton!
     
+    //doneButton
     @IBOutlet weak var doneButton: UIBarButtonItem!
-    
     @IBOutlet weak var buttonsBackView: ReadingOnTimeViewControllerButtonsBackView!
-    
-    @IBOutlet weak var resultLabel:          UILabel!
-    @IBOutlet weak var contentTextView:      UITextView!
-    @IBOutlet weak var contentBackground:    UIView!
-    
-    @IBOutlet weak var startButton:          ReadingOnTimeViewControllerControllButton!
-    @IBOutlet weak var stopButton:           ReadingOnTimeViewControllerControllButton!
-    @IBOutlet weak var resetButton:          ReadingOnTimeViewControllerControllButton!
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var contentBackground: UIView!
+    @IBOutlet weak var startButton: ReadingOnTimeViewControllerControllButton!
+    @IBOutlet weak var stopButton:  ReadingOnTimeViewControllerControllButton!
+    @IBOutlet weak var resetButton: ReadingOnTimeViewControllerControllButton!
     @IBOutlet weak var newArticleButton: UIButton! {
         didSet {
             newArticleButton.fastButtonCostomizing(background: .biologyGreenColor, titleColor: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), title: "Change Card", corner: 16, borderWidth: 4)
         }
     }
     @IBOutlet weak var shareButton: UIBarButtonItem!
+    
     
     //MARK: Score @IBOutlets
     //MARK: ContentBack
@@ -103,14 +73,20 @@ final class ReadingOnTimeViewController: UIViewController {
     @IBOutlet weak var bestTimeScoreLabel:  ReadingOnTimeScoreLabel!
     @IBOutlet weak var bestTimeScoresLabel: ReadingOnTimeScoreLabel!
     
+    
     //MARK: Private
     private let alpha = CGFloat(1)
     
     private var timer = Timer()
     private var time  = 0
     
+    
+    //MARK: Static
     static var articles = [plantsROT, animalsROT, archaeROT, microbesROT, virusesROT, fungusRot, manROT, biologyROT, biology2ROT, biology3ROT, biology4ROT, biology5ROT, biology6ROT, biology7ROT, biology8ROT, biology9ROT, biology10ROT, biology11ROT, biology12ROT, biology13ROT, biology14ROT, biology15ROT, biology16ROT]
     
+    
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -181,12 +157,8 @@ extension ReadingOnTimeViewController {
 
         /// Add alertTextView
         alertController.view.addSubview(self.alertTextView)
-
-        /// Add Actions
         alertController.addAction(saveAction)
         alertController.addAction(cancelAction)
-
-        /// Present
         self.present(alertController, animated: true, completion: nil)
     }
 
@@ -279,10 +251,8 @@ extension ReadingOnTimeViewController {
     
     @IBAction func stop(_ sender: UIButton) {
         timer.invalidate()
-        
         startButton.isEnabled = true
         startButton.alpha     = alpha
-        
         doneButton.isEnabled = false
     }
     
@@ -290,10 +260,8 @@ extension ReadingOnTimeViewController {
         timer.invalidate()
         time                = 0
         resultLabel.text    = "0 Seconds"
-        
         startButton.isEnabled = true
         startButton.alpha     = alpha
-        
         doneButton.isEnabled = false
     }
     
@@ -301,12 +269,9 @@ extension ReadingOnTimeViewController {
         timer.invalidate()
         time                = 0
         resultLabel.text    = "Let's Start"
-        
         startButton.isEnabled = true
         startButton.alpha     = alpha
-        
         contentTextView.text = ReadingOnTimeViewController.articles.randomElement()
-        
         doneButton.isEnabled = false
     }
 }
@@ -383,19 +348,11 @@ extension ReadingOnTimeViewController: DaneFunctionsSetup {
     }
     
     func otherUIElementsSetup() {
-        
-        /// Working with timer
         time = 0
         timer.invalidate()
-        
-        /// resultLabel text result
         resultLabel.text = "Let's Start"
-        
-        /// set buttons enabled
         doneButton.isEnabled    = false
         startButton.isEnabled   = true
-        
-        /// set buttons alpha
         startButton.alpha = 1
     }
 }
@@ -426,13 +383,11 @@ extension ReadingOnTimeViewController {
     
     private func resultLabelTextPrefering() {
         resultLabel.text = "Let's Start"
-        
         doneButton.isEnabled = false
     }
     
     private func contentBackgroundPrefering() {
         contentBackground.layer.cornerRadius = 8
-        
         contentBackground.viewShadows()
         contentBackground.layer.shadowColor  = #colorLiteral(red: 0.7812698287, green: 0.7812698287, blue: 0.7812698287, alpha: 1)
         contentBackground.layer.shadowRadius = 2.8

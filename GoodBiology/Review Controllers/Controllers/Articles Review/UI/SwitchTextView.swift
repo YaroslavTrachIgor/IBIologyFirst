@@ -9,10 +9,12 @@
 import Foundation
 import UIKit
 
+//MARK: - SwitchTextViewSetupProtocol protocol
 protocol SwitchTextViewSetupProtocol {
     func setupTextView()
 }
 
+//MARK: - SwitchTextView main class
 class SwitchTextView: UITextView {
     
     override init(frame: CGRect, textContainer: NSTextContainer?) {
@@ -28,26 +30,23 @@ class SwitchTextView: UITextView {
     }
 }
 
+
+//MARK: - SwitchTextView main extension
 extension SwitchTextView: SwitchTextViewSetupProtocol {
     func setupTextView() {
         setupFont()
         setupShadow()
-        setupTextColor()
     }
 }
 
 extension SwitchTextView {
     func setupFont() {
         font = UIFont(name: "AvenirNext-DemiBold", size: 14)
+        textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
     
     func setupShadow() {
         layer.shadowRadius = 7
-        
         textViewShadow()
-    }
-    
-    func setupTextColor() {
-        textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     }
 }

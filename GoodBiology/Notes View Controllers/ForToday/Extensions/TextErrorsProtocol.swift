@@ -9,11 +9,7 @@
 import Foundation
 import UIKit
 
-protocol TextErrorsProtocol {
-    func textErrorsShow()
-}
-
-extension ForTodayViewController: TextErrorsProtocol {
+extension ForTodayViewController {
     func textErrorsShow() {
         do {
             try textErrorSetup()

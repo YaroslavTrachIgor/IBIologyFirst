@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Charts
 
-class MostPopularArticlesViewControllerViewModel {
+final class MostPopularArticlesViewControllerViewModel {
     func setChartDescriptionSet(chartView: PieChartView) {
         chartView.chartDescription?.text = nil
     }

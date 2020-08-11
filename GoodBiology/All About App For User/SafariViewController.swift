@@ -13,25 +13,20 @@ import GoogleMobileAds
 final class SafariViewController: UIViewController {
     
     //MARK: IBOutlets
-    // UIViews
     @IBOutlet weak var contentTextView1Back: UIView!
     @IBOutlet weak var contentTextView2Back: UIView!
-    
-    // UITextViews
     @IBOutlet weak var contentTextView1: UITextView!
     @IBOutlet weak var contentTextView2: UITextView!
-    
-    // UIButtons
-    @IBOutlet weak var mySiteButton:       UIButton!
+    @IBOutlet weak var mySiteButton: UIButton!
     @IBOutlet weak var safariButtonOutlet: UIButton!
-    
     @IBOutlet weak var goToContentAppButton: UIButton!
-    
-    // GADBannerView
     @IBOutlet weak var bunnerView: GADBannerView!
+    
     
     //MARK: AppleButtonSettings
     var appleButton = AppleButtonSettings()
+    
+    
     
     //MARK: LifeCycle
     override func viewDidLoad() {

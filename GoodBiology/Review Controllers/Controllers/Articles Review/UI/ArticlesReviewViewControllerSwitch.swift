@@ -9,10 +9,13 @@
 import Foundation
 import UIKit
 
+//MARK: - ArticlesReviewViewControllerSwitchSetupProtocol protocol
 protocol ArticlesReviewViewControllerSwitchSetupProtocol {
     func setupSwitch()
 }
 
+
+//MARK: - ArticlesReviewViewControllerSwitchmain class
 class ArticlesReviewViewControllerSwitch: UISwitch {
     
     override init(frame: CGRect) {
@@ -28,8 +31,9 @@ class ArticlesReviewViewControllerSwitch: UISwitch {
     }
 }
 
+
+//MARK: - ArticlesReviewViewControllerSwitchSetupProtocol extension
 extension ArticlesReviewViewControllerSwitch: ArticlesReviewViewControllerSwitchSetupProtocol {
-    
     func setupSwitch() {
         switchShadow()
     }

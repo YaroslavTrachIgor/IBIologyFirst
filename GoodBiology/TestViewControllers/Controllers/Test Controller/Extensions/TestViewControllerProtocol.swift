@@ -17,6 +17,7 @@ protocol TestViewControllerProtocol {
 
 extension TestViewController: TestViewControllerProtocol {
     
+    
     //MARK: - UI setup
     func otherUIthings() {
         stepperOutlet.stepperBaics()
@@ -24,11 +25,13 @@ extension TestViewController: TestViewControllerProtocol {
         setupButtonsImages_Tints()
     }
     
+    
     //MARK: - SystemBack Prefering
     func systemBackPrefering() {
         view.viewSystemBack()
         stepperView.viewSystemBack()
     }
+    
     
     //MARK: - Post Keys
     func postKeys() {

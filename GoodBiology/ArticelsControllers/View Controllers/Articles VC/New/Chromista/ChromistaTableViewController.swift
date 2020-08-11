@@ -8,9 +8,18 @@
 
 import UIKit
 
+//MARK: ChromistaTableViewController main class
 final class ChromistaTableViewController: UITableViewController {
     
     //MARK: Overrides
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Chromista Groups" 
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return ChromistaData.chromistaTitle.count

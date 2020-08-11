@@ -13,7 +13,7 @@ protocol UsersInfoViewSetupProtocol {
     func setupView()
 }
 
-class UsersInfoView: UIView {
+final class UsersInfoView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -45,8 +45,7 @@ extension UsersInfoView {
     }
     
     private func setupBackgroung() {
-        backgroundColor = .groupTableViewBackground
-        
+        backgroundColor = .systemGroupedBackground
         alpha = 0
     }
     

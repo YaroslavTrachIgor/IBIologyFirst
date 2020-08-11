@@ -19,7 +19,7 @@ final class BasicsViewControllerCopyData {
     var copyShareContent: String = ""
 }
 
-final class BiologyViewController: UIViewController {
+final class BiologyViewController: UIViewController, BasicViewControllerStatusBarBackColorSetupProtocol {
     
     // Google ADMob Banner
     var interstitial: GADInterstitial!
@@ -72,6 +72,7 @@ final class BiologyViewController: UIViewController {
         /// Setup navigation controller
         setupNavBarTitle()
         navigationControllerSetup()
+        setupStatusBar(for: self, backColor: .white)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,15 +117,11 @@ extension BiologyViewController {
             self.notificationButton.alpha = alpha
             self.segmentedControl.alpha = alpha
             self.stepperViewShowingButtonBack.alpha = alpha
-            
             self.notificationButton.isHidden = !on
             self.segmentedControl.isHidden   = !on
             self.stepperViewShowingButtonBack.isHidden = !on
-            
             self.segmentedControl.isEnabled  = on
-            
             self.switchTextView.text = on == true ? "Hide  diffrent functions" : "Show diffrent functions"
-            
             self.view.layoutIfNeeded()
         }
     }

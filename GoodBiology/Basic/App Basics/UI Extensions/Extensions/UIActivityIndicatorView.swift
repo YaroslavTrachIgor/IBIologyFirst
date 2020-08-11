@@ -11,7 +11,7 @@ import UIKit
 
 extension UIActivityIndicatorView {
     
-    // Basics for Activity Indicator
+    ///Basics for Activity Indicator
     public func activityIndicatorStarts(colorOfActivity: UIColor) {
         self.hidesWhenStopped   = true
         self.color              = colorOfActivity

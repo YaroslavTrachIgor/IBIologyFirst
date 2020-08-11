@@ -12,11 +12,8 @@ import UIKit
 //MARK: - Setup UIStepper basics
 extension UIStepper {
     public func stepperBaics() {
-        
-        // Basics for UIStepper
         self.tintColor          = .biologyGreenColor
         self.layer.cornerRadius = 5
-        
         self.stepperShadow()
     }
 }

@@ -13,6 +13,7 @@ import GoogleMaps
 import GoogleMobileAds
 import Firebase
 
+//MARK: AppDelegate main class
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?

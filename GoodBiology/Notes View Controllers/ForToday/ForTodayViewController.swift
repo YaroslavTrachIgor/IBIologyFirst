@@ -25,40 +25,24 @@ final class ForTodayViewController: UIViewController, NCWidgetProviding {
     let viewModel = ForTodayViewControllerViewModel()
     
     //MARK: IBOutlets
-    @IBOutlet weak var deleteButtonBack:          ChromistaActionButtonsBack!
-    @IBOutlet weak var blankSheetGoButtonBack:    ChromistaActionButtonsBack!
+    @IBOutlet weak var deleteButtonBack: ChromistaActionButtonsBack!
+    @IBOutlet weak var blankSheetGoButtonBack: ChromistaActionButtonsBack!
     @IBOutlet weak var paintingNotesGoButtonBack: ChromistaActionButtonsBack!
-    
-    // Properties for Show Google Maps
     @IBOutlet weak var showGoogleMapsButton: UIButton! { didSet { showGoogleMapsButton.layer.cornerRadius = 8 } }
     @IBOutlet weak var showGoogleMapViewButtonBack: ShowGoogleMapViewButtonBack!
-    
-    // MapView
-    @IBOutlet weak var mapView:     MKMapView!
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var mapTypeView: ShowGoogleMapViewButtonBack!
-    
-    // Fiels BackViews
-    @IBOutlet weak var textViewBackground:  TextViewBackView!
+    @IBOutlet weak var textViewBackground: TextViewBackView!
     @IBOutlet weak var textFieldBackground: TextViewBackView!
-    
-    // UIDataPicker BackViuew
     @IBOutlet weak var dataPickerView: UIView!
-    
-    // UINavigationItem
     @IBOutlet weak var navItem: UINavigationItem!
-    
-    // UIActivityIndicatorViews
     @IBOutlet weak var textViewActivity: UIActivityIndicatorView! { didSet { textViewACHidden(); } }
     @IBOutlet weak var textFieldActivitu: UIActivityIndicatorView! { didSet { textFieldACHidden(); } }
-    
-    // UISegmentedControl
     @IBOutlet weak var segmentControl: UISegmentedControl!
-    
-    // Note Copied View
-    @IBOutlet weak var noteCopiedView: NoteCopiedView! 
+    @IBOutlet weak var noteCopiedView: NoteCopiedView!
     @IBOutlet weak var copyButton: CopyButton!
     
-    // UIBarButtonItems
+    //UIBarButtonItems
     @IBOutlet weak var mapShowingButton:        UIBarButtonItem!
     @IBOutlet weak var searchShowingButton:     UIBarButtonItem!
     @IBOutlet weak var saveButton:              UIBarButtonItem!
@@ -66,25 +50,15 @@ final class ForTodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var pickerViewShowingButton: UIBarButtonItem!
     @IBOutlet weak var mapTypeButton:           UIBarButtonItem!
     
-    // MapView Label with adresses
     @IBOutlet weak var adressLabel: UILabel!
-    
-    // Diffrent Functional Buttons
-    @IBOutlet weak var voiceButton:          UIButton!
+    @IBOutlet weak var voiceButton: UIButton!
     @IBOutlet weak var reminderOutletButton: UIButton!
-    @IBOutlet weak var helpButtonOutlet:     HelpButton!
-    @IBOutlet weak var choseTimeButton:      UIButton!
-    
-    // like 'view'
+    @IBOutlet weak var helpButtonOutlet: HelpButton!
+    @IBOutlet weak var choseTimeButton: UIButton!
     @IBOutlet weak var mainView: UIView!
-    
-    // Main Fields
-    @IBOutlet weak var inputTextView:  UITextView!
+    @IBOutlet weak var inputTextView: UITextView!
     @IBOutlet weak var inputTextField: UITextField!
-    
-    // UILabel
     @IBOutlet weak var lastSaveDateLabel: LastSaveDateLabel!
-    
     @IBOutlet weak var pickerBackgroundView: ContentBack! { didSet { viewModel.setPickerViewBackground(pickerBackgroundView) } }
     @IBOutlet weak var pickerView: UIPickerView! { didSet { viewModel.setPickerView(pickerView) } }
     

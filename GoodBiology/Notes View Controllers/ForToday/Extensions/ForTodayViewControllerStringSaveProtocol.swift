@@ -9,12 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ForTodayViewControllerStringSaveProtocol {
-    func saveStringData()
-    func checkForSaved()
-}
-
-extension ForTodayViewController: ForTodayViewControllerStringSaveProtocol {
+extension ForTodayViewController {
     func saveStringData() {
         defaults.set(inputTextView.text!,  forKey: Keys.textViewInformation )
         defaults.set(inputTextField.text!, forKey: Keys.textFieldInformation)

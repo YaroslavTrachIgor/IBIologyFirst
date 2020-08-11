@@ -11,6 +11,8 @@ import AudioToolbox
 import Combine
 import GoogleMobileAds
 
+
+//MARK: - TestViewKeys structure
 struct TestViewKeys {
     static let plantsViewKey    = "PlantsViewKey"
     static let animalsViewKey   = "AnimalsViewKey"
@@ -21,7 +23,10 @@ struct TestViewKeys {
     static let fungusesViewKey  = "FungusesViewKey"
 }
 
-class TestScores {
+
+
+//MARK: - TestScores
+final class TestScores {
     static let shared = TestScores()
     
     private init() {}
@@ -31,6 +36,9 @@ class TestScores {
     var doneButtonEnabled = true
 }
 
+
+
+//MARK: - TestViewController main class
 final class TestViewController: UIViewController {
     
     // Presenter
@@ -49,21 +57,14 @@ final class TestViewController: UIViewController {
     // TestBackView
     @IBOutlet weak var testView:       TestBackView!
     @IBOutlet weak var secondTestView: TestBackView!
-    
-    // AnswerLabel
     @IBOutlet weak var answerLabel: AnswerLabel!
-    
-    // TestButton
     @IBOutlet weak var trueButtonOutlet:  TestButton!
     @IBOutlet weak var falseButtonOutlet: TestButton!
-    /// Public
+    
     public var falseTint = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 0.798640839)
     
-    // Stepper VIew
     @IBOutlet weak var stepperView:    TestStepperView!
     @IBOutlet weak var stepperOutlet:  UIStepper!
-    
-    // TestTextView
     @IBOutlet weak var secondTextView: TestTextView!
     @IBOutlet weak var testTextView:   TestTextView!
     
@@ -98,9 +99,15 @@ final class TestViewController: UIViewController {
         gradient.setupRootViewsWithBasicGradient(mainView: view, scrollView: nil)
     }
     
-    @IBAction func showNextPage(sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         
-        /// Show Ads Bunner
-        showBunner()
+        setTabBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        setTabBarHidden(false)
     }
 }

@@ -29,7 +29,6 @@ final class MostPopularArticlesViewControllerInfoContentBack: ContentBack {
 }
 
 extension MostPopularArticlesViewControllerInfoContentBack: MostPopularArticlesViewControllerInfoContentBackProtocol {
-    
     func setupView() {
         setupHidden()
         setupShadow()

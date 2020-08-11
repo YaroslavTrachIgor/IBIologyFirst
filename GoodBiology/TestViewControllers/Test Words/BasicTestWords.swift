@@ -8,6 +8,7 @@
 
 import Foundation
 
+//MARK: - BasicTestWords
 struct BasicTestWords {
     static public let trueWord  = "True"
     static public let falseWord = "False"

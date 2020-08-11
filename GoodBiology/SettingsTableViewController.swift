@@ -10,51 +10,41 @@ import UIKit
 import SafariServices
 import GoogleSignIn
 
-final class SettingsTableViewController: UITableViewController, UINavigationControllerDelegate {
+final class SettingsTableViewController: UITableViewController, UINavigationControllerDelegate, BasicViewControllerStatusBarBackColorSetupProtocol {
     
     //MARK: - @IBOutlets
     //Users view with Info
     @IBOutlet weak var usersInfoView: UsersInfoView!
-    
     @IBOutlet weak var usersIconImageViewButton: UIButton!
-    @IBOutlet weak var usersIconImageView:       UsersIconImageView!
-    
-    // UI Hide for hidding Users view with Info
-    @IBOutlet weak var hideButton:         HideButton!
+    @IBOutlet weak var usersIconImageView: UsersIconImageView!
+    @IBOutlet weak var hideButton: HideButton!
     @IBOutlet weak var hideButtonBackView: ContentBack! { didSet { hideButtonBackView.isHidden = true } }
-    
-    @IBOutlet weak var editButton:  UIBarButtonItem!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var saveButton:  UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    //Done Labels
+    ///UILabels
     @IBOutlet weak var firstNameLabel:  DoneLabel!
     @IBOutlet weak var secondNameLabel: DoneLabel!
     @IBOutlet weak var emailLabel:      DoneLabel!
-    
-    // Special Email Label with blue color
     @IBOutlet weak var inputEmailLabel: UILabel!
     
-    // Personal Information TextFields
-    @IBOutlet weak var nameTextField:       SettingsTextField!
-    @IBOutlet weak var secondNameTextField: SettingsTextField!
-    @IBOutlet weak var emailTextField:      SettingsTextField!
-    
-    // Optional Personal Information TextFields
+    ///TextFields
+    @IBOutlet weak var nameTextField:           SettingsTextField!
+    @IBOutlet weak var secondNameTextField:     SettingsTextField!
+    @IBOutlet weak var emailTextField:          SettingsTextField!
     @IBOutlet weak var ageTextField:            SettingsTextField!
     @IBOutlet weak var secondEmailTextField:    SettingsTextField!
     @IBOutlet weak var countryTextField:        SettingsTextField!
     @IBOutlet weak var birthdayTextField:       SettingsTextField! { didSet { birthdayTextField.keyboardType = .numberPad } }
     @IBOutlet weak var phoneNumberTextField:    SettingsTextField!
     
-    //TableView
+    ///TableView
     @IBOutlet var table: UITableView!
     
     @IBOutlet weak var questionLabel: QuestionLabel!
     @IBOutlet weak var faqLabel:      QuestionLabel!
     @IBOutlet weak var siteLabel:     QuestionLabel!
-    
-    // LastSaveButton
     @IBOutlet weak var lastSaveButton: UIButton!
     
     
@@ -145,13 +135,16 @@ final class SettingsTableViewController: UITableViewController, UINavigationCont
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /// Oher
-        loadSettings()
-        prepareObservation()
-        
         /// Setup Main View Things
         gesturesSetup()
         setupView()
+        
+        ///Setup statusBar
+        setupStatusBar(for: self, backColor: .systemGroupedBackground)
+        
+        /// Oher
+        loadSettings()
+        prepareObservation()
     }
     
     override func viewDidAppear(_ animated: Bool) {

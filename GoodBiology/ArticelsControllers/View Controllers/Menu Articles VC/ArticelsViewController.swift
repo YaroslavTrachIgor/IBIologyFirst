@@ -20,7 +20,9 @@ struct ArticelsViewControllerKeys {
     static let microbesVCKey    = "microbesVCKey"
 }
 
-class ArticelsViewController: UIViewController {
+class ArticelsViewController: UIViewController, BasicViewControllerStatusBarBackColorSetupProtocol {
+    
+    //MARK: NotificationNames
     struct NotificationNames {
         static let plantsVCKeyName      = Notification.Name(rawValue: ArticelsViewControllerKeys.plantsVCKey)
         static let animalsVCKeyName     = Notification.Name(rawValue: ArticelsViewControllerKeys.animalsVCKey)
@@ -116,6 +118,7 @@ class ArticelsViewController: UIViewController {
         /// setup NavController
         setupNavController()
         setupNavBarTitle()
+        setupStatusBar(for: self, backColor: .white)
     }
     
     
@@ -129,8 +132,8 @@ class ArticelsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let views = [plantsView, animalsView, microbesView, manView, virusesView, archaeaView, mushroomsView, chromistaView, popularButton]
-        let buttons = [videoPlayerVCShowerButtonBackView, readingOnTimeVCShowerButtonBackView, supportVCShowerButtonBackView, popularButton]
+        let views = [plantsView, animalsView, microbesView, manView, virusesView, archaeaView, mushroomsView, chromistaView]
+        let buttons = [readingOnTimeVCShowerButtonBackView, videoPlayerVCShowerButtonBackView, supportVCShowerButtonBackView, popularButton]
         let labels: [ArticlesMenuLabel] = [plantsLabel, animalsLabel, microbesLabel, virusesLabel, chromistaLabel, humanLabel, fungusesLabel, archaeaLabel]
         
         viewModel.previewAnimation(views: views as! [UIView], buttons: buttons as! [UIView])

@@ -14,7 +14,6 @@ protocol MailButtonProtocol {
 }
 
 class MailButton: UIButton {
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -31,7 +30,6 @@ class MailButton: UIButton {
 extension MailButton: MailButtonProtocol {
     func setupButton() {
         fastButtonCostomizing(background: .biologyGreenColor, titleColor: .white, title: "Send your Article", corner: 15, borderWidth: 2.6)
-        
         setupFont()
     }
 }

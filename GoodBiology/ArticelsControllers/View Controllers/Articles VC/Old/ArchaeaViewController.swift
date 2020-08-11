@@ -50,6 +50,18 @@ final class ArchaeaViewController: UIViewController {
         finalView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setTabBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        setTabBarHidden(false)
+    }
+    
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
     
     //MARK: Public
@@ -139,18 +151,26 @@ extension ArchaeaViewController {
             basicsTextView.text = ArchaeaArticleData.archaeaMostContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButton.isHidden = false
         case 1:
             basicsTextView.text = ArchaeaArticleData.archaeaBasicsContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButton.isHidden = false
         case 2:
             basicsTextView.text = ArchaeaArticleData.archaeaStructureContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButton.isHidden = false
         case 3:
             basicsTextView.text = ""
             goToImagesButton.isHidden = false
             goToVideosButton.isHidden = false
+            
+            notificationButton.isHidden = true
         default:
             print(" Error ")
         }

@@ -38,7 +38,6 @@ extension TextViewBackView: TextViewBackViewProtocol {
     internal func setupTextViewBack() {
         alpha = 0
         layer.cornerRadius  = 20
-        
         viewSystemBack()
         viewShadows()
     }

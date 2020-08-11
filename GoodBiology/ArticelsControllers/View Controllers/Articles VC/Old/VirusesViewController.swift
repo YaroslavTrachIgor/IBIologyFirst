@@ -69,6 +69,18 @@ final class VirusesViewController: UIViewController {
         viewDidApearAnimationPreview(views as! [UIView], nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setTabBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        setTabBarHidden(false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

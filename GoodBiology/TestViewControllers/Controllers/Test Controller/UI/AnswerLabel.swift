@@ -28,9 +28,7 @@ class AnswerLabel: UILabel {
 extension AnswerLabel: AnswerLabelDelegate {
     internal func setupAnswerLabel() {
         transform    = CGAffineTransform(scaleX: 0, y: 0)
-        
         labelShadow()
-        
         font = UIFont(name: "AvenirNext-Bold", size: 20.5)
         labelSystemColor()
     }

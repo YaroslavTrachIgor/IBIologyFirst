@@ -12,13 +12,7 @@ protocol DoneLabelProtocol {
     func setupLabel()
 }
 
-class DoneLabel: UILabel {
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
-        setupLabel()
-    }
-    
+final class DoneLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         

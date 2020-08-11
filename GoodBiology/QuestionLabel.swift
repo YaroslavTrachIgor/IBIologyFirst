@@ -13,8 +13,7 @@ protocol QuestionLabelSetupProtocol {
     func setupLabel()
 }
 
-class QuestionLabel: UILabel {
-    
+final class QuestionLabel: UILabel {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -38,7 +37,6 @@ extension QuestionLabel: QuestionLabelSetupProtocol {
 extension QuestionLabel {
     private func setupFont() {
         let font = UIFont(name: "HelveticaNeue-Medium", size: 15.5)
-        
         self.font = font
     }
     

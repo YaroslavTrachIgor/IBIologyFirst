@@ -12,10 +12,7 @@ import UIKit
 @available(iOS 13.0, *)
 class ReadingOnTimeStyleVaribles {
     let appleButton = AppleButtonSettings()
-    
-    // Colors for Control Buttons
-    static var textColor    = UIColor.biologyGreenColor
-    static var shadowColor  = UIColor.white
-    
+    static var textColor = UIColor.biologyGreenColor
+    static var shadowColor = UIColor.white
     static var shadowRadius: CGFloat = 5
 }

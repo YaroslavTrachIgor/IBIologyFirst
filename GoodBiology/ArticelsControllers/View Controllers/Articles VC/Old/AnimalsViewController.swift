@@ -58,6 +58,18 @@ final class AnimalsViewController: UIViewController {
         viewDidApearAnimationPreview(views as! [UIView], nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setTabBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        setTabBarHidden(false)
+    }
+    
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
     
     //MARK: Public
@@ -161,18 +173,26 @@ extension AnimalsViewController {
             textView.text = AnimalsArticleData.animalsMostContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
         case 1:
             textView.text = AnimalsArticleData.animalsBasicsContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
         case 2:
             textView.text = AnimalsArticleData.animalsStructureContent
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
         case 3:
             textView.text = ""
             goToImagesButton.isHidden = false
             goToVideosButton.isHidden = false
+            
+            notificationButtonOutlet.isHidden = true
         default:
             print ("Error")
         }

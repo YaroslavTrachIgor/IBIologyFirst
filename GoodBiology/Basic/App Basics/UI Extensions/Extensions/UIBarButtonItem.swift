@@ -12,13 +12,13 @@ import AudioToolbox
 
 //MARK: - Setup UIBarButtonItem basics
 extension UIBarButtonItem {
-    // Basics for All UIBarButtonItems fot Tests
+    ///Basics for All UIBarButtonItems fot Tests
     
     public func testBarButtonItemsTint() {
         self.tintColor = .biologyGreenColor
     }
     
-    //Setup Share Audio
+    ///Setup Share Audio
     public func shareAudio() {
         AudioServicesPlayAlertSound(SystemSoundID(1001))
     }

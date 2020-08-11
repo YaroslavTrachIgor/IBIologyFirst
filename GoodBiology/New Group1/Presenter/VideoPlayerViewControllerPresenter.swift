@@ -18,6 +18,9 @@ protocol VideoPlayerViewControllerPresenterMainOverrideFunctionsProtocol {
     func viewDidApearAnimationSetup(contentBackground: UIView, videoButton: UIButton, articlesVideosGoButton: UIButton, imageView: UIImageView)
 }
 
+
+
+//MARK: - VideoPlayerViewControllerPresenterMainFunctionsProtocol protocol
 protocol VideoPlayerViewControllerPresenterMainFunctionsProtocol: VideoPlayerViewControllerPresenterMainOverrideFunctionsProtocol {
     func setupGoogleAdBunner(_ bunner: GADBannerView, for vc: UIViewController)
     func playVideo(for vc: UIViewController)
@@ -29,7 +32,7 @@ protocol VideoPlayerViewControllerPresenterMainFunctionsProtocol: VideoPlayerVie
 
 
 //MARK: - Main Class
-class VideoPlayerViewControllerPresenter {}
+final class VideoPlayerViewControllerPresenter {}
 
 
 

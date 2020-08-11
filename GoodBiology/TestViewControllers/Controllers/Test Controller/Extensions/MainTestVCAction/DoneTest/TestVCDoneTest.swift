@@ -25,7 +25,6 @@ extension TestViewController {
     
     private func endTestDone() {
         TestScores.shared.doneButtonEnabled = false
-        
         setDoneButtonEnabled()
     }
     

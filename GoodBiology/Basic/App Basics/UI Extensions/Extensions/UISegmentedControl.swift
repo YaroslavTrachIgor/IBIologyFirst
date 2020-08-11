@@ -18,35 +18,20 @@ fileprivate protocol SegmentedControlBasics {
 
 //MARK: SegmentedControlBasics extension
 extension UISegmentedControl: SegmentedControlBasics {
-    
     public func segmentedControlBasics() {
-        
-        ///Set Alpha
         alpha = 0
-        
-        ///Setup Basics
         segConBasicView()
     }
     
     public func segmentedControlForToday() {
-        
-        ///Setup Basics
         segConBasicView()
     }
     
     public func segConBasicView() {
-        
-        ///Setup Shadow
         segmentedControlShadow()
-        
-        ///Set Tint
         tintColor = .biologyGreenColor
-        
-        ///Set Corners
         layer.cornerRadius  = 25
         layer.masksToBounds = true
-        
-        ///Set Font
         let font  = UIFont(name: "AvenirNext-DemiBold", size: 12)
         setTitleTextAttributes([NSAttributedString.Key.font: font!], for: .normal)
     }

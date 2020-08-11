@@ -18,7 +18,7 @@ struct ScreenSize {
 
 struct DeviceType {
     
-    // iPhones
+    ///iPhones
     static let IS_IPHONE            = UIDevice.current.userInterfaceIdiom == .phone
     static let IS_IPHONE_4_OR_LESS  = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH < 568.0
     static let IS_IPHONE_5          = UIDevice.current.userInterfaceIdiom == .phone && ScreenSize.SCREEN_MAX_LENGTH == 568.0
@@ -27,14 +27,14 @@ struct DeviceType {
     static let IS_IPHONE_7          = IS_IPHONE_6
     static let IS_IPHONE_7P         = IS_IPHONE_6P
     
-    // iPads
+    ///iPads
     static let IS_IPAD              = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.SCREEN_MAX_LENGTH == 1024.0
     static let IS_IPAD_PRO_9_7      = IS_IPAD
     static let IS_IPAD_PRO_12_9     = UIDevice.current.userInterfaceIdiom == .pad && ScreenSize.SCREEN_MAX_LENGTH == 1366.0
     
-    // TVOS
+    ///TVOS
     static let IS_TV                = UIDevice.current.userInterfaceIdiom == .tv
     
-    // Car Play
+    ///Car Play
     static let IS_CAR_PLAY          = UIDevice.current.userInterfaceIdiom == .carPlay
 }

@@ -9,8 +9,6 @@
 import UIKit
 import WebKit
 
-
-
 //MARK: - UISlider
 extension UISlider {
     public func sliderShadow() {

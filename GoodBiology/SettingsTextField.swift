@@ -12,7 +12,7 @@ protocol SettingsTextFieldProtocol {
     func setupField()
 }
 
-class SettingsTextField: UITextField {
+final class SettingsTextField: UITextField {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         

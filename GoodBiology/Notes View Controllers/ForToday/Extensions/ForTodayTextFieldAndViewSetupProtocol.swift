@@ -9,16 +9,7 @@
 import Foundation
 import UIKit
 
-protocol ForTodayTextFieldAndViewSetupProtocol {
-    func prepareToolBar()
-    func textViewACHidden()
-    func textFieldACHidden()
-    func textColorPrefering()
-    func textContainersTintSetup()
-    func cornersPrefering()
-}
-
-extension ForTodayViewController: ForTodayTextFieldAndViewSetupProtocol {
+extension ForTodayViewController {
     func prepareToolBar() {
         viewModel.setToolBar(textView: inputTextView, textField: inputTextField, toolBar: toolBar)
     }

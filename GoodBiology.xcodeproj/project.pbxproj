@@ -50,6 +50,7 @@
 		843F81352440985B00A81C09 /* UserActivityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F81342440985B00A81C09 /* UserActivityType.swift */; };
 		843F81392440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F81382440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift */; };
 		843F813C2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F813B2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift */; };
+		8442785E24D541E20066846A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8442785D24D541E20066846A /* UILabel.swift */; };
 		8443593E231AE43B00A3E7F5 /* ArticleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */; };
 		8446582023BC0A5200DC316E /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446581F23BC0A5200DC316E /* Buttons.swift */; };
 		8446582823BD59E200DC316E /* iOSGoodBiologyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8446582723BD59E200DC316E /* iOSGoodBiologyUITests.swift */; };
@@ -149,6 +150,7 @@
 		847E14EA246C659700C35F9E /* NetworkingViewControllerINActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */; };
 		847E14EC246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */; };
 		847E14EF246C730100C35F9E /* BrowserAnimationManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847E14EE246C730100C35F9E /* BrowserAnimationManeger.swift */; };
+		848A689124A15235007F3E0F /* AddCostomArticleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A689024A15234007F3E0F /* AddCostomArticleButton.swift */; };
 		848A92F221DD63E600D1C3C1 /* SafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A92F121DD63E600D1C3C1 /* SafariViewController.swift */; };
 		848BAFDD2461B3D400355430 /* iBiology.mov in Resources */ = {isa = PBXBuildFile; fileRef = 848BAFDC2461B3D400355430 /* iBiology.mov */; };
 		848BAFE024641EE900355430 /* MenuCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848BAFDF24641EE800355430 /* MenuCollectionView.swift */; };
@@ -295,6 +297,7 @@
 		84C6FCBE2209F8AA00BCE06D /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCBC2209F8A500BCE06D /* ArticleViewController.swift */; };
 		84C6FCC22209FDEF00BCE06D /* BasicsContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C6FCC02209FAF200BCE06D /* BasicsContent.swift */; };
 		84CDB5CD2221371D002432F7 /* ForToday.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CDB5CB2221371D002432F7 /* ForToday.storyboard */; };
+		84D4B2A324D4D2DB005F93BE /* MapViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D4B2A224D4D2DB005F93BE /* MapViewControllerViewModel.swift */; };
 		84D968D821D91A1D0079596C /* ArticlesReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */; };
 		84EA94F3246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F2246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift */; };
 		84EA94F5246C845C000EEB8E /* LocalizedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EA94F4246C845C000EEB8E /* LocalizedDate.swift */; };
@@ -328,6 +331,7 @@
 		84EF4A4B2466237E009632A1 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4A4A2466237E009632A1 /* MenuCollectionViewCell.swift */; };
 		84EF4A4D246623AC009632A1 /* MenuCollectionViewCellButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4A4C246623AC009632A1 /* MenuCollectionViewCellButton.swift */; };
 		84EF4A532467C736009632A1 /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF4A522467C736009632A1 /* Articles.swift */; };
+		84F055B924902601008B9D06 /* ShowNewTestPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F055B824902601008B9D06 /* ShowNewTestPage.swift */; };
 		84F5741123F0BCCB00400ED4 /* ChromistaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5741023F0BCCB00400ED4 /* ChromistaButton.swift */; };
 		84F5741323F0BDEF00400ED4 /* ChromistaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5741223F0BDEF00400ED4 /* ChromistaLabel.swift */; };
 		84F5741523F0BE3000400ED4 /* ChromistaActionButtonsBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5741423F0BE3000400ED4 /* ChromistaActionButtonsBack.swift */; };
@@ -539,6 +543,7 @@
 		843F81342440985B00A81C09 /* UserActivityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActivityType.swift; sourceTree = "<group>"; };
 		843F81382440DCFB00A81C09 /* ChomistaViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChomistaViewControllerViewModel.swift; sourceTree = "<group>"; };
 		843F813B2440E29400A81C09 /* ArticlesVCsViewCountExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesVCsViewCountExtensions.swift; sourceTree = "<group>"; };
+		8442785D24D541E20066846A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		8443593D231AE43B00A3E7F5 /* ArticleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleProtocol.swift; sourceTree = "<group>"; };
 		8446581F23BC0A5200DC316E /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		8446582523BD59E200DC316E /* iOSGoodBiologyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSGoodBiologyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -642,6 +647,7 @@
 		847E14E9246C659700C35F9E /* NetworkingViewControllerINActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewControllerINActions.swift; sourceTree = "<group>"; };
 		847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManegerViewModel.swift; sourceTree = "<group>"; };
 		847E14EE246C730100C35F9E /* BrowserAnimationManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserAnimationManeger.swift; sourceTree = "<group>"; };
+		848A689024A15234007F3E0F /* AddCostomArticleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCostomArticleButton.swift; sourceTree = "<group>"; };
 		848A92F121DD63E600D1C3C1 /* SafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariViewController.swift; sourceTree = "<group>"; };
 		848BAFDC2461B3D400355430 /* iBiology.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = iBiology.mov; path = ../../../iBiology.mov; sourceTree = "<group>"; };
 		848BAFDF24641EE800355430 /* MenuCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionView.swift; sourceTree = "<group>"; };
@@ -784,6 +790,7 @@
 		84C6FCBC2209F8A500BCE06D /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		84C6FCC02209FAF200BCE06D /* BasicsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicsContent.swift; sourceTree = "<group>"; };
 		84CDB5CC2221371D002432F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = GoodBiology/Storyboards/Base.lproj/ForToday.storyboard; sourceTree = "<group>"; };
+		84D4B2A224D4D2DB005F93BE /* MapViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerViewModel.swift; sourceTree = "<group>"; };
 		84D968D721D91A1D0079596C /* ArticlesReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesReviewViewController.swift; sourceTree = "<group>"; };
 		84EA94F2246C801B000EEB8E /* BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVCPlantsViewControllerAdMobBannerSetupProtocol.swift; sourceTree = "<group>"; };
 		84EA94F4246C845C000EEB8E /* LocalizedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedDate.swift; sourceTree = "<group>"; };
@@ -816,6 +823,7 @@
 		84EF4A4A2466237E009632A1 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		84EF4A4C246623AC009632A1 /* MenuCollectionViewCellButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCellButton.swift; sourceTree = "<group>"; };
 		84EF4A522467C736009632A1 /* Articles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		84F055B824902601008B9D06 /* ShowNewTestPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowNewTestPage.swift; sourceTree = "<group>"; };
 		84F5741023F0BCCB00400ED4 /* ChromistaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaButton.swift; sourceTree = "<group>"; };
 		84F5741223F0BDEF00400ED4 /* ChromistaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaLabel.swift; sourceTree = "<group>"; };
 		84F5741423F0BE3000400ED4 /* ChromistaActionButtonsBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaActionButtonsBack.swift; sourceTree = "<group>"; };
@@ -836,7 +844,7 @@
 		C458BD5D23AE4B6A00D1F108 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		C458BD6023AE55C800D1F108 /* ChromistaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaTableViewController.swift; sourceTree = "<group>"; };
 		C458BD6223AE55DA00D1F108 /* ChromistaThemesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChromistaThemesViewController.swift; sourceTree = "<group>"; };
-		C458BD6423AEBE4400D1F108 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		C458BD6423AEBE4400D1F108 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButton.swift; path = "../New Group/UIButton.swift"; sourceTree = "<group>"; };
 		C458BD6923AEBF0000D1F108 /* UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAlert.swift; sourceTree = "<group>"; };
 		C458BD6B23AEBF2000D1F108 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
@@ -1414,6 +1422,7 @@
 			children = (
 				84680C032438F44F0048A30B /* NetworkingViewControllerViewModel.swift */,
 				847E14EB246C72D200C35F9E /* BrowserAnimationManegerViewModel.swift */,
+				84D4B2A224D4D2DB005F93BE /* MapViewControllerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1507,6 +1516,7 @@
 				847CFCAF246EAFB200484B54 /* TestVCSharing.swift */,
 				847CFCB1246EB02900484B54 /* TestVCTrueAction.swift */,
 				847CFCB3246EB05900484B54 /* TestVCFalseAction.swift */,
+				84F055B824902601008B9D06 /* ShowNewTestPage.swift */,
 			);
 			path = MainTestVCAction;
 			sourceTree = "<group>";
@@ -1860,6 +1870,7 @@
 				84274D362412D397008E82BC /* ReadingOnTimeViewControllerButtonsBackView.swift */,
 				846D1B9F241D867B0036179D /* ReadingOnTimeViewControllerScoreView.swift */,
 				846D1BA1241D8F2D0036179D /* ReadingOnTimeScoreLabel.swift */,
+				848A689024A15234007F3E0F /* AddCostomArticleButton.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -2265,6 +2276,46 @@
 			path = ArticlesViewController;
 			sourceTree = "<group>";
 		};
+		84C717622482A7CA003B02B3 /* BasicClasses */ = {
+			isa = PBXGroup;
+			children = (
+				84A78C6223ED67E8002FEADF /* UIView */,
+				842D691C23C6993D009CF7E7 /* ToolBar.swift */,
+				842D691E23C69D01009CF7E7 /* BasicSearchController.swift */,
+				842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */,
+				842D692A23C80202009CF7E7 /* RefreshControl.swift */,
+			);
+			path = BasicClasses;
+			sourceTree = "<group>";
+		};
+		84C717632482A81F003B02B3 /* Manegers */ = {
+			isa = PBXGroup;
+			children = (
+				84EA94FA246D46E5000EEB8E /* AnalyticsManeger.swift */,
+				847CFCC82474754700484B54 /* EKAttributesManeger.swift */,
+				847CFCCA247477BD00484B54 /* AlertsManeger.swift */,
+			);
+			path = Manegers;
+			sourceTree = "<group>";
+		};
+		84C717642482A82E003B02B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C458BD6423AEBE4400D1F108 /* UIButton.swift */,
+				C458BD6923AEBF0000D1F108 /* UIAlert.swift */,
+				C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */,
+				C458BD7023AEBFD200D1F108 /* UITextView.swift */,
+				C458BD7223AEBFF300D1F108 /* UIProgressView.swift */,
+				C458BD7623AEC05E00D1F108 /* UISegmentedControl.swift */,
+				C458BD7823AEC08200D1F108 /* UIBarButtonItem.swift */,
+				C458BD7A23AEC09D00D1F108 /* UIStepper.swift */,
+				C458BD7C23AEC0C100D1F108 /* UISwitch.swift */,
+				84A3AFC923F7D98600836400 /* UIViewController.swift */,
+				8442785D24D541E20066846A /* UILabel.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84CDB5CA2220B0AA002432F7 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -2446,22 +2497,8 @@
 		C458BD6623AEBEC000D1F108 /* UI Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				84A78C6223ED67E8002FEADF /* UIView */,
-				C458BD6423AEBE4400D1F108 /* UIButton.swift */,
-				C458BD6923AEBF0000D1F108 /* UIAlert.swift */,
-				C458BD6D23AEBF4200D1F108 /* UIActivityIndicatorView.swift */,
-				C458BD7023AEBFD200D1F108 /* UITextView.swift */,
-				C458BD7223AEBFF300D1F108 /* UIProgressView.swift */,
-				C458BD7623AEC05E00D1F108 /* UISegmentedControl.swift */,
-				C458BD7823AEC08200D1F108 /* UIBarButtonItem.swift */,
-				C458BD7A23AEC09D00D1F108 /* UIStepper.swift */,
-				C458BD7C23AEC0C100D1F108 /* UISwitch.swift */,
-				842D691C23C6993D009CF7E7 /* ToolBar.swift */,
-				842D691E23C69D01009CF7E7 /* BasicSearchController.swift */,
-				842D692523C77AA4009CF7E7 /* SFSafariViewController.swift */,
-				842D692A23C80202009CF7E7 /* RefreshControl.swift */,
-				84A3AFC923F7D98600836400 /* UIViewController.swift */,
-				84EA94F4246C845C000EEB8E /* LocalizedDate.swift */,
+				84C717642482A82E003B02B3 /* Extensions */,
+				84C717622482A7CA003B02B3 /* BasicClasses */,
 			);
 			path = "UI Extensions";
 			sourceTree = "<group>";
@@ -2469,7 +2506,9 @@
 		C458BD6F23AEBF8700D1F108 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				84C717632482A81F003B02B3 /* Manegers */,
 				8497E34423566471003CD4A9 /* System Colors */,
+				84EA94F4246C845C000EEB8E /* LocalizedDate.swift */,
 				84778270237EEC52007C1FD8 /* BasicFonts.swift */,
 				8497E3492358E414003CD4A9 /* UI Elements Basic Functions, Classes, Structs and as on.swift */,
 				8497E3542358EBF4003CD4A9 /* WifiConnectionRecognizing.swift */,
@@ -2477,9 +2516,6 @@
 				C4F49B462416DE49002A2B17 /* BasicRootVCGradient.swift */,
 				845C4AD5242783B500105D92 /* MyColors.swift */,
 				84751DC5244BBB6E008918F7 /* String.swift */,
-				84EA94FA246D46E5000EEB8E /* AnalyticsManeger.swift */,
-				847CFCC82474754700484B54 /* EKAttributesManeger.swift */,
-				847CFCCA247477BD00484B54 /* AlertsManeger.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -3390,6 +3426,7 @@
 				84A935262454F1F70061EF89 /* BlankSheetViewControllerViewModel.swift in Sources */,
 				84A3AFB623F6140A00836400 /* ShadowView.swift in Sources */,
 				84A3AFA323F37EB100836400 /* ForTodayViewControllerStringSaveProtocol.swift in Sources */,
+				84F055B924902601008B9D06 /* ShowNewTestPage.swift in Sources */,
 				845C4ADC2428230500105D92 /* MostPopularArticlesViewControllerInfoContentBack.swift in Sources */,
 				84B2BD822229C62200BA41C9 /* BasicNotesViewController.swift in Sources */,
 				84B1D62B242E70530046C4FB /* PopularButton.swift in Sources */,
@@ -3419,6 +3456,7 @@
 				C4F49B412416D8F3002A2B17 /* ASAuthorizationControllerDelegate.swift in Sources */,
 				84EA94F5246C845C000EEB8E /* LocalizedDate.swift in Sources */,
 				8446583723BFF5E900DC316E /* FalseAnswers.swift in Sources */,
+				8442785E24D541E20066846A /* UILabel.swift in Sources */,
 				8471F87F21B30202001AA935 /* NetworkingViewController.swift in Sources */,
 				84A3AFC423F6B16800836400 /* BasicsViewControllerRateFunctionProtocol.swift in Sources */,
 				84B1D654242FFA290046C4FB /* LoginViewControllerViewModel.swift in Sources */,
@@ -3437,6 +3475,7 @@
 				84B1D616242D50570046C4FB /* MakingArticleVCContentRulesTextView.swift in Sources */,
 				84A3AFCF23F82FA300836400 /* MenuViewControllerDelegate.swift in Sources */,
 				845BF52B243A737B001DC4DE /* MainTabBarController.swift in Sources */,
+				84D4B2A324D4D2DB005F93BE /* MapViewControllerViewModel.swift in Sources */,
 				C4C7231521B9ACA900F64612 /* MicrobesViewController.swift in Sources */,
 				844E0D1E2235765200933ABC /* MakingArticleViewController.swift in Sources */,
 				84274D7D2415163A008E82BC /* BasicASAuthorizationAppleIDButtonSetupProtocol.swift in Sources */,
@@ -3547,6 +3586,7 @@
 				84A3AF8B23F2155900836400 /* ControlButton.swift in Sources */,
 				84751DC4244A58AE008918F7 /* BasicsViewControllerActions.swift in Sources */,
 				84AB84E1246B3844001B1856 /* ManData.swift in Sources */,
+				848A689124A15235007F3E0F /* AddCostomArticleButton.swift in Sources */,
 				847CFCCB247477BD00484B54 /* AlertsManeger.swift in Sources */,
 				84AB84E0246B3844001B1856 /* VirusesData.swift in Sources */,
 				84AB84D1246B3833001B1856 /* ArticleContentData.swift in Sources */,

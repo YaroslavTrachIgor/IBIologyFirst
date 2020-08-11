@@ -12,22 +12,35 @@ import GoogleMaps
 import GooglePlaces
 import GoogleMobileAds
 
+//MARK: BasicAppGoogleProtocol protocol
 protocol BasicAppGoogleProtocol {
     func googleMobileAdsSetup()
     func googleSignInSetup()
     func setupGoogleMaps()
 }
 
+
+
+//MARK: BasicAppReteManegerProtocol protocol
 protocol BasicAppReteManegerProtocol {
     func rateManeger()
 }
 
+
+
+//MARK: BasicAppUIProtocol protocol
 protocol BasicAppUIProtocol {
     func UIViewTintColorPrefering()
 }
 
+
+
+//MARK: BasicAppDelegateSetupProtocol typealias
 typealias BasicAppDelegateSetupProtocol = BasicAppGoogleProtocol & BasicAppReteManegerProtocol & BasicAppUIProtocol
 
+
+
+//MARK: BasicAppDelegateSetupProtocol extension
 extension AppDelegate: BasicAppDelegateSetupProtocol {
     
     //MARK: googleMobileAds Setup

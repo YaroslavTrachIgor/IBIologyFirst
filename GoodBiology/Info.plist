@@ -47,13 +47,13 @@
 	<string>public.app-category.education</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSCameraUsageDescription</key>
-	<string>The application wants to use your Photo Library to choose photoes for making your personal user icon.</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>The application wants to use your Face ID, beacause the application should recognize the real master of this iPhone. Since this section is stored a lot of confidential information about it. </string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>The application wants to use your location in order to display it on a map. And also you can see the distance between you and the place where you want to read now or at another time.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
+	<string>The application wants to use your Photo Library to choose photoes for making your personal user icon.</string>
+	<key>NSCameraUsageDescription</key>
 	<string>The application wants to use your Photo Library to choose photoes for making your personal user icon.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>This feature will be used to create quick notes with your voice, nothing more we do not use it.</string>
@@ -73,7 +73,7 @@
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeFavorite</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
-			<string>Lot's of articles</string>
+			<string>Lot&apos;s of articles</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Articles</string>
 			<key>UIApplicationShortcutItemType</key>

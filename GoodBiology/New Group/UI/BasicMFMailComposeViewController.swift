@@ -11,25 +11,25 @@ import UIKit
 import MessageUI
 
 protocol BasicMFMailComposeViewControllerProtocol {
-    func setup()
+    func setupComposer()
 }
 
 class BasicMFMailComposeViewController: MFMailComposeViewController {
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         
-        setup()
+        setupComposer()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        setup()
+        setupComposer()
     }
 }
 
 extension BasicMFMailComposeViewController: BasicMFMailComposeViewControllerProtocol {
-    func setup() {
+    func setupComposer() {
         let queue = DispatchQueue(label: "BasicMFMailComposeViewControllerQueue", attributes: .concurrent)
         let group = DispatchGroup()
         

@@ -9,11 +9,7 @@
 import Foundation
 import MessageUI
 
-protocol ForTodayViewControllerMailComposerProtocol {
-    func showMailComposer()
-}
-
-extension ForTodayViewController: ForTodayViewControllerMailComposerProtocol {
+extension ForTodayViewController {
     func showMailComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
         

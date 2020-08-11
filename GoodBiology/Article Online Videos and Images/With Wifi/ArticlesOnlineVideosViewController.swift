@@ -13,13 +13,10 @@ import WebKit
 class ArticlesOnlineVideosViewController: UIViewController {
 
     //MARK: - @IBOutlets
-    //MARK: UIBarButtonItems
-    @IBOutlet weak var shareURl:     UIBarButtonItem!
-    @IBOutlet weak var leftButton:   UIBarButtonItem!
-    @IBOutlet weak var rightButton:  UIBarButtonItem!
+    @IBOutlet weak var shareURl: UIBarButtonItem!
+    @IBOutlet weak var leftButton: UIBarButtonItem!
+    @IBOutlet weak var rightButton: UIBarButtonItem!
     @IBOutlet weak var reloadButton: UIBarButtonItem!
-    
-    //MARK: webViewBackground and webView
     @IBOutlet weak var webViewBackground: UIView!
     @IBOutlet weak var webView:           WKWebView!
         
@@ -34,8 +31,17 @@ class ArticlesOnlineVideosViewController: UIViewController {
         setuoNavController()
     }
         
+    
     override func viewDidAppear(_ animated: Bool) {
         viewDidApearAnimationSetup()
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        ///Set basic navBar title color
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
     }
 }
 
@@ -60,13 +66,9 @@ extension ArticlesOnlineVideosViewController {
     }
         
     private func webViewBackgroundPrefering() {
-        
-        /// Setup webViewBackground
         webViewBackground.backgroundColor = .systemBackground
         webViewBackground.layer.cornerRadius = CGFloat(20)
         webViewBackground.viewShadows()
-        
-        /// Setup webView
         webViewPrefering()
     }
         
@@ -76,17 +78,21 @@ extension ArticlesOnlineVideosViewController {
         
     private func viewPrefering() {
         let backColor: UIColor = .systemBackground
-        
-        view.backgroundColor                             = backColor
+        view.backgroundColor = backColor
         navigationController?.navigationBar.barTintColor = backColor
     }
     
     private func setuoNavController() {
-        
-        /// Setup navigationController
         let navController = navigationController
-        navController?.hidesBarsOnTap   = false
+        navController?.hidesBarsOnTap = false
         navController?.hidesBarsOnSwipe = false
+        setupNavBarColors()
+    }
+        
+        
+    private func setupNavBarColors() {
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     

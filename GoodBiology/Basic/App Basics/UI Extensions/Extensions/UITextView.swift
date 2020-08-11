@@ -12,27 +12,15 @@ import UIKit
 //MARK: - Setup UITextView basics
 extension UITextView {
     public func switchTextViewPrefering() {
-        
-        ///Setup Properties
         self.isSelectable = false
         self.isEditable = false
-        
-        ///Setup text
         self.text = "Hide diffrent functions"
-        
-        ///Setup font
         self.font = UIFont(name: "AvenirNext-DemiBold", size: 12)
-        
-        ///Setup Text Color
         self.systemTextColor()
-        
-        ///Setup shadow
         self.textViewShadow()
     }
     
     public func systemTextColor() {
-        
-        //Setup Text Color
         self.textColor = .secondaryLabel
     }
 }
@@ -41,7 +29,7 @@ extension UITextView {
 
 extension UITextView {
     
-    // Basics for Text Views
+    ///Basics for Text Views
     public func mainTextViewTextColor(alpha: Float) {
         self.textColor  = .darkGray
         self.tintColor  = .biologyGreenColor
@@ -56,10 +44,8 @@ extension UITextView {
     public func bigContentTextViewsPrefering(size: Float) {
         self.isEditable   = false
         self.isSelectable = false
-        
         self.alpha = 0
         self.font  = UIFont(name: "AvenirNext-Medium", size: CGFloat(size))
-        
         self.textViewShadow()
     }
 }

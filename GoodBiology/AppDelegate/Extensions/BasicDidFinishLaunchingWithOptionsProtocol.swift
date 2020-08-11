@@ -8,10 +8,14 @@
 
 import Foundation
 
+//MARK: BasicDidFinishLaunchingWithOptionsProtocol protocol
 protocol BasicDidFinishLaunchingWithOptionsProtocol {
     func setupDidFinishLaunchingMethods()
 }
 
+
+
+//MARK: BasicDidFinishLaunchingWithOptionsProtocol extension
 extension AppDelegate: BasicDidFinishLaunchingWithOptionsProtocol {
     func setupDidFinishLaunchingMethods() {
         setupGoogleMaps()

@@ -43,12 +43,8 @@ extension MakingArticleViewControllerPresenter: MakingArticleViewControllerPrese
     }
     
     func presentAlert(for vc: UIViewController, alertController: UIAlertController) {
-        
-        ///Setup UIAlertController
         alertController.setMessage(font: UIFont(name: "AvenirNext-Medium", size: 13), color: .none)
         alertController.view.tintColor = .biologyGreenColor
-        
-        ///present UIAlertController
         vc.present(alertController, animated: true)
     }
 }

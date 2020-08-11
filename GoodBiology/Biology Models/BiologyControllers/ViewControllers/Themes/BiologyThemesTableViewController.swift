@@ -39,6 +39,11 @@ class BiologyThemesTableViewController: UITableViewController {
         refreshControlPrefering()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        ///Set basic navBar tint
+        navigationController?.navigationBar.backgroundColor = .systemGroupedBackground
+    }
     
     // MARK: - numberOfRowsInSection
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

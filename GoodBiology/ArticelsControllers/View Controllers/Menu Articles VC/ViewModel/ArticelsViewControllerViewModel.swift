@@ -29,7 +29,6 @@ class ArticelsViewControllerViewModel {
             field.layer.cornerRadius = 16
             field.textColor = .black
             field.tintColor = .biologyGreenColor
-
             field.layer.masksToBounds = true
             field.returnKeyType = .search
         }
@@ -109,23 +108,13 @@ class ArticelsViewControllerViewModel {
 extension WhatsNewViewController.Configuration {
     mutating func setupBasicConfiguration() {
         let animation: WhatsNewViewController.Animation? = .slideUp
-        
-        /// Setup animations
         titleView.animation        = animation
         itemsView.animation        = animation
         completionButton.animation = animation
-        
-        /// Setup backgroundColor
         backgroundColor = .white
-        
-        /// Setup fonts
         itemsView.titleFont     = UIFont(name: BasicFonts.mediumFont, size: 20)!
         itemsView.subtitleFont  = UIFont(name: BasicFonts.mediumFont, size: 12)!
-        
-        /// Setup completionButton
         completionButton.backgroundColor = .biologyGreenColor
-        
-        /// Setup titleView
         titleView.titleColor = .black
         titleView.secondaryColor = .init(
             // The start index

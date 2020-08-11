@@ -45,7 +45,7 @@ extension LastSaveDateLabel: LastSaveDateLabelProtocol {
 // MARK: - Main Functions
 extension LastSaveDateLabel {
     private func setupFont() {
-        font = UIFont(name: BasicFonts.mediumFont, size: 15)
+        font = UIFont(name: BasicFonts.mediumFont, size: 12)
     }
     
     private func setupTextColor() {

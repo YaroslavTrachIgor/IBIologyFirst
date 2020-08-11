@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-class AppDelegateViewModel {
+//MARK: AppDelegateViewModel main class
+final class AppDelegateViewModel {
     
     //MARK: setup UIWindow Tint Color
     func setUIWindowTintColor(_ window: UIWindow) {

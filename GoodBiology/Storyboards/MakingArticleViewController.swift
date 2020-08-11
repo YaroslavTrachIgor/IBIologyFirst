@@ -22,16 +22,12 @@ final class MakingArticleViewController: UIViewController {
     let presenter: MakingArticleViewControllerPresenter = MakingArticleViewControllerPresenter()
     
     //MARK: - IBOutlets
-    //Button
     @IBOutlet weak var mailButton: MailButton!
-    
-    //Content
-    @IBOutlet weak var contentBackground:    ContentBack! { didSet{ contentBackground.alpha = 0 } }
+    @IBOutlet weak var contentBackground: ContentBack! { didSet{ contentBackground.alpha = 0 } }
     @IBOutlet weak var contentRulesTextView: MakingArticleVCContentRulesTextView!
-    
-    //Share Function
-    @IBOutlet weak var shareButton:     ChromistaButton!
+    @IBOutlet weak var shareButton: ChromistaButton!
     @IBOutlet weak var shareButtonBack: ChromistaActionButtonsBack!
+    
     
     //MARK: - Overrides
     override func viewDidAppear(_ animated: Bool) {
@@ -75,10 +71,7 @@ extension MakingArticleViewController: MFMailComposeViewControllerDelegate {
 extension MakingArticleViewController {
     @IBAction func mail(_ sender: UIButton) {
         let composeVC = MFMailComposeViewController()
-        
-        ///Check for errors MFMailComposeViewController
         guard MFMailComposeViewController.canSendMail() else { return }
-        
         let alertController = UIAlertController(title: "🧐", message: "You have precisely read the rules and are sure that your article is correct ?", preferredStyle: .alert)
         
         ///Setup UIAlertActions
@@ -92,22 +85,14 @@ extension MakingArticleViewController {
         /// Add Actions
         alertController.addAction(noAction)
         alertController.addAction(yesAction)
-        
-        /// Present UIAlertController
         presenter.presentAlert(for: self, alertController: alertController)
     }
     
     
     func showComposer(composeVC: MFMailComposeViewController) {
-        
-        ///Check for errors MFMailComposeViewController
         guard MFMailComposeViewController.canSendMail() else { return }
-        
-        /// Setup MFMailComposeViewController
         composeVC.mailComposeDelegate = self
         presenter.setupComposeVC(for: composeVC)
-        
-        /// Present MFMailComposeViewController
         present(composeVC, animated: true)
     }
 }

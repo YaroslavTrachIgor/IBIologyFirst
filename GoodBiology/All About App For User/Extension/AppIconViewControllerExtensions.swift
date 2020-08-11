@@ -20,28 +20,23 @@ extension AppIconViewController: AboutAppVCSetupProtocol {
 extension AppIconViewController {
     
     // MARK: Private
-    /// Setup SwithView
+    ///Setup SwithView
     private func switchViewPrefering() {
         switchLabel.text = "Hide Shadow"
         switchOutlet.switchBasics()
         switchView.editorsViews()
     }
     
-    /// Setup imageView Alpha
+    ///Setup imageView Alpha
     private func setupImageViewAlpha() {
         let alpha: CGFloat = 0
-        
         imageView.alpha = alpha
     }
     
-    /// Setup Colors for dark and light mode
+    ///Setup Colors for dark and light mode
     private func systemColorsPrfering() {
         if #available(iOS 13.0, *) {
-            
-            /// UILabel
             switchLabel.labelSystemColor()
-            
-            /// UIView
             switchView.viewSystemBack()
             view.viewSystemBack()
         }

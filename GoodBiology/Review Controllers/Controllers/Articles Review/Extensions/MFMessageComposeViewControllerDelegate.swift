@@ -9,7 +9,7 @@
 import Foundation
 import MessageUI
 
-// MARK: MFMessageComposeViewControllerDelegate
+// MARK: - MFMessageComposeViewControllerDelegate
 extension ArticlesReviewViewController: MFMessageComposeViewControllerDelegate {
     func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
         switch result {

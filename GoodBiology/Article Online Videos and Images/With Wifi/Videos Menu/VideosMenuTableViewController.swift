@@ -8,8 +8,17 @@
 
 import UIKit
 
+//MARK: - VideosMenuTableViewControllerProtocol protocol
+protocol VideosMenuTableViewControllerProtocol {
+    func searchBarButtonPrefering()
+    func preferingSearchController()
+    func refreshControlPrefering()
+}
+
+
+
 //MARK: - Main VideosMenuTableViewController Class
-class VideosMenuTableViewController: UITableViewController {
+class VideosMenuTableViewController: UITableViewController, BasicViewControllerStatusBarBackColorSetupProtocol {
 
     //MARK: VideosMenuTableViewControllerPresenter
     let presenter = VideosMenuTableViewControllerPresenter()
@@ -40,13 +49,29 @@ class VideosMenuTableViewController: UITableViewController {
         preferingSearchController()
         searchBarButtonPrefering()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        ///Set navBar backgroundColor
+        navigationController?.navigationBar.backgroundColor = .systemGroupedBackground
+        setupStatusBar(for: self, backColor: .systemGroupedBackground)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        ///Remove navBar backgroundColor
+        navigationController?.navigationBar.backgroundColor = .white
+        setupStatusBar(for: self, backColor: .white)
+    }
 }
 
 
 
-//MARK: - VideosMenuTableViewController private methods
-extension VideosMenuTableViewController {
-    private func searchBarButtonPrefering() {
+//MARK: - VideosMenuTableViewControllerProtocol extension
+extension VideosMenuTableViewController: VideosMenuTableViewControllerProtocol {
+    internal func searchBarButtonPrefering() {
         if let buttonItem = searchController.searchBar.subviews.first?.subviews.last as? UIButton {
             
             /// Setup searchBar Font
@@ -55,7 +80,7 @@ extension VideosMenuTableViewController {
     }
     
     
-    private func preferingSearchController() {
+    internal func preferingSearchController() {
         searchController.searchResultsUpdater = self
         let searchTextAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
         searchTextAppearance.font = UIFont(name: BasicFonts.mediumFont, size: 14)
@@ -65,11 +90,13 @@ extension VideosMenuTableViewController {
     }
     
         
-    private func refreshControlPrefering() {
+    internal func refreshControlPrefering() {
         
         /// Setup refreshControl
         presenter.setRefreshControl(tableView: table, refreshControl: settingsRefreshControl)
     }
+    
+    
 }
 
 

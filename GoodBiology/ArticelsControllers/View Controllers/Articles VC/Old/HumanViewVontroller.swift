@@ -50,6 +50,18 @@ final class HumanViewVontroller: UIViewController {
         finalView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setTabBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        setTabBarHidden(false)
+    }
+    
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
     
     //MARK: Public
@@ -153,21 +165,29 @@ extension HumanViewVontroller {
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationuttonOutlet.isHidden = false
         case 1:
             textView.text = HumanArticleData.manBasicsContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationuttonOutlet.isHidden = false
         case 2:
             textView.text = HumanArticleData.manStructureContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationuttonOutlet.isHidden = false
         case 3:
             textView.text = ""
             
             goToImagesButton.isHidden = false
             goToVideosButton.isHidden = false
+            
+            notificationuttonOutlet.isHidden = true
         default:
             print("Error")
         }

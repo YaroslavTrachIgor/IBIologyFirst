@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1231"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-Sq-RTq" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="8" width="341" height="117"/>
+                                        <rect key="frame" x="17" y="14" width="341" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Pl" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-wU-idI" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="333" height="34.5"/>
@@ -101,7 +101,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qh3-Xy-yo7" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="133" width="341" height="117"/>
+                                        <rect key="frame" x="17" y="143" width="341" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" An" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7m-yK-Hi5" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="333" height="34.5"/>
@@ -139,7 +139,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sG-2w-Ydw" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="258" width="341" height="117"/>
+                                        <rect key="frame" x="17" y="272" width="341" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO5-qQ-02i" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="325" height="34.5"/>
@@ -178,7 +178,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8V-st-5KD" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="383" width="341" height="117"/>
+                                        <rect key="frame" x="17" y="401" width="341" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAW-h7-8BA" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="333" height="34.5"/>
@@ -216,7 +216,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rb-IT-cy6" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="508" width="341" height="117"/>
+                                        <rect key="frame" x="17" y="530" width="341" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Vi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqf-B8-q89" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="325" height="34.5"/>
@@ -254,7 +254,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFh-fB-rRx" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="633" width="341" height="117"/>
+                                        <rect key="frame" x="17" y="659" width="341" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Ar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hog-Yb-m6k" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="325" height="34.5"/>
@@ -292,7 +292,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VW0-Ze-Awu" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="758" width="341" height="117"/>
+                                        <rect key="frame" x="17" y="788" width="341" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Fu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfY-T0-bHc" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="333" height="34.5"/>
@@ -338,7 +338,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4n-0f-tXi" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="216" y="13" width="135" height="42"/>
+                                        <rect key="frame" x="216" y="14" width="135" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtK-43-kqo">
                                                 <rect key="frame" x="105" y="0.0" width="30" height="42"/>
@@ -376,7 +376,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E5F-mW-F8b" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="263" y="68" width="88" height="42"/>
+                                        <rect key="frame" x="263" y="69" width="88" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kyq-AE-YbF">
                                                 <rect key="frame" x="55" y="0.0" width="33" height="42"/>
@@ -427,7 +427,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  New Articles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNc-9h-v65" customClass="NewArticleLabel" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="883" width="341" height="30"/>
+                                        <rect key="frame" x="17" y="920" width="341" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="FWL-dh-fAh"/>
                                         </constraints>
@@ -436,7 +436,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEk-h5-ero" customClass="ArticlePreviewView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="17" y="921" width="341" height="117"/>
+                                        <rect key="frame" x="17" y="962" width="341" height="117"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ch" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGP-4a-mza" customClass="ArticlesMenuLabel" customModule="GoodBiology" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="325" height="35"/>
@@ -486,7 +486,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DZ-gR-KIm" customClass="PopularButton" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="211" y="178" width="140" height="34"/>
+                                        <rect key="frame" x="211" y="179" width="140" height="34"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="1DD-n7-wnD"/>
@@ -500,13 +500,13 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3D perspective 2 (1)" translatesAutoresizingMaskIntoConstraints="NO" id="eTn-pM-HXV">
-                                        <rect key="frame" x="0.0" y="1063" width="375" height="250"/>
+                                        <rect key="frame" x="0.0" y="1104" width="375" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="250" id="S0l-NL-ARx"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb6-Lp-vFL" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="248" y="123" width="103" height="42"/>
+                                        <rect key="frame" x="248" y="124" width="103" height="42"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9E-fD-VWj">
                                                 <rect key="frame" x="0.0" y="0.0" width="61" height="42"/>
@@ -561,28 +561,26 @@
                                     <constraint firstItem="gFh-fB-rRx" firstAttribute="centerX" secondItem="SfP-T5-VpX" secondAttribute="centerX" id="075-fD-13d"/>
                                     <constraint firstAttribute="bottom" secondItem="eTn-pM-HXV" secondAttribute="bottom" id="0iv-yy-ftd"/>
                                     <constraint firstItem="VW0-Ze-Awu" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="25d-jo-f3E"/>
+                                    <constraint firstItem="LNc-9h-v65" firstAttribute="top" secondItem="VW0-Ze-Awu" secondAttribute="bottom" constant="15" id="2C9-yG-cgE"/>
                                     <constraint firstAttribute="trailing" secondItem="LNc-9h-v65" secondAttribute="trailing" constant="17" id="3Zt-c8-SSO"/>
-                                    <constraint firstItem="5rb-IT-cy6" firstAttribute="top" secondItem="M8V-st-5KD" secondAttribute="bottom" constant="8" id="7Dx-i8-Wvc"/>
-                                    <constraint firstItem="LNc-9h-v65" firstAttribute="top" secondItem="VW0-Ze-Awu" secondAttribute="bottom" constant="8" id="8Ul-zM-Ht3"/>
+                                    <constraint firstItem="0sG-2w-Ydw" firstAttribute="top" secondItem="qh3-Xy-yo7" secondAttribute="bottom" constant="12" id="3lg-Ms-DrQ"/>
                                     <constraint firstAttribute="bottom" secondItem="eTn-pM-HXV" secondAttribute="bottom" id="ARD-Mr-D1d"/>
                                     <constraint firstItem="9gZ-Sq-RTq" firstAttribute="centerX" secondItem="SfP-T5-VpX" secondAttribute="centerX" id="BcL-UP-PF9"/>
+                                    <constraint firstItem="qh3-Xy-yo7" firstAttribute="top" secondItem="9gZ-Sq-RTq" secondAttribute="bottom" constant="12" id="F9T-8p-8Jk"/>
                                     <constraint firstItem="VW0-Ze-Awu" firstAttribute="centerX" secondItem="SfP-T5-VpX" secondAttribute="centerX" id="HM3-xg-MO8"/>
+                                    <constraint firstItem="C4n-0f-tXi" firstAttribute="top" secondItem="SfP-T5-VpX" secondAttribute="top" constant="14" id="HfB-uK-afK"/>
                                     <constraint firstItem="5rb-IT-cy6" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="Hh3-Wr-6AA"/>
                                     <constraint firstItem="qh3-Xy-yo7" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="Ic3-Di-i02"/>
-                                    <constraint firstItem="0sG-2w-Ydw" firstAttribute="top" secondItem="qh3-Xy-yo7" secondAttribute="bottom" constant="8" id="K4f-4v-F7i"/>
-                                    <constraint firstItem="qh3-Xy-yo7" firstAttribute="top" secondItem="9gZ-Sq-RTq" secondAttribute="bottom" constant="8" id="KBm-Xf-m7q"/>
                                     <constraint firstAttribute="trailing" secondItem="8DZ-gR-KIm" secondAttribute="trailing" constant="24" id="Kfj-Qk-gtF"/>
-                                    <constraint firstItem="gFh-fB-rRx" firstAttribute="top" secondItem="5rb-IT-cy6" secondAttribute="bottom" constant="8" id="Kxo-u4-Oly"/>
                                     <constraint firstAttribute="trailing" secondItem="qh3-Xy-yo7" secondAttribute="trailing" constant="17" id="MLQ-kt-Djg"/>
                                     <constraint firstAttribute="trailing" secondItem="9gZ-Sq-RTq" secondAttribute="trailing" constant="17" id="NLu-bI-jpv"/>
                                     <constraint firstItem="5rb-IT-cy6" firstAttribute="centerX" secondItem="SfP-T5-VpX" secondAttribute="centerX" id="OFb-s6-QyT"/>
+                                    <constraint firstItem="gFh-fB-rRx" firstAttribute="top" secondItem="5rb-IT-cy6" secondAttribute="bottom" constant="12" id="R88-Ki-XpT"/>
                                     <constraint firstItem="M8V-st-5KD" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="UMd-XF-heA"/>
                                     <constraint firstItem="0sG-2w-Ydw" firstAttribute="centerX" secondItem="SfP-T5-VpX" secondAttribute="centerX" id="Ucw-Cy-oLI"/>
                                     <constraint firstAttribute="trailing" secondItem="VW0-Ze-Awu" secondAttribute="trailing" constant="17" id="XU6-WC-CDF"/>
-                                    <constraint firstItem="dEk-h5-ero" firstAttribute="top" secondItem="LNc-9h-v65" secondAttribute="bottom" constant="8" id="Ycd-we-70a"/>
                                     <constraint firstAttribute="trailing" secondItem="8DZ-gR-KIm" secondAttribute="trailing" constant="24" id="ZRg-Lc-Low"/>
                                     <constraint firstAttribute="trailing" secondItem="M8V-st-5KD" secondAttribute="trailing" constant="17" id="auY-uD-Rmf"/>
-                                    <constraint firstItem="C4n-0f-tXi" firstAttribute="top" secondItem="SfP-T5-VpX" secondAttribute="top" constant="13" id="bAw-HG-Gdo"/>
                                     <constraint firstAttribute="trailing" secondItem="M8V-st-5KD" secondAttribute="trailing" constant="17" id="cPj-G5-jc1"/>
                                     <constraint firstItem="qh3-Xy-yo7" firstAttribute="centerX" secondItem="SfP-T5-VpX" secondAttribute="centerX" id="cjD-NS-uB3"/>
                                     <constraint firstItem="dEk-h5-ero" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="d1a-HH-5gh"/>
@@ -593,10 +591,10 @@
                                     <constraint firstItem="eTn-pM-HXV" firstAttribute="top" secondItem="dEk-h5-ero" secondAttribute="bottom" constant="25" id="fGC-xh-QgS"/>
                                     <constraint firstItem="E5F-mW-F8b" firstAttribute="top" secondItem="C4n-0f-tXi" secondAttribute="bottom" constant="13" id="fZE-1e-fuM"/>
                                     <constraint firstItem="0sG-2w-Ydw" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="hYM-vf-Kzm"/>
-                                    <constraint firstItem="M8V-st-5KD" firstAttribute="top" secondItem="0sG-2w-Ydw" secondAttribute="bottom" constant="8" id="k2m-ih-Gu0"/>
                                     <constraint firstAttribute="trailing" secondItem="qh3-Xy-yo7" secondAttribute="trailing" constant="17" id="lRj-V1-K0t"/>
                                     <constraint firstAttribute="trailing" secondItem="9gZ-Sq-RTq" secondAttribute="trailing" constant="17" id="mqh-vu-JGm"/>
                                     <constraint firstItem="LNc-9h-v65" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="nyv-sD-qyd"/>
+                                    <constraint firstItem="dEk-h5-ero" firstAttribute="top" secondItem="LNc-9h-v65" secondAttribute="bottom" constant="12" id="oRf-gs-8ya"/>
                                     <constraint firstAttribute="trailing" secondItem="5rb-IT-cy6" secondAttribute="trailing" constant="17" id="q4k-Vj-Pwd"/>
                                     <constraint firstItem="8DZ-gR-KIm" firstAttribute="top" secondItem="Yb6-Lp-vFL" secondAttribute="bottom" constant="13" id="q9V-TN-ruH"/>
                                     <constraint firstAttribute="trailing" secondItem="0sG-2w-Ydw" secondAttribute="trailing" constant="17" id="qWQ-VJ-OHw"/>
@@ -604,11 +602,13 @@
                                     <constraint firstAttribute="trailing" secondItem="Yb6-Lp-vFL" secondAttribute="trailing" constant="24" id="sOI-Vg-qHe"/>
                                     <constraint firstAttribute="trailing" secondItem="gFh-fB-rRx" secondAttribute="trailing" constant="17" id="snc-0Y-kZI"/>
                                     <constraint firstAttribute="trailing" secondItem="dEk-h5-ero" secondAttribute="trailing" constant="17" id="t2i-xq-VYy"/>
-                                    <constraint firstItem="VW0-Ze-Awu" firstAttribute="top" secondItem="gFh-fB-rRx" secondAttribute="bottom" constant="8" id="uKA-F6-dzO"/>
+                                    <constraint firstItem="VW0-Ze-Awu" firstAttribute="top" secondItem="gFh-fB-rRx" secondAttribute="bottom" constant="12" id="uMJ-Rq-O3s"/>
                                     <constraint firstItem="9gZ-Sq-RTq" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="ut3-d2-p7y"/>
                                     <constraint firstItem="gFh-fB-rRx" firstAttribute="leading" secondItem="SfP-T5-VpX" secondAttribute="leading" constant="17" id="v6T-9c-nEo"/>
                                     <constraint firstAttribute="trailing" secondItem="E5F-mW-F8b" secondAttribute="trailing" constant="24" id="vSD-U8-crc"/>
-                                    <constraint firstItem="9gZ-Sq-RTq" firstAttribute="top" secondItem="SfP-T5-VpX" secondAttribute="top" constant="8" id="wqf-qh-tGQ"/>
+                                    <constraint firstItem="5rb-IT-cy6" firstAttribute="top" secondItem="M8V-st-5KD" secondAttribute="bottom" constant="12" id="vY3-QJ-Hbg"/>
+                                    <constraint firstItem="M8V-st-5KD" firstAttribute="top" secondItem="0sG-2w-Ydw" secondAttribute="bottom" constant="12" id="w6s-Ve-hOx"/>
+                                    <constraint firstItem="9gZ-Sq-RTq" firstAttribute="top" secondItem="SfP-T5-VpX" secondAttribute="top" constant="14" id="wIN-UT-Qh4"/>
                                     <constraint firstItem="M8V-st-5KD" firstAttribute="centerX" secondItem="SfP-T5-VpX" secondAttribute="centerX" id="wry-LF-Xpf"/>
                                     <constraint firstAttribute="trailing" secondItem="C4n-0f-tXi" secondAttribute="trailing" constant="24" id="yjo-mq-0IX"/>
                                     <constraint firstAttribute="trailing" secondItem="gFh-fB-rRx" secondAttribute="trailing" constant="17" id="zYc-O3-Hml"/>
@@ -736,7 +736,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="35" id="Q0N-LW-0v9"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <state key="normal" title="Set notification">
                                                 <color key="titleColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </state>
@@ -798,7 +798,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vg3-mb-9X2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-884" y="-1034.0329835082459"/>
+            <point key="canvasLocation" x="-1058" y="-578"/>
         </scene>
         <!--Articles-->
         <scene sceneID="AUV-Yz-6Dh">
@@ -991,14 +991,14 @@
             <objects>
                 <viewController id="bLd-bm-TvC" customClass="ArticlesOnlineVideosViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mpo-GD-FBa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2nx-id-QVw">
-                                <rect key="frame" x="16" y="20" width="343" height="482"/>
+                                <rect key="frame" x="16" y="20" width="343" height="534"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Pa-z4-f6E">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="482"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="534"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -1020,7 +1020,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yTS-xG-kBh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Microbes Videos" id="Rr7-hz-lki">
+                    <navigationItem key="navigationItem" title="Microbes Videos" largeTitleDisplayMode="never" id="Rr7-hz-lki">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="Wwg-BW-K3O">
                                 <connections>
@@ -1055,21 +1055,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cab-tH-gms" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4337" y="-2613"/>
+            <point key="canvasLocation" x="-4348" y="-2638"/>
         </scene>
         <!--Animals Videos-->
         <scene sceneID="lJ1-ib-RPM">
             <objects>
                 <viewController id="Y9R-lj-nX1" customClass="ArticlesOnlineVideosViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DUP-jn-AeU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1R7-qF-hNm">
-                                <rect key="frame" x="16" y="20" width="343" height="482"/>
+                                <rect key="frame" x="16" y="20" width="343" height="534"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0sn-KK-5kO">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="482"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="534"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -1091,7 +1091,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eGD-K4-TL8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Animals Videos" id="f4Q-08-Ol2">
+                    <navigationItem key="navigationItem" title="Animals Videos" largeTitleDisplayMode="never" id="f4Q-08-Ol2">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="Ten-8n-oiM">
                                 <connections>
@@ -1133,14 +1133,14 @@
             <objects>
                 <viewController id="1Cs-PJ-ilr" customClass="ArticlesOnlineVideosViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c93-tg-spI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jMw-ee-I4D">
-                                <rect key="frame" x="20" y="20" width="335" height="482"/>
+                                <rect key="frame" x="20" y="20" width="335" height="534"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXj-Oe-TmQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="482"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="534"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -1162,7 +1162,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ja5-NV-40Q"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Plants Videos" id="Cqq-S1-oy4">
+                    <navigationItem key="navigationItem" title="Plants Videos" largeTitleDisplayMode="never" id="Cqq-S1-oy4">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="WW7-gW-gMs">
                                 <connections>
@@ -1210,24 +1210,24 @@
                         <sections>
                             <tableViewSection headerTitle="Videos" id="r8a-gd-CbC">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ZBf-8J-TOS" detailTextLabel="9GY-Mp-JKB" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="v5u-88-Bxd">
-                                        <rect key="frame" x="16" y="55.5" width="343" height="64"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="ZBf-8J-TOS" detailTextLabel="9GY-Mp-JKB" rowHeight="73" style="IBUITableViewCellStyleSubtitle" id="v5u-88-Bxd">
+                                        <rect key="frame" x="16" y="55.5" width="343" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="v5u-88-Bxd" id="kLg-R0-2z9">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="64"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="73"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Videos about Plants " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZBf-8J-TOS">
-                                                    <rect key="frame" x="15" y="10" width="160.5" height="23.5"/>
+                                                    <rect key="frame" x="15" y="15" width="160.5" height="23.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Plants In YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9GY-Mp-JKB">
-                                                    <rect key="frame" x="15" y="36.5" width="112" height="16"/>
+                                                    <rect key="frame" x="15" y="41.5" width="104.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1239,24 +1239,24 @@
                                             <segue destination="1Cs-PJ-ilr" kind="show" trigger="accessoryAction" id="Wtx-iO-vJm"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Fir-dq-PTF" detailTextLabel="gAG-1z-bVi" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="emj-ns-MUx">
-                                        <rect key="frame" x="16" y="119.5" width="343" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Fir-dq-PTF" detailTextLabel="gAG-1z-bVi" rowHeight="67" style="IBUITableViewCellStyleSubtitle" id="emj-ns-MUx">
+                                        <rect key="frame" x="16" y="128.5" width="343" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="emj-ns-MUx" id="lqW-Bc-din">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Videos about Animals " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fir-dq-PTF">
-                                                    <rect key="frame" x="15" y="7" width="175.5" height="23.5"/>
+                                                    <rect key="frame" x="15" y="12" width="175.5" height="23.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Animals In YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gAG-1z-bVi">
-                                                    <rect key="frame" x="15" y="33.5" width="120.5" height="16"/>
+                                                    <rect key="frame" x="15" y="38.5" width="112.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1268,24 +1268,24 @@
                                             <segue destination="Y9R-lj-nX1" kind="show" trigger="accessoryAction" id="3gE-2N-40H"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6Ph-Jo-Qja" detailTextLabel="6tQ-PB-GL8" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="nBJ-gl-WA0">
-                                        <rect key="frame" x="16" y="177.5" width="343" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="6Ph-Jo-Qja" detailTextLabel="6tQ-PB-GL8" rowHeight="67" style="IBUITableViewCellStyleSubtitle" id="nBJ-gl-WA0">
+                                        <rect key="frame" x="16" y="195.5" width="343" height="67"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nBJ-gl-WA0" id="QHI-LE-70A">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Videos about Microbes " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Ph-Jo-Qja">
-                                                    <rect key="frame" x="15" y="7" width="186" height="23.5"/>
+                                                    <rect key="frame" x="15" y="12" width="186" height="23.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Microbes In YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6tQ-PB-GL8">
-                                                    <rect key="frame" x="15" y="33.5" width="128.5" height="16"/>
+                                                    <rect key="frame" x="15" y="38.5" width="120" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1293,27 +1293,28 @@
                                         </tableViewCellContentView>
                                         <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
-                                            <segue destination="bLd-bm-TvC" kind="show" trigger="accessoryAction" id="rKn-Mj-Xwb"/>
+                                            <segue destination="bLd-bm-TvC" kind="show" trigger="accessoryAction" id="YqF-zY-uDd"/>
+                                            <segue destination="bLd-bm-TvC" kind="show" id="oYU-jY-90s"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Gay-wi-4N6" detailTextLabel="KgX-RY-Rc6" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="MEc-fR-WOL">
-                                        <rect key="frame" x="16" y="235.5" width="343" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Gay-wi-4N6" detailTextLabel="KgX-RY-Rc6" rowHeight="62" style="IBUITableViewCellStyleSubtitle" id="MEc-fR-WOL">
+                                        <rect key="frame" x="16" y="262.5" width="343" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MEc-fR-WOL" id="vRh-Cd-5TG">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Videos about Viruses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gay-wi-4N6">
-                                                    <rect key="frame" x="15" y="7" width="164.5" height="23.5"/>
+                                                    <rect key="frame" x="15" y="9" width="164.5" height="23.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Viruses In YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KgX-RY-Rc6">
-                                                    <rect key="frame" x="15" y="33.5" width="118" height="16"/>
+                                                    <rect key="frame" x="15" y="35.5" width="110" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1325,24 +1326,24 @@
                                             <segue destination="cOG-pP-Vjh" kind="show" trigger="accessoryAction" id="NlQ-Kq-n1z"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yB5-to-59l" detailTextLabel="mB5-lJ-Mng" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="8t4-34-wUI">
-                                        <rect key="frame" x="16" y="293.5" width="343" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="yB5-to-59l" detailTextLabel="mB5-lJ-Mng" rowHeight="62" style="IBUITableViewCellStyleSubtitle" id="8t4-34-wUI">
+                                        <rect key="frame" x="16" y="324.5" width="343" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8t4-34-wUI" id="Bce-S7-Lpr">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Videos about Funguses " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yB5-to-59l">
-                                                    <rect key="frame" x="15" y="7" width="187.5" height="23.5"/>
+                                                    <rect key="frame" x="15" y="9" width="187.5" height="23.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Funguses In YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mB5-lJ-Mng">
-                                                    <rect key="frame" x="15" y="33.5" width="131.5" height="16"/>
+                                                    <rect key="frame" x="15" y="35.5" width="122.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1354,24 +1355,24 @@
                                             <segue destination="jB8-Do-PAJ" kind="show" trigger="accessoryAction" id="g3q-Fr-BbU"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5dq-gc-8xG" detailTextLabel="fym-i7-vjh" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="Vuj-oa-HAC">
-                                        <rect key="frame" x="16" y="351.5" width="343" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5dq-gc-8xG" detailTextLabel="fym-i7-vjh" rowHeight="62" style="IBUITableViewCellStyleSubtitle" id="Vuj-oa-HAC">
+                                        <rect key="frame" x="16" y="386.5" width="343" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vuj-oa-HAC" id="Lgv-MD-xFE">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Videos about Archaea " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5dq-gc-8xG">
-                                                    <rect key="frame" x="15" y="7" width="177" height="23.5"/>
+                                                    <rect key="frame" x="15" y="9" width="177" height="23.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Archaea In YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fym-i7-vjh">
-                                                    <rect key="frame" x="15" y="33.5" width="122.5" height="16"/>
+                                                    <rect key="frame" x="15" y="35.5" width="114.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1383,24 +1384,24 @@
                                             <segue destination="qC1-h6-sNY" kind="show" trigger="accessoryAction" id="Cer-DZ-Zqw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Jrj-7A-xNh" detailTextLabel="VdD-7P-TcR" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="bnN-WJ-qix">
-                                        <rect key="frame" x="16" y="409.5" width="343" height="58"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Jrj-7A-xNh" detailTextLabel="VdD-7P-TcR" rowHeight="62" style="IBUITableViewCellStyleSubtitle" id="bnN-WJ-qix">
+                                        <rect key="frame" x="16" y="448.5" width="343" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bnN-WJ-qix" id="8zE-g5-0F0">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="58"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Videos about Human " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jrj-7A-xNh">
-                                                    <rect key="frame" x="15" y="7" width="170" height="23.5"/>
+                                                    <rect key="frame" x="15" y="9" width="170" height="23.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Human In YouTube" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VdD-7P-TcR">
-                                                    <rect key="frame" x="15" y="33.5" width="115.5" height="16"/>
+                                                    <rect key="frame" x="15" y="35.5" width="107.5" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                     <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1815,7 +1816,7 @@
                                 </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-iP-Hxi">
-                                <rect key="frame" x="16" y="59" width="343" height="415"/>
+                                <rect key="frame" x="16" y="62" width="343" height="388"/>
                                 <string key="text">Plants are mainly multicellular, predominantly photosynthetic eukaryotes of the kingdom Plantae. They form the clade Viridiplantae that includes the flowering plants, conifers and other gymnosperms, ferns and their allies, hornworts, liverworts, mosses and the green algae, and excludes the red and brown algae. Historically, plants were treated as one of two kingdoms including all living things that were not animals, and all algae and fungi were treated as plants. However, all current definitions of Plantae exclude the fungi and some algae, as well as the prokaryotes.
 
 Green plants obtain most of their energy from sunlight via photosynthesis by primary chloroplasts that are derived from endosymbiosis with cyanobacteria. Their chloroplasts contain chlorophylls a and b, which gives them their green color. Some plants are parasitic or mycotrophic and may lose the ability to produce normal amounts of chlorophyll or to photosynthesize. </string>
@@ -1824,7 +1825,7 @@ Green plants obtain most of their energy from sunlight via photosynthesis by pri
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rga-Vu-ZYg" customClass="NotificationButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="482" width="343" height="32"/>
+                                <rect key="frame" x="16" y="470" width="343" height="32"/>
                                 <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.70055650680000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="O50-aF-wmi"/>
@@ -2004,29 +2005,29 @@ Green plants obtain most of their energy from sunlight via photosynthesis by pri
                             <constraint firstItem="qaA-ld-BRP" firstAttribute="trailing" secondItem="8Yc-Oi-ua3" secondAttribute="trailing" id="2qE-dP-JFY"/>
                             <constraint firstItem="NbV-fm-zBp" firstAttribute="leading" secondItem="ghm-Zx-tmA" secondAttribute="leading" id="7HS-nI-Jey"/>
                             <constraint firstItem="JhV-iP-Hxi" firstAttribute="leading" secondItem="ghm-Zx-tmA" secondAttribute="leading" constant="16" id="BbN-4z-0wg"/>
+                            <constraint firstItem="Rga-Vu-ZYg" firstAttribute="top" secondItem="JhV-iP-Hxi" secondAttribute="bottom" constant="20" id="DE7-Io-Nfj"/>
                             <constraint firstItem="ghm-Zx-tmA" firstAttribute="trailing" secondItem="JhV-iP-Hxi" secondAttribute="trailing" constant="16" id="FEy-Ee-oSq"/>
                             <constraint firstItem="Rga-Vu-ZYg" firstAttribute="leading" secondItem="ghm-Zx-tmA" secondAttribute="leading" constant="16" id="Grb-48-Lnh"/>
                             <constraint firstItem="ghm-Zx-tmA" firstAttribute="trailing" secondItem="Rga-Vu-ZYg" secondAttribute="trailing" constant="16" id="HMa-D1-QQh"/>
                             <constraint firstItem="8Yc-Oi-ua3" firstAttribute="leading" secondItem="ghm-Zx-tmA" secondAttribute="leading" constant="16" id="KlV-Qw-mn8"/>
                             <constraint firstItem="ghm-Zx-tmA" firstAttribute="trailing" secondItem="6L2-WM-mqM" secondAttribute="trailing" constant="16" id="Nus-dI-BUp"/>
-                            <constraint firstItem="Rga-Vu-ZYg" firstAttribute="top" secondItem="JhV-iP-Hxi" secondAttribute="bottom" constant="8" id="QCc-vg-Bs6"/>
                             <constraint firstItem="NbV-fm-zBp" firstAttribute="bottom" secondItem="ghm-Zx-tmA" secondAttribute="bottom" id="R76-yw-ql0"/>
                             <constraint firstItem="qaA-ld-BRP" firstAttribute="top" secondItem="ghm-Zx-tmA" secondAttribute="top" constant="10" id="Uae-5x-16F"/>
                             <constraint firstItem="hLw-Po-4U1" firstAttribute="centerY" secondItem="ghm-Zx-tmA" secondAttribute="centerY" id="Uoe-Jw-ndH"/>
                             <constraint firstItem="NbV-fm-zBp" firstAttribute="trailing" secondItem="ghm-Zx-tmA" secondAttribute="trailing" id="VZA-QD-fPa"/>
                             <constraint firstItem="CZe-QS-MdE" firstAttribute="centerY" secondItem="ghm-Zx-tmA" secondAttribute="centerY" id="WqG-0t-c3k"/>
                             <constraint firstItem="Zcp-bY-1IE" firstAttribute="centerX" secondItem="ghm-Zx-tmA" secondAttribute="centerX" id="YqY-tE-Bwu"/>
-                            <constraint firstItem="JhV-iP-Hxi" firstAttribute="top" secondItem="8Yc-Oi-ua3" secondAttribute="bottom" constant="17" id="b1r-kK-CFe"/>
                             <constraint firstItem="6L2-WM-mqM" firstAttribute="top" secondItem="ghm-Zx-tmA" secondAttribute="top" constant="10" id="bAF-Id-ACH"/>
                             <constraint firstItem="QxJ-CR-2vb" firstAttribute="leading" secondItem="14H-fC-QP4" secondAttribute="leadingMargin" constant="24" id="eCG-zZ-KbY"/>
+                            <constraint firstItem="ghm-Zx-tmA" firstAttribute="bottom" secondItem="Rga-Vu-ZYg" secondAttribute="bottom" constant="20" id="efy-OA-ETL"/>
                             <constraint firstItem="hLw-Po-4U1" firstAttribute="centerX" secondItem="ghm-Zx-tmA" secondAttribute="centerX" id="ewO-VF-Aah"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QxJ-CR-2vb" secondAttribute="trailing" constant="25" id="n1i-RX-UQl"/>
                             <constraint firstItem="Zcp-bY-1IE" firstAttribute="top" secondItem="CZe-QS-MdE" secondAttribute="bottom" constant="16" id="oh7-Kf-8aw"/>
-                            <constraint firstItem="ghm-Zx-tmA" firstAttribute="bottom" secondItem="Rga-Vu-ZYg" secondAttribute="bottom" constant="8" id="qHd-CT-5lC"/>
                             <constraint firstItem="ghm-Zx-tmA" firstAttribute="bottom" secondItem="QxJ-CR-2vb" secondAttribute="bottom" constant="231" id="qel-8i-1hV"/>
                             <constraint firstItem="8Yc-Oi-ua3" firstAttribute="top" secondItem="ghm-Zx-tmA" secondAttribute="top" constant="11" id="rmB-Cl-EVq"/>
                             <constraint firstItem="QxJ-CR-2vb" firstAttribute="top" secondItem="hLw-Po-4U1" secondAttribute="bottom" constant="8" id="sMa-G4-cNl"/>
                             <constraint firstItem="CZe-QS-MdE" firstAttribute="centerX" secondItem="ghm-Zx-tmA" secondAttribute="centerX" id="sWb-0M-HPj"/>
+                            <constraint firstItem="JhV-iP-Hxi" firstAttribute="top" secondItem="8Yc-Oi-ua3" secondAttribute="bottom" constant="20" id="vTk-qF-odI"/>
                             <constraint firstItem="ghm-Zx-tmA" firstAttribute="trailing" secondItem="8Yc-Oi-ua3" secondAttribute="trailing" constant="16" id="wK6-72-FLQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ghm-Zx-tmA"/>
@@ -2613,7 +2614,7 @@ Green plants obtain most of their energy from sunlight via photosynthesis by pri
                                 </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llx-Y2-E1A">
-                                <rect key="frame" x="16" y="59" width="343" height="396"/>
+                                <rect key="frame" x="16" y="62" width="343" height="381"/>
                                 <string key="text">Archaea constitute a domain of single-celled microorganisms. These microbes (archaea; singular archaeon) are prokaryotes, meaning they have no cell nucleus. Archaea were initially classified as bacteria, receiving the name archaebacteria (in the Archaebacteria kingdom), but this classification is outdated.
 
 Archaeal cells have unique properties separating them from the other two domains of life, Bacteria and Eukarya. The Archaea are further divided into multiple recognized phyla. Classification is difficult because most have not been isolated in the laboratory and were only detected by analysis of their nucleic acids in samples from their environment.
@@ -2652,7 +2653,7 @@ Archaea were initially viewed as extremophiles living in harsh environments, suc
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-jp-PNJ" customClass="NotificationButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="482" width="343" height="32"/>
+                                <rect key="frame" x="16" y="470" width="343" height="32"/>
                                 <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.70055650680000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="cvs-YV-8AC"/>
@@ -2762,14 +2763,14 @@ Archaea were initially viewed as extremophiles living in harsh environments, suc
                             <constraint firstItem="ial-d9-GCJ" firstAttribute="trailing" secondItem="okt-ma-FYs" secondAttribute="trailing" constant="178" id="Hz1-UL-UsK"/>
                             <constraint firstItem="Llx-Y2-E1A" firstAttribute="leading" secondItem="ial-d9-GCJ" secondAttribute="leading" constant="16" id="ICg-kH-4gg"/>
                             <constraint firstItem="dzB-YJ-uV1" firstAttribute="centerX" secondItem="ial-d9-GCJ" secondAttribute="centerX" id="JJw-AF-6eG"/>
+                            <constraint firstItem="ial-d9-GCJ" firstAttribute="bottom" secondItem="6eh-jp-PNJ" secondAttribute="bottom" constant="20" id="MB2-Tx-c5d"/>
                             <constraint firstItem="6eh-jp-PNJ" firstAttribute="top" secondItem="Llx-Y2-E1A" secondAttribute="bottom" constant="27" id="MXJ-Ts-9jh"/>
                             <constraint firstItem="okt-ma-FYs" firstAttribute="leading" secondItem="ial-d9-GCJ" secondAttribute="leading" constant="177" id="PSp-bS-Jkh"/>
+                            <constraint firstItem="Llx-Y2-E1A" firstAttribute="top" secondItem="nEO-hM-fiu" secondAttribute="bottom" constant="20" id="Wlb-lf-Gfc"/>
                             <constraint firstItem="dzB-YJ-uV1" firstAttribute="centerY" secondItem="ial-d9-GCJ" secondAttribute="centerY" id="XQt-Cj-c52"/>
                             <constraint firstItem="ial-d9-GCJ" firstAttribute="trailing" secondItem="UjT-49-kqW" secondAttribute="trailing" constant="16" id="aYb-k7-LYN"/>
                             <constraint firstItem="ial-d9-GCJ" firstAttribute="trailing" secondItem="nEO-hM-fiu" secondAttribute="trailing" constant="16" id="gQA-8O-2pl"/>
                             <constraint firstItem="Qr7-ge-CjQ" firstAttribute="top" secondItem="okt-ma-FYs" secondAttribute="bottom" constant="17" id="gTX-xJ-WdQ"/>
-                            <constraint firstItem="Llx-Y2-E1A" firstAttribute="top" secondItem="nEO-hM-fiu" secondAttribute="bottom" constant="17" id="jYF-Y8-iNO"/>
-                            <constraint firstItem="ial-d9-GCJ" firstAttribute="bottom" secondItem="6eh-jp-PNJ" secondAttribute="bottom" constant="8" id="mK2-qW-RuP"/>
                             <constraint firstItem="r1s-RB-lb8" firstAttribute="top" secondItem="ial-d9-GCJ" secondAttribute="top" constant="11" id="qtX-QL-ehZ"/>
                             <constraint firstItem="ial-d9-GCJ" firstAttribute="trailing" secondItem="r1s-RB-lb8" secondAttribute="trailing" constant="16" id="xo2-Tx-25p"/>
                             <constraint firstItem="ozY-MD-5ob" firstAttribute="top" secondItem="dzB-YJ-uV1" secondAttribute="bottom" constant="16" id="ydY-J5-I7T"/>
@@ -2830,14 +2831,14 @@ Archaea were initially viewed as extremophiles living in harsh environments, suc
             <objects>
                 <viewController id="BYl-eA-i2z" customClass="ArticleOnlineImagesViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IAC-NX-poq">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0DA-0n-DHu">
-                                <rect key="frame" x="16" y="16" width="343" height="539"/>
+                                <rect key="frame" x="16" y="16" width="343" height="591"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0EL-UP-Tte">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="539"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="591"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -2859,7 +2860,7 @@ Archaea were initially viewed as extremophiles living in harsh environments, suc
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gYB-dP-ivA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Archaea Images" id="Gdu-Ss-pTu">
+                    <navigationItem key="navigationItem" title="Archaea Images" largeTitleDisplayMode="never" id="Gdu-Ss-pTu">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="xx4-nU-uWL">
                                 <connections>
@@ -2901,14 +2902,14 @@ Archaea were initially viewed as extremophiles living in harsh environments, suc
             <objects>
                 <viewController id="FIN-j4-43Q" customClass="ArticleOnlineImagesViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qll-uu-hy9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9K-Wq-kh8">
-                                <rect key="frame" x="16" y="16" width="343" height="539"/>
+                                <rect key="frame" x="16" y="16" width="343" height="591"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jt-wI-QkM">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="539"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="591"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -2930,7 +2931,7 @@ Archaea were initially viewed as extremophiles living in harsh environments, suc
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d2k-Me-XXm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Plants Images" id="vLC-nZ-3vI">
+                    <navigationItem key="navigationItem" title="Plants Images" largeTitleDisplayMode="never" id="vLC-nZ-3vI">
                         <barButtonItem key="backBarButtonItem" title=" " id="YqB-Ys-lj0"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="6PP-d6-Qmz">
@@ -2990,7 +2991,7 @@ Archaea were initially viewed as extremophiles living in harsh environments, suc
                                 </connections>
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k04-L6-kyw">
-                                <rect key="frame" x="16" y="54" width="343" height="409"/>
+                                <rect key="frame" x="16" y="60" width="343" height="392"/>
                                 <string key="text">Animals are multicellular eukaryotic organisms that form the biological kingdom Animalia. With few exceptions, animals consume organic material, breathe oxygen, are able to move, can reproduce sexually, and grow from a hollow sphere of cells, the blastula, during embryonic development. Over 1.5 million living animal species have been described—of which around 1 million are insects—but it has been estimated there are over 7 million animal species in total. Animals range in length from 8.5 millionths of a metre to 33.6 metres (110 ft) and have complex interactions with each other and their environments, forming intricate food webs. The study of animals is called zoology.
 
 Most living animal species are in the Bilateria, a clade whose members have a bilaterally symmetric body plan. The Bilateria include the protostomes—in which many groups of invertebrates are found, such as nematodes, arthropods, and molluscs—and the deuterostomes, containing the echinoderms and chordates (including the vertebrates). Life forms interpreted as early animals were present in the Ediacaran biota of the late Precambrian. Many modern animal phyla became clearly established in the fossil record as marine species during the Cambrian explosion which began around 542 million years ago. 6,331 groups of genes common to all living animals have been identified; these may have arisen from a single common ancestor that lived 650 million years ago.
@@ -3004,7 +3005,7 @@ Humans make use of many other animal species for food, including meat, milk, and
                                 <dataDetectorType key="dataDetectorTypes" lookupSuggestion="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsx-wO-2m6" customClass="NotificationButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="485" width="343" height="30"/>
+                                <rect key="frame" x="16" y="472" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.70055650680000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Xej-gi-nFQ"/>
@@ -3140,7 +3141,7 @@ Humans make use of many other animal species for food, including meat, milk, and
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dc-3r-u5L" customClass="GADBannerView">
-                                <rect key="frame" x="27.5" y="465" width="320" height="50"/>
+                                <rect key="frame" x="27.5" y="452" width="320" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="YqY-fS-lWB"/>
@@ -3150,18 +3151,16 @@ Humans make use of many other animal species for food, including meat, milk, and
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="AZA-Bg-tix" firstAttribute="bottom" secondItem="Bsx-wO-2m6" secondAttribute="bottom" constant="20" id="0T4-3u-Ecy"/>
                             <constraint firstItem="AZA-Bg-tix" firstAttribute="trailing" secondItem="CVB-Gu-D1s" secondAttribute="trailing" constant="16" id="2SY-kf-mg6"/>
                             <constraint firstItem="AZA-Bg-tix" firstAttribute="trailing" secondItem="k04-L6-kyw" secondAttribute="trailing" constant="16" id="2os-GH-KLB"/>
                             <constraint firstItem="Bsx-wO-2m6" firstAttribute="leading" secondItem="k04-L6-kyw" secondAttribute="leading" id="4S4-YA-zNx"/>
                             <constraint firstItem="Iy2-92-wxf" firstAttribute="centerX" secondItem="Bsx-wO-2m6" secondAttribute="centerX" id="4o1-2S-4DW"/>
-                            <constraint firstItem="k04-L6-kyw" firstAttribute="top" secondItem="oAt-oV-P1z" secondAttribute="bottom" constant="14" id="7on-Cp-2uR"/>
                             <constraint firstItem="Iy2-92-wxf" firstAttribute="top" secondItem="0dZ-4V-SG3" secondAttribute="bottom" constant="8" id="8Vv-ap-Hi2"/>
                             <constraint firstItem="zgD-UJ-r31" firstAttribute="top" secondItem="S1f-jb-xDJ" secondAttribute="bottom" constant="16" id="9MW-uD-oMR"/>
                             <constraint firstItem="AZA-Bg-tix" firstAttribute="trailing" secondItem="eoE-m1-cek" secondAttribute="trailing" constant="16" id="EtP-Rg-4Xd"/>
-                            <constraint firstItem="AZA-Bg-tix" firstAttribute="bottom" secondItem="Bsx-wO-2m6" secondAttribute="bottom" constant="7" id="Fn2-m1-9Jq"/>
                             <constraint firstItem="AZA-Bg-tix" firstAttribute="trailing" secondItem="oAt-oV-P1z" secondAttribute="trailing" constant="16" id="HoQ-ZB-po3"/>
                             <constraint firstItem="Bsx-wO-2m6" firstAttribute="trailing" secondItem="k04-L6-kyw" secondAttribute="trailing" id="LpF-tc-Sau"/>
-                            <constraint firstItem="Bsx-wO-2m6" firstAttribute="top" secondItem="k04-L6-kyw" secondAttribute="bottom" constant="22" id="LzG-z9-dQV"/>
                             <constraint firstItem="zgD-UJ-r31" firstAttribute="centerX" secondItem="AZA-Bg-tix" secondAttribute="centerX" id="QDy-V0-1c5"/>
                             <constraint firstItem="0dZ-4V-SG3" firstAttribute="leading" secondItem="AZA-Bg-tix" secondAttribute="leading" constant="177" id="QIh-GG-gp0"/>
                             <constraint firstItem="S1f-jb-xDJ" firstAttribute="centerX" secondItem="AZA-Bg-tix" secondAttribute="centerX" id="QvO-Um-c0a"/>
@@ -3171,11 +3170,13 @@ Humans make use of many other animal species for food, including meat, milk, and
                             <constraint firstItem="CVB-Gu-D1s" firstAttribute="top" secondItem="oAt-oV-P1z" secondAttribute="top" id="Vmj-tS-cxn"/>
                             <constraint firstItem="0dZ-4V-SG3" firstAttribute="top" secondItem="AZA-Bg-tix" secondAttribute="top" constant="252" id="Xr3-sc-7jO"/>
                             <constraint firstItem="6dc-3r-u5L" firstAttribute="centerX" secondItem="AZA-Bg-tix" secondAttribute="centerX" id="hyz-2y-DXE"/>
+                            <constraint firstItem="k04-L6-kyw" firstAttribute="top" secondItem="oAt-oV-P1z" secondAttribute="bottom" constant="20" id="kL3-1A-cL9"/>
                             <constraint firstItem="oAt-oV-P1z" firstAttribute="top" secondItem="AZA-Bg-tix" secondAttribute="top" constant="9" id="nXH-ti-BxM"/>
                             <constraint firstItem="k04-L6-kyw" firstAttribute="leading" secondItem="AZA-Bg-tix" secondAttribute="leading" constant="16" id="qmG-WU-8gp"/>
                             <constraint firstItem="AZA-Bg-tix" firstAttribute="trailing" secondItem="0dZ-4V-SG3" secondAttribute="trailing" constant="178" id="sD7-wX-ygA"/>
                             <constraint firstItem="oAt-oV-P1z" firstAttribute="leading" secondItem="AZA-Bg-tix" secondAttribute="leading" constant="16" id="sX2-3O-jad"/>
-                            <constraint firstItem="AZA-Bg-tix" firstAttribute="bottom" secondItem="6dc-3r-u5L" secondAttribute="bottom" constant="7" id="t89-xn-i3W"/>
+                            <constraint firstItem="AZA-Bg-tix" firstAttribute="bottom" secondItem="6dc-3r-u5L" secondAttribute="bottom" constant="20" id="zgI-BZ-Hbm"/>
+                            <constraint firstItem="Bsx-wO-2m6" firstAttribute="top" secondItem="k04-L6-kyw" secondAttribute="bottom" constant="20" id="zww-fD-uKr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AZA-Bg-tix"/>
                     </view>
@@ -3233,14 +3234,14 @@ Humans make use of many other animal species for food, including meat, milk, and
             <objects>
                 <viewController id="Wl7-J1-EF8" customClass="ArticleOnlineImagesViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NHr-je-VNh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7W-c3-Lx7">
-                                <rect key="frame" x="16" y="16" width="343" height="539"/>
+                                <rect key="frame" x="16" y="16" width="343" height="591"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98l-4b-uhj">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="539"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="591"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -3262,7 +3263,7 @@ Humans make use of many other animal species for food, including meat, milk, and
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ubW-PN-IKu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Animals Images" id="1bx-wH-erP">
+                    <navigationItem key="navigationItem" title="Animals Images" largeTitleDisplayMode="never" id="1bx-wH-erP">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="ub2-qQ-kHG">
                                 <connections>
@@ -3308,7 +3309,7 @@ Humans make use of many other animal species for food, including meat, milk, and
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfb-FH-O2i">
-                                <rect key="frame" x="16" y="60" width="343" height="405"/>
+                                <rect key="frame" x="16" y="66" width="343" height="386"/>
                                 <string key="text">A virus is a small infectious agent that replicates only inside the living cells of other organisms. Viruses can infect all types of life forms, from animals and plants to microorganisms, including bacteria and archaea.
 
 Since Dmitri Ivanovsky's 1892 article describing a non-bacterial pathogen infecting tobacco plants, and the discovery of the tobacco mosaic virus by Martinus Beijerinck in 1898, about 5,000 virus species have been described in detail, although there are millions of types. Viruses are found in almost every ecosystem on Earth and are the most numerous type of biological entity. The study of viruses is known as virology, a sub-speciality of microbiology.
@@ -3325,7 +3326,7 @@ Viral infections in animals provoke an immune response that usually eliminates t
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnE-de-rf3" customClass="NotificationButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="482" width="343" height="30"/>
+                                <rect key="frame" x="16" y="472" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.70055650680000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lx6-zc-6iw"/>
@@ -3475,7 +3476,6 @@ Viral infections in animals provoke an immune response that usually eliminates t
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WnE-de-rf3" firstAttribute="top" secondItem="dfb-FH-O2i" secondAttribute="bottom" constant="17" id="3VY-yx-RxL"/>
                             <constraint firstItem="eeD-PU-y1o" firstAttribute="top" secondItem="VWo-gz-BNI" secondAttribute="bottom" constant="8" symbolic="YES" id="4aJ-oS-T51"/>
                             <constraint firstItem="san-5r-vmW" firstAttribute="top" secondItem="n11-pP-kft" secondAttribute="bottom" constant="8" id="6ay-49-RQa"/>
                             <constraint firstItem="san-5r-vmW" firstAttribute="leading" secondItem="n11-pP-kft" secondAttribute="leading" id="7Wt-PO-7Ae"/>
@@ -3485,7 +3485,6 @@ Viral infections in animals provoke an immune response that usually eliminates t
                             <constraint firstItem="2RL-ZR-kPA" firstAttribute="top" secondItem="c6m-8T-iYL" secondAttribute="top" constant="10" id="Giz-yt-GMz"/>
                             <constraint firstItem="eeD-PU-y1o" firstAttribute="centerX" secondItem="VWo-gz-BNI" secondAttribute="centerX" id="MIJ-Ch-aO1"/>
                             <constraint firstItem="c6m-8T-iYL" firstAttribute="trailing" secondItem="2RL-ZR-kPA" secondAttribute="trailing" constant="16" id="RD4-WL-2Q4"/>
-                            <constraint firstItem="c6m-8T-iYL" firstAttribute="bottom" secondItem="WnE-de-rf3" secondAttribute="bottom" constant="10" id="Slh-UA-QJB"/>
                             <constraint firstItem="c6m-8T-iYL" firstAttribute="trailing" secondItem="dfb-FH-O2i" secondAttribute="trailing" constant="16" id="Syf-9S-M2r"/>
                             <constraint firstItem="9Ll-34-god" firstAttribute="centerX" secondItem="c6m-8T-iYL" secondAttribute="centerX" id="TvX-sp-Nf6"/>
                             <constraint firstItem="c6m-8T-iYL" firstAttribute="trailing" secondItem="WnE-de-rf3" secondAttribute="trailing" constant="16" id="VEF-MH-BoM"/>
@@ -3494,11 +3493,13 @@ Viral infections in animals provoke an immune response that usually eliminates t
                             <constraint firstItem="XMg-PK-aQS" firstAttribute="centerX" secondItem="c6m-8T-iYL" secondAttribute="centerX" id="XvK-p0-kOS"/>
                             <constraint firstItem="n11-pP-kft" firstAttribute="leading" secondItem="c6m-8T-iYL" secondAttribute="leading" constant="16" id="YO6-3M-0bw"/>
                             <constraint firstItem="etO-xJ-vbW" firstAttribute="top" secondItem="c6m-8T-iYL" secondAttribute="top" constant="15" id="dVk-Ch-HIs"/>
+                            <constraint firstItem="dfb-FH-O2i" firstAttribute="top" secondItem="n11-pP-kft" secondAttribute="bottom" constant="20" id="eBY-L4-fsz"/>
                             <constraint firstItem="n11-pP-kft" firstAttribute="top" secondItem="c6m-8T-iYL" secondAttribute="top" constant="15" id="fvU-2B-ZUg"/>
-                            <constraint firstItem="dfb-FH-O2i" firstAttribute="top" secondItem="n11-pP-kft" secondAttribute="bottom" constant="14" id="g1p-VF-dL4"/>
+                            <constraint firstItem="c6m-8T-iYL" firstAttribute="bottom" secondItem="WnE-de-rf3" secondAttribute="bottom" constant="20" id="klS-Y5-vuJ"/>
                             <constraint firstItem="san-5r-vmW" firstAttribute="trailing" secondItem="n11-pP-kft" secondAttribute="trailing" id="o30-TT-Mxy"/>
                             <constraint firstItem="VWo-gz-BNI" firstAttribute="top" secondItem="c6m-8T-iYL" secondAttribute="top" constant="229" id="rKb-2j-WYX"/>
                             <constraint firstItem="c6m-8T-iYL" firstAttribute="trailing" secondItem="n11-pP-kft" secondAttribute="trailing" constant="16" id="sI2-dS-25w"/>
+                            <constraint firstItem="WnE-de-rf3" firstAttribute="top" secondItem="dfb-FH-O2i" secondAttribute="bottom" constant="20" id="tlL-gA-d1o"/>
                             <constraint firstItem="WnE-de-rf3" firstAttribute="leading" secondItem="c6m-8T-iYL" secondAttribute="leading" constant="16" id="uBx-Lw-r1B"/>
                             <constraint firstItem="c6m-8T-iYL" firstAttribute="trailing" secondItem="etO-xJ-vbW" secondAttribute="trailing" constant="16" id="xT1-LF-G5Z"/>
                         </constraints>
@@ -3556,14 +3557,14 @@ Viral infections in animals provoke an immune response that usually eliminates t
             <objects>
                 <viewController id="yaT-Az-FI6" customClass="ArticleOnlineImagesViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8M7-JM-wS7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFX-Nh-5rp">
-                                <rect key="frame" x="16" y="16" width="343" height="539"/>
+                                <rect key="frame" x="16" y="16" width="343" height="591"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgg-2S-iea">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="539"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="591"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -3585,7 +3586,7 @@ Viral infections in animals provoke an immune response that usually eliminates t
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z3f-we-dOG"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Viruses Images" id="fhh-sa-q4W">
+                    <navigationItem key="navigationItem" title="Viruses Images" largeTitleDisplayMode="never" id="fhh-sa-q4W">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="OLP-P5-paL">
                                 <connections>
@@ -3631,7 +3632,7 @@ Viral infections in animals provoke an immune response that usually eliminates t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zhR-6b-ZG0">
-                                <rect key="frame" x="16" y="59" width="343" height="391"/>
+                                <rect key="frame" x="16" y="65" width="343" height="373"/>
                                 <string key="text">Human is a social being, possessing mind and consciousness, as well as a subject of social history activity and culture. It originated on Earth as a result of an evolutionary process - anthropogenesis, the details of which are still being studied. The specific features of man, distinguishing him from other animals, are erect, highly developed brain, thinking and articulate speech. A person studies and changes himself and the world around him, creates culture and his own history. The essence of man, his origin and purpose, his place in the world were and remain the main problems of philosophy, religion, science and art. Acceptance of responsibility for actions, the presence of moral judgments. Describing a person, noting his biological inability, the lack of specialization of his organs for any animal existence, the ability to produce tools, fire, and use them, speechless, plasticity of behavior.</string>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
@@ -3651,7 +3652,7 @@ Viral infections in animals provoke an immune response that usually eliminates t
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eum-4J-qcW" customClass="NotificationButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="481" width="343" height="33"/>
+                                <rect key="frame" x="16" y="469" width="343" height="33"/>
                                 <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.70055650680000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="IjV-OG-xag"/>
@@ -3790,15 +3791,15 @@ Viral infections in animals provoke an immune response that usually eliminates t
                             <constraint firstItem="L6J-b4-7pC" firstAttribute="centerX" secondItem="rvY-ue-jD4" secondAttribute="centerX" id="4oW-ku-X0J"/>
                             <constraint firstItem="wKv-LA-Cqp" firstAttribute="leading" secondItem="zhR-6b-ZG0" secondAttribute="leading" id="7X6-ty-gnq"/>
                             <constraint firstItem="wKv-LA-Cqp" firstAttribute="top" secondItem="rvY-ue-jD4" secondAttribute="top" constant="14" id="FIp-Vz-jys"/>
-                            <constraint firstItem="rvY-ue-jD4" firstAttribute="bottom" secondItem="Eum-4J-qcW" secondAttribute="bottom" constant="8" id="Giu-Vz-m5L"/>
                             <constraint firstItem="bMR-Ak-Kok" firstAttribute="leading" secondItem="rvY-ue-jD4" secondAttribute="leading" constant="177" id="I0c-2k-5dv"/>
                             <constraint firstItem="rvY-ue-jD4" firstAttribute="trailing" secondItem="6pz-we-Uqx" secondAttribute="trailing" constant="16" id="Lbe-p5-Dee"/>
                             <constraint firstItem="rvY-ue-jD4" firstAttribute="trailing" secondItem="Eum-4J-qcW" secondAttribute="trailing" constant="16" id="N1z-ZU-4l0"/>
                             <constraint firstItem="j2n-1l-GkY" firstAttribute="centerY" secondItem="rvY-ue-jD4" secondAttribute="centerY" id="OUf-O5-wXP"/>
-                            <constraint firstItem="zhR-6b-ZG0" firstAttribute="top" secondItem="wKv-LA-Cqp" secondAttribute="bottom" constant="14" id="Rqd-ti-DQL"/>
+                            <constraint firstItem="zhR-6b-ZG0" firstAttribute="top" secondItem="wKv-LA-Cqp" secondAttribute="bottom" constant="20" id="PFh-AH-Bb6"/>
                             <constraint firstItem="rvY-ue-jD4" firstAttribute="trailing" secondItem="zhR-6b-ZG0" secondAttribute="trailing" constant="16" id="WFD-b9-uIh"/>
                             <constraint firstItem="wKv-LA-Cqp" firstAttribute="trailing" secondItem="zhR-6b-ZG0" secondAttribute="trailing" id="Xha-83-cH0"/>
                             <constraint firstItem="Eum-4J-qcW" firstAttribute="leading" secondItem="rvY-ue-jD4" secondAttribute="leading" constant="16" id="Y9P-3L-l4j"/>
+                            <constraint firstItem="rvY-ue-jD4" firstAttribute="bottom" secondItem="Eum-4J-qcW" secondAttribute="bottom" constant="20" id="Z5c-QQ-axk"/>
                             <constraint firstItem="6pz-we-Uqx" firstAttribute="top" secondItem="rvY-ue-jD4" secondAttribute="top" constant="14" id="a7U-pP-h7P"/>
                             <constraint firstItem="5lb-wA-JMW" firstAttribute="leading" secondItem="7gb-AH-B07" secondAttribute="leadingMargin" constant="24" id="alZ-M0-kx3"/>
                             <constraint firstItem="rvY-ue-jD4" firstAttribute="trailing" secondItem="bMR-Ak-Kok" secondAttribute="trailing" constant="178" id="bFc-r0-VzD"/>
@@ -3866,14 +3867,14 @@ Viral infections in animals provoke an immune response that usually eliminates t
             <objects>
                 <viewController id="7R5-ke-trX" customClass="ArticleOnlineImagesViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uRS-MB-gff">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yr-vX-ebY">
-                                <rect key="frame" x="16" y="16" width="343" height="539"/>
+                                <rect key="frame" x="16" y="16" width="343" height="591"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LiV-pH-pKl">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="539"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="591"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -3895,7 +3896,7 @@ Viral infections in animals provoke an immune response that usually eliminates t
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ck3-1f-5Ex"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Human Images" id="Y91-sN-8w4">
+                    <navigationItem key="navigationItem" title="Human Images" largeTitleDisplayMode="never" id="Y91-sN-8w4">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="bfG-sC-hpq">
                                 <connections>
@@ -3941,7 +3942,7 @@ Viral infections in animals provoke an immune response that usually eliminates t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTv-hl-6LG">
-                                <rect key="frame" x="16" y="61" width="343" height="408"/>
+                                <rect key="frame" x="16" y="64" width="343" height="380"/>
                                 <string key="text">A microorganism, or microbe, is a microscopic organism, which may exist in its single-celled form or in a colony of cells.
 
 The possible existence of unseen microbial life was suspected from ancient times, such as in Jain scriptures from 6th century BC India and the 1st century BC book On Agriculture by Marcus Terentius Varro. Microbiology, the scientific study of microorganisms, began with their observation under the microscope in the 1670s by Antonie van Leeuwenhoek. In the 1850s, Louis Pasteur found that microorganisms caused food spoilage, debunking the theory of spontaneous generation. In the 1880s Robert Koch discovered that microorganisms caused the diseases tuberculosis, cholera and anthrax.
@@ -3969,7 +3970,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddm-am-bFX" customClass="NotificationButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="483" width="343" height="30"/>
+                                <rect key="frame" x="16" y="472" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.70055650680000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uxO-qK-RV4"/>
@@ -4111,6 +4112,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                         <constraints>
                             <constraint firstItem="SYI-Q9-e8H" firstAttribute="centerY" secondItem="7Yp-Yd-OZi" secondAttribute="centerY" id="0Dc-4h-KIo"/>
                             <constraint firstItem="7Yp-Yd-OZi" firstAttribute="trailing" secondItem="l6q-ig-grB" secondAttribute="trailing" constant="16" id="4R7-Z8-As6"/>
+                            <constraint firstItem="KTv-hl-6LG" firstAttribute="top" secondItem="eTH-PO-gyd" secondAttribute="bottom" constant="20" id="9bq-MY-Q9I"/>
                             <constraint firstItem="oCV-PP-YWs" firstAttribute="leading" secondItem="7Yp-Yd-OZi" secondAttribute="leading" constant="177" id="CJC-R2-E9E"/>
                             <constraint firstItem="7Yp-Yd-OZi" firstAttribute="trailing" secondItem="oCV-PP-YWs" secondAttribute="trailing" constant="178" id="E4B-Km-5hb"/>
                             <constraint firstItem="KTv-hl-6LG" firstAttribute="leading" secondItem="7Yp-Yd-OZi" secondAttribute="leading" constant="16" id="E7D-1X-9dX"/>
@@ -4120,16 +4122,15 @@ Microbes are important in human culture and health in many ways, serving to ferm
                             <constraint firstItem="7Yp-Yd-OZi" firstAttribute="trailing" secondItem="eTH-PO-gyd" secondAttribute="trailing" constant="16" id="UyI-g9-UtP"/>
                             <constraint firstItem="7Yp-Yd-OZi" firstAttribute="bottom" secondItem="eyH-40-ryY" secondAttribute="bottom" constant="8" id="V6e-VR-EJt"/>
                             <constraint firstItem="7Yp-Yd-OZi" firstAttribute="bottom" secondItem="IiY-Oc-vTP" secondAttribute="bottom" constant="228" id="Xyz-dK-xVL"/>
-                            <constraint firstItem="ddm-am-bFX" firstAttribute="top" secondItem="KTv-hl-6LG" secondAttribute="bottom" constant="14" id="Y5q-Aq-v6t"/>
                             <constraint firstItem="IiY-Oc-vTP" firstAttribute="top" secondItem="oCV-PP-YWs" secondAttribute="bottom" constant="8" id="Z07-pJ-j9I"/>
-                            <constraint firstItem="7Yp-Yd-OZi" firstAttribute="bottom" secondItem="ddm-am-bFX" secondAttribute="bottom" constant="9" id="aXu-5n-hBq"/>
+                            <constraint firstItem="7Yp-Yd-OZi" firstAttribute="bottom" secondItem="ddm-am-bFX" secondAttribute="bottom" constant="20" id="anf-Y7-mN6"/>
+                            <constraint firstItem="eyH-40-ryY" firstAttribute="top" secondItem="KTv-hl-6LG" secondAttribute="bottom" constant="20" id="b6B-g4-Lff"/>
                             <constraint firstAttribute="trailing" secondItem="eyH-40-ryY" secondAttribute="trailing" constant="16" id="cPV-Pd-I1i"/>
                             <constraint firstItem="7Yp-Yd-OZi" firstAttribute="trailing" secondItem="KTv-hl-6LG" secondAttribute="trailing" constant="16" id="es7-8t-sKs"/>
                             <constraint firstItem="7Yp-Yd-OZi" firstAttribute="trailing" secondItem="ZOn-jK-Oqo" secondAttribute="trailing" constant="16" id="iCl-y2-Kdn"/>
                             <constraint firstItem="eTH-PO-gyd" firstAttribute="top" secondItem="7Yp-Yd-OZi" secondAttribute="top" constant="13" id="lX8-t6-aJ3"/>
                             <constraint firstItem="ddm-am-bFX" firstAttribute="leading" secondItem="KTv-hl-6LG" secondAttribute="leading" id="lgn-tl-Jjx"/>
                             <constraint firstItem="fRD-6J-ce2" firstAttribute="top" secondItem="SYI-Q9-e8H" secondAttribute="bottom" constant="8" id="mKH-jd-eGy"/>
-                            <constraint firstItem="KTv-hl-6LG" firstAttribute="top" secondItem="eTH-PO-gyd" secondAttribute="bottom" constant="17" id="nGx-8z-fCW"/>
                             <constraint firstItem="l6q-ig-grB" firstAttribute="top" secondItem="7Yp-Yd-OZi" secondAttribute="top" constant="13" id="nmb-Uq-V8Y"/>
                             <constraint firstItem="IiY-Oc-vTP" firstAttribute="leading" secondItem="QKU-9f-KiE" secondAttribute="leadingMargin" constant="24" id="p6S-Ok-4Dd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="IiY-Oc-vTP" secondAttribute="trailing" constant="25" id="q9G-mC-ch9"/>
@@ -4191,14 +4192,14 @@ Microbes are important in human culture and health in many ways, serving to ferm
             <objects>
                 <viewController id="pdp-Rj-Ugi" customClass="ArticleOnlineImagesViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c4B-Qa-E2d">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZD9-3r-v34">
-                                <rect key="frame" x="16" y="16" width="343" height="539"/>
+                                <rect key="frame" x="16" y="16" width="343" height="591"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VB-0f-krn">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="539"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="591"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -4220,7 +4221,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="79m-os-8S2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Microbes Images" id="Nsl-v1-Z4S">
+                    <navigationItem key="navigationItem" title="Microbes Images" largeTitleDisplayMode="never" id="Nsl-v1-Z4S">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="BmQ-Ki-dFJ">
                                 <connections>
@@ -4269,14 +4270,14 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                 <rect key="frame" x="16" y="434" width="343" height="30"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MN-KE-lPN">
-                                <rect key="frame" x="16" y="62" width="343" height="402"/>
+                                <rect key="frame" x="16" y="66" width="343" height="386"/>
                                 <string key="text">A fungus is any member of the group of eukaryotic organisms that includes microorganisms such as yeasts and molds, as well as the more familiar mushrooms. These organisms are classified as a kingdom, fungi, which is separate from the other eukaryotic life kingdoms of plants and animals. A characteristic that places fungi in a different kingdom from plants, bacteria, and some protists is chitin in their cell walls. Similar to animals, fungi are heterotrophs; they acquire their food by absorbing dissolved molecules, typically by secreting digestive enzymes into their environment. Fungi do not photosynthesise. Growth is their means of mobility, except for spores (a few of which are flagellated), which may travel through the air or water. Fungi are the principal decomposers in ecological systems. These and other differences place fungi in a single group of related organisms, named the Eumycota (true fungi or Eumycetes), which share a common ancestor (form a monophyletic group), an interpretation that is also strongly supported by molecular phylogenetics. This fungal group is distinct from the structurally similar myxomycetes (slime molds) and oomycetes (water molds). The discipline of biology devoted to the study of fungi is known as mycology (from the Greek μύκης mykes, mushroom). In the past, mycology was regarded as a branch of botany, although it is now known fungi are genetically more closely related to animals than to plants. Abundant worldwide, most fungi are inconspicuous because of the small size of their structures, and their cryptic lifestyles in soil or on dead matter. Fungi include symbionts of plants, animals, or other fungi and also parasites. They may become noticeable when fruiting, either as mushrooms or as molds. Fungi perform an essential role in the decomposition of organic matter and have fundamental roles in nutrient cycling and exchange in the environment. They have long been used as a direct source of human food, in the form of mushrooms and truffles; as a leavening agent for bread; and in the fermentation of various food products, such as wine, beer, and soy sauce. Since the 1940s, fungi have been used for the production of antibiotics, and, more recently, various enzymes produced by fungi are used industrially and in detergents. Fungi are also used as biological pesticides to control weeds, plant diseases and insect pests. Many species produce bioactive compounds called mycotoxins, such as alkaloids and polyketides, that are toxic to animals including humans. The fruiting structures of a few species contain psychotropic compounds and are consumed recreationally or in traditional spiritual ceremonies. Fungi can break down manufactured materials and buildings, and become significant pathogens of humans and other animals. Losses of crops due to fungal diseases (e.g., rice blast disease) or food spoilage can have a large impact on human food supplies and local economies. The fungus kingdom encompasses an enormous diversity of taxa with varied ecologies, life cycle strategies, and morphologies ranging from unicellular aquatic chytrids to large mushrooms. However, little is known of the true biodiversity of Kingdom Fungi, which has been estimated at 2.2 million to 3.8 million species. Of these, only about 120,000 have been described, with over 8,000 species known to be detrimental to plants and at least 300 that can be pathogenic to humans. Ever since the pioneering 18th and 19th century taxonomical works of Carl Linnaeus, Christian Hendrik Persoon, and Elias Magnus Fries, fungi have been classified according to their morphology (e.g., characteristics such as spore color or microscopic features) or physiology. Advances in molecular genetics have opened the way for DNA analysis to be incorporated into taxonomy, which has sometimes challenged the historical groupings based on morphology and other traits. Phylogenetic studies published in the last decade have helped reshape the classification within Kingdom Fungi, which is divided into one subkingdom, seven phyla, and ten subphyla.</string>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGq-Rt-Txy" customClass="NotificationButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="482" width="343" height="30"/>
+                                <rect key="frame" x="16" y="472" width="343" height="30"/>
                                 <color key="backgroundColor" red="0.19347812119999999" green="0.44650195370000001" blue="0.19395774120000001" alpha="0.70055650680000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GAP-BN-nW7"/>
@@ -4433,18 +4434,18 @@ Microbes are important in human culture and health in many ways, serving to ferm
                             <constraint firstAttribute="trailingMargin" secondItem="cw2-m1-aj4" secondAttribute="trailing" constant="25" id="OVp-4K-o8i"/>
                             <constraint firstItem="5v2-k7-82a" firstAttribute="top" secondItem="t7c-uN-aDc" secondAttribute="bottom" constant="8" id="QWC-Nz-QTG"/>
                             <constraint firstItem="nyR-4w-5Q0" firstAttribute="top" secondItem="at5-i9-IFp" secondAttribute="top" id="Tfh-c2-Qww"/>
+                            <constraint firstItem="5MN-KE-lPN" firstAttribute="top" secondItem="at5-i9-IFp" secondAttribute="bottom" constant="20" id="ULa-7g-yMu"/>
                             <constraint firstItem="atU-ez-BpW" firstAttribute="trailing" secondItem="WGq-Rt-Txy" secondAttribute="trailing" constant="16" id="VOo-bj-cMg"/>
                             <constraint firstItem="cw2-m1-aj4" firstAttribute="leading" secondItem="gOI-km-jrS" secondAttribute="leadingMargin" constant="24" id="XrG-HZ-yGN"/>
+                            <constraint firstItem="WGq-Rt-Txy" firstAttribute="top" secondItem="5MN-KE-lPN" secondAttribute="bottom" constant="20" id="Z6p-Kw-hYH"/>
                             <constraint firstItem="t7c-uN-aDc" firstAttribute="centerY" secondItem="atU-ez-BpW" secondAttribute="centerY" id="aoP-Y4-4kf"/>
                             <constraint firstItem="5MN-KE-lPN" firstAttribute="leading" secondItem="atU-ez-BpW" secondAttribute="leading" constant="16" id="bFd-Rs-bCC"/>
                             <constraint firstItem="5v2-k7-82a" firstAttribute="centerX" secondItem="atU-ez-BpW" secondAttribute="centerX" id="bKG-Qq-Efb"/>
                             <constraint firstItem="t7c-uN-aDc" firstAttribute="centerX" secondItem="atU-ez-BpW" secondAttribute="centerX" id="cxV-oZ-b1k"/>
                             <constraint firstItem="cw2-m1-aj4" firstAttribute="top" secondItem="uxB-Pn-h3h" secondAttribute="bottom" constant="18" id="hc4-nT-r0F"/>
-                            <constraint firstItem="WGq-Rt-Txy" firstAttribute="top" secondItem="5MN-KE-lPN" secondAttribute="bottom" constant="18" id="i10-rY-yxr"/>
                             <constraint firstItem="atU-ez-BpW" firstAttribute="trailing" secondItem="HlO-RF-2M8" secondAttribute="trailing" constant="16" id="jwE-i8-L8S"/>
-                            <constraint firstItem="atU-ez-BpW" firstAttribute="bottom" secondItem="WGq-Rt-Txy" secondAttribute="bottom" constant="10" id="maQ-ay-IlL"/>
                             <constraint firstItem="atU-ez-BpW" firstAttribute="trailing" secondItem="at5-i9-IFp" secondAttribute="trailing" constant="16" id="o27-19-Sv3"/>
-                            <constraint firstItem="5MN-KE-lPN" firstAttribute="top" secondItem="at5-i9-IFp" secondAttribute="bottom" constant="16" id="rRA-ex-MX6"/>
+                            <constraint firstItem="atU-ez-BpW" firstAttribute="bottom" secondItem="WGq-Rt-Txy" secondAttribute="bottom" constant="20" id="umU-vZ-eYS"/>
                             <constraint firstItem="at5-i9-IFp" firstAttribute="top" secondItem="atU-ez-BpW" secondAttribute="top" constant="15" id="v6E-Sp-XUd"/>
                             <constraint firstItem="HlO-RF-2M8" firstAttribute="leading" secondItem="atU-ez-BpW" secondAttribute="leading" constant="16" id="w2v-wD-gAi"/>
                             <constraint firstItem="atU-ez-BpW" firstAttribute="trailing" secondItem="uxB-Pn-h3h" secondAttribute="trailing" constant="178" id="zVL-UV-Qu7"/>
@@ -4503,14 +4504,14 @@ Microbes are important in human culture and health in many ways, serving to ferm
             <objects>
                 <viewController id="IFs-dO-IQS" customClass="ArticleOnlineImagesViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3JK-56-nTa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-SZ-PXR">
-                                <rect key="frame" x="16" y="16" width="343" height="539"/>
+                                <rect key="frame" x="16" y="16" width="343" height="591"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jn-S1-yw3">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="539"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="591"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -4532,7 +4533,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g9A-oG-7AM"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Funguses Images" id="NgH-3G-who">
+                    <navigationItem key="navigationItem" title="Funguses Images" largeTitleDisplayMode="never" id="NgH-3G-who">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="0Bh-ts-YIL">
                                 <connections>
@@ -4595,45 +4596,12 @@ Microbes are important in human culture and health in many ways, serving to ferm
                         <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uT0-NR-22h" customClass="ReadingOnTimeViewControllerButtonsBackView" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="26" y="62" width="323" height="187"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tFR-rD-9rN">
-                                        <rect key="frame" x="8" y="8" width="307" height="171"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="tFR-rD-9rN" secondAttribute="trailing" constant="8" id="E92-oo-VJv"/>
-                                    <constraint firstItem="tFR-rD-9rN" firstAttribute="leading" secondItem="uT0-NR-22h" secondAttribute="leading" constant="8" id="eFF-aD-i66"/>
-                                    <constraint firstAttribute="bottom" secondItem="tFR-rD-9rN" secondAttribute="bottom" constant="8" id="pq7-Hj-KVK"/>
-                                    <constraint firstItem="tFR-rD-9rN" firstAttribute="top" secondItem="uT0-NR-22h" secondAttribute="top" constant="8" id="zYv-g4-ngZ"/>
-                                </constraints>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsW-6A-Jo1">
                                 <rect key="frame" x="26" y="20" width="323" height="27.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aim-k1-pqH">
-                                <rect key="frame" x="16" y="470" width="343" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="cLN-ij-bEc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
-                                <state key="normal" title="New Article">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="newArticle:" destination="XWF-ss-Z1E" eventType="touchUpInside" id="Kbd-2i-Zmg"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycH-Va-dHg" customClass="ReadingOnTimeViewControllerButtonsBackView" customModule="GoodBiology" customModuleProvider="target">
                                 <rect key="frame" x="26" y="264" width="323" height="191"/>
                                 <subviews>
@@ -4714,6 +4682,39 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uT0-NR-22h" customClass="ReadingOnTimeViewControllerButtonsBackView" customModule="GoodBiology" customModuleProvider="target">
+                                <rect key="frame" x="26" y="62" width="323" height="187"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tFR-rD-9rN">
+                                        <rect key="frame" x="8" y="8" width="307" height="171"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tFR-rD-9rN" secondAttribute="trailing" constant="8" id="E92-oo-VJv"/>
+                                    <constraint firstItem="tFR-rD-9rN" firstAttribute="leading" secondItem="uT0-NR-22h" secondAttribute="leading" constant="8" id="eFF-aD-i66"/>
+                                    <constraint firstAttribute="bottom" secondItem="tFR-rD-9rN" secondAttribute="bottom" constant="8" id="pq7-Hj-KVK"/>
+                                    <constraint firstItem="tFR-rD-9rN" firstAttribute="top" secondItem="uT0-NR-22h" secondAttribute="top" constant="8" id="zYv-g4-ngZ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aim-k1-pqH">
+                                <rect key="frame" x="16" y="470" width="343" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="cLN-ij-bEc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                                <state key="normal" title="New Article">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="newArticle:" destination="XWF-ss-Z1E" eventType="touchUpInside" id="Kbd-2i-Zmg"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PuE-V4-JZp" customClass="ReadingOnTimeViewControllerScoreView" customModule="GoodBiology" customModuleProvider="target">
                                 <rect key="frame" x="26" y="62" width="308" height="183"/>
                                 <subviews>
@@ -4787,6 +4788,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etr-2F-g4B">
                                         <rect key="frame" x="0.0" y="0.0" width="51" height="41"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
                                         <color key="tintColor" red="0.1395460895" green="0.32578494860000001" blue="0.14253757140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Score"/>
                                         <connections>
@@ -4843,7 +4845,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                     </view>
                     <navigationItem key="navigationItem" title="Reading on time" id="leM-Lm-r2O">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="done" id="ZpB-U2-cRq">
+                            <barButtonItem style="done" systemItem="done" id="ZpB-U2-cRq">
                                 <connections>
                                     <action selector="done:" destination="XWF-ss-Z1E" id="VeM-Bq-RFi"/>
                                 </connections>
@@ -5866,11 +5868,11 @@ Microbes are important in human culture and health in many ways, serving to ferm
             <objects>
                 <viewController id="EkQ-Vc-fMH" customClass="MakingArticleViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Dh-zp-t3c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdL-Nu-xww" customClass="MailButton" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="22" y="529" width="331" height="37"/>
+                                <rect key="frame" x="22" y="573" width="331" height="37"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -5878,10 +5880,10 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gml-eA-gXV" customClass="ContentBack" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="16" y="67" width="343" height="442"/>
+                                <rect key="frame" x="16" y="163" width="343" height="390"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SCv-0L-o8p" customClass="MakingArticleVCContentRulesTextView" customModule="GoodBiology" customModuleProvider="target">
-                                        <rect key="frame" x="8" y="8" width="327" height="426"/>
+                                        <rect key="frame" x="8" y="8" width="327" height="374"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">1) We do not consider articles in which there are swear words
         
@@ -5903,7 +5905,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rules: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcK-uk-wQa">
-                                <rect key="frame" x="16" y="20" width="90" height="39"/>
+                                <rect key="frame" x="16" y="116" width="90" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="FfQ-7p-b44"/>
                                     <constraint firstAttribute="width" constant="90" id="SDt-YK-MfU"/>
@@ -5913,7 +5915,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vlP-1X-7VA" customClass="ChromistaActionButtonsBack" customModule="GoodBiology" customModuleProvider="target">
-                                <rect key="frame" x="319" y="20" width="40" height="40"/>
+                                <rect key="frame" x="319" y="116" width="40" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-AS-2gE" customClass="ChromistaButton" customModule="GoodBiology" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -11831,14 +11833,14 @@ Microbes are important in human culture and health in many ways, serving to ferm
             <objects>
                 <viewController id="qC1-h6-sNY" customClass="ArticlesOnlineVideosViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jSz-6N-2j4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DO9-s6-e5z">
-                                <rect key="frame" x="20" y="20" width="335" height="531"/>
+                                <rect key="frame" x="20" y="20" width="335" height="583"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ek2-Cm-huv">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="531"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="583"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -11860,7 +11862,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="03W-Ch-XE0"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Archaea Videos" id="MLD-vE-Scw">
+                    <navigationItem key="navigationItem" title="Archaea Videos" largeTitleDisplayMode="never" id="MLD-vE-Scw">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="NUj-Ey-jJv">
                                 <connections>
@@ -11902,14 +11904,14 @@ Microbes are important in human culture and health in many ways, serving to ferm
             <objects>
                 <viewController id="jB8-Do-PAJ" customClass="ArticlesOnlineVideosViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NGL-XP-Fft">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fku-g2-bcc">
-                                <rect key="frame" x="20" y="20" width="335" height="531"/>
+                                <rect key="frame" x="20" y="20" width="335" height="583"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zo9-ud-EeC">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="531"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="583"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -11931,7 +11933,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="klF-9b-uRq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Funguses Videos" id="9mf-Da-RxR">
+                    <navigationItem key="navigationItem" title="Funguses Videos" largeTitleDisplayMode="never" id="9mf-Da-RxR">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="GcL-Rb-GOT">
                                 <connections>
@@ -11973,14 +11975,14 @@ Microbes are important in human culture and health in many ways, serving to ferm
             <objects>
                 <viewController id="cOG-pP-Vjh" customClass="ArticlesOnlineVideosViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OwD-b3-x6p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubK-J9-F5P">
-                                <rect key="frame" x="20" y="20" width="335" height="482"/>
+                                <rect key="frame" x="20" y="20" width="335" height="534"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZV-TS-mZS">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="482"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="534"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -12002,7 +12004,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hrt-wp-3ja"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Viruses Videos" id="mDL-bQ-tQF">
+                    <navigationItem key="navigationItem" title="Viruses Videos" largeTitleDisplayMode="never" id="mDL-bQ-tQF">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="ThN-G9-U04">
                                 <connections>
@@ -12044,14 +12046,14 @@ Microbes are important in human culture and health in many ways, serving to ferm
             <objects>
                 <viewController id="RdQ-ov-lWD" customClass="ArticlesOnlineVideosViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tFy-P2-xDv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="571"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h1u-8X-V8i">
-                                <rect key="frame" x="20" y="20" width="335" height="531"/>
+                                <rect key="frame" x="20" y="20" width="335" height="583"/>
                                 <subviews>
                                     <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uzr-Vy-mmH">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="531"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="583"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </webView>
                                 </subviews>
@@ -12073,7 +12075,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YOm-u0-Zah"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Humen Videos" id="fNJ-lI-dZV">
+                    <navigationItem key="navigationItem" title="Humen Videos" largeTitleDisplayMode="never" id="fNJ-lI-dZV">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="fastForward" id="gmM-8b-Nnt">
                                 <connections>
@@ -12430,21 +12432,22 @@ Microbes are important in human culture and health in many ways, serving to ferm
         <scene sceneID="bYC-Vn-2AI">
             <objects>
                 <tableViewController id="d9z-yV-oec" customClass="ChromistaTableViewController" customModule="GoodBiology" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PhH-x9-H7B">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="PhH-x9-H7B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="separatorColor" red="0.94400209639693444" green="0.94400209639693444" blue="0.94400209639693444" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChromistaCell" textLabel="vmU-D4-EJV" rowHeight="39" style="IBUITableViewCellStyleDefault" id="KhZ-WZ-DUi">
-                                <rect key="frame" x="16" y="55.5" width="343" height="39"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ChromistaCell" textLabel="vmU-D4-EJV" rowHeight="45" style="IBUITableViewCellStyleDefault" id="KhZ-WZ-DUi">
+                                <rect key="frame" x="16" y="55.5" width="343" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KhZ-WZ-DUi" id="B7A-EE-59m">
-                                    <rect key="frame" x="0.0" y="0.0" width="317" height="39"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="317" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vmU-D4-EJV">
-                                            <rect key="frame" x="15" y="0.0" width="294" height="39"/>
+                                            <rect key="frame" x="15" y="0.0" width="294" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                             <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -12713,7 +12716,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="i4M-oo-MIV">
-                            <rect key="frame" x="0.0" y="1002" width="375" height="208"/>
+                            <rect key="frame" x="0.0" y="1229.5" width="375" height="208"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Data" translatesAutoresizingMaskIntoConstraints="NO" id="MfN-en-Q50">
@@ -12739,7 +12742,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NHH-xE-V5T">
-                                                    <rect key="frame" x="16" y="8.5" width="568" height="54"/>
+                                                    <rect key="frame" x="16" y="8.5" width="343" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plants Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAf-EM-6ya">
                                                             <rect key="frame" x="8" y="8" width="97" height="22"/>
@@ -12751,7 +12754,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EoD-Eb-r0z">
-                                                            <rect key="frame" x="486" y="8.5" width="72" height="37"/>
+                                                            <rect key="frame" x="261" y="8.5" width="72" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18.9 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48D-c4-14y">
                                                                     <rect key="frame" x="11" y="10" width="50" height="20"/>
@@ -12783,7 +12786,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X9u-nA-ZcS">
-                                                            <rect key="frame" x="461" y="14" width="17" height="26"/>
+                                                            <rect key="frame" x="236" y="14" width="17" height="26"/>
                                                             <color key="tintColor" red="0.25275542629999997" green="0.58330001840000001" blue="0.25338199099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="Sre-DW-YyI"/>
@@ -12826,7 +12829,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLg-Dp-TdW">
-                                                    <rect key="frame" x="16" y="8.5" width="568" height="54"/>
+                                                    <rect key="frame" x="16" y="8.5" width="343" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animals Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R12-AB-f3J">
                                                             <rect key="frame" x="8" y="8" width="111" height="22"/>
@@ -12838,7 +12841,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrJ-HT-WDT">
-                                                            <rect key="frame" x="484" y="8.5" width="74" height="37"/>
+                                                            <rect key="frame" x="259" y="8.5" width="74" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25.5 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-NI-WeK">
                                                                     <rect key="frame" x="11" y="10" width="52" height="20"/>
@@ -12870,7 +12873,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Fvq-mW-Qsj">
-                                                            <rect key="frame" x="459" y="14" width="17" height="26"/>
+                                                            <rect key="frame" x="234" y="14" width="17" height="26"/>
                                                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="5aw-c1-OmD"/>
@@ -12913,7 +12916,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnO-bb-usa">
-                                                    <rect key="frame" x="16" y="8.5" width="568" height="54"/>
+                                                    <rect key="frame" x="16" y="8.5" width="343" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viruses Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gin-cw-dSk">
                                                             <rect key="frame" x="8" y="8" width="105" height="22"/>
@@ -12925,7 +12928,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUP-pg-QY4">
-                                                            <rect key="frame" x="486" y="8.5" width="72" height="37"/>
+                                                            <rect key="frame" x="261" y="8.5" width="72" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.8 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pjk-be-xTd">
                                                                     <rect key="frame" x="11" y="10" width="50" height="20"/>
@@ -12957,7 +12960,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="4ai-5M-5bk">
-                                                            <rect key="frame" x="461" y="14" width="17" height="26"/>
+                                                            <rect key="frame" x="236" y="14" width="17" height="26"/>
                                                             <color key="tintColor" red="0.25275542629999997" green="0.58330001840000001" blue="0.25338199099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="qpW-gS-HCq"/>
@@ -13000,7 +13003,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XAx-71-z0d">
-                                                    <rect key="frame" x="16" y="8.5" width="568" height="54"/>
+                                                    <rect key="frame" x="16" y="8.5" width="343" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Archaea Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajI-PR-oGc">
                                                             <rect key="frame" x="8" y="8" width="112.5" height="22"/>
@@ -13012,7 +13015,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycl-HM-baU">
-                                                            <rect key="frame" x="486" y="8.5" width="72" height="37"/>
+                                                            <rect key="frame" x="261" y="8.5" width="72" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.0 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EV-Ha-VkG">
                                                                     <rect key="frame" x="11" y="10" width="50" height="20"/>
@@ -13044,7 +13047,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="T17-7o-LuR">
-                                                            <rect key="frame" x="461" y="14" width="17" height="26"/>
+                                                            <rect key="frame" x="236" y="14" width="17" height="26"/>
                                                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="2QQ-5s-JLr"/>
@@ -13088,7 +13091,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly9-Hp-zxK">
-                                                    <rect key="frame" x="16" y="8.5" width="568" height="54"/>
+                                                    <rect key="frame" x="16" y="8.5" width="343" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ra-p5-nRG">
                                                             <rect key="frame" x="8" y="8" width="106" height="22"/>
@@ -13100,7 +13103,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9j-q5-9QX">
-                                                            <rect key="frame" x="486" y="8.5" width="72" height="37"/>
+                                                            <rect key="frame" x="261" y="8.5" width="72" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.5 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsd-iM-75r">
                                                                     <rect key="frame" x="11" y="10" width="50" height="20"/>
@@ -13132,7 +13135,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vO5-sv-J93">
-                                                            <rect key="frame" x="461" y="14" width="17" height="26"/>
+                                                            <rect key="frame" x="236" y="14" width="17" height="26"/>
                                                             <color key="tintColor" red="0.25275542629999997" green="0.58330001840000001" blue="0.25338199099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="RLi-EN-3Y1"/>
@@ -13175,7 +13178,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W7c-vZ-ypX">
-                                                    <rect key="frame" x="16" y="8.5" width="568" height="54"/>
+                                                    <rect key="frame" x="16" y="8.5" width="343" height="54"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chromista Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGD-ZW-4R1">
                                                             <rect key="frame" x="8" y="8" width="128" height="22"/>
@@ -13187,7 +13190,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PYo-Gb-odd">
-                                                            <rect key="frame" x="486" y="8.5" width="72" height="37"/>
+                                                            <rect key="frame" x="261" y="8.5" width="72" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9.0 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pid-tW-IiU">
                                                                     <rect key="frame" x="11" y="10" width="50" height="20"/>
@@ -13219,7 +13222,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mOL-nm-GNz">
-                                                            <rect key="frame" x="461" y="14" width="17" height="26"/>
+                                                            <rect key="frame" x="236" y="14" width="17" height="26"/>
                                                             <color key="tintColor" red="0.25275542629999997" green="0.58330001840000001" blue="0.25338199099999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="kwM-tW-N6h"/>
@@ -13262,7 +13265,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QLc-ZJ-zfr">
-                                                    <rect key="frame" x="16" y="8" width="568" height="55"/>
+                                                    <rect key="frame" x="16" y="8" width="343" height="55"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Funguses Article" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeU-V7-nJF">
                                                             <rect key="frame" x="8" y="8" width="122" height="22"/>
@@ -13283,7 +13286,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8wb-n5-W5t">
-                                                            <rect key="frame" x="463" y="14" width="17" height="26"/>
+                                                            <rect key="frame" x="238" y="14" width="17" height="26"/>
                                                             <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="fPX-pH-LSq"/>
@@ -13291,7 +13294,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
                                                             </constraints>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tE5-oF-PzN">
-                                                            <rect key="frame" x="488" y="9" width="72" height="37"/>
+                                                            <rect key="frame" x="263" y="9" width="72" height="37"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20.2 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCd-v4-Sak">
                                                                     <rect key="frame" x="9.5" y="10" width="53" height="20"/>
@@ -13467,10 +13470,10 @@ Microbes are important in human culture and health in many ways, serving to ferm
         <image name="video.fill" catalog="system" width="64" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Vxi-Nr-WIr"/>
-        <segue reference="MaX-YN-X9m"/>
-        <segue reference="rKg-Ec-0UQ"/>
-        <segue reference="Geu-BY-HEG"/>
+        <segue reference="d1R-ad-cMs"/>
+        <segue reference="FQO-20-uNx"/>
+        <segue reference="g3q-Fr-BbU"/>
+        <segue reference="tZ6-39-2fJ"/>
         <segue reference="m85-YF-wFD"/>
         <segue reference="q1V-oX-qb0"/>
         <segue reference="ew6-Qw-Q0U"/>
@@ -13516,7 +13519,7 @@ Microbes are important in human culture and health in many ways, serving to ferm
         <segue reference="gH4-K9-Ihg"/>
         <segue reference="egT-aL-o9I"/>
         <segue reference="z8h-kH-d0Y"/>
-        <segue reference="LGP-zW-J1H"/>
+        <segue reference="tzY-yy-Bl6"/>
         <segue reference="gkA-a2-Ews"/>
         <segue reference="NFf-mZ-xOp"/>
         <segue reference="t9l-wf-LwD"/>
@@ -13531,8 +13534,8 @@ Microbes are important in human culture and health in many ways, serving to ferm
         <segue reference="tsG-Jw-ayk"/>
         <segue reference="WOc-2b-oyh"/>
         <segue reference="nNB-DR-IhU"/>
-        <segue reference="TLD-BB-aEs"/>
-        <segue reference="2cC-Df-ypg"/>
-        <segue reference="oCg-bb-4Jy"/>
+        <segue reference="4vf-0I-01L"/>
+        <segue reference="3gE-2N-40H"/>
+        <segue reference="YqF-zY-uDd"/>
     </inferredMetricsTieBreakers>
 </document>

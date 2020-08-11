@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-// Test Icon Back View Setup and Delegate
 protocol TestIconBackViewDelegate {
     func setupBackView()
 }

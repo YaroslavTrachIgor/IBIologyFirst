@@ -43,16 +43,18 @@ extension ForTodayViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var label: UILabel
         
+        ///Check the view
         if let view = view as? UILabel {
             label = view
         } else {
             label = UILabel()
         }
         
-        label.textColor     = UIColor.white
-        label.font          = UIFont(name: "AvenirNext-Medium", size: 21)
+        ///Setup label
+        label.textColor = UIColor.white
+        label.font = UIFont(name: "AvenirNext-Medium", size: 21)
         label.textAlignment = .center
-        label.text          = articlesExamplesArray[row]
+        label.text = articlesExamplesArray[row]
         
         return label
     }

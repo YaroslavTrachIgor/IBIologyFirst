@@ -110,24 +110,12 @@ extension MenuCollectionViewConteroller {
     
     private func setupCellTextView(cell: MenuCollectionViewCell, text: String) {
         let textView = cell.cellTextView!
-        
-        /// Set text
         textView.text = text
-        
-        /// Set cornerRadius
         textView.layer.cornerRadius = 14
-        
-        /// Set font
         textView.font = UIFont(name: "AvenirNext-Medium", size: 12)
-        
-        /// Set text Color
         textView.textColor = #colorLiteral(red: 0.1831960106, green: 0.198350324, blue: 0.2203657771, alpha: 1)
-        
-        /// Set Properties
         textView.isEditable = false
         textView.isSelectable = true
-        
-        /// Set Shadow
         textView.textViewShadow()
     }
     
@@ -136,21 +124,11 @@ extension MenuCollectionViewConteroller {
         let searchField = searchBar.value(forKey: "searchField") as? UITextField
 
         if let field = searchField {
-            
-            ///Set cornerRadiuses
             field.layer.cornerRadius = 16
-            
-            ///Set colors
             field.textColor = .black
             field.tintColor = .biologyGreenColor
-            
-            ///Set font
             field.font = UIFont(name: "AvenirNext-Medium", size: 15)
-
-            ///Set masksToBounds
             field.layer.masksToBounds = true
-            
-            ///Set KeyType
             field.returnKeyType = .search
         }
     }

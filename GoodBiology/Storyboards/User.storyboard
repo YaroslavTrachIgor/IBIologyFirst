@@ -26,20 +26,29 @@
                                         <constraint firstAttribute="height" constant="68" id="qEz-fK-PJY"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJS-an-0Va" customClass="DoneLabel" customModule="GoodBiology" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJS-an-0Va" customClass="DoneLabel" customModule="GoodBiology" customModuleProvider="target">
                                     <rect key="frame" x="20" y="18" width="88" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="2s9-zk-v3z"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8h-VL-gjt" customClass="DoneLabel" customModule="GoodBiology" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="53" width="113" height="21"/>
+                                    <rect key="frame" x="20" y="53" width="113" height="16.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="16.5" id="okd-yV-tVz"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXG-CC-NbT" customClass="DoneLabel" customModule="GoodBiology" customModuleProvider="target">
-                                    <rect key="frame" x="20" y="88" width="50" height="21"/>
+                                    <rect key="frame" x="20" y="83.5" width="50" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="KJ2-mi-vzr"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -83,17 +92,17 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SV7-EC-2rK">
-                                    <rect key="frame" x="20" y="119" width="110" height="34"/>
+                                    <rect key="frame" x="20" y="119" width="83" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="34" id="woW-yb-B36"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
                                     <state key="normal" title="Show Profile  &gt;">
                                         <color key="titleColor" red="0.0" green="0.31560495830000002" blue="0.01367796948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9g-EC-rGH">
-                                    <rect key="frame" x="78" y="79.5" width="166" height="34"/>
+                                    <rect key="frame" x="78" y="75" width="166" height="34"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="166" id="HnJ-kj-JzA"/>
                                         <constraint firstAttribute="height" constant="34" id="VQw-iK-EKO"/>
@@ -112,21 +121,20 @@
                                 <constraint firstItem="u9g-EC-rGH" firstAttribute="leading" secondItem="nXG-CC-NbT" secondAttribute="trailing" constant="8" id="Dr3-Pj-pfe"/>
                                 <constraint firstAttribute="trailing" secondItem="ohZ-SJ-flF" secondAttribute="trailing" constant="8" id="GSc-jW-DX5"/>
                                 <constraint firstAttribute="trailing" secondItem="zRM-a6-v3x" secondAttribute="trailing" constant="20" id="HIh-KR-d3G"/>
-                                <constraint firstItem="SV7-EC-2rK" firstAttribute="top" secondItem="nXG-CC-NbT" secondAttribute="bottom" constant="10" id="I1W-XC-ecm"/>
                                 <constraint firstAttribute="bottom" secondItem="SV7-EC-2rK" secondAttribute="bottom" constant="10" id="XuE-g0-XhG"/>
                                 <constraint firstItem="zRM-a6-v3x" firstAttribute="centerY" secondItem="EWp-6C-Nmu" secondAttribute="centerY" id="YtT-P0-qit"/>
                                 <constraint firstItem="hJS-an-0Va" firstAttribute="leading" secondItem="EWp-6C-Nmu" secondAttribute="leading" constant="20" id="anu-Nq-bkC"/>
-                                <constraint firstItem="SV7-EC-2rK" firstAttribute="top" secondItem="u9g-EC-rGH" secondAttribute="bottom" constant="5.5" id="eXc-oY-lz8"/>
                                 <constraint firstItem="0HB-4q-R8z" firstAttribute="centerY" secondItem="EWp-6C-Nmu" secondAttribute="centerY" id="he3-RS-pFC"/>
                                 <constraint firstItem="u9g-EC-rGH" firstAttribute="top" secondItem="p8h-VL-gjt" secondAttribute="bottom" constant="5.5" id="lVK-L5-JWV"/>
                                 <constraint firstItem="nXG-CC-NbT" firstAttribute="top" secondItem="p8h-VL-gjt" secondAttribute="bottom" constant="14" id="nJd-6Q-lxH"/>
                                 <constraint firstItem="ohZ-SJ-flF" firstAttribute="top" secondItem="EWp-6C-Nmu" secondAttribute="top" constant="8" id="sUJ-uA-Z5b"/>
                                 <constraint firstItem="nXG-CC-NbT" firstAttribute="leading" secondItem="EWp-6C-Nmu" secondAttribute="leading" constant="20" id="sUs-De-u4h"/>
+                                <constraint firstItem="SV7-EC-2rK" firstAttribute="top" secondItem="u9g-EC-rGH" secondAttribute="bottom" constant="10" id="tw6-0W-9Wt"/>
                                 <constraint firstItem="hJS-an-0Va" firstAttribute="top" secondItem="EWp-6C-Nmu" secondAttribute="top" constant="18" id="zYC-As-2Xb"/>
                             </constraints>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="lFQ-ru-QIj">
-                            <rect key="frame" x="0.0" y="1032.5" width="375" height="239"/>
+                            <rect key="frame" x="0.0" y="1090.5" width="375" height="239"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile Account" translatesAutoresizingMaskIntoConstraints="NO" id="uZe-EI-2fs">
@@ -520,7 +528,7 @@
                                     <action selector="share:" destination="oPT-1N-LhB" id="43S-19-GBM"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="save" id="ty1-Eu-PTH">
+                            <barButtonItem style="done" systemItem="save" id="ty1-Eu-PTH">
                                 <color key="tintColor" red="0.14430249570000001" green="0.33688927660000001" blue="0.14739594180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <action selector="saveAllActions:" destination="oPT-1N-LhB" id="b2F-Xg-cN4"/>

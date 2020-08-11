@@ -13,7 +13,6 @@ import UIKit
 public extension UIButton {
     func pulsate(duration: Float) {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
-        
         pulse.duration             = CFTimeInterval(duration)
         pulse.fromValue            = 0.95
         pulse.toValue              = 0.97
@@ -21,7 +20,6 @@ public extension UIButton {
         pulse.repeatCount          = 1
         pulse.initialVelocity      = 0.6
         pulse.damping              = 0.1
-        
         layer.add(pulse, forKey: nil)
         
         //MARK: Animation for articels buttons
@@ -29,7 +27,6 @@ public extension UIButton {
     
     func pulsate() {
         let pulse = CASpringAnimation(keyPath: "transform.scale")
-        
         pulse.duration             = 0.3
         pulse.fromValue            = 0.95
         pulse.toValue              = 1.0
@@ -37,7 +34,6 @@ public extension UIButton {
         pulse.repeatCount          = 2
         pulse.initialVelocity      = 0.6
         pulse.damping              = 1.0
-        
         layer.add(pulse, forKey: nil)
         
         //MARK: Animation for articels buttons
@@ -71,7 +67,7 @@ class Pulsing: CALayer {
         super.init(coder: aDecoder)
     }
 
-    init (numberOfPulses:Float = Float.infinity, radius:CGFloat, position:CGPoint) {
+    init(numberOfPulses:Float = Float.infinity, radius:CGFloat, position:CGPoint) {
         super.init()
         
         ///Setup Properties
@@ -86,7 +82,6 @@ class Pulsing: CALayer {
         ///Start Animation
         DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             self.setupAnimationGroup()
-            
             DispatchQueue.main.async {
                  self.add(self.animationGroup, forKey: "pulse")
             }
@@ -96,14 +91,9 @@ class Pulsing: CALayer {
         
         ///Clear Animation
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            
-            ///Setup clear animation
             self.animationDuration = 0
             self.radius = 0
-            
             self.backgroundColor = UIColor.clear.cgColor
-            
-            ///Return from finction
             return
         }
     }
@@ -118,7 +108,6 @@ extension Pulsing {
         scaleAnimation.fromValue = NSNumber(value: initialPulseScale)
         scaleAnimation.toValue = NSNumber(value: 1)
         scaleAnimation.duration = animationDuration
-        
         return scaleAnimation
     }
     
@@ -127,7 +116,6 @@ extension Pulsing {
         opacityAnimation.duration = animationDuration
         opacityAnimation.values = [0.4, 0.8, 0]
         opacityAnimation.keyTimes = [0, 0.2, 1]
-        
         return opacityAnimation
     }
     
@@ -135,10 +123,8 @@ extension Pulsing {
         self.animationGroup = CAAnimationGroup()
         self.animationGroup.duration = animationDuration + nextPulseAfter
         self.animationGroup.repeatCount = numberOfPulses
-        
         let defaultCurve = CAMediaTimingFunction(name: CAMediaTimingFunctionName.default)
         self.animationGroup.timingFunction = defaultCurve
-        
         self.animationGroup.animations = [createScaleAnimation(), createOpacityAnimation()]
     }
 }

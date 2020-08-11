@@ -14,7 +14,6 @@ import WebKit
 class NetworkingViewControllerViewModel {
     public func setupViewWillApearNavController(_ navigationController: UINavigationController) {
         let barHide = false
-        
         navigationController.hidesBarsOnTap   = barHide
         navigationController.hidesBarsOnSwipe = barHide
     }
@@ -23,25 +22,20 @@ class NetworkingViewControllerViewModel {
         view.viewSystemBack()
         view.layer.cornerRadius   = 12
         view.isHidden             = true
-        
         view.viewShadows()
     }
     
     public func systemBackColor(pickerView: UIPickerView, switchView: UIView, pickerViewBack: UIView, mainView: UIView) {
         pickerView.tintColor = .secondaryLabel
-        
         pickerViewBack.viewSystemBack()
         switchView.viewSystemBack()
-        
         mainView.viewSystemBack()
     }
     
     public func switchViewPrefering(switchOutlet: UISwitch, textView: UITextView, view: UIView) {
         view.isHidden = true
-        
         view.editorsViews()
         switchOutlet.switchBasics()
-        
         textView.switchTextViewPrefering()
     }
     

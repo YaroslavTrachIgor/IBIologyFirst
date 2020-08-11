@@ -56,14 +56,12 @@ class GoogleMapViewController: UIViewController, GMSMapViewDelegate {
         
         /// It does not working now
         let infoMarker = GMSMarker()
-        
         infoMarker.snippet              = placeID
         infoMarker.position             = location
         infoMarker.title                = name
         infoMarker.opacity              = 0;
         infoMarker.infoWindowAnchor.y   = 1
         infoMarker.map                  = self.mapView
-        
         self.mapView.selectedMarker = infoMarker
     }
     

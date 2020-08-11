@@ -29,17 +29,18 @@ final class ReadingOnTimeViewControllerButtonsBackView: UIView {
 
 extension ReadingOnTimeViewControllerButtonsBackView: ReadingOnTimeViewControllerButtonsBackViewSetupProtocol {
     func setupView() {
-        setupShadow()
         setupAlpha()
         setupBackgroundColor()
         setupCornerRadius()
+        setupShadow()
     }
 }
 
 extension ReadingOnTimeViewControllerButtonsBackView {
     private func setupShadow() {
+        viewShadows()
         layer.shadowColor  = #colorLiteral(red: 0.02475117366, green: 0.39891678, blue: 0.1420775023, alpha: 1)
-        layer.shadowRadius = 30
+        layer.shadowRadius = 20
     }
     
     private func setupAlpha() {

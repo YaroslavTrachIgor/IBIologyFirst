@@ -10,21 +10,17 @@ import UIKit
 
 final class AppIconViewController: UIViewController {
 
-    // MARK: IBOutlets
+    //MARK: @IBOutlets
     @IBOutlet weak var backButton:   UIButton!
     @IBOutlet weak var backButtonBackground: ChromistaActionButtonsBack! { didSet { backButtonBackground.alpha = 1 } }
-    
-    //MARK: UIImageView
     @IBOutlet weak var imageView: UIImageView! { didSet { imageView.imageViewShadow() } }
-    
-    //MARK: switchView
     @IBOutlet weak var switchOutlet: UISwitch!
-    @IBOutlet weak var switchLabel:  UILabel!
-    @IBOutlet weak var switchView:   UIView!
+    @IBOutlet weak var switchLabel: UILabel!
+    @IBOutlet weak var switchView: UIView!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     
-    //MARK: UIBarButtonItem
-    @IBOutlet weak var shareButton:  UIBarButtonItem!
     
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,19 +59,14 @@ extension AppIconViewController {
     
     @IBAction func switching(_ sender: UISwitch) {
         let shadowRadius: CGFloat
-        
         if sender.isOn == true {
             shadowRadius = 17
-            
             imageView.imageViewShadow()
             imageView.layer.shadowRadius = shadowRadius
-            
             switchLabel.text = "Hide Shadow"
         } else {
             shadowRadius = 0
-            
             imageView.layer.shadowRadius = shadowRadius
-            
             switchLabel.text = "Show Shadow"
         }
     }
@@ -99,7 +90,6 @@ extension AppIconViewController {
     private func setupViewDidApearAnimation() {
         UIView.animate(withDuration: 0.5) {
             let alpha: CGFloat = 1
-            
             self.imageView.alpha            = alpha
             self.backButtonBackground.alpha = alpha
         }

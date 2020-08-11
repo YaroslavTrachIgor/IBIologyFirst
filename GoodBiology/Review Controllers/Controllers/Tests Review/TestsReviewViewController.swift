@@ -36,6 +36,7 @@ final class TestsReviewViewController: UIViewController {
     @IBOutlet weak var image1: ZeroAlphaImageView!
     @IBOutlet weak var image2: ZeroAlphaImageView!
     
+    
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +51,7 @@ final class TestsReviewViewController: UIViewController {
         
         UIView.animate(withDuration: 0.3) {
             let alpha: CGFloat = 1
-            let animation2 = Future<String, Never> { (_) in
+            let _ = Future<String, Never> { (_) in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                     UIView.animate(withDuration: 0.4, animations: {
                         self.viewModel.setAlpha(self.sendButton,         alpha: alpha)
@@ -60,7 +61,7 @@ final class TestsReviewViewController: UIViewController {
                     })
                 }
             }
-            let animation3 = Future<String, Never> { (_) in
+            let _ = Future<String, Never> { (_) in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                     UIView.animate(withDuration: 0.4, animations: {
                         self.viewModel.setAlpha(self.image1, alpha: alpha)
@@ -77,7 +78,12 @@ final class TestsReviewViewController: UIViewController {
         contentTextViewSetup()
         navigationControllerTintSetup()
     }
-    
+}
+
+
+
+// MARK: - @IBActions
+extension TestsReviewViewController {
     @IBAction func functionsHidden(_ sender: UISwitch) {
         let hidden: Bool
         
@@ -134,7 +140,9 @@ final class TestsReviewViewController: UIViewController {
     }
 }
 
-// MARK: ReviewControllerViewSetupProtocol
+
+
+// MARK: - ReviewControllerViewSetupProtocol
 extension TestsReviewViewController: ReviewControllerViewSetupProtocol {
     func alphaSetup() {
         let alpha: CGFloat = 0
@@ -193,7 +201,9 @@ extension TestsReviewViewController: ReviewControllerViewSetupProtocol {
     }
 }
 
-// MARK: MFMailComposeViewControllerDelegate
+
+
+// MARK: - MFMailComposeViewControllerDelegate
 extension TestsReviewViewController: MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         
@@ -217,7 +227,9 @@ extension TestsReviewViewController: MFMailComposeViewControllerDelegate {
     }
 }
 
-// MARK: ReviewVCMailComposeVCSetupProtocol
+
+
+// MARK: - ReviewVCMailComposeVCSetupProtocol
 extension TestsReviewViewController: ReviewVCMailComposeVCSetupProtocol {
     func showAndSetupMailComposer() {
         guard MFMailComposeViewController.canSendMail() else { return }
@@ -229,7 +241,9 @@ extension TestsReviewViewController: ReviewVCMailComposeVCSetupProtocol {
     }
 }
 
-// MARK: ReviewControllerProtcol
+
+
+// MARK: - ReviewControllerProtcol
 extension TestsReviewViewController: ReviewControllerProtcol {
     func basicViewProcessesPrefering() {
         cornersPrefering()

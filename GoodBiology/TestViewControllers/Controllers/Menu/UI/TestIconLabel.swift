@@ -9,19 +9,20 @@
 import Foundation
 import UIKit
 
-// Test Icon Labels
 protocol TestIconLabelDelegate {
     func labelSetup()
 }
 
 class TestIconLabel: UILabel {
     override init(frame: CGRect) {
-      super.init(frame: frame)
+        super.init(frame: frame)
+        
         labelSetup()
     }
     
     required init?(coder aDecoder: NSCoder) {
-      super.init(coder: aDecoder)
+        super.init(coder: aDecoder)
+        
         labelSetup()
     }
 }
@@ -36,14 +37,12 @@ extension TestIconLabel: TestIconLabelDelegate {
 extension TestIconLabel {
     func textColorSetup() {
         let color = #colorLiteral(red: 0.1338435914, green: 0.1338435914, blue: 0.1338435914, alpha: 1)
-        
         textColor = color
     }
     
     func fontSetup() {
         let fontName: String  = "HelveticaNeue-Bold"
         let fontSize: CGFloat = 21.5
-        
         font = UIFont(name: fontName, size: fontSize)
     }
 }

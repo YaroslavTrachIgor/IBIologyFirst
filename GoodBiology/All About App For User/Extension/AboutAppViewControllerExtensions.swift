@@ -53,14 +53,12 @@ extension AboutAppViewController {
     private func stepperViewSetup() {
         stepperView.editorsViews()
         stepperView.isHidden = true
-        
         stepper.stepperBaics()
     }
     
     /// Set Alpha for UI in this VC
     private func uiAlphaPrefering() {
         let alpha: CGFloat = 0
-        
         contentBackground.alpha = alpha
         contentTextView.alpha   = alpha
     }
@@ -78,7 +76,6 @@ extension AboutAppViewController {
     /// Set Corners for UI in This Controller
     private func preferingCorners() {
         let cornerRadius = 20
-        
         contentTextView.layer.cornerRadius   = CGFloat(cornerRadius)
         contentBackground.layer.cornerRadius = CGFloat(cornerRadius)
     }

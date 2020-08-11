@@ -53,6 +53,18 @@ final class MicrobesViewController: UIViewController {
         viewDidApearAnimationPreview(views as! [UIView], nil)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setTabBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        setTabBarHidden(false)
+    }
+    
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
 }
 
@@ -133,21 +145,29 @@ extension MicrobesViewController {
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
         case 1:
             textView.text = MicrobesArticleData.microbesBasicsContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
         case 2:
             textView.text = MicrobesArticleData.microbesStructureContent
             
             goToImagesButton.isHidden = true
             goToVideosButton.isHidden = true
+            
+            notificationButtonOutlet.isHidden = false
         case 3:
             textView.text = ""
             
             goToImagesButton.isHidden = false
             goToVideosButton.isHidden = false
+            
+            notificationButtonOutlet.isHidden = true
         default:
             print("Error")
         }

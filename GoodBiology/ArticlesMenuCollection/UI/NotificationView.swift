@@ -43,16 +43,10 @@ class NotificationView: UIView {
 //MARK: - NotificationViewProtocol
 extension NotificationView: NotificationViewProtocol {
     func setupView() {
-        
-        ///Set constraint
         let active = true
         heightAnchor.constraint(equalToConstant: 65).isActive = active
         widthAnchor.constraint(equalToConstant: 360).isActive = active
-        
-        /// Set backgroundColor
         backgroundColor = .biologyGreenColor
-        
-        /// Set corners
         layer.cornerRadius = 10
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 import AudioToolbox
 import GoogleMobileAds
 
-final class TestsMenuViewController: UIViewController {
+final class TestsMenuViewController: UIViewController, BasicViewControllerStatusBarBackColorSetupProtocol {
     
     // Gradient
     let gradient: BasicRootVCGradient = BasicRootVCGradient(color: #colorLiteral(red: 0.9783470812, green: 0.9783470812, blue: 0.9783470812, alpha: 1))
@@ -27,8 +27,6 @@ final class TestsMenuViewController: UIViewController {
     @IBOutlet weak var virusesView:     TestIconBackView!
     @IBOutlet weak var fungusesView:    TestIconBackView!
     @IBOutlet weak var archaeaView:     TestIconBackView!
-    
-    // Text View
     @IBOutlet weak var plantsTextView:    TestPreviewTextView!
     @IBOutlet weak var animalsTextView:   TestPreviewTextView!
     @IBOutlet weak var manTextView:       TestPreviewTextView!
@@ -36,8 +34,6 @@ final class TestsMenuViewController: UIViewController {
     @IBOutlet weak var virusesTextView:   TestPreviewTextView!
     @IBOutlet weak var mushroomsTextView: TestPreviewTextView!
     @IBOutlet weak var archaeaTextView:   TestPreviewTextView!
-    
-    // UILabel
     @IBOutlet weak var plantsTitle:     TestIconLabel!
     @IBOutlet weak var animalsLabel:    TestIconLabel!
     @IBOutlet weak var humanLabel:      TestIconLabel!
@@ -89,7 +85,11 @@ final class TestsMenuViewController: UIViewController {
         basicViewProccesPrefering()
         createObservers()
         
+        ///Setup googleAdd bunner
         setupInterstitial()
+        
+        ///Setup statusBar
+        setupStatusBar(for: self, backColor: .white)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -116,7 +116,6 @@ extension TestsMenuViewController: UISearchResultsUpdating {
 extension TestsMenuViewController: MenuViewControllerDelegate {
     func basicViewProccesPrefering() {
         view.viewGradient()
-        
         preferingSearchContrller()
         systemColorsPrefeing()
         refreshControlPrefering()

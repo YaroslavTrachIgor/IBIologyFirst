@@ -63,6 +63,18 @@ final class PlantsViewController: UIViewController {
         viewDidApearAnimation()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        setTabBarHidden(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        setTabBarHidden(false)
+    }
+    
     deinit { removeNotifications(withIdentifiers: ["MyUniqueIdentifier"]) }
 }
 

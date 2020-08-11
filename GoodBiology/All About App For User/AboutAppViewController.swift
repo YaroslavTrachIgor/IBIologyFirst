@@ -13,21 +13,17 @@ final class AboutAppViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var contentBackground: ContentBack!
-    @IBOutlet weak var contentTextView:   UITextView!
-    
-    @IBOutlet weak var stepper:     UIStepper!
+    @IBOutlet weak var contentTextView: UITextView!
+    @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var stepperView: UIView!
-    
     @IBOutlet weak var shareButton: TestUIBarButtonItem!
-    
-    // stepperViewShowerButton
     @IBOutlet weak var stepperViewShowerButton:     ChromistaButton!
     @IBOutlet weak var stepperViewShowerButtonBack: ChromistaActionButtonsBack!
-    
-    // appIconShowerButton
-    @IBOutlet weak var appIconShowerButton:     ChromistaButton!
+    @IBOutlet weak var appIconShowerButton: ChromistaButton!
     @IBOutlet weak var appIconShowerButtonBack: ChromistaActionButtonsBack!
     
+    
+    //MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         
